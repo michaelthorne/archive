@@ -1,0 +1,3 @@
+@font-face{font-family:'TheFontFamilyName';src:url("/assets/fonts/thefontfamilyname.eot");src:local("☺"),url("/assets/fonts/thefontfamilyname.woff") format("woff"),url("/assets/fonts/thefontfamilyname.ttf") format("truetype"),url("/assets/fonts/thefontfamilyname.svg#webfontitAdEwxq") format("svg");font-weight:400;font-style:normal;}body{font:62.5%/1 Arial,sans-serif;}
+nav.primary li:focus>a,nav.primary li:hover>a{color:#004150;}
+nav.primary a{color:#BFE9F3;font-size:16px;text-decoration:none;}nav.primary a:active,nav.primary a:focus,nav.primary a:hover{color:#004150;}

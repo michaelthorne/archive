@@ -1,0 +1,52 @@
+#wrapper {
+    border: 2px #000 solid;
+    height: 160px;
+    margin: 20px auto 0;
+    width: 960px;
+}
+
+#slider-wrapper {
+    position: relative;
+}
+
+#slider {
+    overflow: hidden;
+    width: 960px;
+}
+
+#slider > ul {
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 2880px;
+}
+
+#slider > ul li {
+    float: left;
+    list-style: none;
+    padding: 20px;
+    width: 920px;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+#navigation ul {
+    padding: 0 0 0 20px;
+}
+
+#navigation li {
+    float: left;
+    list-style: none;
+    padding-right: 10px;
+}
+
+#navigation li a.current {
+    font-weight: bold;
+}
+
+#navigation li a.current:link {
+    outline: none;
+}

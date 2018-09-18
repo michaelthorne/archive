@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<!--[if IE 7]>         <html lang="en-GB" class="ie7"> <![endif]-->
+<!--[if IE 8]>         <html lang="en-GB" class="ie8"> <![endif]-->
+<!--[if IE 9]>         <html lang="en-GB" class="ie9"> <![endif]-->
+<!--[if gt IE 9]><!--> <html lang="en-GB">         <!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+    <title>OrderIn &mdash; Checkout (Corporate Participants)</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="author" content="Michael Thorne" />
+    <meta name="description" content="" />
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:locale" content="en_GB" />
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,700" />
+
+    <!-- Font Awesome: http://fortawesome.github.io/Font-Awesome -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" />
+
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!--[if lt IE 9]>
+    <script src="assets/js/vendor/polyfills.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!--[if lt IE 9]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/?locale=en">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <header role="banner" class="primary">
+        <div class="wrapper">
+            <a href="home.html" class="logo"><img src="assets/images/logos/logo-orderin-278x67.png" width="278" height="67" alt="OrderIn" /></a>
+            <ol class="list-ordered list-account" data-component="drop-down">
+                <li>
+                    <span>Hi there, Dinesh.</span>
+                </li>
+                <li data-drop-down="true">
+                    <a href="my-account.html">
+                        <span class="icon fa fa-user" aria-hidden="true"></span>
+                        My Account
+                    </a>
+                    <ol class="list-ordered list-drop-down">
+                        <li><a href="my-account-address-book.html">Address Book</a></li>
+                        <li><a href="my-account-my-orders.html">My Orders</a></li>
+                        <li><a href="my-account-manage-allocations.html">Manage Allocations</a></li>
+                        <li><a href="my-account-change-password.html">Change Password</a></li>
+                    </ol>
+                </li>
+                <li>
+                    <a href="home.html">
+                        <span class="icon fa fa-lock" aria-hidden="true"></span>
+                        Log Out
+                    </a>
+                </li>
+            </ol>
+            <h1 class="heading-medium white"><b>Simply</b> order food online.</h1>
+        </div>
+    </header>
+    <section role="main">
+        <div class="wrapper">
+            <ol class="list-ordered list-progress">
+                <li>
+                    <span class="icon fa fa-map-marker" aria-hidden="true"></span>
+                    <a href="home.html">Enter Your Address</a>
+                    <span class="icon fa fa-angle-right separator" aria-hidden="true"></span>
+                </li>
+                <li>
+                    <span class="icon fa fa-home" aria-hidden="true"></span>
+                    <a href="address-search-results.html">Pick A Restaurant</a>
+                    <span class="icon fa fa-angle-right separator" aria-hidden="true"></span>
+                </li>
+                <li>
+                    <span class="icon fa fa-cutlery" aria-hidden="true"></span>
+                    <a href="menu.html">Order Food</a>
+                    <span class="icon fa fa-angle-right separator" aria-hidden="true"></span>
+                </li>
+                <li class="current">
+                    <span class="icon fa fa-shopping-cart" aria-hidden="true"></span>
+                    <span>Checkout</span>
+                </li>
+            </ol>
+            <div class="columns">
+                <form id="form-checkout" name="form-checkout" action="order-confirmation.html" method="post" class="form-checkout form-column">
+                <!-- Column: Left, 470px -->
+                <div class="column column-470">
+                    <table class="table table-medium table-grey table-box-shadow">
+                        <thead>
+                            <tr>
+                                <th colspan="2" class="heading-tiny heading-bold">My Order</th>
+                            </tr>
+                            <tr>
+                                <th colspan="2" class="small"><b>#4475758</b> from <b>Basilico Newlands</b> for <b>Pickup</b>.</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Roast Peppers &amp; Artichokes Salad</td>
+                                <td>R 42.00</td>
+                            </tr>
+                            <tr class="choice">
+                                <td>Whole wheat bread and a fresh tomato salad</td>
+                                <td>R 0.00</td>
+                            </tr>
+                            <tr class="choice">
+                                <td>Toasted</td>
+                                <td>R 0.00</td>
+                            </tr>
+                            <tr>
+                                <td>Half Shell Mussels</td>
+                                <td>R 42.00</td>
+                            </tr>
+                            <tr>
+                                <td>Roast Peppers &amp; Artichokes Salad</td>
+                                <td>R 42.00</td>
+                            </tr>
+                            <tr>
+                                <td>Half Shell Mussels</td>
+                                <td>R 42.00</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td class="small">Subtotal*</td>
+                                <td class="small">R 168.00</td>
+                            </tr>
+                            <tr>
+                                <td class="small">Add Gratuity</td>
+                                <td class="small">
+                                    <label for="gratuity">
+                                        R <input id="gratuity" name="gratuity" type="text" class="input-grey input-tiny" placeholder="0.00" value="" maxlength="10" />
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr class="total">
+                                <td>Total</td>
+                                <td>R 168.00</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <span class="small">* Includes VAT</span>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <!-- Column: Right, 470px -->
+                <div class="column column-470">
+                    <fieldset class="fieldset fieldset-borders-rounded">
+                        <span class="heading-tiny heading-bold mortar">Delivery Information</span>
+                        <label for="delivery-name" class="label-small">
+                            Name
+                            <input id="delivery-name" name="delivery-name" type="text" class="input-grey" placeholder="" disabled="disabled" value="Dinesh Patel" />
+                        </label>
+                        <label for="delivery-address-1" class="label-small">
+                            Delivery Address
+                            <input id="delivery-address-1" name="delivery-address-1" type="text" class="input-grey" placeholder="Street No. &amp; Name" value="" maxlength="100" />
+                        </label>
+                        <label for="delivery-address-2" class="label-small white">
+                            Delivery Address (2)
+                            <input id="delivery-address-2" name="delivery-address-2" type="text" class="input-grey" placeholder="Unit No. or Building Name" value="" maxlength="50" />
+                        </label>
+                        <label for="delivery-suburb" class="label-small">
+                            Delivery Suburb
+                            <input id="delivery-suburb" name="delivery-suburb" type="text" class="input-grey" placeholder="" value="" maxlength="25" />
+                        </label>
+                        <label for="delivery-phone" class="label-small">
+                            Delivery Phone
+                            <input id="delivery-phone" name="delivery-phone" type="tel" class="input-grey" placeholder="" value="" maxlength="20" />
+                        </label>
+                        <label for="restaurant-name" class="label-small">
+                            Restaurant Name
+                            <input id="restaurant-name" name="restaurant-name" type="text" class="input-grey" placeholder="" disabled="disabled" value="Basilico Newlands" />
+                        </label>
+                        <label for="restaurant-delivery-time" class="label-small">
+                            Est. Delivery Time
+                            <input id="restaurant-delivery-time" name="restaurant-delivery-time" type="text" class="input-grey" placeholder="" disabled="disabled" value="45 min" />
+                        </label>
+                        <label for="delivery-instructions" class="label-small">
+                            Delivery Instructions
+                            <textarea id="delivery-instructions" name="instructions" class="input-grey input-medium" placeholder="Please call before you deliver. Please leave with doorman, etc."></textarea>
+                        </label>
+                    </fieldset>
+                    <fieldset class="fieldset fieldset-borders-rounded">
+                        <span class="heading-tiny heading-bold mortar">
+                            My Account
+                            <em class="grey">
+                                Please note at least one client code must be entered.<br/>
+                                All fields left blank will be ignored.
+                            </em>
+                        </span>
+                        <label class="label-heading label-small">
+                            This Order:
+                            <span class="amount amount-order">R277.00</span>
+                        </label>
+
+                        <hr class="separator" />
+                        <div class="tags">
+                            <div class="tag">2018 &ndash; Sanlam<a href="checkout-corporate-participants.html"><span class="icon fa fa-times-circle" aria-hidden="true"></span></a></div>
+                        </div>
+                        <label for="corporate-client-code" class="label-small has-button">
+                            Assign Client Code:
+                            <input id="corporate-client-code" name="corporate-client-code" type="text" class="input-grey input-medium-large" placeholder="" value="" maxlength="50" />
+                            <a href="checkout-corporate-participants.html" class="button button-small button-grey"><span class="icon fa fa-plus-circle" aria-hidden="true"></span>Add</a>
+                        </label>
+
+                        <hr class="separator" />
+                        <div class="tags">
+                            <div class="tag">Nathan Fourie<a href="checkout-corporate-participants.html"><span class="icon fa fa-times-circle" aria-hidden="true"></span></a></div>
+                            <div class="tag">Karl Smith<a href="checkout-corporate-participants.html"><span class="icon fa fa-times-circle" aria-hidden="true"></span></a></div>
+                            <div class="tag">Jeanette De Villiers<a href="checkout-corporate-participants.html"><span class="icon fa fa-times-circle" aria-hidden="true"></span></a></div>
+                        </div>
+                        <label for="corporate-participants" class="label-small has-button">
+                            Participants:
+                            <input id="corporate-participants" name="corporate-participants" type="text" class="input-grey input-medium-large" placeholder="" value="" maxlength="50" />
+                            <a href="checkout-corporate-participants.html" class="button button-small button-grey"><span class="icon fa fa-plus-circle" aria-hidden="true"></span>Add</a>
+                        </label>
+
+                        <a href="#" class="button button-small button-green" role="button" data-action="form-submit"><span class="icon fa fa-shopping-cart" aria-hidden="true"></span>Checkout</a>
+                    </fieldset>
+                </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer role="contentinfo">
+        <div class="wrapper">
+            <ul class="list-unordered list-footer">
+                <li>
+                    <h3>How it works</h3>
+                    <ol class="list-ordered list-how-it-works">
+                        <li>
+                            <span class="icon fa fa-map-marker" aria-hidden="true"></span>
+                            <p>
+                                <b>Enter your address</b> to find restaurants in your area.
+                            </p>
+                        </li>
+                        <li>
+                            <span class="icon fa fa-cutlery" aria-hidden="true"></span>
+                            <p>
+                                <b>Select a restaurant</b> and create an order from the menu.
+                            </p>
+                        </li>
+                        <li>
+                            <span class="icon fa fa-shopping-cart" aria-hidden="true"></span>
+                            <p>
+                                <b>Checkout online</b> safely and securely.
+                            </p>
+                        </li>
+                        <li>
+                            <span class="icon fa fa-smile-o" aria-hidden="true"></span>
+                            <p>
+                                <b>Get your food!</b>
+                            </p>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <h3>Need some help?</h3>
+                    <ol class="list-ordered list-contact">
+                        <li>
+                            <a href="mailto:customerservice@orderin.co.za">
+                                <span class="icon fa fa-envelope" aria-hidden="true"></span>
+                                <p>
+                                    <b>Customer Service</b>
+                                    Suggestions or feedback? Email us and our staff will get back to you.
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <span class="icon fa fa-phone-square" aria-hidden="true"></span>
+                                <p>
+                                    <b>+27 21 201 1155</b>
+                                    Open 9AM &ndash; 10PM
+                                </p>
+                            </a>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <h3>Got something to say?</h3>
+                    <p class="small">
+                        We&rsquo;re always listening! Get in touch with us on Facebook, Twitter, and LinkedIn.
+                    </p>
+                    <ol class="list-ordered list-social-media">
+                        <li>
+                            <a href="https://www.facebook.com/orderin.za" title="Follow us on Facebook" target="_blank">
+                                <span class="icon fa fa-facebook-square facebook" aria-hidden="true"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/OrderInSA" title="Follow us on Twitter" target="_blank">
+                                <span class="icon fa fa-twitter-square twitter" aria-hidden="true"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/company/3185839" title="Follow us on LinkedIn" target="_blank">
+                                <span class="icon fa fa-linkedin-square linkedin" aria-hidden="true"></span>
+                            </a>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <h3>Restaurant Sign Up</h3>
+                    <p class="small">Want to add your restaurant to OrderIn? Use our Restaurant Sign-Up Form!</p>
+                    <a href="restaurant-sign-up.html" class="button button-small button-grey orange-dark"><span class="icon fa fa-chevron-circle-right" aria-hidden="true"></span>Sign Up</a>
+                </li>
+            </ul>
+            <div class="legal">
+                <p class="tiny">
+                    &copy; Copyright OrderIn (Pty) Ltd. All rights reserved.
+                </p>
+                <ul class="list-unordered list-links list-links-horizontal">
+                    <li>
+                        <a href="#" class="anchor anchor-tiny anchor-orange-dark">Terms &amp; Conditions</a>
+                    </li>
+                    <li>
+                        <a href="#" class="anchor anchor-tiny anchor-orange-dark">Sitemap</a>
+                    </li>
+                </ul>
+                <img src="assets/images/icons/icon-beta.png" width="49" height="22" alt="Beta" />
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/script.js"></script>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+    <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+    </script>
+</body>
+</html>

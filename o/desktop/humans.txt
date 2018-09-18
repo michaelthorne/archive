@@ -1,0 +1,20 @@
+# humanstxt.org
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Michael Thorne -- Front-end Web Developer -- @mikkelz_za
+    <name> -- <role> -- <twitter>
+
+# THANKS
+
+    Bootstrap -- @twbootstrap
+    CSS-Tricks -- @Real_CSS_Tricks
+    H5BP -- @h5bp
+    <name> -- <twitter>
+
+# SITE
+
+    Last Update: 2014/05/20
+    Standards: HTML5, CSS3
+    Components: Font Awesome, jQuery, LESS, Normalize.css

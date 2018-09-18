@@ -1,0 +1,1 @@
+document.querySelector('[data-action="toggle-nav"]').addEventListener("click",function(a){a.preventDefault(),this.classList.toggle("is-active"),document.querySelector(".nav--primary").classList.toggle("is-open")});

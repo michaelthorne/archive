@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<!--[if IE 7]>         <html lang="en-GB" dir="ltr" class="ie7"> <![endif]-->
+<!--[if IE 8]>         <html lang="en-GB" dir="ltr" class="ie8"> <![endif]-->
+<!--[if IE 9]>         <html lang="en-GB" dir="ltr" class="ie9"> <![endif]-->
+<!--[if gt IE 9]><!--> <html lang="en-GB" dir="ltr">         <!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+    <title>SiteplanExplorer &mdash; Main</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="Michael Thorne" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:locale" content="en_GB" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="publisher" href="https://plus.google.com/106015161495562490229/" />
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans" />
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" />
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome-ie7.min.css">
+    <![endif]-->
+    <link rel="stylesheet" href="assets/css/main.css?v=3.2.4" />
+    <!--[if lt IE 9]>
+    <script src="assets/js/vendor/oldIE.js"></script>
+    <![endif]-->
+    <script src="assets/js/vendor/prettify.js"></script>
+</head>
+<body>
+    <!--[if lt IE 8]><div class="upgrade-ie"><a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie" target="_blank"><img src="assets/images/logos/logo-upgrade-ie.png" width="820" height="42" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+    <div class="wrapper wrapper-main">
+        <header role="banner" class="main">
+
+            <!-- Header (Share) // -->
+            <div class="header header-utils visible-screen-medium">
+                <a href="#" class="button button-white" role="button">Share <i class="icon-share"></i></a>
+                <a href="#" class="button button-blue" role="button">Contact</a>
+            </div>
+            <!-- // Header (Share) -->
+
+            <!-- Header (Filters, Search) // -->
+            <div class="header header-primary">
+                <!-- Filter (Layers) // -->
+                <ol class="list-ordered list-nav-horizontal list-buttons list-buttons-white visible-screen-medium">
+                    <li>
+                        <a href="#" class="button button-white" data-toggle="drop-down" role="button">Layers <i class="icon-caret-down"></i></a>
+                        <ol class="list-ordered list-nav-vertical drop-down list-filters-checkbox" data-action="toggle-button-checkbox" data-drop-down="true">
+                            <li><a href="#" data-value="Images"><i class="icon-check-empty"></i> Images</a></li>
+                            <li><a href="#" data-value="Units"><i class="icon-check-empty"></i> Units</a></li>
+                            <li><a href="#" data-value="Features"><i class="icon-check-empty"></i> Features</a></li>
+                        </ol>
+                    </li>
+                </ol>
+                <!-- // Filter (Layers) -->
+
+                <!-- Toggle (Map) // -->
+                <a href="#" class="button button-white button-medium visible-screen-small" data-component="toggle-section" data-action="toggle-button" role="button"><i class="icon-map-marker"></i></a>
+                <!-- // Toggle (Map) -->
+
+                <div class="slide-down" data-component="toggle-slide">
+                    <!-- Form: Search (Quick) // -->
+                    <form id="form-search-quick" name="form-search-quick" action="main.html" method="post" class="form-horizontal form-search-quick">
+                        <label for="search-text">
+                            <input id="search-text" name="search-text" type="text" placeholder="Search&hellip;" value="" maxlength="50" class="input-wide" data-component="autocomplete" />
+                        </label>
+                        <button class="button button-white button-medium"><i class="icon-search"></i></button>
+                        <button class="button button-white" data-toggle="slide" data-toggle-slide-container="advanced-search">Advanced <i class="icon-caret-down visible-screen-largest"></i></button>
+                    </form>
+                    <!-- // Form: Search (Quick) -->
+                </div>
+
+                <!-- Panel (Search) // -->
+                <div class="panel-search" data-container="search">
+
+                    <!-- Form: Search // -->
+                    <form id="form-search" name="form-search" class="form-search" action="main.html" method="post">
+
+                        <!-- Search (Criteria) // -->
+                        <fieldset class="fieldset fieldset-search-filter">
+                            <label for="advanced-search-price-from">
+                                Price Range <b>R</b>
+                            </label>
+                            <input id="advanced-search-price-from" name="input-price-from" type="text" placeholder="" value="" class="input-small input-blue" maxlength="50" />
+                            <label for="advanced-search-price-to">
+                                To
+                            </label>
+                            <input id="advanced-search-price-to" name="input-price-to" type="text" placeholder="" value="" class="input-small input-blue" maxlength="50" />
+                        </fieldset>
+                        <!-- // Search (Criteria) -->
+
+                        <!-- Search (Criteria) // -->
+                        <fieldset class="fieldset fieldset-search-filter">
+                            <label>Beds</label>
+                            <div class="pill-group pill-group-white" data-action="toggle-pill-group">
+                                <a href="main.html" class="pill pill-white" data-value="1">1</a>
+                                <a href="main.html" class="pill pill-white" data-value="2">2</a>
+                                <a href="main.html" class="pill pill-white" data-value="3">3</a>
+                                <a href="main.html" class="pill pill-white" data-value="4">4</a>
+                                <a href="main.html" class="pill pill-white" data-value="5+">5+</a>
+                            </div>
+                        </fieldset>
+                        <!-- // Search (Criteria) -->
+
+                        <!-- Search (Criteria) // -->
+                        <fieldset class="fieldset fieldset-search-filter">
+                            <label>Baths</label>
+                            <div class="pill-group pill-group-white" data-action="toggle-pill-group">
+                                <a href="main.html" class="pill pill-white" data-value="1">1</a>
+                                <a href="main.html" class="pill pill-white" data-value="2">2</a>
+                                <a href="main.html" class="pill pill-white" data-value="3">3</a>
+                                <a href="main.html" class="pill pill-white" data-value="4">4</a>
+                                <a href="main.html" class="pill pill-white" data-value="5+">5+</a>
+                            </div>
+                        </fieldset>
+                        <!-- // Search (Criteria) -->
+                    </form>
+                    <!-- // Form: Search -->
+                </div>
+                <!-- // Panel (Search) -->
+
+                <!-- Panel (Advanced Search) // -->
+                <div class="panel-search panel-search-advanced slide-down-wrapper" data-toggle-slide-container-id="advanced-search" data-container="search-advanced">
+                    <div class="wrapper-search-advanced">
+
+                        <!-- Form: Advanced Search // -->
+                        <form id="form-search-advanced" name="form-search-advanced" class="form-search-advanced" action="main.html" method="post">
+
+                            <!-- Section (Search Criteria) // -->
+                            <fieldset class="fieldset fieldset-section fieldset-section-primary-search">
+
+                                <!-- Search (Criteria) // -->
+                                <fieldset class="fieldset fieldset-search-filter">
+                                    <label for="advanced-search-price-from">
+                                        Price Range <b>R</b>
+                                    </label>
+                                    <input id="advanced-search-price-from" name="input-price-from" type="text" placeholder="" value="" class="input-small input-blue" maxlength="50" />
+                                    <label for="advanced-search-price-to">
+                                        To
+                                    </label>
+                                    <input id="advanced-search-price-to" name="input-price-to" type="text" placeholder="" value="" class="input-small input-blue" maxlength="50" />
+                                </fieldset>
+                                <!-- // Search (Criteria) -->
+
+                                <!-- Search (Criteria) // -->
+                                <fieldset class="fieldset fieldset-search-filter">
+                                    <label>Beds</label>
+                                    <div class="pill-group pill-group-white" data-action="toggle-pill-group">
+                                        <a href="main.html" class="pill pill-white" data-value="1">1</a>
+                                        <a href="main.html" class="pill pill-white" data-value="2">2</a>
+                                        <a href="main.html" class="pill pill-white" data-value="3">3</a>
+                                        <a href="main.html" class="pill pill-white" data-value="4">4</a>
+                                        <a href="main.html" class="pill pill-white" data-value="5+">5+</a>
+                                    </div>
+                                </fieldset>
+                                <!-- // Search (Criteria) -->
+
+                                <!-- Search (Criteria) // -->
+                                <fieldset class="fieldset fieldset-search-filter">
+                                    <label>Baths</label>
+                                    <div class="pill-group pill-group-white" data-action="toggle-pill-group">
+                                        <a href="main.html" class="pill pill-white" data-value="1">1</a>
+                                        <a href="main.html" class="pill pill-white" data-value="2">2</a>
+                                        <a href="main.html" class="pill pill-white" data-value="3">3</a>
+                                        <a href="main.html" class="pill pill-white" data-value="4">4</a>
+                                        <a href="main.html" class="pill pill-white" data-value="5+">5+</a>
+                                    </div>
+                                </fieldset>
+                                <!-- // Search (Criteria) -->
+                            </fieldset>
+                            <!-- // Section (Search Criteria) -->
+
+                            <!-- Section (Search Criteria) // -->
+                            <fieldset class="fieldset fieldset-section">
+
+                                <!-- Search (Criteria) // -->
+                                <fieldset class="fieldset fieldset-search-filter">
+                                    <label for="select-1">Location</label>
+                                    <select id="select-1" name="select-1" data-component="select">
+                                        <option value="">Any</option>
+                                        <option value="Eastern Cape">Eastern Cape</option>
+                                        <option value="Western Cape">Western Cape</option>
+                                    </select>
+                                </fieldset>
+                                <!-- // Search (Criteria) -->
+
+                                <!-- Search (Criteria) // -->
+                                <fieldset class="fieldset fieldset-search-filter">
+                                    <label for="select-2">Development Type</label>
+                                    <select id="select-2" name="select-2" data-component="select">
+                                        <option value="">Any</option>
+                                        <option value="Eco&ndash;Estate">Eco&ndash;Estate</option>
+                                        <option value="Golf Estate">Golf Estate</option>
+                                        <option value="Retirement Estate">Retirement Estate</option>
+                                    </select>
+                                </fieldset>
+                                <!-- // Search (Criteria) -->
+
+                                <!-- Search (Criteria) // -->
+                                <fieldset class="fieldset fieldset-search-filter">
+                                    <label for="select-3">Property Type</label>
+                                    <select id="select-3" name="select-3" data-component="select">
+                                        <option value="">Any</option>
+                                        <option value="Apartment">Apartment</option>
+                                        <option value="House">House</option>
+                                        <option value="Plot">Plot</option>
+                                    </select>
+                                </fieldset>
+                                <!-- // Search (Criteria) -->
+                            </fieldset>
+                            <!-- // Section (Search Criteria) -->
+
+                            <!-- Section (Search Criteria) // -->
+                            <fieldset class="fieldset fieldset-section">
+
+                                <!-- Search (Criteria) // -->
+                                <fieldset class="fieldset fieldset-search-filter">
+                                    <label>Plot Size</label>
+                                    <div class="pill-group pill-group-white" data-action="toggle-pill-group">
+                                        <a href="main.html" class="pill pill-white" data-value="Any">Any</a>
+                                        <a href="main.html" class="pill pill-white" data-value="250">250+ m<sup>2</sup></a>
+                                        <a href="main.html" class="pill pill-white" data-value="500">500+ m<sup>2</sup></a>
+                                        <a href="main.html" class="pill pill-white" data-value="750">750+ m<sup>2</sup></a>
+                                        <a href="main.html" class="pill pill-white" data-value="1000">1,000+ m<sup>2</sup></a>
+                                        <a href="main.html" class="pill pill-white" data-value="2000">2,000+ m<sup>2</sup></a>
+                                    </div>
+                                </fieldset>
+                                <!-- // Search (Criteria) -->
+                            </fieldset>
+                            <!-- // Section (Search Criteria) -->
+
+                            <!-- Section (Search Criteria) // -->
+                            <fieldset class="fieldset fieldset-section">
+
+                                <!-- Search (Criteria) // -->
+                                <fieldset class="fieldset fieldset-search-filter">
+                                    <label>Property Size</label>
+                                    <div class="pill-group pill-group-white" data-action="toggle-pill-group">
+                                        <a href="main.html" class="pill pill-white" data-value="Any">Any</a>
+                                        <a href="main.html" class="pill pill-white" data-value="50">50+ m<sup>2</sup></a>
+                                        <a href="main.html" class="pill pill-white" data-value="100">100+ m<sup>2</sup></a>
+                                        <a href="main.html" class="pill pill-white" data-value="200">200+ m<sup>2</sup></a>
+                                        <a href="main.html" class="pill pill-white" data-value="350">350+ m<sup>2</sup></a>
+                                        <a href="main.html" class="pill pill-white" data-value="500">500+ m<sup>2</sup></a>
+                                    </div>
+                                </fieldset>
+                                <!-- // Search (Criteria) -->
+                            </fieldset>
+                            <!-- // Section (Search Criteria) -->
+
+                            <input id="submit-form-search-advanced" name="form-search-advanced" type="submit" value="Search" class="button button-blue button-bold" />
+                        </form>
+                        <!-- // Form: Advanced Search -->
+                    </div>
+
+                    <!-- Close (Panel) // -->
+                    <a href="#" class="button button-small button-white button-close" data-action="close-panel" role="button">Close</a>
+                    <!-- // Close (Panel) -->
+                </div>
+                <!-- // Panel (Advanced Search) -->
+            </div>
+            <!-- // Header (Filters, Search) -->
+        </header>
+        <aside class="main">
+
+            <!-- Breadcrumbs // -->
+            <div class="wrapper-breadcrumbs" data-action="list-navigator-breadcrumbs">
+                <a href="#" data-list-navigator-id="1" data-list-navigator-parent-id="0" class="breadcrumb-home"><i class="icon-home"></i></a>
+                <div class="wrapper-breadcrumbs-inner" data-action="scroll-horizontal">
+                    <ol class="list-ordered list-nav-horizontal list-breadcrumbs">
+                        <li><a href="#" data-list-navigator-id="1" data-list-navigator-parent-id="0">Century Property Developments</a>&gt;</li>
+                        <li><a href="#" data-list-navigator-id="2" data-list-navigator-parent-id="1">Developments</a>&gt;</li>
+                        <li><a href="#" data-list-navigator-id="3" data-list-navigator-parent-id="2">Waterfall Country</a>&gt;</li>
+                        <li><a href="#" data-list-navigator-id="4" data-list-navigator-parent-id="3">Plots</a>&gt;</li>
+                        <li>Unit 123456789</li>
+                    </ol>
+                </div>
+            </div>
+            <!-- // Breadcrumbs -->
+
+            <!-- Side Bar // -->
+            <div class="wrapper-aside">
+
+                <!-- Navigator // -->
+                <div class="wrapper-aside-components">
+                    <div class="list-navigator" data-component="list-navigator">
+
+                        <!-- Navigator: Default // -->
+                        <ol class="list-ordered">
+                            <li>
+                                <ol class="list-ordered list-overview">
+                                    <li>
+                                        <span class="heading-small">Century Property Developments</span>
+                                        <img src="assets/images/content/property/property-01-290x145.jpg" alt="" />
+                                        <p>Century Property Developments is proud to bring the second phase of Blue Hills Country and Equestrian Estate to the South African property market.</p>
+                                        <p>The property is known for some of the most magnificent fauna and flora sightings in the area. Large natural dams and established indigenous trees are situated in ample greenbelts and are home to abundant birdlife and provide residents with space inside an unrivalled secure lifestyle estate.</p>
+                                    </li>
+                                </ol>
+                                <ul class="list-unordered list-bordered list-text">
+                                    <li>
+                                        <a href="#" data-list-navigator-id="1" data-action="list-navigator">
+                                            <p>Developments <span>3<i class="icon-angle-right blue"></i></span></p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" data-list-navigator-id="1" data-action="list-navigator">
+                                            <p>Phases <span>7<i class="icon-angle-right blue"></i></span></p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" data-list-navigator-id="1" data-action="list-navigator">
+                                            <p>Buildings <span>13<i class="icon-angle-right blue"></i></span></p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" data-list-navigator-id="1" data-action="list-navigator">
+                                            <p>Plans <span>14<i class="icon-angle-right blue"></i></span></p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" data-list-navigator-id="1" data-action="list-navigator">
+                                            <p>Units <span>180<i class="icon-angle-right blue"></i></span></p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ol>
+                        <!-- // Navigator: Default -->
+
+                        <!-- Navigator Item: 1 // -->
+                        <div id="data-item-1" class="list-navigator-data-item">
+                            <ol class="list-ordered list-data list-data-small">
+                                <li>
+                                    <a href="#" data-list-navigator-id="2" data-action="list-navigator">
+                                        <img src="assets/images/content/plan/plan-02-45x45.jpg" alt="" />
+                                        <div class="data">
+                                            <span class="heading-small">Waterfall Blue</span>
+                                            <p>1 Building, 62 Units</p>
+                                        </div>
+                                        <i class="icon-angle-right blue"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" data-list-navigator-id="2" data-action="list-navigator">
+                                        <img src="assets/images/content/plan/plan-01-45x45.jpg" alt="" />
+                                        <div class="data">
+                                            <span class="heading-small">Waterfall Country</span>
+                                            <p>51 Buildings, 4 Plans, 23 Units</p>
+                                        </div>
+                                        <i class="icon-angle-right blue"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" data-list-navigator-id="2" data-action="list-navigator">
+                                        <img src="assets/images/content/plan/plan-02-45x45.jpg" alt="" />
+                                        <div class="data">
+                                            <span class="heading-small">Waterfall Hills <b class="tag">Offplan</b></span>
+                                            <p>23 Buildings, 2 Plans, 170 Units</p>
+                                        </div>
+                                        <i class="icon-angle-right blue"></i>
+                                    </a>
+                                </li>
+                            </ol>
+                            <a href="#" data-list-navigator-id="1" data-list-navigator-parent-id="0" data-action="list-navigator" data-list-navigator-back="true" class="button button-white" role="button">Back</a>
+                        </div>
+                        <!-- // Navigator Item: 1 -->
+
+                        <!-- Navigator Item: 2 // -->
+                        <div id="data-item-2" class="list-navigator-data-item">
+                            <ol class="list-ordered list-overview">
+                                <li>
+                                    <span class="heading-small">Waterfall Country</span>
+                                    <img src="assets/images/content/property/property-01-290x145.jpg" alt="" />
+                                    <p>Waterfall Country Estate and Waterfall Country Village offer residents all the comfort of luxury country living within close proximity of literally every conceivable service that may be required.</p>
+                                </li>
+                            </ol>
+                            <ul class="list-unordered list-bordered list-text">
+                                <li>
+                                    <a href="#" data-list-navigator-id="3" data-action="list-navigator">
+                                        <p>Phases <span>2<i class="icon-angle-right blue"></i></span></p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" data-list-navigator-id="3" data-action="list-navigator">
+                                        <p>Units <span>71<i class="icon-angle-right blue"></i></span></p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" data-list-navigator-id="3" data-action="list-navigator">
+                                        <p>Buildings <span>13<i class="icon-angle-right blue"></i></span></p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" data-list-navigator-id="3" data-action="list-navigator">
+                                        <p>Plans <span>14<i class="icon-angle-right blue"></i></span></p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <a href="#" data-list-navigator-id="2" data-list-navigator-parent-id="1" data-action="list-navigator" data-list-navigator-back="true" class="button button-white" role="button">Back</a>
+                        </div>
+                        <!-- // Navigator Item: 2 -->
+
+                        <!-- Navigator Item: 3 // -->
+                        <div id="data-item-3" class="list-navigator-data-item">
+                            <ol class="list-ordered list-data list-data-small">
+                                <li>
+                                    <a href="#" data-list-navigator-id="4" data-action="list-navigator">
+                                        <img src="assets/images/content/plan/plan-02-45x45.jpg" alt="" />
+                                        <div class="data">
+                                            <span class="heading-small">Plot 61 <b class="tag">Resale</b></span>
+                                            <p>27sqm, R270,000.00</p>
+                                        </div>
+                                        <i class="icon-angle-right blue"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" data-list-navigator-id="4" data-action="list-navigator">
+                                        <img src="assets/images/content/plan/plan-02-45x45.jpg" alt="" />
+                                        <div class="data">
+                                            <span class="heading-small">Plot 62 <b class="tag">Resale</b></span>
+                                            <p>27sqm, R270,000.00</p>
+                                        </div>
+                                        <i class="icon-angle-right blue"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" data-list-navigator-id="4" data-action="list-navigator">
+                                        <img src="assets/images/content/plan/plan-02-45x45.jpg" alt="" />
+                                        <div class="data">
+                                            <span class="heading-small">Plot 63 <b class="tag">Resale</b></span>
+                                            <p>27sqm, R270,000.00</p>
+                                        </div>
+                                        <i class="icon-angle-right blue"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" data-list-navigator-id="4" data-action="list-navigator">
+                                        <img src="assets/images/content/plan/plan-02-45x45.jpg" alt="" />
+                                        <div class="data">
+                                            <span class="heading-small">Plot 64</span>
+                                            <p>27sqm, R270,000.00</p>
+                                        </div>
+                                        <i class="icon-angle-right blue"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" data-list-navigator-id="4" data-action="list-navigator">
+                                        <img src="assets/images/content/plan/plan-02-45x45.jpg" alt="" />
+                                        <div class="data">
+                                            <span class="heading-small">Plot 65 <b class="tag">Resale</b></span>
+                                            <p>27sqm, R270,000.00</p>
+                                        </div>
+                                        <i class="icon-angle-right blue"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" data-list-navigator-id="4" data-action="list-navigator">
+                                        <img src="assets/images/content/plan/plan-02-45x45.jpg" alt="" />
+                                        <div class="data">
+                                            <span class="heading-small">Plot 66 <b class="tag">Resale</b></span>
+                                            <p>27sqm, R270,000.00</p>
+                                        </div>
+                                        <i class="icon-angle-right blue"></i>
+                                    </a>
+                                </li>
+                            </ol>
+                            <a href="#" data-list-navigator-id="3" data-list-navigator-parent-id="2" data-action="list-navigator" data-list-navigator-back="true" class="button button-white" role="button">Back</a>
+                        </div>
+                        <!-- // Navigator Item: 3 -->
+
+                        <!-- Navigator Item: 4 // -->
+                        <div id="data-item-4" class="list-navigator-data-item">
+
+                            <!-- Header // -->
+                            <div class="wrapper-aside-component">
+                                <header class="header">
+                                    <span class="heading-large">Unit 123456789</span>
+                                    <a href="#" class="button button-white button-small" data-action="toggle-button" role="button"><i class="icon-star"></i></a>
+                                </header>
+                            </div>
+                            <!-- // Header -->
+
+                            <!-- Slider // -->
+                            <div class="wrapper-aside-component">
+                                <div class="slider loading loading-bars" data-component="slider">
+                                    <ul class="slides">
+                                        <li>
+                                            <img src="assets/images/content/property/property-01-290x145.jpg" alt="" />
+                                        </li>
+                                        <li>
+                                            <img src="assets/images/content/property/property-01-290x145.jpg" alt="" />
+                                        </li>
+                                        <li>
+                                            <img src="assets/images/content/property/property-01-290x145.jpg" alt="" />
+                                        </li>
+                                        <li>
+                                            <img src="assets/images/content/property/property-01-290x145.jpg" alt="" />
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- // Slider -->
+
+                            <!-- Description // -->
+                            <div class="wrapper-aside-component">
+                                <ul class="list-unordered list-item-details">
+                                    <li>
+                                        <b>Description</b>
+                                        <p>Well located in a 24 hour access controlled complex in Edenglen Edenvale, this cluster is just STUNNING!</p>
+                                        <p>Four bedrooms and three bathrooms (two&ndash;en&ndash;suite), laminated floors throughout. Mod kitchen open plan to lounge and dining areas.</p>
+                                    </li>
+                                    <li>
+                                        <ul class="list-unordered list-location">
+                                            <li>
+                                                <b>Address</b>
+                                                <ol class="list-ordered list-address">
+                                                    <li>39 Swartkops Crescent</li>
+                                                    <li>Edenglen</li>
+                                                    <li>Edenvale</li>
+                                                    <li>Johannesburg</li>
+                                                    <li>1613</li>
+                                                </ol>
+                                            </li>
+                                            <li>
+                                                <b><i class="icon-map-marker"></i></b>
+                                                <ol class="list-ordered list-address">
+                                                    <li><a href="#">41.76619,-72.670441</a></li>
+                                                    <li><a href="#">Directions</a></li>
+                                                </ol>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- // Description -->
+
+                            <!-- Details // -->
+                            <div class="wrapper-aside-component">
+                                <ul class="list-unordered list-bordered list-text">
+                                    <li>
+                                        <p>Price <span>ZAR 1,777,444</span></p>
+                                    </li>
+                                    <li>
+                                        <p>Plot Size <span>247<sub>sqm</sub></span></p>
+                                    </li>
+                                    <li>
+                                        <p>Unit Size <span>89<sub>sqm</sub></span></p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- // Details -->
+
+                            <!-- Share // -->
+                            <div class="wrapper-aside-component wrapper-aside-component-buttons visible-screen-small">
+                                <a href="#" class="button button-white" role="button">Share <i class="icon-share"></i></a>
+                                <a href="#" class="button button-blue" role="button">Contact</a>
+                            </div>
+                            <!-- // Share -->
+
+                            <!-- Gallery // -->
+                            <div class="wrapper-aside-component wrapper-aside-component-gallery">
+                                <ul class="list-unordered list-thumbnails" data-component="gallery">
+                                    <li>
+                                        <a href="assets/images/content/gallery/gallery-01-700x394.jpg" title="Lorem ipsum dolor" class="gallery" data-photo-title="<b>Lorem ipsum dolor</b> Sit amet, consectetuer adipiscing elit, sed diam nonummy"><img src="assets/images/content/gallery/gallery-01-65x65.jpg" alt="" /></a>
+                                    </li>
+                                    <li>
+                                        <a href="assets/images/content/gallery/gallery-02-700x394.jpg" title="Sed ut perspiciatis unde" data-photo-title="<b>Sed ut perspiciatis unde</b> Omnis iste natus error sit voluptatem accusantium doloremque laudantium." class="gallery"><img src="assets/images/content/gallery/gallery-02-65x65.jpg" alt="" /></a>
+                                    </li>
+                                    <li>
+                                        <a href="assets/images/content/gallery/gallery-03-700x394.jpg" title="Neque porro quisquam est" data-photo-title="<b>Neque porro quisquam est</b> Qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora." class="gallery"><img src="assets/images/content/gallery/gallery-03-65x65.jpg" alt="" /></a>
+                                    </li>
+                                    <li>
+                                        <a href="assets/images/content/gallery/gallery-04-700x394.jpg" title="Lorem ipsum dolor" class="gallery" data-photo-title="<b>Lorem ipsum dolor</b> Sit amet, consectetuer adipiscing elit, sed diam nonummy"><img src="assets/images/content/gallery/gallery-04-65x65.jpg" alt="" /></a>
+                                    </li>
+                                    <li>
+                                        <a href="assets/images/content/gallery/gallery-01-700x394.jpg" title="Lorem ipsum dolor" class="gallery" data-photo-title="<b>Lorem ipsum dolor</b> Sit amet, consectetuer adipiscing elit, sed diam nonummy"><img src="assets/images/content/gallery/gallery-01-65x65.jpg" alt="" /></a>
+                                    </li>
+                                    <li>
+                                        <a href="assets/images/content/gallery/gallery-02-700x394.jpg" title="Sed ut perspiciatis unde" data-photo-title="<b>Sed ut perspiciatis unde</b> Omnis iste natus error sit voluptatem accusantium doloremque laudantium." class="gallery"><img src="assets/images/content/gallery/gallery-02-65x65.jpg" alt="" /></a>
+                                    </li>
+                                    <li>
+                                        <a href="assets/images/content/gallery/gallery-03-700x394.jpg" title="Neque porro quisquam est" data-photo-title="<b>Neque porro quisquam est</b> Qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora." class="gallery"><img src="assets/images/content/gallery/gallery-03-65x65.jpg" alt="" /></a>
+                                    </li>
+                                    <li>
+                                        <a href="assets/images/content/gallery/gallery-04-700x394.jpg" title="Lorem ipsum dolor" class="gallery" data-photo-title="<b>Lorem ipsum dolor</b> Sit amet, consectetuer adipiscing elit, sed diam nonummy"><img src="assets/images/content/gallery/gallery-04-65x65.jpg" alt="" /></a>
+                                    </li>
+                                    <li>
+                                        <a href="assets/images/content/gallery/gallery-01-700x394.jpg" title="Lorem ipsum dolor" class="gallery" data-photo-title="<b>Lorem ipsum dolor</b> Sit amet, consectetuer adipiscing elit, sed diam nonummy"><img src="assets/images/content/gallery/gallery-01-65x65.jpg" alt="" /></a>
+                                    </li>
+                                    <li>
+                                        <a href="assets/images/content/gallery/gallery-02-700x394.jpg" title="Sed ut perspiciatis unde" data-photo-title="<b>Sed ut perspiciatis unde</b> Omnis iste natus error sit voluptatem accusantium doloremque laudantium." class="gallery"><img src="assets/images/content/gallery/gallery-02-65x65.jpg" alt="" /></a>
+                                    </li>
+                                    <li>
+                                        <a href="assets/images/content/gallery/gallery-03-700x394.jpg" title="Neque porro quisquam est" data-photo-title="<b>Neque porro quisquam est</b> Qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora." class="gallery"><img src="assets/images/content/gallery/gallery-03-65x65.jpg" alt="" /></a>
+                                    </li>
+                                    <li>
+                                        <a href="assets/images/content/gallery/gallery-04-700x394.jpg" title="Lorem ipsum dolor" class="gallery" data-photo-title="<b>Lorem ipsum dolor</b> Sit amet, consectetuer adipiscing elit, sed diam nonummy"><img src="assets/images/content/gallery/gallery-04-65x65.jpg" alt="" /></a>
+                                    </li>
+                                    <li>
+                                        <a href="assets/images/content/gallery/gallery-01-700x394.jpg" title="Lorem ipsum dolor" class="gallery" data-photo-title="<b>Lorem ipsum dolor</b> Sit amet, consectetuer adipiscing elit, sed diam nonummy"><img src="assets/images/content/gallery/gallery-01-65x65.jpg" alt="" /></a>
+                                    </li>
+                                    <li>
+                                        <a href="assets/images/content/gallery/gallery-02-700x394.jpg" title="Sed ut perspiciatis unde" data-photo-title="<b>Sed ut perspiciatis unde</b> Omnis iste natus error sit voluptatem accusantium doloremque laudantium." class="gallery"><img src="assets/images/content/gallery/gallery-02-65x65.jpg" alt="" /></a>
+                                    </li>
+                                    <li>
+                                        <a href="assets/images/content/gallery/gallery-03-700x394.jpg" title="Neque porro quisquam est" data-photo-title="<b>Neque porro quisquam est</b> Qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora." class="gallery"><img src="assets/images/content/gallery/gallery-03-65x65.jpg" alt="" /></a>
+                                    </li>
+                                    <li>
+                                        <a href="assets/images/content/gallery/gallery-04-700x394.jpg" title="Lorem ipsum dolor" class="gallery" data-photo-title="<b>Lorem ipsum dolor</b> Sit amet, consectetuer adipiscing elit, sed diam nonummy"><img src="assets/images/content/gallery/gallery-04-65x65.jpg" alt="" /></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- // Gallery -->
+
+                            <a href="#" data-list-navigator-id="4" data-list-navigator-parent-id="3" data-action="list-navigator" data-list-navigator-back="true" class="button button-white" role="button">Back</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- // Navigator -->
+            </div>
+            <!-- // Side Bar -->
+        </aside>
+        <section role="main" class="main" data-section-toggle="true">
+
+            <!-- Map // -->
+            <div class="canvas">
+                <div id="map-canvas" class="map-canvas loading loading-bars"></div><!-- // Google Map Canvas -->
+                <div class="ds ds-t"></div><!-- // Drop Shadow (Top) -->
+                <div class="ds ds-r"></div><!-- // Drop Shadow (Right) -->
+            </div>
+            <!-- // Map -->
+        </section>
+    </div>
+    <script src="//maps.googleapis.com/maps/api/js?v=3&amp;sensor=false"></script>
+    <script src="assets/js/vendor/jquery.js"></script>
+    <script src="assets/js/vendor/jquery-ui.js"></script>
+    <script src="assets/js/plugins.js?v=3.1.0"></script>
+    <script src="assets/js/components.js?v=3.1.0"></script>
+    <script src="assets/js/main.js?v=3.1.0"></script>
+</body>
+</html>

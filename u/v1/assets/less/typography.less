@@ -1,0 +1,579 @@
+/* ==========================================================================
+   Typography: color, font-size, font-weight, line-height, text-decoration
+   ========================================================================== */
+
+/* LESS: Colours
+   ========================================================================== */
+
+@color-black: #000;
+@color-grey: #808080;
+@color-silver-dark: #aaa;
+@color-silver: #c0c0c0;
+@color-silver-light: #e5e5e5;
+@color-white-dark: #f8f8f8;
+@color-white: #fff;
+@color-blue-light: #5dbbce;
+@color-blue: #09405f;
+@color-navy: #041533;
+@color-green: #9bca32;
+@color-tan-lighter: #f9f2e7;
+@color-tan: #ebe4cd;
+@color-tan-dark: #a79c8e;
+@color-brown-light: #68483a;
+@color-brown: #553b30;
+@color-orange: #d15c3a;
+@color-red-light: #cb333e;
+@color-red: #b52d37;
+
+/* LESS: Font families */
+
+@font-family-droidsans: 'DroidSans', Arial, sans-serif;
+@font-family-arial: Arial, sans-serif;
+@font-family-georgia: Georgia, sans-serif;
+@font-family-lucida: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+@font-family-verdana: Verdana, sans-serif;
+
+/* LESS: Font weights */
+
+@font-weight-light: 200;
+@font-weight-normal: 400;
+@font-weight-bold: 700;
+
+/* Fonts */
+
+@font-face {
+    font-family: 'DroidSans';
+    src: url("../fonts/droidsans-webfont.eot");
+    src: url("../fonts/droidsans-webfont.eot?#iefix") format("embedded-opentype"),
+         url("../fonts/droidsans-webfont.woff") format("woff"),
+         url("../fonts/droidsans-webfont.ttf") format("truetype"),
+         url("../fonts/droidsans-webfont.svg#DroidSans") format("svg");
+    font-weight: @font-weight-normal;
+    font-style: normal;
+}
+
+body {
+    font: 100% @font-family-arial; // Target ÷ Context = Result
+}
+
+/* Headings
+   ========================================================================== */
+
+h1 {
+    color: @color-navy;
+    font: 1.25em/1.2 @font-family-droidsans; /* 20px / 16px */
+    font-weight: @font-weight-bold;
+    text-transform: uppercase;
+}
+
+h2 {
+    color: @color-red;
+    font: 0.875em/1.2 @font-family-droidsans; /* 14px / 16px */
+    font-style: italic;
+}
+
+h3, h4 {
+    font: 1.85em/1.2 @font-family-droidsans; /* 30px / 16px */
+}
+
+h4 {
+
+}
+
+h5 {
+
+}
+
+h6 {
+
+}
+
+@media only screen and (min-width: 481px) {
+
+    h1 {
+        font-size: 1.85em; /* 30px / 16px */
+    }
+
+    h2 {
+        font-size: 1.125em; /* 18px / 16px */
+    }
+}
+
+@media only screen and (min-width: 769px) {
+
+    h1 {
+        font-size: 3.5em; /* 56px / 16px */
+    }
+
+    h2 {
+        font-size: 1.65em; /* 26px / 16px */
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+
+    h1 {
+        font-size: 4.5em; /* 72px / 16px */
+    }
+}
+
+/* Text
+   ========================================================================== */
+
+blockquote {
+    font-style: italic;
+}
+
+p {
+    font: 1.125em/1.4 @font-family-georgia; /* 18px / 16px */
+
+    &.intro {
+        font-size: 1.3em; /* 21px / 16px */
+
+        &:first-letter {
+            font-weight: bold;
+            font-size: 2em;
+            line-height: 1;
+        }
+    }
+
+    &.legal {
+        color: @color-brown-light;
+        font: 0.875em/1.2 @font-family-droidsans; /* 14px / 16px */
+
+        a {
+            color: @color-orange;
+            text-decoration: none;
+
+            &:hover {
+                color: @color-red;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+figcaption {
+    color: @color-tan-dark;
+    font: 0.875em/1.2 @font-family-droidsans; /* 14px / 16px */
+    font-style: italic;
+    text-align: right;
+}
+
+@media only screen and (min-width: 481px) {
+
+    p {
+        font-size: 1.25em; /* 20px / 16px */
+
+        &.intro {
+            font-size: 1.5em; /* 22px / 16px */
+        }
+    }
+}
+
+/* Anchors
+   ========================================================================== */
+
+a {
+
+    &:active {
+
+    }
+
+    &:hover {
+
+    }
+
+    &:visited {
+
+    }
+}
+
+article {
+
+    p {
+
+        a {
+            background-color: @color-tan-lighter;
+            border-bottom: 1px @color-brown solid;
+            color: @color-brown;
+            text-decoration: none;
+
+            &:hover {
+                background-color: @color-tan;
+                border-bottom: 1px @color-red solid;
+                color: @color-orange;
+            }
+        }
+    }
+}
+
+/* Table
+   ========================================================================== */
+
+thead {
+
+    th {
+
+    }
+}
+
+tbody {
+
+    td {
+
+    }
+}
+
+tfoot {
+
+    td {
+
+    }
+}
+
+/* Lists
+   ========================================================================== */
+
+ol {
+
+    li {
+
+    }
+}
+
+/* Skills & Expertise */
+
+ol.skills {
+
+    li {
+        font: 1.125em/1.5 @font-family-georgia; /* 18px / 16px */
+
+        i {
+            color: @color-green;
+        }
+    }
+}
+
+ul {
+
+    li {
+
+    }
+}
+
+/* Credits */
+
+ul.credits {
+
+    li {
+        font: 1.125em/1.5 @font-family-georgia; /* 18px / 16px */
+
+        a {
+            color: @color-black;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        i {
+            color: @color-blue;
+        }
+    }
+}
+
+dl {
+
+    dt {
+
+    }
+
+    dd {
+
+    }
+}
+
+/* Navigation
+   ========================================================================== */
+
+div.navigation {
+
+    a {
+        color: @color-black;
+        font-size: 2em; /* 32px / 16px */
+    }
+}
+
+nav {
+
+    a {
+        color: @color-black;
+        font: 1em/1.2 @font-family-droidsans;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+}
+
+/* Primary */
+
+nav.primary {
+
+    li {
+
+        a {
+
+            &.current {
+                color: @color-white;
+            }
+
+            &:hover {
+                background-color: @color-navy;
+                color: @color-white;
+            }
+        }
+    }
+}
+
+/* Footer */
+
+nav.footer {
+
+    a {
+        background-color: @color-tan;
+        color: @color-brown;
+
+        &.current {
+            color: @color-red;
+        }
+
+        &:hover {
+            background-color: @color-tan-dark;
+            color: @color-white;
+        }
+    }
+}
+
+@media only screen and (min-width: 481px) {
+
+    /* Primary */
+
+    nav.primary {
+
+        li {
+
+            a {
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 481px) {
+
+    footer[role="contentinfo"] {
+
+        /* Back to Top */
+
+        a.back-to-top {
+            color: @color-red-light;
+            font-size: 4em;
+
+            &:hover {
+                color: @color-red;
+            }
+        }
+    }
+}
+
+/* Chrome Frame
+   ========================================================================== */
+
+div.chromeframe {
+
+    p {
+        color: @color-white;
+        font: 18px/1.2 @font-family-georgia;
+        text-align: center;
+
+        a {
+            color: @color-blue-light;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        b {
+            font-size: 2.5em; /* 40px / 16px */
+            font-weight: @font-weight-bold;
+        }
+    }
+}
+
+/* Style Guide
+   ========================================================================== */
+
+.style-guide {
+    font-family: @font-family-georgia;
+
+    h1 {
+        font-size: 1em; /* 16px / 16px */
+
+        @media only screen and (min-width: 481px) {
+            font-size: 3.125em; /* 50px / 16px */
+        }
+    }
+
+    article {
+
+        header {
+
+            h2 {
+                border-bottom: 1px @color-silver dashed;
+                font-family: @font-family-lucida;
+                font-size: 1em; /* 16px / 16px */
+
+                @media only screen and (min-width: 481px) {
+                    font-size: 1.5em; /* 24px / 16px */
+                }
+            }
+        }
+    }
+
+    // Home icon
+    a.icon-home {
+        color: @color-silver;
+        font-size: 1.5625em; /* 25px / 16px */
+        .opacity(0.8);
+        .transition(all 0.20s ease 0s);
+
+        &:hover {
+            color: @color-black;
+            .opacity(1.0);
+        }
+    }
+
+    // Up icon
+    a.icon-arrow-up {
+        color: @color-silver;
+        font-size: 1.5625em; /* 25px / 16px */
+        .opacity(0.8);
+        .transition(all 0.20s ease 0s);
+
+        &:hover {
+            color: @color-black;
+            .opacity(1.0);
+        }
+    }
+
+    // Table of Contents
+    ol.table-of-contents {
+
+        li {
+            color: @color-black;
+
+            a {
+                color: @color-black;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    pre {
+        color: @color-black;
+    }
+
+    // Individual components of the Style Guide
+    article {
+
+        // Typography
+        p {
+
+            &.pt-sans {
+                font-family: @font-family-droidsans;
+            }
+
+            &.georgia {
+                font-family: @font-family-georgia;
+            }
+        }
+    }
+
+    // Colours
+    ul.colours {
+
+        li {
+            text-align: center;
+
+            pre {
+                background-color: @color-white;
+            }
+        }
+    }
+}
+
+/* LESS: Mixins
+   ========================================================================== */
+
+.border-radius(@radius: 15px) {
+    -webkit-border-radius: @radius;
+       -moz-border-radius: @radius;
+         -o-border-radius: @radius;
+            border-radius: @radius;
+}
+
+.box-shadow(@arguments) {
+    -webkit-box-shadow: @arguments;
+       -moz-box-shadow: @arguments;
+         -o-box-shadow: @arguments;
+            box-shadow: @arguments;
+}
+
+.box-sizing(@arguments) {
+    -webkit-box-sizing: @arguments;
+       -moz-box-sizing: @arguments;
+         -o-box-sizing: @arguments;
+            box-sizing: @arguments;
+}
+
+.inner-shadow(@horizontal: 0, @vertical: 1px, @blur: 2px, @alpha: 0.4) {
+    -webkit-box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+       -moz-box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+         -o-box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+            box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+}
+
+.opacity(@opacity: 0.5) {
+    -webkit-opacity: @opacity;
+       -moz-opacity: @opacity;
+         -o-opacity: @opacity;
+            opacity: @opacity;
+}
+
+.rotation(@deg: 5deg) {
+    -webkit-transform: rotate(@deg);
+       -moz-transform: rotate(@deg);
+         -o-transform: rotate(@deg);
+            transform: rotate(@deg);
+}
+
+.scale(@ratio: 1.5) {
+    -webkit-transform: scale(@ratio);
+       -moz-transform: scale(@ratio);
+         -o-transform: scale(@ratio);
+            transform: scale(@ratio);
+}
+
+.transition(@arguments) {
+    -webkit-transition: @arguments;
+       -moz-transition: @arguments;
+         -o-transition: @arguments;
+            transition: @arguments;
+}

@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Work • Michael Thorne / Front-end Web Developer</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:400,700,400italic,700italic">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            background-color: #2a2c39;
+            color: #fff;
+            font: 100%/1.5 "Merriweather", serif;
+            height: 100%;
+            text-align: center;
+            position: relative;
+        }
+
+        .wrapper {
+            margin-right: auto;
+            margin-left: auto;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+        }
+
+        .strapline {
+            display: inline-block;
+            margin-bottom: 1em;
+            text-align: center;
+        }
+
+        .strapline__link {
+            background-color: #46b1c9;
+            border-radius: 2px;
+            color: #fff;
+            display: inline-block;
+            padding: 0.1875em 1.0625em 0.3125em;
+            text-decoration: none;
+        }
+
+        .strapline__link:focus,
+        .strapline__link:hover {
+            background-color: #fff;
+            color: #46b1c9;
+        }
+
+        .hN {
+            font-family: "Lato", serif;
+            font-size: 2.25em; /* 36 / 16 */
+            font-weight: bold;
+            margin-bottom: 0;
+            transition: background-color 0.25s, color 0.25s;
+        }
+
+        code {
+            color: #e4572e;
+            font-size: 1.375em;
+        }
+    </style>
+</head>
+<body>
+    <main role="main">
+        <div class="wrapper">
+            <div class="strapline">
+                <a class="strapline__link" href="http://userx.co.za">
+                    <h1 class="hN">Michael Thorne</h1>
+                </a>
+            </div>
+
+            <p>Is it <code>&lt;work&gt;</code> you are looking for?</p>
+        </div>
+    </main>
+
+    <!-- Google Analytics -->
+    <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','{{ site.google_analytics }}','auto');ga('require', 'displayfeatures');ga('send','pageview');
+    </script>
+</body>
+</html>

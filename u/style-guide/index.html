@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!--[if IE 7]>         <html lang="en" dir="ltr" class="no-js lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" dir="ltr" class="no-js lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]>         <html lang="en" dir="ltr" class="no-js lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!--> <html lang="en" dir="ltr" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+    <title>Style Guide</title>
+
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Open Graph: http://ogp.me -->
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:locale" content="en" />
+
+    <!-- Twitter Cards: https://dev.twitter.com/docs/cards -->
+    <meta name="twitter:card" content="" />
+    <meta name="twitter:site" content="" />
+    <meta name="twitter:creator" content="" />
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:image" content="" />
+
+    <!-- Avoiding the FOUC v3.0: http://www.paulirish.com/2009/avoiding-the-fouc-v3 -->
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+
+    <!-- Google+ Page: https://support.google.com/webmasters/answer/1708844 -->
+    <link rel="publisher" href="//plus.google.com/{+PageId}/" />
+
+    <!-- Font Awesome: http://fortawesome.github.io/Font-Awesome -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" />
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Droid+Sans:400,600,700" />
+
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="assets/css/main.css?v=0.2.4" />
+    <link rel="stylesheet" href="assets/css/style-guide/main.css?v=0.2.4" />
+
+    <!--[if lt IE 9]>
+    <script src="assets/js/vendor/polyfills.js"></script>
+    <![endif]-->
+</head>
+<body class="sg-body">
+    <header class="sg-header" role="banner">
+        <div class="sg-wrapper">
+            <a href="index.html" class="sg-home"><i class="fa fa-home"></i></a>
+            <h1 class="delta white">Style Guide</h1>
+            <a href="index.html#sg-table-of-contents" class="sg-nav-toggle" data-action="sg-nav-toggle"><i class="fa fa-bars"></i></a>
+        </div>
+    </header>
+    <!-- // Header -->
+
+    <nav class="sg-nav" data-container="sg-nav" role="navigation">
+        <div class="sg-wrapper">
+            <ol class="sg-list sg-list-nav">
+                <li><a href="index.html#sg-intro"><i class="fa fa-caret-right"></i> Introduction</a></li>
+                <li><a href="index.html#sg-table-of-contents"><i class="fa fa-caret-right"></i> Table of Contents</a></li>
+                <li><a href="index.html#sg-about"><i class="fa fa-caret-right"></i> About</a></li>
+            </ol>
+        </div>
+    </nav>
+    <!-- // Navigation -->
+
+    <main id="top" class="sg-main" role="main">
+        <div class="sg-wrapper">
+			<a id="sg-intro" class="sg-section-link"></a>
+
+            <!--[if lt IE 9]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/?locale=en">upgrade your browser</a> to improve your experience.</p>
+            <![endif]-->
+
+			<section class="sg-section">
+				<h5 class="epsilon sg-section-heading-primary">Introduction <a href="#top" data-action="sg-back-to-top">Back to Top <i class="fa fa-arrow-up"></i></a></h5>
+				<p class="sg-text">These documents are a guide to the mark&ndash;up styles used throughout the website.</p>
+			</section>
+			<!-- // Intro -->
+
+            <a id="sg-table-of-contents" class="sg-section-link"></a>
+            <section class="sg-section">
+                <h5 class="epsilon sg-section-heading-primary">Table of Contents <a href="#top" data-action="sg-back-to-top">Back to Top <i class="fa fa-arrow-up"></i></a></h5>
+                <ul class="sg-list sg-list-table-of-contents">
+					<li><a href="elements.html">Elements</a></li>
+					<li><a href="modules.html">Modules</a></li>
+					<li><a href="components.html">Components</a></li>
+					<li><a href="forms.html">Forms</a></li>
+					<li><a href="grid.html">Grid</a></li>
+					<li>
+						Templates
+						<ol class="sg-list">
+							<li><a href="#">Template 1</a></li>
+							<li><a href="#">Template 2</a></li>
+							<li><a href="#">Template 3</a></li>
+						</ol>
+					</li>
+					<li>
+						Pages
+						<ol class="sg-list list-counter">
+							<li><a href="#">Page 1</a></li>
+							<li><a href="#">Page 2</a></li>
+							<li><a href="#">Page 3</a></li>
+							<li>
+								Errors
+								<ol class="sg-list">
+									<li><a href="404.html">404</a></li>
+									<li><a href="500.html">500</a></li>
+								</ol>
+							</li>
+						</ol>
+					</li>
+                </ul>
+            </section>
+            <!-- // Table of Contents -->
+			
+			<a id="sg-about" class="sg-section-link"></a>
+			<section class="sg-section">
+				<h5 class="epsilon sg-section-heading-primary">About <a href="#top" data-action="sg-back-to-top">Back to Top <i class="fa fa-arrow-up"></i></a></h5>
+				<p class="sg-text">
+			        The style guide is a system of <a href="elements.html">elements</a>, <a href="modules.html">modules</a> and <a href="components.html">components</a> which are used to create the unique templates and individual pages for this website. It includes form <a href="forms.html#sg-form-input-types">input types</a> along with common layout <a href="forms.html#sg-form-layout-default">patterns</a>. There is also a basic <a href="grid.html">grid</a> system.
+				</p>
+			</section>
+			<!-- // About -->
+        </div>
+    </main>
+    <!-- // Main -->
+
+    <footer class="sg-footer" role="contentinfo">
+        <div class="sg-wrapper">
+            <p>
+                <small><b>Last Modified</b>: <time datetime="2013-11-30" data-component="last-modified">November 30, 2013</time></small>
+            </p>
+            <p>
+                <small><b>Version</b>: 0.2.4</small>
+            </p>
+        </div>
+    </footer>
+    <!-- // Footer -->
+
+    <!-- JavaScript -->
+    <script src="assets/js/vendor/jquery.js"></script>
+    <script src="assets/js/plugins.js?v=0.2.4"></script>
+    <script src="assets/js/main.js?v=0.2.4"></script>
+    <script src="assets/js/style-guide/main.js?v=0.2.4"></script>
+    <script>main.init();</script>
+    <script>style_guide.init();</script>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+    <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+</body>
+</html>

@@ -1,0 +1,379 @@
+/* ==========================================================================
+   Components: all the jQuery components used throughout the website.
+   ========================================================================== */
+
+/* LESS: Colours
+   ========================================================================== */
+
+@color-black: #000;
+@color-charcoal: #292929;
+@color-grey-dark: #666;
+@color-grey: #808080;
+@color-silver: #ccc;
+@color-silver-blue: #e9eaeb;
+@color-silver-light: #eee;
+@color-white-blue: #ebf2f2;
+@color-white-dark: #f8f8f8;
+@color-white: #fff;
+@color-cream: #ffffcc;
+@color-amber: #f0b323;
+@color-cherry: #ce0058;
+@color-red: #d50032;
+@color-plum: #a15a95;
+@color-heather: #7d55c7;
+@color-aqua: #00a9ce;
+@color-sapphire: #06038d;
+@color-navy: #0d2c56;
+
+/* LESS: Font families */
+
+@font-family-arial: Arial, sans-serif;
+@font-family-georgia: Georgia, sans-serif;
+@font-family-lucida: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+
+/* LESS: Font weights */
+
+@font-weight-light: 200;
+@font-weight-normal: 400;
+@font-weight-bold: 700;
+
+/* Navigation
+   ========================================================================== */
+
+nav {
+    overflow: visible;
+
+    ol {
+        float: left;
+        margin: 0;
+        padding: 0;
+
+        li {
+            list-style: none;
+
+            &:before {
+                content: normal;
+            }
+
+            a {
+                color: @color-black;
+                display: block;
+                text-decoration: none;
+            }
+        }
+    }
+
+    > ol {
+
+        > li {
+            float: left;
+        }
+    }
+}
+
+/* Primary */
+
+nav.primary {
+
+    ol {
+
+        li {
+            background: url('../images/backgrounds/background-separator-nav.png') top right no-repeat;
+            padding: 0 11px;
+
+            &.current {
+
+                > a {
+                    border-bottom: 2px @color-black solid;
+                    color: @color-black;
+                    height: 19px;
+
+                    &.drop-down {
+                        background: url('../images/icons/icon-nav-drop-down-primary-active.png') right 13px no-repeat;
+                    }
+                }
+            }
+
+            a {
+                color: @color-white;
+                font: @font-weight-bold 12px/1 @font-family-arial;
+                height: 21px;
+                padding: 9px 0 0 0;
+
+                &:focus {
+                    color: @color-black;
+                }
+
+                &:hover {
+                    border-bottom: 2px @color-black solid;
+                    height: 19px;
+                }
+
+                &.drop-down {
+                    background: url('../images/icons/icon-nav-drop-down-primary.png') center right no-repeat;
+                    padding-right: 12px;
+
+                    &:hover {
+                        background: url('../images/icons/icon-nav-drop-down-primary-active.png') right 13px no-repeat;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Drop-down */
+
+nav.drop-down {
+    position: relative;
+    z-index: 1000;
+
+    // Level one
+    ol {
+
+        li {
+            position: relative;
+
+            &.hover {
+
+                > a {
+                    color: @color-black;
+
+                    &.drop-down {
+                        background: url('../images/icons/icon-nav-drop-down-primary-active.png') right 13px no-repeat;
+                    }
+                }
+
+                li {
+
+                    &.hover {
+
+                        > a {
+
+                            &.drop-down {
+                                background: url('../images/icons/icon-nav-drop-down-active.png') right 10px no-repeat;
+                            }
+                        }
+                    }
+                }
+            }
+
+            // Level two
+            ol {
+                background: url('../images/backgrounds/background-tile-white-transparent.png') 0 0 repeat;
+                border: 1px @color-grey solid;
+                display: none;
+                left: 0;
+                padding: 0 0 9px 0;
+                position: absolute;
+                top: 30px;
+                width: 150px;
+
+                li {
+                    background: none;
+                    clear: both;
+                    float: left;
+                    width: 130px;
+
+                    a {
+                        border-bottom: 1px @color-silver solid;
+                        color: @color-grey-dark;
+
+                        &:hover {
+                            border-bottom: 1px @color-grey solid;
+                            height: 21px;
+                        }
+
+                        &.drop-down {
+                            background: url('../images/icons/icon-nav-drop-down.png') center right no-repeat;
+                            padding-right: 12px;
+
+                            &:hover {
+                                background: url('../images/icons/icon-nav-drop-down-active.png') center right no-repeat;
+                            }
+                        }
+                    }
+
+                    // Level three
+                    ol {
+                        left: 150px;
+                        top: -1px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Slider
+   ========================================================================== */
+
+div.slider {
+    margin: 20px 0 0 0;
+    overflow: hidden;
+    position: relative;
+    width: 650px;
+
+    ol {
+        margin: 0;
+        padding: 0;
+        width: 1000px;
+
+        li {
+            float: left;
+            height: 350px;
+            list-style: none;
+            margin: 0;
+            position: relative;
+            width: 650px;
+
+            &:before {
+                content: none;
+                counter-increment: none;
+            }
+
+            // Feature image
+
+            > img {
+                display: block;
+                height: 350px;
+                width: 650px;
+            }
+
+            /* Feature */
+
+            div.feature {
+                background: url('../images/backgrounds/background-tile-aqua-transparent.png') 0 0 repeat;
+                bottom: 14px;
+                left: 0;
+                padding: 20px;
+                position: absolute;
+                width: 360px;
+
+                // Heading
+                h3 {
+                    color: @color-white;
+                    font: 24px/1.2 @font-family-georgia;
+                    margin: 0;
+
+                    span {
+                        font: 12px/1.2 @font-family-arial;
+                        display: block;
+                        text-transform: uppercase;
+                    }
+
+                    a {
+                        color: @color-white;
+                        font: 24px/1.2 @font-family-georgia;
+                        text-decoration: none;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+
+                // Contents
+                p {
+                    color: @color-white;
+                    font: 16px/1.3 @font-family-georgia;
+                    font-style: italic;
+                    margin: 8px 0 17px 0;
+                }
+            }
+        }
+    }
+
+    /* Controls */
+
+    a.nav {
+        bottom: 9px;
+        height: 20px;
+        .opacity(0.6);
+        position: absolute;
+        .transition(all 0.20s ease 0s);
+        width: 21px;
+
+        &:focus,
+        &:hover {
+            outline: none;
+            .opacity(1);
+        }
+    }
+
+    // Previous
+    a.prev {
+        right: 36px;
+    }
+
+    // Next
+    a.next {
+        right: 10px;
+    }
+}
+
+/* LESS: Mixins
+   ========================================================================== */
+
+.border-radius(@radius: 15px) {
+    -webkit-border-radius: @radius;
+       -moz-border-radius: @radius;
+         -o-border-radius: @radius;
+            border-radius: @radius;
+}
+
+.box-shadow(@arguments) {
+    -webkit-box-shadow: @arguments;
+       -moz-box-shadow: @arguments;
+         -o-box-shadow: @arguments;
+            box-shadow: @arguments;
+}
+
+.box-sizing(@arguments) {
+    -webkit-box-sizing: @arguments;
+       -moz-box-sizing: @arguments;
+         -o-box-sizing: @arguments;
+            box-sizing: @arguments;
+}
+
+.inner-shadow(@horizontal: 0, @vertical: 1px, @blur: 2px, @alpha: 0.4) {
+    -webkit-box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+       -moz-box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+         -o-box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+            box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+}
+
+.opacity(@opacity: 0.5) {
+    -webkit-opacity: @opacity;
+       -moz-opacity: @opacity;
+         -o-opacity: @opacity;
+            opacity: @opacity;
+}
+
+.rotation(@deg: 5deg) {
+    -webkit-transform: rotate(@deg);
+       -moz-transform: rotate(@deg);
+         -o-transform: rotate(@deg);
+            transform: rotate(@deg);
+}
+
+.scale(@ratio: 1.5) {
+    -webkit-transform: scale(@ratio);
+       -moz-transform: scale(@ratio);
+         -o-transform: scale(@ratio);
+            transform: scale(@ratio);
+}
+
+.transform(@arguments) {
+    -webkit-transform: @arguments;
+       -moz-transform: @arguments;
+        -ms-transform: @arguments;
+         -o-transform: @arguments;
+}
+
+.transition(@arguments) {
+    -webkit-transition: @arguments;
+       -moz-transition: @arguments;
+         -o-transition: @arguments;
+            transition: @arguments;
+}

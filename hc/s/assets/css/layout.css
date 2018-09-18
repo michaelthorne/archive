@@ -1,0 +1,739 @@
+html, body {
+    height: 100%;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+body {
+    background-color: #d1d1d1;
+}
+
+pre {
+    clear: both;
+    margin: 20px 0 20px 10px;
+}
+
+.clearfix {
+    clear: both;
+    height: 1px;
+}
+
+/* --- WRAPPER: entire site ------------ */
+
+div#wrapper {
+    background: url("../../assets/images/background.jpg") top center no-repeat;
+    margin: 0 auto;
+    min-height: 100%;
+    padding-bottom: 4px;
+    position: relative;
+    width: 1218px;
+}
+
+body#home div#wrapper {
+    background: url("../../assets/images/background-home.jpg") top center no-repeat;
+}
+
+body#templates div#wrapper,
+body#typography div#wrapper {
+    background: none;
+}
+
+body#destination div#wrapper {
+    background: #d1d1d1 url("../../assets/images/background-destination.jpg") top center no-repeat;
+}
+
+/* --- PRIMARY-NAVIGATION ------------ */
+
+div#primary-navigation {
+    clear: both;
+    height: 47px;
+    margin: 0 auto;
+    width: 634px;
+}
+
+div#primary-navigation ul {
+    padding-top: 15px;
+}
+
+div#primary-navigation ul li {
+    background: none;
+    clear: none;
+    float: left;
+    margin-left: 0;
+    padding: 0 20px 0 0;
+}
+
+/* --- SECONDARY-NAVIGATION ------------ */
+
+div#secondary-navigation {
+    background: url("../../assets/images/navigation/secondary-navigation-background.jpg") top center no-repeat;
+    height: 115px;
+    display: none;
+    left: 0;
+    position: absolute;
+    top: 47px;
+    width: 1218px;
+}
+
+div#secondary-navigation img#destination-map {
+    float: left;
+    left: 60px;
+    position: relative;
+    top: 0;
+}
+
+div#secondary-navigation ul {
+    margin: 0 auto;
+    padding-top: 22px;
+    width: 634px;
+}
+
+div#secondary-navigation ul li {
+    background: none;
+    clear: none;
+    float: left;
+    margin: 0;
+    padding: 0 5px 0 0;
+}
+
+div#secondary-navigation ul li img {
+    border: 2px #7f7f7f solid;
+}
+
+div#secondary-navigation ul li a:hover img {
+    border: 2px #00b3fe solid;
+}
+
+#secondary-navigation img {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+  -moz-opacity: 0.5;
+  opacity: 0.5;
+}
+
+/* --- WRAPPER: content ------------ */
+
+div#content {
+    clear: both;
+    margin: 0 auto;
+    padding-top: 40px;
+    width: 634px;
+}
+
+div#content.modal {
+    padding-top: 0;
+    width: 641px;
+}
+
+div#content #video-container {
+    height: 356px;
+    margin: 8px 0 12px 0;
+    width: 634px;
+}
+
+div#content #quote {
+    border-bottom: 1px #b9b9b9 dashed;
+    margin-bottom: 12px;
+    padding: 13px 0;
+    width: 634px;
+}
+
+div#content #quote h6 {
+    margin: 6px 0 2px 0;
+}
+
+/* --- SLIDER ------------ */
+
+div#slider {
+    height: 600px;
+    margin-top: 108px;
+    overflow: hidden;
+    position: relative;
+    width: 1151px;
+}
+
+div#slider span a {
+    height: 40px;
+    left: 430px;
+    position: absolute;
+    top: 269px;
+    width: 263px;
+}
+
+div#slider ul {
+    height: 600px;
+    width: 5020px;
+}
+
+div#slider ul li {
+    float: left;
+    height: 598px;
+}
+
+/* DestiNations 1-6 for the slider */
+/* positioning is a bit fugly to be honest, but hey... such is the nature of the design */
+div#slider ul li#destination-1 {
+    background: url("../../assets/images/slider-destination-1.png") top center no-repeat;
+    width: 1400px;
+}
+
+div#slider ul li#destination-1 a {
+    display: block;
+    height: 125px;
+    left: 1165px;
+    position: relative;
+    top: 318px;
+    width: 125px;
+}
+
+div#slider ul li#destination-2 {
+    background: url("../../assets/images/slider-destination-2.png") top center no-repeat;
+    width: 710px;
+}
+
+div#slider ul li#destination-2 a {
+    display: block;
+    height: 135px;
+    left: 185px;
+    top: 247px;
+    position: relative;
+    width: 135px;
+}
+
+div#slider ul li#destination-3 {
+    background: url("../../assets/images/slider-destination-3.png") top center no-repeat;
+    width: 590px;
+}
+
+div#slider ul li#destination-3 a {
+    display: block;
+    height: 120px;
+    left: 34px;
+    top: 328px;
+    position: relative;
+    width: 120px;
+}
+
+div#slider ul li#destination-4 {
+    background: url("../../assets/images/slider-destination-4.png") top center no-repeat;
+    width: 530px;
+}
+
+div#slider ul li#destination-4 a {
+    display: block;
+    height: 120px;
+    left: 33px;
+    top: 228px;
+    position: relative;
+    width: 120px;
+}
+
+div#slider ul li#destination-5 {
+    background: url("../../assets/images/slider-destination-5.png") top center no-repeat;
+    width: 660px;
+}
+
+div#slider ul li#destination-5 a {
+    display: block;
+    height: 138px;
+    left: 35px;
+    top: 228px;
+    position: relative;
+    width: 138px;
+}
+
+div#slider ul li#destination-6 {
+    background: url("../../assets/images/slider-destination-6.png") top center no-repeat;
+    width: 1130px;
+}
+
+div#slider ul li#destination-6 a {
+    display: block;
+    height: 138px;
+    left: 340px;
+    top: 350px;
+    position: relative;
+    width: 138px;
+}
+
+/* --- FOOTER ------------ */
+
+div#footer {
+    border-top: 1px #b9b9b9 dashed;
+    clear: both;
+    margin: 8px auto 0;
+    padding-top: 17px;
+    width: 634px;
+}
+
+div#footer ul {
+    height: 60px;
+}
+
+div#footer ul li {
+    float: left;
+    height: 50px;
+    margin-top: 15px;
+    padding-right: 13px;
+}
+
+/* --- TIPS ------------ */
+
+div.inner-container ul li ul#standard li {
+    clear: both;
+    margin: 0 0 0 10px;
+    padding: 0 0 0 20px;
+}
+
+div.inner-container ul li ul#standard li {
+    margin: 0 0 0 0;
+}
+
+div.inner-container {
+    clear: both;
+    padding: 20px;
+}
+
+div.inner-container ul li {
+    clear: both;
+    float: left;
+    margin: 0 0 15px 10px;
+    padding: 1px 0 14px 0;
+    width: 546px;
+}
+
+div.inner-container ul li span {
+    display: block;
+    float: left;
+    margin-right: 20px;
+    padding-top: 4px;
+    width: 24px;
+}
+
+div.inner-container ul li div {
+    float: left;
+    width: 480px;
+}
+
+/* --- TIPS: UTILITIES - email, share, etc. ------------ */
+
+div.utils {
+    clear: both;
+    height: 33px;
+}
+
+div.utils ul {
+    width: 400px;
+    margin: 0 auto;
+}
+
+div.utils ul li {
+    clear: none;
+    float: left;
+    margin: 0;
+    padding: 0 12px;
+}
+
+/* --- QUIZ: CHOICES ------------ */
+
+div#choices ul {
+    width: 580px;
+}
+
+div#choices ul li {
+    clear: both;
+    display: block;
+    margin-left: 0;
+    padding: 5px 10px;
+}
+
+div#choices ul li a {
+    padding: 5px 10px;
+}
+
+#destination .box-outer {
+    position: relative;
+}
+
+#quiz.box-outer img {
+    position: absolute;
+    right: -50px;
+    top: -85px;
+}
+
+div#choices div.validation-errors {
+    clear: both;
+    height: 5px;
+    padding: 10px 20px;
+    width: 405px;
+}
+
+/* --- BOXES ------------ */
+
+div.box-outer {
+    background: url("../../assets/images/box-transparent-background.png") repeat;
+    clear: both;
+    float: left;
+    margin-bottom: 12px;
+    padding: 12px;
+    width: 609px
+}
+
+.modal div.box-outer {
+    background: url("../../assets/images/box-transparent-background.png") repeat;
+    padding: 0;
+    margin-bottom: 0;
+    width: 641px
+}
+
+div.box-inner {
+    background: url("../../assets/images/box-transparent-background.png") repeat;
+    border-top: 1px #efefef solid;
+    border-right: 1px #dbdbdb solid;
+    border-bottom: 1px #d5d5d5 solid;
+    border-left: 1px #eaeaea solid;
+    float: left;
+    width: 606px
+}
+
+div.box-inner.first {
+    margin-bottom: 12px;
+}
+
+div.box-header {
+    border-bottom: 1px #b9b9b9 dashed;
+    float: left;
+    padding: 14px 0 12px 20px;
+    width: 586px;
+}
+
+div.box-inner div.box-header.no-border {
+    border: 0;
+    margin-bottom: 1px;
+}
+
+div.box-inner div.box-header.border {
+    border-bottom: 1px #b9b9b9 dashed;
+}
+
+div.box-header h2 {
+    padding-left: 0;
+}
+
+.modal div.box-header {
+    background: url("../../assets/images/box-transparent-background.png") repeat;
+    height: 59px;
+    float: none;
+    padding: 13px 0 0 24px;
+    width: auto;
+}
+
+.modal div.box-header img {
+    float: right;
+    margin: 13px 30px 0 0;
+}
+
+div.box-header h2 {
+    margin-top: 5px;
+    padding-bottom: 0;
+}
+
+div.box-header h2,
+div.box-header h5 {
+    float: left;
+    width: 420px;
+}
+
+div.box-header img {
+    float: left;
+    margin-right: 20px;
+}
+
+div.box-header span {
+    float: left;
+    margin-top: -20px;
+}
+
+div.box-contents {
+    overflow: hidden;
+    width: 606px;
+}
+
+.modal div.box-contents {
+    overflow: hidden;
+    padding: 15px;
+    width: 614px;
+}
+
+.modal div#share-form {
+    width: 385px;
+    margin-right: 15px;
+}
+
+.modal div#social-media {
+    width: 207px;
+}
+
+.modal div#social-media a {
+    padding: 10px 0;
+}
+
+.modal div#social-media a:last-child {
+    border-top: 1px #cacaca dashed;
+}
+
+.modal .inner-modal-contents {
+    float: left;
+    background: url("../../assets/images/box-transparent-background.png") repeat;
+    border: 1px solid #e2e4e6;
+    border-right-color: #d1d1d1;
+    border-bottom-color: #d1d1d1;
+}
+
+.modal .inner-modal-contents a {
+    display: block;
+}
+
+div.box-contents.padded {
+    padding: 30px;
+    width: 546px;
+}
+
+#contact div.box-contents.padded,
+#forgot-password div.box-contents.padded,
+#login-register div.box-contents.padded {
+    padding: 11px 20px 0 20px;
+    width: 403px;
+}
+
+div.box-footer {
+    border-top: 1px #b9b9b9 dashed;
+    height: 55px;
+    width: 606px;
+}
+
+div.box-footer ul {
+    width: 416px;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+div.box-footer ul li {
+    float: left;
+    height: 28px;
+    padding-right: 6px;
+}
+
+div.box-footer ul li img {
+    padding-top: 11px;
+}
+
+div.box-footer ul li:first-child img,
+div.box-footer ul li:last-child img {
+    padding-top: 0;
+}
+
+/* --- SCROLLER: tips ------------ */
+
+div#scroller.box-contents {
+    position: relative;
+}
+
+div#scroller-tips {
+    clear: left;
+    height: 266px;
+    overflow: hidden;
+    width: 606px;
+}
+
+div#scroller-tips ul {
+    width: 12120px; /* 606px x 20 tips */
+}
+
+div#scroller-tips li {
+    background: url("../../assets/images/tips-background.png") top center no-repeat;
+    float: left;
+    height: 266px;
+    padding-right: 64px;
+    width: 542px;
+}
+
+div#scrolling-navigation.box-footer ul li img {
+    cursor: pointer;
+}
+
+div#scroller li.tip span {
+    display: block;
+    float: left;
+    height: 266px;
+    text-align: center;
+    padding-top: 60px;
+    width: 164px;
+}
+
+div#scroller li.tip h4 {
+    margin-top: 80px;
+}
+
+/* --- ACCORDION: destination map ------------ */
+
+#destination-map .box-contents {
+    display: none;
+}
+
+/* --- TEMPLATES ------------*/
+
+#templates ul li {
+    list-style: square;
+    font-size: 12px;
+    font-weight: normal;
+    margin-left: 20px;
+}
+
+/* --- LEGAL ------------ */
+
+#legal .box-contents ol li {
+    margin-top: 20px;
+}
+
+#legal .box-contents ol li {
+    margin-left: 20px;
+}
+
+/* --- SLIDER: landing page ------------ */
+
+div#slider-navigation {
+    background: url("../../assets/images/slider-background.png") center center no-repeat;
+    margin: 0 auto;
+    width: 634px;
+}
+
+div#slider-navigation ul {
+    height: 37px;
+    width: 634px;
+}
+
+div#slider-navigation ul li {
+    float: left;
+    height: 24px;
+    padding: 13px 0 0 13px;
+    width: 91px;
+}
+
+div#slider-navigation ul li:first-child {
+    padding-left: 56px;
+}
+
+div#slider-navigation ul li:last-child {
+    width: 58px;
+}
+
+/* --- MODAL ------------ */
+
+.jqmWindow {
+    background: url("../../assets/images/box-transparent-background.png") repeat;
+    display: none;
+    left: 50%;
+    margin-left: -300px;
+    top: 20%;
+    position: fixed;
+    width: 641px;
+}
+
+.jqmOverlay {
+    background: url("../../assets/images/modal-background.png") repeat;
+}
+
+* iframe.jqm {
+    left: 0;
+    height: expression(this.parentNode.offsetHeight+'px');
+    position: absolute;
+    top: 0;
+    width: expression(this.parentNode.offsetWidth+'px');
+    z-index: -1;
+}
+
+* html .jqmWindow {
+    position: absolute;
+    top: expression((document.documentElement.scrollTop || document.body.scrollTop) + Math.round(17 * (document.documentElement.offsetHeight || document.body.clientHeight) / 100) + 'px');
+}
+
+.jqmClose {
+    cursor: pointer;
+}
+
+/* --- CV BUILDER ------------ */
+
+#cv-builder div.inner-container {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#cv-builder div.inner-container.no-padding {
+    padding-bottom: 0;
+}
+
+#cv-builder div.inner-container p {
+    margin: 17px 0 0 0;
+}
+
+#cv-builder div.utils {
+    height: 56px;
+}
+
+#cv-builder div.utils ul {
+    margin: 0 auto;
+    padding-top: 20px;
+    width: 190px;
+}
+
+#cv-builder h2 {
+    width: 532px;
+}
+
+#cv-builder div.box-header span {
+    margin-top: 7px;
+}
+
+#cv-builder div.box-header p {
+    margin-top: 5px;
+}
+
+#cv-builder .box-contents {
+    display: none;
+}
+
+#cv-builder div#progress-bar {
+    padding: 19px 0 18px 18px;
+    position: relative;
+}
+
+#cv-builder div#progress-bar div {
+    background: url("../../assets/images/progress-bar-background.png") top left no-repeat;
+    height: 31px;
+    margin-top: 0;
+    width: 571px;
+}
+
+#cv-builder div#progress-bar div img {
+    padding: 3px 3px 3px 3px;
+}
+
+#cv-builder div#progress-bar span {
+    height: 25px;
+    left: 21px;
+    margin-top: 0;
+    position: absolute;
+    text-align: center;
+    top: 23px;
+    width: 565px;
+}
+
+/*--- VALIDATION ------------ */
+
+div.validation-errors {
+    clear: both;
+    float: left;
+}

@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<!--[if IE 7]>         <html lang="en-GB" dir="ltr" class="ie7"> <![endif]-->
+<!--[if IE 8]>         <html lang="en-GB" dir="ltr" class="ie8"> <![endif]-->
+<!--[if IE 9]>         <html lang="en-GB" dir="ltr" class="ie9"> <![endif]-->
+<!--[if gt IE 9]><!--> <html lang="en-GB" dir="ltr">         <!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+    <title>SiteplanExplorer &mdash; Components</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="Michael Thorne" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:locale" content="en_GB" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="publisher" href="https://plus.google.com/106015161495562490229/" />
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans" />
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" />
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome-ie7.min.css">
+    <![endif]-->
+    <link rel="stylesheet" href="assets/css/main.css?v=3.2.4" />
+    <link rel="stylesheet" href="assets/css/prettify.css" />
+    <!--[if lt IE 9]>
+    <script src="assets/js/vendor/oldIE.js"></script>
+    <![endif]-->
+    <script src="assets/js/vendor/prettify.js"></script>
+</head>
+<body class="style-guide">
+    <!--[if lt IE 8]><div class="upgrade-ie"><a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie" target="_blank"><img src="assets/images/logos/logo-upgrade-ie.png" width="820" height="42" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+    <a id="top"></a>
+    <div class="wrapper">
+        <!-- Home -->
+        <a href="index.html" class="icon-home"></a>
+
+        <section role="main">
+            <header role="banner">
+                <h1><a href="index.html">SiteplanExplorer</a></h1>
+                <h2>Components</h2>
+            </header>
+            <p class="large">
+                This document is a guide to the jQuery components used throughout the website.
+            </p>
+            <div class="component">
+                <h1>Table of Contents</h1>
+                <ol class="table-of-contents">
+                    <li><a href="#autocomplete">Autocomplete</a></li>
+                    <li><a href="#drop-down">Drop&ndash;down</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#list-navigator">List Navigator</a></li>
+                    <li><a href="#map">Map</a></li>
+                    <li><a href="#modals">Modals</a></li>
+                    <li><a href="#select">Select</a></li>
+                    <li><a href="#sliders">Sliders</a></li>
+                    <li>
+                        <a href="#slide-toggle">Slide Toggle</a>
+                        <ol>
+                            <li><a href="#slide-toggle">Filter</a></li>
+                            <li><a href="#slide-toggle-panel">Panel</a></li>
+                        </ol>
+                    </li>
+                    <li><a href="#tabs">Tabs</a></li>
+                    <li><a href="#zoom">Zoom</a></li>
+                </ol>
+            </div>
+
+            <!-- Autocomplete -->
+            <div id="autocomplete" class="component">
+                <h1>Autocomplete</h1>
+                <div class="contents">
+                    <form id="form" name="form" action="components.html#autocomplete" method="post" class="form-horizontal form-search-quick">
+                        <label for="input">
+                            <input id="input" name="input" type="text" placeholder="Lorem&hellip;" value="" maxlength="50" data-component="autocomplete" />
+                        </label>
+                        <button class="button button-white button-medium"><i class="icon-search"></i></button>
+                    </form>
+                </div>
+            </div>
+
+<pre class="prettyprint linenums">
+&lt;form id="form" name="form" action="components.html#autocomplete" method="post" class="form-horizontal form-search"&gt;
+    &lt;label for="input"&gt;
+        &lt;input id="input" name="input" type="text" placeholder="Lorem&hellip;" value="" maxlength="50" data-component="autocomplete" /&gt;
+    &lt;/label&gt;
+    &lt;button class="button button-white button-medium"&gt;&lt;i class="icon-search"&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/form&gt;
+</pre>
+
+            <!-- Drop-down -->
+            <div id="drop-down" class="component">
+                <h1>Drop&ndash;down</h1>
+                <div class="contents">
+                    <ol class="list-ordered list-nav-horizontal list-buttons list-buttons-white">
+                        <li><a href="#drop-down" class="button button-white" role="button">Lorem</a></li>
+                        <li>
+                            <a href="#drop-down" class="button button-white" data-toggle="drop-down" role="button">Consectetuer <i class="icon-caret-down"></i></a>
+                            <ol class="list-ordered list-nav-vertical drop-down" data-action="toggle-button-radio" data-drop-down="true">
+                                <li><a href="#" data-value="Lorem ipsum"><i class="icon-circle"></i> Lorem ipsum</a></li>
+                                <li><a href="#" data-value="Lorem ipsum"><i class="icon-circle"></i> Lorem ipsum</a></li>
+                                <li><a href="#" data-value="Lorem ipsum"><i class="icon-circle"></i> Lorem ipsum</a></li>
+                            </ol>
+                        </li>
+                        <li>
+                            <a href="#drop-down" class="button button-white" data-toggle="drop-down" role="button">Elit <i class="icon-caret-down"></i></a>
+                            <ol class="list-ordered list-nav-vertical drop-down" data-action="toggle-button-radio" data-drop-down="true">
+                                <li><a href="#" data-value="Lorem ipsum"><i class="icon-circle"></i> Lorem ipsum</a></li>
+                                <li><a href="#" data-value="Lorem ipsum"><i class="icon-circle"></i> Lorem ipsum</a></li>
+                                <li><a href="#" data-value="Lorem ipsum"><i class="icon-circle"></i> Lorem ipsum</a></li>
+                            </ol>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+
+<pre class="prettyprint linenums">
+&lt;ol class="list-ordered list-nav-horizontal list-buttons list-buttons-white"&gt;
+    &lt;li&gt;&lt;a href="#drop-down" class="button button-white" role="button"&gt;Lorem&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href="#drop-down" class="button button-white" data-toggle="drop-down" role="button"&gt;Consectetuer &lt;i class="icon-caret-down"&gt;&lt;/i&gt;&lt;/a&gt;
+        &lt;ol class="list-ordered list-nav-vertical drop-down" data-action="toggle-button-radio" data-drop-down="true"&gt;
+            &lt;li&gt;&lt;a href="#" data-value="Lorem ipsum"&gt;&lt;i class="icon-circle"&gt;&lt;/i&gt; Lorem ipsum&lt;/a&gt;&lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+
+            <!-- Gallery -->
+            <div id="gallery" class="component">
+                <h1>Gallery</h1>
+                <div class="contents">
+                    <ul class="list-unordered list-thumbnails" data-component="gallery">
+                        <li>
+                            <a href="assets/images/content/gallery/gallery-01-700x394.jpg" title="Lorem ipsum dolor" class="gallery" data-photo-title="<b>Lorem ipsum dolor</b> Sit amet, consectetuer adipiscing elit, sed diam nonummy"><img src="assets/images/content/gallery/gallery-01-65x65.jpg" alt="" /></a>
+                        </li>
+                        <li>
+                            <a href="assets/images/content/gallery/gallery-02-700x394.jpg" title="Sed ut perspiciatis unde" data-photo-title="<b>Sed ut perspiciatis unde</b> Omnis iste natus error sit voluptatem accusantium doloremque laudantium." class="gallery"><img src="assets/images/content/gallery/gallery-02-65x65.jpg" alt="" /></a>
+                        </li>
+                        <li>
+                            <a href="assets/images/content/gallery/gallery-03-700x394.jpg" title="Neque porro quisquam est" data-photo-title="<b>Neque porro quisquam est</b> Qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora." class="gallery"><img src="assets/images/content/gallery/gallery-03-65x65.jpg" alt="" /></a>
+                        </li>
+                        <li>
+                            <a href="assets/images/content/gallery/gallery-04-700x394.jpg" title="Lorem ipsum dolor" class="gallery" data-photo-title="<b>Lorem ipsum dolor</b> Sit amet, consectetuer adipiscing elit, sed diam nonummy"><img src="assets/images/content/gallery/gallery-04-65x65.jpg" alt="" /></a>
+                        </li>
+                        <li>
+                            <a href="assets/images/content/gallery/gallery-01-700x394.jpg" title="Lorem ipsum dolor" class="gallery" data-photo-title="<b>Lorem ipsum dolor</b> Sit amet, consectetuer adipiscing elit, sed diam nonummy"><img src="assets/images/content/gallery/gallery-01-65x65.jpg" alt="" /></a>
+                        </li>
+                        <li>
+                            <a href="assets/images/content/gallery/gallery-02-700x394.jpg" title="Sed ut perspiciatis unde" data-photo-title="<b>Sed ut perspiciatis unde</b> Omnis iste natus error sit voluptatem accusantium doloremque laudantium." class="gallery"><img src="assets/images/content/gallery/gallery-02-65x65.jpg" alt="" /></a>
+                        </li>
+                        <li>
+                            <a href="assets/images/content/gallery/gallery-03-700x394.jpg" title="Neque porro quisquam est" data-photo-title="<b>Neque porro quisquam est</b> Qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora." class="gallery"><img src="assets/images/content/gallery/gallery-03-65x65.jpg" alt="" /></a>
+                        </li>
+                        <li>
+                            <a href="assets/images/content/gallery/gallery-04-700x394.jpg" title="Lorem ipsum dolor" class="gallery" data-photo-title="<b>Lorem ipsum dolor</b> Sit amet, consectetuer adipiscing elit, sed diam nonummy"><img src="assets/images/content/gallery/gallery-04-65x65.jpg" alt="" /></a>
+                        </li>
+                        <li>
+                            <a href="assets/images/content/gallery/gallery-01-700x394.jpg" title="Lorem ipsum dolor" class="gallery" data-photo-title="<b>Lorem ipsum dolor</b> Sit amet, consectetuer adipiscing elit, sed diam nonummy"><img src="assets/images/content/gallery/gallery-01-65x65.jpg" alt="" /></a>
+                        </li>
+                        <li>
+                            <a href="assets/images/content/gallery/gallery-02-700x394.jpg" title="Sed ut perspiciatis unde" data-photo-title="<b>Sed ut perspiciatis unde</b> Omnis iste natus error sit voluptatem accusantium doloremque laudantium." class="gallery"><img src="assets/images/content/gallery/gallery-02-65x65.jpg" alt="" /></a>
+                        </li>
+                        <li>
+                            <a href="assets/images/content/gallery/gallery-03-700x394.jpg" title="Neque porro quisquam est" data-photo-title="<b>Neque porro quisquam est</b> Qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora." class="gallery"><img src="assets/images/content/gallery/gallery-03-65x65.jpg" alt="" /></a>
+                        </li>
+                        <li>
+                            <a href="assets/images/content/gallery/gallery-04-700x394.jpg" title="Lorem ipsum dolor" class="gallery" data-photo-title="<b>Lorem ipsum dolor</b> Sit amet, consectetuer adipiscing elit, sed diam nonummy"><img src="assets/images/content/gallery/gallery-04-65x65.jpg" alt="" /></a>
+                        </li>
+                        <li>
+                            <a href="assets/images/content/gallery/gallery-01-700x394.jpg" title="Lorem ipsum dolor" class="gallery" data-photo-title="<b>Lorem ipsum dolor</b> Sit amet, consectetuer adipiscing elit, sed diam nonummy"><img src="assets/images/content/gallery/gallery-01-65x65.jpg" alt="" /></a>
+                        </li>
+                        <li>
+                            <a href="assets/images/content/gallery/gallery-02-700x394.jpg" title="Sed ut perspiciatis unde" data-photo-title="<b>Sed ut perspiciatis unde</b> Omnis iste natus error sit voluptatem accusantium doloremque laudantium." class="gallery"><img src="assets/images/content/gallery/gallery-02-65x65.jpg" alt="" /></a>
+                        </li>
+                        <li>
+                            <a href="assets/images/content/gallery/gallery-03-700x394.jpg" title="Neque porro quisquam est" data-photo-title="<b>Neque porro quisquam est</b> Qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora." class="gallery"><img src="assets/images/content/gallery/gallery-03-65x65.jpg" alt="" /></a>
+                        </li>
+                        <li>
+                            <a href="assets/images/content/gallery/gallery-04-700x394.jpg" title="Lorem ipsum dolor" class="gallery" data-photo-title="<b>Lorem ipsum dolor</b> Sit amet, consectetuer adipiscing elit, sed diam nonummy"><img src="assets/images/content/gallery/gallery-04-65x65.jpg" alt="" /></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+<pre class="prettyprint linenums">
+&lt;ul class="list-unordered list-thumbnails" data-component="gallery"&gt;
+    &lt;li&gt;
+        &lt;a href="assets/images/content/gallery/gallery-04-700x394.jpg" title="Lorem ipsum dolor" class="gallery" data-photo-title="&lt;b&gt;Lorem ipsum dolor&lt;/b&gt; Sit amet, consectetuer adipiscing elit, sed diam nonummy"&gt;&lt;img src="assets/images/content/gallery/gallery-04-65x65.jpg" alt="" /&gt;&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+            <!-- List Navigator -->
+            <div id="list-navigator" class="component">
+                <h1>List Navigator</h1>
+                <div class="contents">
+
+                    <!-- Example: Breadcrumbs
+                    <ol class="list-ordered list-nav-horizontal list-breadcrumbs" data-action="list-navigator-breadcrumbs">
+                        <li><a href="#" data-list-navigator-id="1" data-list-navigator-parent-id="0">Default</a></li>
+                        <li><a href="#" data-list-navigator-id="2" data-list-navigator-parent-id="1">Item: 1</a></li>
+                        <li><a href="#" data-list-navigator-id="3" data-list-navigator-parent-id="2">Item: 2</a></li>
+                        <li>Item: 3</li>
+                    </ol>
+                    -->
+
+                    <div class="list-navigator" data-component="list-navigator">
+
+                        <!-- Navigator: Default // -->
+                        <ol class="list-ordered">
+                            <li>
+                                <ol class="list-ordered list-overview">
+                                    <li>
+                                        <span class="heading-small">Century Property Developments</span>
+                                        <img src="assets/images/content/property/property-01-290x145.jpg" alt="" />
+                                        <p>Century Property Developments is proud to bring the second phase of Blue Hills Country and Equestrian Estate to the South African property market.</p>
+                                        <p>The property is known for some of the most magnificent fauna and flora sightings in the area. Large natural dams and established indigenous trees are situated in ample greenbelts and are home to abundant birdlife and provide residents with space inside an unrivalled secure lifestyle estate.</p>
+                                    </li>
+                                </ol>
+                                <ul class="list-unordered list-bordered list-text">
+                                    <li>
+                                        <a href="#" data-list-navigator-id="1" data-action="list-navigator">
+                                            <p>Developments <span>3<i class="icon-angle-right blue"></i></span></p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" data-list-navigator-id="1" data-action="list-navigator">
+                                            <p>Phases <span>7<i class="icon-angle-right blue"></i></span></p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ol>
+                        <!-- // Navigator: Default -->
+
+                        <!-- Navigator Item: 1 // -->
+                        <div id="data-item-1" class="list-navigator-data-item">
+                            <ol class="list-ordered list-data list-data-small">
+                                <li>
+                                    <a href="#" data-list-navigator-id="2" data-action="list-navigator">
+                                        <img src="assets/images/content/plan/plan-02-45x45.jpg" alt="" />
+                                        <div class="data">
+                                            <span class="heading-small">Waterfall Blue</span>
+                                            <p>1 Building, 62 Units</p>
+                                        </div>
+                                        <i class="icon-angle-right blue"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" data-list-navigator-id="2" data-action="list-navigator">
+                                        <img src="assets/images/content/plan/plan-01-45x45.jpg" alt="" />
+                                        <div class="data">
+                                            <span class="heading-small">Waterfall Country</span>
+                                            <p>51 Buildings, 4 Plans, 23 Units</p>
+                                        </div>
+                                        <i class="icon-angle-right blue"></i>
+                                    </a>
+                                </li>
+                            </ol>
+                            <a href="#" data-list-navigator-id="1" data-list-navigator-parent-id="0" data-action="list-navigator" data-list-navigator-back="true" class="button button-white" role="button">Back</a>
+                        </div>
+                        <!-- // Navigator Item: 1 -->
+
+                        <!-- Navigator Item: 2 // -->
+                        <div id="data-item-2" class="list-navigator-data-item">
+                            <ol class="list-ordered list-overview">
+                                <li>
+                                    <span class="heading-small">Waterfall Country</span>
+                                    <img src="assets/images/content/property/property-01-290x145.jpg" alt="" />
+                                    <p>Waterfall Country Estate and Waterfall Country Village offer residents all the comfort of luxury country living within close proximity of literally every conceivable service that may be required.</p>
+                                </li>
+                            </ol>
+                            <ul class="list-unordered list-bordered list-text">
+                                <li>
+                                    <a href="#" data-list-navigator-id="3" data-action="list-navigator">
+                                        <p>Phases <span>2<i class="icon-angle-right blue"></i></span></p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" data-list-navigator-id="3" data-action="list-navigator">
+                                        <p>Units <span>71<i class="icon-angle-right blue"></i></span></p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" data-list-navigator-id="3" data-action="list-navigator">
+                                        <p>Buildings <span>13<i class="icon-angle-right blue"></i></span></p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" data-list-navigator-id="3" data-action="list-navigator">
+                                        <p>Plans <span>14<i class="icon-angle-right blue"></i></span></p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <a href="#" data-list-navigator-id="2" data-list-navigator-parent-id="1" data-action="list-navigator" data-list-navigator-back="true" class="button button-white" role="button">Back</a>
+                        </div>
+                        <!-- // Navigator Item: 2 -->
+
+                        <!-- Navigator Item: 3 // -->
+                        <div id="data-item-3" class="list-navigator-data-item">
+                            <ol class="list-ordered list-data list-data-small">
+                                <li>
+                                    <a href="#" data-list-navigator-id="4" data-action="list-navigator">
+                                        <img src="assets/images/content/plan/plan-02-45x45.jpg" alt="" />
+                                        <div class="data">
+                                            <span class="heading-small">Plot 61 <b class="tag">Resale</b></span>
+                                            <p>27sqm, R270,000.00</p>
+                                        </div>
+                                        <i class="icon-angle-right blue"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" data-list-navigator-id="4" data-action="list-navigator">
+                                        <img src="assets/images/content/plan/plan-02-45x45.jpg" alt="" />
+                                        <div class="data">
+                                            <span class="heading-small">Plot 62 <b class="tag">Resale</b></span>
+                                            <p>27sqm, R270,000.00</p>
+                                        </div>
+                                        <i class="icon-angle-right blue"></i>
+                                    </a>
+                                </li>
+                            </ol>
+                            <a href="#" data-list-navigator-id="3" data-list-navigator-parent-id="2" data-action="list-navigator" data-list-navigator-back="true" class="button button-white" role="button">Back</a>
+                        </div>
+                        <!-- // Navigator Item: 3 -->
+                    </div>
+                </div>
+            </div>
+            
+<pre class="prettyprint linenums">
+&lt;div class="list-navigator" data-component="list-navigator"&gt;
+    &lt;ol class="list-ordered"&gt;
+        &lt;li&gt;
+            &lt;ol class="list-ordered list-overview"&gt;
+                &lt;li&gt;
+                    &lt;span class="heading-small"&gt;Century Property Developments&lt;/span&gt;
+                    &lt;img src="assets/images/content/property/property-01-290x145.jpg" alt="" /&gt;
+                    &lt;p&gt;Century Property Developments is proud to bring the second phase of Blue Hills Country and Equestrian Estate to the South African property market.&lt;/p&gt;
+                    &lt;p&gt;The property is known for some of the most magnificent fauna and flora sightings in the area. Large natural dams and established indigenous trees are situated in ample greenbelts and are home to abundant birdlife and provide residents with space inside an unrivalled secure lifestyle estate.&lt;/p&gt;
+                &lt;/li&gt;
+            &lt;/ol&gt;
+            &lt;ul class="list-unordered list-bordered list-text"&gt;
+                &lt;li&gt;
+                    &lt;a href="#" data-list-navigator-id="1" data-action="list-navigator"&gt;
+                        &lt;p&gt;Developments &lt;span&gt;3&lt;i class="icon-angle-right blue"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/p&gt;
+                    &lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href="#" data-list-navigator-id="1" data-action="list-navigator"&gt;
+                        &lt;p&gt;Phases &lt;span&gt;7&lt;i class="icon-angle-right blue"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/p&gt;
+                    &lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;div id="data-item-1" class="list-navigator-data-item"&gt;
+        &lt;ol class="list-ordered list-data list-data-small"&gt;
+            &lt;li&gt;
+                &lt;a href="#" data-list-navigator-id="2" data-action="list-navigator"&gt;
+                    &lt;img src="assets/images/content/plan/plan-02-45x45.jpg" alt="" /&gt;
+                    &lt;div class="data"&gt;
+                        &lt;span class="heading-small"&gt;Waterfall Blue&lt;/span&gt;
+                        &lt;p&gt;1 Building, 62 Units&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;i class="icon-angle-right blue"&gt;&lt;/i&gt;
+                &lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" data-list-navigator-id="2" data-action="list-navigator"&gt;
+                    &lt;img src="assets/images/content/plan/plan-01-45x45.jpg" alt="" /&gt;
+                    &lt;div class="data"&gt;
+                        &lt;span class="heading-small"&gt;Waterfall Country&lt;/span&gt;
+                        &lt;p&gt;51 Buildings, 4 Plans, 23 Units&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;i class="icon-angle-right blue"&gt;&lt;/i&gt;
+                &lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ol&gt;
+        &lt;a href="#" data-list-navigator-id="1" data-list-navigator-parent-id="0" data-action="list-navigator" data-list-navigator-back="true" class="button button-white" role="button"&gt;Back&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div id="data-item-2" class="list-navigator-data-item"&gt;
+        &lt;ol class="list-ordered list-overview"&gt;
+            &lt;li&gt;
+                &lt;span class="heading-small"&gt;Waterfall Country&lt;/span&gt;
+                &lt;img src="assets/images/content/property/property-01-290x145.jpg" alt="" /&gt;
+                &lt;p&gt;Waterfall Country Estate and Waterfall Country Village offer residents all the comfort of luxury country living within close proximity of literally every conceivable service that may be required.&lt;/p&gt;
+            &lt;/li&gt;
+        &lt;/ol&gt;
+        &lt;ul class="list-unordered list-bordered list-text"&gt;
+            &lt;li&gt;
+                &lt;a href="#" data-list-navigator-id="3" data-action="list-navigator"&gt;
+                    &lt;p&gt;Phases &lt;span&gt;2&lt;i class="icon-angle-right blue"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/p&gt;
+                &lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" data-list-navigator-id="3" data-action="list-navigator"&gt;
+                    &lt;p&gt;Units &lt;span&gt;71&lt;i class="icon-angle-right blue"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/p&gt;
+                &lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" data-list-navigator-id="3" data-action="list-navigator"&gt;
+                    &lt;p&gt;Buildings &lt;span&gt;13&lt;i class="icon-angle-right blue"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/p&gt;
+                &lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" data-list-navigator-id="3" data-action="list-navigator"&gt;
+                    &lt;p&gt;Plans &lt;span&gt;14&lt;i class="icon-angle-right blue"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/p&gt;
+                &lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;a href="#" data-list-navigator-id="2" data-list-navigator-parent-id="1" data-action="list-navigator" data-list-navigator-back="true" class="button button-white" role="button"&gt;Back&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div id="data-item-3" class="list-navigator-data-item"&gt;
+        &lt;ol class="list-ordered list-data list-data-small"&gt;
+            &lt;li&gt;
+                &lt;a href="#" data-list-navigator-id="4" data-action="list-navigator"&gt;
+                    &lt;img src="assets/images/content/plan/plan-02-45x45.jpg" alt="" /&gt;
+                    &lt;div class="data"&gt;
+                        &lt;span class="heading-small"&gt;Plot 61 &lt;b class="tag"&gt;Resale&lt;/b&gt;&lt;/span&gt;
+                        &lt;p&gt;27sqm, R270,000.00&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;i class="icon-angle-right blue"&gt;&lt;/i&gt;
+                &lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="#" data-list-navigator-id="4" data-action="list-navigator"&gt;
+                    &lt;img src="assets/images/content/plan/plan-02-45x45.jpg" alt="" /&gt;
+                    &lt;div class="data"&gt;
+                        &lt;span class="heading-small"&gt;Plot 62 &lt;b class="tag"&gt;Resale&lt;/b&gt;&lt;/span&gt;
+                        &lt;p&gt;27sqm, R270,000.00&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;i class="icon-angle-right blue"&gt;&lt;/i&gt;
+                &lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ol&gt;
+        &lt;a href="#" data-list-navigator-id="3" data-list-navigator-parent-id="2" data-action="list-navigator" data-list-navigator-back="true" class="button button-white" role="button"&gt;Back&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+            <!-- Map -->
+            <div id="map" class="component">
+                <h1>Map</h1>
+                <div class="contents">
+                    <div class="canvas canvas-responsive">
+                        <iframe src="https://www.google.com/maps?output=embed"></iframe>
+                        <div class="ds ds-t"></div>
+                        <div class="ds ds-r"></div>
+                    </div>
+                </div>
+            </div>
+            
+<pre class="prettyprint linenums">
+&lt;div class="canvas canvas-responsive"&gt;
+    &lt;iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps?output=embed"&gt;&lt;/iframe&gt;
+    &lt;div class="ds ds-t"&gt;&lt;/div&gt;
+    &lt;div class="ds ds-r"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+            <!-- Modal -->
+            <div id="modals" class="component">
+                <h1>Modals</h1>
+                <div class="contents">
+                    <p>
+                        Lorem ipsum dolor sit amet, <a href="#" data-component="modal" data-modal-id="modal">launch modal window</a> elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                    </p>
+                    <div id="modal" class="modal">
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo <a href="#" data-component="modal" data-action="close-modal">close</a> sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <a href="#" class="close" data-action="close-modal"><i class="icon-remove"></i></a>
+                    </div>
+                </div>
+            </div>
+
+<pre class="prettyprint linenums">
+&lt;p&gt;
+    Lorem ipsum dolor sit amet, &lt;a href="#" data-component="modal" data-modal-id="modal"&gt;launch modal window&lt;/a&gt;.
+&lt;/p&gt;
+&lt;div id="modal" class="modal"&gt;
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+    &lt;a href="#" class="close icon-remove" data-action="close-modal"&gt;&lt;/a&gt;
+&lt;/div&gt;
+</pre>
+            <!-- Select (SelectBoxIt) -->
+            <div id="select" class="component">
+                <h1>Select</h1>
+                <div class="contents">
+                    <form>
+                        <label for="select-1">
+                            <select id="select-1" name="select-1" data-component="select">
+                                <option value="Lorem ipsum">Lorem ipsum</option>
+                                <option value="Sit amet">Sit amet</option>
+                                <option value="Consectetuer adipiscing">Consectetuer adipiscing nonummy</option>
+                                <option value="Diam nonummy">Diam nonummy</option>
+                            </select>
+                        </label>
+                    </form>
+                </div>
+            </div>
+            
+<pre class="prettyprint linenums">
+&lt;select id="select-1" name="select-1" data-component="select"&gt;
+    &lt;option value="Lorem ipsum"&gt;Lorem ipsum&lt;/option&gt;
+    &lt;option value="Sit amet"&gt;Sit amet&lt;/option&gt;
+    &lt;option value="Consectetuer adipiscing"&gt;Consectetuer adipiscing nonummy&lt;/option&gt;
+    &lt;option value="Diam nonummy"&gt;Diam nonummy&lt;/option&gt;
+&lt;/select&gt;
+</pre>
+
+            <!-- Slide Toggle (Filter) -->
+            <div id="slide-toggle" class="component">
+                <h1>Slide Toggle (Filter)</h1>
+                <div class="contents">
+                    <div class="slide-down slide-down-filters" data-component="toggle-slide">
+                        <a href="#slide-toggle" data-toggle="slide" data-toggle-slide-icon="true" data-toggle-slide-container="panel-1">Lorem Ipsum <i class="icon-caret-down"></i></a>
+                        <div class="slide-down-wrapper" data-toggle-slide-container-id="panel-1">
+                            <div class="slide-down-contents">
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                                <p><a href="#" data-action="close-panel">Close</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<pre class="prettyprint linenums">
+&lt;div class="slide-down slide-down-filters" data-component="toggle-slide"&gt;
+    &lt;a href="#slide-toggle" data-toggle="slide" data-toggle-slide-icon="true" data-toggle-slide-container="panel-1"&gt;Lorem Ipsum &lt;i class="icon-caret-down"&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;div class="slide-down-wrapper" data-toggle-slide-container-id="panel-1"&gt;
+        &lt;div class="slide-down-contents"&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.&lt;/p&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.&lt;/p&gt;
+            &lt;p&gt;&lt;a href="#" data-action="close-panel"&gt;Close&lt;/a&gt;&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+            <!-- Slide Toggle (Panel) -->
+            <div id="slide-toggle-panel" class="component">
+                <h1>Slide Toggle (Panel)</h1>
+                <div class="contents">
+                    <div class="slide-down" data-component="toggle-slide">
+                        <form id="form2" name="form2" action="components.html#slide-toggle-panel" method="post" class="form-horizontal form-search-quick">
+                            <label for="input2">
+                                <input id="input2" name="input2" type="text" placeholder="Lorem&hellip;" value="" maxlength="50" class="input-wide" />
+                            </label>
+                            <button class="button button-white button-medium"><i class="icon-search"></i></button>
+                            <button class="button button-white" data-toggle="slide" data-toggle-slide-container="panel-2">Lorem ipsum dolor</button>
+                        </form>
+                        <div class="slide-down-wrapper" data-toggle-slide-container-id="panel-2">
+                            <div class="slide-down-contents">
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<pre class="prettyprint linenums">
+&lt;div class="slide-down" data-component="toggle-slide"&gt;
+    &lt;form id="form2" name="form2" action="components.html#slide-toggle-panel" method="post" class="form-horizontal form-search-quick"&gt;
+        &lt;label for="input2"&gt;
+            &lt;input id="input2" name="input2" type="text" placeholder="Lorem&hellip;" value="" maxlength="50" class="input-wide" /&gt;
+        &lt;/label&gt;
+        &lt;button class="button button-white button-medium"&gt;&lt;i class="icon-search"&gt;&lt;/i&gt;&lt;/button&gt;
+        &lt;button class="button button-white" data-toggle="slide" data-toggle-slide-container="panel-2"&gt;Lorem ipsum dolor&lt;/button&gt;
+    &lt;/form&gt;
+    &lt;div class="slide-down-wrapper" data-toggle-slide-container-id="panel-2"&gt;
+        &lt;div class="slide-down-contents"&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.&lt;/p&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.&lt;/p&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.&lt;/p&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+            <!-- Sliders -->
+            <div id="sliders" class="component">
+                <h1>Sliders</h1>
+                <div class="contents">
+                    <div class="slider" data-component="slider">
+                        <ul class="slides">
+                            <li>
+                                <img src="assets/images/content/property/property-01-290x145.jpg" alt="" />
+                            </li>
+                            <li>
+                                <img src="assets/images/content/property/property-01-290x145.jpg" alt="" />
+                            </li>
+                            <li>
+                                <img src="assets/images/content/property/property-01-290x145.jpg" alt="" />
+                            </li>
+                            <li>
+                                <img src="assets/images/content/property/property-01-290x145.jpg" alt="" />
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+<pre class="prettyprint linenums">
+&lt;div id="sliders" class="component"&gt;
+    &lt;h1&gt;Sliders&lt;/h1&gt;
+    &lt;div class="contents"&gt;
+        &lt;div class="slider" data-component="slider"&gt;
+            &lt;ul class="slides"&gt;
+                &lt;li&gt;
+                    &lt;img src="assets/images/content/property/property-01-270x135.jpg" alt="" /&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+            <!-- Tabs -->
+            <div id="tabs" class="component">
+                <h1>Tabs</h1>
+                <div class="contents">
+                    <ul class="tab-nav" data-component="tabs">
+                        <li class="active"><a href="#tab-1">Lorem</a></li>
+                        <li><a href="#tab-2">Ipsum</a></li>
+                        <li><a href="#tab-3">Dolor</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="tab-1" class="tab-pane active">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                        <div id="tab-2" class="tab-pane">
+                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+                        </div>
+                        <div id="tab-3" class="tab-pane">
+                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<pre class="prettyprint linenums">
+&lt;ul class="tab-nav" data-component="tabs"&gt;
+    &lt;li&gt;&lt;a href="#tab-1"&gt;Tab 1&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="tab-content"&gt;
+    &lt;div id="tab-1" class="tab-pane active"&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+            <!-- Zoom -->
+            <div id="zoom" class="component">
+                <h1>Zoom</h1>
+                <div class="contents">
+                    <div class="zoom" data-component="zoom" data-zoom-min="0" data-zoom-max="15">
+                        <a href="#" class="button button-zoom zoom-plus" role="button"><i class="icon-plus"></i></a>
+                        <ol class="list-ordered zoom-track">
+                            <li><a href="#" role="button"></a></li>
+                            <li><a href="#" role="button"></a></li>
+                            <li><a href="#" role="button"></a></li>
+                            <li><a href="#" role="button"></a></li>
+                            <li><a href="#" role="button"></a></li>
+                            <li><a href="#" role="button"></a></li>
+                            <li><a href="#" role="button"></a></li>
+                            <li class="selected"><a href="#" role="button"></a></li>
+                            <li><a href="#" role="button"></a></li>
+                            <li><a href="#" role="button"></a></li>
+                            <li><a href="#" role="button"></a></li>
+                            <li><a href="#" role="button"></a></li>
+                            <li><a href="#" role="button"></a></li>
+                            <li><a href="#" role="button"></a></li>
+                            <li><a href="#" role="button"></a></li>
+                            <li><a href="#" role="button"></a></li>
+                        </ol>
+                        <a href="#" class="button button-zoom zoom-minus" role="button"><i class="icon-minus"></i></a>
+                    </div>
+                </div>
+            </div>
+
+<pre class="prettyprint linenums">
+&lt;div class="zoom" data-component="zoom" data-zoom-min="0" data-zoom-max="15"&gt;
+    &lt;a href="#" class="button button-zoom zoom-plus" role="button"&gt;&lt;i class="icon-plus"&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;ol class="list-ordered zoom-track"&gt;
+        &lt;li&gt;&lt;a href="#" role="button"&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#" role="button"&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#" role="button"&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#" role="button"&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#" role="button"&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#" role="button"&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#" role="button"&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="selected"&gt;&lt;a href="#" role="button"&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#" role="button"&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#" role="button"&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#" role="button"&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#" role="button"&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#" role="button"&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#" role="button"&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#" role="button"&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#" role="button"&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;a href="#" class="button button-zoom zoom-minus" role="button"&gt;&lt;i class="icon-minus"&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;/div&gt;
+</pre>
+
+        </section>
+
+        <!-- Back to Top -->
+        <a href="#top" class="icon-arrow-up" data-action="back-to-top"></a>
+    </div>
+    <script src="//maps.googleapis.com/maps/api/js?v=3&amp;sensor=false"></script>
+    <script src="assets/js/vendor/jquery.js"></script>
+    <script src="assets/js/vendor/jquery-ui.js"></script>
+    <script src="assets/js/plugins.js?v=3.2.4"></script>
+    <script src="assets/js/components.js?v=3.2.4"></script>
+    <script src="assets/js/main.js?v=3.2.4"></script>
+</body>
+</html>

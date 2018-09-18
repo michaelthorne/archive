@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<!--[if IE 7]>         <html lang="en-GB" dir="ltr" class="ie7"> <![endif]-->
+<!--[if IE 8]>         <html lang="en-GB" dir="ltr" class="ie8"> <![endif]-->
+<!--[if IE 9]>         <html lang="en-GB" dir="ltr" class="ie9"> <![endif]-->
+<!--[if gt IE 9]><!--> <html lang="en-GB" dir="ltr">         <!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+    <title>SiteplanExplorer &mdash; Style Guide</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="Michael Thorne" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:locale" content="en_GB" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="publisher" href="https://plus.google.com/106015161495562490229/" />
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans" />
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" />
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome-ie7.min.css">
+    <![endif]-->
+    <link rel="stylesheet" href="assets/css/main.css?v=3.2.4" />
+    <!--[if lt IE 9]>
+    <script src="assets/js/vendor/oldIE.js"></script>
+    <![endif]-->
+</head>
+<body class="style-guide">
+    <!--[if lt IE 8]><div class="upgrade-ie"><a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie" target="_blank"><img src="assets/images/logos/logo-upgrade-ie.png" width="820" height="42" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+    <a id="top"></a>
+    <div class="wrapper">
+        <!-- Home -->
+        <a href="index.html" class="icon-home"></a>
+
+        <section role="main">
+            <header role="banner">
+                <h1><a href="index.html">SiteplanExplorer</a></h1>
+                <h2>Style Guide</h2>
+            </header>
+            <p class="large">
+                This document is a guide to the mark&ndash;up and associated styles used throughout the website.
+            </p>
+            <div class="component">
+                <h1>Table of Contents</h1>
+                <ol class="table-of-contents">
+                    <li><a href="#colours">Colours</a></li>
+                    <li><a href="#fonts">Fonts</a></li>
+                    <li><a href="#headings">Headings</a></li>
+                    <li><a href="#text">Text</a></li>
+                    <li><a href="#anchors">Anchors</a></li>
+                    <li>
+                        <a href="#buttons">Buttons</a>
+                        <ol>
+                            <li><a href="#buttons">Buttons</a></li>
+                            <li><a href="#button-groups">Button (Groups)</a></li>
+                            <li><a href="#pills">Pills</a></li>
+                            <li><a href="#pill-groups">Pill (Groups)</a></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#lists">Lists</a>
+                        <ol>
+                            <li><a href="#lists">Lists</a></li>
+                            <li><a href="#lists-nav">Navigation</a></li>
+                            <li><a href="#lists-nav-breadcrumbs">Navigation (Breadcrumbs)</a></li>
+                            <li><a href="#lists-data-large">Data (Large)</a></li>
+                            <li><a href="#lists-data-small">Data (Small)</a></li>
+                            <li><a href="#lists-overview">Overview</a></li>
+                            <li><a href="#lists-text">Text</a></li>
+                            <li><a href="#lists-filters-checkboxes">Filters (Checkboxes)</a></li>
+                            <li><a href="#lists-filters-radio-buttons">Filters (Radio Buttons)</a></li>
+                            <li><a href="#lists-thumbnails">Thumbnails</a></li>
+                            <li><a href="#lists-item-summary">Item Summary</a></li>
+                            <li><a href="#lists-item-details">Item Details</a></li>
+                        </ol>
+                    </li>
+                    <li><a href="#tables">Tables</a></li>
+                    <li><a href="#forms">Forms</a></li>
+                    <li><a href="#info-window">Info Window</a></li>
+                    <li><a href="#icons">Icons</a></li>
+                </ol>
+            </div>
+
+            <!-- Colours -->
+            <div id="colours" class="component">
+                <h1>Colours</h1>
+                <ul class="colours">
+                    <li class="bg-black">
+                        <pre>#000</pre>
+                    </li>
+                    <li class="bg-grey-dark">
+                        <pre>#333</pre>
+                    </li>
+                    <li class="bg-charcoal">
+                        <pre>#484848</pre>
+                    </li>
+                    <li class="bg-grey">
+                        <pre>#676767</pre>
+                    </li>
+                    <li class="bg-grey-light">
+                        <pre>#808080</pre>
+                    </li>
+                    <li class="bg-silver-dark">
+                        <pre>#aaa</pre>
+                    </li>
+                    <li class="bg-silver">
+                        <pre>#ccc</pre>
+                    </li>
+                    <li class="bg-silver-light">
+                        <pre>#d7d7d7</pre>
+                    </li>
+                    <li class="bg-gainsboro">
+                        <pre>#e4e4e4</pre>
+                    </li>
+                    <li class="bg-white-dark">
+                        <pre>#f3f3f3</pre>
+                    </li>
+                    <li class="bg-white">
+                        <pre>#fff</pre>
+                    </li>
+                    <li class="bg-lavendar">
+                        <pre>#dfebf7</pre>
+                    </li>
+                    <li class="bg-blue-lightest">
+                        <pre>#b7c9db</pre>
+                    </li>
+                    <li class="bg-blue-light">
+                        <pre>#7aaedf</pre>
+                    </li>
+                    <li class="bg-blue">
+                        <pre>#5f9dd9</pre>
+                    </li>
+                    <li class="bg-blue-dark">
+                        <pre>#528ec9</pre>
+                    </li>
+                    <li class="bg-salomie">
+                        <pre>#fde277</pre>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Fonts -->
+            <div id="fonts" class="component">
+                <h1>Fonts</h1>
+                <div class="contents">
+                    <pre>Open Sans</pre>
+                    <p class="open-sans">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                </div>
+            </div>
+
+            <!-- Headings -->
+            <div id="headings" class="component">
+                <h1>Headings</h1>
+                <div class="contents">
+                    <!-- h1 -->
+                    <pre>h1</pre>
+                    <h1>Lorem ipsum dolor sit amet</h1>
+
+                    <!-- h2 -->
+                    <pre>h2</pre>
+                    <h2>Lorem ipsum dolor sit amet</h2>
+
+                    <!-- h3 -->
+                    <pre>h3</pre>
+                    <h3>Lorem ipsum dolor sit amet</h3>
+
+                    <!-- h4 -->
+                    <pre>h4</pre>
+                    <h3>Lorem ipsum dolor sit amet</h3>
+
+                    <!-- Heading (Large) -->
+                    <pre>.heading-large</pre>
+                    <span class="heading-large">Lorem ipsum dolor sit amet</span>
+
+                    <!-- Heading (Medium) -->
+                    <pre>.heading-medium</pre>
+                    <span class="heading-medium">Lorem ipsum dolor sit amet</span>
+
+                    <!-- Heading (Small) -->
+                    <pre>.heading-small</pre>
+                    <span class="heading-small">Lorem ipsum dolor sit amet</span>
+
+                    <!-- Heading (Tiny) -->
+                    <pre>.heading-tiny</pre>
+                    <span class="heading-tiny">Lorem ipsum dolor sit amet</span>
+
+                    <!-- Heading (Large, Bold) -->
+                    <pre>.heading-large .heading-bold</pre>
+                    <span class="heading-large heading-bold">Lorem ipsum dolor sit amet</span>
+
+                    <!-- Heading (Large, Normal) -->
+                    <pre>.heading-large .heading-normal</pre>
+                    <span class="heading-large heading-normal">Lorem ipsum dolor sit amet</span>
+
+                    <!-- Heading (Large, Light) -->
+                    <pre>.heading-large .heading-light</pre>
+                    <span class="heading-large heading-light">Lorem ipsum dolor sit amet</span>
+
+                    <!-- Heading (Large, Uppercase) -->
+                    <pre>.heading-large .heading-uppercase</pre>
+                    <span class="heading-large heading-uppercase">Lorem ipsum dolor sit amet</span>
+                </div>
+            </div>
+
+            <!-- Text -->
+            <div id="text" class="component">
+                <h1>Text</h1>
+                <div class="contents">
+                    <!-- Paragraph -->
+                    <pre>p</pre>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+                    <!-- Paragraph (Small) -->
+                    <pre>p.small</pre>
+                    <p class="small">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div>
+
+            <!-- Anchors -->
+            <div id="anchors" class="component">
+                <h1>Anchors</h1>
+                <div class="contents">
+                    <pre>a</pre>
+                    <p>Lorem ipsum dolor sit amet, <a href="style-guide.html#anchors">consectetuer adipiscing elit</a>, sed diam nonummy nibh <a href="style-guide.html#anchors">euismod tincidunt</a> ut laoreet dolore magna aliquam erat volutpat. Excepteur sint occaecat non proident, sunt in <a href="style-guide.html#anchors">culpa qui officia</a> deserunt mollit anim id est laborum.</p>
+                </div>
+            </div>
+
+            <!-- Buttons -->
+            <div id="buttons" class="component">
+                <h1>Buttons</h1>
+                <div class="contents">
+                    <!-- Button (White) -->
+                    <pre>.button .button-white</pre>
+                    <a href="#buttons" class="button button-white" role="button">Lorem ipsum</a>
+
+                    <!-- Button (White, Icon) -->
+                    <pre>.button .button-white i.icon-search</pre>
+                    <a href="#buttons" class="button button-white" role="button">Show on map <i class="icon-search"></i></a>
+
+                    <!-- Button (White, Icon) -->
+                    <pre>.button .button-white i.icon-share</pre>
+                    <a href="#buttons" class="button button-white" role="button">Share <i class="icon-share"></i></a>
+
+                    <!-- Button (White, Icon) -->
+                    <pre>.button .button-white i.icon-map-marker</pre>
+                    <a href="#buttons" class="button button-white" role="button">Zoom on to map <i class="icon-map-marker"></i></a>
+
+                    <!-- Button (White, Icon) -->
+                    <pre>.button .button-white i.remove</pre>
+                    <a href="#buttons" class="button button-white" role="button">Close <i class="icon-remove"></i></a>
+
+                    <!-- Button (White, Medium, Icon) -->
+                    <pre>.button .button-white .button-medium i.icon-search</pre>
+                    <a href="#buttons" class="button button-white button-medium" role="button"><i class="icon-search"></i></a>
+
+                    <!-- Button (White, Medium, Icon) -->
+                    <pre>.button .button-white .button-medium i.icon-map-marker</pre>
+                    <a href="#buttons" class="button button-white button-medium" role="button"><i class="icon-map-marker"></i></a>
+
+                    <!-- Button (Silver) -->
+                    <pre>.button .button-silver</pre>
+                    <a href="#buttons" class="button button-silver" role="button">Lorem ipsum</a>
+
+                    <!-- Button (Silver, Icon) -->
+                    <pre>.button .button-silver i.icon-caret-down</pre>
+                    <a href="#buttons" class="button button-silver" role="button">Lorem ipsum <i class="icon-caret-down"></i></a>
+
+                    <!-- Button (Grey) -->
+                    <pre>.button .button-grey</pre>
+                    <a href="#buttons" class="button button-grey" role="button">Lorem ipsum</a>
+
+                    <!-- Button (Blue) -->
+                    <pre>.button .button-blue</pre>
+                    <a href="#buttons" class="button button-blue" role="button">Lorem ipsum</a>
+
+                    <!-- Button (Blue, Bold) -->
+                    <pre>.button .button-blue .button-bold</pre>
+                    <a href="#buttons" class="button button-blue button-bold" role="button">Lorem ipsum</a>
+
+                    <!-- Button (Blue, Icon) -->
+                    <pre>.button .button-blue i.icon-caret-down</pre>
+                    <a href="#buttons" class="button button-blue" role="button">Lorem ipsum <i class="icon-caret-down"></i></a>
+
+                    <!-- Button (Blue, Bold, Large) -->
+                    <pre>.button .button-blue .button-bold .button-large</pre>
+                    <a href="#buttons" class="button button-blue button-bold button-large" role="button">Lorem ipsum</a>
+
+                    <!-- Button (Blue, Small) -->
+                    <pre>.button .button-blue .button-small</pre>
+                    <a href="#buttons" class="button button-blue button-small" role="button">Contact</a>
+
+                    <!-- Button (Grey, Small, Icon) -->
+                    <pre>.button .button-grey .button-small / data-action="toggle-button"</pre>
+                    <a href="#buttons" class="button button-grey button-small" data-action="toggle-button" role="button"><i class="icon-star"></i></a>
+
+                    <!-- Button (White, Medium, Icon) -->
+                    <pre>.button .button-white .button-medium / data-action="toggle-button"</pre>
+                    <a href="#buttons" class="button button-white button-medium" data-action="toggle-button" role="button"><i class="icon-star"></i></a>
+
+                    <!-- Button (White, Circle) -->
+                    <pre>.button .button-white .button-circle</pre>
+                    <a href="#buttons" class="button button-white button-circle" role="button"><i class="icon-angle-right"></i></a>
+
+                    <!-- Button (Blue, Circle) -->
+                    <pre>.button .button-blue .button-circle</pre>
+                    <a href="#buttons" class="button button-blue button-circle" role="button"><i class="icon-angle-right"></i></a>
+
+                    <!-- Button Group (White) -->
+                    <pre id="button-groups">.button-group .button-group-white / data-action="toggle-button-group"</pre>
+                    <div class="button-group button-group-white" data-action="toggle-button-group">
+                        <a href="#buttons" class="button button-white" role="button">Lorem ipsum</a>
+                        <a href="#buttons" class="button button-white selected" role="button">Lorem ipsum</a>
+                    </div>
+
+                    <!-- Button Group (Blue) -->
+                    <pre>.button-group .button-group-blue / data-action="toggle-button-group"</pre>
+                    <div class="button-group button-group-blue" data-action="toggle-button-group">
+                        <a href="#buttons" class="button button-blue" role="button">Lorem ipsum</a>
+                        <a href="#buttons" class="button button-blue selected" role="button">Lorem ipsum</a>
+                        <a href="#buttons" class="button button-blue" role="button">Lorem ipsum</a>
+                    </div>
+
+                    <!-- Pill (White) -->
+                    <pre id="pills">.pill .pill-white</pre>
+                    <a href="#buttons" class="pill pill-white">L</a>
+
+                    <!-- Pill (Blue) -->
+                    <pre>.pill .pill-blue</pre>
+                    <a href="#buttons" class="pill pill-blue">L</a>
+
+                    <!-- Pill Group (White) -->
+                    <pre id="pill-groups">.pill-group .pill-group-white / data-action="toggle-pill-group"</pre>
+                    <div class="pill-group pill-group-white" data-action="toggle-pill-group">
+                        <a href="#buttons" class="pill pill-white">1</a>
+                        <a href="#buttons" class="pill pill-white selected">2</a>
+                        <a href="#buttons" class="pill pill-white">3</a>
+                        <a href="#buttons" class="pill pill-white">4+</a>
+                    </div>
+
+                    <!-- Pill Group (Blue) -->
+                    <pre>.pill-group .pill-group-blue / data-action="toggle-pill-group"</pre>
+                    <div class="pill-group pill-group-blue" data-action="toggle-pill-group">
+                        <a href="#buttons" class="pill pill-blue">1</a>
+                        <a href="#buttons" class="pill pill-blue selected">2</a>
+                        <a href="#buttons" class="pill pill-blue">3</a>
+                        <a href="#buttons" class="pill pill-blue">4+</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lists -->
+            <div id="lists" class="component">
+                <h1>Lists</h1>
+                <div class="contents">
+                    <!-- Unordered (Default) -->
+                    <pre>ul</pre>
+                    <ul>
+                        <li>Lorem ipsum</li>
+                        <li>Lorem ipsum</li>
+                        <li>
+                            Lorem ipsum
+                            <ul>
+                                <li>Lorem ipsum</li>
+                                <li>Lorem ipsum</li>
+                                <li>Lorem ipsum</li>
+                                <li>Lorem ipsum</li>
+                                <li>Lorem ipsum</li>
+                                <li>Lorem ipsum</li>
+                            </ul>
+                        </li>
+                        <li>Lorem ipsum</li>
+                        <li>Lorem ipsum</li>
+                        <li>Lorem ipsum</li>
+                    </ul>
+
+                    <!-- Ordered (Default) -->
+                    <pre>ol</pre>
+                    <ol>
+                        <li>Lorem ipsum</li>
+                        <li>Lorem ipsum</li>
+                        <li>
+                            Lorem ipsum
+                            <ol>
+                                <li>Lorem ipsum</li>
+                                <li>Lorem ipsum</li>
+                                <li>Lorem ipsum</li>
+                                <li>Lorem ipsum</li>
+                                <li>Lorem ipsum</li>
+                                <li>Lorem ipsum</li>
+                            </ol>
+                        </li>
+                        <li>Lorem ipsum</li>
+                        <li>Lorem ipsum</li>
+                        <li>Lorem ipsum</li>
+                    </ol>
+
+                    <!-- Definition (Default) -->
+                    <pre>dl</pre>
+                    <dl>
+                        <dt>Lorem ipsum</dt>
+                        <dd>Consectetuer adipiscing elit</dd>
+                        <dt>Lorem ipsum</dt>
+                        <dd>Consectetuer adipiscing elit</dd>
+                    </dl>
+
+                    <!-- Ordered (Nav, Vertical, Black) -->
+                    <pre id="lists-nav">ol .list-ordered .list-nav-vertical</pre>
+                    <ol class="list-ordered list-nav-vertical">
+                        <li><a href="#lists-nav">Lorem ipsum</a></li>
+                        <li><a href="#lists-nav">Lorem ipsum</a></li>
+                        <li><a href="#lists-nav">Lorem ipsum</a></li>
+                    </ol>
+
+                    <!-- Ordered (Nav, Horizontal, Black) -->
+                    <pre>ol .list-ordered .list-nav-horizontal</pre>
+                    <ol class="list-ordered list-nav-horizontal">
+                        <li><a href="#lists-nav">Lorem ipsum</a></li>
+                        <li><a href="#lists-nav">Lorem ipsum</a></li>
+                        <li><a href="#lists-nav">Lorem ipsum</a></li>
+                    </ol>
+
+                    <!-- Ordered (Nav, Buttons, White) -->
+                    <pre>ol .list-ordered .list-nav-horizontal .list-buttons .list-buttons-white / data-toggle="drop-down"</pre>
+                    <ol class="list-ordered list-nav-horizontal list-buttons list-buttons-white">
+                        <li><a href="#lists-nav" class="button button-white" role="button">Consectetuer</a></li>
+                        <li><a href="#lists-nav" class="button button-white" role="button">Ipsum</a></li>
+                        <li>
+                            <a href="#lists-nav" class="button button-white" data-toggle="drop-down" role="button">Lorem ipsum <i class="icon-caret-down"></i></a>
+                            <ol class="list-ordered list-nav-vertical drop-down">
+                                <li><a href="#lists-nav">Lorem ipsum</a></li>
+                                <li><a href="#lists-nav">Lorem ipsum</a></li>
+                                <li><a href="#lists-nav">Lorem ipsum</a></li>
+                            </ol>
+                        </li>
+                        <li><a href="#lists-nav" class="button button-white" role="button">Adipiscing</a></li>
+                    </ol>
+
+                    <!-- Ordered (Nav, Buttons, Blue) -->
+                    <pre>ol .list-ordered .list-nav-horizontal .list-buttons .list-buttons-blue</pre>
+                    <ol class="list-ordered list-nav-horizontal list-buttons list-buttons-blue">
+                        <li><a href="#lists-nav" class="button button-blue" role="button">Lorem ipsum</a></li>
+                        <li><a href="#lists-nav" class="button button-blue" role="button">Lorem ipsum</a></li>
+                        <li><a href="#lists-nav" class="button button-blue" role="button">Lorem ipsum</a></li>
+                    </ol>
+
+                    <!-- Ordered (Nav, Breadcrumbs) -->
+                    <pre id="lists-nav-breadcrumbs">.list-ordered .list-nav-horizontal .list-breadcrumbs</pre>
+                    <ol class="list-ordered list-nav-horizontal list-breadcrumbs">
+                        <li><a href="#lists-nav-breadcrumbs">Lorem dolor <i class="icon-angle-right"></i></a></li>
+                        <li><a href="#lists-nav-breadcrumbs">Ipsum euismod <i class="icon-angle-right"></i></a></li>
+                        <li>124 Aed nonummy</li>
+                    </ol>
+
+                    <!-- Ordered (Data, Large) -->
+                    <pre id="lists-data-large">ol .list-ordered .list-data .list-data-large</pre>
+                    <ol class="list-ordered list-data list-data-large">
+                        <li>
+                            <a href="#lists-data-large">
+                                <img src="assets/images/content/property/property-01-290x145.jpg" alt="" />
+                                <div class="data">
+                                    <span class="heading-small">Lorem ipsum dolor</span>
+                                    <p>54 Consectetuer, 24 Ipsum, 79 Adipiscing</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#lists-data-large">
+                                <img src="assets/images/content/property/property-01-290x145.jpg" alt="" />
+                                <div class="data">
+                                    <span class="heading-small">Lorem ipsum dolor</span>
+                                    <p>15 Consectetuer, 33 Ipsum, 41 Adipiscing</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ol>
+
+                    <!-- Ordered (Data, Small) -->
+                    <pre id="lists-data-small">ol .list-ordered .list-data .list-data-small</pre>
+                    <ol class="list-ordered list-data list-data-small">
+                        <li>
+                            <a href="#lists-data-small">
+                                <img src="assets/images/content/plan/plan-01-45x45.jpg" alt="" />
+                                <div class="data">
+                                    <span class="heading-small">Euismod <b class="tag">Offplan</b></span>
+                                    <p>51 Consectet, 43 Ipsum, 78 Adipiscing</p>
+                                </div>
+                                <i class="icon-angle-right blue"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#lists-data-small"><img src="assets/images/content/plan/plan-02-45x45.jpg" alt="" />
+                                <div class="data">
+                                    <span class="heading-small">Lorem ipsum dolor</span>
+                                    <p>25 Consectet, 52 Ipsum, 94 Adipiscing</p>
+                                </div>
+                                <i class="icon-angle-right blue"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#lists-data-small">
+                                <img src="assets/images/content/plan/plan-01-45x45.jpg" alt="" />
+                                <div class="data">
+                                    <span class="heading-small">Nibh euismod tincidu</span>
+                                    <p>51 Consectet, 43 Ipsum, 78 Adipiscing</p>
+                                </div>
+                                <i class="icon-angle-right blue"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#lists-data-small"><img src="assets/images/content/plan/plan-02-45x45.jpg" alt="" />
+                                <div class="data">
+                                    <span class="heading-small">Lorem ipsum <b class="tag">Resale</b></span>
+                                    <p>25 Consectet, 52 Ipsum, 94 Adipiscing</p>
+                                </div>
+                                <i class="icon-angle-right blue"></i>
+                            </a>
+                        </li>
+                        <li class="list-data-text">
+                            <a href="#">
+                                <i class="icon-angle-left blue"></i>
+                                <p>Lorem Ipsum</p>
+                            </a>
+                        </li>
+                    </ol>
+
+                    <!-- Ordered (Overview) -->
+                    <pre id="lists-overview">ol .list-ordered .list-overview</pre>
+                    <ol class="list-ordered list-overview">
+                        <li>
+                            <span class="heading-small">Lorem ipsum dolor sit amet</span>
+                            <img src="assets/images/content/property/property-01-290x145.jpg" alt="" />
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </li>
+                    </ol>
+
+                    <!-- Unordered (Bordered, Text) -->
+                    <pre id="lists-text">ul .list-unordered .list-bordered .list-text</pre>
+                    <ul class="list-unordered list-bordered list-text">
+                        <li>
+                            <p>Lorem ipsum beatae <span>USD 984,000</span></p>
+                        </li>
+                        <li>
+                            <a href="#lists-text">
+                                <p>Dolor sit <span>500<sub>sqm</sub><i class="icon-angle-right blue"></i></span></p>
+                            </a>
+                        </li>
+                        <li>
+                            <p>Sed ut perspiciatis <span>ZAR 1,777,444</span></p>
+                        </li>
+                        <li>
+                            <a href="#lists-text">
+                                <p>Architecto beatae <span>47<sub>sqm</sub><i class="icon-angle-right blue"></i></span></p>
+                            </a>
+                        </li>
+                        <li class="list-data-text">
+                            <a href="#">
+                                <i class="icon-angle-left blue"></i>
+                                <p>Lorem Ipsum</p>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- Unordered (Bordered, Filters, Checkboxes) -->
+                    <pre id="lists-filters-checkboxes">ul .list-unordered .list-bordered .list-filters .list-filters-checkbox / data-action="toggle-button-checkbox"</pre>
+                    <ul class="list-unordered list-bordered list-filters list-filters-checkbox" data-action="toggle-button-checkbox">
+                        <li>
+                            <a href="#lists-filters-checkboxes"><i class="icon-check-empty"></i> Lorem ipsum<span>7/10</span></a>
+                        </li>
+                        <li>
+                            <a href="#lists-filters-checkboxes"><i class="icon-check-empty"></i> Sed ut perspiciatis<span>3/10</span></a>
+                        </li>
+                        <li>
+                            <a href="#lists-filters-checkboxes"><i class="icon-check-empty"></i> Architecto beatae<span>9/10</span></a>
+                        </li>
+                    </ul>
+
+                    <!-- Unordered (Bordered, Filters, Radio Buttons) -->
+                    <pre id="lists-filters-radio-buttons">ul .list-unordered .list-bordered .list-filters / data-action="toggle-button-radio"</pre>
+                    <ul class="list-unordered list-bordered list-filters" data-action="toggle-button-radio">
+                        <li>
+                            <a href="#lists-filters-radio-buttons"><i class="icon-circle"></i> Lorem ipsum<span>7/10</span></a>
+                        </li>
+                        <li>
+                            <a href="#lists-filters-radio-buttons"><i class="icon-circle"></i> Sed ut perspiciatis<span>3/10</span></a>
+                        </li>
+                        <li>
+                            <a href="#lists-filters-radio-buttons"><i class="icon-circle"></i> Architecto beatae<span>9/10</span></a>
+                        </li>
+                    </ul>
+
+                    <!-- Unordered (Thumbnails) -->
+                    <pre id="lists-thumbnails">ul .list-unordered .list-thumbnails</pre>
+                    <ul class="list-unordered list-thumbnails">
+                        <li>
+                            <a href="#lists-thumbnails"><img src="assets/images/content/gallery/gallery-01-65x65.jpg" alt="" /></a>
+                        </li>
+                        <li>
+                            <a href="#lists-thumbnails"><img src="assets/images/content/gallery/gallery-02-65x65.jpg" alt="" /></a>
+                        </li>
+                        <li>
+                            <a href="#lists-thumbnails"><img src="assets/images/content/gallery/gallery-03-65x65.jpg" alt="" /></a>
+                        </li>
+                        <li>
+                            <a href="#lists-thumbnails"><img src="assets/images/content/gallery/gallery-01-65x65.jpg" alt="" /></a>
+                        </li>
+                        <li>
+                            <a href="#lists-thumbnails"><img src="assets/images/content/gallery/gallery-01-65x65.jpg" alt="" /></a>
+                        </li>
+                        <li>
+                            <a href="#lists-thumbnails"><img src="assets/images/content/gallery/gallery-02-65x65.jpg" alt="" /></a>
+                        </li>
+                        <li>
+                            <a href="#lists-thumbnails"><img src="assets/images/content/gallery/gallery-03-65x65.jpg" alt="" /></a>
+                        </li>
+                        <li>
+                            <a href="#lists-thumbnails"><img src="assets/images/content/gallery/gallery-01-65x65.jpg" alt="" /></a>
+                        </li>
+                        <li>
+                            <a href="#lists-thumbnails"><img src="assets/images/content/gallery/gallery-01-65x65.jpg" alt="" /></a>
+                        </li>
+                        <li>
+                            <a href="#lists-thumbnails"><img src="assets/images/content/gallery/gallery-02-65x65.jpg" alt="" /></a>
+                        </li>
+                        <li>
+                            <a href="#lists-thumbnails"><img src="assets/images/content/gallery/gallery-03-65x65.jpg" alt="" /></a>
+                        </li>
+                        <li>
+                            <a href="#lists-thumbnails"><img src="assets/images/content/gallery/gallery-01-65x65.jpg" alt="" /></a>
+                        </li>
+                        <li>
+                            <a href="#lists-thumbnails"><img src="assets/images/content/gallery/gallery-01-65x65.jpg" alt="" /></a>
+                        </li>
+                        <li>
+                            <a href="#lists-thumbnails"><img src="assets/images/content/gallery/gallery-01-65x65.jpg" alt="" /></a>
+                        </li>
+                        <li>
+                            <a href="#lists-thumbnails"><img src="assets/images/content/gallery/gallery-02-65x65.jpg" alt="" /></a>
+                        </li>
+                        <li>
+                            <a href="#lists-thumbnails"><img src="assets/images/content/gallery/gallery-03-65x65.jpg" alt="" /></a>
+                        </li>
+                    </ul>
+
+                    <!-- Unordered (Item Summary) -->
+                    <pre id="lists-item-summary">.list-unordered .list-item-summary</pre>
+                    <ul class="list-unordered list-item-summary">
+                        <li>
+                            <b>Lorem</b> adipisicing
+                        </li>
+                        <li>
+                            <b>Dolor</b> ipsum amet
+                        </li>
+                        <li>
+                            <b>Consectetur</b> elit
+                        </li>
+                        <li>
+                            <ul class="list-unordered">
+                                <li>
+                                    <b>Lorem</b> adipisi
+                                </li>
+                                <li>
+                                    <b>Dolor</b> ipsum
+                                </li>
+                                <li>
+                                    <b>Consec</b> elit
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <!-- Unordered (Item Details) -->
+                    <pre id="lists-item-details">.list-unordered .list-item-details / .list-unordered .list-location / .list-ordered .list-address</pre>
+                    <ul class="list-unordered list-item-details">
+                        <li>
+                            <b>Description</b>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </li>
+                        <li>
+                            <ul class="list-unordered list-location">
+                                <li>
+                                    <b>Address</b>
+                                    <ol class="list-ordered list-address">
+                                        <li>123 Lorem ipsum dolor</li>
+                                        <li>Consectetur Adipisicing</li>
+                                        <li>Eiusmod Tempor</li>
+                                        <li>4567</li>
+                                        <li>Dolore Magna</li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <b><i class="icon-map-marker"></i></b>
+                                    <ol class="list-ordered list-address">
+                                        <li><a href="#lists-item-details">41.76619,-72.670441</a></li>
+                                        <li><a href="#lists-item-details">Directions</a></li>
+                                    </ol>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Tables -->
+            <div id="tables" class="component">
+                <h1>Tables</h1>
+                <div class="contents">
+                    <pre>table</pre>
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Lorem</th>
+                            <th>Ipsum</th>
+                            <th>Lorem</th>
+                            <th>Ipsum</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Consectetuer</td>
+                            <td>Adipiscing</td>
+                            <td>Consectetuer</td>
+                            <td>Adipiscing</td>
+                        </tr>
+                        </tbody>
+                        <tfoot>
+                        <tr>
+                            <td>Sed</td>
+                            <td>Dam</td>
+                            <td>Sed</td>
+                            <td>Dam</td>
+                        </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Forms -->
+            <div id="forms" class="component">
+                <h1>Forms</h1>
+                <div class="contents">
+                    <form id="form" name="form" action="style-guide.html#forms" method="post">
+                        <pre>input[type="text"]</pre>
+                        <label for="input">
+                            Lorem ipsum
+                            <input id="input" name="input" type="text" placeholder="Lorem ipsum&hellip;" value="" maxlength="50" />
+                        </label>
+                        <pre>input[type="text"] .input-small</pre>
+                        <label for="input2">
+                            Lorem ipsum
+                            <input id="input2" name="input2" type="text" placeholder="Lorem&hellip;" value="" class="input-small" maxlength="50" />
+                        </label>
+                        <pre>input[type="text"] .input-align-right</pre>
+                        <label for="input3">
+                            Lorem ipsum
+                            <input id="input3" name="input3" type="text" placeholder="Lorem ipsum&hellip;" value="" class="input-align-right" maxlength="50" />
+                        </label>
+                        <pre>input[type="text"] .input-blue</pre>
+                        <label for="input4" class="placeholder-white">
+                            Lorem ipsum
+                            <input id="input4" name="input2" type="text" placeholder="Lorem ipsum&hellip;" value="" class="input-blue" maxlength="50" />
+                        </label>
+                        <pre>input[type="tel"]</pre>
+                        <label for="tel">
+                            Lorem ipsum
+                            <input id="tel" name="tel" type="tel" placeholder="Lorem ipsum&hellip;" value="" maxlength="20" />
+                        </label>
+                        <pre>input[type="password"]</pre>
+                        <label for="password">
+                            Lorem ipsum
+                            <input id="password" name="password" type="password" placeholder="******" value="" maxlength="50" />
+                        </label>
+                        <pre>input[type="email"]</pre>
+                        <label for="email">
+                            Lorem ipsum
+                            <input id="email" name="email" type="email" placeholder="john.smith@gmail.com" value="" maxlength="100" />
+                        </label>
+                        <pre>input[type="checkbox"]</pre>
+                        <label for="checkbox">
+                            <input id="checkbox" name="checkbox" type="checkbox" value="1" />
+                            Lorem ipsum
+                        </label>
+                        <pre>input[type="radio"]</pre>
+                        <label for="radio">
+                            <input id="radio" name="radio" type="radio" value="1" />
+                            Lorem ipsum
+                        </label>
+                        <pre>select</pre>
+                        <label for="select">
+                            Lorem ipsum
+                            <select id="select" name="select">
+                                <option value=""></option>
+                                <option value="Lorem">Lorem</option>
+                                <option value="Ipsum">Ipsum</option>
+                            </select>
+                        </label>
+                        <pre>textarea</pre>
+                        <label for="textarea">
+                            Lorem ipsum
+                            <textarea id="textarea" name="textarea" placeholder="Lorem ipsum dolor sit amet&hellip;" maxlength="255"></textarea>
+                        </label>
+                        <pre>button .button .button-white</pre>
+                        <button id="button" name="button" class="button button-white">Lorem ipsum</button>
+                        <pre>input[type="submit"] .button .button-blue .button-bold .button-large</pre>
+                        <input id="submit" name="submit" type="submit" value="Lorem ipsum" class="button button-blue button-bold button-large" />
+                    </form>
+
+                    <pre id="form-search">form .form-search</pre>
+                    <form id="form2" name="form2" action="style-guide.html#form-search" method="post" class="form-search">
+                        <label for="input5">
+                            <input id="input5" name="input5" type="text" placeholder="Search&hellip;" value="" maxlength="50" class="input-wide" />
+                        </label>
+                        <button class="button button-white button-medium"><i class="icon-search"></i></button>
+                        <button class="button button-white">Advanced Search</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Info Window -->
+            <div id="info-window" class="component">
+                <h1>Info Window</h1>
+                <div class="contents">
+                    <pre>.window-info .box-shadow / .window-info-header .window-info-title / .window-info-contents .list-item-summary</pre>
+                    <div class="window-info box-shadow">
+                        <header class="window-info-header">
+                            <div class="window-info-title">
+                                <a href="style-guide.html#info-window" class="button button-grey button-small" data-action="toggle-button" role="button"><i class="icon-star"></i></a>
+                                <span class="heading-tiny heading-bold heading-uppercase">456 Lorem ipsum dolor</span>
+                            </div>
+                            <a href="style-guide.html#info-window" class="button button-blue button-small" role="button">Contact</a>
+                        </header>
+                        <div class="window-info-contents">
+                            <ul class="list-unordered list-item-summary">
+                                <li>
+                                    <b>Price</b> R200 000
+                                </li>
+                                <li>
+                                    <b>Plot size</b> 500<sub>sqm</sub>
+                                </li>
+                                <li>
+                                    <ul class="list-unordered">
+                                        <li><b>Bed</b> 2</li>
+                                        <li><b>Bath</b> 3</li>
+                                        <li><b>Garages</b> 3</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <a href="#info-window" class="button button-white button-circle" role="button"><i class="icon-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Icons -->
+            <div id="icons" class="component">
+                <h1>Icons</h1>
+                <div class="contents contents-icons">
+                    <pre>.icon-angle-right</pre>
+                    <i class="icon-angle-right"></i>
+                    <pre>.icon-chevron-left</pre>
+                    <i class="icon-chevron-left"></i>
+                    <pre>.icon-chevron-right</pre>
+                    <i class="icon-chevron-right"></i>
+                    <pre>.icon-remove</pre>
+                    <i class="icon-remove"></i>
+                    <pre>.icon-caret-down</pre>
+                    <i class="icon-caret-down"></i>
+                    <pre>.icon-home</pre>
+                    <i class="icon-home"></i>
+                    <pre>.icon-circle</pre>
+                    <i class="icon-circle"></i>
+                    <pre>.icon-map-marker</pre>
+                    <i class="icon-map-marker"></i>
+                    <pre>.icon-plus</pre>
+                    <i class="icon-plus"></i>
+                    <pre>.icon-search</pre>
+                    <i class="icon-search"></i>
+                    <pre>.icon-share</pre>
+                    <i class="icon-share"></i>
+                    <pre>.icon-star</pre>
+                    <i class="icon-star"></i>
+                    <pre>.loading .loading-bars</pre>
+                    <div class="loading loading-bars"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Back to Top -->
+        <a href="#top" class="icon-arrow-up" data-action="back-to-top"></a>
+    </div>
+    <script src="//maps.googleapis.com/maps/api/js?v=3&amp;sensor=false"></script>
+    <script src="assets/js/vendor/jquery.js"></script>
+    <script src="assets/js/vendor/jquery-ui.js"></script>
+    <script src="assets/js/plugins.js?v=3.2.4"></script>
+    <script src="assets/js/components.js?v=3.2.4"></script>
+    <script src="assets/js/main.js?v=3.2.4"></script>
+</body>
+</html>

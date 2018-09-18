@@ -1,0 +1,139 @@
+/* ==========================================================================
+   Typography: color, font-size, font-weight, line-height, text-decoration
+   ========================================================================== */
+
+/* Colours */
+
+@color-black: #000;
+@color-silver: #c0c0c0;
+@color-white: #fff;
+
+/* Families */
+
+@font-family-thefontfamilyname: 'TheFontFamilyName', Arial, sans-serif;
+@font-family-arial: Arial, sans-serif;
+@font-family-verdana: Verdana, sans-serif;
+
+/* Font Weight */
+
+@font-weight-light: 200;
+@font-weight-normal: 400;
+@font-weight-bold: 700;
+
+/* Mixins */
+
+.border-radius (@radius: 15px) {
+    -webkit-border-radius: @radius;
+       -moz-border-radius: @radius;
+         -o-border-radius: @radius;
+            border-radius: @radius;
+}
+
+/* Fonts */
+
+@font-face {
+    font-family: 'TheFontFamilyName';
+    src: url("/assets/fonts/thefontfamilyname.eot");
+    src: local("☺"),
+        url("/assets/fonts/thefontfamilyname.woff") format("woff"),
+        url("/assets/fonts/thefontfamilyname.ttf") format("truetype"),
+        url("/assets/fonts/thefontfamilyname.svg#webfontitAdEwxq") format("svg");
+    font-weight: @font-weight-normal;
+    font-style: normal;
+}
+
+/**
+ * Example: 1.4em = 14px, 2.2em = 22px
+ *
+ * 62.5% allows you to easily use em's for font-sizing
+ */
+
+body {
+    font: 62.5%/1 Arial, sans-serif;
+}
+
+/* Navigation
+   ========================================================================== */
+
+nav.primary {
+
+    li:focus,
+    li:hover {
+        > a {
+            color: #004150;
+        }
+    }
+
+    a {
+        color: #BFE9F3;
+        font-size: 16px;
+        text-decoration: none;
+
+        &:active,
+        &:focus,
+        &:hover {
+            color: #004150;
+        }
+    }
+}
+
+/* Headings
+   ========================================================================== */
+
+h1 {
+
+}
+
+h2 {
+
+}
+
+h3 {
+
+}
+
+/* Anchors
+   ========================================================================== */
+
+a {
+
+    &:active {
+
+    }
+
+    &:hover {
+
+    }
+
+    &:visited {
+
+    }
+}
+
+/* Table
+   ========================================================================== */
+
+th {
+
+}
+
+td {
+
+}
+
+/* Lists
+   ========================================================================== */
+
+ol {
+
+    li {
+
+    }
+}
+
+ul {
+
+    li {
+
+    }
+}

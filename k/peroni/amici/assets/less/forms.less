@@ -1,0 +1,803 @@
+/* ==========================================================================
+   Forms: form, fieldset, label, input, textarea, select, option
+   ========================================================================== */
+
+/* LESS: Colours */
+
+@color-black: #000;
+@color-grey-dark: #666;
+@color-grey: #777;
+@color-grey-blue: #9aa0a5;
+@color-grey-lighter: #9f9f9f;
+@color-silver: #ccc;
+@color-silver-light: #e9e9e9;
+@color-silver-lighter: #e2e2e2;
+@color-white-darker: #f0f0f0;
+@color-white-dark: #f6f6f6;
+@color-white: #fff;
+@color-red: #e61d38;
+@color-navy: #082865;
+
+/* LESS: Font families */
+
+@font-family-tradegothic: 'TradeGothicLTStd', Arial, sans-serif;
+@font-family-tradegothic-bold: 'TradeGothicLTStd-Bold', Arial, sans-serif;
+@font-family-arial: Arial, sans-serif;
+
+/* LESS: Font weights */
+
+@font-weight-light: 200;
+@font-weight-normal: 400;
+@font-weight-bold: 700;
+
+/* Fonts */
+
+@font-face {
+    font-family: 'TradeGothicLTStd';
+    src: url("../fonts/TradeGothicLTStd.eot");
+    src: url("../fonts/TradeGothicLTStd.eot?#iefix") format("embedded-opentype"),
+         url("../fonts/TradeGothicLTStd.woff") format("woff"),
+         url("../fonts/TradeGothicLTStd.ttf") format("truetype"),
+         url("../fonts/TradeGothicLTStd.svg#TradeGothicLTStd") format("svg");
+    font-weight: @font-weight-normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TradeGothicLTStd-Bold';
+    src: url("../fonts/TradeGothicLTStd-Bold.eot");
+    src: url("../fonts/TradeGothicLTStd-Bold.eot?#iefix") format("embedded-opentype"),
+         url("../fonts/TradeGothicLTStd-Bold.woff") format("woff"),
+         url("../fonts/TradeGothicLTStd-Bold.ttf") format("truetype"),
+         url("../fonts/TradeGothicLTStd-Bold.svg#TradeGothicLTStd-Bold") format("svg");
+    font-weight: @font-weight-normal;
+    font-style: normal;
+}
+
+/* General
+   ========================================================================== */
+
+form {
+
+    fieldset {
+       border: 0;
+       clear: both;
+       margin: 0;
+       padding: 0;
+   }
+
+   label {
+       color: @color-navy;
+       display: block;
+       font: 20px/1 @font-family-tradegothic-bold;
+       float: left;
+       margin: 0 0 13px 0;
+       text-transform: uppercase;
+
+       &:last-child {
+           margin-bottom: 0;
+       }
+
+       // Email, Text, Password
+       input[type="email"],
+       input[type="text"],
+       input[type="password"] {
+           border: 0;
+           background-color: @color-silver-light;
+           color: @color-grey-dark;
+           display: block;
+           float: left;
+           font: 14px/1.2 @font-family-arial;
+           margin: 5px 0 0 0;
+           padding: 8px 10px;
+           width: 274px;
+
+           &:focus {
+               background-color: @color-navy;
+               color: @color-white;
+               outline: 0;
+           }
+       }
+   }
+
+   textarea {
+       border: 0;
+       background-color: @color-silver-light;
+       color: @color-grey-dark;
+       display: block;
+       font: 14px/1.2 @font-family-arial;
+       margin: 10px 0 0 0;
+       min-height: 120px;
+       padding: 8px 10px;
+       resize: vertical;
+       width: 274px;
+
+       &:focus {
+           background-color: @color-navy;
+           color: @color-white;
+           outline: 0;
+       }
+   }
+
+   select {
+       border: 0;
+       background: @color-silver-light url("../images/icons/icon-select.png") right top no-repeat;
+       color: @color-grey-dark;
+       display: block;
+       font: 14px @font-family-arial;
+       margin: 5px 0 0 0;
+       padding: 7px 10px;
+       text-transform: none;
+       width: 294px;
+       -webkit-appearance: none;
+          -moz-appearance: none;
+               appearance: none;
+
+       &:focus {
+           background-color: @color-navy;
+           color: @color-white;
+           outline: 0;
+       }
+   }
+
+   input[type="submit"] {
+       border: 0;
+       background-color: @color-silver-light;
+       color: @color-navy;
+       font: 23px/1 @font-family-tradegothic;
+       height: 36px;
+       padding: 0 15px;
+       text-transform: uppercase;
+
+       &:active {
+           padding-top: 1px;
+           height: 36px;
+       }
+
+       &:hover {
+           .box-shadow(0 0 3px @color-grey-lighter);
+       }
+   }
+}
+
+/* Sign Up
+   ========================================================================== */
+
+form.sign-up {
+    float: left;
+
+    fieldset {
+
+        // Checkboxes
+        &.checkboxes {
+            margin: 0 0 7px 0;
+            padding-top: 1px;
+            width: 302px;
+
+            label {
+                font-size: 12px;
+                margin: 0 0 6px 0;
+                width: 302px;
+
+                input[type="checkbox"] {
+                    margin: 1px 3px 0 0;
+                    bottom: 2px;
+                    position: relative;
+                    vertical-align: middle;
+
+                    &:focus {
+                        outline: 1px @color-navy solid;
+                    }
+                }
+
+                a {
+                    color: @color-navy;
+                    font-size: 12px;
+                }
+            }
+        }
+
+        // Date of Birth
+        &.date-of-birth {
+            margin-bottom: 13px;
+            width: 302px;
+
+            label {
+                margin-bottom: 5px;
+            }
+
+            select {
+                display: block;
+                margin-top: 10px;
+            }
+        }
+    }
+
+    footer {
+        clear: both;
+
+        input[type="submit"] {
+            margin: 15px 0 0 0;
+            width: 294px;
+        }
+    }
+}
+
+/* Edit Profile
+   ========================================================================== */
+
+form.edit-profile {
+    clear: both;
+    padding: 24px 0 0 0;
+
+    label {
+        clear: both;
+        font-size: 16px;
+        height: 32px;
+        margin: 0 12px 6px 0;
+        text-align: right;
+        width: 61px;
+
+        &:first-child {
+            margin-top: 6px;
+        }
+
+        &[for="location"] {
+            margin-top: 0;
+        }
+
+        input[type="email"],
+        input[type="text"],
+        input[type="password"] {
+            left: 73px;
+            position: relative;
+            top: -29px;
+            width: 178px;
+        }
+
+        select {
+            margin: 0;
+            left: 73px;
+            position: relative;
+            top: -24px;
+            width: 198px;
+        }
+    }
+
+    fieldset {
+
+        // Checkboxes
+        &.checkboxes {
+            margin: 0 0 19px 0;
+            width: 271px;
+
+            label {
+                font-size: 12px;
+                height: auto;
+                margin: 0 0 0px 73px;
+                text-align: left;
+                width: 198px;
+
+                input[type="checkbox"] {
+                    margin: 1px 3px 0 0;
+
+                    &:focus {
+                        outline: 1px @color-navy solid;
+                    }
+                }
+
+                a {
+                    color: @color-navy;
+                    font-size: 12px;
+                }
+            }
+        }
+
+        // Date of Birth
+        &.date-of-birth {
+            margin-bottom: 0px;
+            width: 270px;
+
+            label {
+                margin-top: 0;
+            }
+
+            select {
+                display: block;
+                float: left;
+                margin: -8px 7px 0 0;
+                width: 61px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    footer {
+        float: right;
+        width: 272px;
+
+        a.button {
+            float: right;
+            width: 242px;
+        }
+
+        input[type="submit"] {
+            background-color: @color-navy;
+            color: @color-white;
+            float: right;
+            margin: 0 0 6px 6px;
+            width: 272px;
+
+            &:active {
+                padding-top: 1px;
+            }
+
+            &:hover {
+                background: @color-white-dark;
+                color: @color-navy;
+            }
+        }
+    }
+}
+
+/* Search
+   ========================================================================== */
+
+form.search {
+    display: none;
+    left: 0;
+    position: absolute;
+    top: -5px;
+
+    label {
+        margin: 0;
+        width: 140px;
+
+        input[type="text"] {
+            background-color: @color-white;
+            border: 1px @color-silver solid;
+            color: @color-grey-dark;
+            font-size: 12px;
+            line-height: 1.4;
+            padding: 7px 10px 7px 10px;
+            width: 118px;
+
+            &:focus {
+                background-color: @color-white;
+                color: @color-grey-dark;
+                outline: 0;
+            }
+        }
+    }
+}
+
+/* Interaction: Vote, Enter, Poll, etc.
+   ========================================================================== */
+
+form.interaction {
+    margin: 0 0 0 4px;
+
+    fieldset {
+        margin: 0 0 0 8px;
+
+        &.radio-buttons {
+            width: 298px;
+
+            label {
+                font: 20px/1 @font-family-tradegothic-bold;
+                float: left;
+                padding: 4px 0 0 0;
+                text-transform: uppercase;
+                width: 294px;
+
+                input[type="radio"] {
+                    bottom: 2px;
+                    margin: 0 5px 0 0;
+                    position: relative;
+                    vertical-align: middle;
+                }
+            }
+        }
+
+        &+ input[type="submit"] {
+            margin-top: 27px;
+        }
+    }
+
+    label {
+        float: none;
+        font: 20px/1 @font-family-arial;
+        text-transform: none;
+
+        input[type="text"] {
+            float: none;
+            margin-top: 10px;
+            width: 274px;
+        }
+    }
+
+    input[type="submit"] {
+        background-color: @color-navy;
+        clear: both;
+        color: @color-white;
+        display: block;
+        margin: 0 0 4px 0;
+        width: 294px;
+
+        &:active {
+            padding-top: 1px;
+        }
+    }
+}
+
+/* Media Queries
+   ========================================================================== */
+
+/* Smaller Screens */
+
+@media only screen and (min-width: 481px) {
+
+    /* Sign Up
+       ========================================================================== */
+
+    form.sign-up {
+
+        label {
+            clear: both;
+            height: 32px;
+            margin: 0 25px 19px 0;
+            text-align: right;
+            width: 105px;
+
+            &:first-child {
+                margin-top: 6px;
+            }
+
+            input[type="email"],
+            input[type="text"],
+            input[type="password"] {
+                left: 135px;
+                position: relative;
+                top: -31px;
+                width: 421px;
+            }
+
+            select {
+                margin: 0;
+                left: 135px;
+                position: relative;
+                top: -26px;
+            }
+        }
+
+        fieldset {
+
+            &.checkboxes {
+                margin-top: 0;
+
+                label {
+                    height: auto;
+                    margin-left: 135px;
+                    text-align: left;
+                }
+            }
+
+            &.date-of-birth {
+                float: left;
+                margin-bottom: 14px;
+                width: 577px;
+
+                label {
+                    margin-right: 30px;
+
+                    &:first-child {
+                        margin-top: 0;
+                    }
+                }
+
+                select {
+                    float: left;
+                    margin: -6px 12px 0 0;
+                    width: 139px;
+
+                    &:last-of-type {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+
+        textarea {
+            height: 196px;
+            width: 517px;
+        }
+
+        footer {
+
+            fieldset {
+                float: left;
+            }
+
+            input[type="submit"] {
+                float: right;
+                margin: 25px 0 0 0;
+                width: auto;
+            }
+        }
+    }
+
+    /* Edit Profile
+       ========================================================================== */
+
+    form.edit-profile {
+
+        footer {
+
+            a.button {
+                width: auto;
+            }
+
+            input[type="submit"] {
+                margin-bottom: 0;
+                width: auto;
+            }
+        }
+    }
+
+    /* Search
+       ========================================================================== */
+
+    form.search {
+        left: 24px;
+        top: -7px;
+
+        label {
+            margin: 0;
+            width: 150px;
+
+            input[type="text"] {
+                background-color: @color-white-dark;
+                border: 1px @color-silver solid;
+                .border-radius(15px);
+                .box-shadow(1px 1px 4px @color-silver inset);
+                line-height: 1.4;
+                padding: 4px 10px 4px 10px;
+                width: 128px;
+            }
+        }
+    }
+
+    /* Interaction: Vote, Enter, Poll, etc.
+       ========================================================================== */
+
+    form.interaction {
+        margin: 0;
+
+        fieldset {
+            margin: 0;
+
+            &.radio-buttons {
+                width: 414px;
+
+                label {
+                    width: 207px;
+                }
+            }
+
+            &+ input[type="submit"] {
+                margin-top: 17px;
+            }
+        }
+
+        label {
+
+            input[type="text"] {
+                width: 415px;
+            }
+
+            &+ input[type="submit"] {
+                margin-top: 27px;
+            }
+        }
+
+        textarea {
+            width: 415px;
+        }
+
+        input[type="submit"] {
+            margin: 6px 0 0 0;
+            width: auto;
+        }
+    }
+}
+
+/* Wide Screens */
+
+@media only screen and (min-width: 1160px) {
+
+    /* Sign Up
+       ========================================================================== */
+
+    form.sign-up {
+
+        label {
+            width: 105px;
+
+            input[type="email"],
+            input[type="text"],
+            input[type="password"] {
+                width: 541px;
+            }
+        }
+
+        fieldset {
+
+            // Selects
+            &.date-of-birth {
+                width: 697px;
+
+                select {
+                    width: 179px;
+                }
+            }
+
+            // Checkboxes
+            &.checkboxes {
+
+                label {
+                    font-size: 14px;
+
+                    a {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+
+        textarea {
+            width: 517px;
+        }
+    }
+
+    /* Edit Profile
+       ========================================================================== */
+
+    form.edit-profile {
+
+        label {
+            width: 61px;
+
+            input[type="email"],
+            input[type="text"],
+            input[type="password"] {
+                width: 208px;
+            }
+
+            select {
+                width: 228px;
+            }
+        }
+
+        fieldset {
+
+            // Checkboxes
+            &.checkboxes {
+                width: 301px;
+
+                label {
+                    width: 228px;
+                }
+            }
+
+            // Date of Birth
+            &.date-of-birth {
+                width: 300px;
+
+                select {
+                    width: 71px;
+                }
+            }
+        }
+
+        footer {
+            width: 302px;
+
+            a.button {
+                margin: 0 0 0 83px;
+            }
+        }
+    }
+
+    /* Interaction: Vote, Enter, Poll, etc.
+       ========================================================================== */
+
+    form.interaction {
+        margin: 0;
+
+        fieldset {
+
+            &.radio-buttons {
+                width: 496px;
+
+                label {
+                    text-transform: uppercase;
+                    width: 248px;
+                }
+            }
+
+            &+ input[type="submit"] {
+                margin-top: 27px;
+            }
+        }
+
+        label {
+
+            input[type="text"] {
+                width: 497px;
+            }
+
+            &+ input[type="submit"] {
+                margin-top: 37px;
+            }
+        }
+
+        textarea {
+            height: 176px;
+            width: 505px;
+        }
+    }
+}
+
+/* LESS: Mixins */
+
+.border-radius(@radius: 15px) {
+    -webkit-border-radius: @radius;
+       -moz-border-radius: @radius;
+         -o-border-radius: @radius;
+            border-radius: @radius;
+}
+
+.box-shadow(@arguments) {
+    -webkit-box-shadow: @arguments;
+       -moz-box-shadow: @arguments;
+         -o-box-shadow: @arguments;
+            box-shadow: @arguments;
+}
+
+.inner-shadow(@horizontal: 0, @vertical: 1px, @blur: 2px, @alpha: 0.4) {
+    -webkit-box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+       -moz-box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+         -o-box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+            box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+}
+
+.opacity(@opacity: 0.5) {
+    -webkit-opacity: @opacity;
+       -moz-opacity: @opacity;
+         -o-opacity: @opacity;
+            opacity: @opacity;
+}
+
+.rotation(@deg: 5deg) {
+    -webkit-transform: rotate(@deg);
+       -moz-transform: rotate(@deg);
+         -o-transform: rotate(@deg);
+            transform: rotate(@deg);
+}
+
+.scale(@ratio: 1.5) {
+    -webkit-transform: scale(@ratio);
+       -moz-transform: scale(@ratio);
+         -o-transform: scale(@ratio);
+            transform: scale(@ratio);
+}
+
+.transition(@arguments) {
+    -webkit-transition: @arguments;
+       -moz-transition: @arguments;
+         -o-transition: @arguments;
+            transition: @arguments;
+}

@@ -1,0 +1,138 @@
+/* ==========================================================================
+   Layout: display, float, height, margin, padding, position, width, z-index
+   ========================================================================== */
+
+/* Colours */
+
+@color-black: #000;
+@color-silver: #c0c0c0;
+@color-white: #fff;
+
+/* Mixins */
+
+.border-radius (@radius: 15px) {
+    -webkit-border-radius: @radius;
+       -moz-border-radius: @radius;
+         -o-border-radius: @radius;
+            border-radius: @radius;
+}
+
+/* Header
+   ========================================================================== */
+
+header {
+    margin: 0 auto;
+    margin-top: 40px;
+    width: 960px;
+}
+
+/* Navigation
+   ========================================================================== */
+
+nav.primary {
+
+    > ul {
+        background-color: #0183A1;
+        border-top: 1px #004150 solid;
+        height: 39px;
+        margin: 0 auto;
+        padding: 0;
+        position: relative;
+        width: 960px;
+
+        > li {
+            border-right: 1px #004150 solid;
+            float: left;
+            height: 40px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            a {
+                display: block;
+                padding: 10px;
+                height: 20px;
+            }
+
+            ul {
+                background-color: #0183A1;
+                border: 1px #004150 solid;
+                left: -1px;
+                margin: 0;
+                padding: 0;
+                position: absolute;
+                top: 39px;
+                visibility: hidden;
+
+                li {
+                    margin: 0;
+                    width: 200px;
+
+                    &:hover {
+                        background-color: #6AD9F3;
+                    }
+
+                    a {
+                        border-bottom: 1px #004150 solid;
+
+                        &:active,
+                        &:focus {
+                            background-color: #6AD9F3;
+                        }
+                    }
+                }
+            }
+        }
+
+        li.hover {
+            position: relative;
+        }
+    }
+}
+
+/* Headings
+   ========================================================================== */
+
+h1 {
+
+}
+
+h2 {
+
+}
+
+h3 {
+
+}
+
+/* Table
+   ========================================================================== */
+
+table {
+
+}
+
+th {
+
+}
+
+td {
+
+}
+
+/* Lists
+   ========================================================================== */
+
+ol {
+
+    li {
+
+    }
+}
+
+ul {
+
+    li {
+
+    }
+}

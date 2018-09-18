@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" dir="ltr" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" dir="ltr" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" dir="ltr" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" dir="ltr" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>StarSat &ndash; Forms</title>
+
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Open Graph: http://ogp.me -->
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:locale" content="en" />
+
+    <!-- Twitter Cards: https://dev.twitter.com/docs/cards -->
+    <meta name="twitter:card" content="" />
+    <meta name="twitter:site" content="" />
+    <meta name="twitter:creator" content="" />
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:image" content="" />
+
+    <!-- Avoiding the FOUC v3.0: http://www.paulirish.com/2009/avoiding-the-fouc-v3 -->
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+
+    <!-- Google+ Page: https://support.google.com/webmasters/answer/1708844 -->
+    <link rel="publisher" href="https://plus.google.com/{+PageId}/" />
+
+    <!-- Font Awesome: http://fortawesome.github.io/Font-Awesome -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" />
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome-ie7.min.css" />
+    <![endif]-->
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Titillium+Web:400,600,700" media="screen and (min-width: 480px)" />
+
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" href="apple-touch-icon-precomposed.png" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+    <!--[if lt IE 9]>
+    <script src="assets/js/vendor/polyfills.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <header class="header sg-header" role="banner">
+        <!--[if lt IE 9]>
+        <div class="upgrade-ie"><a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie" target="_blank"><img src="assets/images/logos/logo-upgrade-ie.png" width="820" height="42" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div>
+        <![endif]-->
+        <div class="wrapper">
+            <a href="index.html" class="logo"></a>
+            <!-- // Logo -->
+
+            <h1 class="sg-heading-primary">Forms</h1>
+        </div>
+    </header>
+
+    <main class="sg-main" role="main">
+        <div class="wrapper">
+
+            <section id="sg-table-of-contents" class="sg-section">
+                <h2 class="sg-heading-section">Table of Contents</h2>
+                <ol class="list list-table-of-contents">
+                    <li>
+                        Forms
+                        <ol>
+                            <li><a href="forms.html#sg-form-margin">Margin</a></li>
+                            <li><a href="forms.html#sg-form-vertical">Vertical</a></li>
+                        </ol>
+                    </li>
+                    <li>
+                        Elements
+                        <ol>
+                            <li><a href="forms.html#sg-checkbox">Checkbox</a></li>
+                            <li><a href="forms.html#sg-radio">Radio Button</a></li>
+                            <li><a href="forms.html#sg-select">Select</a></li>
+                            <li><a href="forms.html#sg-text">Text Input</a></li>
+                        </ol>
+                    </li>
+                </ol>
+            </section>
+            <!-- // Table of Contents -->
+
+            <section id="sg-form-margin" class="sg-section">
+                <h2 class="sg-heading-section">Margin Form</h2>
+                <pre class="sg-pre">form.form-margin</pre>
+                <form id="form-register" name="form-register" action="forms.html" method="post" class="form form-margin error-red" data-component="form-register" data-validate="form-register">
+                    <fieldset class="fieldset fieldset-option-group" data-action="calculate-package" data-package-type="package">
+                        <legend class="legend">Select Your Package</legend>
+                        <label for="package-starsat-special" class="label label-black">
+                            <input id="package-starsat-special" name="package" type="radio" value="StarSat Special" class="input-radio" data-item-price="99" /> StarSat Special
+                            <span class="label-related grey-dark fw-bold">R99 per month</span>
+                        </label>
+                        <!-- // StarSat Special -->
+
+                        <label for="package-starsat-sensation" class="label label-black">
+                            <input id="package-starsat-sensation" name="package" type="radio" value="StarSat Sensation" class="input-radio" data-item-price="149" /> StarSat Sensation
+                            <span class="label-related grey-dark fw-bold">R149 per month</span>
+                        </label>
+                        <!-- // StarSat Sensation -->
+
+                        <label for="package-starsat-superior" class="label label-black">
+                            <input id="package-starsat-superior" name="package" type="radio" value="StarSat Superior" class="input-radio" data-item-price="199" /> StarSat Superior
+                            <span class="label-related grey-dark fw-bold">R199 per month</span>
+                        </label>
+                        <!-- // StarSat Superior -->
+                    </fieldset>
+                    <!-- // Packages -->
+
+                    <fieldset class="fieldset fieldset-option-group" data-action="calculate-package" data-package-type="add-on">
+                        <legend class="legend">Add&ndash;On Packages</legend>
+                        <label for="package-starsat-indian" class="label label-black">
+                            <input id="package-starsat-indian" name="package-starsat-indian" type="checkbox" value="StarSat Indian" class="input-radio" data-item-price="69" /> StarSat Indian
+                            <span class="label-related grey-dark fw-bold">R69 per month</span>
+                        </label>
+                        <!-- // StarSat Indian -->
+
+                        <label for="package-starsat-chinese" class="label label-black">
+                            <input id="package-starsat-chinese" name="package-starsat-chinese" type="checkbox" value="StarSat Chinese" class="input-radio" data-item-price="149" /> StarSat Chinese
+                            <span class="label-related grey-dark fw-bold">R149 per month</span>
+                        </label>
+                        <!-- // StarSat Chinese -->
+                    </fieldset>
+                    <!-- // Add–On Packages -->
+
+                    <fieldset class="fieldset fieldset-option-group" data-action="calculate-package" data-package-type="decoder">
+                        <legend class="legend">Decoder</legend>
+                        <label for="decoder-yes" class="label label-black">
+                            <input id="decoder-yes" name="decoder" type="radio" value="No" class="input-radio" data-item-price="0" /> I have a StarSat/TopTV decoder
+                            <span class="label-related grey-dark fw-bold">R0</span>
+                        </label>
+                        <!-- // Decoder not required -->
+
+                        <label for="decoder-no" class="label label-black">
+                            <input id="decoder-no" name="decoder" type="radio" value="Yes" class="input-radio" data-action="calculate-total" data-item-price="599" /> I need a decoder installed
+                            <span class="label-related grey-dark fw-bold">R599 (fully installed)</span>
+                        </label>
+                        <!-- // Decoder required -->
+                    </fieldset>
+                    <!-- // Decoder -->
+
+                    <hr class="hr hr-silver" />
+
+                    <div class="fieldset fieldset-total" data-component="total-cost" data-initial-total="0" data-initial-visibility="hidden">
+                        <h3 class="legend">
+                            Total Monthly Cost: <span class="label-related" data-value="cost" data-currency-symbol="R">R0</span>
+                        </h3>
+
+                        <hr class="hr hr-silver" />
+                    </div>
+                    <!-- // Total -->
+
+                    <fieldset class="fieldset">
+                        <legend class="legend legend-section">Personal Details:</legend>
+                        <label class="label label-black">
+                            <b class="orange">*</b> Name &amp; Surname
+                            <input id="personal-name" name="personal-name" type="text" maxlength="100" value="" placeholder="" class="input-text input-text-white" />
+                        </label>
+                        <!-- // Name & Surname -->
+
+                        <label class="label label-black">
+                            ID Type
+                            <select id="personal-id-type" name="personal-id-type" class="select select-orange bs-silver">
+                                <option value="">Please Select</option>
+                                <option value="ID Card">ID Card</option>
+                                <option value="Passport">Passport</option>
+                                <option value="Driver&rsquo; License">Driver&rsquo;s License</option>
+                            </select>
+                        </label>
+                        <!-- // ID Type -->
+
+                        <label class="label label-black">
+                            <b class="orange">*</b> ID Number
+                            <input id="personal-id-number" name="personal-id-number" type="text" maxlength="100" value="" placeholder="" class="input-text input-text-white" />
+                        </label>
+                        <!-- // ID Number -->
+                    </fieldset>
+
+                    <fieldset class="fieldset">
+                        <label class="label label-black label-empty"><b class="orange">*</b> Address</label>
+                        <div class="fieldset fieldset-select-group">
+                            <select id="personal-address-country" name="personal-address-country" class="select select-small select-orange bs-silver" data-select-type="country" data-select-event="on-change">
+                                <option value="">Country</option>
+                                <option value="1">South Africa</option>
+                            </select>
+                            <!-- // Country -->
+
+                            <select id="personal-address-province" name="personal-address-province" class="select select-small select-orange bs-silver" data-select-type="province" data-select-event="on-change" data-intital-state="disabled">
+                                <option value="">Province</option>
+                            </select>
+                            <!-- // Province -->
+
+                            <select id="personal-address-city" name="personal-address-city" class="select select-small select-orange bs-silver" data-select-type="city" data-select-event="on-change" data-intital-state="disabled">
+                                <option value="">City</option>
+                            </select>
+                            <!-- // City -->
+
+                            <select id="personal-address-suburb" name="personal-address-suburb" class="select select-small select-orange bs-silver" data-select-type="suburb" data-select-event="on-change" data-intital-state="disabled">
+                                <option value="">Suburb</option>
+                            </select>
+                            <!-- // Suburb -->
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="fieldset">
+                        <label class="label label-black">
+                            <b class="orange">*</b> Address Detail
+                            <input id="personal-address-detail" name="personal-address-detail" type="text" maxlength="100" value="" placeholder="" class="input-text input-text-white" />
+                        </label>
+                        <!-- // Address Detail -->
+
+                        <label class="label label-black">
+                            <b class="orange">*</b> Postal Code
+                            <input id="personal-postal-code" name="personal-postal-code" type="text" maxlength="4" value="" placeholder="" class="input-text input-text-white" />
+                        </label>
+                        <!-- // Postal Code -->
+
+                        <label class="label label-black">
+                            <b class="orange">*</b> Preferred Contact Method
+                            <select id="personal-contact-method" name="personal-contact-method" class="select select-orange bs-silver">
+                                <option value="">Please Select</option>
+                                <option value="Email">Email</option>
+                                <option value="SMS">SMS</option>
+                                <option value="Not Required">Not Required</option>
+                            </select>
+                        </label>
+                        <!-- // ID Type -->
+
+                        <label class="label label-black">
+                            <b class="orange">*</b> Email Address
+                            <input id="personal-email-address" name="personal-email-address" maxlength="100" type="email" value="" placeholder="" class="input-text input-text-white" />
+                        </label>
+                        <!-- // Email Address -->
+
+                        <label class="label label-black">
+                            <b class="orange">*</b> Mobile Number
+                            <input id="personal-mobile-number" name="personal-mobile-number" maxlength="20" type="text" value="" placeholder="" class="input-text input-text-white" />
+                        </label>
+                        <!-- // Postal Code -->
+
+                        <label class="label label-black">
+                            Landline Number
+                            <input id="personal-landline-number" name="personal-landline-number" type="text" value="" placeholder="" class="input-text input-text-white" />
+                        </label>
+                        <!-- // Postal Code -->
+                    </fieldset>
+
+                    <hr class="hr hr-silver" />
+
+                    <fieldset class="fieldset">
+                        <legend class="legend legend-section">Payment Details</legend>
+
+                        <label class="label label-black">
+                            <b class="orange">*</b> Payment Method
+                            <select id="payment-method" name="payment-method" class="select select-orange bs-silver" data-select-event="on-change">
+                                <option value="">Please Select</option>
+                                <option value="Cash" data-show-bank-account-details="false">Cash</option>
+                                <option value="Debit Order" data-show-bank-account-details="true">Debit Order</option>
+                            </select>
+                        </label>
+                        <!-- // Payment Method -->
+
+                        <div data-component="bank-account-details" data-initial-visibility="hidden">
+                            <label class="label label-black">
+                                <b class="orange">*</b> Bank
+                                <select id="payment-bank" name="payment-bank" class="select select-orange bs-silver" data-select-type="bank" data-select-event="on-change">
+                                    <option value="">Please Select</option>
+                                    <option value="ABSA">ABSA</option>
+                                    <option value="Nedbank">Nedbank</option>
+                                    <option value="Standard Bank">Standard Bank</option>
+                                </select>
+                            </label>
+                            <!-- // Bank -->
+
+                            <label class="label label-black">
+                                <b class="orange">*</b> Branch
+                                <select id="payment-branch" name="payment-branch" class="select select-orange bs-silver" data-select-type="bank-branch" data-intital-state="disabled">
+                                    <option value="">Please Select</option>
+                                </select>
+                            </label>
+                            <!-- // Branch -->
+
+                            <label class="label label-black">
+                                <b class="orange">*</b> Account Type
+                                <select id="payment-account-type" name="payment-account-type" class="select select-orange bs-silver" data-select-type="bank-account-type" data-intital-state="disabled">
+                                    <option value="">Please Select</option>
+                                    <option value="Current">Current</option>
+                                    <option value="Savings">Savings</option>
+                                    <option value="Transmission">Transmission</option>
+                                    <option value="Bond">Bond</option>
+                                </select>
+                            </label>
+                            <!-- // Account Type -->
+
+                            <label class="label label-black">
+                                <b class="orange">*</b> Account Name
+                                <input id="payment-account-name" name="payment-account-name" type="text" maxlength="100" value="" placeholder="" class="input-text input-text-white" />
+                            </label>
+                            <!-- // Account Name -->
+
+                            <label class="label label-black">
+                                <b class="orange">*</b> Account Number
+                                <input id="payment-account-number" name="payment-account-number" type="text" maxlength="100" value="" placeholder="" class="input-text input-text-white" />
+                            </label>
+                            <!-- // Account Number -->
+
+                            <label class="label label-black">
+                                <b class="orange">*</b> Charge Day
+                                <select id="payment-charge-day" name="payment-charge-day" class="select select-orange bs-silver" data-select-type="bank-charge-day" data-intital-state="disabled">
+                                    <option value="">Please Select</option>
+                                    <option value="25">25</option>
+                                    <option value="26">26</option>
+                                    <option value="27">27</option>
+                                    <option value="28">28</option>
+                                    <option value="29">29</option>
+                                    <option value="30">30</option>
+                                    <option value="31">31</option>
+                                    <option value="01">01</option>
+                                </select>
+                            </label>
+                            <!-- // Charge Day -->
+                        </div>
+                        <!-- // Banking Details -->
+                    </fieldset>
+                    <!-- // Payment Details -->
+
+                    <hr class="hr hr-silver" />
+
+                    <input id="submit-register" name="submit-register" type="submit" value="Confirm" class="btn btn-large btn-orange" />
+                </form>
+            </section>
+            <!-- // Vertical Form -->
+
+            <section id="sg-form-vertical" class="sg-section">
+                <h2 class="sg-heading-section">Vertical Form</h2>
+                <pre class="sg-pre">form.form-vertical / label.label-white / input[type="text"].input-text-black</pre>
+                <div style="background-color: #d0461d; padding: 10px">
+                    <form id="form-vertical" name="form-vertical" action="forms.html" method="post" class="form form-vertical error-black" data-validate="form-login">
+                        <label for="customer-code" class="label label-white">Customer Code</label>
+                        <input id="customer-code" name="customer-code" type="text" maxlength="100" value="" placeholder="" class="input-text input-text-black" />
+                        <!-- // Customer Code -->
+
+                        <label for="password" class="label label-white">Password</label>
+                        <input id="password" name="password" type="password" maxlength="100" value="" placeholder="" class="input-text input-text-black" />
+                        <!-- // Password -->
+
+                        <label for="verification-code" class="label label-white verification-code">Verification Code</label>
+                        <fieldset class="fieldset fieldset-verification-code">
+                            <input id="verification-code" name="verification-code" maxlength="4" type="text" value="" placeholder="" class="input-text input-text-black" />
+                            <!--
+                                <img src="http://196.30.23.132/selfservice/public/verifyImage.action;jsessionid=02A394CC62556D47419177B0F8579368" width="60" height="20" alt="Verification Code" />
+                            -->
+                            <img src="assets/images/general/verification-code.png" width="60" height="20" alt="Verification Code" />
+                        </fieldset>
+                        <!-- // Verification Code -->
+
+                        <input id="submit-login" name="submit-login" type="submit" value="Log In" class="btn btn-small btn-black" />
+                    </form>
+                </div>
+            </section>
+            <!-- // Vertical Form -->
+
+            <section id="sg-checkbox" class="sg-section">
+                <h2 class="sg-heading-section">Checkboxes</h2>
+                <pre class="sg-pre">label.label-white / input[type="checkbox"].input-checkbox</pre>
+                <div style="background-color: #292929; padding: 10px">
+                    <label for="input-a-1" class="label label-white">
+                        <input id="input-a-1" name="input-a-1" type="checkbox" value="1" class="input-radio" /> Lorem ipsum dolor sit
+                    </label>
+                    <label for="input-a-2" class="label label-white">
+                        <input id="input-a-2" name="input-a-2" type="checkbox" value="2" class="input-radio" /> Lorem ipsum dolor sit
+                    </label>
+                    <label for="input-a-3" class="label label-white">
+                        <input id="input-a-3" name="input-a-3" type="checkbox" value="3" class="input-radio" /> Lorem ipsum dolor sit
+                    </label>
+                </div>
+
+                <pre class="sg-pre">label.label-black / input[type="checkbox"].input-checkbox</pre>
+                <label for="input-b-1" class="label label-black">
+                    <input id="input-b-1" name="input-b-1" type="checkbox" value="1" class="input-checkbox" /> Lorem ipsum dolor sit
+                </label>
+                <label for="input-b-2" class="label label-black">
+                    <input id="input-b-2" name="input-b-2" type="checkbox" value="2" class="input-checkbox" /> Lorem ipsum dolor sit
+                </label>
+                <label for="input-b-3" class="label label-black">
+                    <input id="input-b-3" name="input-b-3" type="checkbox" value="3" class="input-checkbox" /> Lorem ipsum dolor sit
+                </label>
+
+                <pre class="sg-pre">label.label-orange / input[type="checkbox"].input-checkbox</pre>
+                <label for="input-c-1" class="label label-orange">
+                    <input id="input-c-1" name="input-c-1" type="checkbox" value="1" class="input-checkbox" /> Lorem ipsum dolor sit
+                </label>
+                <label for="input-c-2" class="label label-orange">
+                    <input id="input-c-2" name="input-c-2" type="checkbox" value="2" class="input-checkbox" /> Lorem ipsum dolor sit
+                </label>
+                <label for="input-c-3" class="label label-orange">
+                    <input id="input-c-3" name="input-c-3" type="checkbox" value="3" class="input-checkbox" /> Lorem ipsum dolor sit
+                </label>
+            </section>
+            <!-- // Checkbox -->
+
+            <section id="sg-radio" class="sg-section">
+                <h2 class="sg-heading-section">Radio Buttons</h2>
+                <pre class="sg-pre">label.label-white / input[type="radio"].input-radio</pre>
+                <div style="background-color: #292929; padding: 10px">
+                    <label for="input-d-1" class="label label-white">
+                        <input id="input-d-1" name="input-d-1" type="radio" value="1" class="input-radio" /> Lorem ipsum dolor sit
+                    </label>
+                    <label for="input-d-2" class="label label-white">
+                        <input id="input-d-2" name="input-d-1" type="radio" value="2" class="input-radio" /> Lorem ipsum dolor sit
+                    </label>
+                    <label for="input-d-3" class="label label-white">
+                        <input id="input-d-3" name="input-d-1" type="radio" value="3" class="input-radio" /> Lorem ipsum dolor sit
+                    </label>
+                </div>
+
+                <pre class="sg-pre">label.label-black / input[type="radio"].input-radio</pre>
+                <label for="input-e-1" class="label label-black">
+                    <input id="input-e-1" name="input-e-1" type="radio" value="1" class="input-radio" /> Lorem ipsum dolor sit
+                </label>
+                <label for="input-e-2" class="label label-black">
+                    <input id="input-e-2" name="input-e-1" type="radio" value="2" class="input-radio" /> Lorem ipsum dolor sit
+                </label>
+                <label for="input-e-3" class="label label-black">
+                    <input id="input-e-3" name="input-e-1" type="radio" value="3" class="input-radio" /> Lorem ipsum dolor sit
+                </label>
+
+                <pre class="sg-pre">label.label-orange / input[type="radio"].input-radio</pre>
+                <label for="input-f-1" class="label label-orange">
+                    <input id="input-f-1" name="input-f-1" type="radio" value="1" class="input-radio" /> Lorem ipsum dolor sit
+                </label>
+                <label for="input-f-2" class="label label-orange">
+                    <input id="input-f-2" name="input-f-1" type="radio" value="2" class="input-radio" /> Lorem ipsum dolor sit
+                </label>
+                <label for="input-f-3" class="label label-orange">
+                    <input id="input-f-3" name="input-f-1" type="radio" value="3" class="input-radio" /> Lorem ipsum dolor sit
+                </label>
+            </section>
+            <!-- // Radio Buttons -->
+
+            <section id="sg-select" class="sg-section">
+                <h2 class="sg-heading-section">Select</h2>
+                <pre class="sg-pre">label.label-white / select.select-orange</pre>
+                <div style="background-color: #292929; padding: 10px">
+                    <label for="input-g-1" class="label label-white label-arrow">Lorem ipsum dolor sit</label>
+                    <select id="input-g-1" name="input-g-1" class="select select-orange bs-black">
+                        <option value="Lorem ipsum dolor">Lorem ipsum dolor</option>
+                        <option value="Consectetur adipisicing elit">Consectetur adipisicing elit</option>
+                        <option value="Excepteur sint">Excepteur sint</option>
+                    </select>
+                </div>
+
+                <pre class="sg-pre">label.label-white / select.select-black</pre>
+                <div style="background-color: #d0461d; padding: 10px">
+                    <label for="input-h-2" class="label label-white label-arrow">Lorem ipsum dolor sit</label>
+                    <select id="input-h-2" name="input-h-2" class="select select-black bs-black">
+                        <option value="Lorem ipsum dolor">Lorem ipsum dolor</option>
+                        <option value="Consectetur adipisicing elit">Consectetur adipisicing elit</option>
+                        <option value="Excepteur sint">Excepteur sint</option>
+                    </select>
+                </div>
+
+                <pre class="sg-pre">label.label-black / select.select-orange</pre>
+                <label for="input-i-3" class="label label-black">Lorem ipsum dolor sit</label>
+                <select id="input-i-3" name="input-i-3" class="select select-orange bs-silver">
+                    <option value="Lorem ipsum dolor">Lorem ipsum dolor</option>
+                    <option value="Consectetur adipisicing elit">Consectetur adipisicing elit</option>
+                    <option value="Excepteur sint">Excepteur sint</option>
+                </select>
+
+                <pre class="sg-pre">label.label-black / select.select-orange disabled="disabled"</pre>
+                <label for="input-i-4" class="label label-black">Lorem ipsum dolor sit</label>
+                <select id="input-i-4" name="input-i-4" class="select select-orange bs-silver" disabled="disabled">
+                    <option value="Lorem ipsum dolor">Lorem ipsum dolor</option>
+                    <option value="Consectetur adipisicing elit">Consectetur adipisicing elit</option>
+                    <option value="Excepteur sint">Excepteur sint</option>
+                </select>
+
+                <pre class="sg-pre">label.label-black / select.select-small.select-orange</pre>
+                <label for="input-i-5" class="label label-black">Lorem ipsum dolor sit</label>
+                <select id="input-i-5" name="input-i-5" class="select select-small select-orange bs-silver">
+                    <option value="Lorem ipsum dolor">Lorem ipsum dolor</option>
+                    <option value="Consectetur adipisicing elit">Consectetur adipisicing elit</option>
+                    <option value="Excepteur sint">Excepteur sint</option>
+                </select>
+            </section>
+            <!-- // Select -->
+
+            <section id="sg-text" class="sg-section">
+                <h2 class="sg-heading-section">Text Input</h2>
+                <pre class="sg-pre">label.label-white / input[type="text"].input-text-black</pre>
+                <div style="background-color: #292929; padding: 10px">
+                    <label for="input-j-1" class="label label-white">Lorem ipsum dolor sit</label>
+                    <input id="input-j-1" name="input-j-1" type="text" class="input-text input-text-black" placeholder="Nemo enim ipsam voluptatem" />
+                </div>
+
+                <pre class="sg-pre">label.label-white / input[type="text"].input-text-black disabled="disabled"</pre>
+                <div style="background-color: #292929; padding: 10px">
+                    <label for="input-k-1" class="label label-white">Lorem ipsum dolor sit</label>
+                    <input id="input-k-1" name="input-k-1" type="text" class="input-text input-text-black" placeholder="Nemo enim ipsam voluptatem" disabled="disabled" />
+                </div>
+
+                <pre class="sg-pre">label.label-white / input[type="text"].input-text-black</pre>
+                <div style="background-color: #d0461d; padding: 10px">
+                    <label for="input-l-2" class="label label-white">Lorem ipsum dolor sit</label>
+                    <input id="input-l-2" name="input-l-1" type="text" class="input-text input-text-black" placeholder="Nemo enim ipsam voluptatem" />
+                </div>
+
+                <pre class="sg-pre">label.label-black / input[type="text"].input-text-white</pre>
+                <label for="input-m-3" class="label label-black">Lorem ipsum dolor sit</label>
+                <input id="input-m-3" name="input-m-2" type="text" class="input-text input-text-white" placeholder="Nemo enim ipsam voluptatem" />
+
+                <pre class="sg-pre">label.label-black / input[type="text"].input-text-white disabled="disabled"</pre>
+                <label for="input-n-3" class="label label-black">Lorem ipsum dolor sit</label>
+                <input id="input-n-3" name="input-n-2" type="text" class="input-text input-text-white" placeholder="Nemo enim ipsam voluptatem" disabled="disabled" />
+            </section>
+            <!-- // Text -->
+        </div>
+    </main>
+
+    <footer class="sg-footer" role="contentinfo">
+        <div class="wrapper">
+            <small class="white">Copyright &copy; <time datetime="2013">2013</time></small>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/vendor/jquery.js"></script>
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/forms.js"></script>
+    <script>main.init();</script>
+    <script>forms.init();</script>
+
+    <!-- Google Analytics -->
+    <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create', 'UA-45571066-1', 'starsat.co.za');ga('send','pageview');
+    </script>
+
+    <!-- Google Tag Manager -->
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MJ6FQS" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-MJ6FQS');
+    </script>
+</body>
+</html>

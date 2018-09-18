@@ -1,0 +1,869 @@
+/* ==========================================================================
+   Typography: color, font-size, font-weight, line-height, text-decoration
+   ========================================================================== */
+
+/* LESS: Colours */
+
+@color-black: #000;
+@color-grey-dark: #666;
+@color-grey: #777;
+@color-grey-blue: #9aa0a5;
+@color-grey-lighter: #9f9f9f;
+@color-silver: #ccc;
+@color-silver-light: #e9e9e9;
+@color-silver-lighter: #e2e2e2;
+@color-white-darker: #f0f0f0;
+@color-white-dark: #f6f6f6;
+@color-white: #fff;
+@color-red: #e61d38;
+@color-navy: #082865;
+
+/* LESS: Font families */
+
+@font-family-tradegothic: 'TradeGothicLTStd', Arial, sans-serif;
+@font-family-tradegothic-bold: 'TradeGothicLTStd-Bold', Arial, sans-serif;
+@font-family-arial: Arial, sans-serif;
+
+/* LESS: Font weights */
+
+@font-weight-light: 200;
+@font-weight-normal: 400;
+@font-weight-bold: 700;
+
+/* Fonts */
+
+@font-face {
+    font-family: 'TradeGothicLTStd';
+    src: url("../fonts/TradeGothicLTStd.eot");
+    src: url("../fonts/TradeGothicLTStd.eot?#iefix") format("embedded-opentype"),
+         url("../fonts/TradeGothicLTStd.woff") format("woff"),
+         url("../fonts/TradeGothicLTStd.ttf") format("truetype"),
+         url("../fonts/TradeGothicLTStd.svg#TradeGothicLTStd") format("svg");
+    font-weight: @font-weight-normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TradeGothicLTStd-Bold';
+    src: url("../fonts/TradeGothicLTStd-Bold.eot");
+    src: url("../fonts/TradeGothicLTStd-Bold.eot?#iefix") format("embedded-opentype"),
+         url("../fonts/TradeGothicLTStd-Bold.woff") format("woff"),
+         url("../fonts/TradeGothicLTStd-Bold.ttf") format("truetype"),
+         url("../fonts/TradeGothicLTStd-Bold.svg#TradeGothicLTStd-Bold") format("svg");
+    font-weight: @font-weight-normal;
+    font-style: normal;
+}
+
+/**
+ * Example: 1.4em = 14px, 2.2em = 22px
+ *
+ * 62.5% allows you to easily use em's for font-sizing
+ */
+
+body {
+    font: 62.5%/1 @font-family-arial;
+    -webkit-font-smoothing: antialiased;
+            font-smoothing: antialiased;
+}
+
+/* Headings
+   ========================================================================== */
+
+h1 {
+    color: @color-navy;
+    font: 33px/1 @font-family-tradegothic-bold;
+    text-transform: uppercase;
+}
+
+.home {
+
+    h1 {
+        font-size: 40px;
+    }
+}
+
+h2 {
+    color: @color-navy;
+    font: 24px/1 @font-family-tradegothic-bold;
+    text-transform: uppercase;
+}
+
+h3 {
+
+}
+
+h4 {
+
+}
+
+h5 {
+
+}
+
+h6 {
+
+}
+
+/* Text
+   ========================================================================== */
+
+pre {
+    background-color: @color-white-darker;
+    border: 1px @color-grey solid;
+    color: @color-black;
+    font-size: 15px;
+}
+
+p {
+    color: @color-grey-dark;
+    font: 14px/1 @font-family-arial;
+}
+
+p.intro {
+    color: @color-navy;
+    font: 18px/1 @font-family-arial;
+}
+
+.landing {
+
+    p.intro {
+        color: @color-grey;
+        font: 18px/1.3 @font-family-arial;
+    }
+}
+
+/* Anchors
+   ========================================================================== */
+
+a {
+    color: @color-grey-lighter;
+    font-size: 14px;
+
+    &:active {
+
+    }
+
+    &:hover {
+        color: @color-grey-dark;
+    }
+
+    &:visited {
+
+    }
+}
+
+/* Buttons */
+
+a.button {
+    text-align: center;
+    text-decoration: none;
+}
+
+// Grey
+a.grey {
+    background-color: @color-silver-light;
+    color: @color-navy;
+    font: 23px/1 @font-family-tradegothic;
+    text-transform: uppercase;
+
+    &:hover {
+        background: @color-white-dark;
+        .box-shadow(0 0 3px @color-grey-lighter);
+    }
+}
+
+// Navy
+a.navy {
+    background-color: @color-navy;
+    color: @color-white;
+    font: 23px/1 @font-family-tradegothic;
+    text-transform: uppercase;
+}
+
+/* Table
+   ========================================================================== */
+
+thead {
+
+    th {
+
+    }
+}
+
+tbody {
+
+    td {
+
+    }
+}
+
+tfoot {
+
+    td {
+
+    }
+}
+
+/* Lists
+   ========================================================================== */
+
+ol {
+
+    li {
+
+    }
+}
+
+ul {
+
+    li {
+        font-size: 14px;
+    }
+}
+
+/* Style Guide */
+
+ul.style-guide {
+
+    li {
+        color: @color-grey-dark;
+
+        a {
+            color: @color-grey-dark;
+
+            &:hover {
+                color: @color-navy;
+            }
+        }
+    }
+}
+
+dl {
+
+    dt {
+
+    }
+
+    dd {
+
+    }
+}
+
+/* Navigation
+   ========================================================================== */
+
+nav.primary {
+
+    ol {
+
+        li {
+
+            &.current {
+
+                a {
+                    color: @color-navy;
+                }
+            }
+
+            a {
+                color: @color-grey-dark;
+                font: 11px/1 @font-family-arial;
+                font-weight: @font-weight-bold;
+                text-decoration: none;
+                text-transform: uppercase;
+
+                &:focus,
+                &:hover {
+                    color: @color-navy;
+                    outline: none;
+                }
+            }
+        }
+    }
+}
+
+/* Contents
+   ========================================================================== */
+
+div.wrapper-inner {
+
+    > header {
+        border-top: 1px @color-white-darker solid;
+
+        h1 {
+            text-align: center;
+        }
+    }
+}
+
+section[role="main"] {
+
+    // Member: Sign Up, Logged In, Edit Profile
+    &.member {
+
+        div.contents {
+
+            > header {
+
+                h1 {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+/* Offers
+   ========================================================================== */
+
+div.offers {
+
+    > header {
+
+        h1 {
+            font-size: 40px;
+            text-align: center;
+        }
+    }
+
+    a.offer {
+        text-decoration: none;
+    }
+}
+
+/* Amici
+   ========================================================================== */
+
+div.amici {
+
+    p {
+        color: @color-navy;
+        font: 33px/1 @font-family-tradegothic-bold;
+        text-transform: uppercase;
+
+        // Login
+        &.login {
+            color: @color-grey-lighter;
+        }
+    }
+
+    a {
+        color: @color-grey-lighter;
+        font: 33px/1 @font-family-tradegothic-bold;
+        text-transform: uppercase;
+
+        &:hover {
+            color: @color-grey-dark;
+        }
+    }
+
+    // Counter
+    div.counter {
+
+        a {
+            color: @color-white;
+            font: 20px/1 @font-family-tradegothic-bold;
+            text-align: center;
+            text-decoration: none;
+        }
+    }
+}
+
+/* Profile
+   ========================================================================== */
+
+div.profile {
+
+    > header {
+
+        h1 {
+            font-size: 40px;
+            text-align: center;
+        }
+    }
+
+    // Member
+    div.member {
+
+        ul {
+
+            li {
+                text-transform: uppercase;
+
+                &.name {
+                    color: @color-navy;
+                    font: 16px/1 @font-family-arial;
+                    font-weight: @font-weight-bold;
+                    text-transform: uppercase;
+                }
+
+                &.province {
+                    color: @color-navy;
+                    font: 14px/1 @font-family-arial;
+                    font-weight: @font-weight-bold;
+                    text-transform: uppercase;
+                }
+
+                a {
+                    color: @color-grey-blue;
+                    font: 11px/1 @font-family-arial;
+
+                    &:hover {
+                        color: @color-grey-dark;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Feed */
+
+div.feed {
+
+    header {
+        text-align: center;
+
+        h2 {
+            background-color: @color-white-dark;
+            color: @color-navy;
+            font: 20px/1 @font-family-tradegothic-bold;
+            text-transform: uppercase;
+        }
+    }
+
+    p {
+        color: @color-grey-dark;
+        font: 15px/1 @font-family-arial;
+    }
+}
+
+/* Character Counter */
+
+div.character-counter {
+    color: @color-grey-dark;
+    font: 12px/1 @font-family-arial;
+}
+
+// Warning
+div.warning {
+    color: @color-red;
+    font-weight: @font-weight-bold;
+}
+
+/* Footer
+   ========================================================================== */
+
+footer[role="contentinfo"] {
+
+    ol {
+
+        li {
+
+            a {
+                font-size: 13px;
+                line-height: 1.2;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+/* Carousel
+   ========================================================================== */
+
+div.wrapper-carousel {
+
+    > header {
+
+        h1 {
+            text-align: center;
+        }
+    }
+
+    div.carousel {
+
+        div.slide {
+
+            header {
+
+                h2 {
+                    font-size: 28px;
+                }
+            }
+
+            p {
+                line-height: 1.3;
+            }
+        }
+    }
+}
+
+/* Slider
+   ========================================================================== */
+
+div.slider {
+
+    p.title {
+        color: @color-grey-lighter;
+        font: 19px/1 @font-family-tradegothic-bold;
+        text-align: center;
+        text-transform: uppercase;
+
+        b {
+            color: @color-navy;
+        }
+    }
+}
+
+/* Contents
+   ========================================================================== */
+
+section[role="main"] {
+
+    // Interaction: Vote, Enter, Poll, etc.
+    &.interaction {
+
+        div.contents {
+
+            header {
+
+                h1 {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+/* Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 481px) {
+
+    h1 {
+        font-size: 45px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    p.intro {
+        font-size: 20px;
+        line-height: 1.3;
+    }
+
+    .landing {
+
+        p.intro {
+            font-size: 20px;
+            font-family: @font-family-tradegothic;
+        }
+    }
+
+    /* Navigation
+       ========================================================================== */
+
+    nav.primary {
+
+        ol {
+
+            li {
+
+                a {
+                    color: @color-grey;
+                    font: 16px/1 @font-family-tradegothic-bold;
+                    text-decoration: none;
+                    text-transform: uppercase;
+
+                    &:hover {
+                        color: @color-navy;
+                    }
+                }
+            }
+        }
+    }
+
+    /* Contents
+       ========================================================================== */
+
+    section[role="main"] {
+
+        // Member: Sign Up, Logged In, Edit Profile
+        &.member {
+
+            div.contents {
+
+                > header {
+
+                    h1 {
+                        text-align: left;
+                    }
+                }
+            }
+        }
+
+        // Interaction: Vote, Enter, Poll, etc.
+        &.interaction {
+
+            div.contents {
+
+                header {
+
+                    h1 {
+                        font-size: 35px;
+                        text-align: left;
+                    }
+                }
+
+                p {
+                    font-size: 14px;
+                    line-height: 1.3;
+
+                    &.intro {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+
+    /* Amici
+       ========================================================================== */
+
+    div.amici {
+
+        p {
+            font-size: 36px;
+
+            // Login
+            &.login {
+                font-size: 20px;
+            }
+        }
+
+        a {
+
+            // Join
+            &.join {
+                font-size: 36px;
+            }
+
+            // Login
+            &.login {
+                font-size: 20px;
+            }
+        }
+    }
+
+    /* Profile
+       ========================================================================== */
+
+    div.profile {
+
+        > header {
+
+            h1 {
+                font-size: 40px;
+            }
+        }
+
+        // Member
+        div.member {
+
+            ul {
+
+                li {
+                    text-transform: uppercase;
+
+                    &.name {
+                        font: 25px/1 @font-family-tradegothic-bold;
+                    }
+
+                    &.province {
+                        font: 17px/1 @font-family-tradegothic-bold;
+                    }
+
+                    a {
+                        font: 13px/1 @font-family-tradegothic-bold;
+                    }
+                }
+            }
+        }
+    }
+
+    /* Feed */
+
+    div.feed {
+
+        header {
+
+            h2 {
+                background-color: @color-white-darker;
+            }
+        }
+    }
+
+    /* Carousel
+       ========================================================================== */
+
+    div.wrapper-carousel {
+
+        div.carousel {
+
+            div.slide {
+
+                header {
+
+                    h2 {
+                        font-size: 28px;
+                    }
+                }
+
+                p {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    /* Slider
+       ========================================================================== */
+
+    div.slider {
+
+        p.title {
+            font-size: 30px;
+        }
+    }
+
+    /* Character Counter */
+
+    div.character-counter {
+        text-align: right;
+    }
+}
+
+/* Wide Screens */
+
+@media only screen and (min-width: 1160px) {
+
+    /* Contents
+       ========================================================================== */
+
+    section[role="main"] {
+
+        // Interaction: Vote, Enter, Poll, etc.
+        &.interaction {
+
+            div.contents {
+
+                header {
+
+                    h1 {
+                        font-size: 45px;
+                    }
+                }
+
+                p {
+                    font-size: 16px;
+                    line-height: 1.4;
+
+                    &.intro {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    /* Slider
+       ========================================================================== */
+
+    div.slider {
+
+        p.title {
+            font-size: 35px;
+        }
+    }
+}
+
+/* Chrome Frame
+   ========================================================================== */
+
+div.chromeframe {
+
+    p {
+        color: @color-white;
+        font-size: 14px;
+        text-align: center;
+
+        a {
+            color: @color-grey-lighter;
+
+            &:hover {
+                color: @color-red;
+            }
+
+            &:visited {
+                color: @color-grey-lighter;
+            }
+        }
+    }
+}
+
+/* LESS: Mixins */
+
+.border-radius(@radius: 15px) {
+    -webkit-border-radius: @radius;
+       -moz-border-radius: @radius;
+         -o-border-radius: @radius;
+            border-radius: @radius;
+}
+
+.box-shadow(@arguments) {
+    -webkit-box-shadow: @arguments;
+       -moz-box-shadow: @arguments;
+         -o-box-shadow: @arguments;
+            box-shadow: @arguments;
+}
+
+.inner-shadow(@horizontal: 0, @vertical: 1px, @blur: 2px, @alpha: 0.4) {
+    -webkit-box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+       -moz-box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+         -o-box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+            box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+}
+
+.opacity(@opacity: 0.5) {
+    -webkit-opacity: @opacity;
+       -moz-opacity: @opacity;
+         -o-opacity: @opacity;
+            opacity: @opacity;
+}
+
+.rotation(@deg: 5deg) {
+    -webkit-transform: rotate(@deg);
+       -moz-transform: rotate(@deg);
+         -o-transform: rotate(@deg);
+            transform: rotate(@deg);
+}
+
+.scale(@ratio: 1.5) {
+    -webkit-transform: scale(@ratio);
+       -moz-transform: scale(@ratio);
+         -o-transform: scale(@ratio);
+            transform: scale(@ratio);
+}
+
+.transition(@arguments) {
+    -webkit-transition: @arguments;
+       -moz-transition: @arguments;
+         -o-transition: @arguments;
+            transition: @arguments;
+}

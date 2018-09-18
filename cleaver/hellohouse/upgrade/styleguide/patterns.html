@@ -1,0 +1,2052 @@
+<!doctype html>
+<html class="sg-html" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Patterns | Style Guide – HelloHouse</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/styleguide/styleguide.css">
+
+    <!-- Web Fonts -->
+    <script>
+        WebFontConfig = {
+            google: {
+                families: ['Roboto:400,400italic,700', 'Open+Sans:400,700']
+            },
+            custom: {
+                urls: ['../assets/css/fonts/fonts.css']
+            }
+        };
+    </script>
+
+    <!-- Web Font Loader -->
+    <script src="../assets/js/vendor/webfontloader.js" async="async"></script>
+
+    <!--[if lt IE 9]>
+    <script src="../assets/js/vendor/polyfills.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!--[if lt IE 9]>
+    <p class="upgrade">You are using an <strong>outdated</strong> browser. Please <a class="upgrade__link" href="http://browsehappy.com/?locale=en">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <aside class="sg-l-aside">
+        <nav class="sg-nav" role="navigation">
+            <a class="sg-nav__logo" href="#sg-development-hero">
+                <img src="../assets/images/logos/logo-hellohouse-173x72.png" srcset="../assets/images/logos/logo-hellohouse-173x72@2x.png 2x" width="173" height="72" alt="HelloHouse">
+            </a>
+
+            <a class="sg-nav-toggle js-sg-nav-toggle" href="#sg-development-hero">
+                <span class="sg-nav-toggle__bar"></span>
+            </a>
+
+            <ol class="sg-nav__list js-sg-nav">
+                <li class="sg-nav__item"><a class="sg-nav__link" href="elements.html">Elements</a></li>
+                <li class="sg-nav__item"><a class="sg-nav__link" href="forms.html">Forms</a></li>
+                <li class="sg-nav__item">
+                    <a class="sg-nav__link" href="patterns.html">Patterns</a>
+                    <ol class="sg-nav__list">
+                        <li class="sg-nav__item"><a class="sg-nav__link" href="#sg-alert">Alert</a></li>
+                        <li class="sg-nav__item"><a class="sg-nav__link" href="#sg-banner">Banner</a></li>
+                        <li class="sg-nav__item"><a class="sg-nav__link" href="#sg-box">Box</a></li>
+                        <li class="sg-nav__item"><a class="sg-nav__link" href="#sg-breadcrumbs">Breadcrumbs</a></li>
+                        <li class="sg-nav__item"><a class="sg-nav__link" href="#sg-card">Card</a></li>
+                        <li class="sg-nav__item"><a class="sg-nav__link" href="#sg-carousel">Carousel</a></li>
+                        <li class="sg-nav__item"><a class="sg-nav__link" href="#sg-collapse">Collapse</a></li>
+                        <li class="sg-nav__item"><a class="sg-nav__link" href="#sg-company">Company</a></li>
+                        <li class="sg-nav__item"><a class="sg-nav__link" href="#sg-cta">Call to Action</a></li>
+                        <li class="sg-nav__item"><a class="sg-nav__link" href="#sg-developer">Developer</a></li>
+                        <li class="sg-nav__item"><a class="sg-nav__link" href="#sg-development">Development</a></li>
+                        <li class="sg-nav__item"><a class="sg-nav__link" href="#sg-hero">Hero</a></li>
+                        <li class="sg-nav__item"><a class="sg-nav__link" href="#sg-loader">Loader</a></li>
+                        <li class="sg-nav__item"><a class="sg-nav__link" href="#sg-modal">Modal</a></li>
+                        <li class="sg-nav__item"><a class="sg-nav__link" href="#sg-navigation">Navigation</a></li>
+                        <li class="sg-nav__item"><a class="sg-nav__link" href="#sg-news">News</a></li>
+                        <li class="sg-nav__item"><a class="sg-nav__link" href="#sg-pagination">Pagination</a></li>
+                        <li class="sg-nav__item"><a class="sg-nav__link" href="#sg-plan">Plan</a></li>
+                        <li class="sg-nav__item"><a class="sg-nav__link" href="#sg-powered">Powered</a></li>
+                        <li class="sg-nav__item"><a class="sg-nav__link" href="#sg-promote">Promote</a></li>
+                        <li class="sg-nav__item"><a class="sg-nav__link" href="#sg-property-type">Property Type</a></li>
+                        <li class="sg-nav__item"><a class="sg-nav__link" href="#sg-publication">Publication</a></li>
+                        <li class="sg-nav__item"><a class="sg-nav__link" href="#sg-register">Register</a></li>
+                        <li class="sg-nav__item"><a class="sg-nav__link" href="#sg-search-results">Search Results</a></li>
+                        <li class="sg-nav__item"><a class="sg-nav__link" href="#sg-service-provider">Service Provider</a></li>
+                        <li class="sg-nav__item"><a class="sg-nav__link" href="#sg-social">Social</a></li>
+                        <li class="sg-nav__item"><a class="sg-nav__link" href="#sg-share">Share</a></li>
+                        <li class="sg-nav__item"><a class="sg-nav__link" href="#sg-status">Status</a></li>
+                        <li class="sg-nav__item"><a class="sg-nav__link" href="#sg-subscribe">Subscribe</a></li>
+                        <li class="sg-nav__item"><a class="sg-nav__link" href="#sg-tabs">Tabs</a></li>
+                        <li class="sg-nav__item"><a class="sg-nav__link" href="#sg-tag">Tag</a></li>
+                        <li class="sg-nav__item"><a class="sg-nav__link" href="#sg-timeline">Timeline</a></li>
+                        <li class="sg-nav__item"><a class="sg-nav__link" href="#sg-tooltips">Tooltips</a></li>
+                    </ol>
+                </li>
+                <li class="sg-nav__item"><a class="sg-nav__link" href="templates.html">Templates</a></li>
+            </ol>
+        </nav>
+    </aside>
+
+    <main class="sg-l-main" role="main">
+        <header class="sg-header sg-header--main">
+            <h1 class="sg-h1">Patterns</h1>
+            <ul class="sg-list">
+                <li><strong>Version</strong> 2.0.0</li>
+                <li><strong>Updated</strong> 2016-08-19 17:05:56</li>
+            </ul>
+        </header>
+
+        <button class="sg-btn sg-btn--small js-sg-patchwork" data-label-alt="View with Code Examples" data-label-default="View as Patchwork">View as Patchwork</button>
+
+        <section class="sg-l-section" id="sg-alert">
+            <header class="sg-header sg-header--section">
+                <h2 class="sg-h2"><a class="sg-anchor" href="#sg-alert">#</a>Alert</h2>
+            </header>
+
+            <header class="sg-header sg-header--subsection" id="sg-alert-success">
+                <h3 class="sg-h4"><a class="sg-anchor" href="#sg-alert-success">#</a>Success</h3>
+            </header>
+
+            <div class="alert alert--success js-alert" role="alert">
+                <div class="alert__title">Success</div>
+
+                <p class="alert__message">
+                    <b>Well done!</b> You’ve successfully read <a href="#sg-alert-success">this important alert message</a>.
+                </p>
+
+                <button class="alert__dismiss js-dismiss" type="button"><span class="icon icon-close" aria-hidden="true"></span></button>
+            </div>
+
+            <div class="js-sg-code">
+                <code class="sg-code prettyprint lang-html"><div class="alert alert--success js-alert" role="alert">
+    <div class="alert__title">Success</div>
+
+    <p class="alert__message">
+        <b>Well done!</b> You successfully read <a href="#">this important alert message</a>.
+    </p>
+
+    <button class="alert__dismiss js-dismiss" type="button"><span class="icon icon-close" aria-hidden="true"></span></button>
+</div></code>
+            </div>
+
+            <header class="sg-header sg-header--subsection" id="sg-alert-information">
+                <h3 class="sg-h4"><a class="sg-anchor" href="#sg-alert-information">#</a>Information</h3>
+            </header>
+
+            <div class="alert alert--info js-alert" role="alert">
+                <div class="alert__title">Information</div>
+
+                <p class="alert__message">
+                    <b>Heads up!</b> This <a href="#sg-alert-information">alert needs your attention</a>, but it’s not super important.
+                </p>
+
+                <button class="alert__dismiss js-dismiss" type="button"><span class="icon icon-close" aria-hidden="true"></span></button>
+            </div>
+
+            <div class="js-sg-code">
+                <code class="sg-code prettyprint lang-html"><div class="alert alert--info js-alert" role="alert">
+    <div class="alert__title">Information</div>
+
+    <p class="alert__message">
+        <b>Heads up!</b> This <a href="#">alert needs your attention</a>, but it’s not super important.
+    </p>
+
+    <button class="alert__dismiss js-dismiss" type="button"><span class="icon icon-close" aria-hidden="true"></span></button>
+</div></code>
+            </div>
+
+            <header class="sg-header sg-header--subsection" id="sg-alert-warning">
+                <h3 class="sg-h4"><a class="sg-anchor" href="#sg-alert-warning">#</a>Warning</h3>
+            </header>
+
+            <div class="alert alert--warning js-alert" role="alert">
+                <div class="alert__title">Warning!</div>
+
+                <p class="alert__message">
+                    Better <a href="#sg-alert-warning">check yourself</a>, you’re not looking too good.
+                </p>
+
+                <button class="alert__dismiss js-dismiss" type="button"><span class="icon icon-close" aria-hidden="true"></span></button>
+            </div>
+
+            <div class="js-sg-code">
+                <code class="sg-code prettyprint lang-html"><div class="alert alert--warning js-alert" role="alert">
+    <div class="alert__title">Warning!</div>
+
+    <p class="alert__message">
+        Better <a href="#">check yourself</a>, you’re not looking too good.
+    </p>
+
+    <button class="alert__dismiss js-dismiss" type="button"><span class="icon icon-close" aria-hidden="true"></span></button>
+</div></code>
+            </div>
+
+            <header class="sg-header sg-header--subsection" id="sg-alert-error">
+                <h3 class="sg-h4"><a class="sg-anchor" href="#sg-alert-error">#</a>Error</h3>
+            </header>
+
+            <div class="alert alert--error js-alert" role="alert">
+                <div class="alert__title">Error</div>
+
+                <p class="alert__message">
+                    <b>Oh snap!</b> Change a few things up and <a href="#sg-alert-error">try submitting again</a>.
+                </p>
+
+                <button class="alert__dismiss js-dismiss" type="button"><span class="icon icon-close" aria-hidden="true"></span></button>
+            </div>
+
+            <div class="js-sg-code">
+                <code class="sg-code prettyprint lang-html"><div class="alert alert--error js-alert" role="alert">
+    <div class="alert__title">Error</div>
+
+    <p class="alert__message">
+        <b>Oh snap!</b> <a href="#">Change a few things up</a> and try submitting again.
+    </p>
+
+    <button class="alert__dismiss js-dismiss" type="button"><span class="icon icon-close" aria-hidden="true"></span></button>
+</div></code>
+            </div>
+        </section>
+
+        <section class="sg-l-section" id="sg-banner">
+            <header class="sg-header sg-header--section">
+                <h2 class="sg-h2"><a class="sg-anchor" href="#sg-banner">#</a>Banner</h2>
+            </header>
+
+            <div class="banner">
+                <img src="http://placeimg.com/728/90" width="728" height="90" alt="">
+            </div>
+
+            <div class="js-sg-code">
+                <code class="sg-code prettyprint lang-html"><div class="banner">
+    <img src="http://placeimg.com/728/90" width="728" height="90" alt="">
+</div></code>
+            </div>
+        </section>
+
+        <section class="sg-l-section" id="sg-box">
+            <header class="sg-header sg-header--section">
+                <h2 class="sg-h2"><a class="sg-anchor" href="#sg-box">#</a>Box</h2>
+            </header>
+
+            <div class="box">
+                <div class="box__title">VIP status</div>
+
+                <div class="box__body">
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                        doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis
+                        et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                </div>
+
+                <div class="btn-group btn-group--right">
+                    <a href="#sg-box" class="btn btn--secondary btn--bordered">Find out more</a>
+                </div>
+            </div>
+
+            <div class="js-sg-code">
+                <code class="sg-code prettyprint lang-html"><div class="box">
+    <div class="box__title">VIP status</div>
+
+    <div class="box__body">
+        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam…</p>
+    </div>
+
+    <div class="btn-group btn-group--right">
+        <a href="#" class="btn btn--secondary btn--bordered">Find out more</a>
+    </div>
+</div></code>
+            </div>
+        </section>
+
+        <section class="sg-l-section" id="sg-breadcrumbs">
+            <header class="sg-header sg-header--section">
+                <h2 class="sg-h2"><a class="sg-anchor" href="#sg-breadcrumbs">#</a>Breadcrumbs</h2>
+            </header>
+
+            <div class="breadcrumbs">
+                <ol class="breadcrumbs__list">
+                    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#sg-breadcrumbs">Home</a></li>
+                    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#sg-breadcrumbs">Western Cape</a></li>
+                    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#sg-breadcrumbs">Cape Town</a></li>
+                    <li class="breadcrumbs__item is-active">Bergvliet</li>
+                </ol>
+            </div>
+
+            <div class="js-sg-code">
+                <code class="sg-code prettyprint lang-html"><div class="breadcrumbs">
+    <ol class="breadcrumbs__list">
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Home</a></li>
+        <li class="breadcrumbs__item is-active">Western Cape</li>
+    </ol>
+</div></code>
+            </div>
+        </section>
+
+        <section class="sg-l-section" id="sg-card">
+            <header class="sg-header sg-header--section">
+                <h2 class="sg-h2"><a class="sg-anchor" href="#sg-card">#</a>Card</h2>
+            </header>
+
+            <header class="sg-header sg-header--subsection" id="sg-card-default">
+                <h3 class="sg-h4"><a class="sg-anchor" href="#sg-card-default">#</a>Default</h3>
+            </header>
+
+            <div class="card">
+                <a class="card__link" href="#sg-card-default">
+                    <img class="card__img" src="http://placeimg.com/400/255/arch" width="400" height="255" alt="">
+                    <div class="card__badge">From <b>R7,425,000</b></div>
+                </a>
+
+                <button class="card__favourite btn btn--fav" type="button"><span class="icon icon-star" aria-hidden="true"></span></button>
+
+                <div class="card__body">
+                    <h3 class="card__title">
+                        <a href="#sg-card-default">The Avenues on Broadacres</a>
+                    </h3>
+
+                    <div class="card__label card__label--large"><a href="#sg-card-default">Roodepoort</a></div>
+
+                    <p class="card__synopsis">The Avenues on Broadacres is an exciting new residential development in
+                        the heart of Broadacres, Sandton, Gauteng.</p>
+
+                    <hr class="hr hr--light">
+
+                    <div class="property-types">
+                        <div class="property-type">
+                            <a class="property-type__link" href="#sg-card-default">
+                                <span class="property-type__icon icon icon-plot" aria-hidden="true"></span>
+                                <div class="property-type__count">79</div>
+                                <div class="property-type__label">Plots</div>
+                            </a>
+                        </div>
+
+                        <div class="property-type property-type--disabled">
+                            <span class="property-type__icon icon icon-house" aria-hidden="true"></span>
+                            <div class="property-type__count">n/a</div>
+                            <div class="property-type__label">Houses</div>
+                        </div>
+
+                        <div class="property-type">
+                            <a class="property-type__link" href="#sg-card-default">
+                                <span class="property-type__icon icon icon-apartment" aria-hidden="true"></span>
+                                <div class="property-type__count">428</div>
+                                <div class="property-type__label">Apartments</div>
+                            </a>
+                        </div>
+
+                        <div class="property-type">
+                            <a class="property-type__link" href="#sg-card-default">
+                                <span class="property-type__icon icon icon-townhouse" aria-hidden="true"></span>
+                                <div class="property-type__count">189</div>
+                                <div class="property-type__label">Townhouses</div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="card__label"><a href="#sg-card-default">Lifestyle Estate</a>, <a href="#sg-card-default">Security Estate</a></div>
+
+                    <a class="btn btn--secondary" href="#sg-card-default">Explore</a>
+                </div>
+            </div>
+
+            <div class="js-sg-code">
+                <code class="sg-code prettyprint lang-html"><div class="card">
+    <a class="card__link" href="#">
+        <img class="card__img" src="http://placeimg.com/400/255/arch" width="400" height="255" alt="">
+        <div class="card__badge">From <b>R7,425,000</b></div>
+    </a>
+
+    <button class="card__favourite btn btn--fav" type="button"><span class="icon icon-star" aria-hidden="true"></span></button>
+
+    <div class="card__body">
+        <h3 class="card__title">
+            <a href="#">The Avenues on Broadacres</a>
+        </h3>
+
+        <div class="card__label card__label--large"><a href="#">Roodepoort</a></div>
+
+        <p class="card__synopsis">The Avenues on Broadacres is an exciting new residential development in the heart of Broadacres…</p>
+
+        <hr class="hr hr--light">
+
+        <div class="property-types">
+            <div class="property-type">
+                <a class="property-type__link" href="#">
+                    <span class="property-type__icon icon icon-plot" aria-hidden="true"></span>
+                    <div class="property-type__count">79</div>
+                    <div class="property-type__label">Plots</div>
+                </a>
+            </div>
+
+            <div class="property-type property-type--disabled">
+                <span class="property-type__icon icon icon-house" aria-hidden="true"></span>
+                <div class="property-type__count">n/a</div>
+                <div class="property-type__label">Houses</div>
+            </div>
+        </div>
+
+        <div class="card__label"><a href="#">Lifestyle Estate</a>, <a href="#">Security Estate</a></div>
+
+        <a class="btn btn--secondary" href="#">Explore</a>
+    </div>
+</div></code>
+            </div>
+
+            <header class="sg-header sg-header--subsection" id="sg-card-compact">
+                <h3 class="sg-h4"><a class="sg-anchor" href="#sg-card-compact">#</a>Compact</h3>
+            </header>
+
+            <div class="sg-example bg-neutral-light">
+                <div class="card card--compact is-overlay">
+                    <a class="card__link" href="#sg-card-compact">
+                        <img class="card__img" src="http://placeimg.com/400/255/arch" width="400" height="255" alt="">
+                        <div class="card__badge">From <b>R7,425,000</b></div>
+                    </a>
+
+                    <button class="card__favourite btn btn--fav is-fav" type="button"><span class="icon icon-star" aria-hidden="true"></span></button>
+
+                    <div class="card__body">
+                        <h3 class="card__title">
+                            <a href="#sg-card-compact">The Avenues on Broadacres</a>
+                        </h3>
+
+                        <div class="card__label"><a href="#sg-card-compact">Lifestyle Estate</a>, <a href="#sg-card-compact">Security Estate</a></div>
+
+                        <a class="btn btn--secondary btn--small" href="#sg-card-compact">Explore</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="js-sg-code">
+                <code class="sg-code prettyprint lang-html"><div class="card card--compact is-overlay">
+    <a class="card__link" href="#">
+        <img class="card__img" src="http://placeimg.com/400/255/arch" width="400" height="255" alt="">
+        <div class="card__badge">From <b>R7,425,000</b></div>
+    </a>
+
+    <button class="card__favourite btn btn--fav is-fav" type="button"><span class="icon icon-star" aria-hidden="true"></span></button>
+
+    <div class="card__body">
+        <h3 class="card__title">
+            <a href="#">The Avenues on Broadacres</a>
+        </h3>
+
+        <div class="card__label"><a href="#sg-card-compact">Lifestyle Estate</a>, <a href="#sg-card-compact">Security Estate</a></div>
+
+        <a class="btn btn--secondary btn--small" href="#">Explore</a>
+    </div>
+</div></code>
+            </div>
+        </section>
+
+        <section class="sg-l-section" id="sg-carousel">
+            <header class="sg-header sg-header--section">
+                <h2 class="sg-h2"><a class="sg-anchor" href="#sg-carousel">#</a>Carousel</h2>
+            </header>
+
+            <div class="slick js-carousel" data-dots="true" data-infinite="false">
+                <div>
+                    <img src="http://placeimg.com/1400/787/1" width="1400" height="787" alt="">
+                </div>
+                <div>
+                    <img src="http://placeimg.com/1400/787/2" width="1400" height="787" alt="">
+                </div>
+                <div>
+                    <img src="http://placeimg.com/1400/787/3" width="1400" height="787" alt="">
+                </div>
+            </div>
+
+            <div class="js-sg-code">
+                <code class="sg-code prettyprint lang-html"><div class="slick js%2Dcarousel" data-dots="true" data-infinite="false">
+    <div>
+        <img src="http://placeimg.com/1400/787/1" width="1400" height="787" alt="">
+    </div>
+    <div>
+        <img src="http://placeimg.com/1400/787/2" width="1400" height="787" alt="">
+    </div>
+    <div>
+        <img src="http://placeimg.com/1400/787/3" width="1400" height="787" alt="">
+    </div>
+</div></code>
+            </div>
+        </section>
+
+        <section class="sg-l-section" id="sg-collapse">
+            <header class="sg-header sg-header--section">
+                <h2 class="sg-h2"><a class="sg-anchor" href="#sg-collapse">#</a>Collapse</h2>
+            </header>
+
+            <p><button class="btn btn--secondary js-collapse" data-collapse-id="collapse-1" data-collapse-toggle="true">Toggle</button></p>
+
+            <div class="collapse" id="collapse-1">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+            </div>
+
+            <div class="js-sg-code">
+                <code class="sg-code prettyprint lang-html"><button class="btn btn--secondary js-collapse" data-collapse-id="collapse-1" data-collapse-toggle="true">Toggle</button>
+
+<div class="collapse" id="collapse-a">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+</div></code>
+            </div>
+        </section>
+
+        <section class="sg-l-section" id="sg-company">
+            <header class="sg-header sg-header--section">
+                <h2 class="sg-h2"><a class="sg-anchor" href="#sg-company">#</a>Company</h2>
+            </header>
+
+            <div class="company">
+                <a class="company__link" href="#sg-company">
+                    <img class="company__logo" src="http://placeimg.com/400/225/tech" width="400" height="225" alt="">
+                </a>
+
+                <div class="person">
+                    <img class="person__img" src="http://placeimg.com/100/100/people" width="100" height="100" alt="">
+                    <div class="person__details">
+                        <h6 class="person__name">Priscilla	Williams</h6>
+                        <ol class="list list--unstyled list--links">
+                            <li><a href="#sg-company"><span class="icon icon-phone" aria-hidden="true"></span>Contact Number</a></li>
+                            <li><a href="#sg-company"><span class="icon icon-envelope" aria-hidden="true"></span>Email Address</a></li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="person">
+                    <img class="person__img" src="http://placeimg.com/100/100/people" width="100" height="100" alt="">
+                    <div class="person__details">
+                        <h6 class="person__name">Shanita Yarbrough</h6>
+                        <ol class="list list--unstyled list--links">
+                            <li><a href="#sg-company"><span class="icon icon-phone" aria-hidden="true"></span>Contact Number</a></li>
+                            <li><a href="#sg-company"><span class="icon icon-envelope" aria-hidden="true"></span>Email Address</a></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="js-sg-code">
+                <code class="sg-code prettyprint lang-html"><div class="company">
+    <a class="company__link" href="#">
+        <img class="company__logo" src="http://placeimg.com/400/225/tech" width="400" height="225" alt="">
+    </a>
+
+    <div class="person">
+        <img class="person__img" src="http://placeimg.com/100/100/people" width="100" height="100" alt="">
+        <div class="person__details">
+            <h6 class="person__name">Priscilla	Williams</h6>
+            <ol class="list list--unstyled list--links">
+                <li><a href="#"><span class="icon icon-phone" aria-hidden="true"></span>Contact Number</a></li>
+                <li><a href="#"><span class="icon icon-envelope" aria-hidden="true"></span>Email Address</a></li>
+            </ol>
+        </div>
+    </div>
+</div></code>
+            </div>
+        </section>
+
+        <section class="sg-l-section" id="sg-cta">
+            <header class="sg-header sg-header--section">
+                <h2 class="sg-h2"><a class="sg-anchor" href="#sg-cta">#</a>Call to Action</h2>
+            </header>
+
+            <div class="cta">
+                <div class="cta__title">From <b>R1,750,000</b></div>
+
+                <div class="cta__body">
+                    <a class="btn" href="#sg-cta">Enquire Now</a>
+
+                    <div class="share">
+                        <ol class="share__list">
+                            <li>Share this:</li>
+                            <li><a class="share__link" href="#sg-cta" title="Email"><span class="icon icon-envelope" aria-hidden="true"></span></a></li>
+                            <li class="facebook"><a class="share__link" href="#sg-cta" title="Facebook"><span class="icon icon-facebook" aria-hidden="true"></span></a></li>
+                            <li class="twitter"><a class="share__link" href="#sg-cta" title="Twitter"><span class="icon icon-twitter" aria-hidden="true"></span></a></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="js-sg-code">
+                <code class="sg-code prettyprint lang-html"><div class="cta">
+    <div class="cta__title">From <b>R1,750,000</b></div>
+
+    <div class="cta__body">
+        <div class="btn-group">
+            <a class="btn" href="#">Enquire Now</a>
+        </div>
+
+        <div class="share">
+            <ol class="share__list">
+                <li>Share this:</li>
+                <li><a class="share__link" href="#" title="Email"><span class="icon icon-envelope" aria-hidden="true"></span></a></li>
+                <li class="facebook"><a class="share__link" href="#" title="Facebook"><span class="icon icon-facebook" aria-hidden="true"></span></a></li>
+                <li class="twitter"><a class="share__link" href="#" title="Twitter"><span class="icon icon-twitter" aria-hidden="true"></span></a></li>
+            </ol>
+        </div>
+    </div>
+</div></code>
+            </div>
+        </section>
+
+        <section class="sg-l-section" id="sg-developer">
+            <header class="sg-header sg-header--section">
+                <h2 class="sg-h2"><a class="sg-anchor" href="#sg-developer">#</a>Developer</h2>
+            </header>
+
+            <div class="developer">
+                <img class="developer__logo" src="http://placeimg.com/165/93" width="165" height="93" alt="EARP Construction logo">
+
+                <h2 class="developer__title">EARP Construction</h2>
+
+                <p class="developer__synopsis">EARP offers the ultimate lifestyle in the Western Cape, with developments
+                    Earls Court Lifestyle Estate, and Urban Village Security Estate in George, the perfect setting for a
+                    home in the Garden Route.</p>
+            </div>
+
+            <div class="js-sg-code">
+                <code class="sg-code prettyprint lang-html"><div class="developer">
+    <img class="developer__logo" src="http://placeimg.com/165/93" width="165" height="93" alt="EARP Construction logo">
+
+    <h2 class="developer__title">EARP Construction</h2>
+
+    <p class="developer__synopsis">EARP offers the ultimate lifestyle in the Western Cape, with developments Earls Court…</p>
+</div></code>
+            </div>
+        </section>
+
+        <section class="sg-l-section" id="sg-development">
+            <header class="sg-header sg-header--section">
+                <h2 class="sg-h2"><a class="sg-anchor" href="#sg-development">#</a>Development</h2>
+            </header>
+
+            <header class="sg-header sg-header--subsection" id="sg-development-hero">
+                <h3 class="sg-h4"><a class="sg-anchor" href="#sg-development-hero">#</a>Hero</h3>
+            </header>
+
+            <div class="development development--hero">
+                <div class="development__cover" style="background-image: url('http://placeimg.com/1366/768/nature')">
+                    <div class="l-wrapper l-wrapper--large">
+                        <img class="development__logo" src="http://placeimg.com/165/93" width="165" height="93" alt="">
+                    </div>
+                </div>
+
+                <div class="development__body">
+                    <div class="l-wrapper l-wrapper--large">
+                        <h1 class="development__title">Earls Court Lifestyle Estate<button class="btn btn--fav is-fav" type="button"><span class="icon icon-star" aria-hidden="true"></span></button></h1>
+
+                        <p class="development__location"><a href="#sg-development-hero">Nelspruit</a>, <a href="#sg-development-hero">Mpumalanga</a>, <a href="#sg-development-hero">South Africa</a></p>
+
+                        <div class="property-types">
+                            <div class="property-type">
+                                <a class="property-type__link" href="#sg-development-hero">
+                                    <span class="property-type__icon icon icon-plot" aria-hidden="true"></span>
+                                    <div class="property-type__count">79</div>
+                                    <div class="property-type__label">Plots</div>
+                                </a>
+                            </div>
+
+                            <div class="property-type">
+                                <a class="property-type__link" href="#sg-development-hero">
+                                    <span class="property-type__icon icon icon-apartment" aria-hidden="true"></span>
+                                    <div class="property-type__count">428</div>
+                                    <div class="property-type__label">Apartments</div>
+                                </a>
+                            </div>
+
+                            <div class="property-type">
+                                <a class="property-type__link" href="#sg-development-hero">
+                                    <span class="property-type__icon icon icon-townhouse" aria-hidden="true"></span>
+                                    <div class="property-type__count">189</div>
+                                    <div class="property-type__label">Townhouses</div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="cta">
+                            <div class="cta__title">From <b>R1,750,000</b></div>
+
+                            <div class="cta__body">
+                                <a class="btn" href="#sg-development-hero">Enquire Now</a>
+
+                                <div class="share">
+                                    <ol class="share__list">
+                                        <li>Share this:</li>
+                                        <li><a class="share__link" href="#sg-development-hero" title="Email"><span class="icon icon-envelope" aria-hidden="true"></span></a></li>
+                                        <li class="facebook"><a class="share__link" href="#sg-development-hero" title="Facebook"><span class="icon icon-facebook" aria-hidden="true"></span></a></li>
+                                        <li class="twitter"><a class="share__link" href="#sg-development-hero" title="Twitter"><span class="icon icon-twitter" aria-hidden="true"></span></a></li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="js-sg-code">
+                <code class="sg-code prettyprint lang-html"><div class="development development--hero">
+    <div class="development__cover" style="background-image: url('http://placeimg.com/1366/768/nature')">
+        <div class="l-wrapper l-wrapper--large">
+            <img class="development__logo" src="http://placeimg.com/165/93" width="165" height="93" alt="">
+        </div>
+    </div>
+
+    <div class="development__body">
+        <div class="l-wrapper l-wrapper--large">
+            <h1 class="development__title">Earls Court Lifestyle Estate<button class="btn btn--fav is-fav" type="button"><span class="icon icon-star" aria-hidden="true"></span></button></h1>
+
+            <p class="development__location"><a href="#">Nelspruit</a>, <a href="#">Mpumalanga</a>, <a href="#">South Africa</a></p>
+
+            <div class="property-types">
+                <div class="property-type">
+                    <a class="property-type__link" href="#">
+                        <span class="property-type__icon icon icon-plot" aria-hidden="true"></span>
+                        <div class="property-type__count">79</div>
+                        <div class="property-type__label">Plots</div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="cta">
+                <div class="cta__title">From <b>R1,750,000</b></div>
+
+                <div class="cta__body">
+                    <a class="btn" href="#">Enquire Now</a>
+
+                    <div class="share">
+                        <ol class="share__list">
+                            <li>Share this:</li>
+                            <li><a class="share__link" href="#" title="Email"><span class="icon icon-envelope" aria-hidden="true"></span></a></li>
+                            <li class="facebook"><a class="share__link" href="#" title="Facebook"><span class="icon icon-facebook" aria-hidden="true"></span></a></li>
+                            <li class="twitter"><a class="share__link" href="#" title="Twitter"><span class="icon icon-twitter" aria-hidden="true"></span></a></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div></code>
+            </div>
+
+            <header class="sg-header sg-header--subsection" id="sg-development-facilities">
+                <h3 class="sg-h4"><a class="sg-anchor" href="#sg-development-facilities">#</a>Facilities</h3>
+            </header>
+
+            <div class="development-facilities">
+                <h6 class="development-facilities__label">Accommodation</h6>
+                <ol class="list">
+                    <li>Soccer field<span class="icon icon-map-marker js-tooltip" data-tooltip-placement="top" title="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."></span></li>
+                </ol>
+
+                <h6 class="development-facilities__label">Education</h6>
+                <ol class="list">
+                    <li>Meridian Karino</li>
+                    <li>Creche</li>
+                </ol>
+
+                <h6 class="development-facilities__label">Recreation</h6>
+                <ol class="list">
+                    <li>Community Park</li>
+                    <li>Play Parks</li>
+                </ol>
+
+                <h6 class="development-facilities__label">Security</h6>
+                <ol class="list">
+                    <li>Gated and fenced in estate<span class="icon icon-map-marker js-tooltip" data-tooltip-placement="top" title="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."></span></li>
+                    <li>Occupant access control</li>
+                    <li>24 Hour manned security</li>
+                    <li>Patrolling guards</li>
+                </ol>
+
+                <h6 class="development-facilities__label">Security</h6>
+                <ol class="list">
+                    <li>Karino Shopping Centre</li>
+                </ol>
+
+                <h6 class="development-facilities__label">Social</h6>
+                <ol class="list">
+                    <li>Devine Praise Ministries<span class="icon icon-map-marker js-tooltip" data-tooltip-placement="top" title="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."></span><span class="icon icon-map-marker js-tooltip" data-tooltip-placement="top" title="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."></span></li>
+                </ol>
+            </div>
+
+            <div class="js-sg-code">
+                <code class="sg-code prettyprint lang-html"><div class="development-facilities">
+    <h6 class="development-facilities__label">Accommodation</h6>
+    <ol class="list">
+        <li>Soccer field<span class="icon icon-map-marker js%2Dtooltip" data-tooltip-placement="top" title="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."></span></li>
+    </ol>
+
+    <h6 class="development-facilities__label">Education</h6>
+    <ol class="list">
+        <li>Meridian Karino</li>
+        <li>Creche</li>
+    </ol>
+</div></code>
+            </div>
+
+            <header class="sg-header sg-header--subsection" id="sg-development-options">
+                <h3 class="sg-h4"><a class="sg-anchor" href="#sg-development-options">#</a>Options</h3>
+            </header>
+
+            <div class="development-options">
+                <h6 class="development-options__title">Stands</h6>
+                <p class="development-options__synopsis">Vacant land available to buyers who would like to build their own home.</p>
+
+                <div class="development-options__details">
+                    <div class="development-options__detail">
+                        <div class="development-options__label">Total</div>
+                        <div class="development-options__value">112</div>
+                    </div>
+
+                    <div class="development-options__detail">
+                        <div class="development-options__label">Plot Size (m<sup>2</sup>)</div>
+                        <div class="development-options__value">525 – 20176</div>
+                    </div>
+
+                    <div class="development-options__detail">
+                        <div class="development-options__label">Price</div>
+                        <div class="development-options__value">R315,000 – R10,773,984</div>
+                    </div>
+
+                    <div class="development-options__detail">
+                        <div class="development-options__label">Est. Building Costs</div>
+                        <div class="development-options__value">R712,100 – R12,621,733</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="js-sg-code">
+                <code class="sg-code prettyprint lang-html"><div class="development-options">
+    <h6 class="development-options__title">Stands</h6>
+    <p class="development-options__synopsis">Vacant land available to buyers who would like to build their own home.</p>
+
+    <div class="development-options__details">
+        <div class="development-options__detail">
+            <div class="development-options__label">Total</div>
+            <div class="development-options__value">112</div>
+        </div>
+
+        <div class="development-options__detail">
+            <div class="development-options__label">Plot Size (m<sup>2</sup>)</div>
+            <div class="development-options__value">525 – 20176</div>
+        </div>
+
+        <div class="development-options__detail">
+            <div class="development-options__label">Price</div>
+            <div class="development-options__value">R315,000 – R10,773,984</div>
+        </div>
+
+        <div class="development-options__detail">
+            <div class="development-options__label">Est. Building Costs</div>
+            <div class="development-options__value">R712,100 – R12,621,733</div>
+        </div>
+    </div>
+</div></code>
+            </div>
+        </section>
+
+        <section class="sg-l-section" id="sg-hero">
+            <header class="sg-header sg-header--section">
+                <h2 class="sg-h2"><a class="sg-anchor" href="#sg-hero">#</a>Hero</h2>
+            </header>
+
+            <header class="sg-header sg-header--subsection" id="sg-hero-default">
+                <h3 class="sg-h4"><a class="sg-anchor" href="#sg-hero-default">#</a>Default</h3>
+            </header>
+
+            <div class="hero" style="background-image: url('http://placeimg.com/1366/768/nature')">
+                <h1 class="hero__title">Lorem ipsum dolor sit amet</h1>
+                <p class="hero__synopsis">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                    doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.</p>
+                <a class="btn btn--icon" href="#sg-hero-default">Nulla pariatur<span class="icon icon-chevron-right" aria-hidden="true"></span></a>
+            </div>
+
+            <div class="js-sg-code">
+                <code class="sg-code prettyprint lang-html"><div class="hero" style="background-image: url('http://placeimg.com/1366/768/nature')">
+    <h1 class="hero__title">Lorem ipsum dolor sit amet</h1>
+    <p class="hero__synopsis">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium…</p>
+    <a class="btn btn--icon" href="#">Nulla pariatur<span class="icon icon-chevron-right" aria-hidden="true"></span></a>
+</div></code>
+            </div>
+
+            <header class="sg-header sg-header--subsection" id="sg-hero-search">
+                <h3 class="sg-h4"><a class="sg-anchor" href="#sg-hero-search">#</a>Search</h3>
+            </header>
+
+            <div class="hero" style="background-image: url('http://placeimg.com/1366/768/arch')">
+                <h1 class="hero__title">Search. Find. Live.</h1>
+                <p class="hero__synopsis">Search through secure residential developments in Southern Africa.</p>
+
+                <form class="form form--search" action="#sg-hero-search" method="post">
+                    <label class="label" for="keywords">
+                        <input class="input" type="text" id="keywords" name="keywords" placeholder="Search by location, development or developer…" maxlength="100" required>
+                    </label><!--
+
+                    --><label class="label" for="price-from">
+                        <span class="select">
+                            <select class="input input--select" id="price-from" name="price-from">
+                                <option value="">Price from</option>
+                                <option value="100000">R100,000</option>
+                                <option value="200000">R200,000</option>
+                                <option value="300000">R300,000</option>
+                                <option value="400000">R400,000</option>
+                                <option value="500000">R500,000</option>
+                                <option value="600000">R600,000</option>
+                                <option value="700000">R700,000</option>
+                                <option value="800000">R800,000</option>
+                                <option value="900000">R900,000</option>
+                                <option value="1000000">R1,000,000</option>
+                            </select>
+                        </span>
+                    </label><!--
+
+                    --><label class="label" for="price-to">
+                        <span class="select">
+                            <select class="input input--select" id="price-to" name="price-to">
+                                <option value="">Price to</option>
+                                <option value="100000">R100,000</option>
+                                <option value="200000">R200,000</option>
+                                <option value="300000">R300,000</option>
+                                <option value="400000">R400,000</option>
+                                <option value="500000">R500,000</option>
+                                <option value="600000">R600,000</option>
+                                <option value="700000">R700,000</option>
+                                <option value="800000">R800,000</option>
+                                <option value="900000">R900,000</option>
+                                <option value="1000000">R1,000,000</option>
+                            </select>
+                        </span>
+                    </label><!--
+
+                    --><button class="btn btn--icon btn--secondary" type="submit">
+                        <span class="icon icon--only icon--left icon-search" aria-hidden="true"></span>
+                        <span class="btn__label">Search</span>
+                    </button>
+                </form>
+            </div>
+
+            <div class="js-sg-code">
+                <code class="sg-code prettyprint lang-html"><div class="hero" style="background-image: url('http://placeimg.com/1366/768/arch')">
+    <h1 class="hero__title">Search. Find. Live.</h1>
+    <p class="hero__synopsis">Search through secure residential developments in Southern Africa.</p>
+
+    <form class="form form--search" action="#" method="post">
+        <label class="label" for="keywords-a">
+            <input class="input" type="text" id="keywords-a" name="keywords" placeholder="Search by location, development or developer…" maxlength="100" required>
+        </label><!--
+
+        --><label class="label" for="price-from-a">
+            <span class="select">
+                <select class="input input--select" id="price-from-a" name="price-from">
+                    <option value="">Price from</option>
+                    <option value="100000">R100,000</option>
+                    <option value="200000">R200,000</option>
+                    <option value="300000">R300,000</option>
+                    <option value="400000">R400,000</option>
+                    <option value="500000">R500,000</option>
+                    <option value="600000">R600,000</option>
+                    <option value="700000">R700,000</option>
+                    <option value="800000">R800,000</option>
+                    <option value="900000">R900,000</option>
+                    <option value="1000000">R1,000,000</option>
+                </select>
+            </span>
+        </label><!--
+
+        --><label class="label" for="price-to-a">
+            <span class="select">
+                <select class="input input--select" id="price-to-a" name="price-to">
+                    <option value="">Price to</option>
+                    <option value="100000">R100,000</option>
+                    <option value="200000">R200,000</option>
+                    <option value="300000">R300,000</option>
+                    <option value="400000">R400,000</option>
+                    <option value="500000">R500,000</option>
+                    <option value="600000">R600,000</option>
+                    <option value="700000">R700,000</option>
+                    <option value="800000">R800,000</option>
+                    <option value="900000">R900,000</option>
+                    <option value="1000000">R1,000,000</option>
+                </select>
+            </span>
+        </label><!--
+
+        --><button class="btn btn--icon btn--secondary" type="submit">
+            <span class="icon icon--only icon--left icon-search" aria-hidden="true"></span>
+            <span class="btn__label">Search</span>
+        </button>
+    </form>
+</div></code>
+            </div>
+        </section>
+
+        <section class="sg-l-section" id="sg-loader">
+            <header class="sg-header sg-header--section">
+                <h2 class="sg-h2"><a class="sg-anchor" href="#sg-loader">#</a>Loader</h2>
+            </header>
+
+            <div class="loader">Loading…</div>
+
+            <div class="js-sg-code">
+                <code class="sg-code prettyprint lang-html"><div class="loader">Loading…</div></code>
+            </div>
+        </section>
+
+        <section class="sg-l-section" id="sg-modal">
+            <header class="sg-header sg-header--section">
+                <h2 class="sg-h2"><a class="sg-anchor" href="#sg-modal">#</a>Modal</h2>
+            </header>
+
+            <p>Lorem ipsum dolor sit amet, <a class="js-modal" href="#sg-modal" data-modal-id="modal-1">consectetur adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+            <div class="modal fade" id="modal-1" tabindex="-1" aria-labelledby="modal-label-1" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="modal-label-1">Modal Title</h4>
+
+                            <button class="modal-close" type="button" data-dismiss="modal" aria-label="Close">
+                                <span class="icon icon-close" aria-hidden="true"></span>
+                            </button>
+                        </div>
+
+                        <div class="modal-body">
+                            <p>“The quick brown fox jumps over the lazy dog” is an English–language pangram — a phrase that contains all of the letters of the alphabet. It is used to show fonts and to test typewriters and computer keyboards, and in other applications involving all of the letters in the English alphabet. Owing to its brevity and coherence, it has become widely known.</p>
+                            <p>“The quick brown fox jumps over the lazy dog” is an English–language pangram — a phrase that contains all of the letters of the alphabet. It is used to show fonts and to test typewriters and computer keyboards, and in other applications involving all of the letters in the English alphabet. Owing to its brevity and coherence, it has become widely known.</p>
+                            <p>“The quick brown fox jumps over the lazy dog” is an English–language pangram — a phrase that contains all of the letters of the alphabet. It is used to show fonts and to test typewriters and computer keyboards, and in other applications involving all of the letters in the English alphabet. Owing to its brevity and coherence, it has become widely known.</p>
+                        </div>
+
+                        <div class="modal-footer">
+                            <div class="btn-group">
+                                <a class="btn btn--transparent" href="#sg-modal" data-dismiss="modal">Cancel</a>
+                                <a class="btn" href="#sg-modal">Save</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="js-sg-code">
+                <code class="sg-code prettyprint lang-html"><p>Lorem ipsum dolor sit amet, <a class="js-modal" href="#" data-modal-id="modal-2">consectetur adipisicing</a> elit, sed…</p>
+
+<div class="modal fade" id="modal-2" tabindex="-1" aria-labelledby="modal-label-2" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="modal-label-2">Modal Title</h4>
+
+                <button class="modal-close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span class="icon icon-close" aria-hidden="true"></span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <p>“The quick brown fox jumps over the lazy dog” is an English–language pangram — a phrase that contains…</p>
+            </div>
+
+            <div class="modal-footer">
+                <div class="btn-group">
+                    <a class="btn btn--transparent" href="#" data-dismiss="modal">Cancel</a>
+                    <a class="btn" href="#">Save</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div></code>
+            </div>
+        </section>
+
+        <section class="sg-l-section" id="sg-navigation">
+            <header class="sg-header sg-header--section">
+                <h2 class="sg-h2"><a class="sg-anchor" href="#sg-navigation">#</a>Navigation</h2>
+            </header>
+
+            <header class="sg-header sg-header--subsection" id="sg-navigation-primary">
+                <h3 class="sg-h4"><a class="sg-anchor" href="#sg-navigation-primary">#</a>Primary</h3>
+            </header>
+
+            <nav class="nav nav--primary js-menu-dropdown" data-icon-up="icon-caret-up" data-icon-down="icon-caret-down" role="navigation">
+                <ol class="nav__list">
+                    <li class="nav__item is-active">
+                        <a class="nav__link" href="#sg-navigation-primary">Browse<span class="icon icon-caret-down" aria-hidden="true"></span></a>
+                        <div class="menu js-menu" aria-hidden="true" role="menu">
+                            <ol class="menu__list">
+                                <li class="menu__item"><a class="menu__link" href="#sg-navigation-primary">All</a></li>
+                                <li class="menu__item"><a class="menu__link" href="#sg-navigation-primary">Eastern Cape</a></li>
+                                <li class="menu__item"><a class="menu__link" href="#sg-navigation-primary">Free State</a></li>
+                                <li class="menu__item"><a class="menu__link" href="#sg-navigation-primary">Gauteng</a></li>
+                                <li class="menu__item"><a class="menu__link" href="#sg-navigation-primary">KwaZulu-Natal</a></li>
+                                <li class="menu__item"><a class="menu__link" href="#sg-navigation-primary">Limpopo</a></li>
+                                <li class="menu__item"><a class="menu__link" href="#sg-navigation-primary">Mpumalanga</a></li>
+                                <li class="menu__item"><a class="menu__link" href="#sg-navigation-primary">North West</a></li>
+                                <li class="menu__item"><a class="menu__link" href="#sg-navigation-primary">Northern Cape</a></li>
+                                <li class="menu__item"><a class="menu__link" href="#sg-navigation-primary">Western Cape</a></li>
+                            </ol>
+                        </div>
+                    </li>
+                    <li class="nav__item"><a class="nav__link" href="#sg-navigation-primary">News</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#sg-navigation-primary">Publications</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#sg-navigation-primary">Calculators</a></li>
+                </ol>
+            </nav>
+
+            <div class="js-sg-code">
+                <code class="sg-code prettyprint lang-html"><nav class="nav nav--primary js-menu-dropdown" data-icon-up="icon-caret-up" data-icon-down="icon-caret-down" role="navigation">
+    <ol class="nav__list">
+        <li class="nav__item is-active">
+            <a class="nav__link" href="#">Browse<span class="icon icon-caret-down" aria-hidden="true"></span></a>
+            <div class="menu js-menu" aria-hidden="true" role="menu">
+                <ol class="menu__list">
+                    <li class="menu__item"><a class="menu__link" href="#">All</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Eastern Cape</a></li>
+                </ol>
+            </div>
+        </li>
+    </ol>
+</nav></code>
+            </div>
+
+            <header class="sg-header sg-header--subsection" id="sg-navigation-secondary">
+                <h3 class="sg-h4"><a class="sg-anchor" href="#sg-navigation-secondary">#</a>Secondary</h3>
+            </header>
+
+            <nav class="nav nav--secondary" role="navigation">
+                <ol class="nav__list">
+                    <li class="nav__item is-active"><a class="nav__link" href="#sg-navigation-secondary">Overview</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#sg-navigation-secondary">Units</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#sg-navigation-secondary">Progress</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#sg-navigation-secondary">Directions</a></li>
+                </ol>
+            </nav>
+
+            <div class="js-sg-code">
+                <code class="sg-code prettyprint lang-html"><nav class="nav nav--secondary" role="navigation">
+    <ol class="nav__list">
+        <li class="nav__item is-active"><a class="nav__link" href="#">Overview</a></li>
+        <li class="nav__item"><a class="nav__link" href="#">Units</a></li>
+    </ol>
+</nav></code>
+            </div>
+
+            <header class="sg-header sg-header--subsection" id="sg-navigation-tertiary">
+                <h3 class="sg-h4"><a class="sg-anchor" href="#sg-navigation-tertiary">#</a>Tertiary</h3>
+            </header>
+
+            <nav class="nav nav--tertiary" role="navigation">
+                <ol class="nav__list">
+                    <li class="nav__item"><a class="nav__link" href="#sg-navigation-tertiary">Home</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#sg-navigation-tertiary">Developments</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#sg-navigation-tertiary">Contact us</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#sg-navigation-tertiary">About us</a></li>
+                </ol>
+            </nav>
+
+            <div class="js-sg-code">
+                <code class="sg-code prettyprint lang-html"><nav class="nav nav--tertiary" role="navigation">
+    <ol class="nav__list">
+        <li class="nav__item"><a class="nav__link" href="#">Home</a></li>
+        <li class="nav__item"><a class="nav__link" href="#">Developments</a></li>
+    </ol>
+</nav></code>
+            </div>
+        </section>
+
+        <section class="sg-l-section" id="sg-news">
+            <header class="sg-header sg-header--section">
+                <h2 class="sg-h2"><a class="sg-anchor" href="#sg-news">#</a>News</h2>
+            </header>
+
+            <div class="news">
+                <div class="news-item">
+                    <a href="#sg-news">
+                        <img class="news-item__img" src="http://placeimg.com/400/225/tech" width="400" height="225" alt="">
+                    </a>
+
+                    <h6 class="news-item__title">
+                        <a href="#sg-news">Karino wins SAHF Housing Project of the Year Award</a>
+                    </h6>
+
+                    <time class="news-item__time" datetime="2014-10-09">October 9, 2014</time>
+
+                    <div class="news-item__body">
+                        <p>At Karino Lifestyle Estate outside Nelspruit, challenging the status quo of affordable housing
+                            as paid off – not only for the more than 1 600 residents who already call this landmark estate
+                            home, but also for the development team whose innovation and commitment have just been recognized
+                            by the South African Housing Foundation’s Housing Project of the Year Award.</p>
+                    </div>
+
+                    <a class="btn btn--secondary btn--bordered btn--icon" href="#sg-news">Continue reading<span class="icon icon-caret-right" aria-hidden="true"></span></a>
+                </div>
+            </div>
+
+            <div class="js-sg-code">
+                <code class="sg-code prettyprint lang-html"><div class="news">
+    <div class="news-item">
+        <a href="#sg-news">
+            <img class="news-item__img" src="http://placeimg.com/400/225/tech" width="400" height="225" alt="">
+        </a>
+
+        <h6 class="news-item__title">
+            <a href="#sg-news">Karino wins SAHF Housing Project of the Year Award</a>
+        </h6>
+
+        <time class="news-item__time" datetime="2014-10-09">October 9, 2014</time>
+
+        <div class="news-item__body">
+            <p>At Karino Lifestyle Estate outside Nelspruit, challenging the status quo of affordable housing as paid off…</p>
+        </div>
+
+        <a class="btn btn--secondary btn--bordered btn--icon" href="#">Continue reading<span class="icon icon-caret-right" aria-hidden="true"></span></a>
+    </div>
+</div></code>
+            </div>
+        </section>
+
+        <section class="sg-l-section" id="sg-pagination">
+            <header class="sg-header sg-header--section">
+                <h2 class="sg-h2"><a class="sg-anchor" href="#sg-pagination">#</a>Pagination</h2>
+            </header>
+
+            <header class="sg-header sg-header--subsection" id="sg-pagination-default">
+                <h3 class="sg-h4"><a class="sg-anchor" href="#sg-pagination-default">#</a>Default</h3>
+            </header>
+
+            <div class="pagination">
+                <ol class="pagination__list">
+                    <li class="pagination__item is-disabled"><span class="icon icon-chevron-left" aria-hidden="true"></span>Prev</li>
+                    <li class="pagination__item is-selected"><a class="pagination__link" href="#sg-pagination">1</a></li>
+                    <li class="pagination__item"><a class="pagination__link" href="#sg-pagination">2</a></li>
+                    <li class="pagination__item"><a class="pagination__link" href="#sg-pagination">3</a></li>
+                    <li class="pagination__item is-spacer">…</li>
+                    <li class="pagination__item"><a class="pagination__link" href="#sg-pagination">7</a></li>
+                    <li class="pagination__item"><a class="pagination__link" href="#sg-pagination">8</a></li>
+                    <li class="pagination__item"><a class="pagination__link" href="#sg-pagination">9</a></li>
+                    <li class="pagination__item"><a class="pagination__link" href="#sg-pagination">Next<span class="icon icon-chevron-right" aria-hidden="true"></span></a></li>
+                </ol>
+            </div>
+
+            <div class="js-sg-code">
+                <code class="sg-code prettyprint lang-html"><div class="pagination">
+    <ol class="pagination__list">
+        <li class="pagination__item is-disabled"><span class="icon icon-chevron-left" aria-hidden="true"></span>Prev</li>
+        <li class="pagination__item is-selected"><a class="pagination__link" href="#">1</a></li>
+        <li class="pagination__item is-spacer">…</li>
+        <li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
+        <li class="pagination__item"><a class="pagination__link" href="#">Next<span class="icon icon-chevron-right" aria-hidden="true"></span></a></li>
+    </ol>
+</div></code>
+            </div>
+
+            <header class="sg-header sg-header--subsection" id="sg-pagination-article">
+                <h3 class="sg-h4"><a class="sg-anchor" href="#sg-pagination-article">#</a>Article</h3>
+            </header>
+
+            <div class="pagination pagination--article">
+                <div class="pagination__page">
+                    <div class="pagination__label">Previous:</div>
+                    <a class="pagination__link" href="#sg-pagination-article">Helderberg Retirement Estate</a>
+                </div>
+
+                <div class="pagination__page">
+                    <div class="pagination__label">Next:</div>
+                    <a class="pagination__link" href="#sg-pagination-article">What on earth is a credit report?</a>
+                </div>
+            </div>
+
+            <div class="js-sg-code">
+                <code class="sg-code prettyprint lang-html"><div class="pagination pagination--article">
+    <div class="pagination__page">
+        <div class="pagination__label">Previous:</div>
+        <a class="pagination__link" href="#">Helderberg Retirement Estate</a>
+    </div>
+
+    <div class="pagination__page">
+        <div class="pagination__label">Next:</div>
+        <a class="pagination__link" href="#">What on earth is a credit report?</a>
+    </div>
+</div></code>
+            </div>
+        </section>
+
+        <section class="sg-l-section" id="sg-plan">
+            <header class="sg-header sg-header--section">
+                <h2 class="sg-h2"><a class="sg-anchor" href="#sg-plan">#</a>Plan</h2>
+            </header>
+
+            <div class="plan">
+                <figure class="figure js-popup">
+                    <a class="js-popup-image" href="http://placeimg.com/800/800" title="Image Title 1">
+                        <img class="figure__img" src="http://placeimg.com/400/400" width="400" height="400" alt="Plan: House 51m²">
+                    </a>
+                    <figcaption class="figure__caption">Plan: House 51m²</figcaption>
+                </figure>
+
+                <div class="plan__details">
+                    <h6 class="plan__label">Additional info</h6>
+                    <p class="plan__synopsis">A brand new home for a single parent family, couple or for a small starter-up
+                        family, located with-in the very popular Karino Lifestyle Estate. The home offers 2 bedrooms, 1 bathroom,
+                        open plan kitchen and lounge with ample space to extend to heart’s desire. This home offers the
+                        full package of quality, affordability, location and style.</p>
+
+                    <h6 class="plan__label">Images & renders</h6>
+                    <div class="plan__images js-popup">
+                        <a class="js-popup-image" href="http://placeimg.com/400/400" title="Image Title 1">
+                            <img class="plan__img" src="http://placeimg.com/150/150" width="100" height="100" alt="">
+                        </a>
+                        <a class="js-popup-image" href="http://placeimg.com/400/400" title="Image Title 2">
+                            <img class="plan__img" src="http://placeimg.com/150/150" width="100" height="100" alt="">
+                        </a>
+                        <a class="js-popup-image" href="http://placeimg.com/400/400" title="Image Title 3">
+                            <img class="plan__img" src="http://placeimg.com/150/150" width="100" height="100" alt="">
+                        </a>
+                        <a class="js-popup-image" href="http://placeimg.com/400/400" title="Image Title 4">
+                            <img class="plan__img" src="http://placeimg.com/150/150" width="100" height="100" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="js-sg-code">
+                <code class="sg-code prettyprint lang-html"><div class="plan">
+    <figure class="figure js-popup">
+        <a class="js-popup-image" href="http://placeimg.com/800/800" title="Image Title 1">
+            <img class="figure__img" src="http://placeimg.com/400/400" width="400" height="400" alt="Plan: House 51m²">
+        </a>
+        <figcaption class="figure__caption">Plan: House 51m²</figcaption>
+    </figure>
+
+    <div class="plan__details">
+        <h6 class="plan__label">Additional info</h6>
+        <p class="plan__synopsis">A brand new home for a single parent family, couple or for a small starter-up family, located…</p>
+
+        <h6 class="plan__label">Images & renders</h6>
+        <div class="plan__images js-popup">
+            <a class="js-popup-image" href="http://placeimg.com/400/400" title="Image Title 1">
+                <img class="plan__img" src="http://placeimg.com/150/150" width="100" height="100" alt="">
+            </a>
+        </div>
+    </div>
+</div></code>
+            </div>
+        </section>
+
+        <section class="sg-l-section" id="sg-powered">
+            <header class="sg-header sg-header--section">
+                <h2 class="sg-h2"><a class="sg-anchor" href="#sg-powered">#</a>Powered</h2>
+            </header>
+
+            <div class="powered">
+                <div class="powered__label">Powered by</div>
+                <a class="powered__link" href="#sg-powered">
+                    <img src="../assets/images/logos/logo-property-engine-169x25.png" srcset="../assets/images/logos/logo-property-engine-339x50.png 2x" width="169" height="25" alt="PropertyEngine">
+                </a>
+            </div>
+
+            <div class="js-sg-code">
+                <code class="sg-code prettyprint lang-html"><div class="powered">
+    <div class="powered__label">Powered by</div>
+    <a class="powered__link" href="#sg-powered">
+        <img src="../assets/images/logos/logo-property-engine-169x25.png" srcset="../assets/images/logos/logo-property-engine-339x50.png 2x" width="169" height="25" alt="PropertyEngine">
+    </a>
+</div></code>
+            </div>
+        </section>
+
+        <section class="sg-l-section" id="sg-promote">
+            <header class="sg-header sg-header--section">
+                <h2 class="sg-h2"><a class="sg-anchor" href="#sg-promote">#</a>Promote</h2>
+            </header>
+
+            <div class="promote">
+                <h6 class="promote__title"><span class="icon icon-trophy" aria-hidden="true"></span>Become a VIP member now!</h6>
+                <p class="promote__synopsis">VIP members of HelloHouse get notified first when new developments get listed.
+                    Interested? <a href="#sg-promote">Find out more</a>.</p>
+
+                <a class="btn btn--secondary btn--bordered" href="#sg-promote">Sign Up</a>
+            </div>
+
+            <div class="js-sg-code">
+                <code class="sg-code prettyprint lang-html"><div class="promote">
+    <h6 class="promote__title"><span class="icon icon-trophy" aria-hidden="true"></span>Become a VIP member now!</h6>
+    <p class="promote__synopsis">VIP members of HelloHouse get notified first when new developments get listed.
+        Interested? <a href="#">Find out more</a>.</p>
+
+    <a class="btn btn--secondary btn--bordered" href="#">Sign Up</a>
+</div></code>
+            </div>
+        </section>
+
+        <section class="sg-l-section" id="sg-property-type">
+            <header class="sg-header sg-header--section">
+                <h2 class="sg-h2"><a class="sg-anchor" href="#sg-property-type">#</a>Property Type</h2>
+            </header>
+
+            <div class="property-types">
+                <div class="property-type">
+                    <a class="property-type__link" href="#sg-property-type">
+                        <span class="property-type__icon icon icon-plot" aria-hidden="true"></span>
+                        <div class="property-type__count">79</div>
+                        <div class="property-type__label">Plots</div>
+                    </a>
+                </div>
+
+                <div class="property-type property-type--disabled">
+                    <span class="property-type__icon icon icon-house" aria-hidden="true"></span>
+                    <div class="property-type__count">n/a</div>
+                    <div class="property-type__label">Houses</div>
+                </div>
+
+                <div class="property-type">
+                    <a class="property-type__link" href="#sg-property-type">
+                        <span class="property-type__icon icon icon-apartment" aria-hidden="true"></span>
+                        <div class="property-type__count">428</div>
+                        <div class="property-type__label">Apartments</div>
+                    </a>
+                </div>
+
+                <div class="property-type">
+                    <a class="property-type__link" href="#sg-property-type">
+                        <span class="property-type__icon icon icon-townhouse" aria-hidden="true"></span>
+                        <div class="property-type__count">189</div>
+                        <div class="property-type__label">Townhouses</div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="js-sg-code">
+                <code class="sg-code prettyprint lang-html"><div class="property-types">
+    <div class="property-type">
+        <a class="property-type__link" href="#">
+            <span class="property-type__icon icon icon-plot" aria-hidden="true"></span>
+            <div class="property-type__count">79</div>
+            <div class="property-type__label">Plots</div>
+        </a>
+    </div>
+
+    <div class="property-type property-type--disabled">
+        <span class="property-type__icon icon icon-house" aria-hidden="true"></span>
+        <div class="property-type__count">n/a</div>
+        <div class="property-type__label">Houses</div>
+    </div>
+
+    <div class="property-type">
+        <a class="property-type__link" href="#">
+            <span class="property-type__icon icon icon-apartment" aria-hidden="true"></span>
+            <div class="property-type__count">428</div>
+            <div class="property-type__label">Apartments</div>
+        </a>
+    </div>
+
+    <div class="property-type">
+        <a class="property-type__link" href="#">
+            <span class="property-type__icon icon icon-townhouse" aria-hidden="true"></span>
+            <div class="property-type__count">189</div>
+            <div class="property-type__label">Townhouses</div>
+        </a>
+    </div>
+</div></code>
+            </div>
+        </section>
+
+        <section class="sg-l-section" id="sg-publication">
+            <header class="sg-header sg-header--section">
+                <h2 class="sg-h2"><a class="sg-anchor" href="#sg-publication">#</a>Publication</h2>
+            </header>
+
+            <header class="sg-header sg-header--subsection" id="sg-service-publication-overview">
+                <h3 class="sg-h4"><a class="sg-anchor" href="#sg-service-publication-overview">#</a>Overview</h3>
+            </header>
+
+            <div class="publication publication--overview">
+                <img class="publication__img" src="http://placeimg.com/200/355" width="200" height="355" alt="">
+
+                <h2 class="publication__title">HelloHouse Magazine Digital Issue 5</h2>
+
+                <div class="publication__body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                        mollit anim id est laborum.</p>
+                </div>
+            </div>
+
+            <div class="js-sg-code">
+                <code class="sg-code prettyprint lang-html"><div class="publication publication--overview">
+    <img class="publication__img" src="http://placeimg.com/200/355" width="200" height="355" alt="">
+
+    <h2 class="publication__title">HelloHouse Magazine Digital Issue 5</h2>
+
+    <div class="publication__body">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore…</p>
+    </div>
+</div></code>
+            </div>
+
+            <header class="sg-header sg-header--subsection" id="sg-service-publication-summary">
+                <h3 class="sg-h4"><a class="sg-anchor" href="#sg-service-publication-summary">#</a>Summary</h3>
+            </header>
+
+            <div class="publication publication--summary">
+                <div class="publication__label">Originally published on</div>
+                <h6 class="publication__title">HelloHouse Blog</h6>
+
+                <img class="publication__img" src="http://placeimg.com/264/469" width="264" height="469" alt="">
+
+                <a class="btn btn--secondary btn--bordered btn--icon" href="#sg-service-publication-summary">View original
+                    <span class="icon icon-external-link" aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div class="js-sg-code">
+                <code class="sg-code prettyprint lang-html"><div class="publication publication--summary">
+    <div class="publication__label">Originally published on</div>
+    <h6 class="publication__title">HelloHouse Blog</h6>
+
+    <img class="publication__img" src="http://placeimg.com/264/469" width="264" height="469" alt="">
+
+    <a class="btn btn--secondary btn--bordered btn--icon" href="#">View original
+        <span class="icon icon-external-link" aria-hidden="true"></span>
+    </a>
+</div></code>
+            </div>
+        </section>
+
+        <section class="sg-l-section" id="sg-register">
+            <header class="sg-header sg-header--section">
+                <h2 class="sg-h2"><a class="sg-anchor" href="#sg-register">#</a>Register</h2>
+            </header>
+
+            <div class="register">
+                <p class="register__synopsis">Register today and be the first to hear about new developments!</p>
+                <a class="btn" href="#sg-register">Register</a>
+            </div>
+
+            <div class="js-sg-code">
+                <code class="sg-code prettyprint lang-html"><div class="register">
+    <p class="register__synopsis">Register today and be the first to hear about new developments!</p>
+    <a class="btn" href="#">Register</a>
+</div></code>
+            </div>
+        </section>
+
+        <section class="sg-l-section" id="sg-search-results">
+            <header class="sg-header sg-header--section">
+                <h2 class="sg-h2"><a class="sg-anchor" href="#sg-search-results">#</a>Search Results</h2>
+            </header>
+
+            <div class="search-results">
+                <div class="search-results__body">
+                    <div class="search-results__title">
+                        <b class="search-results__count">234</b>developments
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn--secondary btn--small" type="button">Developments</button>
+                        <button class="btn btn--secondary btn--small" type="button">Plans</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="js-sg-code">
+                <code class="sg-code prettyprint lang-html"><div class="search-results">
+    <div class="search-results__body">
+        <div class="search-results__title">
+            <b class="search-results__count">234</b>developments
+        </div>
+        <div class="btn-group">
+            <button class="btn btn--secondary btn--small" type="button">Developments</button>
+            <button class="btn btn--secondary btn--small" type="button">Plans</button>
+        </div>
+    </div>
+</div></code>
+            </div>
+        </section>
+
+        <section class="sg-l-section" id="sg-service-provider">
+            <header class="sg-header sg-header--section">
+                <h2 class="sg-h2"><a class="sg-anchor" href="#sg-service-provider">#</a>Service Provider</h2>
+            </header>
+
+            <header class="sg-header sg-header--subsection" id="sg-service-provider-overview">
+                <h3 class="sg-h4"><a class="sg-anchor" href="#sg-service-provider-overview">#</a>Overview</h3>
+            </header>
+
+            <div class="service-provider service-provider--overview">
+                <img class="service-provider__img" src="http://placeimg.com/200/112" width="200" height="112" alt="">
+
+                <h2 class="service-provider__title">5rooms.com</h2>
+
+                <div class="service-provider__body">
+                    <p>5Rooms is South Africa’s leading online homeware, furniture
+                        and lighting store. With the widest variety of leading local and international brands, all your
+                        home and living solutions are but a click away.</p>
+                    <p>We offer a superior online shopping experience
+                        with multiple secure payment options, free delivery and free returns.</p>
+                </div>
+            </div>
+
+            <div class="js-sg-code">
+                <code class="sg-code prettyprint lang-html"><div class="service-provider service-provider--overview">
+    <img class="service-provider__img" src="http://placeimg.com/200/112" width="200" height="112" alt="">
+
+    <h2 class="service-provider__title">5rooms.com</h2>
+
+    <div class="service-provider__body">
+        <p>5Rooms is South Africa’s leading online homeware, furniture and lighting store. With the widest variety of leading…</p>
+    </div>
+</div></code>
+            </div>
+
+            <header class="sg-header sg-header--subsection" id="sg-service-provider-list">
+                <h3 class="sg-h4"><a class="sg-anchor" href="#sg-service-provider-list">#</a>List</h3>
+            </header>
+
+            <div class="service-providers">
+                <div class="service-provider">
+                    <a href="#sg-service-provider">
+                        <img class="service-provider__img" src="http://placeimg.com/200/112" width="200" height="112" alt="">
+                    </a>
+
+                    <h6 class="service-provider__title">
+                        <a href="#sg-service-provider-list">Alison’s Flowers</a>
+                    </h6>
+
+                    <div class="service-provider__label">
+                        <a href="#sg-service-provider-list">Western Cape</a>
+                    </div>
+
+                    <div class="service-provider__body">
+                        <p>At Alison’s we are dedicated to creating distinctively
+                            elegant, yet refreshingly modern arrangements to suit any occasion, style and budget.</p>
+                    </div>
+
+                    <div class="tags">
+                        <div class="tag tag--small">
+                            <a class="tag__link" href="#sg-service-provider-list">Lifestyle Accessories</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="js-sg-code">
+                <code class="sg-code prettyprint lang-html"><div class="service-providers">
+    <div class="service-provider">
+        <a href="#sg-service-provider">
+            <img class="service-provider__img" src="http://placeimg.com/200/112" width="200" height="112" alt="">
+        </a>
+
+        <h6 class="service-provider__title">
+            <a href="#">Alison’s Flowers</a>
+        </h6>
+
+        <div class="service-provider__label">
+            <a href="#">Western Cape</a>
+        </div>
+
+        <div class="service-provider__body">
+            <p>At Alison’s we are dedicated to creating distinctively elegant, yet refreshingly modern arrangements to suit…</p>
+        </div>
+
+        <div class="tags">
+            <div class="tag tag--small">
+                <a class="tag__link" href="#">Lifestyle Accessories</a>
+            </div>
+        </div>
+    </div>
+</div></code>
+            </div>
+        </section>
+
+        <section class="sg-l-section" id="sg-social">
+            <header class="sg-header sg-header--section">
+                <h2 class="sg-h2"><a class="sg-anchor" href="#sg-social">#</a>Social</h2>
+            </header>
+
+            <div class="social">
+                <ol class="social__list">
+                    <li class="social__item facebook">
+                        <a class="social__link" href="#sg-social" title="Follow us on Facebook"><span class="icon icon-facebook" aria-hidden="true"></span></a>
+                    </li>
+                    <li class="social__item twitter">
+                        <a class="social__link" href="#sg-social" title="Follow us on Twitter"><span class="icon icon-twitter" aria-hidden="true"></span></a>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="js-sg-code">
+                <code class="sg-code prettyprint lang-html"><div class="social">
+    <ol class="social__list">
+        <li class="social__item">
+            <a class="social__link" href="#" title="Follow us on Facebook"><span class="icon icon-facebook" aria-hidden="true"></span></a>
+        </li>
+        <li class="social__item">
+            <a class="social__link" href="#" title="Follow us on Twitter"><span class="icon icon-twitter" aria-hidden="true"></span></a>
+        </li>
+    </ol>
+</div></code>
+            </div>
+        </section>
+
+        <section class="sg-l-section" id="sg-share">
+            <header class="sg-header sg-header--section">
+                <h2 class="sg-h2"><a class="sg-anchor" href="#sg-share">#</a>Share</h2>
+            </header>
+
+            <div class="share">
+                <ol class="share__list">
+                    <li>Share this:</li>
+                    <li><a class="share__link" href="#sg-share" title="Email"><span class="icon icon-envelope" aria-hidden="true"></span></a></li>
+                    <li class="facebook"><a class="share__link" href="#sg-share" title="Facebook"><span class="icon icon-facebook" aria-hidden="true"></span></a></li>
+                    <li class="twitter"><a class="share__link" href="#sg-share" title="Twitter"><span class="icon icon-twitter" aria-hidden="true"></span></a></li>
+                </ol>
+            </div>
+
+            <div class="js-sg-code">
+                <code class="sg-code prettyprint lang-html"><div class="share">
+    <ol class="share__list">
+        <li>Share this:</li>
+        <li><a class="share__link" href="#" title="Email"><span class="icon icon-envelope" aria-hidden="true"></span></a></li>
+        <li class="facebook"><a class="share__link" href="#" title="Facebook"><span class="icon icon-facebook" aria-hidden="true"></span></a></li>
+        <li class="twitter"><a class="share__link" href="#" title="Twitter"><span class="icon icon-twitter" aria-hidden="true"></span></a></li>
+    </ol>
+</div></code>
+            </div>
+        </section>
+
+        <section class="sg-l-section" id="sg-status">
+            <header class="sg-header sg-header--section">
+                <h2 class="sg-h2"><a class="sg-anchor" href="#sg-status">#</a>Status</h2>
+            </header>
+
+            <div class="status">
+                <div class="status-item status-item--current">
+                    <div class="status__label">1</div>
+                    <div class="status__synopsis">Registered</div>
+                </div>
+                <div class="status-item">
+                    <div class="status__label">2</div>
+                    <div class="status__synopsis">Basic Financials</div>
+                </div>
+                <div class="status-item">
+                    <div class="status__label">3</div>
+                    <div class="status__synopsis">Credit Check</div>
+                </div>
+                <div class="status-item">
+                    <div class="status__label">4</div>
+                    <div class="status__synopsis">Affordability</div>
+                </div>
+            </div>
+
+            <div class="js-sg-code">
+                <code class="sg-code prettyprint lang-html"><div class="status">
+    <div class="status-item status-item--current">
+        <div class="status__label">1</div>
+        <div class="status__synopsis">Registered</div>
+    </div>
+    <div class="status-item">
+        <div class="status__label">2</div>
+        <div class="status__synopsis">Basic Financials</div>
+    </div>
+</div></code>
+            </div>
+        </section>
+
+        <section class="sg-l-section" id="sg-subscribe">
+            <header class="sg-header sg-header--section">
+                <h2 class="sg-h2"><a class="sg-anchor" href="#sg-subscribe">#</a>Subscribe</h2>
+            </header>
+
+            <div class="subscribe">
+                <h6 class="subscribe__title">Stay in the loop!</h6>
+                <p class="subscribe__synopsis">Development information changes all the time. We’ll send you updates
+                    via email if anything exciting happens at <b>The Herschel</b>.</p>
+
+                <form class="form form--inline" action="#" method="post">
+                    <label class="label u-visuallyhidden" for="email">Your email address</label>
+                    <input class="input" type="email" id="email" name="email" placeholder="Your email address" maxlength="100" required>
+
+                    <button class="btn btn--secondary btn--icon" type="submit"><span class="icon icon--left icon-envelope" aria-hidden="true"></span>Subscribe</button>
+                </form>
+            </div>
+
+            <div class="js-sg-code">
+                <code class="sg-code prettyprint lang-html"><div class="subscribe">
+    <h6 class="subscribe__title">Stay in the loop!</h6>
+    <p class="subscribe__synopsis">Development information changes all the time. We’ll send you updates
+        via email if anything exciting happens at <b>The Herschel</b>.</p>
+
+    <form class="form form--inline" action="#sg-subscribe" method="post">
+        <label class="label u-visuallyhidden" for="email-a">Your email address</label>
+        <input class="input" type="email" id="email-a" name="email" placeholder="Your email address" maxlength="100" required>
+
+        <button class="btn btn--secondary btn--icon" type="submit"><span class="icon icon--left icon-envelope" aria-hidden="true"></span>Subscribe</button>
+    </form>
+</div></code>
+            </div>
+        </section>
+
+        <section class="sg-l-section" id="sg-tabs">
+            <header class="sg-header sg-header--section">
+                <h2 class="sg-h2"><a class="sg-anchor" href="#sg-tabs">#</a>Tabs</h2>
+            </header>
+
+            <div class="tabs js-tabs">
+                <ol class="tab-list" role="tablist">
+                    <li class="tab-list__tab is-selected" id="tab-1" aria-controls="panel-1" aria-selected="true" role="tab">
+                        <a class="tab-list__link" href="#sg-tabs">Tab 1</a>
+                    </li>
+                    <li class="tab-list__tab" id="tab-2" aria-controls="panel-2" aria-selected="false" role="tab">
+                        <a class="tab-list__link" href="#sg-tabs">Tab 2</a>
+                    </li>
+                    <li class="tab-list__tab" id="tab-3" aria-controls="panel-3" aria-selected="false" role="tab">
+                        <a class="tab-list__link" href="#sg-tabs">Tab 3</a>
+                    </li>
+                </ol>
+
+                <div class="tab-panel is-selected" id="panel-1" aria-labelledby="tab-1" aria-hidden="false" role="tabpanel">
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                </div>
+
+                <div class="tab-panel" id="panel-2" aria-labelledby="tab-2" aria-hidden="true" role="tabpanel">
+                    <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+                </div>
+
+                <div class="tab-panel" id="panel-3" aria-labelledby="tab-3" aria-hidden="true" role="tabpanel">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                </div>
+            </div>
+
+            <div class="js-sg-code">
+                <code class="sg-code prettyprint lang-html"><div class="tabs js%2Dtabs">
+    <ol class="tab-list" role="tablist">
+        <li class="tab-list__tab is-selected" id="tab-a" aria-controls="panel-a" aria-selected="true" role="tab">
+            <a class="tab-list__link" href="#">Tab 1</a>
+        </li>
+        <li class="tab-list__tab" id="tab-b" aria-controls="panel-b" aria-selected="false" role="tab">
+            <a class="tab-list__link" href="#">Tab 2</a>
+        </li>
+    </ol>
+
+    <div class="tab-panel is-active" id="panel-a" aria-labelledby="tab-a" aria-hidden="false" role="tabpanel">
+        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam…</p>
+    </div>
+
+    <div class="tab-panel" id="panel-b" aria-labelledby="tab-b" aria-hidden="true" role="tabpanel">
+        <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia…</p>
+    </div>
+</div></code>
+            </div>
+        </section>
+
+        <section class="sg-l-section" id="sg-tag">
+            <header class="sg-header sg-header--section">
+                <h2 class="sg-h2"><a class="sg-anchor" href="#sg-tag">#</a>Tag</h2>
+            </header>
+
+            <header class="sg-header sg-header--subsection" id="sg-tag-default">
+                <h3 class="sg-h4"><a class="sg-anchor" href="#sg-tag-default">#</a>Default</h3>
+            </header>
+
+            <div class="tags">
+                <div class="tag">
+                    Lorem
+                    <a class="tag__remove" href="#sg-tag-default" title="Remove"><span class="icon icon icon-close" aria-hidden="true"></span></a>
+                </div>
+
+                <div class="tag">
+                    Ipsum
+                    <a class="tag__remove" href="#sg-tag-default" title="Remove"><span class="icon icon icon-close" aria-hidden="true"></span></a>
+                </div>
+
+                <div class="tag">
+                    Dolor Sit
+                    <a class="tag__remove" href="#sg-tag-default" title="Remove"><span class="icon icon icon-close" aria-hidden="true"></span></a>
+                </div>
+
+                <div class="tag">
+                    Amet
+                    <a class="tag__remove" href="#sg-tag-default" title="Remove"><span class="icon icon icon-close" aria-hidden="true"></span></a>
+                </div>
+            </div>
+
+            <div class="js-sg-code">
+                <code class="sg-code prettyprint lang-html"><div class="tags">
+    <div class="tag">
+        Lorem
+        <a class="tag__remove" href="#" title="Remove"><span class="icon icon icon-close" aria-hidden="true"></span></a>
+    </div>
+</div></code>
+            </div>
+
+            <header class="sg-header sg-header--subsection" id="sg-tag-small">
+                <h3 class="sg-h4"><a class="sg-anchor" href="#sg-tag-small">#</a>Small</h3>
+            </header>
+
+            <div class="tags">
+                <div class="tag tag--small">
+                    <a class="tag__link" href="#sg-tag-small">Lorem</a>
+                </div>
+            </div>
+
+            <div class="js-sg-code">
+                <code class="sg-code prettyprint lang-html"><div class="tags">
+    <div class="tag tag--small">
+        <a class="tag__link" href="#">Lorem</a>
+    </div>
+</div></code>
+            </div>
+        </section>
+
+        <section class="sg-l-section" id="sg-timeline">
+            <header class="sg-header sg-header--section">
+                <h2 class="sg-h2"><a class="sg-anchor" href="#sg-timeline">#</a>Timeline</h2>
+            </header>
+
+            <div class="timeline">
+                <div class="timeline-event" id="timeline-event-1">
+                    <div class="news-item">
+                        <h6 class="news-item__title">Selcourt Press Release - The new face of affordable housing</h6>
+                        <time class="news-item__time" datetime="2014-10-21">October 21, 2014</time>
+                        <div class="news-item__body">
+                            <p>“Affordable housing need not look cheap.” This is the philosophy behind the new community
+                                being established outside Springs, where 1 500 new 2- and 3- bedroomed houses and a unique
+                                “exploration park” will soon provide secure living and a healthy lifestyle for home-owners
+                                in all income groups.</p>
+
+                            <p>Beyond playing a role in addressing the country’s accommodation shortfall, the developers
+                                of this new stage of Selcourt Estate have challenged the norm of entry-level housing that
+                                has become prevalent during the past ten years. Rather than building as many houses as possible
+                                in as little space as is economically feasible, they have focussed on aspects such as efficient
+                                energy usage, quality finishes, and creating surroundings that are not merely functional,
+                                but conducive to healthy community development and leisure activities.</p>
+
+                            <p>Similan Consult, the development agency responsible for the newly released stage of Selcourt
+                                Estate, has set out to prove that “affordable needn’t equate sub-standard”.</p>
+
+                            <p>It is the same design approach that has recently earned Similan the SAHF Housing Project
+                                of the Year Award for their Karino Lifestyle Estate outside Nelspruit. Like that development,
+                                Selcourt Estate is funded by Old Mutual’s MPSS fund, part of the Housing Impact Fund for
+                                South Africa, which aims to help fill the gap in the market between those who benefit from
+                                government-provided housing and those who have access to bank finance with which to purchase
+                                their own homes.</p>
+
+                            <p>Unlike conventional affordable housing developments, the homes at Selcourt Estate are
+                                constructed in various designs and sizes, offering different exterior finishes such as multiple
+                                roof types and roof tile colours, a choice of wall colours, and quality fittings.</p>
+
+                            <p>Particular attention has been paid to the layout of the estate. The streetscape is visually
+                                different. Instead of being placed in typical linear rows, the homes in Selcourt have been
+                                positioned to take maximum advantage of the natural features of the site. The homes are
+                                also oriented for optimal energy efficiency and comply 100% with the latest energy specifications
+                                of SANS 10400-X.</p>
+
+                            <p>The layout features circular streets and cul-de-sac, creating pockets of communities
+                                within the larger community of the estate.</p>
+
+                            <p>What makes Selcourt Estate especially attractive to families, is the exploration park
+                                – a leafy landscaped park of over one hectare conceived in cooperation with an internationally
+                                acclaimed designer to be a peaceful place of relaxation, interaction, play, and best of all,
+                                exploration for people of all ages.</p>
+
+                            <p>Similan’s Harold Spies explains the idea behind the park: “The concept is to offer residents
+                                and their friends a safe haven where they can meet and mingle, play sport, or simply chill.
+                                I’ve gone to great lengths to develop something that is not just stock-standard, and which
+                                would help built a healthy, happy community. The park has a theme, which is ‘Explore!’,
+                                and everyone, from pre-schoolers to adults will be kept entertained here. There are mazes,
+                                tunnels, specially designed jungle gyms and equipment that will help improve children’s
+                                hand-eye co-ordination and develop their motor skills. Hoop and tennis courts and mini soccer
+                                fields complete the picture.”</p>
+
+                            <p>With prices starting at R359 500 (including transfer and legal costs) the homes provide
+                                a way for first-time buyers to get a foot on the property ladder while at the same time
+                                investing in a quality lifestyle for as little as R3 469 per month. Selcourt Estate launched
+                                their new show village and park on Saturday 18 October at an event held in the Estate.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-event" id="timeline-event-2">
+                    <div class="news-item">
+                        <h6 class="news-item__title">Visit the show village</h6>
+                        <time class="news-item__time" datetime="2015-01-07">January 7, 2015</time>
+                        <div class="news-item__body">
+                            <p>The show village that was opened in 2014 shows the potential of the various types of
+                                homes now available in Selcourt Estate. There are a variety of Luxury and Estate homes.
+                                Selcourt Estate now give buyers the opportunity to invest in a home that fit their needs
+                                and income and then later upgrade to a bigger home within the Estate without having
+                                to move. Many buyers are excited that they can climb the property ladder in this well
+                                secured Estate.</p>
+                        </div>
+
+                        <div class="gallery">
+                            <div class="row">
+                                <div class="col col--1-3">
+                                    <a href="#sg-timeline"><img src="http://placeimg.com/400/225" width="400" height="225" alt=""></a>
+                                </div>
+                                <div class="col col--1-3">
+                                    <a href="#sg-timeline"><img src="http://placeimg.com/400/225" width="400" height="225" alt=""></a>
+                                </div>
+                                <div class="col col--1-3">
+                                    <a href="#sg-timeline"><img src="http://placeimg.com/400/225" width="400" height="225" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="js-sg-code">
+                <code class="sg-code prettyprint lang-html"><div class="timeline">
+    <div class="timeline-event" id="timeline-event-a">
+        <div class="news-item">
+
+        </div>
+    </div>
+
+    <div class="timeline-event" id="timeline-event-b">
+        <div class="news-item">
+
+        </div>
+    </div>
+</div></code>
+            </div>
+        </section>
+
+        <section class="sg-l-section" id="sg-tooltips">
+            <header class="sg-header sg-header--section">
+                <h2 class="sg-h2"><a class="sg-anchor" href="#sg-tooltips">#</a>Tooltips</h2>
+            </header>
+
+            <p>Sed ut <a class="js-tooltip" href="#" data-tooltip-placement="top" title="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">perspiciatis unde omnis</a>
+                iste natus error sit voluptatem accusantium <a class="js-tooltip" href="#" data-placement="right" title="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.">doloremque laudantium</a>,
+                totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta
+                sunt explicabo. Nemo enim ipsam voluptatem <a class="js-tooltip" href="#" data-placement="bottom" title="Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.">quia voluptas</a>
+                sit aspernatur aut odit aut fugit, sed quia consequuntur <a class="js-tooltip" href="#" data-tooltip-placement="left" title="Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.">magni dolores</a>
+                eos qui ratione voluptatem sequi nesciunt.</p>
+
+            <div class="js-sg-code">
+                <code class="sg-code prettyprint lang-html"><p>Sed ut <a class="js%2Dtooltip" href="#" data-placement="top" title="Lorem ipsum dolor">perspiciatis unde omnis</a> iste natus</p>
+<p>Sed ut <a class="js%2Dtooltip" href="#" data-placement="right" title="Lorem ipsum dolor">perspiciatis unde omnis</a> iste natus</p>
+<p>Sed ut <a class="js%2Dtooltip" href="#" data-placement="bottom" title="Lorem ipsum dolor">perspiciatis unde omnis</a> iste natus</p>
+<p>Sed ut <a class="js%2Dtooltip" href="#" data-placement="left" title="Lorem ipsum dolor">perspiciatis unde omnis</a> iste natus</p></code>
+            </div>
+        </section>
+    </main>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/styleguide/plugins.js"></script>
+    <script src="../assets/js/styleguide/styleguide.js"></script>
+</body>
+</html>

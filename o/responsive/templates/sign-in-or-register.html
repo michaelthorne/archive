@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Sign In or Register – OrderIn</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+
+    <!-- Twitter Card -->
+    <meta property="twitter:title" content="" />
+    <meta property="twitter:description" content="" />
+    <meta property="twitter:image" content="" />
+    <meta property="twitter:url" content="" />
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:site" content="" />
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,700" />
+
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="../assets/css/style.css?v=2.1.2" />
+
+    <!--[if lt IE 9]>
+    <script src="../assets/js/vendor/polyfills.js"></script>
+    <![endif]-->
+</head>
+<body data-controller="site">
+    <!--[if lt IE 9]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/?locale=en">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div class="l-canvas">
+        <header class="header header--primary" role="banner">
+            <div class="l-wrapper">
+                <button class="btn btn--text btn--toggle" data-action="nav-toggle"><span class="icon fa fa-bars" aria-hidden="true"></span></button>
+
+                <a href="home.html" class="logo">
+                    <img src="../assets/images/logos/logo-orderin-208x50.png" width="208" height="50" alt="OrderIn" />
+                </a>
+
+                <nav class="nav" role="navigation" data-component="nav">
+                    <ol class="list">
+                        <li><a href="sign-in.html"><span class="icon fa fa-lock" aria-hidden="true"></span>Sign In</a></li>
+                        <li><a href="register.html"><span class="icon fa fa-desktop" aria-hidden="true"></span>Register</a></li>
+                    </ol>
+                </nav>
+
+                <div class="cart cart--count cart--empty">
+                    <a href="cart.html" class="cart__link">
+                        <span class="icon fa fa-shopping-cart" aria-hidden="true"></span>
+                        <div class="cart__count">0</div>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <main class="l-main" role="main">
+            <div class="l-wrapper">
+                <section class="l-section l-section--single">
+                    <header class="header header--section">
+                        <h1 class="gamma hN">We need to know who you are.</h1>
+                        <p class="small">Please sign in or create an account below to complete your order.</p>
+                    </header>
+                </section>
+            </div>
+            <div class="l-wrapper l-wrapper--large">
+                <div class="l-section l-section--narrower">
+                    <header class="header header--section">
+                        <h2 class="gamma hN">I already have an account.</h2>
+                    </header>
+
+                    <form id="form-login" action="sign-in-or-register.html" method="post" class="form">
+                        <label for="email" class="label">
+                            Email Address
+                            <input class="input" type="email" id="email" name="email" maxlength="100" required="required" />
+                        </label>
+
+                        <label for="password" class="label">
+                            Password
+                            <input class="input" type="password" id="password" name="password" maxlength="100" required="required" />
+                            <a href="forgot-password.html" class="label__link">Forgot password?</a>
+                        </label>
+
+                        <label for="remember" class="label">
+                            <input class="input" type="checkbox" id="remember" name="remember" value="1" /> Remember me?
+                        </label>
+
+                        <input class="btn btn--wide" type="submit" value="Sign In" title="Feed me now :)" />
+                    </form>
+                </div>
+
+                <div class="l-section l-section--narrower">
+                    <header class="header header--section">
+                        <h2 class="gamma hN">It’s my first time here.</h2>
+                        <p class="small">Fill out the form below and we’ll sign you up for free!</p>
+                    </header>
+
+                    <form id="form-register" action="register.html" method="post" class="form">
+                        <label for="first_name" class="label">
+                            First Name
+                            <input class="input input--capitalize" type="text" id="first_name" name="first_name" maxlength="20" required="required" />
+                        </label>
+
+                        <label for="last_name" class="label">
+                            Last Name
+                            <input class="input input--capitalize" type="text" id="last_name" name="last_name" maxlength="20" required="required" />
+                        </label>
+
+                        <label for="email-2" class="label">
+                            Email Address
+                            <input class="input" type="email" id="email-2" name="email-2" maxlength="100" required="required" />
+                        </label>
+
+                        <label for="contact_number" class="label">
+                            Contact Number
+                            <input class="input" type="tel" id="contact_number" name="contact_number" maxlength="20" required="required" />
+                        </label>
+
+                        <div class="toggle-password" data-component="toggle-password">
+                            <label for="password-2" class="label">
+                                Password
+                                <input class="input" type="password" id="password-2" name="password-2" maxlength="100" required="required" />
+                            </label>
+                            <button class="visuallyhidden toggle" data-toggle="password">Show</button>
+                        </div>
+
+                        <label for="agree" class="label">
+                            <input class="input" type="checkbox" id="agree" name="agree" value="1" required="required" /> I agree to the <a href="terms-and-conditions.html" target="_blank">Terms & Conditions</a>
+                        </label>
+
+                        <input class="btn btn--wide" type="submit" value="Register" />
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer footer--primary" role="contentinfo">
+            <div class="social">
+                <ol class="list">
+                    <li>
+                        <a href="https://www.facebook.com/orderin.za" target="_blank" title="Follow us on Facebook" class="facebook"><span class="icon fa fa-facebook-square" aria-hidden="true"></span></a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/OrderInSA" target="_blank" title="Follow us on Twitter" class="twitter"><span class="icon fa fa-twitter-square" aria-hidden="true"></span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.pinterest.com/order_in" target="_blank" title="Follow us on Pinterest" class="pinterest"><span class="icon fa fa-pinterest-square" aria-hidden="true"></span></a>
+                    </li>
+                    <li>
+                        <a href="http://www.instagram.com/orderin_sa" target="_blank" title="Follow us on Instagram" class="instagram"><span class="icon fa fa-instagram" aria-hidden="true"></span></a>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="sign-ups">
+                <div class="sign-up">
+                    <h6 class="sign-up__title">Sign up your company</h6>
+                    <p class="sign-up__text">With a corporate account, employees can order food quickly and easily.</p>
+                    <a href="sign-up-corporate.html" class="btn btn--small"><span class="icon fa fa-caret-right"></span>Sign Up</a>
+                </div>
+                <div class="sign-up">
+                    <h6 class="sign-up__title">Add your restaurant to OrderIn!</h6>
+                    <p class="sign-up__text">Sign up with South Africa’s Premier Online food ordering service.</p>
+                    <a href="sign-up-restaurant.html" class="btn btn--small"><span class="icon fa fa-caret-right"></span>Sign Up</a>
+                </div>
+            </div>
+
+            <div class="featured">
+                <h6 class="featured__label">As featured in …</h6>
+                <ol class="list">
+                    <li><img src="../assets/images/logos/logo-forbes-85x25.png" width="85" height="25" alt="Forbes" /></li>
+                    <li><img src="../assets/images/logos/logo-sunday-times-115x25.png" width="115" height="25" alt="Sunday Times" /></li>
+                    <li><img src="../assets/images/logos/logo-techcentral-175x25.png" width="175" height="25" alt="TechCentral" /></li>
+                    <li><img src="../assets/images/logos/logo-financial-mail-29x25.png" width="29" height="25" alt="Financial Mail" /></li>
+                    <li><img src="../assets/images/logos/logo-finweek-94x25.png" width="94" height="25" alt="Finweek" /></li>
+                </ol>
+            </div>
+
+            <div class="contact">
+                <ol class="list">
+                    <li>
+                        <span class="icon fa fa-envelope" aria-hidden="true"></span><a href="mailto:customerservice@orderin.co.za">customerservice@orderin.co.za</a>
+                    </li>
+                    <li>
+                        <span class="icon fa fa-phone-square" aria-hidden="true"></span><a href="tel:+27212011155">+27 21 201 1155</a><small>(9 AM – 10 PM)</small>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="legal">
+                <ol class="list">
+                    <li>
+                        <p>© Copyright OrderIn (Pty) Ltd. All rights reserved.</p>
+                    </li>
+                    <li>
+                        <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
+                    </li>
+                </ol>
+                <div class="beta">Beta</div>
+            </div>
+        </footer>
+    </div>
+
+    <nav class="nav nav--vertical" role="navigation" data-component="nav-vertical">
+        <ol class="list">
+            <li class="nav__label nav__label--small"></li>
+            <li class="nav__label"></li>
+            <li><a href="sign-in.html"><span class="icon fa fa-lock"></span>Sign In</a></li>
+            <li><a href="register.html"><span class="icon fa fa-desktop"></span>Register</a></li>
+        </ol>
+    </nav>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/script.js?v=2.1.2"></script>
+    <script>UTIL.init();</script>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site’s ID -->
+    <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+    </script>
+</body>
+</html>

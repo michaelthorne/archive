@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Cart – DoubleExposure</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Raleway:700%7CLato:400,700">
+
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="../assets/css/style.css?v=0.2.13">
+    <link rel="stylesheet" href="../assets/css/styleguide.css?v=0.2.13">
+
+    <!--[if lt IE 9]>
+    <script src="../assets/js/vendor/polyfills.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!--[if lt IE 9]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/?locale=en">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <header class="header header--gallery" role="banner">
+        <a href="view.html" class="logo"><img src="../assets/images/logos/logo-jules-morgan-150x150.png" width="150" height="150" alt="Jules Morgan"></a>
+        <div class="gallery gallery--details">
+            <h1 class="gallery__title">Amanda & Jason’s Wedding</h1>
+            <div class="gallery__description">Rockhaven, Grabouw</div>
+            <div class="gallery__date">31 Jul, 2014</div>
+        </div>
+        <nav class="nav nav--primary" role="navigation" data-component="nav">
+            <ol class="list">
+                <li><a href="view.html"><span class="icon fa fa-user" aria-hidden="true"></span>Account</a></li>
+                <li><a href="view.html"><span class="icon fa fa-heart" aria-hidden="true"></span>Favourites</a></li>
+                <li class="is-active"><a href="cart.html"><span class="icon fa fa-shopping-cart" aria-hidden="true"></span>Cart</a></li>
+                <li><a href="view.html"><span class="icon fa fa-power-off" aria-hidden="true"></span><span class="hide-large">Sign Out</span></a></li>
+            </ol>
+        </nav>
+        <button class="btn btn--menu" data-toggle="nav"><span class="icon fa fa-bars" aria-hidden="true"></span>Menu</button>
+    </header>
+
+    <main class="l-main" role="main">
+        <div class="l-wrapper">
+            <div class="cart">
+                <h2 class="cart__title">Shopping Cart</h2>
+                <p>Please review the items in your cart below.</p>
+
+                <div class="cart__table">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>Items</th>
+                            <th></th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><img src="http://placehold.it/80x120" width="80" height="120" alt=""></td>
+                            <td><b>Canvas</b> 8x12 <a class="btn btn--small" href="products.html">Edit Crop</a></td>
+                            <td class="no-wrap">
+                                <a class="btn btn--small" href="cart.html"><span class="icon fa fa-minus" aria-hidden="true"></span></a> 1 <a class="btn btn--small" href="products.html"><span class="icon fa fa-plus" aria-hidden="true"></span></a>
+                            </td>
+                            <td>R172.00</td>
+                            <td><a class="btn btn--small" href="cart.html" title="Remove item from cart"><span class="icon fa fa-times" aria-hidden="true"></span></a></td>
+                        </tr>
+                        <tr>
+                            <td><img src="http://placehold.it/70x100" width="70" height="100" alt=""></td>
+                            <td><b>Print</b> 7x10 <a class="btn btn--small" href="products.html">Edit Crop</a></td>
+                            <td class="no-wrap">
+                                <a class="btn btn--small" href="cart.html"><span class="icon fa fa-minus" aria-hidden="true"></span></a> 2 <a class="btn btn--small" href="products.html"><span class="icon fa fa-plus" aria-hidden="true"></span></a>
+                            </td>
+                            <td>R491.00</td>
+                            <td><a class="btn btn--small" href="cart.html" title="Remove item from cart"><span class="icon fa fa-times" aria-hidden="true"></span></a></td>
+                        </tr>
+                        </tbody>
+                        <tfoot>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>Sub-total:</td>
+                            <td><b>R1,154.00</b></td>
+                            <td></td>
+                        </tr>
+                        </tfoot>
+                    </table>
+                </div>
+
+                <div class="btn-group">
+                    <a class="btn" href="view.html">Keep Shopping</a>
+                    <a class="btn btn--black" href="cart.html">Checkout</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer footer--primary" role="contentinfo">
+        <div class="l-wrapper">
+            <a href="list.html" class="logo"><img src="../assets/images/logos/logo-doubleexposure-308x50.png" width="308" height="50" alt="DoubleExposure"></a>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/vendor/jquery.js?v=0.2.13"></script>
+    <script src="../assets/js/plugins.js?v=0.2.13"></script>
+    <script src="../assets/js/main.js?v=0.2.13"></script>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+    <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+    </script>
+</body>
+</html>

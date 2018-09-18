@@ -1,0 +1,2716 @@
+<!doctype html>
+<html lang="en" class="sg-html">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Patterns – OrderIn</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,700" />
+
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="assets/css/style.css?v=2.1.2" />
+    <link rel="stylesheet" href="assets/css/styleguide.css?v=2.1.2" />
+
+    <!--[if lt IE 9]>
+    <script src="assets/js/vendor/polyfills.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!--[if lt IE 9]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/?locale=en">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <header class="sg-header sg-header--primary" role="banner">
+        <a href="index.html" title="OrderIn" class="logo"><img src="assets/images/logos/logo-orderin-208x50.png" width="208" height="50" alt="OrderIn Logo" /></a>
+        <nav class="sg-nav sg-nav--primary" role="navigation">
+            <ol class="sg-list">
+                <li><a href="elements.html">Elements</a></li>
+                <li class="is-active"><a href="patterns.html">Patterns</a></li>
+                <li><a href="forms.html">Forms</a></li>
+                <li><a href="grid.html">Grid</a></li>
+                <li><a href="templates">Templates</a></li>
+            </ol>
+        </nav>
+        <button class="sg-btn sg-btn--nav" data-sg-toggle="nav"><span class="icon icon--left fa fa-bars" aria-hidden="true"></span>Menu</button>
+    </header>
+
+    <main class="sg-main" role="main">
+        <div id="sg-patchwork" class="sg-section sg-section--well is-hidden">
+            <p class="sg-paragraph sg-paragraph--intro">
+                <span class="icon sg-icon fa fa-info-circle" aria-hidden="true"></span>This is the patchwork view which doesn’t include the markup preview and usage examples. This view is particularly useful for device testing because it shows elements at full-width, presented on the page as they would appear on the site.
+            </p>
+            <button class="sg-btn sg-btn--toggle" data-sg-toggle="styleguide"><span class="icon icon--left fa fa-reply" aria-hidden="true"></span>Style Guide</button>
+        </div>
+
+        <section id="sg-navigation" class="sg-section">
+            <header class="sg-header sg-header--section">
+                <h1 class="epsilon hN">Navigation</h1>
+            </header>
+
+            <h2 class="zeta sg-heading sg-heading--spacer">Default</h2>
+            <div style="background-color: #991e01; padding: 2% 2% 1.5% 2%">
+                <nav class="nav" role="navigation" data-component="nav">
+                    <ol class="list">
+                        <li><a href="patterns.html#sg-navigation"><span class="icon fa fa-lock"></span>Sign In</a></li>
+                        <li><a href="patterns.html#sg-navigation"><span class="icon fa fa-desktop" aria-hidden="true"></span>Register</a></li>
+                    </ol>
+                </nav>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><nav class="nav" role="navigation" data-component="nav">
+    <ol class="list">
+        <li><a href="#"><span class="icon fa fa-lock"></span>Sign In</a></li>
+        <li><a href="#"><span class="icon fa fa-desktop"></span>Register</a></li>
+    </ol>
+</nav></code></pre>
+            </div>
+
+            <h2 class="zeta sg-heading sg-heading--spacer">Signed In</h2>
+            <div style="background-color: #991e01; padding: 2% 2% 1.5% 2%">
+                <nav class="nav" role="navigation" data-component="nav">
+                    <ol class="list">
+                        <li class="nav__label">Hi, Dinesh</li>
+                        <li data-drop-down="true">
+                            <a href="patterns.html#sg-navigation"><span class="icon fa fa-user"></span>My Account</a>
+                            <ol class="list">
+                                <li class="is-label"><a><span class="orange-light">My Balance:</span> <b>R361.00</b></a></li>
+                                <li><a href="patterns.html#sg-navigation">My Profile</a></li>
+                                <li><a href="patterns.html#sg-navigation">My Orders</a></li>
+                                <li><a href="patterns.html#sg-navigation">Address Book</a></li>
+                                <li><a href="patterns.html#sg-navigation">Manage Allocations</a></li>
+                                <li><a href="patterns.html#sg-navigation">Top Up Account</a></li>
+                            </ol>
+                        </li>
+                        <li><a href="patterns.html#sg-navigation"><span class="icon fa fa-power-off"></span>Sign Out</a></li>
+                    </ol>
+                </nav>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><nav class="nav" role="navigation" data-component="nav">
+    <ol class="list">
+        <li class="nav__label">Hi, Dinesh</li>
+        <li data-drop-down="true">
+            <a href="#"><span class="icon fa fa-user"></span>My Account</a>
+            <ol class="list">
+                <li class="is-label"><a><span class="orange-light">My Balance:</span> <b>R361.00</b></a></li>
+                <li><a href="#">My Profile</a></li>
+            </ol>
+        </li>
+        <li><a href="#"><span class="icon fa fa-power-off"></span>Sign Out</a></li>
+    </ol>
+</nav></code></pre>
+            </div>
+        </section>
+
+        <section id="sg-navigation-vertical" class="sg-section">
+            <header class="sg-header sg-header--section">
+                <h1 class="epsilon hN">Navigation – Vertical</h1>
+            </header>
+
+            <h2 class="zeta sg-heading sg-heading--spacer">Default</h2>
+            <nav class="nav nav--vertical" role="navigation" data-component="nav-vertical">
+                <ol class="list">
+                    <li><a href="patterns.html#sg-navigation"><span class="icon fa fa-lock"></span>Sign In</a></li>
+                    <li><a href="patterns.html#sg-navigation"><span class="icon fa fa-desktop" aria-hidden="true"></span>Register</a></li>
+                </ol>
+            </nav>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><nav class="nav nav--vertical" role="navigation" data-component="nav-vertical">
+    <ol class="list">
+        <li><a href="#"><span class="icon fa fa-lock"></span>Sign In</a></li>
+        <li><a href="#"><span class="icon fa fa-desktop"></span>Register</a></li>
+    </ol>
+</nav></code></pre>
+            </div>
+
+            <h2 class="zeta sg-heading sg-heading--spacer">Signed In</h2>
+            <nav class="nav nav--vertical" role="navigation" data-component="nav-vertical">
+                <ol class="list">
+                    <li class="nav__label nav__label--small">Hi, Dinesh</li>
+                    <li class="nav__label"><span class="orange-light">My Balance:</span> <b>R361.00</b></li>
+                    <li><a href="patterns.html#sg-navigation">My Profile</a></li>
+                    <li><a href="patterns.html#sg-navigation">My Orders</a></li>
+                    <li><a href="patterns.html#sg-navigation">Address Book</a></li>
+                    <li><a href="patterns.html#sg-navigation">Manage Allocations</a></li>
+                    <li><a href="patterns.html#sg-navigation">Top Up Account</a></li>
+                    <li><a href="patterns.html#sg-navigation"><span class="icon fa fa-power-off"></span>Sign Out</a></li>
+                </ol>
+            </nav>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><nav class="nav nav--vertical" role="navigation" data-component="nav-vertical">
+    <ol class="list">
+        <li class="nav__label nav__label--small">Hi, Dinesh</li>
+        <li class="nav__label"><span class="orange-light">My Balance:</span> <b>R361.00</b></li>
+        <li><a href="#">My Profile</a></li>
+        <li><a href="#"><span class="icon fa fa-power-off"></span>Sign Out</a></li>
+    </ol>
+</nav></code></pre>
+            </div>
+        </section>
+
+        <section id="sg-accordion" class="sg-section">
+            <header class="sg-header sg-header--section">
+                <h1 class="epsilon hN">Accordion</h1>
+            </header>
+
+            <h2 class="zeta sg-heading sg-heading--spacer">Default</h2>
+            <div class="accordion" data-component="accordion" role="tablist">
+                <div class="accordion-item is-selected" role="tab" aria-selected="true" aria-hidden="false">
+                    <div id="accordion-tab-1" class="accordion-item__title" aria-controls="accordion-panel-1" role="tab">
+                        <a class="accordion-item__link" href="patterns.html#sg-accordion" data-icon-up="fa-caret-up" data-icon-down="fa-caret-down">Lorem ipsum dolor sit amet 1<span class="icon fa fa-caret-up" aria-hidden="true"></span></a>
+                    </div>
+                    <div id="accordion-panel-1" class="accordion-item__contents" aria-labelledby="accordion-tab-1" role="tabpanel">
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                    </div>
+                </div>
+                <div class="accordion-item" role="tab" aria-selected="false" aria-hidden="true">
+                    <div id="accordion-tab-2" class="accordion-item__title" aria-controls="accordion-panel-2" role="tab">
+                        <a class="accordion-item__link" href="patterns.html#sg-accordion" data-icon-up="fa-caret-up" data-icon-down="fa-caret-down">Lorem ipsum dolor sit amet 2<span class="icon fa fa-caret-down" aria-hidden="true"></span></a>
+                    </div>
+                    <div id="accordion-panel-2" class="accordion-item__contents" aria-labelledby="accordion-tab-2" role="tabpanel">
+                        <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+                    </div>
+                </div>
+                <div class="accordion-item" role="tab" aria-selected="false" aria-hidden="true">
+                    <div id="accordion-tab-3" class="accordion-item__title" aria-controls="accordion-panel-3" role="tab">
+                        <a class="accordion-item__link" href="patterns.html#sg-accordion" data-icon-up="fa-caret-up" data-icon-down="fa-caret-down">Lorem ipsum dolor sit amet 3<span class="icon fa fa-caret-down" aria-hidden="true"></span></a>
+                    </div>
+                    <div id="accordion-panel-3" class="accordion-item__contents" aria-labelledby="accordion-tab-3" role="tabpanel">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><div class="accordion" data-component="accordion" role="tablist">
+    <div class="accordion-item is-selected" role="tab" aria-selected="true" aria-hidden="false">
+        <div id="accordion-tab-1" class="accordion-item__title" aria-controls="accordion-panel-1" role="tab">
+            <a class="accordion-item__link" href="#" data-icon-up="fa-caret-up" data-icon-down="fa-caret-down">
+                Lorem ipsum dolor sit amet 1<span class="icon fa fa-caret-up" aria-hidden="true"></span>
+            </a>
+        </div>
+        <div id="accordion-panel-1" class="accordion-item__contents" aria-labelledby="accordion-tab-1" role="tabpanel">
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium…</p>
+        </div>
+    </div>
+</div></code></pre>
+            </div>
+
+            <h2 class="zeta sg-heading sg-heading--spacer">Large</h2>
+            <div class="accordion accordion--large" data-component="accordion" role="tablist">
+                <div class="accordion-item is-selected" role="tab" aria-selected="true" aria-hidden="false">
+                    <div id="accordion-tab-4" class="accordion-item__title" aria-controls="accordion-panel-4" role="tab">
+                        <a class="accordion-item__link" href="patterns.html#sg-accordion" data-icon-up="fa-caret-up" data-icon-down="fa-caret-down">Lorem ipsum dolor sit amet 1<span class="icon fa fa-caret-up" aria-hidden="true"></span></a>
+                    </div>
+                    <div id="accordion-panel-4" class="accordion-item__contents" aria-labelledby="accordion-tab-4" role="tabpanel">
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                    </div>
+                </div>
+                <div class="accordion-item" role="tab" aria-selected="false" aria-hidden="true">
+                    <div id="accordion-tab-5" class="accordion-item__title" aria-controls="accordion-panel-5" role="tab">
+                        <a class="accordion-item__link" href="patterns.html#sg-accordion" data-icon-up="fa-caret-up" data-icon-down="fa-caret-down">Lorem ipsum dolor sit amet 2<span class="icon fa fa-caret-down" aria-hidden="true"></span></a>
+                    </div>
+                    <div id="accordion-panel-5" class="accordion-item__contents" aria-labelledby="accordion-tab-5" role="tabpanel">
+                        <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+                    </div>
+                </div>
+                <div class="accordion-item" role="tab" aria-selected="false" aria-hidden="true">
+                    <div id="accordion-tab-6" class="accordion-item__title" aria-controls="accordion-panel-6" role="tab">
+                        <a class="accordion-item__link" href="patterns.html#sg-accordion" data-icon-up="fa-caret-up" data-icon-down="fa-caret-down">Lorem ipsum dolor sit amet 3<span class="icon fa fa-caret-down" aria-hidden="true"></span></a>
+                    </div>
+                    <div id="accordion-panel-6" class="accordion-item__contents" aria-labelledby="accordion-tab-6" role="tabpanel">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><div class="accordion accordion--large" data-component="accordion" role="tablist">
+    <div class="accordion-item is-selected" role="tab" aria-selected="true" aria-hidden="false">
+        <div id="accordion-tab-1" class="accordion-item__title" aria-controls="accordion-panel-1" role="tab">
+            <a class="#" data-icon-up="fa-caret-up" data-icon-down="fa-caret-down">
+                Lorem ipsum dolor sit amet 1<span class="icon fa fa-caret-up" aria-hidden="true"></span>
+            </a>
+        </div>
+        <div id="accordion-panel-1" class="accordion-item__contents" aria-labelledby="accordion-tab-1" role="tabpanel">
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium…</p>
+        </div>
+    </div>
+</div></code></pre>
+            </div>
+        </section>
+
+        <section id="sg-autocomplete" class="sg-section">
+            <header class="sg-header sg-header--section">
+                <h1 class="epsilon hN">Autocomplete</h1>
+            </header>
+
+            <form id="form-autocomplete" action="patterns.html#sg-autocomplete" method="post" class="form">
+                <label for="search" class="label label--medium">
+                    Enter your street address & suburb:
+                    <input class="input input--large" type="text" id="search" name="search" placeholder="e.g. 90 Victoria Road, Woodstock" maxlength="100" data-component="autocomplete" />
+                </label>
+            </form>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><form id="form" action="#" method="post" class="form">
+    <label for="search" class="label label--medium">
+        Enter your street address & suburb:
+        <input class="input input--large" type="text" id="search" name="search" placeholder="e.g. 90 Victoria Road, Woodstock" maxlength="100" data-component="autocomplete" />
+    </label>
+</form></code></pre>
+            </div>
+        </section>
+
+        <section id="sg-tabs" class="sg-section">
+            <header class="sg-header sg-header--section">
+                <h1 class="epsilon hN">Tabs</h1>
+            </header>
+
+            <div class="tabs" data-component="tabs">
+                <ol class="tab-list" role="tablist">
+                    <li id="tab-1" aria-controls="panel-1" role="tab" aria-selected="true" class="tab-list__tab is-selected">
+                        <a href="patterns.html#sg-tabs" class="tab-list__link">Corporate<span class="hide-small"> Account</span></a>
+                    </li>
+                    <li id="tab-2" aria-controls="panel-2" role="tab" aria-selected="false" class="tab-list__tab">
+                        <a href="patterns.html#sg-tabs" class="tab-list__link">Personal<span class="hide-small"> Payment</span></a>
+                    </li>
+                </ol>
+                <div id="panel-1" class="tab-panel is-active" role="tabpanel" aria-labelledby="tab-1" aria-hidden="false">
+                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+                </div>
+                <div id="panel-2" class="tab-panel" role="tabpanel" aria-labelledby="tab-2" aria-hidden="true">
+                    Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+                </div>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><div class="tabs" data-component="tabs">
+    <ol class="tab-list" role="tablist">
+        <li id="tab-1" aria-controls="panel-1" role="tab" aria-selected="true" class="tab-list__tab is-selected">
+            <a href="#" class="tab-list__link">Corporate<span class="hide-small"> Account</span></a>
+        </li>
+        <li id="tab-2" aria-controls="panel-2" role="tab" aria-selected="false" class="tab-list__tab">
+            <a href="#" class="tab-list__link">Personal<span class="hide-small"> Payment</span></a>
+        </li>
+    </ol>
+    <div id="panel-1" class="tab-panel is-active" role="tabpanel" aria-labelledby="tab-1" aria-hidden="false">
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium…
+    </div>
+    <div id="panel-2" class="tab-panel" role="tabpanel" aria-labelledby="tab-2" aria-hidden="true">
+        Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non…
+    </div>
+</div></code></pre>
+            </div>
+        </section>
+
+        <section id="sg-strapline" class="sg-section">
+            <header class="sg-header sg-header--section">
+                <h1 class="epsilon hN">Strapline</h1>
+            </header>
+
+            <div style="background-color: #a72101; padding: 4% 4% 3% 4%">
+                <h1 class="strapline"><b>Simply</b> order food online.</h1>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><h1 class="strapline"><b>Simply</b> order food online.</h1></code></pre>
+            </div>
+        </section>
+
+        <section id="sg-alerts" class="sg-section">
+            <header class="sg-header sg-header--section">
+                <h1 class="epsilon hN">Alerts</h1>
+            </header>
+
+            <div class="alert alert--success" role="alert" data-component="alert">
+                <div class="alert__title"><span class="icon fa fa-check" aria-hidden="true"></span>Success</div>
+                <p class="alert__message"><b>Well done!</b> You’ve successfully read <a class="alert__link" href="patterns.html#sg-alerts">this important alert message</a>.</p>
+                <form id="form-alert" action="patterns.html#sg-alerts" method="post" class="form">
+                    <label for="address" class="label">
+                        Your Address:
+                        <input class="input" type="text" id="address" name="address" maxlength="100" />
+                    </label>
+                    <div class="btn-group">
+                        <input id="check" name="check" class="btn btn--small btn--green-dark" value="Check Address" type="submit" />
+                        <a href="patterns.html#sg-alerts" class="btn btn--small btn--text">Never mind, I’ll pick it up</a>
+                    </div>
+                </form>
+                <button class="alert__dismiss" data-action="dismiss"><span class="icon fa fa-times-circle" aria-hidden="true"></span></button>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><div class="alert alert--success" role="alert" data-component="alert">
+    <div class="alert__title"><span class="icon fa fa-check" aria-hidden="true"></span>Success</div>
+    <p class="alert__message"><b>Well done!</b> You’ve successfully read <a class="alert__link" href="#">this important alert message</a>.</p>
+    <form id="form" action="#" method="post" class="form">
+        <label for="address" class="label">
+            Your Address:
+            <input class="input" type="text" id="address" name="address" maxlength="100" />
+        </label>
+        <div class="btn-group">
+            <input id="check" name="check" class="btn btn--small btn--green-dark" value="Check Address" type="submit" />
+            <a href="#" class="btn btn--small btn--text">Never mind, I’ll pick it up</a>
+        </div>
+    </form>
+    <button class="alert__dismiss" data-action="dismiss"><span class="icon fa fa-times-circle" aria-hidden="true"></span></button>
+</div></code></pre>
+            </div>
+
+            <div class="alert alert--warning" role="alert" data-component="alert">
+                <div class="alert__title"><span class="icon fa fa-exclamation-triangle" aria-hidden="true"></span>Warning!</div>
+                <p class="alert__message">Better <a class="alert__link" href="patterns.html#sg-alerts">check yourself</a>, you’re not looking too good.</p>
+                <a href="patterns.html#sg-alerts" class="btn btn--small btn--yellow"><span class="icon fa fa-user" aria-hidden="true"></span>Switch to Personal<span class="hide-medium"> Payment</span></a>
+                <button class="alert__dismiss" data-action="dismiss"><span class="icon fa fa-times-circle" aria-hidden="true"></span></button>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><div class="alert alert--warning" role="alert" data-component="alert">
+    <div class="alert__title"><span class="icon fa fa-exclamation-triangle" aria-hidden="true"></span>Warning!</div>
+    <p class="alert__message">Better <a class="alert__link" href="#">check yourself</a>, you’re not looking too good.</p>
+    <a href="#" class="btn btn--small btn--yellow"><span class="icon fa fa-user" aria-hidden="true"></span>Switch to Personal<span class="hide-medium"> Payment</span></a>
+    <button class="alert__dismiss" data-action="dismiss"><span class="icon fa fa-times-circle" aria-hidden="true"></span></button>
+</div></code></pre>
+            </div>
+
+            <div class="alert alert--error" role="alert" data-component="alert">
+                <div class="alert__title"><span class="icon fa fa-exclamation-circle" aria-hidden="true"></span>Error</div>
+                <p class="alert__message"><b>Oh snap!</b> Change a few things up and <a class="alert__link" href="patterns.html#sg-alerts">try submitting again</a>.</p>
+                <button class="alert__dismiss" data-action="dismiss"><span class="icon fa fa-times-circle" aria-hidden="true"></span></button>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><div class="alert alert--error" role="alert" data-component="alert">
+    <div class="alert__title"><span class="icon fa fa-exclamation-circle" aria-hidden="true"></span>Error</div>
+    <p class="alert__message"><b>Oh snap!</b> Change a few things up and <a class="alert__link" href="#">try submitting again</a>.</p>
+    <button class="alert__dismiss" data-action="dismiss"><span class="icon fa fa-times-circle" aria-hidden="true"></span></button>
+</div></code></pre>
+            </div>
+
+            <div class="alert" role="alert" data-component="alert">
+                <div class="alert__title"><span class="icon fa fa-info-circle" aria-hidden="true"></span>Default</div>
+                <p class="alert__message"><b>Heads up!</b> This <a class="alert__link" href="patterns.html#sg-alerts">alert needs your attention</a>, but it’s not super important.</p>
+                <button class="alert__dismiss" data-action="dismiss"><span class="icon fa fa-times-circle" aria-hidden="true"></span></button>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><div class="alert" role="alert" data-component="alert">
+    <div class="alert__title"><span class="icon fa fa-info-circle" aria-hidden="true"></span>Default</div>
+    <p class="alert__message"><b>Heads up!</b> This <a class="alert__link" href="#">alert needs your attention</a>, but it’s not super important.</p>
+    <button class="alert__dismiss" data-action="dismiss"><span class="icon fa fa-times-circle" aria-hidden="true"></span></button>
+</div></code></pre>
+            </div>
+        </section>
+
+        <section id="sg-notifications" class="sg-section">
+            <header class="sg-header sg-header--section">
+                <h1 class="epsilon hN">Notifications</h1>
+            </header>
+
+            <div style="background-image: url('assets/images/restaurants/restaurant-background-colcacchio-1680x1050.jpg'); overflow: hidden; padding: 4%">
+                <div class="notification" role="alert" data-component="alert">
+                    <span class="notification__icon fa fa-exclamation-triangle yellow" aria-hidden="true"></span>
+                    <div class="notification__title">This restaurant delivers.</div>
+                    <p class="notification__message">To find out if this restaurant delivers to your location, enter your address below, otherwise click “Place Pickup Order”.</p>
+                    <form id="notification-form-1" action="patterns.html#sg-notifications" method="post" class="form form--inline">
+                        <label for="address-1" class="label visuallyhidden">Enter your street address & suburb:</label>
+                        <input class="input" type="text" id="address-1" name="address-1" placeholder="e.g. 90 Victoria Road, Woodstock" maxlength="100" />
+                        <div class="btn-group">
+                            <input class="btn btn--small" type="submit" id="submit-1" value="Check Address" />
+                            <span class="btn-group__label btn-group__label--small">or</span>
+                            <a href="patterns.html#sg-notifications" class="btn btn--small btn--silver">Place Pickup Order</a>
+                        </div>
+                    </form>
+                    <button class="notification__dismiss" data-action="dismiss"><span class="icon fa fa-times-circle" aria-hidden="true"></span></button>
+                </div>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><div class="notification" role="alert" data-component="alert">
+    <span class="notification__icon fa fa-exclamation-triangle yellow" aria-hidden="true"></span>
+    <div class="notification__title">This restaurant delivers.</div>
+    <p class="notification__message">To find out if this restaurant delivers to your location, enter your address below, otherwise click “Place Pickup Order”.</p>
+    <form id="form-" action="#" method="post" class="form form--inline">
+        <label for="address-1" class="label visuallyhidden">Enter your street address & suburb:</label>
+        <input class="input" type="text" id="address-1" name="address-1" placeholder="e.g. 90 Victoria Road, Woodstock" maxlength="100" />
+        <div class="btn-group">
+            <input class="btn btn--small" type="submit" id="submit-1" value="Check Address" />
+            <span class="btn-group__label btn-group__label--small">or</span>
+            <a href="#" class="btn btn--small btn--silver">Place Pickup Order</a>
+        </div>
+    </form>
+    <button class="notification__dismiss" data-action="dismiss"><span class="icon fa fa-times-circle" aria-hidden="true"></span></button>
+</div></code></pre>
+            </div>
+
+            <div style="background-image: url('assets/images/restaurants/restaurant-background-colcacchio-1680x1050.jpg'); overflow: hidden; padding: 4%">
+                <div class="notification" role="alert" data-component="alert">
+                    <span class="notification__icon fa fa-info-circle green" aria-hidden="true"></span>
+                    <div class="notification__title">This restaurant delivers.</div>
+                    <p class="notification__message">You’re placing a pickup order. But if you’d like to see if it can be it delivered to your location, enter your address below.</p>
+                    <form id="notification-form-4" action="patterns.html#sg-notifications" method="post" class="form form--inline">
+                        <label for="address-3" class="label visuallyhidden">Enter your street address & suburb:</label>
+                        <input class="input" type="text" id="address-3" name="address-3" placeholder="e.g. 90 Victoria Road, Woodstock" maxlength="100" />
+                        <div class="btn-group">
+                            <input class="btn btn--small" type="submit" id="submit-3" value="Check Address" />
+                        </div>
+                    </form>
+                    <button class="notification__dismiss" data-action="dismiss"><span class="icon fa fa-times-circle" aria-hidden="true"></span></button>
+                </div>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><div class="notification" role="alert" data-component="alert">
+    <span class="notification__icon fa fa-info-circle green" aria-hidden="true"></span>
+    <div class="notification__title">This restaurant delivers.</div>
+    <p class="notification__message">You’re placing a pickup order. But if you’d like to see if it can be it delivered to your location, enter your address below.</p>
+    <form id="form" action="#" method="post" class="form form--inline">
+        <label for="address-3" class="label visuallyhidden">Enter your street address & suburb:</label>
+        <input class="input" type="text" id="address-3" name="address-3" placeholder="e.g. 90 Victoria Road, Woodstock" maxlength="100" />
+        <div class="btn-group">
+            <input class="btn btn--small" type="submit" id="submit-3" value="Check Address" />
+        </div>
+    </form>
+    <button class="notification__dismiss" data-action="dismiss"><span class="icon fa fa-times-circle" aria-hidden="true"></span></button>
+</div></code></pre>
+            </div>
+
+            <div style="background-image: url('assets/images/restaurants/restaurant-background-colcacchio-1680x1050.jpg'); overflow: hidden; padding: 4%">
+                <div class="notification" role="alert" data-component="alert">
+                    <span class="notification__icon fa fa-exclamation-triangle yellow" aria-hidden="true"></span>
+                    <div class="notification__title">This restaurant does not currently deliver to your location.</div>
+                    <p class="notification__message">But <b>Col’cacchio Cavendish Square</b> does. You can view their menu or place a pickup order instead.</p>
+                    <div class="btn-group btn-group--left">
+                        <a href="patterns.html#sg-notifications" class="btn btn--small">
+                            View<span class="hide-medium hide-large"> restaurant</span> menu<span class="hide-small"> for <b>Col’cacchio Cavendish Square</b></span>
+                        </a>
+                        <span class="btn-group__label btn-group__label--small">or</span>
+                        <a href="patterns.html#sg-notifications" class="btn btn--small btn--silver">Place Pickup Order</a>
+                    </div>
+                    <button class="notification__dismiss" data-action="dismiss"><span class="icon fa fa-times-circle" aria-hidden="true"></span></button>
+                </div>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><div class="notification" role="alert" data-component="alert">
+    <span class="notification__icon fa fa-exclamation-triangle yellow" aria-hidden="true"></span>
+    <div class="notification__title">This restaurant does not currently deliver to your location.</div>
+    <p class="notification__message">But <b>Col’cacchio Cavendish Square</b> does. You can view their menu or place a pickup order instead.</p>
+    <div class="btn-group btn-group--left">
+        <a href="#" class="btn btn--small">
+            View<span class="hide-medium hide-large"> restaurant</span> menu<span class="hide-small"> for <b>Col’cacchio Cavendish Square</b></span>
+        </a>
+        <span class="btn-group__label btn-group__label--small">or</span>
+        <a href="#" class="btn btn--small btn--silver">Place Pickup Order</a>
+    </div>
+    <button class="notification__dismiss" data-action="dismiss"><span class="icon fa fa-times-circle" aria-hidden="true"></span></button>
+</div></code></pre>
+            </div>
+
+            <div style="background-image: url('assets/images/restaurants/restaurant-background-colcacchio-1680x1050.jpg'); overflow: hidden; padding: 4%">
+                <div class="notification" role="alert" data-component="alert">
+                    <span class="notification__icon fa fa-exclamation-triangle yellow" aria-hidden="true"></span>
+                    <div class="notification__title"><b>Col’cacchio Cavendish Square</b> does not currently deliver to your location.</div>
+                    <p class="notification__message">You can place a pickup order instead.</p>
+                    <div class="btn-group btn-group--left">
+                        <a href="patterns.html#sg-notifications" class="btn btn--small">Place Pickup Order</a>
+                    </div>
+                    <button class="notification__dismiss" data-action="dismiss"><span class="icon fa fa-times-circle" aria-hidden="true"></span></button>
+                </div>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><div class="notification" role="alert" data-component="alert">
+    <span class="notification__icon fa fa-exclamation-triangle yellow" aria-hidden="true"></span>
+    <div class="notification__title"><b>Col’cacchio Cavendish Square</b> does not currently deliver to your location.</div>
+    <p class="notification__message">You can place a pickup order instead.</p>
+    <div class="btn-group btn-group--left">
+        <a href="#" class="btn btn--small">Place Pickup Order</a>
+    </div>
+    <button class="notification__dismiss" data-action="dismiss"><span class="icon fa fa-times-circle" aria-hidden="true"></span></button>
+</div></code></pre>
+            </div>
+
+            <div style="background-image: url('assets/images/restaurants/restaurant-background-colcacchio-1680x1050.jpg'); overflow: hidden; padding: 4%">
+                <div class="notification" role="alert" data-component="alert">
+                    <span class="notification__icon fa fa-check-circle green" aria-hidden="true"></span>
+                    <div class="notification__title">This restaurant delivers to <b>90 Victoria Road, Woodstock</b>.</div>
+                    <form id="notification-form-3" action="patterns.html#sg-notifications" method="post" class="form form--inline">
+                        <label for="delivery-2" class="label label--inline label--medium">
+                            <input id="delivery-2" type="radio" name="order-type-2" value="1" checked="checked" /> Delivery
+                        </label>
+                        <label for="pickup-2" class="label label--inline label--medium">
+                            <input id="pickup-2" type="radio" name="order-type-2" value="1" /> Pickup
+                        </label>
+                    </form>
+                    <button class="notification__dismiss" data-action="dismiss"><span class="icon fa fa-times-circle" aria-hidden="true"></span></button>
+                </div>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><div class="notification" role="alert" data-component="alert">
+    <span class="notification__icon fa fa-check-circle green" aria-hidden="true"></span>
+    <div class="notification__title">This restaurant delivers to <b>90 Victoria Road, Woodstock</b>.</div>
+    <form id="form" action="#" method="post" class="form form--inline">
+        <label for="delivery-2" class="label label--inline label--medium">
+            <input id="delivery-2" type="radio" name="order-type-2" value="1" checked="checked" /> Delivery
+        </label>
+        <label for="pickup-2" class="label label--inline label--medium">
+            <input id="pickup-2" type="radio" name="order-type-2" value="1" /> Pickup
+        </label>
+    </form>
+    <button class="notification__dismiss" data-action="dismiss"><span class="icon fa fa-times-circle" aria-hidden="true"></span></button>
+</div></code></pre>
+            </div>
+
+            <div style="background-image: url('assets/images/restaurants/restaurant-background-colcacchio-1680x1050.jpg'); overflow: hidden; padding: 4%">
+                <div class="notification" role="alert" data-component="alert">
+                    <span class="notification__icon fa fa-info-circle green" aria-hidden="true"></span>
+                    <div class="notification__title">This restaurant does not deliver. <b>Your order will be placed for pickup</b>.</div>
+                    <button class="notification__dismiss" data-action="dismiss"><span class="icon fa fa-times-circle" aria-hidden="true"></span></button>
+                </div>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><div class="notification" role="alert" data-component="alert">
+    <span class="notification__icon fa fa-info-circle green" aria-hidden="true"></span>
+    <div class="notification__title">This restaurant does not deliver. <b>Your order will be placed for pickup</b>.</div>
+    <button class="notification__dismiss" data-action="dismiss"><span class="icon fa fa-times-circle" aria-hidden="true"></span></button>
+</div></code></pre>
+            </div>
+
+            <div style="background-image: url('assets/images/restaurants/restaurant-background-colcacchio-1680x1050.jpg'); overflow: hidden; padding: 4%">
+                <div class="notification" role="alert" data-component="alert">
+                    <span class="notification__icon fa fa-info-circle green" aria-hidden="true"></span>
+                    <div class="notification__title">This restaurant does not deliver to your location. <b>Your order will be placed for pickup</b>.</div>
+                    <button class="notification__dismiss" data-action="dismiss"><span class="icon fa fa-times-circle" aria-hidden="true"></span></button>
+                </div>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><div class="notification" role="alert" data-component="alert">
+    <span class="notification__icon fa fa-info-circle green" aria-hidden="true"></span>
+    <div class="notification__title">This restaurant does not deliver to your location. <b>Your order will be placed for pickup</b>.</div>
+    <button class="notification__dismiss" data-action="dismiss"><span class="icon fa fa-times-circle" aria-hidden="true"></span></button>
+</div></code></pre>
+            </div>
+        </section>
+
+        <section id="sg-steps" class="sg-section">
+            <header class="sg-header sg-header--section">
+                <h1 class="epsilon hN">Steps</h1>
+            </header>
+
+            <div class="steps">
+                <ol class="list">
+                    <li><span class="icon fa fa-map-marker" aria-hidden="true"></span><a href="patterns.html#sg-steps">Enter Your Address</a></li>
+                    <li class="is-active"><span class="icon fa fa-home" aria-hidden="true"></span>Pick a Restaurant</li>
+                    <li><span class="icon fa fa-cutlery" aria-hidden="true"></span>Order Food</li>
+                    <li><span class="icon fa fa-shopping-cart" aria-hidden="true"></span>Checkout</li>
+                </ol>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><div class="steps">
+    <ol class="list">
+        <li><span class="icon fa fa-map-marker" aria-hidden="true"></span><a href="#">Enter Your Address</a></li>
+        <li class="is-active"><span class="icon fa fa-home" aria-hidden="true"></span>Pick a Restaurant</li>
+        <li><span class="icon fa fa-cutlery" aria-hidden="true"></span>Order Food</li>
+        <li><span class="icon fa fa-shopping-cart" aria-hidden="true"></span>Checkout</li>
+    </ol>
+</div></code></pre>
+            </div>
+        </section>
+
+        <section id="sg-search-result" class="sg-section">
+            <header class="sg-header sg-header--section">
+                <h1 class="epsilon hN">Search Result</h1>
+            </header>
+
+            <div class="search-result">
+                <div class="search-result__count">Showing <b>(39)</b> delivery restaurants for <span class="search-result__label">your current location</span></div>
+                <div class="search-result__address">178 Upper Crown Street, Observatory, 7925</div>
+                <a href="patterns.html#sg-search-result" class="btn btn--small btn--silver"><span class="icon fa fa-map-marker" aria-hidden="true"></span>Change Address</a>
+                <form id="form-result" action="patterns.html#sg-search-result" method="post" class="form">
+                    <label for="delivery" class="label label--inline label--medium">
+                        <input id="delivery" type="radio" name="order-type" value="1" checked="checked" /> Delivery
+                    </label>
+                    <label for="pickup" class="label label--inline label--medium">
+                        <input id="pickup" type="radio" name="order-type" value="1" /> Pickup
+                    </label>
+                </form>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><div class="search-result">
+    <div class="search-result__count">Showing <b>(39)</b> delivery restaurants for <span class="search-result__label">your current location</span></div>
+    <div class="search-result__address">178 Upper Crown Street, Observatory, 7925</div>
+    <a href="#" class="btn btn--small btn--silver"><span class="icon fa fa-map-marker" aria-hidden="true"></span>Change Address</a>
+    <form id="form" action="#" method="post" class="form">
+        <label for="delivery" class="label label--inline label--medium">
+            <input id="delivery" type="radio" name="order-type" value="1" checked="checked" /> Delivery
+        </label>
+        <label for="pickup" class="label label--inline label--medium">
+            <input id="pickup" type="radio" name="order-type" value="1" /> Pickup
+        </label>
+    </form>
+</div></code></pre>
+            </div>
+        </section>
+
+        <section id="sg-restaurant" class="sg-section">
+            <header class="sg-header sg-header--section">
+                <h1 class="epsilon hN">Restaurant</h1>
+            </header>
+
+            <h2 class="zeta sg-heading sg-heading--spacer">Default</h2>
+            <div class="restaurant">
+                <img class="restaurant__img" src="assets/images/restaurants/logos/logo-col-cacchio-50x50.png" width="50" height="50" alt="Col’cacchio Logo" />
+                <div class="restaurant-details">
+                    <h4 class="restaurant__title">Col’cacchio Pizzeria</h4>
+                    <p class="restaurant__address">Shop G2 & G4, Cavendish Connect, Cavendish Square, Cape Town</p>
+                    <p class="restaurant__synopsis">We’re the reason you crave pizza!</p>
+                </div>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><div class="restaurant">
+    <img class="restaurant__img" src="assets/images/restaurants/logos/logo-col-cacchio-50x50.png" width="50" height="50" alt="Col’cacchio Logo" />
+    <div class="restaurant-details">
+        <h4 class="restaurant__title">Col’cacchio Pizzeria</h4>
+        <p class="restaurant__address">Shop G2 & G4, Cavendish Connect, Cavendish Square, Cape Town</p>
+        <p class="restaurant__synopsis">We’re the reason you crave pizza!</p>
+    </div>
+</div></code></pre>
+            </div>
+
+            <h2 class="zeta sg-heading sg-heading--spacer">Closed</h2>
+            <div class="restaurant restaurant--closed">
+                <img class="restaurant__img" src="assets/images/restaurants/logos/logo-simply-asia-50x50.png" width="50" height="50" alt="Simply Asia" />
+                <div class="restaurant-details">
+                    <h4 class="restaurant__title">Simply Asia</h4>
+                    <p class="restaurant__address">96 Shortmarket Street, Cape Town</p>
+                    <p class="restaurant__synopsis">Authentic Thai. Made simple.</p>
+                </div>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><div class="restaurant restaurant--closed">
+    <img class="restaurant__img" src="assets/images/restaurants/logos/logo-simply-asia-50x50.png" width="50" height="50" alt="Simply Asia" />
+    <div class="restaurant-details">
+        <h4 class="restaurant__title">Simply Asia</h4>
+        <p class="restaurant__address">96 Shortmarket Street, Cape Town</p>
+        <p class="restaurant__synopsis">Authentic Thai. Made simple.</p>
+    </div>
+</div></code></pre>
+            </div>
+        </section>
+
+        <section id="sg-restaurant-meta" class="sg-section">
+            <header class="sg-header sg-header--section">
+                <h1 class="epsilon hN">Restaurant – Meta</h1>
+            </header>
+
+            <h2 class="zeta sg-heading sg-heading--spacer">Default</h2>
+            <div class="restaurant-meta">
+                <ol class="restaurant-meta__list">
+                    <li class="restaurant-meta__item">
+                        <span class="icon fa fa-taxi" aria-hidden="true"></span>Delivery & Pickup
+                    </li>
+                    <li class="restaurant-meta__item">
+                        <span class="icon fa fa-map-marker" aria-hidden="true"></span>4.5 km
+                    </li>
+                    <li class="restaurant-meta__item">
+                        <span class="icon fa fa-clock-o" aria-hidden="true"></span>35 min
+                    </li>
+                    <li class="restaurant-meta__item">
+                        <span class="icon fa fa-usd" aria-hidden="true"></span>R50.00 delivery fee
+                    </li>
+                </ol>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><div class="restaurant-meta">
+    <ol class="restaurant-meta__list">
+        <li class="restaurant-meta__item">
+            <span class="icon fa fa-taxi" aria-hidden="true"></span>Delivery & Pickup
+        </li>
+        <li class="restaurant-meta__item">
+            <span class="icon fa fa-map-marker" aria-hidden="true"></span>4.5 km
+        </li>
+        <li class="restaurant-meta__item">
+            <span class="icon fa fa-clock-o" aria-hidden="true"></span>35 min
+        </li>
+        <li class="restaurant-meta__item">
+            <span class="icon fa fa-usd" aria-hidden="true"></span>R50.00 delivery fee
+        </li>
+    </ol>
+</div></code></pre>
+            </div>
+
+            <h2 class="zeta sg-heading sg-heading--spacer">Order</h2>
+            <div class="restaurant-meta restaurant-meta--order">
+                <ol class="restaurant-meta__list">
+                    <li class="restaurant-meta__item">
+                        <b>Delivery Fee:</b> R20
+                    </li>
+                    <li class="restaurant-meta__item">
+                        <span class="icon fa fa-map-marker" aria-hidden="true"></span>4.5 km
+                    </li>
+                    <li class="restaurant-meta__item">
+                        <a href="patterns.html#sg-restaurant-meta" class="btn btn--small">Order Now</a>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><div class="restaurant-meta restaurant-meta--order">
+    <ol class="restaurant-meta__list">
+        <li class="restaurant-meta__item">
+            <b>Delivery Fee:</b> R20
+        </li>
+        <li class="restaurant-meta__item">
+            <span class="icon fa fa-map-marker" aria-hidden="true"></span>4.5 km
+        </li>
+        <li class="restaurant-meta__item">
+            <a href="#" class="btn btn--small">Order Now</a>
+        </li>
+    </ol>
+</div></code></pre>
+            </div>
+
+            <h2 class="zeta sg-heading sg-heading--spacer">Closed</h2>
+            <div class="restaurant-meta restaurant-meta--closed">
+                <ol class="restaurant-meta__list">
+                    <li class="restaurant-meta__item">
+                        <span class="icon fa fa-taxi" aria-hidden="true"></span><div class="restaurant-meta__status yellow"><span class="icon fa fa-exclamation-triangle" aria-hidden="true"></span>Closed</div>
+                    </li>
+                    <li class="restaurant-meta__item">
+                        <span class="icon fa fa-map-marker" aria-hidden="true"></span>4.5 km
+                    </li>
+                    <li class="restaurant-meta__item">
+                        <span class="icon fa fa-clock-o" aria-hidden="true"></span>35 min
+                    </li>
+                </ol>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><div class="restaurant-meta restaurant-meta--closed">
+    <ol class="restaurant-meta__list">
+        <li class="restaurant-meta__item">
+            <span class="icon fa fa-taxi" aria-hidden="true"></span><div class="restaurant-meta__status yellow"><span class="icon fa fa-exclamation-triangle" aria-hidden="true"></span>Closed</div>
+        </li>
+        <li class="restaurant-meta__item">
+            <span class="icon fa fa-map-marker" aria-hidden="true"></span>4.5 km
+        </li>
+        <li class="restaurant-meta__item">
+            <span class="icon fa fa-clock-o" aria-hidden="true"></span>35 min
+        </li>
+    </ol>
+</div></code></pre>
+            </div>
+
+            <h2 class="zeta sg-heading sg-heading--spacer">Horizontal</h2>
+            <div class="restaurant-meta restaurant-meta--horizontal">
+                <ol class="restaurant-meta__list">
+                    <li class="restaurant-meta__item">
+                        <span class="icon fa fa-map-marker" aria-hidden="true"></span>Shop 20, Belvedere Square, c/o Keurboom & Belvedere Road, Claremont
+                    </li>
+                    <li class="restaurant-meta__item">
+                        <span class="icon fa fa-phone" aria-hidden="true"></span>(021) 674-0040
+                    </li>
+                    <li class="restaurant-meta__item">
+                        <span class="icon fa fa-clock-o" aria-hidden="true"></span>Sun – Thurs: 11h00 – 22h00 Fri – Sat: 11h00 – 23h00
+                    </li>
+                </ol>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><div class="restaurant-meta restaurant-meta--horizontal">
+    <ol class="restaurant-meta__list">
+        <li class="restaurant-meta__item">
+            <span class="icon fa fa-map-marker" aria-hidden="true"></span>Shop 20, Belvedere Square, c/o Keurboom & Belvedere Road, Claremont
+        </li>
+        <li class="restaurant-meta__item">
+            <span class="icon fa fa-phone" aria-hidden="true"></span>(021) 674-0040
+        </li>
+        <li class="restaurant-meta__item">
+            <span class="icon fa fa-clock-o" aria-hidden="true"></span>Sun – Thurs: 11h00 – 22h00 Fri – Sat: 11h00 – 23h00
+        </li>
+    </ol>
+</div></code></pre>
+            </div>
+        </section>
+
+        <section id="sg-restaurant-listing" class="sg-section">
+            <header class="sg-header sg-header--section">
+                <h1 class="epsilon hN">Restaurant Listing</h1>
+            </header>
+
+            <h2 class="zeta sg-heading sg-heading--spacer">Default</h2>
+            <div class="restaurants" data-component="clickable-items">
+                <ol class="list">
+                    <li>
+                        <div class="restaurant">
+                            <a class="restaurant__link" href="patterns.html#sg-restaurant-listing">
+                                <img class="restaurant__img" src="assets/images/restaurants/logos/logo-col-cacchio-50x50.png" width="50" height="50" alt="Col’cacchio Logo" />
+                                <div class="restaurant-details">
+                                    <h4 class="restaurant__title">Col’cacchio Pizzeria</h4>
+                                    <p class="restaurant__address">Shop G2 & G4, Cavendish Connect, Cavendish Square, Cape Town</p>
+                                    <p class="restaurant__synopsis">We’re the reason you crave pizza!</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="restaurant-meta">
+                            <ol class="restaurant-meta__list">
+                                <li class="restaurant-meta__item">
+                                    <span class="icon fa fa-taxi" aria-hidden="true"></span>Delivery & Pickup
+                                </li>
+                                <li class="restaurant-meta__item">
+                                    <span class="icon fa fa-map-marker" aria-hidden="true"></span>4.5 km
+                                </li>
+                                <li class="restaurant-meta__item">
+                                    <span class="icon fa fa-clock-o" aria-hidden="true"></span>35 min
+                                </li>
+                            </ol>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="restaurant">
+                            <a class="restaurant__link" href="patterns.html#sg-restaurant-listing">
+                                <img class="restaurant__img" src="assets/images/restaurants/logos/logo-primi-50x50.png" width="50" height="50" alt="Primi Piatti Logo" />
+                                <div class="restaurant-details">
+                                    <h4 class="restaurant__title">Primi</h4>
+                                    <p class="restaurant__address">51 Regent Road, Sea Point, Cape Town</p>
+                                    <p class="restaurant__synopsis">We love people. We love food.</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="restaurant-meta">
+                            <ol class="restaurant-meta__list">
+                                <li class="restaurant-meta__item">
+                                    <span class="icon fa fa-taxi" aria-hidden="true"></span>Delivery & Pickup
+                                </li>
+                                <li class="restaurant-meta__item">
+                                    <span class="icon fa fa-map-marker" aria-hidden="true"></span>4.5 km
+                                </li>
+                                <li class="restaurant-meta__item">
+                                    <span class="icon fa fa-clock-o" aria-hidden="true"></span>35 min
+                                </li>
+                            </ol>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="restaurant restaurant--closed">
+                            <a class="restaurant__link" href="patterns.html#sg-restaurant-listing">
+                                <img class="restaurant__img" src="assets/images/restaurants/logos/logo-simply-asia-50x50.png" width="50" height="50" alt="Simply Asia" />
+                                <div class="restaurant-details">
+                                    <h4 class="restaurant__title">Simply Asia</h4>
+                                    <p class="restaurant__address">96 Shortmarket Street, Cape Town</p>
+                                    <p class="restaurant__synopsis">Authentic Thai. Made simple.</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="restaurant-meta restaurant-meta--closed">
+                            <ol class="restaurant-meta__list">
+                                <li class="restaurant-meta__item">
+                                    <span class="icon fa fa-taxi" aria-hidden="true"></span><div class="restaurant-meta__status yellow"><span class="icon fa fa-exclamation-triangle" aria-hidden="true"></span>Closed</div>
+                                </li>
+                                <li class="restaurant-meta__item">
+                                    <span class="icon fa fa-map-marker" aria-hidden="true"></span>4.5 km
+                                </li>
+                                <li class="restaurant-meta__item">
+                                    <span class="icon fa fa-clock-o" aria-hidden="true"></span>35 min
+                                </li>
+                            </ol>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><div class="restaurants" data-component="clickable-items">
+    <ol class="list">
+        <li>
+            <div class="restaurant">
+                <a class="restaurant__link" href="#">
+                    <img class="restaurant__img" src="assets/images/restaurants/logos/logo-col-cacchio-50x50.png" width="50" height="50" alt="Col’cacchio Logo" />
+                    <div class="restaurant-details">
+                        <h4 class="restaurant__title">Col’cacchio Pizzeria</h4>
+                        <p class="restaurant__address">Shop G2 & G4, Cavendish Connect, Cavendish Square, Cape Town</p>
+                        <p class="restaurant__synopsis">We’re the reason you crave pizza!</p>
+                    </div>
+                </a>
+            </div>
+            <div class="restaurant-meta">
+                <ol class="restaurant-meta__list">
+                    <li class="restaurant-meta__item">
+                        <span class="icon fa fa-taxi" aria-hidden="true"></span>Delivery & Pickup
+                    </li>
+                    <li class="restaurant-meta__item">
+                        <span class="icon fa fa-map-marker" aria-hidden="true"></span>4.5 km
+                    </li>
+                    <li class="restaurant-meta__item">
+                        <span class="icon fa fa-clock-o" aria-hidden="true"></span>35 min
+                    </li>
+                </ol>
+            </div>
+        </li>
+        <li>
+            <div class="restaurant restaurant--closed">
+                <a class="restaurant__link" href="#">
+                    <img class="restaurant__img" src="assets/images/restaurants/logos/logo-simply-asia-50x50.png" width="50" height="50" alt="Simply Asia" />
+                    <div class="restaurant-details">
+                        <h4 class="restaurant__title">Simply Asia</h4>
+                        <p class="restaurant__address">96 Shortmarket Street, Cape Town</p>
+                        <p class="restaurant__synopsis">Authentic Thai. Made simple.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="restaurant-meta restaurant-meta--closed">
+                <ol class="restaurant-meta__list">
+                    <li class="restaurant-meta__item">
+                        <span class="icon fa fa-taxi" aria-hidden="true"></span><div class="restaurant-meta__status yellow"><span class="icon fa fa-exclamation-triangle" aria-hidden="true"></span>Closed</div>
+                    </li>
+                    <li class="restaurant-meta__item">
+                        <span class="icon fa fa-map-marker" aria-hidden="true"></span>4.5 km
+                    </li>
+                    <li class="restaurant-meta__item">
+                        <span class="icon fa fa-clock-o" aria-hidden="true"></span>35 min
+                    </li>
+                </ol>
+            </div>
+        </li>
+    </ol>
+</div></code></pre>
+            </div>
+
+            <h2 class="zeta sg-heading sg-heading--spacer">Branches</h2>
+            <div class="restaurants" data-component="clickable-items">
+                <ol class="list">
+                    <li>
+                        <div class="restaurant">
+                            <a class="restaurant__link" href="patterns.html#sg-restaurant-listing">
+                                <img class="restaurant__img" src="assets/images/restaurants/logos/logo-col-cacchio-50x50.png" width="50" height="50" alt="Col’cacchio Logo" />
+                                <div class="restaurant-details">
+                                    <h4 class="restaurant__title">Col’cacchio Cape Town</h4>
+                                    <p class="restaurant__address">Shop 2, Redefine North Wharf, 42 Hans Strijdom Avenue, Foreshore</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="restaurant-meta restaurant-meta--order">
+                            <ol class="restaurant-meta__list">
+                                <li class="restaurant-meta__item">
+                                    <b>Delivery Fee:</b> R20
+                                </li>
+                                <li class="restaurant-meta__item">
+                                    <span class="icon fa fa-map-marker" aria-hidden="true"></span>14.5 km
+                                </li>
+                                <li class="restaurant-meta__item">
+                                    <a href="patterns.html#sg-restaurant-listing" class="btn btn--small">Order Now</a>
+                                </li>
+                            </ol>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="restaurant">
+                            <a class="restaurant__link" href="patterns.html#sg-restaurant-listing">
+                                <img class="restaurant__img" src="assets/images/restaurants/logos/logo-col-cacchio-50x50.png" width="50" height="50" alt="Col’cacchio Logo" />
+                                <div class="restaurant-details">
+                                    <h4 class="restaurant__title">Col’cacchio Canal Walk</h4>
+                                    <p class="restaurant__address">Shop 167, Entrance 3, Lower Level, Canal Walk Shopping Centre, Century Boulevard, Century City</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="restaurant-meta restaurant-meta--order">
+                            <ol class="restaurant-meta__list">
+                                <li class="restaurant-meta__item">
+                                    <b>Delivery Fee:</b> R40
+                                </li>
+                                <li class="restaurant-meta__item">
+                                    <span class="icon fa fa-map-marker" aria-hidden="true"></span>3.5 km
+                                </li>
+                                <li class="restaurant-meta__item">
+                                    <a href="patterns.html#sg-restaurant-listing" class="btn btn--small">Order Now</a>
+                                </li>
+                            </ol>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="restaurant">
+                            <a class="restaurant__link" href="patterns.html#sg-restaurant-listing">
+                                <img class="restaurant__img" src="assets/images/restaurants/logos/logo-col-cacchio-50x50.png" width="50" height="50" alt="Col’cacchio Logo" />
+                                <div class="restaurant-details">
+                                    <h4 class="restaurant__title">Col’cacchio Cavendish</h4>
+                                    <p class="restaurant__address">Shop G2 & G4, Cavendish Connect, Cavendish Square</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="restaurant-meta restaurant-meta--order">
+                            <ol class="restaurant-meta__list">
+                                <li class="restaurant-meta__item">
+                                    <b>Delivery Fee:</b> R20
+                                </li>
+                                <li class="restaurant-meta__item">
+                                    <span class="icon fa fa-map-marker" aria-hidden="true"></span>4.5 km
+                                </li>
+                                <li class="restaurant-meta__item">
+                                    <a href="patterns.html#sg-restaurant-listing" class="btn btn--small">Order Now</a>
+                                </li>
+                            </ol>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><div class="restaurants" data-component="clickable-items">
+    <ol class="list">
+        <li>
+            <div class="restaurant">
+                <a class="restaurant__link" href="#">
+                    <img class="restaurant__img" src="assets/images/restaurants/logos/logo-col-cacchio-50x50.png" width="50" height="50" alt="Col’cacchio Logo" />
+                    <div class="restaurant-details">
+                        <h4 class="restaurant__title">Col’cacchio Cape Town</h4>
+                        <p class="restaurant__address">Shop 2, Redefine North Wharf, 42 Hans Strijdom Avenue, Foreshore</p>
+                    </div>
+                </a>
+            </div>
+            <div class="restaurant-meta restaurant-meta--order">
+                <ol class="restaurant-meta__list">
+                    <li class="restaurant-meta__item">
+                        <b>Delivery Fee:</b> R20
+                    </li>
+                    <li class="restaurant-meta__item">
+                        <span class="icon fa fa-map-marker" aria-hidden="true"></span>14.5 km
+                    </li>
+                    <li class="restaurant-meta__item">
+                        <a href="#" class="btn btn--small">Order Now</a>
+                    </li>
+                </ol>
+            </div>
+        </li>
+    </ol>
+</div></code></pre>
+            </div>
+        </section>
+
+        <section id="sg-menu" class="sg-section">
+            <header class="sg-header sg-header--section">
+                <h1 class="epsilon hN">Menu</h1>
+            </header>
+
+            <div class="menu">
+                <div class="menu-header">
+                    <div class="menu__title">Menu</div>
+                    <div class="legend">
+                        <ol class="list">
+                            <li><span class="icon fa fa-leaf green" aria-hidden="true"></span>Vegetarian</li>
+                            <li><span class="icon fa fa-leaf orange" aria-hidden="true"></span>Spicy</li>
+                            <li><span class="icon fa fa-leaf yellow" aria-hidden="true"></span>Mild</li>
+                            <li><img src="assets/images/logos/logo-momentum-multiply-30x30.png" width="30" height="30" title="Multiply" alt="" />Multiply</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="accordion" data-component="accordion" role="tablist">
+                    <div class="accordion-item is-selected" role="tab" aria-selected="true" aria-hidden="false">
+                        <div id="accordion-tab-7" class="accordion-item__title" aria-controls="accordion-panel-7" role="tab">
+                            <a class="accordion-item__link" href="patterns.html#sg-accordion" data-icon-up="fa-caret-up" data-icon-down="fa-caret-down">Starters<span class="icon fa fa-caret-up" aria-hidden="true"></span></a>
+                        </div>
+                        <div id="accordion-panel-7" class="accordion-item__contents" aria-labelledby="accordion-tab-7" role="tabpanel">
+                            <div class="menu-item">
+                                <div class="menu-item-description">
+                                    <div class="menu-item__title">Roast Peppers & Artichokes Salad</div>
+                                    <div class="menu-item__synopsis">Warm salad of roast peppers & artichokes.</div>
+                                </div>
+                                <div class="menu-item-utils">
+                                    <a href="patterns.html#sg-menu" class="btn btn--small btn--silver"><span class="icon fa fa-plus-circle" aria-hidden="true"></span>Add</a>
+                                    <div class="menu-item__price">R146.00</div>
+                                    <div class="legend legend--compact">
+                                        <ol class="list">
+                                            <li><span class="icon fa fa-leaf green" aria-hidden="true"></span></li>
+                                            <li><span class="icon fa fa-leaf orange" aria-hidden="true"></span></li>
+                                            <li><img src="assets/images/logos/logo-momentum-multiply-30x30.png" width="30" height="30" title="Multiply" alt="" /></li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu-item">
+                                <div class="menu-item-description">
+                                    <div class="menu-item__title">Half Shell Mussels</div>
+                                    <div class="menu-item__synopsis">Half shell mussels in cream, garlic & leek sauce.</div>
+                                </div>
+                                <div class="menu-item-utils">
+                                    <a href="patterns.html#sg-menu" class="btn btn--small btn--silver"><span class="icon fa fa-plus-circle" aria-hidden="true"></span>Add</a>
+                                    <div class="menu-item__price">R23.95</div>
+                                </div>
+                            </div>
+                            <div class="menu-item">
+                                <div class="menu-item-description">
+                                    <div class="menu-item__title">Springbok Carpaccio</div>
+                                    <div class="menu-item__synopsis">Served with pecorino shavings & herb pita.</div>
+                                </div>
+                                <div class="menu-item-utils">
+                                    <a href="patterns.html#sg-menu" class="btn btn--small btn--silver"><span class="icon fa fa-plus-circle" aria-hidden="true"></span>Add</a>
+                                    <div class="menu-item__price">R76.99</div>
+                                    <div class="legend legend--compact">
+                                        <ol class="list">
+                                            <li><span class="icon fa fa-leaf green" aria-hidden="true"></span></li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item" role="tab" aria-selected="false" aria-hidden="true">
+                        <div id="accordion-tab-8" class="accordion-item__title" aria-controls="accordion-panel-8" role="tab">
+                            <a class="accordion-item__link" href="patterns.html#sg-accordion" data-icon-up="fa-caret-up" data-icon-down="fa-caret-down">Salads<span class="icon fa fa-caret-down" aria-hidden="true"></span></a>
+                        </div>
+                        <div id="accordion-panel-8" class="accordion-item__contents" aria-labelledby="accordion-tab-8" role="tabpanel">
+                            <div class="menu-item">
+                                <div class="menu-item-description">
+                                    <div class="menu-item__title">Roast Peppers & Artichokes Salad</div>
+                                    <div class="menu-item__synopsis">Warm salad of roast peppers & artichokes.</div>
+                                </div>
+                                <div class="menu-item-utils">
+                                    <a href="patterns.html#sg-menu" class="btn btn--small btn--silver"><span class="icon fa fa-plus-circle" aria-hidden="true"></span>Add</a>
+                                    <div class="menu-item__price">R146.00</div>
+                                    <div class="legend legend--compact">
+                                        <ol class="list">
+                                            <li><span class="icon fa fa-leaf green" aria-hidden="true"></span></li>
+                                            <li><span class="icon fa fa-leaf orange" aria-hidden="true"></span></li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu-item">
+                                <div class="menu-item-description">
+                                    <div class="menu-item__title">Half Shell Mussels</div>
+                                    <div class="menu-item__synopsis">Half shell mussels in cream, garlic & leek sauce.</div>
+                                </div>
+                                <div class="menu-item-utils">
+                                    <a href="patterns.html#sg-menu" class="btn btn--small btn--silver"><span class="icon fa fa-plus-circle" aria-hidden="true"></span>Add</a>
+                                    <div class="menu-item__price">R23.95</div>
+                                </div>
+                            </div>
+                            <div class="menu-item">
+                                <div class="menu-item-description">
+                                    <div class="menu-item__title">Springbok Carpaccio</div>
+                                    <div class="menu-item__synopsis">Served with pecorino shavings & herb pita.</div>
+                                </div>
+                                <div class="menu-item-utils">
+                                    <a href="patterns.html#sg-menu" class="btn btn--small btn--silver"><span class="icon fa fa-plus-circle" aria-hidden="true"></span>Add</a>
+                                    <div class="menu-item__price">R76.99</div>
+                                    <div class="legend legend--compact">
+                                        <ol class="list">
+                                            <li><span class="icon fa fa-leaf green" aria-hidden="true"></span></li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item" role="tab" aria-selected="false" aria-hidden="true">
+                        <div id="accordion-tab-9" class="accordion-item__title" aria-controls="accordion-panel-9" role="tab">
+                            <a class="accordion-item__link" href="patterns.html#sg-accordion" data-icon-up="fa-caret-up" data-icon-down="fa-caret-down">Mains<span class="icon fa fa-caret-down" aria-hidden="true"></span></a>
+                        </div>
+                        <div id="accordion-panel-9" class="accordion-item__contents" aria-labelledby="accordion-tab-9" role="tabpanel">
+                            <div class="menu-item">
+                                <div class="menu-item-description">
+                                    <div class="menu-item__title">Roast Peppers & Artichokes Salad</div>
+                                    <div class="menu-item__synopsis">Warm salad of roast peppers & artichokes.</div>
+                                </div>
+                                <div class="menu-item-utils">
+                                    <a href="patterns.html#sg-menu" class="btn btn--small btn--silver"><span class="icon fa fa-plus-circle" aria-hidden="true"></span>Add</a>
+                                    <div class="menu-item__price">R146.00</div>
+                                    <div class="legend legend--compact">
+                                        <ol class="list">
+                                            <li><span class="icon fa fa-leaf green" aria-hidden="true"></span></li>
+                                            <li><span class="icon fa fa-leaf orange" aria-hidden="true"></span></li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu-item">
+                                <div class="menu-item-description">
+                                    <div class="menu-item__title">Half Shell Mussels</div>
+                                    <div class="menu-item__synopsis">Half shell mussels in cream, garlic & leek sauce.</div>
+                                </div>
+                                <div class="menu-item-utils">
+                                    <a href="patterns.html#sg-menu" class="btn btn--small btn--silver"><span class="icon fa fa-plus-circle" aria-hidden="true"></span>Add</a>
+                                    <div class="menu-item__price">R23.95</div>
+                                </div>
+                            </div>
+                            <div class="menu-item">
+                                <div class="menu-item-description">
+                                    <div class="menu-item__title">Springbok Carpaccio</div>
+                                    <div class="menu-item__synopsis">Served with pecorino shavings & herb pita.</div>
+                                </div>
+                                <div class="menu-item-utils">
+                                    <a href="patterns.html#sg-menu" class="btn btn--small btn--silver"><span class="icon fa fa-plus-circle" aria-hidden="true"></span>Add</a>
+                                    <div class="menu-item__price">R76.99</div>
+                                    <div class="legend legend--compact">
+                                        <ol class="list">
+                                            <li><span class="icon fa fa-leaf green" aria-hidden="true"></span></li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><div class="menu">
+    <div class="menu-header">
+        <div class="menu__title">Menu</div>
+        <div class="legend">
+            <ol class="list">
+                <li><span class="icon fa fa-leaf green" aria-hidden="true"></span>Vegetarian</li>
+                <li><span class="icon fa fa-leaf orange" aria-hidden="true"></span>Spicy</li>
+                <li><span class="icon fa fa-leaf yellow" aria-hidden="true"></span>Mild</li>
+                <li><img src="assets/images/logos/logo-momentum-multiply-30x30.png" width="30" height="30" title="Multiply" alt="" />Multiply</li>
+            </ol>
+        </div>
+    </div>
+    <div class="accordion" data-component="accordion" role="tablist">
+        <div class="accordion-item is-selected" role="tab" aria-selected="true" aria-hidden="false">
+            <div id="accordion-tab-1" class="accordion-item__title" aria-controls="accordion-panel-7" role="tab">
+                <a class="accordion-item__link" href="#" data-icon-up="fa-caret-up" data-icon-down="fa-caret-down">Starters<span class="icon fa fa-caret-up" aria-hidden="true"></span></a>
+            </div>
+            <div id="accordion-panel-1" class="accordion-item__contents" aria-labelledby="accordion-tab-7" role="tabpanel">
+                <div class="menu-item">
+                    <div class="menu-item-description">
+                        <div class="menu-item__title">Half Shell Mussels</div>
+                        <div class="menu-item__synopsis">Half shell mussels in cream, garlic & leek sauce.</div>
+                    </div>
+                    <div class="menu-item-utils">
+                        <a href="patterns.html#sg-menu" class="btn btn--small btn--silver"><span class="icon fa fa-plus-circle" aria-hidden="true"></span>Add</a>
+                        <div class="menu-item__price">R23.95</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div></code></pre>
+            </div>
+        </section>
+
+        <section id="sg-menu-customise" class="sg-section">
+            <header class="sg-header sg-header--section">
+                <h1 class="epsilon hN">Menu – Customise</h1>
+            </header>
+
+            <div class="restaurant">
+                <div class="restaurant-details restaurant-details--text">
+                    <h4 class="restaurant__title restaurant__title--separator">Col’cacchio Cavendish</h4>
+                </div>
+            </div>
+            <div class="menu">
+                <div class="menu-item menu-item--single">
+                    <div class="menu-item-description">
+                        <div class="menu-item__title">Roast Peppers & Artichokes Salad</div>
+                        <div class="menu-item__synopsis">Warm salad of roast peppers & artichokes.</div>
+                    </div>
+                    <div class="menu-item-utils">
+                        <div class="menu-item__price">R146.00</div>
+                        <div class="legend legend--compact">
+                            <ol class="list">
+                                <li><span class="icon fa fa-leaf green" aria-hidden="true"></span></li>
+                                <li><span class="icon fa fa-leaf orange" aria-hidden="true"></span></li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <form id="menu-customise-form" action="patterns.html#sg-menu-customise" method="post" class="form form--small">
+                        <fieldset class="fieldset">
+                            <legend class="legend">Bread Choices <small class="gray">(Please select one option)</small></legend>
+
+                            <div class="row">
+                                <div class="col col-1-2">
+                                    <label for="menu-item-choice-1" class="label">
+                                        <input id="menu-item-choice-1" type="radio" name="menu-item-choice" value="1" /> Bread Roll (add R0.00)
+                                    </label>
+                                </div>
+                                <div class="col col-1-2">
+                                    <label for="menu-item-choice-2" class="label">
+                                        <input id="menu-item-choice-2" type="radio" name="menu-item-choice" value="2" /> Whole Wheat Bread (add R0.00)
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col col-1-2">
+                                    <label for="menu-item-choice-3" class="label">
+                                        <input id="menu-item-choice-3" type="radio" name="menu-item-choice" value="3" /> White Bread (add R0.00)
+                                    </label>
+                                </div>
+                                <div class="col col-1-2">
+                                    <label for="menu-item-choice-4" class="label">
+                                        <input id="menu-item-choice-4" type="radio" name="menu-item-choice" value="4" /> Corn Bread (add R0.00)
+                                    </label>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <div class="row">
+                            <div class="col col-1-2">
+                                <label for="menu-item-instructions" class="label">
+                                    Special Instructions: <small class="gray">(50 characters max)</small>
+                                    <textarea id="menu-item-instructions" name="menu-item-instructions" class="input input--textarea" maxlength="50"></textarea>
+                                </label>
+                            </div>
+                            <div class="col col-1-2">
+                                <label for="menu-item-quantity" class="label">
+                                    Quantity:
+                                    <input class="input input--short" type="text" id="menu-item-quantity" name="menu-item-quantity" value="1" />
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="btn-group">
+                            <button class="btn btn--green" type="submit" title="Gimme some of that!"><span class="icon fa fa-shopping-cart" aria-hidden="true"></span>Add to Cart</button>
+                            <a href="patterns.html#sg-menu-customise" class="btn btn--small btn--silver"><span class="icon fa fa-times-circle" aria-hidden="true"></span>Cancel</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><div class="restaurant">
+    <div class="restaurant-details restaurant-details--text">
+        <h4 class="restaurant__title restaurant__title--separator">Col’cacchio Cavendish</h4>
+    </div>
+</div>
+<div class="menu">
+    <div class="menu-item menu-item--single">
+        <div class="menu-item-description">
+            <div class="menu-item__title">Roast Peppers & Artichokes Salad</div>
+            <div class="menu-item__synopsis">Warm salad of roast peppers & artichokes.</div>
+        </div>
+        <div class="menu-item-utils">
+            <div class="menu-item__price">R146.00</div>
+            <div class="legend legend--compact">
+                <ol class="list">
+                    <li><span class="icon fa fa-leaf green" aria-hidden="true"></span></li>
+                    <li><span class="icon fa fa-leaf orange" aria-hidden="true"></span></li>
+                </ol>
+            </div>
+        </div>
+
+        <form id="form" action="#" method="post" class="form form--small">
+            <fieldset class="fieldset">
+                <legend class="legend">Bread Choices <small class="gray">(Please select one option)</small></legend>
+
+                <div class="row">
+                    <div class="col col-1-2">
+                        <label for="menu-item-choice-1" class="label">
+                            <input id="menu-item-choice-1" type="radio" name="menu-item-choice" value="1" /> Bread Roll (add R0.00)
+                        </label>
+                    </div>
+                    <div class="col col-1-2">
+                        <label for="menu-item-choice-2" class="label">
+                            <input id="menu-item-choice-2" type="radio" name="menu-item-choice" value="2" /> Whole Wheat Bread (add R0.00)
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <div class="row">
+                <div class="col col-1-2">
+                    <label for="menu-item-instructions" class="label">
+                        Special Instructions: <small class="gray">(50 characters max)</small>
+                        <textarea id="menu-item-instructions" name="menu-item-instructions" class="input input--textarea" maxlength="50"></textarea>
+                    </label>
+                </div>
+                <div class="col col-1-2">
+                    <label for="menu-item-quantity" class="label">
+                        Quantity:
+                        <input class="input input--short" type="text" id="menu-item-quantity" name="menu-item-quantity" value="1" />
+                    </label>
+                </div>
+            </div>
+
+            <div class="btn-group">
+                <button class="btn btn--green" type="submit" title="Gimme some of that!"><span class="icon fa fa-shopping-cart" aria-hidden="true"></span>Add to Cart</button>
+                <a href="#" class="btn btn--small btn--silver"><span class="icon fa fa-times-circle" aria-hidden="true"></span>Cancel</a>
+            </div>
+        </form>
+    </div>
+</div></code></pre>
+            </div>
+        </section>
+
+        <section id="sg-pagination" class="sg-section">
+            <header class="sg-header sg-header--section">
+                <h1 class="epsilon hN">Pagination</h1>
+            </header>
+
+            <div class="pagination">
+                <ol class="list">
+                    <li><a href="patterns.html#sg-pagination">Prev</a></li>
+                    <li><a href="patterns.html#sg-pagination">1</a></li>
+                    <li class="is-active"><a href="patterns.html#sg-pagination">2</a></li>
+                    <li><a href="patterns.html#sg-pagination">3</a></li>
+                    <li>…</li>
+                    <li><a href="patterns.html#sg-pagination">7</a></li>
+                    <li><a href="patterns.html#sg-pagination">8</a></li>
+                    <li><a href="patterns.html#sg-pagination">9</a></li>
+                    <li><a href="patterns.html#sg-pagination">Next</a></li>
+                </ol>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><div class="pagination">
+    <ol class="list">
+        <li><a href="#">Prev</a></li>
+        <li><a href="#">1</a></li>
+        <li class="is-active"><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li>…</li>
+        <li><a href="#">Next</a></li>
+    </ol>
+</div></code></pre>
+            </div>
+        </section>
+
+        <section id="sg-legend" class="sg-section">
+            <header class="sg-header sg-header--section">
+                <h1 class="epsilon hN">Legend</h1>
+            </header>
+
+            <h2 class="zeta sg-heading sg-heading--spacer">Default</h2>
+            <div class="legend">
+                <ol class="list">
+                    <li><span class="icon fa fa-leaf green" aria-hidden="true"></span>Vegetarian</li>
+                    <li><span class="icon fa fa-leaf orange" aria-hidden="true"></span>Spicy</li>
+                    <li><span class="icon fa fa-leaf yellow" aria-hidden="true"></span>Mild</li>
+                    <li><img src="assets/images/logos/logo-momentum-multiply-30x30.png" width="30" height="30" title="Multiply" alt="" />Multiply</li>
+                </ol>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><div class="legend">
+    <ol class="list">
+        <li><span class="icon fa fa-leaf green" aria-hidden="true"></span>Vegetarian</li>
+        <li><span class="icon fa fa-leaf orange" aria-hidden="true"></span>Spicy</li>
+        <li><span class="icon fa fa-leaf yellow" aria-hidden="true"></span>Mild</li>
+    </ol>
+</div></code></pre>
+            </div>
+
+            <h2 class="zeta sg-heading sg-heading--spacer">Compact</h2>
+            <div class="legend legend--compact">
+                <ol class="list">
+                    <li><span class="icon fa fa-leaf green" aria-hidden="true"></span></li>
+                    <li><span class="icon fa fa-leaf orange" aria-hidden="true"></span></li>
+                    <li><span class="icon fa fa-leaf yellow" aria-hidden="true"></span></li>
+                    <li><img src="assets/images/logos/logo-momentum-multiply-30x30.png" width="30" height="30" title="Multiply" alt="" /></li>
+                </ol>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><div class="legend legend--compact">
+    <ol class="list">
+        <li><span class="icon fa fa-leaf green" aria-hidden="true"></span></li>
+        <li><span class="icon fa fa-leaf orange" aria-hidden="true"></span></li>
+        <li><span class="icon fa fa-leaf yellow" aria-hidden="true"></span></li>
+    </ol>
+</div></code></pre>
+            </div>
+        </section>
+
+        <section id="sg-balance" class="sg-section">
+            <header class="sg-header sg-header--section">
+                <h1 class="epsilon hN">Balance</h1>
+            </header>
+
+            <h2 class="zeta sg-heading sg-heading--spacer">Account</h2>
+            <div class="balance balance--bordered">
+                <div class="balance__title">My Account</div>
+                <div class="balances">
+                    <div class="balance__label">Remaining Balance:</div>
+                    <div class="balance__value">R361.00</div>
+                </div>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><div class="balance balance--bordered">
+    <div class="balance__title">My Account</div>
+    <div class="balances">
+        <div class="balance__label">Remaining Balance:</div>
+        <div class="balance__value">R361.00</div>
+    </div>
+</div></code></pre>
+            </div>
+
+            <h2 class="zeta sg-heading sg-heading--spacer">Allocations</h2>
+            <div class="balance balance--manage">
+                <div class="balances">
+                    <div class="balance__label">Current Monthly Allocation:</div>
+                    <div class="balance__value"><span class="gray-dark">R200.00</span></div>
+                    <div class="balance__label">Remaining Balance:</div>
+                    <div class="balance__value">R178.22</div>
+                </div>
+
+                <form id="allocation-form" action="patterns.html#sg-balance" method="post" class="form">
+                    <label for="allocation" class="label">
+                        New Monthly Allocation:
+                        <input class="input" type="text" id="allocation" name="allocation" maxlength="20" />
+                    </label>
+
+                    <button type="submit" class="btn btn--wide"><span class="icon fa fa-refresh" aria-hidden="true"></span>Update</button>
+                </form>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"> <div class="balance balance--manage">
+    <div class="balances">
+        <div class="balance__label">Current Monthly Allocation:</div>
+        <div class="balance__value"><span class="gray-dark">R200.00</span></div>
+        <div class="balance__label">Remaining Balance:</div>
+        <div class="balance__value">R178.22</div>
+    </div>
+
+    <form id="form" action="#" method="post" class="form">
+        <label for="allocation" class="label">
+            New Monthly Allocation:
+            <input class="input" type="text" id="allocation" name="allocation" maxlength="20" />
+        </label>
+
+        <button type="submit" class="btn btn--wide"><span class="icon fa fa-refresh" aria-hidden="true"></span>Update</button>
+    </form>
+</div></code></pre>
+            </div>
+        </section>
+
+        <section id="sg-cart" class="sg-section">
+            <header class="sg-header sg-header--section">
+                <h1 class="epsilon hN">Cart</h1>
+            </header>
+
+            <h2 class="zeta sg-heading sg-heading--spacer">Default</h2>
+            <div class="cart">
+                <form id="form-cart" action="patterns.html#sg-cart" method="post">
+                    <div class="cart__title">My Order</div>
+                    <div class="cart__description">
+                        <p class="cart__description-text"><b>#4475758</b> from <b>Col’cacchio, Cavendish Square</b> for <b>Pickup</b>.</p>
+                        <a class="btn btn--silver btn--small" href="patterns.html#sg-cart">Change to Delivery</a>
+                    </div>
+                    <div class="cart-items">
+                        <div class="cart-item">
+                            <div class="cart-item__title">Grilled Calamari & Rocket</div>
+                            <div class="cart-item__price">R142.00</div>
+                            <a href="patterns.html#sg-cart" class="cart-item__remove" title="Remove"><span class="icon fa fa-times-circle" aria-hidden="true"></span></a>
+                            <div class="cart-options">
+                                <div class="cart-option">
+                                    <div class="cart-option__title">Whole wheat bread</div>
+                                    <div class="cart-option__price">R2.50</div>
+                                </div>
+                                <div class="cart-option">
+                                    <div class="cart-option__title">Toasted</div>
+                                    <div class="cart-option__price">R7.00</div>
+                                </div>
+                                <div class="cart-option">
+                                    <div class="cart-option__title">Seared Norwegian Salmon</div>
+                                    <div class="cart-option__price">R127.00</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart-item">
+                            <div class="cart-item__title">Half Shell Mussels</div>
+                            <div class="cart-item__price">R232.00</div>
+                            <a href="patterns.html#sg-cart" class="cart-item__remove" title="Remove"><span class="icon fa fa-times-circle" aria-hidden="true"></span></a>
+                        </div>
+                        <div class="cart-item">
+                            <div class="cart-item__title">Roasted Peppers & Artichokes Salad</div>
+                            <div class="cart-item__price">R142.00</div>
+                            <a href="patterns.html#sg-cart" class="cart-item__remove" title="Remove"><span class="icon fa fa-times-circle" aria-hidden="true"></span></a>
+                            <div class="cart-options">
+                                <div class="cart-option">
+                                    <div class="cart-option__title">Whole wheat bread</div>
+                                    <div class="cart-option__price">R2.50</div>
+                                </div>
+                                <div class="cart-option">
+                                    <div class="cart-option__title">Caramel toffee milkshake</div>
+                                    <div class="cart-option__price">R27.00</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-totals">
+                        <div class="cart-total">
+                            <div class="cart-total__label">Subtotal*</div>
+                            <div class="cart-total__value">R978.00</div>
+                        </div>
+                        <div class="cart-total">
+                            <div class="cart-total__label cart-total__label--input">Add Gratuity</div>
+                            <div class="cart-total__value"><label for="gratuity" class="visuallyhidden">R</label><input class="input input--short" type="text" id="gratuity" name="gratuity" placeholder="R0.00" /></div>
+                        </div>
+                        <div class="cart-total">
+                            <div class="cart-total__label"><b>Total</b></div>
+                            <div class="cart-total__value"><b>R978.00</b></div>
+                        </div>
+                    </div>
+                    <div class="cart-checkout">
+                        <div class="cart-checkout__label">* Includes VAT</div>
+                        <button class="btn btn--green" type="submit" title="Get in my belly!"><span class="icon fa fa-shopping-cart" aria-hidden="true"></span>Proceed to Checkout</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><div class="cart">
+    <form id="form" action="#" method="post">
+        <div class="cart__title">My Order</div>
+        <div class="cart__description">
+            <p class="cart__description-text"><b>#4475758</b> from <b>Col’cacchio, Cavendish Square</b> for <b>Pickup</b>.</p>
+            <a class="btn btn--silver btn--small" href="#">Change to Delivery</a>
+        </div>
+        <div class="cart-items">
+            <div class="cart-item">
+                <div class="cart-item__title">Grilled Calamari & Rocket</div>
+                <div class="cart-item__price">R142.00</div>
+                <a href="#" class="cart-item__remove" title="Remove"><span class="icon fa fa-times-circle" aria-hidden="true"></span></a>
+                <div class="cart-options">
+                    <div class="cart-option">
+                        <div class="cart-option__title">Whole wheat bread</div>
+                        <div class="cart-option__price">R2.50</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cart-totals">
+            <div class="cart-total">
+                <div class="cart-total__label">Subtotal*</div>
+                <div class="cart-total__value">R978.00</div>
+            </div>
+            <div class="cart-total">
+                <div class="cart-total__label cart-total__label--input">Add Gratuity</div>
+                <div class="cart-total__value"><label for="gratuity" class="visuallyhidden">R</label><input class="input input--short" type="text" id="gratuity" name="gratuity" placeholder="R0.00" /></div>
+            </div>
+            <div class="cart-total">
+                <div class="cart-total__label"><b>Total</b></div>
+                <div class="cart-total__value"><b>R978.00</b></div>
+            </div>
+        </div>
+        <div class="cart-checkout">
+            <div class="cart-checkout__label">* Includes VAT</div>
+            <button class="btn btn--green" type="submit" title="Get in my belly!"><span class="icon fa fa-shopping-cart" aria-hidden="true"></span>Proceed to Checkout</button>
+        </div>
+    </form>
+</div></code></pre>
+            </div>
+        </section>
+
+        <section id="sg-cart-count" class="sg-section">
+            <header class="sg-header sg-header--section">
+                <h1 class="epsilon hN">Cart – Count</h1>
+            </header>
+
+            <h2 class="zeta sg-heading sg-heading--spacer">Default</h2>
+            <div style="background-color: #991e01; padding: 2% 2% 1% 2%">
+                <div class="cart cart--count">
+                    <a href="patterns.html#sg-cart" class="cart__link">
+                        <span class="icon fa fa-shopping-cart" aria-hidden="true"></span>
+                        <div class="cart__count">3</div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><div class="cart cart--count">
+    <a href="#" class="cart__link">
+        <span class="icon fa fa-shopping-cart" aria-hidden="true"></span>
+        <div class="cart__count">3</div>
+    </a>
+</div></code></pre>
+            </div>
+
+            <h2 class="zeta sg-heading sg-heading--spacer">Empty</h2>
+            <div style="background-color: #991e01; padding: 2% 2% 1% 2%">
+                <div class="cart cart--count cart--empty">
+                    <a href="patterns.html#sg-cart" class="cart__link">
+                        <span class="icon fa fa-shopping-cart" aria-hidden="true"></span>
+                        <div class="cart__count">0</div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><div class="cart cart--count cart--empty">
+    <a href="#" class="cart__link">
+        <span class="icon fa fa-shopping-cart" aria-hidden="true"></span>
+        <div class="cart__count">0</div>
+    </a>
+</div></code></pre>
+            </div>
+        </section>
+
+        <section id="sg-payment" class="sg-section">
+            <header class="sg-header sg-header--section">
+                <h1 class="epsilon hN">Payment</h1>
+            </header>
+
+            <h2 class="zeta sg-heading sg-heading--spacer">Personal Payment</h2>
+            <div class="box box--bordered">
+                <div class="payment">
+                    <div class="payment__title">Credit Card Information</div>
+                    <div class="payment__synopsis">Please note that all fields are required.</div>
+                    <div class="payment__synopsis orange">Your credit card information is secure.</div>
+                    <img class="payment__img" src="assets/images/logos/logo-mastercard-visa-99x30.png" width="99" height="30" alt="MasterCard and Visa" />
+
+                    <form id="payment-form-1" action="patterns.html#sg-payment" method="post" class="form">
+                        <label for="cardname" class="label">
+                            Name on Card:
+                            <input class="input" type="text" id="cardname" name="cardname" maxlength="26" />
+                        </label>
+
+                        <label for="cardnumber" class="label">
+                            Card Number:
+                            <input class="input" type="text" id="cardnumber" name="cardnumber" maxlength="16" />
+                        </label>
+
+                        <label for="cardcvv" class="label">
+                            CVV:
+                            <input class="input" type="text" id="cardcvv" name="cardcvv" maxlength="3" />
+                        </label>
+
+                        <fieldset class="fieldset">
+                            <legend class="legend">Expiry Date:</legend>
+                            <label for="cardmonth" class="label label--inline">
+                                <select id="cardmonth" name="cardmonth" class="input input--short input--select">
+                                    <option value="">Month</option>
+                                    <option value="01">01</option>
+                                    <option value="02">02</option>
+                                    <option value="03">03</option>
+                                    <option value="04">04</option>
+                                    <option value="05">05</option>
+                                    <option value="06">06</option>
+                                    <option value="07">07</option>
+                                    <option value="08">08</option>
+                                    <option value="09">09</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select>
+                            </label>
+
+                            <label for="cardyear" class="label label--inline">
+                                <select id="cardyear" name="cardyear" class="input input--short input--select">
+                                    <option value="">Year</option>
+                                    <option value="2014">2014</option>
+                                    <option value="2015">2015</option>
+                                    <option value="2016">2016</option>
+                                    <option value="2017">2017</option>
+                                    <option value="2018">2018</option>
+                                    <option value="2019">2019</option>
+                                    <option value="2020">2020</option>
+                                </select>
+                            </label>
+                        </fieldset>
+
+                        <label for="save-card" class="label label--well">
+                            <input id="save-card" type="checkbox" name="save-card" value="1" /> Save this card for future payments?
+                            <span class="payu">
+                                Powered by <img src="../assets/images/logos/logo-payu-49x13.png" width="49" height="13" alt="PayU" />
+                            </span>
+                        </label>
+
+                        <div class="btn-group">
+                            <button class="btn btn--green" title="Get in my belly!"><span class="icon fa fa-shopping-cart" aria-hidden="true"></span>Checkout</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><div class="payment">
+    <div class="payment__title">Credit Card Information</div>
+    <div class="payment__synopsis">Please note that all fields are required.</div>
+    <div class="payment__synopsis orange">Your credit card information is secure.</div>
+    <img class="payment__img" src="assets/images/logos/logo-mastercard-visa-99x30.png" width="99" height="30" alt="MasterCard and Visa" />
+
+    <form id="form" action="#" method="post" class="form">
+        <label for="cardname" class="label">
+            Name on Card:
+            <input class="input" type="text" id="cardname" name="cardname" maxlength="26" />
+        </label>
+
+        <label for="cardnumber" class="label">
+            Card Number:
+            <input class="input" type="text" id="cardnumber" name="cardnumber" maxlength="16" />
+        </label>
+
+        <label for="cardcvv" class="label">
+            CVV:
+            <input class="input" type="text" id="cardcvv" name="cardcvv" maxlength="3" />
+        </label>
+
+        <fieldset class="fieldset">
+            <legend class="legend">Expiry Date:</legend>
+            <label for="cardmonth" class="label label--inline">
+                <select id="cardmonth" name="cardmonth" class="input input--short input--select">
+                    <option value="">Month</option>
+                    <option value="01">01</option>
+                </select>
+            </label>
+
+            <label for="cardyear" class="label label--inline">
+                <select id="cardyear" name="cardyear" class="input input--short input--select">
+                    <option value="">Year</option>
+                    <option value="2014">2014</option>
+                </select>
+            </label>
+        </fieldset>
+
+        <label for="save-card" class="label">
+            <input id="save-card" type="checkbox" name="save-card" value="1" /> Save this card for future payments?
+        </label>
+
+        <div class="btn-group">
+            <button class="btn btn--green" title="Get in my belly!"><span class="icon fa fa-shopping-cart" aria-hidden="true"></span>Checkout</button>
+        </div>
+    </form>
+</div></code></pre>
+            </div>
+
+
+            <h2 class="zeta sg-heading sg-heading--spacer">Corporate Account</h2>
+            <div class="box box--bordered">
+                <div class="payment">
+                    <div class="payment__title">My Account</div>
+                    <div class="payment__synopsis">You are paying with your firm’s account.</div>
+                    <div class="payment__label">Current Balance:</div>
+                    <div class="payment__value">R380.00</div>
+                    <div class="payment__label">This Order:</div>
+                    <div class="payment__value orange-light">R124.00</div>
+
+                    <form id="payment-form-2" action="patterns.html#sg-payment" method="post" class="form">
+                        <div class="btn-group">
+                            <button class="btn btn--green" title="Get in my belly!"><span class="icon fa fa-shopping-cart" aria-hidden="true"></span>Checkout</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><div class="payment">
+    <div class="payment__title">My Account</div>
+    <div class="payment__synopsis">You are paying with your firm’s account.</div>
+    <div class="payment__label">Current Balance:</div>
+    <div class="payment__value">R380.00</div>
+    <div class="payment__label">This Order:</div>
+    <div class="payment__value orange-light">R124.00</div>
+
+    <form id="form" action="#" method="post" class="form">
+        <div class="btn-group">
+            <button class="btn btn--green" title="Get in my belly!"><span class="icon fa fa-shopping-cart" aria-hidden="true"></span>Checkout</button>
+        </div>
+    </form>
+</div></code></pre>
+            </div>
+
+            <h2 class="zeta sg-heading sg-heading--spacer">Insufficient Funds</h2>
+            <div class="box box--bordered">
+                <div class="payment">
+                    <div class="payment__title">My Account</div>
+                    <div class="payment__synopsis">You are paying with your firm’s account.</div>
+                    <div class="payment__label">Current Balance:</div>
+                    <div class="payment__value">R380.00</div>
+                    <div class="payment__label">This Order:</div>
+                    <div class="payment__value orange-light">R424.00</div>
+
+                    <div class="alert alert--warning" role="alert">
+                        <div class="alert__title"><span class="icon fa fa-exclamation-triangle" aria-hidden="true"></span>Insufficient Funds</div>
+                        <p class="alert__message">You do not have enough credit on your account to complete this order. Please remove items from your cart or switch to personal payment.</p>
+                        <div class="btn-group btn-group--left">
+                            <a href="patterns.html#sg-payment" class="btn btn--small btn--yellow"><span class="icon fa fa-reply" aria-hidden="true"></span>Edit<span class="hide-medium"> Order</span></a>
+                            <a href="patterns.html#sg-payment" class="btn btn--small btn--yellow"><span class="icon fa fa-user" aria-hidden="true"></span>Switch to Personal<span class="hide-medium"> Payment</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><div class="payment">
+    <div class="payment__title">My Account</div>
+    <div class="payment__synopsis">You are paying with your firm’s account.</div>
+    <div class="payment__label">Current Balance:</div>
+    <div class="payment__value">R380.00</div>
+    <div class="payment__label">This Order:</div>
+    <div class="payment__value orange-light">R424.00</div>
+
+    <div class="alert alert--warning" role="alert">
+        <div class="alert__title"><span class="icon fa fa-exclamation-triangle" aria-hidden="true"></span>Insufficient Funds</div>
+        <p class="alert__message">You do not have enough credit on your account to complete this order. Please remove items from your cart or switch to personal payment.</p>
+        <div class="btn-group btn-group--left">
+            <a href="#" class="btn btn--small btn--yellow"><span class="icon fa fa-reply" aria-hidden="true"></span>Edit<span class="hide-medium"> Order</span></a>
+            <a href="#" class="btn btn--small btn--yellow"><span class="icon fa fa-user" aria-hidden="true"></span>Switch to Personal<span class="hide-medium"> Payment</span></a>
+        </div>
+    </div>
+</div></code></pre>
+            </div>
+        </section>
+
+        <section id="sg-card" class="sg-section">
+            <header class="sg-header sg-header--section">
+                <h1 class="epsilon hN">Card</h1>
+            </header>
+
+            <h2 class="zeta sg-heading sg-heading--spacer">MasterCard</h2>
+            <div class="card card--manage">
+                <img class="card__logo" src="assets/images/logos/logo-mastercard-36x22.png" width="36" height="22" alt="MasterCard" />
+                <div class="card__title"><span class="card__company">MasterCard</span> ending in 8709</div>
+                <div class="card__expiry">10/2015</div>
+                <a href="patterns.html#sg-card" class="btn btn--small btn--silver btn--icon"><span class="icon fa fa-times-circle" aria-hidden="true"></span></a>
+                <a href="patterns.html#sg-card" class="btn btn--small btn--silver">Edit</a>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><div class="card card--manage">
+    <img class="card__logo" src="assets/images/logos/logo-mastercard-36x22.png" width="36" height="22" alt="MasterCard" />
+    <div class="card__title"><span class="card__company">MasterCard</span> ending in 8709</div>
+    <div class="card__expiry">10/2015</div>
+    <a href="#" class="btn btn--small btn--silver btn--icon"><span class="icon fa fa-times-circle" aria-hidden="true"></span></a>
+    <a href="#" class="btn btn--small btn--silver">Edit</a>
+</div></code></pre>
+            </div>
+
+            <h2 class="zeta sg-heading sg-heading--spacer">Visa</h2>
+            <div class="card card--manage">
+                <img class="card__logo" src="assets/images/logos/logo-visa-37x22.png" width="37" height="22" alt="Visa" />
+                <div class="card__title"><span class="card__company">Visa</span> ending in 8709</div>
+                <div class="card__expiry">10/2015</div>
+                <a href="patterns.html#sg-card" class="btn btn--small btn--silver btn--icon"><span class="icon fa fa-times-circle" aria-hidden="true"></span></a>
+                <a href="patterns.html#sg-card" class="btn btn--small btn--silver">Edit</a>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><div class="card card--manage">
+    <img class="card__logo" src="assets/images/logos/logo-visa-37x22.png" width="37" height="22" alt="Visa" />
+    <div class="card__title"><span class="card__company">Visa</span> ending in 8709</div>
+    <div class="card__expiry">10/2015</div>
+    <a href="#" class="btn btn--small btn--silver btn--icon"><span class="icon fa fa-times-circle" aria-hidden="true"></span></a>
+    <a href="#" class="btn btn--small btn--silver">Edit</a>
+</div></code></pre>
+            </div>
+        </section>
+
+        <section id="sg-personal-details" class="sg-section">
+            <header class="sg-header sg-header--section">
+                <h1 class="epsilon hN">Personal Details</h1>
+            </header>
+
+            <div class="personal-details">
+                <div class="personal-detail">
+                    <div class="personal-detail__label">Email Address</div>
+                    <div class="personal-detail__value">dinesh@orderin.co.za</div>
+                    <a href="patterns.html#sg-personal-details" class="btn btn--small btn--silver">Edit</a>
+                </div>
+                <div class="personal-detail">
+                    <div class="personal-detail__label">Contact Number</div>
+                    <div class="personal-detail__value">+278312345678</div>
+                    <a href="patterns.html#sg-personal-details" class="btn btn--small btn--silver">Edit</a>
+                </div>
+                <div class="personal-detail">
+                    <div class="personal-detail__label">Password</div>
+                    <div class="personal-detail__value">********</div>
+                    <a href="patterns.html#sg-personal-details" class="btn btn--small btn--silver">Change</a>
+                </div>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><div class="personal-details">
+    <div class="personal-detail">
+        <div class="personal-detail__label">Email Address</div>
+        <div class="personal-detail__value">dinesh@orderin.co.za</div>
+        <a href="#" class="btn btn--small btn--silver">Edit</a>
+    </div>
+    <div class="personal-detail">
+        <div class="personal-detail__label">Contact Number</div>
+        <div class="personal-detail__value">+278312345678</div>
+        <a href="#" class="btn btn--small btn--silver">Edit</a>
+    </div>
+    <div class="personal-detail">
+        <div class="personal-detail__label">Password</div>
+        <div class="personal-detail__value">********</div>
+        <a href="#" class="btn btn--small btn--silver">Change</a>
+    </div>
+</div></code></pre>
+            </div>
+        </section>
+
+        <section id="sg-order" class="sg-section">
+            <header class="sg-header sg-header--section">
+                <h1 class="epsilon hN">Order</h1>
+            </header>
+
+            <h2 class="zeta sg-heading sg-heading--spacer">Summary</h2>
+            <div class="order order--summary">
+                <ol class="list">
+                    <li><span class="order__label">Order ID:</span><b class="orange">#4475758</b></li>
+                    <li><span class="order__label">Pickup or Delivery:</span>Delivery</li>
+                    <li><span class="order__label">Restaurant:</span>Col’cacchio Pizzeria</li>
+                    <li><span class="order__label">Order Total:</span>R 168.00</li>
+                </ol>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><div class="order order--summary">
+    <ol class="list">
+        <li><span class="order__label">Order ID:</span><b class="orange">#4475758</b></li>
+        <li><span class="order__label">Pickup or Delivery:</span>Delivery</li>
+        <li><span class="order__label">Restaurant:</span>Col’cacchio Pizzeria</li>
+        <li><span class="order__label">Order Total:</span>R 168.00</li>
+    </ol>
+</div></code></pre>
+            </div>
+        </section>
+
+        <section id="sg-address-book" class="sg-section">
+            <header class="sg-header sg-header--section">
+                <h1 class="epsilon hN">Address Book</h1>
+            </header>
+
+            <div class="items">
+                <ol class="list">
+                    <li>
+                        <div class="item">
+                            <div class="item__title">Home</div>
+                            <p class="item__text">Fifth Floor, Podium Block, Civic Centre, 12 Hertzog Boulevard, Cape Town, 8001</p>
+                            <div class="item-utils">
+                                <div class="item__status">Default Address</div>
+                                <a href="patterns.html#sg-address-book" class="btn btn--small btn--silver">Edit</a>
+                                <a href="patterns.html#sg-address-book" class="btn btn--small btn--silver btn--icon" title="Forget this address"><span class="icon fa fa-times-circle" aria-hidden="true"></span><span class="hide-medium hide-large"> Forget</span></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <div class="item__title">Work</div>
+                            <p class="item__text">The Boulevard, 3rd Floor, Block C, cnr Searle & Pontac Street East, Woodstock, Cape Town, 7925</p>
+                            <div class="item-utils">
+                                <a href="patterns.html#sg-address-book" class="btn btn--small btn--silver">Set as Default</a>
+                                <a href="patterns.html#sg-address-book" class="btn btn--small btn--silver">Edit</a>
+                                <a href="patterns.html#sg-address-book" class="btn btn--small btn--silver btn--icon" title="Forget this address"><span class="icon fa fa-times-circle" aria-hidden="true"></span><span class="hide-medium hide-large"> Forget</span></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <div class="item__title">Factory</div>
+                            <p class="item__text">The Pinnacle Building, Cnr Burg & Castle Streets, Cape Town, 8001</p>
+                            <div class="item-utils">
+                                <a href="patterns.html#sg-address-book" class="btn btn--small btn--silver">Set as Default</a>
+                                <a href="patterns.html#sg-address-book" class="btn btn--small btn--silver">Edit</a>
+                                <a href="patterns.html#sg-address-book" class="btn btn--small btn--silver btn--icon" title="Forget this address"><span class="icon fa fa-times-circle" aria-hidden="true"></span><span class="hide-medium hide-large"> Forget</span></a>
+                            </div>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><div class="items">
+    <ol class="list">
+        <li>
+            <div class="item">
+                <div class="item__title">Home</div>
+                <p class="item__text">Fifth Floor, Podium Block, Civic Centre, 12 Hertzog Boulevard, Cape Town, 8001</p>
+                <div class="item-utils">
+                    <div class="item__status">Default Address</div>
+                    <a href="#" class="btn btn--small btn--silver">Edit</a>
+                    <a href="#" class="btn btn--small btn--silver btn--icon" title="Forget this address"><span class="icon fa fa-times-circle" aria-hidden="true"></span><span class="hide-medium hide-large"> Forget</span></a>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="item">
+                <div class="item__title">Work</div>
+                <p class="item__text">The Boulevard, 3rd Floor, Block C, cnr Searle & Pontac Street East, Woodstock, Cape Town, 7925</p>
+                <div class="item-utils">
+                    <a href="#" class="btn btn--small btn--silver">Set as Default</a>
+                    <a href="#" class="btn btn--small btn--silver">Edit</a>
+                    <a href="#" class="btn btn--small btn--silver btn--icon" title="Forget this address"><span class="icon fa fa-times-circle" aria-hidden="true"></span><span class="hide-medium hide-large"> Forget</span></a>
+                </div>
+            </div>
+        </li>
+    </ol>
+</div></code></pre>
+            </div>
+        </section>
+
+        <section id="sg-my-orders" class="sg-section">
+            <header class="sg-header sg-header--section">
+                <h1 class="epsilon hN">My Orders</h1>
+            </header>
+
+            <div class="items">
+                <ol class="list">
+                    <li>
+                        <div class="item">
+                            <img class="item__img" src="assets/images/restaurants/logos/logo-primi-50x50.png" width="50" height="50" alt="Primi Piatti" />
+                            <div class="item-details">
+                                <div class="item__title">Primi Piatti</div>
+                                <ol class="list list--details list--separator">
+                                    <li><b>ID</b>: 274563</li>
+                                    <li><b>Completed</b>: 21/08/2014 – 7:39 PM</li>
+                                    <li><b>Total</b>: R95.80</li>
+                                    <li><span class="icon fa fa-clock-o" aria-hidden="true"></span> 45 mins</li>
+                                </ol>
+                                <a href="patterns.html#sg-my-orders" class="btn btn--small btn--green-dark" title="Gimme some of that!"><span class="icon fa fa-shopping-cart" aria-hidden="true"></span>Add to Cart</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <img class="item__img" src="assets/images/restaurants/logos/logo-simply-asia-50x50.png" width="50" height="50" alt="Simply Asia" />
+                            <div class="item-details">
+                                <div class="item__title">Col’cacchio Pizzeria</div>
+                                <ol class="list list--details list--separator">
+                                    <li><b>ID</b>: 274160</li>
+                                    <li><b>Completed</b>: 20/08/2014 – 9:41 AM</li>
+                                    <li><b>Total</b>: R71.97</li>
+                                    <li><span class="icon fa fa-clock-o" aria-hidden="true"></span> 45 mins</li>
+                                </ol>
+                                <a href="patterns.html#sg-my-orders" class="btn btn--small btn--green-dark" title="Gimme some of that!"><span class="icon fa fa-shopping-cart" aria-hidden="true"></span>Add to Cart</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item">
+                            <img class="item__img" src="assets/images/restaurants/logos/logo-col-cacchio-50x50.png" width="50" height="50" alt="Primi Piatti" />
+                            <div class="item-details">
+                                <div class="item__title">Primi Piatti</div>
+                                <ol class="list list--details list--separator">
+                                    <li><b>ID</b>: 273471</li>
+                                    <li><b>Completed</b>: 17/08/2014 – 3:39 PM</li>
+                                    <li><b>Total</b>: R65.31</li>
+                                    <li><span class="icon fa fa-clock-o" aria-hidden="true"></span> 45 mins</li>
+                                </ol>
+                                <a href="patterns.html#sg-my-orders" class="btn btn--small btn--green-dark" title="Gimme some of that!"><span class="icon fa fa-shopping-cart" aria-hidden="true"></span>Add to Cart</a>
+                            </div>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><div class="items">
+    <ol class="list">
+        <li>
+            <div class="item">
+                <img class="item__img" src="assets/images/restaurants/logos/logo-primi-50x50.png" width="50" height="50" alt="Primi Piatti" />
+                <div class="item-details">
+                    <div class="item__title">Primi Piatti</div>
+                    <ol class="list list--details list--separator">
+                        <li><b>ID</b>: 274563</li>
+                        <li><b>Completed</b>: 21/08/2014 – 7:39 PM</li>
+                        <li><b>Total</b>: R95.80</li>
+                        <li><span class="icon fa fa-clock-o" aria-hidden="true"></span> 45 mins</li>
+                    </ol>
+                    <a href="#" class="btn btn--small btn--green-dark" title="Gimme some of that!"><span class="icon fa fa-shopping-cart" aria-hidden="true"></span>Add to Cart</a>
+                </div>
+            </div>
+        </li>
+    </ol>
+</div></code></pre>
+            </div>
+        </section>
+
+        <section id="sg-how-it-works" class="sg-section">
+            <header class="sg-header sg-header--section">
+                <h1 class="epsilon hN">How It Works</h1>
+            </header>
+
+            <div class="how-it-works">
+                <ol class="list">
+                    <li>
+                        <span class="icon fa fa-laptop" aria-hidden="true"></span>
+                        <h3 class="how-it-works__title">Online Ordering</h3>
+                        <p class="how-it-works__synopsis">Customers view your menu, build their order and pay through OrderIn’s website.</p>
+                    </li>
+                    <li>
+                        <span class="icon fa fa-cutlery" aria-hidden="true"></span>
+                        <h3 class="how-it-works__title">Prepare Your Food</h3>
+                        <p class="how-it-works__synopsis">Orders are electronically received by your restaurant and you prepare the food.</p>
+                    </li>
+                    <li>
+                        <span class="icon fa fa-truck" aria-hidden="true"></span>
+                        <h3 class="how-it-works__title">Delivery or Pickup</h3>
+                        <p class="how-it-works__synopsis">Delicious meals are delivered to, or picked up by the customer.</p>
+                    </li>
+                    <li>
+                        <span class="icon fa fa-money" aria-hidden="true"></span>
+                        <h3 class="how-it-works__title">Get Paid</h3>
+                        <p class="how-it-works__synopsis">You get a cheque or EFT for the orders you’ve fulfilled.</p>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><div class="how-it-works">
+    <ol class="list">
+        <li>
+            <span class="icon fa fa-laptop" aria-hidden="true"></span>
+            <h3 class="how-it-works__title">Online Ordering</h3>
+            <p class="how-it-works__synopsis">Customers view your menu, build their order and pay through OrderIn’s website.</p>
+        </li>
+        <li>
+            <span class="icon fa fa-cutlery" aria-hidden="true"></span>
+            <h3 class="how-it-works__title">Prepare Your Food</h3>
+            <p class="how-it-works__synopsis">Orders are electronically received by your restaurant and you prepare the food.</p>
+        </li>
+        <li>
+            <span class="icon fa fa-truck" aria-hidden="true"></span>
+            <h3 class="how-it-works__title">Delivery or Pickup</h3>
+            <p class="how-it-works__synopsis">Delicious meals are delivered to, or picked up by the customer.</p>
+        </li>
+        <li>
+            <span class="icon fa fa-money" aria-hidden="true"></span>
+            <h3 class="how-it-works__title">Get Paid</h3>
+            <p class="how-it-works__synopsis">You get a cheque or EFT for the orders you’ve fulfilled.</p>
+        </li>
+    </ol>
+</div></code></pre>
+            </div>
+        </section>
+
+        <section id="sg-category-listing" class="sg-section">
+            <header class="sg-header sg-header--section">
+                <h1 class="epsilon hN">Category – Listing</h1>
+            </header>
+
+            <h2 class="zeta sg-heading sg-heading--spacer">Default</h2>
+            <div class="category-listing">
+                <h5 class="category-listing__title"><span class="icon fa fa-cutlery" aria-hidden="true"></span>Browse by Cuisine</h5>
+                <ul class="list">
+                    <li><a href="patterns.html#sg-category-listing">American Food</a></li>
+                    <li><a href="patterns.html#sg-category-listing">Mexican Food</a></li>
+                    <li><a href="patterns.html#sg-category-listing">Pizza</a></li>
+                    <li><a href="patterns.html#sg-category-listing">Thai Food</a></li>
+                    <li><a href="patterns.html#sg-category-listing">Chinese Food</a></li>
+                    <li><a href="patterns.html#sg-category-listing">Japanese Food</a></li>
+                    <li><a href="patterns.html#sg-category-listing">Seafood</a></li>
+                    <li><a href="patterns.html#sg-category-listing">Vegetarian</a></li>
+                    <li><a href="patterns.html#sg-category-listing">Italian Food</a></li>
+                    <li><a href="patterns.html#sg-category-listing">Middle Eastern Food</a></li>
+                    <li><a href="patterns.html#sg-category-listing">Sushi</a></li>
+                    <li><a href="patterns.html#sg-category-listing">Vietnamese Food</a></li>
+                </ul>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><div class="category-listing">
+    <h5 class="category-listing__title"><span class="icon fa fa-cutlery" aria-hidden="true"></span>Browse by Cuisine</h5>
+    <ul class="list">
+        <li><a href="#">American Food</a></li>
+        <li><a href="#">Mexican Food</a></li>
+        <li><a href="#">Pizza</a></li>
+        <li><a href="#">Thai Food</a></li>
+    </ul>
+</div></code></pre>
+            </div>
+
+            <h2 class="zeta sg-heading sg-heading--spacer">Alternative</h2>
+            <div class="category-listing category-listing--alt">
+                <h5 class="category-listing__title"><span class="icon fa fa-map-marker" aria-hidden="true"></span>Browse by City</h5>
+                <ul class="list">
+                    <li><a href="patterns.html#sg-category-listing">Johannesburg</a></li>
+                    <li><a href="patterns.html#sg-category-listing">Cape Town</a></li>
+                    <li><a href="patterns.html#sg-category-listing">Pretoria</a></li>
+                    <li><a href="patterns.html#sg-category-listing">Durban</a></li>
+                    <li><a href="patterns.html#sg-category-listing">Port Elizabeth</a></li>
+                    <li><a href="patterns.html#sg-category-listing">Bloemfontein</a></li>
+                    <li><a href="patterns.html#sg-category-listing">Kimberley</a></li>
+                </ul>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><div class="category-listing category-listing--alt">
+    <h5 class="category-listing__title"><span class="icon fa fa-cutlery" aria-hidden="true"></span>Browse by City</h5>
+    <ul class="list">
+        <li><a href="#">Johannesburg</a></li>
+        <li><a href="#">Cape Town</a></li>
+        <li><a href="#">Pretoria</a></li>
+        <li><a href="#">Durban</a></li>
+    </ul>
+</div></code></pre>
+            </div>
+        </section>
+
+        <section id="sg-social" class="sg-section">
+            <header class="sg-header sg-header--section">
+                <h1 class="epsilon hN">Social</h1>
+            </header>
+
+            <div class="social">
+                <ol class="list">
+                    <li>
+                        <a href="patterns.html#sg-social" target="_blank" title="Follow us on Facebook" class="facebook"><span class="icon fa fa-facebook-square" aria-hidden="true"></span></a>
+                    </li>
+                    <li>
+                        <a href="patterns.html#sg-social" target="_blank" title="Follow us on Twitter" class="twitter"><span class="icon fa fa-twitter-square" aria-hidden="true"></span></a>
+                    </li>
+                    <li>
+                        <a href="patterns.html#sg-social" target="_blank" title="Follow us on Pinterest" class="pinterest"><span class="icon fa fa-pinterest-square" aria-hidden="true"></span></a>
+                    </li>
+                    <li>
+                        <a href="patterns.html#sg-social" target="_blank" title="Follow us on Instagram" class="instagram"><span class="icon fa fa-instagram" aria-hidden="true"></span></a>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><div class="social">
+    <ol class="list">
+        <li>
+            <a href="#" title="Follow us on Facebook" class="facebook"><span class="icon fa fa-facebook-square" aria-hidden="true"></span></a>
+        </li>
+        <li>
+            <a href="#" title="Follow us on Twitter" class="twitter"><span class="icon fa fa-twitter-square" aria-hidden="true"></span></a>
+        </li>
+        <li>
+            <a href="#" title="Follow us on Pinterest" class="pinterest"><span class="icon fa fa-pinterest-square" aria-hidden="true"></span></a>
+        </li>
+        <li>
+            <a href="#" title="Follow us on Instagram" class="instagram"><span class="icon fa fa-instagram" aria-hidden="true"></span></a>
+        </li>
+    </ol>
+</div></code></pre>
+            </div>
+        </section>
+
+        <section id="sg-contact" class="sg-section">
+            <header class="sg-header sg-header--section">
+                <h1 class="epsilon hN">Contact</h1>
+            </header>
+
+            <div class="contact">
+                <ol class="list">
+                    <li>
+                        <span class="icon fa fa-envelope" aria-hidden="true"></span><a href="mailto:customerservice@orderin.co.za">customerservice@orderin.co.za</a>
+                    </li>
+                    <li>
+                        <span class="icon fa fa-phone-square" aria-hidden="true"></span><a href="tel:+27212011155">+27 21 201 1155</a><small>(9 AM – 10 PM)</small>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><div class="contact">
+    <ol class="list">
+        <li>
+            <span class="icon fa fa-envelope" aria-hidden="true"></span><a href="mailto:customerservice@orderin.co.za">customerservice@orderin.co.za</a>
+        </li>
+        <li>
+            <span class="icon fa fa-phone-square" aria-hidden="true"></span><a href="tel:+27212011155">+27 21 201 1155</a><small>(9 AM – 10 PM)</small>
+        </li>
+    </ol>
+</div></code></pre>
+            </div>
+        </section>
+
+        <section id="sg-sign-up" class="sg-section">
+            <header class="sg-header sg-header--section">
+                <h1 class="epsilon hN">Sign Up</h1>
+            </header>
+
+            <div class="sign-ups">
+                <div class="sign-up">
+                    <h6 class="sign-up__title">Sign up your company</h6>
+                    <p class="sign-up__text">With a corporate account, employees can order food quickly and easily.</p>
+                    <a href="patterns.html#sg-sign-up" class="btn btn--small"><span class="icon fa fa-caret-right"></span>Sign Up</a>
+                </div>
+                <div class="sign-up">
+                    <h6 class="sign-up__title">Add your restaurant to OrderIn!</h6>
+                    <p class="sign-up__text">Sign up with South Africa’s Premier Online food ordering service.</p>
+                    <a href="patterns.html#sg-sign-up" class="btn btn--small"><span class="icon fa fa-caret-right"></span>Sign Up</a>
+                </div>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><div class="sign-ups">
+    <div class="sign-up">
+        <h6 class="sign-up__title">Sign up your company</h6>
+        <p class="sign-up__text">With a corporate account, employees can order food quickly and easily.</p>
+        <a href="#" class="btn btn--small"><span class="icon fa fa-caret-right"></span>Sign Up</a>
+    </div>
+    <div class="sign-up">
+        <h6 class="sign-up__title">Add your restaurant to OrderIn!</h6>
+        <p class="sign-up__text">Sign up with South Africa’s Premier Online food ordering service.</p>
+        <a href="#" class="btn btn--small"><span class="icon fa fa-caret-right"></span>Sign Up</a>
+    </div>
+</div></code></pre>
+            </div>
+        </section>
+
+        <section id="sg-featured" class="sg-section">
+            <header class="sg-header sg-header--section">
+                <h1 class="epsilon hN">Featured</h1>
+            </header>
+
+            <div style="background-color: #f6f6f6; padding: 2%">
+                <div class="featured">
+                    <h6 class="featured__label">As featured in …</h6>
+                    <ol class="list">
+                        <li><img src="assets/images/logos/logo-forbes-85x25.png" width="85" height="25" alt="Forbes" /></li>
+                        <li><img src="assets/images/logos/logo-sunday-times-115x25.png" width="115" height="25" alt="Sunday Times" /></li>
+                        <li><img src="assets/images/logos/logo-techcentral-175x25.png" width="175" height="25" alt="TechCentral" /></li>
+                        <li><img src="assets/images/logos/logo-financial-mail-29x25.png" width="29" height="25" alt="Financial Mail" /></li>
+                        <li><img src="assets/images/logos/logo-finweek-94x25.png" width="94" height="25" alt="Finweek" /></li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true">
+
+                </code></pre>
+            </div>
+        </section>
+
+        <section id="sg-legal" class="sg-section">
+            <header class="sg-header sg-header--section">
+                <h1 class="epsilon hN">Legal</h1>
+            </header>
+
+            <div class="legal">
+                <ol class="list">
+                    <li>
+                        <p>© Copyright OrderIn (Pty) Ltd. All rights reserved.</p>
+                    </li>
+                    <li>
+                        <a href="patterns.html#sg-legal">Terms &amp; Conditions</a>
+                    </li>
+                </ol>
+                <div class="beta">Beta</div>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><div class="legal">
+    <ol class="list">
+        <li>
+            <p>© Copyright OrderIn (Pty) Ltd. All rights reserved.</p>
+        </li>
+        <li>
+            <a href="#">Terms &amp; Conditions</a>
+        </li>
+    </ol>
+    <div class="beta">Beta</div>
+</div></code></pre>
+            </div>
+        </section>
+
+        <section id="sg-tags" class="sg-section">
+            <header class="sg-header sg-header--section">
+                <h1 class="epsilon hN">Tags</h1>
+            </header>
+
+            <div class="tags">
+                <div class="tag">Lorem ipsum<a href="patterns.html#sg-tags" title="Remove"><span class="icon fa fa-times-circle" aria-hidden="true"></span></a></div>
+                <div class="tag">Dolor sit amet<a href="patterns.html#sg-tags" title="Remove"><span class="icon fa fa-times-circle" aria-hidden="true"></span></a></div>
+                <div class="tag">2013 &ndash; Erat volutpat<a href="patterns.html#sg-tags" title="Remove"><span class="icon fa fa-times-circle" aria-hidden="true"></span></a></div>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><div class="tags">
+    <div class="tag">Lorem ipsum<a href="#" title="Remove"><span class="icon fa fa-times-circle" aria-hidden="true"></span></a></div>
+    <div class="tag">Dolor sit amet<a href="#" title="Remove"><span class="icon fa fa-times-circle" aria-hidden="true"></span></a></div>
+    <div class="tag">2013 &ndash; Erat volutpat<a href="#" title="Remove"><span class="icon fa fa-times-circle" aria-hidden="true"></span></a></div>
+</div></code></pre>
+            </div>
+        </section>
+
+        <section id="sg-box" class="sg-section">
+            <header class="sg-header sg-header--section">
+                <h1 class="epsilon hN">Box</h1>
+            </header>
+
+            <h2 class="zeta sg-heading sg-heading--spacer">Default</h2>
+            <div style="background-color: #991e01; padding: 2%">
+                <div class="box">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><div class="box"></div></code></pre>
+            </div>
+
+            <h2 class="zeta sg-heading sg-heading--spacer">Bordered</h2>
+            <div class="box box--bordered">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><div class="box box--bordered"></div></code></pre>
+            </div>
+        </section>
+    </main>
+
+    <aside class="sg-aside" data-sg-action="sticky">
+        <header class="sg-header sg-header--section">
+            <h3 class="epsilon hN"><a href="index.html"><span class="icon icon--left fa fa-reply" aria-hidden="true"></span></a>Table of Contents</h3>
+        </header>
+
+        <button class="sg-btn sg-btn--toggle" data-sg-toggle="styleguide"><span class="icon icon--left fa fa-desktop" aria-hidden="true"></span>View as Patchwork</button>
+
+        <nav class="sg-nav sg-nav--secondary">
+            <ol class="sg-list">
+                <li><a href="patterns.html#sg-navigation">Navigation</a></li>
+                <li><a href="patterns.html#sg-navigation-vertical">Navigation – Vertical</a></li>
+                <li><a href="patterns.html#sg-accordion">Accordion</a></li>
+                <li><a href="patterns.html#sg-autocomplete">Autocomplete</a></li>
+                <li><a href="patterns.html#sg-tabs">Tabs</a></li>
+                <li><a href="patterns.html#sg-strapline">Strapline</a></li>
+                <li><a href="patterns.html#sg-alerts">Alerts</a></li>
+                <li><a href="patterns.html#sg-notifications">Notifications</a></li>
+                <li><a href="patterns.html#sg-steps">Steps</a></li>
+                <li><a href="patterns.html#sg-search-result">Search Result</a></li>
+                <li><a href="patterns.html#sg-restaurant">Restaurant</a></li>
+                <li><a href="patterns.html#sg-restaurant-meta">Restaurant – Meta</a></li>
+                <li><a href="patterns.html#sg-restaurant-listing">Restaurant – Listing</a></li>
+                <li><a href="patterns.html#sg-menu">Menu</a></li>
+                <li><a href="patterns.html#sg-menu-customise">Menu – Customise</a></li>
+                <li><a href="patterns.html#sg-pagination">Pagination</a></li>
+                <li><a href="patterns.html#sg-legend">Legend</a></li>
+                <li><a href="patterns.html#sg-balance">Balance</a></li>
+                <li><a href="patterns.html#sg-cart">Cart</a></li>
+                <li><a href="patterns.html#sg-cart-count">Cart – Count</a></li>
+                <li><a href="patterns.html#sg-payment">Payment</a></li>
+                <li><a href="patterns.html#sg-card">Card</a></li>
+                <li><a href="patterns.html#sg-personal-details">Personal Details</a></li>
+                <li><a href="patterns.html#sg-order">Order</a></li>
+                <li><a href="patterns.html#sg-address-book">Address Book</a></li>
+                <li><a href="patterns.html#sg-my-orders">My Orders</a></li>
+                <li><a href="patterns.html#sg-how-it-works">How It Works</a></li>
+                <li><a href="patterns.html#sg-category-listing">Category – Listing</a></li>
+                <li><a href="patterns.html#sg-social">Social</a></li>
+                <li><a href="patterns.html#sg-contact">Contact</a></li>
+                <li><a href="patterns.html#sg-sign-up">Sign Up</a></li>
+                <li><a href="patterns.html#sg-featured">Featured</a></li>
+                <li><a href="patterns.html#sg-legal">Legal</a></li>
+                <li><a href="patterns.html#sg-tags">Tags</a></li>
+                <li><a href="patterns.html#sg-box">Box</a></li>
+            </ol>
+        </nav>
+    </aside>
+
+    <button class="sg-btn sg-btn--top" data-sg-action="back-to-top" title="Back to Top"><span class="icon fa fa-arrow-circle-up" aria-hidden="true"></span></button>
+
+    <footer class="sg-footer" role="contentinfo">
+        <ol class="sg-list">
+            <li><b>Version</b>: 2.1.2</li>
+            <li><b>Last Modified</b>: <span data-sg-last-modified="true">21 September, 2015</span></li>
+        </ol>
+    </footer>
+
+    <!-- Example data for jQuery UI Autocomplete -->
+    <script>
+        var autocomplete_data = [
+            "1 Main Road, Cape Town",
+            "123 Upper Maynard Street",
+            "90 Victoria Road Woodstock",
+            "96 Shortmarket Street, Cape Town",
+            "Belvedere Road, Claremont",
+            "Canal Walk",
+            "Cape Town",
+            "Claremont",
+            "Deer Park Drive",
+            "Long Street, Cape Town",
+            "Newlands Avenue",
+            "Observatory",
+            "Sea Point",
+            "V&A Waterfront",
+            "Vredehoek",
+            "Woodstock"
+        ];
+    </script>
+
+    <!-- JavaScript -->
+    <script src="assets/js/script.js?v=2.1.2"></script>
+    <script src="assets/js/styleguide/plugins.js?v=2.1.2"></script>
+    <script src="assets/js/styleguide/styleguide.js?v=2.1.2"></script>
+    <script>UTIL.init();</script>
+    <script>STYLEGUIDE_UTIL.init();</script>
+</body>
+</html>

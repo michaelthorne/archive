@@ -1,0 +1,1108 @@
+<!doctype html>
+<html lang="en" class="sg-html">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Elements – OrderIn</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,700" />
+
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="assets/css/style.css?v=2.1.2" />
+    <link rel="stylesheet" href="assets/css/styleguide.css?v=2.1.2" />
+
+    <!--[if lt IE 9]>
+    <script src="assets/js/vendor/polyfills.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!--[if lt IE 9]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/?locale=en">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <header class="sg-header sg-header--primary" role="banner">
+        <a href="index.html" title="OrderIn" class="logo"><img src="assets/images/logos/logo-orderin-208x50.png" width="208" height="50" alt="OrderIn Logo" /></a>
+        <nav class="sg-nav sg-nav--primary" role="navigation">
+            <ol class="sg-list">
+                <li class="is-active"><a href="elements.html">Elements</a></li>
+                <li><a href="patterns.html">Patterns</a></li>
+                <li><a href="forms.html">Forms</a></li>
+                <li><a href="grid.html">Grid</a></li>
+                <li><a href="templates">Templates</a></li>
+            </ol>
+        </nav>
+        <button class="sg-btn sg-btn--nav" data-sg-toggle="nav"><span class="icon icon--left fa fa-bars" aria-hidden="true"></span>Menu</button>
+    </header>
+
+    <main class="sg-main" role="main">
+        <div id="sg-patchwork" class="sg-section sg-section--well is-hidden">
+            <p class="sg-paragraph sg-paragraph--intro">
+                <span class="icon sg-icon fa fa-info-circle" aria-hidden="true"></span>This is the patchwork view which doesn’t include the markup preview and usage examples. This view is particularly useful for device testing because it shows elements at full-width, presented on the page as they would appear on the site.
+            </p>
+            <button class="sg-btn sg-btn--toggle" data-sg-toggle="styleguide"><span class="icon icon--left fa fa-reply" aria-hidden="true"></span>Style Guide</button>
+        </div>
+
+        <section id="sg-color-palette" class="sg-section">
+            <header class="sg-header sg-header--section">
+                <h1 class="epsilon hN">Color Palette</h1>
+            </header>
+
+            <h2 class="zeta sg-heading sg-heading--spacer">Primary</h2>
+            <ol class="sg-list sg-list--colors">
+                <li class="bg-orange-darkest">
+                    <div class="sg-code">
+                        <code class="sg-code__value">#531004</code>
+                        <code class="sg-code__value">@color-orange-darkest</code>
+                    </div>
+                </li>
+                <li class="bg-orange-darker">
+                    <div class="sg-code">
+                        <code class="sg-code__value">#5f0f08</code>
+                        <code class="sg-code__value">@color-orange-darker</code>
+                    </div>
+                </li>
+                <li class="bg-orange-dark">
+                    <div class="sg-code">
+                        <code class="sg-code__value">#991e01</code>
+                        <code class="sg-code__value">@color-orange-dark</code>
+                    </div>
+                </li>
+                <li class="bg-orange">
+                    <div class="sg-code">
+                        <code class="sg-code__value">#a72101</code>
+                        <code class="sg-code__value">@color-orange</code>
+                    </div>
+                </li>
+                <li class="bg-orange-light">
+                    <div class="sg-code">
+                        <code class="sg-code__value">#d92b00</code>
+                        <code class="sg-code__value">@color-orange-light</code>
+                    </div>
+                </li>
+                <li class="bg-green-dark">
+                    <div class="sg-code">
+                        <code class="sg-code__value">#355300</code>
+                        <code class="sg-code__value">@color-green-dark</code>
+                    </div>
+                </li>
+                <li class="bg-green">
+                    <div class="sg-code">
+                        <code class="sg-code__value">#81bc00</code>
+                        <code class="sg-code__value">@color-green</code>
+                    </div>
+                </li>
+                <li class="bg-green-light">
+                    <div class="sg-code">
+                        <code class="sg-code__value">#a5c900</code>
+                        <code class="sg-code__value">@color-green-light</code>
+                    </div>
+                </li>
+                <li class="bg-yellow-dark">
+                    <div class="sg-code">
+                        <code class="sg-code__value">#624e00</code>
+                        <code class="sg-code__value">@color-yellow-dark</code>
+                    </div>
+                </li>
+                <li class="bg-yellow">
+                    <div class="sg-code">
+                        <code class="sg-code__value">#ebb600</code>
+                        <code class="sg-code__value">@color-yellow</code>
+                    </div>
+                </li>
+                <li class="bg-yellow-light">
+                    <div class="sg-code">
+                        <code class="sg-code__value">#ffc600</code>
+                        <code class="sg-code__value">@color-yellow-light</code>
+                    </div>
+                </li>
+            </ol>
+
+            <h2 class="zeta sg-heading sg-heading--spacer">Grayscale</h2>
+            <ol class="sg-list sg-list--colors">
+                <li class="bg-black">
+                    <div class="sg-code">
+                        <code class="sg-code__value">#000</code>
+                        <code class="sg-code__value">@color-black</code>
+                    </div>
+                </li>
+                <li class="bg-gray-dark">
+                    <div class="sg-code">
+                        <code class="sg-code__value">#5c5c5c</code>
+                        <code class="sg-code__value">@color-gray-dark</code>
+                    </div>
+                </li>
+                <li class="bg-gray">
+                    <div class="sg-code">
+                        <code class="sg-code__value">#bbb</code>
+                        <code class="sg-code__value">@color-gray</code>
+                    </div>
+                </li>
+                <li class="bg-gray-light">
+                    <div class="sg-code">
+                        <code class="sg-code__value">#dbdbdb</code>
+                        <code class="sg-code__value">@color-gray-light</code>
+                    </div>
+                </li>
+                <li class="bg-silver">
+                    <div class="sg-code">
+                        <code class="sg-code__value">#ececec</code>
+                        <code class="sg-code__value">@color-silver</code>
+                    </div>
+                </li>
+                <li class="bg-white-dark">
+                    <div class="sg-code">
+                        <code class="sg-code__value">#f6f6f6</code>
+                        <code class="sg-code__value">@color-white-dark</code>
+                    </div>
+                </li>
+                <li class="bg-white">
+                    <div class="sg-code">
+                        <code class="sg-code__value">#fff</code>
+                        <code class="sg-code__value">@color-white</code>
+                    </div>
+                </li>
+            </ol>
+
+            <h2 class="zeta sg-heading sg-heading--spacer">Social</h2>
+            <ol class="sg-list sg-list--colors">
+                <li class="bg-facebook">
+                    <div class="sg-code">
+                        <code class="sg-code__value">#3b5998</code>
+                        <code class="sg-code__value">@color-facebook</code>
+                    </div>
+                </li>
+                <li class="bg-twitter">
+                    <div class="sg-code">
+                        <code class="sg-code__value">#55acee</code>
+                        <code class="sg-code__value">@color-twitter</code>
+                    </div>
+                </li>
+                <li class="bg-pinterest">
+                    <div class="sg-code">
+                        <code class="sg-code__value">#cc2127</code>
+                        <code class="sg-code__value">@color-pinterest</code>
+                    </div>
+                </li>
+                <li class="bg-instagram">
+                    <div class="sg-code">
+                        <code class="sg-code__value">#3f729b</code>
+                        <code class="sg-code__value">@color-instagram</code>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section id="sg-font-stacks" class="sg-section">
+            <header class="sg-header sg-header--section">
+                <h1 class="epsilon hN">Font Stacks</h1>
+            </header>
+
+            <p>Primary font: Roboto, Arial, sans-serif</p>
+            <p><em>Primary font italic: Roboto, Arial, sans-serif</em></p>
+            <p><strong>Primary font bold: Roboto, Arial, sans-serif</strong></p>
+        </section>
+
+        <section id="sg-visibility" class="sg-section">
+            <header class="sg-header sg-header--section">
+                <h1 class="epsilon hN">Visibility</h1>
+            </header>
+
+            <p class="hide-small">This text is hidden on smaller screens</p>
+
+            <p class="hide-medium hide-large"><em>This text is only visible on smaller screens</em></p>
+
+            <p class="hide-medium">This text is hidden on medium screens only</p>
+
+            <p class="hide-small hide-large"><em>This text is only visible on medium screens</em></p>
+
+            <p class="hide-large">This text is hidden on large screens</p>
+
+            <p class="hide-small hide-medium"><em>This text is only visible on large screens</em></p>
+        </section>
+
+        <section id="sg-headings" class="sg-section">
+            <header class="sg-header sg-header--section">
+                <h1 class="epsilon hN">Headings</h1>
+            </header>
+
+            <h1 class="alpha">The quick brown fox jumps over the lazy dog</h1>
+
+            <h2 class="beta">The quick brown fox jumps over the lazy dog</h2>
+
+            <h3 class="gamma">The quick brown fox jumps over the lazy dog</h3>
+
+            <h4 class="delta">The quick brown fox jumps over the lazy dog</h4>
+
+            <h5 class="epsilon">The quick brown fox jumps over the lazy dog</h5>
+
+            <h6 class="zeta">The quick brown fox jumps over the lazy dog</h6>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><h1 class="alpha">The quick brown fox jumps over the lazy dog</h1>
+<h2 class="beta">The quick brown fox jumps over the lazy dog</h2>
+<h3 class="gamma">The quick brown fox jumps over the lazy dog</h3>
+<h4 class="delta">The quick brown fox jumps over the lazy dog</h4>
+<h5 class="epsilon">The quick brown fox jumps over the lazy dog</h5>
+<h6 class="zeta">The quick brown fox jumps over the lazy dog</h6></code></pre>
+            </div>
+        </section>
+
+        <section id="sg-paragraph" class="sg-section">
+            <header class="sg-header sg-header--section">
+                <h1 class="epsilon hN">Paragraph</h1>
+            </header>
+
+            <p>“The quick brown fox jumps over the lazy dog” is an English–language pangram — a phrase that contains all of the letters of the alphabet. It is used to show fonts and to test typewriters and computer keyboards, and in other applications involving all of the letters in the English alphabet. Owing to its brevity and coherence, it has become widely known.</p>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true">
+                </code></pre>
+            </div>
+        </section>
+
+        <section id="sg-horizontal-rule" class="sg-section">
+            <header class="sg-header sg-header--section">
+                <h1 class="epsilon hN">Horizontal Rule</h1>
+            </header>
+
+            <hr />
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true">
+                </code></pre>
+            </div>
+        </section>
+
+        <section id="sg-inline-elements" class="sg-section">
+            <header class="sg-header sg-header--section">
+                <h1 class="epsilon hN">Inline Elements</h1>
+            </header>
+
+            <div class="sg-example">
+                <p><a href="elements.html#sg-inline-elements">This is a text link</a></p>
+            </div>
+            <div class="sg-example">
+                <p><strong>Strong is used to indicate strong importance</strong></p>
+            </div>
+            <div class="sg-example">
+                <p><em>This text has added emphasis</em></p>
+            </div>
+            <div class="sg-example">
+                <p>The <b>b element</b> is stylistically different text from normal text, without any special importance</p>
+            </div>
+            <div class="sg-example">
+                <p>The <i>i element</i> is text that is set off from the normal text</p>
+            </div>
+            <div class="sg-example">
+                <p><del>This text is deleted</del> and <ins>This text is inserted</ins></p>
+            </div>
+            <div class="sg-example">
+                <p><s>This text has a strikethrough</s></p>
+            </div>
+            <div class="sg-example">
+                <p>Superscript<sup>®</sup></p>
+            </div>
+            <div class="sg-example">
+                <p>Subscript for things like H<sub>2</sub>O</p>
+            </div>
+            <div class="sg-example">
+                <p><small>This small text is small for for fine print, etc.</small></p>
+            </div>
+            <div class="sg-example">
+                <p>Abbreviation: <abbr title="HyperText Markup Language">HTML</abbr></p>
+            </div>
+            <div class="sg-example">
+                <p>Keybord input: <kbd>Cmd</kbd></p>
+            </div>
+            <div class="sg-example">
+                <p><q cite="https://developer.mozilla.org/en-US/docs/HTML/Element/q">This text is a short inline quotation</q></p>
+            </div>
+            <div class="sg-example">
+                <p><cite>This is a citation</cite></p><p>The <dfn>dfn element</dfn> indicates a definition</p>
+            </div>
+            <div class="sg-example">
+                <p>The <mark>mark element</mark> indicates a highlight</p>
+            </div>
+            <div class="sg-example">
+                <p><code>This is what inline code looks like.</code></p>
+            </div>
+            <div class="sg-example">
+                <p><samp>This is sample output from a computer program</samp></p>
+            </div>
+            <div class="sg-example">
+                <p>The <var>variarble element</var>, such as <var>x</var> = <var>y</var></p>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true">
+                </code></pre>
+            </div>
+        </section>
+
+        <section id="sg-list-description" class="sg-section">
+            <header class="sg-header sg-header--section">
+                <h1 class="epsilon hN">List – Description</h1>
+            </header>
+
+            <dl>
+                <dt>The quick brown fox jumps over the lazy dog</dt>
+                <dd>“The quick brown fox jumps over the lazy dog” is an English–language pangram — a phrase that contains all of the letters of the alphabet. It is used to show fonts and to test typewriters and computer keyboards, and in other applications involving all of the letters in the English alphabet. Owing to its brevity and coherence, it has become widely known.</dd>
+                <dt>The quick brown fox jumps over the lazy dog</dt>
+                <dd>“The quick brown fox jumps over the lazy dog” is an English–language pangram — a phrase that contains all of the letters of the alphabet. It is used to show fonts and to test typewriters and computer keyboards, and in other applications involving all of the letters in the English alphabet. Owing to its brevity and coherence, it has become widely known.</dd>
+                <dt>The quick brown fox jumps over the lazy dog</dt>
+                <dd>“The quick brown fox jumps over the lazy dog” is an English–language pangram — a phrase that contains all of the letters of the alphabet. It is used to show fonts and to test typewriters and computer keyboards, and in other applications involving all of the letters in the English alphabet. Owing to its brevity and coherence, it has become widely known.</dd>
+            </dl>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true">
+                </code></pre>
+            </div>
+        </section>
+
+        <section id="sg-list-ordered" class="sg-section">
+            <header class="sg-header sg-header--section">
+                <h1 class="epsilon hN">List – Ordered</h1>
+            </header>
+
+            <ol>
+                <li>“The quick brown fox jumps over the lazy dog” is an English–language pangram — a phrase that contains all of the letters of the alphabet. It is used to show fonts and to test typewriters and computer keyboards, and in other applications involving all of the letters in the English alphabet. Owing to its brevity and coherence, it has become widely known.</li>
+                <li>“The quick brown fox jumps over the lazy dog” is an English–language pangram — a phrase that contains all of the letters of the alphabet. It is used to show fonts and to test typewriters and computer keyboards, and in other applications involving all of the letters in the English alphabet. Owing to its brevity and coherence, it has become widely known.</li>
+                <li>“The quick brown fox jumps over the lazy dog” is an English–language pangram — a phrase that contains all of the letters of the alphabet. It is used to show fonts and to test typewriters and computer keyboards, and in other applications involving all of the letters in the English alphabet. Owing to its brevity and coherence, it has become widely known.</li>
+            </ol>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true">
+                </code></pre>
+            </div>
+        </section>
+
+        <section id="sg-list-unordered" class="sg-section">
+            <header class="sg-header sg-header--section">
+                <h1 class="epsilon hN">List – Unordered</h1>
+            </header>
+
+            <ul>
+                <li>“The quick brown fox jumps over the lazy dog” is an English–language pangram — a phrase that contains all of the letters of the alphabet. It is used to show fonts and to test typewriters and computer keyboards, and in other applications involving all of the letters in the English alphabet. Owing to its brevity and coherence, it has become widely known.</li>
+                <li>“The quick brown fox jumps over the lazy dog” is an English–language pangram — a phrase that contains all of the letters of the alphabet. It is used to show fonts and to test typewriters and computer keyboards, and in other applications involving all of the letters in the English alphabet. Owing to its brevity and coherence, it has become widely known.</li>
+                <li>“The quick brown fox jumps over the lazy dog” is an English–language pangram — a phrase that contains all of the letters of the alphabet. It is used to show fonts and to test typewriters and computer keyboards, and in other applications involving all of the letters in the English alphabet. Owing to its brevity and coherence, it has become widely known.</li>
+            </ul>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true">
+                </code></pre>
+            </div>
+        </section>
+
+        <section id="sg-table" class="sg-section">
+            <header class="sg-header sg-header--section">
+                <h1 class="epsilon hN">Table</h1>
+            </header>
+
+            <table class="table table--bordered table--striped">
+                <caption class="table__caption">The Greatest Movie Actors of All Time</caption>
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Movie</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Marlon</td>
+                    <td>Brando</td>
+                    <td>The Godfather</td>
+                    <td><span class="green">Available</span></td>
+                    <td><a href="elements.html#sg-table" class="btn btn--small btn--green">Order Now</a></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Jack</td>
+                    <td>Nicholson</td>
+                    <td>The Shining</td>
+                    <td><span class="orange">Sold Out</span></td>
+                    <td><a href="elements.html#sg-table" class="btn btn--small"><span class="icon fa fa-refresh" aria-hidden="true"></span>Refresh</a></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>James</td>
+                    <td>Stewart</td>
+                    <td>Rear Window</td>
+                    <td><span class="green">Available</span></td>
+                    <td><a href="elements.html#sg-table" class="btn btn--small btn--green">Order Now</a></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Humphrey</td>
+                    <td>Bogart</td>
+                    <td>Casablanca</td>
+                    <td><span class="yellow">Coming Soon</span></td>
+                    <td><a href="elements.html#sg-table" class="btn btn--small btn--yellow">Find Out More</a></td>
+                </tr>
+                </tbody>
+                <tfoot>
+                <tr>
+                    <td colspan="6">Source: <a href="http://www.imdb.com/list/ls050720698">IMDB</a></td>
+                </tr>
+                </tfoot>
+            </table>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true">
+                </code></pre>
+            </div>
+        </section>
+
+        <section id="sg-form-control-inputs" class="sg-section">
+            <header class="sg-header sg-header--section">
+                <h1 class="epsilon hN">Form Control – Inputs</h1>
+            </header>
+
+            <h2 class="zeta sg-heading sg-heading--spacer">Default</h2>
+            <div class="sg-example">
+                <label for="text" class="label">
+                    Text
+                    <input class="input" type="text" id="text" name="text" placeholder="Placeholder text…" />
+                </label>
+            </div>
+
+            <div class="sg-example">
+                <label for="text-2" class="label label--disabled">
+                    Disabled
+                    <input class="input" type="text" id="text-2" name="text-2" value="You cannot interact with this form control" placeholder="Placeholder text…" disabled="disabled" />
+                </label>
+            </div>
+
+            <div class="sg-example">
+                <label for="text-3" class="label">
+                    Read-only
+                    <input class="input" type="text" id="text-3" name="text-3" value="You cannot modify the value of this form control" placeholder="Placeholder text…" readonly="readonly" />
+                </label>
+            </div>
+
+            <div class="sg-example">
+                <label for="text-6" class="label">
+                    Green
+                    <input class="input input--green" type="text" id="text-6" name="text-6" placeholder="Placeholder text…" />
+                </label>
+            </div>
+
+            <div class="sg-example">
+                <label for="text-7" class="label">
+                    Orange
+                    <input class="input input--orange" type="text" id="text-7" name="text-7" placeholder="Placeholder text…" />
+                </label>
+            </div>
+
+            <div class="sg-example">
+                <label for="text-8" class="label">
+                    Yellow
+                    <input class="input input--yellow" type="text" id="text-8" name="text-8" placeholder="Placeholder text…" />
+                </label>
+            </div>
+
+            <div class="sg-example">
+                <label for="email" class="label">
+                    Email
+                    <input class="input" type="email" id="email" name="email" placeholder="user@domain.com" />
+                </label>
+                <div class="help-text">This is default help text for this form control.</div>
+            </div>
+
+            <div class="sg-example">
+                <div class="toggle-password" data-component="toggle-password">
+                    <label for="password" class="label">
+                        Password
+                        <input class="input" type="password" id="password" name="input-password" />
+                    </label>
+                    <button class="visuallyhidden toggle" data-toggle="password">Show</button>
+                    <div class="help-text help-text--right">This is right-aligned help text for this form control.</div>
+                </div>
+            </div>
+
+            <div class="sg-example">
+                <label for="url" class="label">
+                    URL
+                    <input class="input" type="url" id="url" name="url" placeholder="http://www.google.com" />
+                </label>
+            </div>
+
+            <h2 class="zeta sg-heading sg-heading--spacer">Short</h2>
+            <div class="sg-example">
+                <label for="text-4" class="label visuallyhidden">R</label>
+                <input class="input input--short" type="text" id="text-4" name="text-4" placeholder="R0.00" />
+            </div>
+
+            <h2 class="zeta sg-heading sg-heading--spacer">Large</h2>
+            <div class="sg-example">
+                <label for="text-5" class="label label--large">
+                    Text
+                    <input class="input input--large" type="text" id="text-5" name="text-5" placeholder="Placeholder text…" />
+                </label>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true">
+                </code></pre>
+            </div>
+        </section>
+
+        <section id="sg-form-control-checkboxes" class="sg-section">
+            <header class="sg-header sg-header--section">
+                <h1 class="epsilon hN">Form Control – Checkboxes</h1>
+            </header>
+
+            <h2 class="zeta sg-heading sg-heading--spacer">Default</h2>
+            <fieldset class="fieldset">
+                <label for="checkbox-1" class="label">
+                    <input id="checkbox-1" type="checkbox" name="checkbox" value="1" /> Choice 1
+                </label>
+                <label for="checkbox-2" class="label label--disabled">
+                    <input id="checkbox-2" type="checkbox" name="checkbox" value="2" disabled="disabled" /> Choice 2
+                </label>
+                <label for="checkbox-3" class="label">
+                    <input id="checkbox-3" type="checkbox" name="checkbox" value="3" /> Choice 3
+                </label>
+            </fieldset>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true">
+                </code></pre>
+            </div>
+
+            <h2 class="zeta sg-heading sg-heading--spacer">Horizontal</h2>
+            <fieldset class="fieldset">
+                <label for="checkbox-4" class="label label--inline">
+                    <input id="checkbox-4" type="checkbox" name="checkbox2" value="1" /> Choice 1
+                </label>
+                <label for="checkbox-5" class="label label--inline label--disabled">
+                    <input id="checkbox-5" type="checkbox" name="checkbox2" value="2" disabled="disabled" /> Choice 2
+                </label>
+                <label for="checkbox-6" class="label label--inline">
+                    <input id="checkbox-6" type="checkbox" name="checkbox2" value="3" /> Choice 3
+                </label>
+            </fieldset>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true">
+                </code></pre>
+            </div>
+        </section>
+
+        <section id="sg-form-control-radiobuttons" class="sg-section">
+            <header class="sg-header sg-header--section">
+                <h1 class="epsilon hN">Form Control – Radio Buttons</h1>
+            </header>
+
+            <h2 class="zeta sg-heading sg-heading--spacer">Default</h2>
+            <fieldset class="fieldset">
+                <label for="radio-1" class="label">
+                    <input id="radio-1" type="radio" name="radio" value="1" /> Choice 1
+                </label>
+                <label for="radio-2" class="label label--disabled">
+                    <input id="radio-2" type="radio" name="radio" value="2" disabled="disabled" /> Choice 2
+                </label>
+                <label for="radio-3" class="label">
+                    <input id="radio-3" type="radio" name="radio" value="3" /> Choice 3
+                </label>
+            </fieldset>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true">
+                </code></pre>
+            </div>
+
+            <h2 class="zeta sg-heading sg-heading--spacer">Horizontal</h2>
+            <fieldset class="fieldset">
+                <label for="radio-4" class="label label--inline">
+                    <input id="radio-4" type="radio" name="radio2" value="1" /> Choice 1
+                </label>
+                <label for="radio-5" class="label label--inline label--disabled">
+                    <input id="radio-5" type="radio" name="radio2" value="2" disabled="disabled" /> Choice 2
+                </label>
+                <label for="radio-6" class="label label--inline">
+                    <input id="radio-6" type="radio" name="radio2" value="3" /> Choice 3
+                </label>
+            </fieldset>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true">
+                </code></pre>
+            </div>
+        </section>
+
+        <section id="sg-form-control-select" class="sg-section">
+            <header class="sg-header sg-header--section">
+                <h1 class="epsilon hN">Form Control – Select</h1>
+            </header>
+
+            <h2 class="zeta sg-heading sg-heading--spacer">Default</h2>
+            <label for="select" class="label">
+                Select
+                <select id="select" name="select" class="input input--select">
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                    <option value="4">Option 4</option>
+                </select>
+            </label>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true">
+                </code></pre>
+            </div>
+
+            <h2 class="zeta sg-heading sg-heading--spacer">Short</h2>
+            <label for="select-2" class="label label--inline">
+                <select id="select-2" name="select-2" class="input input--short input--select">
+                    <option value="">Month</option>
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                    <option value="07">07</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+            </label>
+
+            <label for="select-3" class="label label--inline">
+                <select id="select-3" name="select-3" class="input input--short input--select">
+                    <option value="">Year</option>
+                    <option value="2014">2014</option>
+                    <option value="2015">2015</option>
+                    <option value="2016">2016</option>
+                    <option value="2017">2017</option>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                </select>
+            </label>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true">
+                </code></pre>
+            </div>
+
+            <h2 class="zeta sg-heading sg-heading--spacer">Large</h2>
+            <label for="select-4" class="label label--large">
+                Select
+                <select id="select-4" name="select-4" class="input input--large input--select">
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                    <option value="4">Option 4</option>
+                </select>
+            </label>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true">
+                </code></pre>
+            </div>
+        </section>
+
+        <section id="sg-form-control-textarea" class="sg-section">
+            <header class="sg-header sg-header--section">
+                <h1 class="epsilon hN">Form Control – Textarea</h1>
+            </header>
+
+            <div class="sg-example">
+                <textarea id="textarea" name="textarea" class="input input--textarea" placeholder="Placeholder text…"></textarea>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true">
+                </code></pre>
+            </div>
+        </section>
+
+        <section id="sg-buttons" class="sg-section">
+            <header class="sg-header sg-header--section">
+                <h1 class="epsilon hN">Buttons</h1>
+            </header>
+
+            <div class="sg-example">
+                <button class="btn">Button</button>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><button class="btn">Button</button></code></pre>
+            </div>
+        </section>
+
+        <section id="sg-buttons-wide" class="sg-section">
+            <header class="sg-header sg-header--section">
+                <h1 class="epsilon hN">Wide</h1>
+            </header>
+
+            <div class="sg-example">
+                <button class="btn btn--wide">Button</button>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><button class="btn btn--wide">Button</button></code></pre>
+            </div>
+        </section>
+
+        <section id="sg-buttons-large" class="sg-section">
+            <header class="sg-header sg-header--section">
+                <h1 class="epsilon hN">Large</h1>
+            </header>
+
+            <div class="sg-example">
+                <button class="btn btn--large">Button</button>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><button class="btn btn--large">Button</button></code></pre>
+            </div>
+        </section>
+
+        <section id="sg-buttons-small" class="sg-section">
+            <header class="sg-header sg-header--section">
+                <h1 class="epsilon hN">Small</h1>
+            </header>
+
+            <div class="sg-example">
+                <button class="btn btn--small"><span class="icon fa fa-plus-circle" aria-hidden="true"></span>Button</button>
+                <a href="elements.html#sg-buttons" class="btn btn--small btn--silver"><span class="icon fa fa-plus-circle" aria-hidden="true"></span>Silver</a>
+                <a href="elements.html#sg-buttons" class="btn btn--small btn--green-dark"><span class="icon fa fa-plus-circle" aria-hidden="true"></span>Dark Green</a>
+                <a href="elements.html#sg-buttons" class="btn btn--small btn--green"><span class="icon fa fa-plus-circle" aria-hidden="true"></span>Green</a>
+                <a href="elements.html#sg-buttons" class="btn btn--small btn--white"><span class="icon fa fa-plus-circle" aria-hidden="true"></span>White</a>
+                <a href="elements.html#sg-buttons" class="btn btn--small btn--yellow"><span class="icon fa fa-plus-circle" aria-hidden="true"></span>Yellow</a>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><button class="btn btn--small"><span class="icon fa fa-plus-circle" aria-hidden="true"></span>Button</button>
+<a href="#" class="btn btn--small btn--silver"><span class="icon fa fa-plus-circle" aria-hidden="true"></span>Silver</a>
+<a href="#" class="btn btn--small btn--green-dark"><span class="icon fa fa-plus-circle" aria-hidden="true"></span>Dark Green</a>
+<a href="#" class="btn btn--small btn--green"><span class="icon fa fa-plus-circle" aria-hidden="true"></span>Green</a>
+<a href="#" class="btn btn--small btn--white"><span class="icon fa fa-plus-circle" aria-hidden="true"></span>White</a>
+<a href="#" class="btn btn--small btn--yellow"><span class="icon fa fa-plus-circle" aria-hidden="true"></span>Yellow</a></code></pre>
+            </div>
+        </section>
+
+        <section id="sg-buttons-icon" class="sg-section">
+            <header class="sg-header sg-header--section">
+                <h1 class="epsilon hN">Icon</h1>
+            </header>
+
+            <div class="sg-example">
+                <a href="elements.html#sg-buttons" class="btn btn--icon btn--small"><span class="icon fa fa-plus-circle" aria-hidden="true"></span></a>
+                <a href="elements.html#sg-buttons" class="btn btn--icon btn--small btn--silver"><span class="icon fa fa-plus-circle" aria-hidden="true"></span></a>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><a href="#" class="btn btn--icon btn--small"><span class="icon fa fa-plus-circle" aria-hidden="true"></span></a>
+<a href="#" class="btn btn--icon btn--small btn--silver"><span class="icon fa fa-plus-circle" aria-hidden="true"></span></a></code></pre>
+            </div>
+        </section>
+
+        <section id="sg-button-groups" class="sg-section">
+            <header class="sg-header sg-header--section">
+                <h1 class="epsilon hN">Button Groups</h1>
+            </header>
+
+            <h2 class="zeta sg-heading sg-heading--spacer">Right–aligned</h2>
+            <div class="btn-group">
+                <a href="elements.html#sg-button-groups" class="btn">Primary</a>
+                <span class="btn-group__label">or</span>
+                <a href="elements.html#sg-button-groups" class="btn btn--silver">Secondary</a>
+                <span class="btn-group__label">or</span>
+                <a href="elements.html#sg-button-groups" class="btn btn--text">Text Link</a>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><div class="btn-group">
+    <a href="#" class="btn">Primary</a>
+    <span class="btn-group__label">or</span>
+    <a href="#" class="btn btn--silver">Secondary</a>
+    <span class="btn-group__label">or</span>
+    <a href="#" class="btn btn--text">Text Link</a>
+</div></code></pre>
+            </div>
+
+            <h2 class="zeta sg-heading sg-heading--spacer">Left–aligned</h2>
+            <div class="btn-group btn-group--left">
+                <a href="elements.html#sg-button-groups" class="btn btn--small">Primary</a>
+                <span class="btn-group__label btn-group__label--small">or</span>
+                <a href="elements.html#sg-button-groups" class="btn btn--small btn--silver">Secondary</a>
+                <span class="btn-group__label btn-group__label--small">or</span>
+                <a href="elements.html#sg-button-groups" class="btn btn--small btn--text">Text Link</a>
+            </div>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true"><div class="btn-group btn-group--left">
+    <a href="#" class="btn btn--small">Primary</a>
+    <span class="btn-group__label btn-group__label--small">or</span>
+    <a href="#" class="btn btn--small btn--silver">Secondary</a>
+    <span class="btn-group__label btn-group__label--small">or</span>
+    <a href="#" class="btn btn--small btn--text">Text Link</a>
+</div></code></pre>
+            </div>
+        </section>
+
+        <section id="sg-icons" class="sg-section">
+            <header class="sg-header sg-header--section">
+                <h1 class="epsilon hN">Icons</h1>
+            </header>
+
+            <h2 class="zeta sg-heading sg-heading--spacer">Standard</h2>
+            <ol class="sg-list sg-list--icons">
+                <li>
+                    <span class="icon fa fa-angle-right" title="Angle (Right)" aria-hidden="true"></span>
+                    <code class="sg-code">fa-angle-right</code>
+                </li>
+                <li>
+                    <span class="icon fa fa-arrow-circle-up" title="Arrow Up (Circle)" aria-hidden="true"></span>
+                    <code class="sg-code">fa-arrow-circle-up</code>
+                </li>
+                <li>
+                    <span class="icon fa fa-arrow-circle-left" title="Arrow Left (Circle)" aria-hidden="true"></span>
+                    <code class="sg-code">fa-arrow-circle-left</code>
+                </li>
+                <li>
+                    <span class="icon fa fa-bars" title="Bars" aria-hidden="true"></span>
+                    <code class="sg-code">fa-bars</code>
+                </li>
+                <li>
+                    <span class="icon fa fa-caret-up" title="Caret (Up)" aria-hidden="true"></span>
+                    <code class="sg-code">fa-caret-up</code>
+                </li>
+                <li>
+                    <span class="icon fa fa-caret-down" title="Caret (Down)" aria-hidden="true"></span>
+                    <code class="sg-code">fa-caret-down</code>
+                </li>
+                <li>
+                    <span class="icon fa fa-caret-right" title="Caret (Right)" aria-hidden="true"></span>
+                    <code class="sg-code">fa-caret-right</code>
+                </li>
+                <li>
+                    <span class="icon fa fa-check" title="Check" aria-hidden="true"></span>
+                    <code class="sg-code">fa-check</code>
+                </li>
+                <li>
+                    <span class="icon fa fa-check-circle" title="Check (Circle)" aria-hidden="true"></span>
+                    <code class="sg-code">fa-check-circle</code>
+                </li>
+                <li>
+                    <span class="icon fa fa-clock-o" title="Clock" aria-hidden="true"></span>
+                    <code class="sg-code">fa-clock-o</code>
+                </li>
+                <li>
+                    <span class="icon fa fa-cutlery" title="Cutlery" aria-hidden="true"></span>
+                    <code class="sg-code">fa-cutlery</code>
+                </li>
+                <li>
+                    <span class="icon fa fa-exclamation-circle" title="Exclamation (Circle)" aria-hidden="true"></span>
+                    <code class="sg-code">fa-exclamation-circle</code>
+                </li>
+                <li>
+                    <span class="icon fa fa-exclamation-triangle" title="Exclamation (Triangle)" aria-hidden="true"></span>
+                    <code class="sg-code">fa-exclamation-triangle</code>
+                </li>
+                <li>
+                    <span class="icon fa fa-frown-o" title="Frown" aria-hidden="true"></span>
+                    <code class="sg-code">fa-frown-o</code>
+                </li>
+                <li>
+                    <span class="icon fa fa-home" title="Home" aria-hidden="true"></span>
+                    <code class="sg-code">fa-home</code>
+                </li>
+                <li>
+                    <span class="icon fa fa-info-circle" title="Info (Circle)" aria-hidden="true"></span>
+                    <code class="sg-code">fa-info-circle</code>
+                </li>
+                <li>
+                    <span class="icon fa fa-leaf" title="Leaf" aria-hidden="true"></span>
+                    <code class="sg-code">fa-leaf</code>
+                </li>
+                <li>
+                    <span class="icon fa fa-lock" title="Lock" aria-hidden="true"></span>
+                    <code class="sg-code">fa-lock</code>
+                </li>
+                <li>
+                    <span class="icon fa fa-map-marker" title="Map Marker" aria-hidden="true"></span>
+                    <code class="sg-code">fa-map-marker</code>
+                </li>
+                <li>
+                    <span class="icon fa fa-plus-circle" title="Plus (Circle)" aria-hidden="true"></span>
+                    <code class="sg-code">fa-plus-circle</code>
+                </li>
+                <li>
+                    <span class="icon fa fa-reply" title="Reply" aria-hidden="true"></span>
+                    <code class="sg-code">fa-reply</code>
+                </li>
+                <li>
+                    <span class="icon fa fa-refresh" title="Refresh" aria-hidden="true"></span>
+                    <code class="sg-code">fa-refresh</code>
+                </li>
+                <li>
+                    <span class="icon fa fa-shopping-cart" title="Shopping Cart" aria-hidden="true"></span>
+                    <code class="sg-code">fa-shopping-cart</code>
+                </li>
+                <li>
+                    <span class="icon fa fa-smile-o" title="Smile" aria-hidden="true"></span>
+                    <code class="sg-code">fa-smile-o</code>
+                </li>
+                <li>
+                    <span class="icon fa fa-taxi" title="Taxi" aria-hidden="true"></span>
+                    <code class="sg-code">fa-taxi</code>
+                </li>
+                <li>
+                    <span class="icon fa fa-times" title="Times" aria-hidden="true"></span>
+                    <code class="sg-code">fa-times</code>
+                </li>
+                <li>
+                    <span class="icon fa fa-times-circle" title="Times (Circle)" aria-hidden="true"></span>
+                    <code class="sg-code">fa-times-circle</code>
+                </li>
+                <li>
+                    <span class="icon fa fa-usd" title="US Dollar" aria-hidden="true"></span>
+                    <code class="sg-code">fa-usd</code>
+                </li>
+                <li>
+                    <span class="icon fa fa-user" title="User" aria-hidden="true"></span>
+                    <code class="sg-code">fa-user</code>
+                </li>
+                <li>
+                    <span class="icon fa fa-power-off" title="Power Off" aria-hidden="true"></span>
+                    <code class="sg-code">fa-power-off</code>
+                </li>
+                <li>
+                    <span class="icon fa fa-facebook-square" title="Facebook (Square)" aria-hidden="true"></span>
+                    <code class="sg-code">fa-facebook-square</code>
+                </li>
+                <li>
+                    <span class="icon fa fa-twitter-square" title="Twitter (Square)" aria-hidden="true"></span>
+                    <code class="sg-code">fa-twitter-square</code>
+                </li>
+                <li>
+                    <span class="icon fa fa-pinterest-square" title="Pinterest (Square)" aria-hidden="true"></span>
+                    <code class="sg-code">fa-pinterest-square</code>
+                </li>
+                <li>
+                    <span class="icon fa fa-instagram" title="Instagram (Square)" aria-hidden="true"></span>
+                    <code class="sg-code">fa-instagram</code>
+                </li>
+                <li>
+                    <span class="icon fa fa-envelope" title="Envelope" aria-hidden="true"></span>
+                    <code class="sg-code">fa-envelope</code>
+                </li>
+                <li>
+                    <span class="icon fa fa-phone" title="Phone" aria-hidden="true"></span>
+                    <code class="sg-code">fa-phone</code>
+                </li>
+                <li>
+                    <span class="icon fa fa-phone-square" title="Phone (Square)" aria-hidden="true"></span>
+                    <code class="sg-code">fa-phone-square</code>
+                </li>
+            </ol>
+
+            <h2 class="zeta sg-heading sg-heading--spacer">Spinning</h2>
+            <ol class="sg-list sg-list--icons">
+                <li>
+                    <span class="icon orange fa fa-spinner fa-spin" title="Spinner" aria-hidden="true"></span>
+                    <code class="sg-code">fa-spinner</code>
+                </li>
+            </ol>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true">
+                </code></pre>
+            </div>
+        </section>
+    </main>
+
+    <aside class="sg-aside" data-sg-action="sticky">
+        <header class="sg-header sg-header--section">
+            <h3 class="epsilon hN"><a href="index.html"><span class="icon icon--left fa fa-reply" aria-hidden="true"></span></a>Table of Contents</h3>
+        </header>
+
+        <button class="sg-btn sg-btn--toggle" data-sg-toggle="styleguide"><span class="icon icon--left fa fa-desktop" aria-hidden="true"></span>View as Patchwork</button>
+
+        <nav class="sg-nav sg-nav--secondary">
+            <ol class="sg-list">
+                <li><a href="elements.html#sg-color-palette">Color Palette</a></li>
+                <li><a href="elements.html#sg-font-stacks">Font Stacks</a></li>
+                <li><a href="elements.html#sg-visibility">Visibility</a></li>
+                <li><a href="elements.html#sg-headings">Headings</a></li>
+                <li><a href="elements.html#sg-paragraph">Paragraph</a></li>
+                <li><a href="elements.html#sg-horizontal-rule">Horizontal Rule</a></li>
+                <li><a href="elements.html#sg-inline-elements">Inline Elements</a></li>
+                <li><a href="elements.html#sg-list-description">List – Description</a></li>
+                <li><a href="elements.html#sg-list-ordered">List – Ordered</a></li>
+                <li><a href="elements.html#sg-list-unordered">List – Unordered</a></li>
+                <li><a href="elements.html#sg-table">Table</a></li>
+                <li><a href="elements.html#sg-form-control-inputs">Form Control – Inputs</a></li>
+                <li><a href="elements.html#sg-form-control-checkboxes">Form Control – Checkboxes</a></li>
+                <li><a href="elements.html#sg-form-control-radiobuttons">Form Control – Radio Buttons</a></li>
+                <li><a href="elements.html#sg-form-control-select">Form Control – Select</a></li>
+                <li><a href="elements.html#sg-form-control-textarea">Form Control – Textarea</a></li>
+                <li><a href="elements.html#sg-buttons">Buttons</a></li>
+                <li><a href="elements.html#sg-buttons-large">Buttons – Large</a></li>
+                <li><a href="elements.html#sg-buttons-small">Buttons – Small</a></li>
+                <li><a href="elements.html#sg-buttons-icon">Buttons – Icon</a></li>
+                <li><a href="elements.html#sg-button-groups">Button Groups</a></li>
+                <li><a href="elements.html#sg-icons">Icons</a></li>
+            </ol>
+        </nav>
+    </aside>
+
+    <button class="sg-btn sg-btn--top" data-sg-action="back-to-top" title="Back to Top"><span class="icon fa fa-arrow-circle-up" aria-hidden="true"></span></button>
+
+    <footer class="sg-footer" role="contentinfo">
+        <ol class="sg-list">
+            <li><b>Version</b>: 2.1.2</li>
+            <li><b>Last Modified</b>: <span data-sg-last-modified="true">21 September, 2015</span></li>
+        </ol>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/script.js?v=2.1.2"></script>
+    <script src="assets/js/styleguide/plugins.js?v=2.1.2"></script>
+    <script src="assets/js/styleguide/styleguide.js?v=2.1.2"></script>
+    <script>UTIL.init();</script>
+    <script>STYLEGUIDE_UTIL.init();</script>
+</body>
+</html>

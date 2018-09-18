@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Menu – OrderIn</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+
+    <!-- Twitter Card -->
+    <meta property="twitter:title" content="" />
+    <meta property="twitter:description" content="" />
+    <meta property="twitter:image" content="" />
+    <meta property="twitter:url" content="" />
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:site" content="" />
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,700" />
+
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="../assets/css/style.css?v=2.1.2" />
+
+    <!--[if lt IE 9]>
+    <script src="../assets/js/vendor/polyfills.js"></script>
+    <![endif]-->
+</head>
+<body data-controller="site">
+    <!--[if lt IE 9]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/?locale=en">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div class="l-canvas">
+        <header class="header header--primary" role="banner">
+            <div class="l-wrapper">
+                <button class="btn btn--text btn--toggle" data-action="nav-toggle"><span class="icon fa fa-bars" aria-hidden="true"></span></button>
+
+                <a href="home.html" class="logo">
+                    <img src="../assets/images/logos/logo-orderin-208x50.png" width="208" height="50" alt="OrderIn" />
+                </a>
+
+                <nav class="nav" role="navigation" data-component="nav">
+                    <ol class="list">
+                        <li><a href="sign-in.html"><span class="icon fa fa-lock" aria-hidden="true"></span>Sign In</a></li>
+                        <li><a href="register.html"><span class="icon fa fa-desktop" aria-hidden="true"></span>Register</a></li>
+                    </ol>
+                </nav>
+
+                <div class="cart cart--count cart--empty">
+                    <a href="cart.html" class="cart__link">
+                        <span class="icon fa fa-shopping-cart" aria-hidden="true"></span>
+                        <div class="cart__count">0</div>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <main class="l-main" role="main">
+            <div class="l-wrapper">
+                <div class="steps">
+                    <ol class="list">
+                        <li><span class="icon fa fa-map-marker" aria-hidden="true"></span><a href="menu.html">Enter Your Address</a></li>
+                        <li><span class="icon fa fa-home" aria-hidden="true"></span><a href="menu.html">Pick a Restaurant</a></li>
+                        <li class="is-active"><span class="icon fa fa-cutlery" aria-hidden="true"></span>Order Food</li>
+                        <li><span class="icon fa fa-shopping-cart" aria-hidden="true"></span>Checkout</li>
+                    </ol>
+                </div>
+
+                <section class="l-section l-section--wide">
+                    <div class="restaurant">
+                        <img class="restaurant__img" src="../assets/images/restaurants/logos/logo-col-cacchio-50x50.png" width="50" height="50" alt="Col’cacchio Logo" />
+                        <div class="restaurant-details">
+                            <h4 class="restaurant__title">Col’cacchio Pizzeria</h4>
+                            <p class="restaurant__synopsis">We’re the reason you crave pizza!</p>
+                        </div>
+                        <div class="restaurant-meta restaurant-meta--horizontal restaurant-meta--text">
+                            <ol class="restaurant-meta__list">
+                                <li class="restaurant-meta__item">
+                                    <span class="icon fa fa-map-marker" aria-hidden="true"></span>Shop 20, Belvedere Square, c/o Keurboom & Belvedere Road, Claremont
+                                </li>
+                                <li class="restaurant-meta__item">
+                                    <span class="icon fa fa-phone" aria-hidden="true"></span>(021) 674-0040
+                                </li>
+                                <li class="restaurant-meta__item">
+                                    <span class="icon fa fa-clock-o" aria-hidden="true"></span>Sun – Thurs: 11h00 – 22h00 Fri – Sat: 11h00 – 23h00
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="alert alert--success" role="alert" data-component="alert">
+                        <div class="alert__title"><span class="icon fa fa-smile-o" aria-hidden="true"></span>This restaurant delivers!</div>
+                        <p class="alert__message">To find out if this restaurant delivers to you, enter your address below and click the “check my address” button.</p>
+                        <form id="form-address" action="menu.html" method="post" class="form">
+                            <label for="address" class="label">
+                                Your Address:
+                                <input class="input" type="text" id="address" name="address" placeholder="" maxlength="100" />
+                            </label>
+                            <div class="btn-group">
+                                <input id="check" name="check" class="btn btn--small btn--green-dark" value="Check My Address" type="submit" />
+                                <a href="menu.html" class="btn btn--small btn--text" data-action="dismiss">Never mind, I’ll pick it up</a>
+                            </div>
+                        </form>
+                        <button class="alert__dismiss" data-action="dismiss"><span class="icon fa fa-times-circle" aria-hidden="true"></span></button>
+                    </div>
+
+                    <div class="menu">
+                        <div class="menu-header">
+                            <div class="menu__title">Menu</div>
+                            <div class="legend">
+                                <ol class="list">
+                                    <li><span class="icon fa fa-leaf green" aria-hidden="true"></span>Vegetarian</li>
+                                    <li><span class="icon fa fa-leaf orange" aria-hidden="true"></span>Spicy</li>
+                                    <li><span class="icon fa fa-leaf yellow" aria-hidden="true"></span>Mild</li>
+                                    <li><img src="../assets/images/logos/logo-momentum-multiply-30x30.png" width="30" height="30" title="Multiply" alt="" />Multiply</li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="accordion" data-component="accordion" role="tablist">
+                            <div class="accordion-item" role="tab" aria-selected="true" aria-hidden="false">
+                                <div id="accordion-tab-7" class="accordion-item__title" aria-controls="accordion-panel-7" role="tab">
+                                    <a class="accordion-item__link" href="#" data-icon-up="fa-caret-up" data-icon-down="fa-caret-down">Starters<span class="icon fa fa-caret-up" aria-hidden="true"></span></a>
+                                </div>
+                                <div id="accordion-panel-7" class="accordion-item__contents" aria-labelledby="accordion-tab-7" role="tabpanel">
+                                    <div class="menu-loading"><img src="../assets/images/general/loader.gif" width="24" height="24" alt="" />Loading items…</div>
+                                    <div class="menu-item">
+                                        <div class="menu-item-description">
+                                            <div class="menu-item__title">Mike’s Vegetarian Free Range Breakfast (Single)</div>
+                                            <div class="menu-item__synopsis">2 Free-range eggs, 2 strips of bacon, ostrich sausage & 2 slices of grilled tomato, served with toast & jam.</div>
+                                        </div>
+                                        <div class="menu-item-utils">
+                                            <a href="menu-customise.html" class="btn btn--small btn--silver"><span class="icon fa fa-plus-circle" aria-hidden="true"></span>Add</a>
+                                            <div class="menu-item__price">R146.00</div>
+                                            <div class="legend legend--compact">
+                                                <ol class="list">
+                                                    <li><span class="icon fa fa-leaf green" aria-hidden="true"></span></li>
+                                                    <li><span class="icon fa fa-leaf orange" aria-hidden="true"></span></li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="menu-item">
+                                        <div class="menu-item-description">
+                                            <div class="menu-item__title">Half Shell Mussels</div>
+                                            <div class="menu-item__synopsis">Half shell mussels in cream, garlic & leek sauce.</div>
+                                        </div>
+                                        <div class="menu-item-utils">
+                                            <a href="menu-customise.html" class="btn btn--small btn--silver"><span class="icon fa fa-plus-circle" aria-hidden="true"></span>Add</a>
+                                            <div class="menu-item__price">R23.95</div>
+                                        </div>
+                                    </div>
+                                    <div class="menu-item">
+                                        <div class="menu-item-description">
+                                            <div class="menu-item__title">Springbok Carpaccio</div>
+                                            <div class="menu-item__synopsis">Served with pecorino shavings & herb pita.</div>
+                                        </div>
+                                        <div class="menu-item-utils">
+                                            <a href="menu-customise.html" class="btn btn--small btn--silver"><span class="icon fa fa-plus-circle" aria-hidden="true"></span>Add</a>
+                                            <div class="menu-item__price">R76.99</div>
+                                            <div class="legend legend--compact">
+                                                <ol class="list">
+                                                    <li><span class="icon fa fa-leaf green" aria-hidden="true"></span></li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="menu-item">
+                                        <div class="menu-item-description">
+                                            <div class="menu-item__title">Roast Peppers & Artichokes Salad</div>
+                                            <div class="menu-item__synopsis">Warm salad of roast peppers & artichokes.</div>
+                                        </div>
+                                        <div class="menu-item-utils">
+                                            <a href="menu-customise.html" class="btn btn--small btn--silver"><span class="icon fa fa-plus-circle" aria-hidden="true"></span>Add</a>
+                                            <div class="menu-item__price">R146.00</div>
+                                            <div class="legend legend--compact">
+                                                <ol class="list">
+                                                    <li><span class="icon fa fa-leaf green" aria-hidden="true"></span></li>
+                                                    <li><span class="icon fa fa-leaf orange" aria-hidden="true"></span></li>
+                                                    <li><img src="../assets/images/logos/logo-momentum-multiply-30x30.png" width="30" height="30" title="Multiply" alt="" /></li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="menu-item">
+                                        <div class="menu-item-description">
+                                            <div class="menu-item__title">Half Shell Mussels</div>
+                                            <div class="menu-item__synopsis">Half shell mussels in cream, garlic & leek sauce.</div>
+                                        </div>
+                                        <div class="menu-item-utils">
+                                            <a href="menu-customise.html" class="btn btn--small btn--silver"><span class="icon fa fa-plus-circle" aria-hidden="true"></span>Add</a>
+                                            <div class="menu-item__price">R23.95</div>
+                                        </div>
+                                    </div>
+                                    <div class="menu-item">
+                                        <div class="menu-item-description">
+                                            <div class="menu-item__title">Springbok Carpaccio</div>
+                                            <div class="menu-item__synopsis">Served with pecorino shavings & herb pita.</div>
+                                        </div>
+                                        <div class="menu-item-utils">
+                                            <a href="menu-customise.html" class="btn btn--small btn--silver"><span class="icon fa fa-plus-circle" aria-hidden="true"></span>Add</a>
+                                            <div class="menu-item__price">R76.99</div>
+                                            <div class="legend legend--compact">
+                                                <ol class="list">
+                                                    <li><span class="icon fa fa-leaf green" aria-hidden="true"></span></li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item" role="tab" aria-selected="false" aria-hidden="true">
+                                <div id="accordion-tab-8" class="accordion-item__title" aria-controls="accordion-panel-8" role="tab">
+                                    <a class="accordion-item__link" href="#" data-icon-up="fa-caret-up" data-icon-down="fa-caret-down">Salads<span class="icon fa fa-caret-down" aria-hidden="true"></span></a>
+                                </div>
+                                <div id="accordion-panel-8" class="accordion-item__contents" aria-labelledby="accordion-tab-8" role="tabpanel">
+                                    <div class="menu-item">
+                                        <div class="menu-item-description">
+                                            <div class="menu-item__title">Roast Peppers & Artichokes Salad</div>
+                                            <div class="menu-item__synopsis">Warm salad of roast peppers & artichokes.</div>
+                                        </div>
+                                        <div class="menu-item-utils">
+                                            <a href="menu-customise.html" class="btn btn--small btn--silver"><span class="icon fa fa-plus-circle" aria-hidden="true"></span>Add</a>
+                                            <div class="menu-item__price">R146.00</div>
+                                            <div class="legend legend--compact">
+                                                <ol class="list">
+                                                    <li><span class="icon fa fa-leaf green" aria-hidden="true"></span></li>
+                                                    <li><span class="icon fa fa-leaf orange" aria-hidden="true"></span></li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="menu-item">
+                                        <div class="menu-item-description">
+                                            <div class="menu-item__title">Half Shell Mussels</div>
+                                            <div class="menu-item__synopsis">Half shell mussels in cream, garlic & leek sauce.</div>
+                                        </div>
+                                        <div class="menu-item-utils">
+                                            <a href="menu-customise.html" class="btn btn--small btn--silver"><span class="icon fa fa-plus-circle" aria-hidden="true"></span>Add</a>
+                                            <div class="menu-item__price">R23.95</div>
+                                        </div>
+                                    </div>
+                                    <div class="menu-item">
+                                        <div class="menu-item-description">
+                                            <div class="menu-item__title">Springbok Carpaccio</div>
+                                            <div class="menu-item__synopsis">Served with pecorino shavings & herb pita.</div>
+                                        </div>
+                                        <div class="menu-item-utils">
+                                            <a href="menu-customise.html" class="btn btn--small btn--silver"><span class="icon fa fa-plus-circle" aria-hidden="true"></span>Add</a>
+                                            <div class="menu-item__price">R76.99</div>
+                                            <div class="legend legend--compact">
+                                                <ol class="list">
+                                                    <li><span class="icon fa fa-leaf green" aria-hidden="true"></span></li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item" role="tab" aria-selected="false" aria-hidden="true">
+                                <div id="accordion-tab-9" class="accordion-item__title" aria-controls="accordion-panel-9" role="tab">
+                                    <a class="accordion-item__link" href="#" data-icon-up="fa-caret-up" data-icon-down="fa-caret-down">Mains<span class="icon fa fa-caret-down" aria-hidden="true"></span></a>
+                                </div>
+                                <div id="accordion-panel-9" class="accordion-item__contents" aria-labelledby="accordion-tab-9" role="tabpanel">
+                                    <div class="menu-item">
+                                        <div class="menu-item-description">
+                                            <div class="menu-item__title">Roast Peppers & Artichokes Salad</div>
+                                            <div class="menu-item__synopsis">Warm salad of roast peppers & artichokes.</div>
+                                        </div>
+                                        <div class="menu-item-utils">
+                                            <a href="menu-customise.html" class="btn btn--small btn--silver"><span class="icon fa fa-plus-circle" aria-hidden="true"></span>Add</a>
+                                            <div class="menu-item__price">R146.00</div>
+                                            <div class="legend legend--compact">
+                                                <ol class="list">
+                                                    <li><span class="icon fa fa-leaf green" aria-hidden="true"></span></li>
+                                                    <li><span class="icon fa fa-leaf orange" aria-hidden="true"></span></li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="menu-item">
+                                        <div class="menu-item-description">
+                                            <div class="menu-item__title">Half Shell Mussels</div>
+                                            <div class="menu-item__synopsis">Half shell mussels in cream, garlic & leek sauce.</div>
+                                        </div>
+                                        <div class="menu-item-utils">
+                                            <a href="menu-customise.html" class="btn btn--small btn--silver"><span class="icon fa fa-plus-circle" aria-hidden="true"></span>Add</a>
+                                            <div class="menu-item__price">R23.95</div>
+                                        </div>
+                                    </div>
+                                    <div class="menu-item">
+                                        <div class="menu-item-description">
+                                            <div class="menu-item__title">Springbok Carpaccio</div>
+                                            <div class="menu-item__synopsis">Served with pecorino shavings & herb pita.</div>
+                                        </div>
+                                        <div class="menu-item-utils">
+                                            <a href="menu-customise.html" class="btn btn--small btn--silver"><span class="icon fa fa-plus-circle" aria-hidden="true"></span>Add</a>
+                                            <div class="menu-item__price">R76.99</div>
+                                            <div class="legend legend--compact">
+                                                <ol class="list">
+                                                    <li><span class="icon fa fa-leaf green" aria-hidden="true"></span></li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="btn-group">
+                        <a href="menu.html" class="btn btn--small btn--white" data-action="back-to-top"><span class="icon fa fa-arrow-circle-up" aria-hidden="true"></span>Back to Top</a>
+                    </div>
+                </section>
+
+                <aside class="l-aside" data-sticky-sidebar="true">
+                    <div id="cart" class="cart">
+                        <form id="form-cart" action="checkout.html" method="post">
+                            <div class="cart__title">My Order</div>
+                            <div class="cart__description">
+                                <p class="cart__description-text"><b>#4475758</b> from <b>Col’cacchio, Cavendish Square</b> for <b>Pickup</b>.</p>
+                                <a class="btn btn--silver btn--small" href="menu.html">Change to Delivery</a>
+                            </div>
+                            <div class="cart-items">
+                                <div class="cart-item">
+                                    <div class="cart-item__title cart-item__title--status">No items added yet.<span class="icon fa fa-frown-o" aria-hidden="true"></span></div>
+                                </div>
+                            </div>
+                            <div class="cart-totals">
+                                <div class="cart-total">
+                                    <div class="cart-total__label">Subtotal*</div>
+                                    <div class="cart-total__value">R0.00</div>
+                                </div>
+                                <div class="cart-total">
+                                    <div class="cart-total__label cart-total__label--input">Add Gratuity</div>
+                                    <div class="cart-total__value"><label for="gratuity" class="visuallyhidden">R</label><input class="input input--short" type="text" id="gratuity" name="gratuity" placeholder="R0.00" /></div>
+                                </div>
+                                <div class="cart-total">
+                                    <div class="cart-total__label"><b>Total</b></div>
+                                    <div class="cart-total__value"><b>R0.00</b></div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </aside>
+            </div>
+        </main>
+
+        <footer class="footer footer--primary" role="contentinfo">
+            <div class="social">
+                <ol class="list">
+                    <li>
+                        <a href="https://www.facebook.com/orderin.za" target="_blank" title="Follow us on Facebook" class="facebook"><span class="icon fa fa-facebook-square" aria-hidden="true"></span></a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/OrderInSA" target="_blank" title="Follow us on Twitter" class="twitter"><span class="icon fa fa-twitter-square" aria-hidden="true"></span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.pinterest.com/order_in" target="_blank" title="Follow us on Pinterest" class="pinterest"><span class="icon fa fa-pinterest-square" aria-hidden="true"></span></a>
+                    </li>
+                    <li>
+                        <a href="http://www.instagram.com/orderin_sa" target="_blank" title="Follow us on Instagram" class="instagram"><span class="icon fa fa-instagram" aria-hidden="true"></span></a>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="sign-ups">
+                <div class="sign-up">
+                    <h6 class="sign-up__title">Sign up your company</h6>
+                    <p class="sign-up__text">With a corporate account, employees can order food quickly and easily.</p>
+                    <a href="sign-up-corporate.html" class="btn btn--small"><span class="icon fa fa-caret-right"></span>Sign Up</a>
+                </div>
+                <div class="sign-up">
+                    <h6 class="sign-up__title">Add your restaurant to OrderIn!</h6>
+                    <p class="sign-up__text">Sign up with South Africa’s Premier Online food ordering service.</p>
+                    <a href="sign-up-restaurant.html" class="btn btn--small"><span class="icon fa fa-caret-right"></span>Sign Up</a>
+                </div>
+            </div>
+
+            <div class="featured">
+                <h6 class="featured__label">As featured in …</h6>
+                <ol class="list">
+                    <li><img src="../assets/images/logos/logo-forbes-85x25.png" width="85" height="25" alt="Forbes" /></li>
+                    <li><img src="../assets/images/logos/logo-sunday-times-115x25.png" width="115" height="25" alt="Sunday Times" /></li>
+                    <li><img src="../assets/images/logos/logo-techcentral-175x25.png" width="175" height="25" alt="TechCentral" /></li>
+                    <li><img src="../assets/images/logos/logo-financial-mail-29x25.png" width="29" height="25" alt="Financial Mail" /></li>
+                    <li><img src="../assets/images/logos/logo-finweek-94x25.png" width="94" height="25" alt="Finweek" /></li>
+                </ol>
+            </div>
+
+            <div class="contact">
+                <ol class="list">
+                    <li>
+                        <span class="icon fa fa-envelope" aria-hidden="true"></span><a href="mailto:customerservice@orderin.co.za">customerservice@orderin.co.za</a>
+                    </li>
+                    <li>
+                        <span class="icon fa fa-phone-square" aria-hidden="true"></span><a href="tel:+27212011155">+27 21 201 1155</a><small>(9 AM – 10 PM)</small>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="legal">
+                <ol class="list">
+                    <li>
+                        <p>© Copyright OrderIn (Pty) Ltd. All rights reserved.</p>
+                    </li>
+                    <li>
+                        <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
+                    </li>
+                </ol>
+                <div class="beta">Beta</div>
+            </div>
+        </footer>
+    </div>
+
+    <nav class="nav nav--vertical" role="navigation" data-component="nav-vertical">
+        <ol class="list">
+            <li class="nav__label nav__label--small"></li>
+            <li class="nav__label"></li>
+            <li><a href="sign-in.html"><span class="icon fa fa-lock"></span>Sign In</a></li>
+            <li><a href="register.html"><span class="icon fa fa-desktop"></span>Register</a></li>
+        </ol>
+    </nav>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/script.js?v=2.1.2"></script>
+    <script>UTIL.init();</script>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site’s ID -->
+    <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+    </script>
+</body>
+</html>

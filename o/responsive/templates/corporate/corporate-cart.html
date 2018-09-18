@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>(Corporate) Cart – OrderIn</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+
+    <!-- Twitter Card -->
+    <meta property="twitter:title" content="" />
+    <meta property="twitter:description" content="" />
+    <meta property="twitter:image" content="" />
+    <meta property="twitter:url" content="" />
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:site" content="" />
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,700" />
+
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="../../assets/css/style.css?v=2.1.2" />
+
+    <!--[if lt IE 9]>
+    <script src="../../assets/js/vendor/polyfills.js"></script>
+    <![endif]-->
+</head>
+<body data-controller="site">
+    <!--[if lt IE 9]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/?locale=en">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div class="l-canvas">
+        <header class="header header--primary" role="banner">
+            <div class="l-wrapper">
+                <button class="btn btn--text btn--toggle" data-action="nav-toggle"><span class="icon fa fa-bars" aria-hidden="true"></span></button>
+
+                <a href="corporate-home.html" class="logo">
+                    <img src="../../assets/images/logos/logo-orderin-208x50.png" width="208" height="50" alt="OrderIn" />
+                </a>
+
+                <nav class="nav" role="navigation" data-component="nav">
+                    <ol class="list">
+                        <li class="nav__label">Hi, Dinesh</li>
+                        <li data-drop-down="true">
+                            <a href="../account/profile.html"><span class="icon fa fa-user"></span>My Account</a>
+                            <ol class="list">
+                                <li class="is-label"><a><span class="orange-light">My Balance:</span> <b>R361.00</b></a></li>
+                                <li><a href="../account/profile.html">My Profile</a></li>
+                                <li><a href="../account/orders.html">My Orders</a></li>
+                                <li><a href="../account/address-book.html">Address Book</a></li>
+                                <li><a href="../account/manage-allocations.html">Manage Allocations</a></li>
+                                <li><a href="../account/top-up-account.html">Top Up Account</a></li>
+                            </ol>
+                        </li>
+                        <li><a href="corporate-home.html"><span class="icon fa fa-power-off"></span>Sign Out</a></li>
+                    </ol>
+                </nav>
+
+                <div class="cart cart--count">
+                    <a href="corporate-cart.html" class="cart__link">
+                        <span class="icon fa fa-shopping-cart" aria-hidden="true"></span>
+                        <div class="cart__count">3</div>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <main class="l-main" role="main">
+            <div class="l-wrapper l-wrapper--xs">
+                <div class="l-section l-section--single">
+                    <div class="balance balance--bordered">
+                        <div class="balance__title">My Account</div>
+                        <div class="balances">
+                            <div class="balance__label">Remaining Balance:</div>
+                            <div class="balance__value">R361.00</div>
+                        </div>
+                    </div>
+
+                    <div class="alert alert--warning" role="alert" data-component="alert">
+                        <div class="alert__title"><span class="icon fa fa-exclamation-triangle" aria-hidden="true"></span>Insufficient Funds!</div>
+                        <p class="alert__message">You do not have enough credit on your account to complete this order. Please remove items from your order or switch to personal payment.</p>
+                        <a href="../checkout.html" class="btn btn--small btn--yellow btn--wide"><span class="icon fa fa-user" aria-hidden="true"></span>Switch to Personal<span class="hide-medium"> Payment</span></a>
+                    </div>
+
+                    <div id="cart" class="cart">
+                        <form id="form-cart" action="corporate-checkout-client-code.html" method="post">
+                            <div class="cart__title">My Order</div>
+                            <div class="cart__description">
+                                <p class="cart__description-text"><b>#4475758</b> from <b>Col’cacchio, Cavendish Square</b> for <b>Pickup</b>.</p>
+                                <a class="btn btn--silver btn--small" href="corporate-cart.html">Change to Delivery</a>
+                            </div>
+                            <div class="cart-items">
+                                <div class="cart-item">
+                                    <div class="cart-item__title">Grilled Calamari & Rocket</div>
+                                    <div class="cart-item__price">R142.00</div>
+                                    <a href="#" class="cart-item__remove" title="Remove"><span class="icon fa fa-times-circle" aria-hidden="true"></span></a>
+                                    <div class="cart-options">
+                                        <div class="cart-option">
+                                            <div class="cart-option__title">Whole wheat bread</div>
+                                            <div class="cart-option__price">R2.50</div>
+                                        </div>
+                                        <div class="cart-option">
+                                            <div class="cart-option__title">Toasted</div>
+                                            <div class="cart-option__price">R7.00</div>
+                                        </div>
+                                        <div class="cart-option">
+                                            <div class="cart-option__title">Seared Norwegian Salmon</div>
+                                            <div class="cart-option__price">R127.00</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart-item">
+                                    <div class="cart-item__title">Half Shell Mussels</div>
+                                    <div class="cart-item__price">R232.00</div>
+                                    <a href="#" class="cart-item__remove" title="Remove"><span class="icon fa fa-times-circle" aria-hidden="true"></span></a>
+                                </div>
+                                <div class="cart-item">
+                                    <div class="cart-item__title">Roasted Peppers & Artichokes Salad</div>
+                                    <div class="cart-item__price">R142.00</div>
+                                    <a href="#" class="cart-item__remove" title="Remove"><span class="icon fa fa-times-circle" aria-hidden="true"></span></a>
+                                    <div class="cart-options">
+                                        <div class="cart-option">
+                                            <div class="cart-option__title">Whole wheat bread</div>
+                                            <div class="cart-option__price">R2.50</div>
+                                        </div>
+                                        <div class="cart-option">
+                                            <div class="cart-option__title">Caramel toffee milkshake</div>
+                                            <div class="cart-option__price">R27.00</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart-totals">
+                                <div class="cart-total">
+                                    <div class="cart-total__label">Subtotal*</div>
+                                    <div class="cart-total__value">R978.00</div>
+                                </div>
+                                <div class="cart-total">
+                                    <div class="cart-total__label cart-total__label--input">Add Gratuity</div>
+                                    <div class="cart-total__value"><label for="gratuity" class="visuallyhidden">R</label><input class="input input--short" type="text" id="gratuity" name="gratuity" placeholder="R0.00" /></div>
+                                </div>
+                                <div class="cart-total">
+                                    <div class="cart-total__label"><b>Total</b></div>
+                                    <div class="cart-total__value"><b>R978.00</b></div>
+                                </div>
+                            </div>
+                            <div class="cart-checkout">
+                                <div class="cart-checkout__label">* Includes VAT</div>
+                                <button class="btn btn--green" type="submit" title="Get in my belly!"><span class="icon fa fa-shopping-cart" aria-hidden="true"></span>Proceed to Checkout</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="box box--bordered">
+                        <div class="box__title">Do you have a Promoter Code?</div>
+                        <p class="box__synopsis">Enter it below for a R20 discount on this order.</p>
+
+                        <label for="promoter-code" class="label">
+                            Code:
+                            <input class="input" type="text" id="promoter-code" name="promoter-code" maxlength="10" />
+                        </label>
+                        <div class="btn-group">
+                            <button id="redeem-code" type="button" class="btn btn--silver btn--small">Redeem Code</button>
+                        </div>
+                    </div>
+
+                    <div class="btn-group btn-group--left">
+                        <a href="corporate-menu.html" class="btn btn--small btn--white"><span class="icon fa fa-arrow-circle-left" aria-hidden="true"></span>Back</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer footer--primary" role="contentinfo">
+            <div class="social">
+                <ol class="list">
+                    <li>
+                        <a href="https://www.facebook.com/orderin.za" target="_blank" title="Follow us on Facebook" class="facebook"><span class="icon fa fa-facebook-square" aria-hidden="true"></span></a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/OrderInSA" target="_blank" title="Follow us on Twitter" class="twitter"><span class="icon fa fa-twitter-square" aria-hidden="true"></span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.pinterest.com/order_in" target="_blank" title="Follow us on Pinterest" class="pinterest"><span class="icon fa fa-pinterest-square" aria-hidden="true"></span></a>
+                    </li>
+                    <li>
+                        <a href="http://www.instagram.com/orderin_sa" target="_blank" title="Follow us on Instagram" class="instagram"><span class="icon fa fa-instagram" aria-hidden="true"></span></a>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="sign-ups">
+                <div class="sign-up">
+                    <h6 class="sign-up__title">Sign up your company</h6>
+                    <p class="sign-up__text">With a corporate account, employees can order food quickly and easily.</p>
+                    <a href="../sign-up-corporate.html" class="btn btn--small"><span class="icon fa fa-caret-right"></span>Sign Up</a>
+                </div>
+                <div class="sign-up">
+                    <h6 class="sign-up__title">Add your restaurant to OrderIn!</h6>
+                    <p class="sign-up__text">Sign up with South Africa’s Premier Online food ordering service.</p>
+                    <a href="../sign-up-restaurant.html" class="btn btn--small"><span class="icon fa fa-caret-right"></span>Sign Up</a>
+                </div>
+            </div>
+
+            <div class="featured">
+                <h6 class="featured__label">As featured in …</h6>
+                <ol class="list">
+                    <li><img src="../../assets/images/logos/logo-forbes-85x25.png" width="85" height="25" alt="Forbes" /></li>
+                    <li><img src="../../assets/images/logos/logo-sunday-times-115x25.png" width="115" height="25" alt="Sunday Times" /></li>
+                    <li><img src="../../assets/images/logos/logo-techcentral-175x25.png" width="175" height="25" alt="TechCentral" /></li>
+                    <li><img src="../../assets/images/logos/logo-financial-mail-29x25.png" width="29" height="25" alt="Financial Mail" /></li>
+                    <li><img src="../../assets/images/logos/logo-finweek-94x25.png" width="94" height="25" alt="Finweek" /></li>
+                </ol>
+            </div>
+
+            <div class="contact">
+                <ol class="list">
+                    <li>
+                        <span class="icon fa fa-envelope" aria-hidden="true"></span><a href="mailto:customerservice@orderin.co.za">customerservice@orderin.co.za</a>
+                    </li>
+                    <li>
+                        <span class="icon fa fa-phone-square" aria-hidden="true"></span><a href="tel:+27212011155">+27 21 201 1155</a><small>(9 AM – 10 PM)</small>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="legal">
+                <ol class="list">
+                    <li>
+                        <p>© Copyright OrderIn (Pty) Ltd. All rights reserved.</p>
+                    </li>
+                    <li>
+                        <a href="../terms-and-conditions.html">Terms &amp; Conditions</a>
+                    </li>
+                </ol>
+                <div class="beta">Beta</div>
+            </div>
+        </footer>
+    </div>
+
+    <nav class="nav nav--vertical" role="navigation" data-component="nav-vertical">
+        <ol class="list">
+            <li class="nav__label nav__label--small">Hi, Dinesh</li>
+            <li class="nav__label"><span class="orange-light">My Balance:</span> <b>R361.00</b></li>
+            <li><a href="../account/profile.html">My Profile</a></li>
+            <li><a href="../account/orders.html">My Orders</a></li>
+            <li><a href="../account/address-book.html">Address Book</a></li>
+            <li><a href="../account/manage-allocations.html">Manage Allocations</a></li>
+            <li><a href="../account/top-up-account.html">Top Up Account</a></li>
+            <li><a href="corporate-home.html"><span class="icon fa fa-power-off"></span>Sign Out</a></li>
+        </ol>
+    </nav>
+
+    <!-- JavaScript -->
+    <script src="../../assets/js/script.js?v=2.1.2"></script>
+    <script>UTIL.init();</script>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site’s ID -->
+    <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+    </script>
+</body>
+</html>

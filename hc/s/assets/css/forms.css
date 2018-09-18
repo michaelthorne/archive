@@ -1,0 +1,254 @@
+label, option {
+    color: #000;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+option {
+    font-weight: normal;
+    font-size: 12px;
+}
+
+label {
+    clear: both;
+    display: block;
+    float: left;
+    margin-top: -0.5em;
+    width: 130px;
+}
+
+.modal label {
+    padding-left: 15px;
+    width: 97px;
+}
+
+input[type="button"],
+input[type="submit"] {
+    background: url("../../assets/images/button-background.gif") top left no-repeat;
+    border: none;
+    color: #fff;
+    clear: both;
+    font-family: 'DINBold', Arial, sans-serif;
+    font-size: 1.6em;
+    height: 29px;
+    text-transform: uppercase;
+    text-shadow: 0 -1px 0 #1b74b2;
+    width: 116px;
+}
+
+select {
+    background: #fff url("../../assets/images/input-background.gif") repeat-x;
+    border: 1px solid #e3e3e3;
+    border-top-color: #bfbfbf;
+    border-bottom-color: #f7f7f7;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    height: 31px;
+    padding: 6px;
+    width: 258px;
+}
+
+#choices input[type="submit"] {
+    float: right;
+    margin: 0 20px 20px 0;
+}
+
+input[type="button"]:hover,
+input[type="submit"]:hover {
+    cursor: pointer;
+    text-shadow: 2px 2px 0 #1b74b2;
+}
+
+input[type="text"],
+input[type="password"],
+textarea {
+    background: #fff url("../../assets/images/input-background.gif") repeat-x;
+    border: 1px solid #e3e3e3;
+    border-top-color: #bfbfbf;
+    border-bottom-color: #f7f7f7;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    color: #000;
+    display: block;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    left: 130px;
+    padding: 6px;
+    position: relative;
+    top: -1.9em;
+    width: 244px;
+}
+
+textarea {
+    height: 122px;
+    width: 244px;
+}
+
+.modal input[type="text"],
+.modal input[type="password"] {
+    left: 97px;
+}
+
+input[type="button"]:focus,
+input[type="submit"]:hover {
+    border: 1px #000 solid;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+}
+
+input[type="text"]:focus,
+input[type="text"]:hover,
+input[type="password"]:focus,
+input[type="password"]:hover {
+    border: 1px #8a8a8a solid;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+}
+
+fieldset {
+    display: block;
+}
+
+fieldset.controls {
+    clear: both;
+    height: 44px;
+    position: relative;
+}
+
+fieldset.controls input[type="button"],
+fieldset.controls input[type="submit"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0 15px 15px 0;
+}
+
+fieldset.controls a,
+fieldset.controls label {
+    display: inherit;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: auto;
+}
+
+fieldset.controls a {
+    padding-top: 6px;
+}
+
+fieldset.controls label {
+    padding-top: 7px;
+    font-weight: normal;
+}
+
+fieldset.select {
+    border-bottom: none;
+    float: left;
+    left: 130px;
+    margin-bottom: 1px;
+    position: relative;
+    top: -2.2em;
+    width: 450px;
+}
+
+fieldset.select select {
+    width: 101px;
+}
+
+fieldset.select.wide select {
+    width: 435px;
+}
+
+#login-register fieldset.wide select {
+    width: 258px;
+}
+
+#login-register select#dob_day,
+#login-register select#dob_year {
+    width: 76px;
+}
+
+/* --- QUIZ ------------ */
+
+/* hide checkboxes */
+div#choices ul li input {
+    display: none;
+}
+
+/* --- VALIDATION ------------ */
+
+label.error {
+    color: #d63432;
+    font-weight: normal;
+    margin-bottom: 5px;
+    width: 380px;
+}
+
+#destination label.error {
+    font-size: 14px;
+}
+
+/* --- CV BUILDER ------------ */
+
+#cv-builder input[type="text"] {
+    width: 421px;
+}
+
+#cv-builder textarea {
+    height: 122px;
+    width: 421px;
+}
+
+#cv-builder div.utils input[type="submit"] {
+    margin-top: 14px;
+}
+
+#cv-builder fieldset {
+    border-bottom: 1px #e7e7e7 solid;
+}
+
+#cv-builder fieldset.checkbox,
+#cv-builder fieldset.select {
+    border-bottom: none;
+}
+
+#cv-builder fieldset.checkbox {
+    border-bottom: none;
+    float: left;
+    padding-bottom: 20px;
+    width: 140px
+}
+
+#cv-builder fieldset.checkbox label {
+    font-weight: normal;
+    padding-bottom: 10px;
+}
+
+#cv-builder fieldset.controls {
+    border-bottom: 1px #e7e7e7 solid;
+    margin-top: 14px;
+}
+
+#cv-builder fieldset.controls input[type="button"],
+#cv-builder fieldset.controls input[type="submit"] {
+    margin-right: 0;
+}
+
+#cv-builder fieldset.controls a {
+    display: inline-block;
+    padding: 0;
+    position: inherit;
+}
+
+#cv-builder fieldset.select big {
+    width: 100px;
+}
+
+#cv-builder fieldset.select span {
+    padding: 0 5px;
+}

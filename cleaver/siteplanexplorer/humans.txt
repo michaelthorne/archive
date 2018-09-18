@@ -1,0 +1,30 @@
+# http://humanstxt.org
+
+/* TEAM */
+
+    Front-end Web Developer: Michael Thorne
+    Location: Cape Town, South Africa
+    Website: http://www.userx.co.za
+    Twitter: @mikkelz_za
+
+    <Role>: <First Name>, <Last Name>
+    Location: <City>, <Country>
+    Website: <URL>
+    Twitter: @<Username>
+
+/* THANKS */
+
+    HTML5 Boilerplate, Twitter Bootstrap, Humans TXT
+
+/* WEBSITE */
+
+    Last Update: 2013/06/03
+    Standards: HTML5, CSS3
+    Components: jQuery, Selectivizr, LESS, Normalize.css
+    Software: PhpStorm, WinLess
+
+   __  __
+  / / / /_______  ____| |/ /
+ / / / / ___/ _ \/ ___/   /
+/ /_/ (__  )  __/ /  /   |
+\____/____/\___/_/  /_/|_|

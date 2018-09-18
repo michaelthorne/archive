@@ -1,0 +1,24 @@
+# humanstxt.org
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Michael Thorne | Front-end Web Developer | @mikkelz_za
+    Nossie Roux    | Creative Director       | @nossieroux
+
+# THANKS
+
+    Brad Frost        | http://bradfrost.com
+    Eric Meyer        | http://meyerweb.com
+    Ethan Marcotte    | http://ethanmarcotte.com
+    Harry Roberts     | http://csswizardry.com
+    Jeffery Zeldman   | http://www.zeldman.com
+    Nicolas Gallagher | http://nicolasgallagher.com
+    Paul Irish        | http://www.paulirish.com
+    Roger Johansson   | http://www.456bereastreet.com
+
+# SITE
+
+    Last Update: 2015/05/31
+    Standards: HTML5, CSS3
+    Components: Jekyll, Normalize.css, Sass

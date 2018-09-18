@@ -1,0 +1,2029 @@
+/* ==========================================================================
+   Layout: display, float, height, margin, padding, position, width, z-index
+   ========================================================================== */
+
+/* LESS: Colours */
+
+@color-black: #000;
+@color-grey-dark: #666;
+@color-grey: #777;
+@color-grey-blue: #9aa0a5;
+@color-grey-lighter: #9f9f9f;
+@color-silver: #ccc;
+@color-silver-light: #e9e9e9;
+@color-silver-lighter: #e2e2e2;
+@color-white-darker: #f0f0f0;
+@color-white-dark: #f6f6f6;
+@color-white: #fff;
+@color-red: #e61d38;
+@color-navy: #082865;
+
+/* Containers
+   ========================================================================== */
+
+div.wrapper {
+    margin: 18px auto 0 auto;
+    position: relative;
+    width: 302px;
+}
+
+div.wrapper-inner {
+    overflow: hidden;
+    position: relative;
+}
+
+/* Headings
+   ========================================================================== */
+
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    margin: 0;
+    padding: 0;
+}
+
+h3 {
+
+}
+
+h4 {
+
+}
+
+h5 {
+
+}
+
+h6 {
+
+}
+
+/* Anchors
+   ========================================================================== */
+
+a.button {
+    display: inline-block;
+    height: 29px;
+    padding: 7px 15px 0 15px;
+
+    &:active {
+        height: 28px;
+        padding-top: 8px;
+    }
+}
+
+/* Table
+   ========================================================================== */
+
+table {
+
+}
+
+thead {
+
+    th {
+
+    }
+}
+
+tbody {
+
+    td {
+
+    }
+}
+
+tfoot {
+
+    td {
+
+    }
+}
+
+/* Lists
+   ========================================================================== */
+
+ol {
+
+    li {
+
+    }
+}
+
+ul {
+
+    li {
+
+    }
+}
+
+dl {
+
+    dt {
+
+    }
+
+    dd {
+
+    }
+}
+
+/* Navigation
+   ========================================================================== */
+
+nav.primary {
+    clear: both;
+    margin: 20px 0 18px 0;
+
+    ol {
+        margin: 0;
+        overflow: hidden;
+        padding: 0;
+        width: 296px;
+
+        li {
+            background-color: @color-white-dark;
+            background-image: url("../images/backgrounds/background-sprite-navigation.png");
+            background-repeat: no-repeat;
+            float: left;
+            height: 32px;
+            list-style: none;
+            margin: 0 4px 4px 0;
+            width: 152px;
+
+            &:nth-child(2n+2) {
+                margin-right: 0;
+                width: 140px;
+
+                a {
+                    width: 91px;
+                }
+            }
+
+            &.home {
+                background-image: url("../images/navigation/nav-home.png");
+                background-position: 9px 8px;
+
+                &.current,
+                &:hover {
+                    background-image: url("../images/navigation/nav-home-over.png");
+                }
+            }
+
+            &.amici {
+                background-image: url("../images/navigation/nav-amici.png");
+                background-position: 9px 7px;
+
+                &.current,
+                &:hover {
+                    background-image: url("../images/navigation/nav-amici-over.png");
+                }
+            }
+
+            &.places {
+                background-image: url("../images/navigation/nav-places.png");
+                background-position: 11px 6px;
+
+                &.current,
+                &:hover {
+                    background-image: url("../images/navigation/nav-places-over.png");
+                }
+            }
+
+            &.calendar {
+                background-image: url("../images/navigation/nav-calendar.png");
+                background-position: 11px 6px;
+
+                &.current,
+                &:hover {
+                    background-image: url("../images/navigation/nav-calendar-over.png");
+                }
+            }
+
+            &.galleries {
+                background-image: url("../images/navigation/nav-galleries.png");
+                background-position: 9px 9px;
+
+                &.current,
+                &:hover {
+                    background-image: url("../images/navigation/nav-galleries-over.png");
+                }
+            }
+
+            &.facebook {
+                background-image: url("../images/navigation/nav-facebook.png");
+                background-position: 14px 5px;
+
+                &.current,
+                &:hover {
+                    background-image: url("../images/navigation/nav-facebook-over.png");
+                }
+            }
+
+            &.sign-up {
+                background-image: url("../images/navigation/nav-sign-up.png");
+                background-position: 9px 8px;
+
+                &.current,
+                &:hover {
+                    background-image: url("../images/navigation/nav-sign-up-over.png");
+                }
+            }
+
+            &.search {
+                background-image: url("../images/navigation/nav-search.png");
+                background-position: 12px 8px;
+                position: relative;
+
+                &.current,
+                &:hover {
+                    background-image: url("../images/navigation/nav-search-over.png");
+                }
+            }
+
+            a {
+                display: block;
+                height: 21px;
+                padding: 11px 0 0 49px;
+                width: 103px;
+            }
+        }
+    }
+}
+
+/* Contents
+   ========================================================================== */
+
+section[role="main"] {
+    .border-radius(2px);
+    .box-shadow(0 2px 6px @color-silver);
+    overflow: hidden;
+
+    // Peroni Logo
+    div.logo {
+        background-color: @color-white-dark;
+        border: 2px @color-white solid;
+        border-top: 0;
+        padding: 18px 0;
+
+        img {
+            display: block;
+            height: auto;
+            margin: 0 auto;
+            width: 126px;
+        }
+    }
+
+    // Member Photo Background Frame
+    div.photo-large {
+        background: url("../images/backgrounds/background-profile-photo-294x302.png") 4px 4px no-repeat;
+        border-top: 1px @color-white-darker solid;
+        height: 305px;
+        margin: 0;
+        padding: 8px 0 0 8px;
+        width: 294px;
+
+        // Member Photo
+        img {
+            height: auto;
+            width: 286px;
+        }
+    }
+
+    // Landing
+    &.landing {
+
+        // Intro
+        p.intro {
+            border-top: 1px @color-white-darker solid;
+            border-bottom: 1px @color-white-darker solid;
+            margin: 0 0 6px 0;
+            padding: 20px 10px;
+        }
+    }
+
+    // Member: Sign Up, Logged In, Edit Profile
+    &.member {
+
+        // Contents (Right)
+        div.contents {
+            overflow: hidden;
+
+            > header {
+                margin: 9px 17px 23px 17px;
+            }
+
+            form {
+                margin: 0 0 4px 4px;
+            }
+        }
+
+        // Offers
+        div.offers {
+            margin-top: 0;
+        }
+    }
+
+    // Home
+    &.home {
+
+        div.wrapper-inner {
+            background: none;
+        }
+    }
+
+    // Interaction: Vote, Enter, Poll, etc.
+    &.interaction {
+
+        div.wrapper-inner {
+            background: none;
+        }
+
+        // Side bar (Left)
+        aside {
+            margin: 40px 0 0 0;
+
+            > img {
+                height: auto;
+                margin: 0 0 2px 4px;
+                width: 294px;
+            }
+
+            // Video interaction
+            &.video {
+                position: relative;
+
+                // Play video
+                a.play {
+                    display: none;
+                }
+
+                // Launch external video link
+                a.launch {
+                    background: url("../images/icons/icon-play.png") 0 0 no-repeat;
+                    cursor: pointer;
+                    display: block;
+                    height: 111px;
+                    left: 95px;
+                    position: absolute;
+                    top: 90px;
+                    width: 111px;
+                }
+            }
+        }
+
+        // Contents (Right)
+        div.contents {
+            padding: 0 0 0 0;
+
+            header {
+                background-color: @color-white;
+                border-top: 1px @color-silver-light solid;
+                margin: 0;
+                padding: 18px 0;
+                width: 302px;
+
+                h1 {
+                    width: 302px;
+                }
+            }
+
+            p {
+                margin: 0 0 22px 0;
+                padding: 0 10px;
+                width: 282px;
+            }
+
+            // Vote: A/B
+            div.options {
+                margin: 19px 0 21px 9px;
+                overflow: hidden;
+
+                a {
+                    display: block;
+                    float: left;
+                    height: 137px;
+                    margin: 0 10px 0 0;
+                    width: 137px;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+
+            // Invite: listing of friends
+            ul.friends {
+                clear: both;
+                float: left;
+                margin: 0 0 10px 4px;
+                padding: 0;
+
+                &+a.button {
+                    clear: both;
+                }
+
+                li {
+                    border: 2px @color-silver-light solid;
+                    height: 46px;
+                    float: left;
+                    list-style: none;
+                    margin: 0 4px 4px 0;
+                    position: relative;
+                    width: 46px;
+
+                    &:hover {
+                        border: 2px @color-grey-lighter solid;
+                        .transition(all 0.20s ease 0s);
+                    }
+
+                    // Remove friend
+                    a.remove {
+                        display: block;
+                        height: 17px;
+                        position: absolute;
+                        right: -8px;
+                        top: -8px;
+                        width: 17px;
+                    }
+                }
+            }
+
+            form {
+
+                // Hide autocomplete on mobile
+                label[data-component="autocomplete"] {
+                    display: none;
+                }
+
+                ul.friends {
+                    margin-left: 0; // Override existing margin as form already has one
+                }
+            }
+
+            // Button
+            a.button {
+                margin: 0 0 10px 4px;
+                width: 262px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+/* Ribbon */
+
+a.ribbon {
+    display: none;
+}
+
+/* Tab */
+
+div.tab {
+    display: none;
+}
+
+/* Offers
+   ========================================================================== */
+
+div.offers {
+    border-bottom: 1px @color-white solid;
+    border-top: 0;
+    margin-top: 120px;
+    margin-bottom: 3px;
+
+    > header {
+        background-color: @color-white;
+        border-top: 1px @color-silver-light solid;
+        height: 51px;
+        margin: 0;
+        padding: 12px 0 2px 0;
+        width: 302px;
+
+        h1 {
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    // Offer
+    a.offer {
+        background-color: @color-white-dark;
+        display: block;
+        margin: 0 auto 12px auto;
+        padding: 20px 20px 26px 20px;
+        width: 254px;
+
+        &:last-of-type {
+            margin-bottom: 12px;
+        }
+
+        header {
+
+            h2 {
+                margin: 0;
+                padding: 8px 0 0 4px;
+            }
+        }
+
+        // Image
+        img {
+            background: url("../images/backgrounds/background-offer-drop-shadow-250x12.png") center bottom no-repeat;
+            padding-bottom: 18px;
+        }
+    }
+}
+
+/* Amici
+   ========================================================================== */
+
+div.amici {
+    left: 20px;
+    position: absolute;
+    top: 420px;
+    overflow: hidden;
+    width: 270px;
+
+    p {
+        display: block;
+        margin: 0 0 6px 0;
+        padding: 0;
+
+        // Login
+        &.login {
+            float: left;
+        }
+    }
+
+    a {
+
+        // Join
+        &.join {
+            float: left;
+            margin: 0 7px 0 0;
+        }
+
+        // Login
+        &.login {
+            display: inline-block;
+        }
+    }
+
+    // Peroni Bottle
+    > img {
+        display: none;
+    }
+
+    // Member's Photos
+    div.photos {
+        display: none;
+
+        ol {
+            display: none;
+        }
+
+        // Counter for number of members
+        div.counter {
+            display: none;
+        }
+    }
+}
+
+/* Profile
+   ========================================================================== */
+
+div.profile {
+    background-color: @color-white-dark;
+    overflow: hidden;
+
+    > header {
+        background-color: @color-white;
+        border-top: 1px @color-silver-light solid;
+        border-bottom: 1px @color-silver-light solid;
+        height: 51px;
+        padding: 12px 0 2px 0;
+        width: 302px;
+
+        h1 {
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    // Member
+    div.member {
+        border: 2px @color-white solid;
+        clear: both;
+        overflow: hidden;
+        padding: 29px 15px 20px 15px;
+
+        // Member's Photo
+        div.photo {
+            background: url("../images/backgrounds/background-profile-photo-69x71.png") 0 0 no-repeat;
+            float: left;
+            height: 69px;
+            margin: 0 11px 0 0;
+            padding: 2px 0 0 2px;
+            width: 71px;
+
+            img {
+                display: block;
+                height: 67px;
+                width: 65px;
+            }
+        }
+
+        // Member's Details
+        ul {
+            float: left;
+            margin: 0;
+            padding: 0;
+
+            li {
+                list-style: none;
+
+                &.name {
+                    margin: 0 0 8px 0;
+                }
+
+                &.province {
+                    margin: 0 0 10px 0;
+                }
+
+                ul {
+                    float: left;
+
+                    li {
+                        float: left;
+
+                        a {
+                            border-right: 1px @color-grey-blue solid;
+                            margin: 0 9px 0 0;
+                            padding: 0 9px 0 0;
+                        }
+
+                        &:last-child {
+
+                            a {
+                                border-right: 0;
+                                margin-right: 0;
+                                padding-right: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Feed */
+
+div.feed {
+    padding: 20px 12px 0 12px;
+
+    header {
+        display: block;
+        margin: -15px 0 0 0;
+
+        h2 {
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+            width: 130px;
+        }
+    }
+
+    ol {
+        margin: 24px 0 29px 0;
+        overflow: hidden;
+        padding: 0;
+
+        &:last-of-type {
+            margin-bottom: 21px;
+        }
+
+        li {
+            list-style: none;
+            margin: 0 0 14px 0;
+            overflow: hidden;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            img {
+                border: 2px @color-silver-lighter solid;
+                float: left;
+                margin: 0 12px 0 0;
+            }
+
+            p {
+                float: left;
+                margin: 0;
+                padding: 1px 0 0 0;
+                width: 210px;
+            }
+        }
+    }
+}
+
+/* Horizontal Rule */
+
+hr {
+    background-color: @color-silver;
+    border: 0;
+    height: 1px;
+}
+
+/* Character Counter */
+
+div.character-counter {
+    clear: both;
+    display: block;
+    height: 16px;
+    padding: 10px 0 5px 0;
+    width: 271px;
+}
+
+/* Footer
+   ========================================================================== */
+
+footer[role="contentinfo"] {
+    overflow: hidden;
+    margin: 20px 0;
+
+    ol {
+        float: left;
+        margin: 5px 0 0 0;
+        overflow: hidden;
+        padding: 0;
+
+        li {
+            float: left;
+            list-style: none;
+            margin: 0 10px 2px 0;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        &+ a {
+            display: block;
+            float: right;
+            height: 23px;
+            margin: 0 17px 0 0;
+            width: 66px;
+        }
+    }
+}
+
+/* Carousel
+   ========================================================================== */
+
+div.wrapper-carousel {
+
+    > header {
+        background-color: @color-white;
+        border-top: 1px @color-silver-light solid;
+        height: 46px;
+        margin: 0;
+        padding: 13px 0 2px 0;
+        width: 302px;
+
+        h1 {
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    div.carousel {
+
+        ul {
+            margin: 0 0 0 4px;
+            overflow: hidden;
+            padding: 0;
+
+            li {
+                clear: both;
+                float: left;
+                list-style: none;
+                margin: 0 0 4px 0;
+                position: relative;
+                width: 294px;
+
+                /* Slide */
+
+                div.slide {
+                    // XX: TODO get correct background image
+                    background: url("../images/backgrounds/background-offer-inner-shadow-1x322.png") 0 0 repeat-x;
+                    padding: 14px 10px 10px 10px;
+                    width: 274px;
+
+                    header {
+                        height: 74px;
+                        padding: 7px 13px 0 13px
+                    }
+
+                    p {
+                        margin: 18px 0 9px 0;
+                        padding: 0 19px;
+                    }
+
+                    // Image
+                    a {
+                        background: url("../images/backgrounds/background-offer-drop-shadow-250x12.png") center bottom no-repeat;
+                        display: block;
+                        margin: 0 auto;
+                        padding-bottom: 12px;
+                        width: 268px;
+
+                        img {
+                            border: 6px @color-white solid;
+                            display: block;
+                            height: 203px;
+                            margin: 0 auto;
+                            width: 256px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Controls: previous and next
+    a.controls {
+        display: none;
+    }
+}
+
+/* Slider
+   ========================================================================== */
+
+div.wrapper-slider {
+    margin: 0 auto;
+    width: 294px;
+
+    div.slider {
+        width: 294px;
+
+        ul {
+            margin: 0 0 4px 0;
+            overflow: hidden;
+            padding: 0;
+            width: 294px;
+
+            li {
+                clear: both;
+                float: left;
+                list-style: none;
+                margin: 0 0 28px 0;
+                position: relative;
+                width: 294px;
+
+                &:last-child {
+                    margin: 0;
+                }
+
+                img {
+                    display: block;
+                    height: auto;
+                    margin: 0 0 4px 0;
+                    width: 100%;
+                }
+
+                // Vote button for mobile
+                a.button {
+                    width: 264px;
+                }
+
+                // Vote button image for wider screens
+                a.vote {
+                    display: none;
+                }
+
+                p.title {
+                    background-color: @color-white;
+                    height: 24px;
+                    left: 15px;
+                    margin: 0;
+                    position: absolute;
+                    padding: 6px 0 0 0;
+                    top: 241px;
+                    width: 264px;
+                }
+            }
+        }
+    }
+
+    // Controls: previous and next
+    a.controls {
+        display: none;
+    }
+}
+
+/* Media Queries
+   ========================================================================== */
+
+/* Smaller Screens */
+
+@media only screen and (min-width: 481px) {
+
+    div.wrapper {
+        margin: 10% auto 0 auto;
+        width: 960px;
+    }
+
+    /* Navigation
+       ========================================================================== */
+
+    nav.primary {
+        bottom: 19px;
+        left: 0;
+        margin: 0 0 20px 0;
+        padding: 20px 0 0 0;
+        position: absolute;
+        z-index: 100;
+
+        ol {
+            width: 960px;
+
+            li {
+                background-color: @color-white;
+                float: left;
+                height: 24px;
+                margin: 2px 22px 0 0;
+                width: auto;
+
+                &:nth-child(2n+2) {
+                    margin-right: 22px;
+                    width: auto;
+
+                    a {
+                        width: auto;
+                    }
+                }
+
+                &.home {
+                    background-position: 0 2px;
+
+                    a {
+                        padding: 3px 0 0 24px;
+                    }
+                }
+
+                &.amici {
+                    background-position: 0 0;
+
+                    a {
+                        padding: 3px 0 0 33px;
+                    }
+                }
+
+                &.places {
+                    background-position: 0 0;
+
+                    a {
+                        padding: 3px 0 0 19px;
+                    }
+                }
+
+                &.calendar {
+                    background-position: 0 1px;
+
+                    a {
+                        padding: 3px 0 0 25px;
+                    }
+                }
+
+                &.galleries {
+                    background-position: 0 2px;
+
+                    a {
+                        padding: 3px 0 0 27px;
+                    }
+                }
+
+                &.facebook {
+                    background-position: 0 0;
+
+                    a {
+                        padding: 3px 0 0 17px;
+                    }
+                }
+
+                &.sign-up {
+                    background-position: 0 2px;
+
+                    a {
+                        padding: 3px 0 0 23px;
+                    }
+                }
+
+                &.search {
+                    background-position: 0 2px;
+
+                    a {
+                        padding: 3px 0 0 25px;
+                    }
+                }
+
+                a {
+                    width: auto;
+                }
+            }
+        }
+    }
+
+    /* Contents
+       ========================================================================== */
+
+    section[role="main"] {
+        .border-radius(0);
+
+        // Side bar (Left)
+        aside {
+            float: left;
+
+            // Landing
+            &.landing {
+                height: 383px;
+                padding: 85px 0 0 40px;
+                width: 295px;
+
+                // Logo
+                div.logo {
+                    background-color: @color-white-dark;
+                    border: 0;
+                    border-bottom: 1px @color-silver solid;
+                    padding: 0 0 32px 0;
+                    width: 255px;
+
+                    img {
+                        margin: inherit;
+                        width: 255px;
+                    }
+                }
+
+                // Intro
+                p.intro {
+                    border-top: 0;
+                    border-bottom: 0;
+                    margin-bottom: 0;
+                    padding: 27px 0 30px;
+                    width: 255px;
+                }
+            }
+
+            // Member
+            &.member {
+                background-color: @color-white-darker;
+                border-right: 1px @color-silver-lighter solid;
+                height: 505px;
+                padding: 21px 0 0 0;
+                width: 323px;
+
+                // Peroni Logo
+                div.logo {
+                    background-color: @color-white-darker;
+                    border: 0;
+                    border-bottom: 1px @color-silver solid;
+                    height: 62px;
+                    margin: 0 auto;
+                    padding: 0 0 18px 0;
+                    width: 271px;
+
+                    img {
+                        display: block;
+                        margin: 0 auto;
+                        width: 126px;
+                    }
+                }
+
+                // Background Frame
+                div.photo-large {
+                    background: url("../images/backgrounds/background-profile-photo-271x278.png") 0 0 no-repeat;
+                    border-top: 0;
+                    height: 274px;
+                    margin: 30px auto 0 auto;
+                    padding: 4px 0 0 4px;
+                    width: 267px;
+
+                    // Member Photo
+                    img {
+                        height: 270px;
+                        width: 263px
+                    }
+                }
+            }
+        }
+
+        // Member: Sign Up, Logged In, Edit Profile
+        &.member {
+
+            div.wrapper-inner {
+                background: @color-white;
+                height: 526px;
+            }
+
+            // Contents (Right)
+            div.contents {
+                float: left;
+                width: 634px;
+
+                > header {
+                    margin: 33px 0 35px 38px;
+                }
+
+                form {
+                    margin: 0 0 0 10px;
+                }
+            }
+        }
+
+        // Interaction: Vote, Enter, Poll, etc.
+        &.interaction {
+
+            div.wrapper-inner {
+                height: 425px;
+
+                // Side bar (Left)
+                aside {
+                    .box-shadow(4px 0 8px -2px @color-grey-lighter);
+                    height: 425px;
+                    margin: 0;
+                    float: left;
+
+                    > img {
+                        height: 425px;
+                        margin: 0;
+                        width: 450px;
+                    }
+
+                    // Video interaction
+                    &.video {
+
+                        // Play video
+                        a.play {
+                            display: block;
+                            position: absolute;
+                            left: 170px;
+                            top: 160px;
+                        }
+
+                        // Launch external video link
+                        a.launch {
+                            display: none;
+                        }
+                    }
+                }
+
+                // Contents (Right)
+                div.contents {
+                    float: right;
+                    padding: 16px 41px 0 23px;
+
+                    div.logo {
+                        display: none;
+                    }
+
+                    header {
+                        border-top: 0;
+                        margin: 0 0 17px 0;
+                        padding: 0;
+
+                        h1 {
+                            width: 435px;
+                        }
+                    }
+
+                    p {
+                        margin: 0 0 15px 0;
+                        padding: 0;
+                        width: 435px;
+                    }
+
+                    // Vote: A/B
+                    div.options {
+                        margin-left: 0;
+
+                        a {
+                            margin-right: 20px;
+                            .opacity(0.9);
+                            .transition(all 0.20s ease 0s);
+
+                            &:hover {
+                                .opacity(1.0);
+                            }
+                        }
+                    }
+
+                    // Invite: listing of friends
+                    ul.friends {
+                        margin: 0 0 18px 0;
+                        width: 392px;
+
+                        li {
+                            margin: 0 6px 6px 0;
+
+                            &:last-child {
+                                margin-right: 0;
+                            }
+                        }
+                    }
+
+                    form {
+
+                        // Show autocomplete when not on mobile
+                        label[data-component="autocomplete"] {
+                            display: block;
+                        }
+
+                        // Hide select when not on mobile
+                        label[data-component="select"] {
+                            display: none;
+                        }
+
+                        ul.friends {
+                            margin-left: 0; // Override existing margin as form already has one
+                        }
+                    }
+
+                    // Button
+                    a.button {
+                        float: left;
+                        margin: 0 16px 0 0;
+                        width: auto;
+
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    div.wrapper-inner {
+        background: url("../images/backgrounds/background-tile-1x468.png") 0 0 repeat-x;
+        height: 468px;
+    }
+
+    /* Ribbon */
+
+    a.ribbon {
+        display: block;
+        height: 58px;
+        left: 8px;
+        position: absolute;
+        top: -6px;
+        width: 58px;
+        z-index: 600;
+    }
+
+    /* Tab */
+
+    div.tab {
+        display: block;
+        height: 70px;
+        position: absolute;
+        right: -23px;
+        top: 20px;
+        width: 40px;
+        z-index: 200;
+    }
+
+    /* Offers
+       ========================================================================== */
+
+    div.offers {
+        border: 0;
+        float: left;
+        margin: 82px 0 0 0;
+
+        > header {
+            display: none;
+        }
+
+        // Offer
+        a.offer {
+            background-color: @color-white;
+            float: left;
+            margin: 0 20px 0 0;
+            padding: 20px 20px 26px 20px;
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+
+            header {
+                padding: 0 5px;
+                width: 250px;
+
+                h2 {
+                    padding-left: 0;
+                }
+            }
+
+            img {
+                background: url("../images/backgrounds/background-offer-drop-shadow-250x12.png") center bottom no-repeat;
+            }
+        }
+    }
+
+    /* Amici
+       ========================================================================== */
+
+    div.amici {
+        border-top: 0;
+        border-right: 1px @color-white-darker solid;
+        border-bottom: 1px @color-white-darker solid;
+        border-left: 1px @color-white-darker solid;
+        clear: both;
+        display: block;
+        float: right;
+        height: 46px;
+        left: 0;
+        overflow: visible;
+        padding: 11px 0 0 523px;
+        position: relative;
+        top: 0;
+        width: 615px;
+
+        p {
+            float: left;
+            margin: 0;
+            padding: 0;
+
+            // Login
+            &.login {
+                margin: 9px 0 0 0;
+            }
+        }
+
+        a {
+
+            // Join
+            &.join {
+                float: left;
+                margin: 0 86px 0 9px;
+            }
+
+            // Login
+            &.login {
+                display: inline-block;
+            }
+        }
+
+        // Peroni Bottle
+        > img {
+            bottom: -2px;
+            display: block;
+            position: absolute;
+            right: 93px;
+            z-index: 100;
+        }
+
+        // Member's Photos
+        div.photos {
+            background-color: @color-white;
+            display: none;
+            height: 50px;
+            position: absolute;
+            right: 328px;
+            top: 4px;
+
+            ol {
+                display: block;
+                float: left;
+                height: 50px;
+                margin: 0;
+                padding: 0;
+
+                li {
+                    border: 2px @color-silver-light solid;
+                    float: left;
+                    list-style: none;
+                    margin: 0 4px 0 0;
+                    height: 46px;
+                    width: 46px;
+
+                    &:hover {
+                        border: 2px @color-grey-lighter solid;
+                        .transition(all 0.20s ease 0s);
+                    }
+                }
+            }
+
+            // Counter for number of members
+            div.counter {
+                background: @color-silver url("../images/icons/icon-plus.png") center 9px no-repeat;
+                display: block;
+                float: left;
+                height: 50px;
+                width: 50px;
+
+                &:hover {
+                    background-color: @color-grey;
+                }
+
+                a {
+                    display: block;
+                    margin: 22px 0 0 0;
+                }
+            }
+        }
+    }
+
+    /* Profile
+       ========================================================================== */
+
+    div.profile {
+        background-color: @color-white-darker;
+        border-right: 0;
+        border-left: 0;
+        margin: 23px 0 0 25px;
+        width: 272px;
+
+        > header {
+            display: none;
+        }
+
+        div.member {
+            border: 0;
+            padding: 0 1px 9px 1px;
+
+            div.photo {
+                background: url("../images/backgrounds/background-profile-photo-85x87.png") 0 0 no-repeat;
+                height: 85px;
+                width: 83px;
+
+                img {
+                    height: 83px;
+                    width: 81px;
+                }
+            }
+
+            ul {
+
+                li {
+
+                    &.name {
+                        margin: 0 0 6px 0;
+                    }
+                }
+            }
+        }
+    }
+
+    /* Feed */
+
+    div.feed {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    /* Character Counter */
+
+    div.character-counter {
+        padding: 10px 2px 0 0;
+        width: 435px;
+    }
+
+    /* Footer
+       ========================================================================== */
+
+    footer[role="contentinfo"] {
+        margin: 59px 0 0 0;
+    }
+
+    body.style-guide {
+
+        footer[role="contentinfo"] {
+            margin-top: 0;
+
+            div.wrapper {
+                margin-top: 0;
+            }
+        }
+    }
+
+    /* Carousel
+       ========================================================================== */
+
+    div.wrapper-carousel {
+        position: relative;
+
+        > header {
+            display: none;
+        }
+
+        div.carousel {
+            margin: 11px 0 0 0;
+            overflow: hidden;
+            width: 786px;
+
+            ul {
+                height: 501px;
+                margin: 0 0 0 26px;
+                width: 10000px;
+
+                li {
+                    .box-shadow(0 2px 6px @color-grey-lighter);
+                    clear: none;
+                    height: 477px;
+                    margin: 8px 20px 0 5px;
+                    padding: 5px;
+                    width: 345px;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+
+                    /* Slide */
+
+                    div.slide {
+                        // XX: TODO get correct background image
+                        background: url("../images/backgrounds/background-offer-inner-shadow-1x477.png") 0 0 repeat-x;
+                        height: 463px;
+                        padding: 14px 10px 10px 10px;
+                        width: 325px;
+
+                        header {
+                            height: auto;
+                            padding: 12px 19px 7px 19px;
+                        }
+
+                        p {
+                            padding: 0 19px;
+                        }
+
+                        // Image
+                        a {
+                            background: url("../images/backgrounds/background-offer-drop-shadow-318x12.png") center bottom no-repeat;
+                            display: block;
+                            margin: 0 auto;
+                            padding-bottom: 12px;
+                            width: 318px;
+
+                            img {
+                                border: 8px @color-white solid;
+                                height: 240px;
+                                margin: 0 auto;
+                                width: 302px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // Controls: previous and next
+        a.controls {
+            display: block;
+            position: absolute;
+            top: 207px;
+        }
+
+        a.prev {
+            display: none;
+            left: 0;
+        }
+
+        a.next {
+            right: 0;
+        }
+    }
+
+    /* Slider
+       ========================================================================== */
+
+    div.wrapper-slider {
+        position: relative;
+        width: 450px;
+
+        div.slider {
+            overflow: hidden;
+            width: 450px;
+
+            ul {
+                height: 425px;
+                margin: 0;
+                overflow: hidden;
+                padding: 0;
+                width: 5400px;
+
+                li {
+                    clear: none;
+                    margin: 0;
+                    width: 450px;
+
+                    &:hover {
+
+                        a.vote {
+                            display: block;
+                        }
+                    }
+
+                    img {
+                        z-index: 5;
+                    }
+
+                    p.intro {
+
+                        &:nth-child(2) {
+                            display: block;
+                        }
+                    }
+
+                    // Vote button for mobile
+                    a.button {
+                        display: none;
+                    }
+
+                    // Vote button image for wider screens
+                    a.vote {
+                        height: 142px;
+                        left: 154px;
+                        position: absolute;
+                        top: 138px;
+                        width: 142px;
+
+                        img {
+                            height: 142px;
+                            width: 142px;
+                        }
+                    }
+
+                    p.title {
+                        background-color: @color-white;
+                        height: 43px;
+                        left: 26px;
+                        position: absolute;
+                        padding: 14px 0 0 0;
+                        top: 342px;
+                        width: 398px;
+                    }
+                }
+            }
+        }
+
+        a.controls {
+            display: block;
+            height: 83px;
+            position: absolute;
+            top: 171px;
+            width: 29px;
+        }
+
+        a.prev {
+            display: none;
+            left: 0;
+        }
+
+        a.next {
+            right: 0;
+        }
+    }
+}
+
+/* Wide Screens */
+
+@media only screen and (min-width: 1160px) {
+
+    div.wrapper {
+        left: 50%;
+        margin: -300px 0 0 -570px;
+        position: absolute;
+        top: 50%;
+        width: 1140px;
+    }
+
+    /* Navigation
+       ========================================================================== */
+
+    nav.primary {
+
+        ol {
+            width: 1140px;
+        }
+    }
+
+    /* Contents
+       ========================================================================== */
+
+    section[role="main"] {
+
+        aside {
+
+            // Landing
+            &.landing {
+                width: 405px;
+
+                // Logo
+                div.logo {
+                    width: 352px;
+
+                    img {
+                        width: 352px;
+                    }
+                }
+
+                // Intro
+                p.intro {
+                    width: 352px;
+                }
+            }
+
+            // Member
+            &.member {
+                width: 353px;
+
+                // Peroni Logo
+                div.logo {
+                    width: 301px;
+
+                    img {
+                        width: 126px;
+                    }
+                }
+
+                // Member Photo Background Frame
+                div.photo-large {
+                    background: url("../images/backgrounds/background-profile-photo-294x302.png") 4px 4px no-repeat;
+                    border-top: 1px @color-white-darker solid;
+                    height: 305px;
+                    padding: 8px 0 0 8px;
+                    width: 294px;
+
+                    // Member Photo
+                    img {
+                        height: auto;
+                        width: 286px;
+                    }
+                }
+            }
+        }
+
+        // Member: Sign Up, Logged In, Edit Profile
+        &.member {
+
+            // Contents (Right)
+            div.contents {
+                width: 786px;
+
+                > header {
+                    margin-left: 53px;
+                }
+
+                form {
+                    margin-left: 25px;
+                }
+            }
+        }
+
+        // Interaction: Vote, Enter, Poll, etc.
+        &.interaction {
+
+            div.wrapper-inner {
+                height: 525px;
+
+                // Side bar (Left)
+                aside {
+                    height: 525px;
+                    margin: 0;
+
+                    > img {
+                        height: 525px;
+                        width: 540px;
+                    }
+
+                    // Video interaction
+                    &.video {
+
+                        // Play video
+                        a.play {
+                            left: 215px;
+                            top: 210px;
+                        }
+                    }
+                }
+
+                // Contents (Right)
+                div.contents {
+
+                    header {
+                        margin: 11px 0 25px 0;
+
+                        h1 {
+                            width: 525px;
+                        }
+                    }
+
+                    p {
+                        margin-bottom: 23px;
+                        width: 525px;
+                    }
+
+                    // Invite: listing of friends
+                    ul.friends {
+                        width: 525px;
+                    }
+
+                    // Button
+                    a.button {
+                        margin-top: 13px;
+                    }
+                }
+            }
+        }
+    }
+
+    /* Offers
+       ========================================================================== */
+
+    div.offers {
+
+        // Offer
+        a.offer {
+            margin-right: 35px;
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+    }
+
+    /* Profile
+       ========================================================================== */
+
+    div.profile {
+        width: 302px;
+    }
+
+    /* Feed */
+
+    div.feed {
+
+        ol {
+
+            li {
+
+                p {
+                    width: 212px;
+                }
+            }
+        }
+    }
+
+    /* Character Counter */
+
+    div.character-counter {
+        width: 523px;
+    }
+
+    /* Slider
+       ========================================================================== */
+
+    div.wrapper-slider {
+        width: 540px;
+
+        div.slider {
+            width: 540px;
+
+            ul {
+                height: 525px;
+
+                li {
+                    width: 540px;
+
+                    // Vote button image for wider screens
+                    a.vote {
+                        height: 182px;
+                        left: 179px;
+                        top: 171px;
+                        width: 182px;
+
+                        img {
+                            height: 182px;
+                            width: 182px;
+                        }
+                    }
+
+                    p.title {
+                        height: 46px;
+                        left: 26px;
+                        padding: 11px 0 0 0;
+                        top: 442px;
+                        width: 488px;
+                    }
+                }
+            }
+        }
+
+        a.controls {
+            top: 221px;
+        }
+    }
+}
+
+/* Style Guide
+   ========================================================================== */
+
+pre {
+    .border-radius(5px);
+    clear: both;
+    padding: 10px 15px;
+}
+
+ul.style-guide {
+
+    li {
+        margin: 0 0 5px 0;
+
+        ul {
+            margin: 5px 0 0 0;
+        }
+    }
+}
+
+body.style-guide {
+
+    section[role="main"] {
+        .box-shadow(none);
+    }
+
+    nav.primary {
+        position: inherit;
+    }
+}
+
+/* Chrome Frame
+   ========================================================================== */
+
+div.chromeframe {
+    background: @color-black;
+    padding: 10px;
+
+    p {
+        margin: 0 auto;
+    }
+}
+
+/* LESS: Mixins */
+
+.border-radius(@radius: 15px) {
+    -webkit-border-radius: @radius;
+       -moz-border-radius: @radius;
+         -o-border-radius: @radius;
+            border-radius: @radius;
+}
+
+.box-shadow(@arguments) {
+    -webkit-box-shadow: @arguments;
+       -moz-box-shadow: @arguments;
+         -o-box-shadow: @arguments;
+            box-shadow: @arguments;
+}
+
+.inner-shadow(@horizontal: 0, @vertical: 1px, @blur: 2px, @alpha: 0.4) {
+    -webkit-box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+       -moz-box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+         -o-box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+            box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+}
+
+.opacity(@opacity: 0.5) {
+    -webkit-opacity: @opacity;
+       -moz-opacity: @opacity;
+         -o-opacity: @opacity;
+            opacity: @opacity;
+}
+
+.rotation(@deg: 5deg) {
+    -webkit-transform: rotate(@deg);
+       -moz-transform: rotate(@deg);
+         -o-transform: rotate(@deg);
+            transform: rotate(@deg);
+}
+
+.scale(@ratio: 1.5) {
+    -webkit-transform: scale(@ratio);
+       -moz-transform: scale(@ratio);
+         -o-transform: scale(@ratio);
+            transform: scale(@ratio);
+}
+
+.transition(@arguments) {
+    -webkit-transition: @arguments;
+       -moz-transition: @arguments;
+         -o-transition: @arguments;
+            transition: @arguments;
+}

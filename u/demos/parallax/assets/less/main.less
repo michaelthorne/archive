@@ -1,0 +1,214 @@
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+.wrapper {
+    height: 100%;
+    width: 100%;
+}
+
+.wrapper-demo {
+    margin: 0 auto;
+    position: relative;
+    padding: 50px;
+    width: 1040px;
+}
+
+.header {
+    background-color: #000;
+    height: 70px;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    z-index: 10;
+}
+
+.navigation {
+    display: inline-block;
+    margin: 0;
+    overflow: auto;
+    padding: 10px;
+
+    li {
+        float: left;
+        list-style: none;
+        padding: 10px;
+
+        a {
+            color: #c0c0c0;
+            display: block;
+            padding: 5px;
+            text-decoration: none;
+
+            &.active {
+                color: #fff;
+                text-decoration: underline;
+            }
+
+            &:hover {
+                color: #fff;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.sections {
+    height: 100%;
+    width: 100%;
+    z-index: 5;
+}
+
+.section {
+    clear: both;
+    float: left;
+    height: 100%;
+    left: 0;
+    position: relative;
+    top: 0;
+    width: 100%;
+}
+
+.section-1 {
+    background-color: red;
+}
+
+.section-2 {
+    background-color: blue;
+}
+
+.section-3 {
+    background-color: green;
+}
+
+.section-4 {
+    background-color: orange;
+}
+
+.contents {
+    clear: both;
+    margin: 0 auto;
+    padding: 70px 0;
+    position: relative;
+    width: 80%;
+
+    p {
+        margin: 0 0 2em 0;
+        padding: 0;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.contents-demo {
+    overflow: hidden;
+    width: 100%;
+}
+
+.window-overlay {
+    background: #fff url("../images/background-window-overlay.png") top center;
+    height: 400px;
+    position: absolute;
+    right: 0;
+    -webkit-transform: rotate(-45deg);
+       -moz-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    top: 200px;
+    width: 1600px;
+}
+
+.window-preview {
+    background: url("../images/background-window-preview.png") top right no-repeat;
+    height: 400px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 1140px;
+}
+
+.photo {
+    opacity: 0;
+    transform: rotate (0deg);
+}
+
+.photo-1 {
+    float: left;
+    margin-left: 1%;
+}
+
+.photo-2 {
+    float: right;
+    margin-right: 1%;
+}
+
+.background {
+    background: url("../images/background-car.jpg") 0 0 repeat;
+    height: 500px;
+    position: relative;
+}
+
+.background-2 {
+    background: url("../images/background-car.jpg") 0 0 repeat;
+    height: 400px;
+    position: relative;
+}
+
+.slide {
+    background: url("../images/background-sneaker-mesh-fabric.png") 0 0 repeat;
+    left: 0;
+    position: relative;
+    z-index: 100;
+}
+
+footer {
+    background-color: #ccc;
+    clear: both;
+    float: left;
+    height: 200px;
+    padding: 3em 0 0 0;
+}
+
+.block {
+    height: 400px;
+    width: 400px;
+
+    pre {
+        margin: 0;
+    }
+
+    p {
+        margin: 0;
+    }
+}
+
+.block-blue {
+    background-color: blue;
+}
+
+.block-green {
+    background-color: green;
+}
+
+.block-yellow {
+    background-color: yellow;
+}
+
+.scroll-count {
+    background-color: #000;
+    bottom: 0;
+    color: #fff;
+    padding: 10px;
+    position: fixed;
+    right: 0;
+
+    span {
+        font-weight: bold;
+    }
+}

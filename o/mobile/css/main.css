@@ -1,0 +1,446 @@
+/*
+ * Banner
+ */
+
+div.banner {
+    border-bottom: 10px #92180b solid;
+}
+
+div.banner a {
+    float: left;
+}
+
+div.banner h1.ui-title {
+    margin-left: 15px;
+}
+
+div.banner a.ui-btn-right {
+    right: 15px;
+    top: 6px;
+}
+
+/*
+ * Cart
+ */
+
+a.cart span.ui-btn-inner {
+    border-top: 0;
+}
+
+a.cart .ui-icon-shadow {
+    -webkit-box-shadow: none;
+       -moz-box-shadow: none;
+}
+
+a.cart .ui-icon {
+    background-color: #5f0f08;
+}
+
+a.cart img {
+    float: left;
+    margin-right: 10px;
+}
+
+a.cart .cart-info {
+    float: right;
+    height: 18px;
+    line-height: 18px;
+}
+
+a.cart .ui-btn-text {
+    font-weight: normal;
+}
+
+a.cart span.cart-qty {
+    font-weight: bold;
+}
+
+span.amount {
+    float: right;
+    font-weight: bold;
+}
+
+/*
+ * Logo
+ */
+
+img.logo {
+    display: block;
+    height: auto;
+    width: 80px;
+}
+
+/*
+ * Text
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #5c5c5c;
+    font-size: 22px;
+}
+
+h1 b {
+    color: #dd2f19;
+}
+
+h1.separator {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+h2 {
+    color: #5c5c5c;
+    font-size: 20px;
+}
+
+h2 b {
+    color: #dd2f19;
+}
+
+h3 {
+    color: #5c5c5c;
+    font-size: 16px;
+}
+
+p {
+    font-size: 15px;
+}
+
+p.heading {
+    margin-bottom: 5px;
+}
+
+p.heading b {
+    color: #dd2f19;
+}
+
+p,
+small {
+    color: #5c5c5c;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Header
+ */
+
+div.header {
+    background-color: #f9f9f9;
+    border-bottom: 1px #dbdbdb solid;
+    padding: 20px 15px;
+}
+
+div.header-inner {
+    background-color: #fff;
+    border-bottom: 0;
+    padding: 0;
+}
+
+div.header + h2 {
+    padding-bottom: 10px;
+}
+
+div.header h2 {
+    color: #c9210f;
+}
+
+div.header h3 {
+    color: #dd2f19;
+}
+
+div.header h3 + p {
+    margin-top: 15px;
+}
+
+div.header p {
+    margin-top: 5px;
+}
+
+div.header p b {
+    color: #dd2f19;
+}
+
+div.header small b {
+    color: #dd2f19;
+}
+
+div.header p + p {
+    padding-top: 5px;
+}
+
+div.header p + small {
+    padding-top: 5px;
+}
+
+div.header small {
+    display: block;
+    margin-top: 5px;
+}
+
+div.header-listview .ui-btn {
+    margin-top: 25px;
+}
+
+/*
+ * Footer
+ */
+
+div.footer {
+    border-top: 5px #dbdbdb solid;
+    padding: 15px 0 40px 0;
+}
+
+div.footer.ui-bar-b {
+    border-bottom: 0;
+}
+
+div.footer small {
+    border-bottom: 0;
+    display: block;
+    font-size: 11px;
+    font-weight: normal;
+    margin-top: 15px;
+    text-align: center;
+    width: 100%
+}
+
+/*
+ * Forms
+ */
+
+form.form {
+    margin-bottom: 30px;
+}
+
+form.form-main {
+    padding-top: 5px;
+}
+
+fieldset.fieldset {
+    margin-bottom: 20px !important;
+}
+
+fieldset.fieldset-section {
+    border-bottom: 1px #dbdbdb solid;
+    padding-bottom: 15px;
+}
+
+fieldset.fieldset-search-type div.ui-controlgroup-controls {
+    width: 100%;
+}
+
+fieldset.fieldset-search-type div.ui-controlgroup-controls div.ui-radio {
+    width: 50%;
+}
+
+fieldset.fieldset-last {
+    margin-top: 40px !important;
+}
+
+fieldset.fieldset-search-type div.ui-radio label.ui-radio-on .ui-btn-text {
+    font-size: 15px;
+}
+
+fieldset.fieldset-search-type label.ui-radio-on {
+    color: #ad1c0d;
+}
+
+fieldset.fieldset-search-type label.ui-radio-off {
+    font-weight: normal;
+}
+
+textarea.textarea {
+    min-height: 100px;
+}
+
+small.legend {
+    display: block;
+    margin-bottom: 5px;
+}
+
+legend.legend {
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding: 0;
+}
+
+label.label {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+label.label-text b {
+    float: right;
+}
+
+label.label-text b.red {
+    color: #dd2f19;
+}
+
+label.label-text b.green {
+    color: #4d7d10;
+}
+
+/* Submit button with feedback container below */
+div.ui-submit + div.feedback {
+    margin-top: 20px;
+}
+
+/*
+ * Gratuity
+ */
+
+label[for="cart-gratuity"] {
+    position: absolute;
+    right: 7px;
+    top: 3px;
+    width: 70px;
+}
+
+label[for="cart-gratuity"] .ui-input-text {
+    margin: 0;
+}
+
+label[for="cart-gratuity"] input[type="text"] {
+    margin: 0;
+    font-weight: bold;
+    text-align: right;
+}
+
+/*
+ * Search
+ */
+
+div.search-street {
+    margin: 10px 0 0 0;
+}
+
+div.search-street p {
+    display: block;
+    margin: 20px 0 20px 0;
+}
+
+div.search-street small {
+    display: block;
+    margin: 10px 0 25px 0;
+}
+
+/*
+ * Lists
+ */
+
+div.wrapper-listview {
+    margin: 10px 0 35px 0;
+    padding-top: 20px;
+}
+
+div.wrapper-listview-top {
+    padding-top: 0;
+    margin-bottom: 30px;
+}
+
+div.wrapper-listview li {
+    font-weight: normal;
+}
+
+div.wrapper-listview li span.red {
+    color: #dd2f19;
+}
+
+div.wrapper-listview-cart {
+    margin-bottom: 5px;
+}
+
+a + div.wrapper-listview {
+    padding-top: 15px;
+}
+
+ol.list-ordered li {
+    padding-bottom: 2px;
+}
+
+div.wrapper-listview + div.feedback {
+    margin-bottom: 30px;
+}
+
+/* Prevent wrapping/truncating of menu item description */
+
+ul.ui-listview h1,
+ul.ui-listview h2,
+ul.ui-listview h3,
+ul.ui-listview p {
+    padding-bottom: 5px;
+    white-space: normal !important;
+}
+
+/* Vegetarian icon */
+img.vegetarian {
+    height: auto;
+    max-width: 15px;
+    width: 100%;
+}
+
+/*
+ * Table
+ */
+
+table.table {
+    margin-bottom: 20px;
+}
+
+table.table td {
+    font-size: 14px;
+    padding: 0 10px 2px 0;
+}
+
+table.table td b {
+    color: #dd2f19;
+}
+
+table.table-order {
+    border-bottom: 1px #dbdbdb solid;
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+/*
+ * Feedback
+ */
+
+div.feedback {
+    border-radius: 2px;
+    margin-bottom: 10px;
+    padding: 20px 20px 10px 20px;
+}
+
+div.feedback a.ui-btn {
+    margin-bottom: 10px;
+}
+
+/* Warning */
+
+div.feedback-warning {
+    background-color: #ffc600;
+}
+
+div.feedback-warning h3 {
+    color: #634d00;
+    margin-bottom: 5px;
+}
+
+div.feedback-warning p {
+    color: #634d00;
+    font-size: 13px;
+    margin-bottom: 15px;
+}

@@ -1,0 +1,74 @@
+[
+    {
+        "id" : "1",
+        "label" : "Activewear"
+    },
+    {
+        "id" : "2",
+        "label" : "Bags"
+    },
+    {
+        "id" : "3",
+        "label" : "Belts"
+    },
+    {
+        "id" : "4",
+        "label" : "Bottoms"
+    },
+    {
+        "id" : "5",
+        "label" : "Bridal"
+    },
+    {
+        "id" : "6",
+        "label" : "Dresses"
+    },
+    {
+        "id" : "7",
+        "label" : "Hats"
+    },
+    {
+        "id" : "8",
+        "label" : "Jackets & Knitwear"
+    },
+    {
+        "id" : "9",
+        "label" : "Jeans"
+    },
+    {
+        "id" : "10",
+        "label" : "Jewellery"
+    },
+    {
+        "id" : "11",
+        "label" : "Maternity"
+    },
+    {
+        "id" : "12",
+        "label" : "Scarves"
+    },
+    {
+        "id" : "13",
+        "label" : "Sleepwear"
+    },
+    {
+        "id" : "14",
+        "label" : "Sunglasses"
+    },
+    {
+        "id" : "15",
+        "label" : "Swimwear"
+    },
+    {
+        "id" : "16",
+        "label" : "Tops"
+    },
+    {
+        "id" : "17",
+        "label" : "Wallets & Purses"
+    },
+    {
+        "id" : "18",
+        "label" : "Watches"
+    }
+]

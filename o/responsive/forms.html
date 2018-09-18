@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en" class="sg-html">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Forms – OrderIn</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,700" />
+
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="assets/css/style.css?v=2.1.2" />
+    <link rel="stylesheet" href="assets/css/styleguide.css?v=2.1.2" />
+
+    <!--[if lt IE 9]>
+    <script src="assets/js/vendor/polyfills.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!--[if lt IE 9]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/?locale=en">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <header class="sg-header sg-header--primary" role="banner">
+        <a href="index.html" title="OrderIn" class="logo"><img src="assets/images/logos/logo-orderin-208x50.png" width="208" height="50" alt="OrderIn Logo" /></a>
+        <nav class="sg-nav sg-nav--primary" role="navigation">
+            <ol class="sg-list">
+                <li><a href="elements.html">Elements</a></li>
+                <li><a href="patterns.html">Patterns</a></li>
+                <li class="is-active"><a href="forms.html">Forms</a></li>
+                <li><a href="grid.html">Grid</a></li>
+                <li><a href="templates">Templates</a></li>
+            </ol>
+        </nav>
+        <button class="sg-btn sg-btn--nav" data-sg-toggle="nav"><span class="icon icon--left fa fa-bars" aria-hidden="true"></span>Menu</button>
+    </header>
+
+    <main class="sg-main" role="main">
+        <div id="sg-patchwork" class="sg-section sg-section--well is-hidden">
+            <p class="sg-paragraph sg-paragraph--intro">
+                <span class="icon sg-icon fa fa-info-circle" aria-hidden="true"></span>This is the patchwork view which doesn’t include the markup preview and usage examples. This view is particularly useful for device testing because it shows elements at full-width, presented on the page as they would appear on the site.
+            </p>
+            <button class="sg-btn sg-btn--toggle" data-sg-toggle="styleguide"><span class="icon icon--left fa fa-reply" aria-hidden="true"></span>Style Guide</button>
+        </div>
+
+        <section id="sg-default" class="sg-section">
+            <header class="sg-header sg-header--section">
+                <h1 class="epsilon hN">Form – Default</h1>
+            </header>
+
+            <form id="form-default" action="forms.html" method="post" class="form">
+                <label for="email" class="label">
+                    Email Address
+                    <input class="input" type="email" id="email" name="email" placeholder="Email Address" maxlength="100" required="required" />
+                </label>
+
+                <div class="toggle-password" data-component="toggle-password">
+                    <label for="password" class="label">
+                        Password
+                        <input class="input" type="password" id="password" name="password" maxlength="100" required="required" />
+                    </label>
+                    <button class="visuallyhidden toggle" data-toggle="password">Show</button>
+                </div>
+
+                <label for="remember" class="label">
+                    <input class="input" type="checkbox" id="remember" name="remember" value="1" /> Remember me?
+                </label>
+
+                <input class="btn" type="submit" value="Sign In" />
+            </form>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true">
+                </code></pre>
+            </div>
+        </section>
+
+        <section id="sg-inline" class="sg-section">
+            <header class="sg-header sg-header--section">
+                <h1 class="epsilon hN">Form – Inline</h1>
+            </header>
+
+            <form id="form-inline" action="forms.html" method="post" class="form form--inline">
+                <label for="email-2" class="label visuallyhidden">Email Address</label>
+                <input class="input" type="email" id="email-2" name="email-2" placeholder="Email Address" maxlength="100" />
+
+                <label for="password-2" class="label visuallyhidden">Password</label>
+                <input class="input" type="password" id="password-2" name="password-2" placeholder="Password" maxlength="100" />
+
+                <label for="remember-2" class="label label--checkbox">
+                    <input class="input" type="checkbox" id="remember-2" name="remember-2" value="1" /> Remember me?
+                </label>
+
+                <input class="btn btn--small" type="submit" value="Sign In" title="Feed me now :)" />
+            </form>
+
+            <div class="sg-example-code" data-sg-component="code">
+                <button class="sg-btn" data-sg-toggle="code"><span class="icon icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup" data-sg-markup="true">
+                </code></pre>
+            </div>
+        </section>
+    </main>
+
+    <aside class="sg-aside" data-sg-action="sticky">
+        <header class="sg-header sg-header--section">
+            <h3 class="epsilon hN"><a href="index.html"><span class="icon icon--left fa fa-reply" aria-hidden="true"></span></a>Table of Contents</h3>
+        </header>
+
+        <button class="sg-btn sg-btn--toggle" data-sg-toggle="styleguide"><span class="icon icon--left fa fa-desktop" aria-hidden="true"></span>View as Patchwork</button>
+
+        <nav class="sg-nav sg-nav--secondary">
+            <ol class="sg-list">
+                <li><a href="forms.html#sg-default">Form – Default</a></li>
+                <li><a href="forms.html#sg-inline">Form – Inline</a></li>
+            </ol>
+        </nav>
+    </aside>
+
+    <button class="sg-btn sg-btn--top" data-sg-action="back-to-top" title="Back to Top"><span class="icon fa fa-arrow-circle-up" aria-hidden="true"></span></button>
+
+    <footer class="sg-footer" role="contentinfo">
+        <ol class="sg-list">
+            <li><b>Version</b>: 2.1.2</li>
+            <li><b>Last Modified</b>: <span data-sg-last-modified="true">21 September, 2015</span></li>
+        </ol>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/script.js?v=2.1.2"></script>
+    <script src="assets/js/styleguide/plugins.js?v=2.1.2"></script>
+    <script src="assets/js/styleguide/styleguide.js?v=2.1.2"></script>
+    <script>UTIL.init();</script>
+    <script>STYLEGUIDE_UTIL.init();</script>
+</body>
+</html>

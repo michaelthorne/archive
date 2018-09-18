@@ -1,0 +1,364 @@
+{
+    "lookboard-1": {
+        "type": "product",
+        "story": [],
+        "products": [
+            {
+                "id": "1",
+                "title": "Product Title 1",
+                "designer": "Product Designer 1",
+                "price": "R100.00",
+                "url": "",
+                "status": {
+                    "text": "Sold Out",
+                    "cssClass": "status-grey"
+                },
+                "photo": {
+                    "medium": "assets/images/lookboard/lookboard-product-01-204x282.jpg",
+                    "large": "assets/images/lookboard/lookboard-product-01-422x599.jpg"
+                },
+                "lookboard": "1"
+            },
+            {
+                "id": "2",
+                "title": "Product Title 2",
+                "designer": "Product Designer 2",
+                "price": "R200.00",
+                "url": "product-detail.html",
+                "status": "",
+                "photo": {
+                    "medium": "assets/images/lookboard/lookboard-product-02-204x282.jpg",
+                    "large": "assets/images/lookboard/lookboard-product-02-422x599.jpg"
+                },
+                "lookboard": "1"
+            },
+            {
+                "id": "3",
+                "title": "Product Title 3",
+                "designer": "Product Designer 3",
+                "price": "R300.00",
+                "url": "product-detail.html",
+                "status": "",
+                "photo": {
+                    "medium": "assets/images/lookboard/lookboard-product-03-204x282.jpg",
+                    "large": "assets/images/lookboard/lookboard-product-03-422x599.jpg"
+                },
+                "lookboard": "1"
+            },
+            {
+                "id": "4",
+                "title": "Product Title 4",
+                "designer": "Product Designer 4",
+                "price": "R400.00",
+                "url": "product-detail.html",
+                "status": "",
+                "photo": {
+                    "medium": "assets/images/lookboard/lookboard-product-04-204x282.jpg",
+                    "large": "assets/images/lookboard/lookboard-product-04-422x599.jpg"
+                },
+                "lookboard": "1"
+            },
+            {
+                "id": "5",
+                "title": "Product Title 5",
+                "designer": "Product Designer 5",
+                "price": "R500.00",
+                "url": "product-detail.html",
+                "status": "",
+                "photo": {
+                    "medium": "assets/images/lookboard/lookboard-product-05-204x282.jpg",
+                    "large": "assets/images/lookboard/lookboard-product-05-422x599.jpg"
+                },
+                "lookboard": "1"
+            },
+            {
+                "id": "6",
+                "title": "Product Title 6",
+                "designer": "Product Designer 6",
+                "price": "R600.00",
+                "url": "product-detail.html",
+                "status": {
+                    "text": "17 Left",
+                    "cssClass": "status-black"
+                },
+                "photo": {
+                    "medium": "assets/images/lookboard/lookboard-product-06-204x282.jpg",
+                    "large": "assets/images/lookboard/lookboard-product-06-422x599.jpg"
+                },
+                "lookboard": "1"
+            },
+            {
+                "id": "7",
+                "title": "Product Title 7",
+                "designer": "Product Designer 7",
+                "price": "R700.00",
+                "url": "product-detail.html",
+                "status": "",
+                "photo": {
+                    "medium": "assets/images/lookboard/lookboard-product-07-204x282.jpg",
+                    "large": "assets/images/lookboard/lookboard-product-07-422x599.jpg"
+                },
+                "lookboard": "1"
+            },
+            {
+                "id": "8",
+                "title": "Product Title 8",
+                "designer": "Product Designer 8",
+                "price": "R800.00",
+                "url": "",
+                "status": {
+                    "text": "Sold Out",
+                    "cssClass": "status-grey"
+                },
+                "photo": {
+                    "medium": "assets/images/lookboard/lookboard-product-08-204x282.jpg",
+                    "large": "assets/images/lookboard/lookboard-product-08-422x599.jpg"
+                },
+                "lookboard": "1"
+            }
+        ]
+    },
+    "lookboard-2": {
+        "type": "story",
+        "story": {
+            "title": "Modern Florals &ndash; From beautiful blossoms to tropical blooms",
+            "image": "assets/images/lookboard/lookboard-story-header-01-567x331.jpg",
+            "text": "<p><i>Lorem ipsum dolor sit amet</i>, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p><p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"
+        },
+        "products": [
+            {
+                "id": "1",
+                "title": "Product Title 1",
+                "designer": "",
+                "price": "",
+                "url": "",
+                "status": "",
+                "photo": {
+                    "medium": "assets/images/lookboard/lookboard-story-product-01-204x282.jpg",
+                    "large": ""
+                },
+                "lookboard": "4"
+            },
+            {
+                "id": "2",
+                "title": "Product Title 2",
+                "designer": "",
+                "price": "",
+                "url": "",
+                "status": "",
+                "photo": {
+                    "medium": "assets/images/lookboard/lookboard-story-product-02-204x282.jpg",
+                    "large": ""
+                },
+                "lookboard": "1"
+            },
+            {
+                "id": "3",
+                "title": "Product Title 3",
+                "designer": "",
+                "price": "",
+                "url": "",
+                "status": "",
+                "photo": {
+                    "medium": "assets/images/lookboard/lookboard-story-product-03-204x282.jpg",
+                    "large": ""
+                },
+                "lookboard": "1"
+            },
+            {
+                "id": "4",
+                "title": "Product Title 4",
+                "designer": "",
+                "price": "",
+                "url": "",
+                "status": "",
+                "photo": {
+                    "medium": "assets/images/lookboard/lookboard-story-product-04-204x282.jpg",
+                    "large": ""
+                },
+                "lookboard": "4"
+            }
+        ]
+    },
+    "lookboard-3": {
+        "type": "story",
+        "story": {
+            "title": "Modern Florals &ndash; From beautiful blossoms to tropical blooms",
+            "image": "assets/images/lookboard/lookboard-story-header-02-567x331.jpg",
+            "text": "<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"
+        },
+        "products": [
+            {
+                "id": "5",
+                "title": "Product Title 5",
+                "designer": "",
+                "price": "",
+                "url": "",
+                "status": "",
+                "photo": {
+                    "medium": "assets/images/lookboard/lookboard-story-product-05-204x282.jpg",
+                    "large": ""
+                },
+                "lookboard": "1"
+            },
+            {
+                "id": "6",
+                "title": "Product Title 6",
+                "designer": "",
+                "price": "",
+                "url": "",
+                "status": "",
+                "photo": {
+                    "medium": "assets/images/lookboard/lookboard-story-product-06-204x282.jpg",
+                    "large": ""
+                },
+                "lookboard": "4"
+            },
+            {
+                "id": "7",
+                "title": "Product Title 7",
+                "designer": "",
+                "price": "",
+                "url": "",
+                "status": "",
+                "photo": {
+                    "medium": "assets/images/lookboard/lookboard-story-product-07-204x282.jpg",
+                    "large": ""
+                },
+                "lookboard": "1"
+            },
+            {
+                "id": "8",
+                "title": "Product Title 8",
+                "designer": "",
+                "price": "",
+                "url": "",
+                "status": "",
+                "photo": {
+                    "medium": "assets/images/lookboard/lookboard-story-product-08-204x282.jpg",
+                    "large": ""
+                },
+                "lookboard": "4"
+            }
+        ]
+    },
+    "lookboard-4": {
+        "type": "product",
+        "story": [],
+        "products": [
+            {
+                "id": "9",
+                "title": "Product Title 9",
+                "designer": "Product Designer 9",
+                "price": "R100.00",
+                "url": "product-detail.html",
+                "status": "",
+                "photo": {
+                    "medium": "assets/images/lookboard/lookboard-product-09-204x282.jpg",
+                    "large": "assets/images/lookboard/lookboard-product-09-422x599.jpg"
+                },
+                "lookboard": "4"
+            },
+            {
+                "id": "10",
+                "title": "Product Title 10",
+                "designer": "Product Designer 10",
+                "price": "R200.00",
+                "url": "",
+                "status": {
+                    "text": "Sold Out",
+                    "cssClass": "status-grey"
+                },
+                "photo": {
+                    "medium": "assets/images/lookboard/lookboard-product-10-204x282.jpg",
+                    "large": "assets/images/lookboard/lookboard-product-10-422x599.jpg"
+                },
+                "lookboard": "4"
+            },
+            {
+                "id": "11",
+                "title": "Product Title 11",
+                "designer": "Product Designer 11",
+                "price": "R300.00",
+                "url": "product-detail.html",
+                "status": {
+                    "text": "17 Left",
+                    "cssClass": "status-black"
+                },
+                "photo": {
+                    "medium": "assets/images/lookboard/lookboard-product-11-204x282.jpg",
+                    "large": "assets/images/lookboard/lookboard-product-11-422x599.jpg"
+                },
+                "lookboard": "4"
+            },
+            {
+                "id": "12",
+                "title": "Product Title 12",
+                "designer": "Product Designer 12",
+                "price": "R400.00",
+                "url": "product-detail.html",
+                "status": "",
+                "photo": {
+                    "medium": "assets/images/lookboard/lookboard-product-12-204x282.jpg",
+                    "large": "assets/images/lookboard/lookboard-product-12-422x599.jpg"
+                },
+                "lookboard": "4"
+            },
+            {
+                "id": "13",
+                "title": "Product Title 13",
+                "designer": "Product Designer 13",
+                "price": "R500.00",
+                "url": "product-detail.html",
+                "status": "",
+                "photo": {
+                    "medium": "assets/images/lookboard/lookboard-product-13-204x282.jpg",
+                    "large": "assets/images/lookboard/lookboard-product-13-422x599.jpg"
+                },
+                "lookboard": "4"
+            },
+            {
+                "id": "14",
+                "title": "Product Title 14",
+                "designer": "Product Designer 14",
+                "price": "R600.00",
+                "url": "product-detail.html",
+                "status": "",
+                "photo": {
+                    "medium": "assets/images/lookboard/lookboard-product-14-204x282.jpg",
+                    "large": "assets/images/lookboard/lookboard-product-14-422x599.jpg"
+                },
+                "lookboard": "4"
+            },
+            {
+                "id": "15",
+                "title": "Product Title 15",
+                "designer": "Product Designer 15",
+                "price": "R700.00",
+                "url": "",
+                "status": {
+                    "text": "Sold Out",
+                    "cssClass": "status-grey"
+                },
+                "photo": {
+                    "medium": "assets/images/lookboard/lookboard-product-15-204x282.jpg",
+                    "large": "assets/images/lookboard/lookboard-product-15-422x599.jpg"
+                },
+                "lookboard": "4"
+            },
+            {
+                "id": "16",
+                "title": "Product Title 16",
+                "designer": "Product Designer 16",
+                "price": "R800.00",
+                "url": "product-detail.html",
+                "status": "",
+                "photo": {
+                    "medium": "assets/images/lookboard/lookboard-product-16-204x282.jpg",
+                    "large": "assets/images/lookboard/lookboard-product-16-422x599.jpg"
+                },
+                "lookboard": "4"
+            }
+        ]
+    }
+}

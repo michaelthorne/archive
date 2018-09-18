@@ -1,0 +1,82 @@
+
+body {
+	width: 960px;
+}
+
+#wrapper {
+	position: absolute;
+    margin: 8px 20px;
+    height: 98%;
+    padding: 0 10px;
+    background: #ddd;
+}
+
+#wrapper .customScrollBox {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+#wrapper .customScrollBox .container {
+    position: relative;
+    width: 90%;
+    top: 0;
+    float: left;
+}
+
+#wrapper .customScrollBox .content {
+    clear: both;
+}
+
+#wrapper .customScrollBox .content h1 {
+	padding: 10px 5px 10px 15px;
+}
+
+#wrapper .customScrollBox .content p {
+    padding: 10px 5px 10px 15px;
+    margin: 0;
+    color: #31231E;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+#wrapper .customScrollBox img {
+    border: 3px solid #666;
+    margin: 0 0 0 15px;
+}
+
+#wrapper .dragger_container {
+    position: relative;
+    width: 0px;
+    height: 33%;
+    float: left;
+    margin: 35px 0 0 25px;
+    border-left: 1px solid #666;
+    border-right: 1px solid #111;
+    cursor: pointer
+}
+
+#wrapper .dragger {
+    position: absolute;
+    width: 20px;
+    height: 60px;
+    background: #666;
+    margin-left: -10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#wrapper .dragger_pressed {
+    position: absolute;
+    width: 20px;
+    height: 60px;
+    background: rgba(34,34,34,0.5);
+    margin-left: -10px;
+    overflow: hidden;
+    cursor: pointer;
+    -moz-border-radius: 8px;
+    -khtml-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 6px;
+}

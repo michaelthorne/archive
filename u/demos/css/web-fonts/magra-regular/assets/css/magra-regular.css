@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'MagraRegular';
+    src: url("../fonts/magra-regular-webfont.eot");
+    src: local('☺'), url("../fonts/magra-regular-webfont.woff") format('woff'),
+                     url("../fonts/magra-regular-webfont.ttf") format('truetype'),
+                     url("../fonts/magra-regular-webfont.svg#MagraRegular") format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

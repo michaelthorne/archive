@@ -1,0 +1,5 @@
+header{margin:0 auto;margin-top:40px;width:960px;}
+nav.primary>ul{background-color:#0183A1;border-top:1px #004150 solid;height:39px;margin:0 auto;padding:0;position:relative;width:960px;}nav.primary>ul>li{border-right:1px #004150 solid;float:left;height:40px;list-style:none;margin:0;padding:0;}nav.primary>ul>li a{display:block;padding:10px;height:20px;}
+nav.primary>ul>li ul{background-color:#0183A1;border:1px #004150 solid;left:-1px;margin:0;padding:0;position:absolute;top:39px;visibility:hidden;}nav.primary>ul>li ul li{margin:0;width:200px;}nav.primary>ul>li ul li:hover{background-color:#6AD9F3;}
+nav.primary>ul>li ul li a{border-bottom:1px #004150 solid;}nav.primary>ul>li ul li a:active,nav.primary>ul>li ul li a:focus{background-color:#6AD9F3;}
+nav.primary>ul li.hover{position:relative;}

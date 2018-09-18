@@ -1,0 +1,2137 @@
+/* ==========================================================================
+   Layout: display, float, height, margin, padding, position, width, z-index
+   ========================================================================== */
+
+@import-once "inc/colours.less";
+@import-once "inc/fonts.less";
+@import-once "inc/mixins.less";
+@import-once "inc/viewports";
+
+/*
+ * Apply a natural box layout model to all elements
+ */
+
+* {
+    .box-sizing(border-box);
+}
+
+/* Containers
+   ========================================================================== */
+
+html, body {
+    height: 100%;
+    width: 100%;
+
+    &.wrap {
+        background-color: @colour-black;
+        margin: 0 auto;
+        position: relative;
+
+        @media screen and (min-width: @viewport-larger) {
+            max-width: 1680px;
+        }
+    }
+}
+
+pre {
+    background-color: @colour-gainsboro;
+    padding: 10px;
+}
+
+// Nasty fake "line break"
+span.break {
+    display: block;
+}
+
+@media screen and (max-width: @viewport-largest) {
+
+    span.br {
+        display: none;
+    }
+}
+
+/* Navigation
+   ========================================================================== */
+
+// Primary <nav> container
+.primary {
+    background-color: @colour-black;
+    display: none;
+    height: 141px;
+    margin: 0 auto;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+
+    @media screen and (min-width: @viewport-larger) {
+        height: 71px;
+        max-width: 1680px;
+        min-width: 1100px;
+    }
+
+    > ol {
+        height: 100%;
+
+        > li {
+            float: none;
+            height: 71px;
+            position: relative;
+
+            &:first-child {
+                border-bottom: 1px @colour-grey solid;
+            }
+
+            &:nth-child(2) {
+                min-width: 878px;
+            }
+
+            @media screen and (min-width: @viewport-larger) {
+                float: left;
+                height: 100%;
+            }
+        }
+    }
+
+    a.button {
+        display: none;
+        position: absolute;
+        right: 17px;
+        top: 15px;
+        visibility: hidden;
+        width: 160px;
+
+        @media screen and (min-width: @viewport-medium) {
+            display: block;
+            visibility: visible;
+        }
+    }
+}
+
+// Navigation
+.navigation {
+    margin: 0;
+    padding: 0;
+    position: relative;
+
+    li {
+        list-style: none;
+
+        a {
+            display: block;
+        }
+    }
+}
+
+// Primary drop-down navigation
+.navigation-primary {
+    background-color: @colour-white;
+    display: none;
+    left: 0;
+    max-width: @viewport-small;
+    position: absolute;
+    top: 71px;
+    width: 100%;
+    z-index: 2;
+
+    @media screen and (min-width: @viewport-small) {
+        max-width: inherit;
+        width: 222px;
+    }
+
+    li {
+        border-bottom: 1px @colour-dim-grey solid;
+        height: 70px;
+
+        a {
+            height: 100%;
+            padding: 27px 0 0 27px;
+            width: 100%;
+
+            &:focus {
+                background-color: @colour-gainsboro;
+            }
+
+            &:hover {
+                background-color: @colour-gainsboro;
+            }
+        }
+    }
+}
+
+// Secondary section navigation
+.navigation-secondary {
+    background-color: @colour-black;
+    height: 100%;
+    width: 100%;
+
+    li {
+        float: left;
+        height: 100%;
+
+        a {
+            margin: 27px 0 0 23px;
+
+            &:focus {
+                background-color: @colour-black;
+            }
+
+            &:hover {
+                background-color: @colour-black;
+            }
+
+            &:active {
+                padding-top: 1px;
+            }
+        }
+    }
+}
+
+// Active section navigation anchor
+#active {
+    background-color: @colour-white;
+    height: 100%;
+    max-width: @viewport-small;
+    padding: 26px 0 0 27px;
+    position: relative;
+    width: 100%;
+
+    @media screen and (min-width: @viewport-small) {
+        max-width: inherit;
+        width: 222px;
+    }
+
+    .nav-arrow {
+        height: 11px;
+        position: absolute;
+        top: 30px;
+        right: 24px;
+        width: 24px;
+    }
+
+    .nav-arrow-down {
+        background: url("../images/icons/icon-nav-arrow-down.png") 0 0 no-repeat;
+    }
+
+    .nav-arrow-up {
+        background: url("../images/icons/icon-nav-arrow-up.png") 0 0 no-repeat;
+    }
+}
+
+/*
+ * Accordion
+ */
+
+// Wrapper
+div.wrapper-accordion {
+    display: block;
+    height: 100px;
+    position: fixed;
+    visibility: visible;
+    width: 100%;
+    z-index: 100;
+
+    @media screen and (min-width: @viewport-larger) {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+// Unordered lists
+ul.accordion {
+    margin: 0;
+    padding: 0;
+    position: relative;
+
+    li {
+        clear: both;
+        height: 50px;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+
+        > a {
+
+            span {
+                display: inline-block;
+            }
+        }
+
+        // Main sections
+        &.accordion-primary {
+            background-color: @colour-white;
+            position: relative;
+            z-index: 100;
+
+            > ul {
+                display: none;
+
+                li {
+                    border-bottom: 1px @colour-dim-grey solid;
+
+                    &:first-child {
+                        border-top: 1px @colour-dim-grey solid;
+                    }
+                }
+
+                a {
+                    background-color: @colour-white;
+                }
+            }
+        }
+
+        // Sub sections
+        &.accordion-secondary {
+            background-color: @colour-black;
+            position: relative;
+
+            > ul {
+                display: none;
+
+                li {
+                    border-bottom: 1px @colour-dim-grey solid;
+
+                    &:first-child {
+                        border-top: 1px @colour-dim-grey solid;
+                    }
+                }
+
+                a {
+                    background-color: @colour-black;
+                }
+            }
+        }
+
+        a {
+            display: inline-block;
+            height: 100%;
+            padding: 21px 0 0 23px;
+            width: 100%;
+        }
+    }
+
+    .nav-arrow {
+        height: 50px;
+        position: absolute;
+        right: 5px;
+        top: 0;
+        width: 50px;
+    }
+}
+
+#accordion-primary-active {
+    position: relative;
+
+    .nav-arrow {
+
+        &.nav-arrow-down {
+            background: url("../images/icons/icon-nav-arrow-down.png") center center no-repeat;
+        }
+
+        &.nav-arrow-up {
+            background: url("../images/icons/icon-nav-arrow-up.png") center center no-repeat;
+        }
+    }
+}
+
+#accordion-secondary-active {
+    position: relative;
+
+    .nav-arrow {
+
+        &.nav-arrow-down {
+            background: url("../images/icons/icon-nav-arrow-white-down.png") center center no-repeat;
+        }
+
+        &.nav-arrow-up {
+            background: url("../images/icons/icon-nav-arrow-white-up.png") center center no-repeat;
+        }
+    }
+}
+
+// Back to Top
+a.back-to-top {
+    bottom: 5%;
+    display: none;
+    .opacity(0.9);
+    position: fixed;
+    right: 0;
+    .transition(all 0.40s ease 0s);
+    z-index: 20;
+
+    &:hover {
+        .opacity(1);
+    }
+
+    img {
+        display: block;
+    }
+}
+
+/* Headings
+   ========================================================================== */
+
+h1 {
+    margin: 0 0 20px 0;
+    padding: 0;
+
+    // Logo on landing page
+    &.logo {
+        margin: 0 auto 60px auto;
+        width: 276px;
+
+        @media screen and (min-width: @viewport-small) {
+            width: 420px;
+        }
+
+        @media screen and (min-width: @viewport-medium) {
+            width: 687px;
+        }
+
+        img {
+            width: 276px;
+
+            @media screen and (min-width: @viewport-small) {
+                width: 420px;
+            }
+
+            @media screen and (min-width: @viewport-medium) {
+                width: 687px;
+            }
+        }
+    }
+
+    // Small headings
+    &.small {
+        margin-bottom: 20px;
+    }
+
+    // Large headings
+    &.large {
+        margin-bottom: 20px;
+    }
+}
+
+/* Text
+   ========================================================================== */
+
+blockquote {
+    margin: 0;
+}
+
+span {
+    display: block;
+}
+
+/* Lists
+   ========================================================================== */
+
+/*
+ * Contact
+ */
+
+ul.contact {
+    margin: 0;
+    padding: 0;
+
+    li {
+        list-style: none;
+    }
+}
+
+/* Text
+   ========================================================================== */
+
+sup {
+    top: -1em;
+}
+
+/* Buttons
+   ========================================================================== */
+
+.wrapper-buttons {
+    margin: 0 auto;
+    overflow: hidden;
+    width: 100%;
+
+    @media screen and (min-width: @viewport-medium) {
+        width: 300px;
+    }
+}
+
+// General
+a.button {
+    display: block;
+    clear: both;
+    margin: 0 auto 15px auto;
+    padding: 12px 0;
+    width: 180px;
+
+    @media screen and (min-width: 768px) {
+        clear: none;
+        float: left;
+        margin: 0;
+        padding-right: 20px;
+        padding-left: 20px;
+        width: 120px;
+
+        &:first-child {
+            float: left;
+        }
+
+        &:last-child {
+            float: right;
+        }
+    }
+
+    &:focus {
+        outline: 0;
+    }
+
+    &:active {
+        padding-top: 13px;
+        padding-bottom: 11px;
+    }
+
+    // Red
+    &.button-red {
+        background-color: @colour-burgundy-dark;
+        .transition(background-color .1s linear);
+
+        &:hover {
+            background-color: @colour-red;
+        }
+    }
+
+    // Black
+    &.button-black {
+        background-color: @colour-black;
+        border: 1px @colour-gainsboro solid;
+
+        &:hover {
+            border: 1px @colour-white solid;
+        }
+    }
+}
+
+// Navigation
+.navigation-secondary {
+
+    a {
+
+        &.button {
+            border: 1px @colour-gainsboro solid;
+            margin: 16px 0 0 30px;
+            padding: 12px 20px 10px 20px;
+
+            &:hover {
+                border: 1px @colour-white solid;
+            }
+
+            &:active {
+                padding-top: 13px;
+                padding-bottom: 9px;
+            }
+        }
+    }
+}
+
+/* Sections
+   ========================================================================== */
+
+// Individual container per section
+.section {
+    clear: both;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0;
+    width: 100%;
+
+    @media screen and (min-width: @viewport-medium) {
+        min-width: 768px;
+    }
+
+    @media screen and (min-width: @viewport-larger) {
+        height: 100%;
+        max-height: 979px; // 979px = 1050px - 71px (Height of the primary navigation)
+        min-height: 700px;
+        min-width: 1100px;
+    }
+
+    /*
+     * Landing
+     */
+
+    // Landing
+    &.section-landing {
+        padding-top: 100px;
+
+        @media screen and (min-width: @viewport-medium) {
+            min-height: 1024px;
+            padding-top: 25%;
+        }
+
+        @media screen and (min-width: @viewport-large) {
+            min-height: inherit;
+            padding-top: 100px;
+        }
+
+        @media screen and (min-width: @viewport-larger) {
+            min-height: 1050px; // There is no primary navigation on the landing section
+            padding-top: 0;
+        }
+
+        // Virgin Active logo
+        img {
+
+            &.logo {
+                display: block;
+                margin: 30px auto 10px auto;
+
+                @media screen and (min-width: @viewport-medium) {
+                    margin: 0;
+                    position: absolute;
+                    right: 20px;
+                    top: 120px;
+                }
+
+                @media screen and (min-width: @viewport-larger) {
+                    top: 20px;
+                }
+            }
+        }
+    }
+
+    /*
+     * About
+     */
+
+    // Welcome to Alice Lane
+    &.section-welcome-to-alice-lane {
+        padding-top: 50px;
+
+        @media screen and (min-width: @viewport-larger) {
+            padding-top: 0;
+        }
+    }
+
+    // Our Classic Collection
+    &.section-our-classic-collection {
+        background-color: @colour-midnight-blue;
+        background-image: url("../images/backgrounds/small/background-about-our-classic-collection.png");
+        background-position: top center;
+        background-repeat: no-repeat;
+        padding-top: 300px;
+
+        @media screen and (min-width: @viewport-smaller) {
+            background-image: url("../images/backgrounds/medium/background-about-our-classic-collection.png");
+            padding-top: 540px;
+        }
+
+        @media screen and (min-width: @viewport-larger) {
+            background-image: url("../images/backgrounds/background-about-our-classic-collection.png");
+            min-height: inherit;
+            padding-top: 0;
+        }
+    }
+
+    // Location
+    &.section-location-is-everything {
+        background-image: url("../images/backgrounds/small/background-about-location-is-everything.jpg");
+        background-position: top center;
+        background-repeat: no-repeat;
+        padding-top: 300px;
+
+        @media screen and (min-width: @viewport-smaller) {
+            background-image: url("../images/backgrounds/medium/background-about-location-is-everything.jpg");
+            padding-top: 440px;
+        }
+
+        @media screen and (min-width: @viewport-larger) {
+            background-size: cover;
+        }
+
+        @media screen and (min-width: @viewport-larger) {
+            background-image: url("../images/backgrounds/background-about-location-is-everything.jpg");
+            background-size: auto;
+            min-height: inherit;
+            padding-top: 0;
+        }
+    }
+
+    /*
+     * Training
+     */
+
+    // Rooftop Training
+    &.section-rooftop-training {
+        background-image: url("../images/backgrounds/small/background-training-rooftop-training.jpg");
+        background-position: top center;
+        background-repeat: no-repeat;
+        padding-top: 140px;
+
+        @media screen and (min-width: @viewport-smaller) {
+            background-image: url("../images/backgrounds/medium/background-training-rooftop-training.jpg");
+            padding-top: 200px;
+        }
+
+        @media screen and (min-width: @viewport-larger) {
+            background-size: cover;
+        }
+
+        @media screen and (min-width: @viewport-larger) {
+            background-image: url("../images/backgrounds/background-training-rooftop-training.jpg");
+            background-size: auto;
+            min-height: inherit;
+        }
+    }
+
+    // Training Experience
+    &.section-training-experience {
+        background-image: url("../images/backgrounds/small/background-training-experience.png");
+        background-position: 0 0;
+        background-repeat: repeat;
+        padding: 50px 0;
+
+        @media screen and (min-width: @viewport-smaller) {
+            background-image: url("../images/backgrounds/medium/background-training-experience.png");
+            padding: 150px 0;
+        }
+
+        @media screen and (min-width: @viewport-larger) {
+            background-image: url("../images/backgrounds/background-training-experience.png");
+            min-height: inherit;
+            padding: 0;
+        }
+    }
+
+    // Group Exercise
+    &.section-group-exercise {
+        background-image: url("../images/backgrounds/medium/background-training-group-exercise.png");
+        background-position: top center;
+        background-repeat: no-repeat;
+        padding-top: 10px;
+
+        @media screen and (min-width: @viewport-larger) {
+            background-size: cover;
+        }
+
+        @media screen and (min-width: @viewport-larger) {
+            background-image: url("../images/backgrounds/background-training-group-exercise.png");
+            background-size: auto;
+            min-height: inherit;
+            padding-top: 0;
+        }
+    }
+
+    // My Ride
+    &.section-my-ride {
+        background-image: url("../images/backgrounds/small/background-training-my-ride.jpg");
+        background-position: top center;
+        background-repeat: no-repeat;
+        padding-top: 300px;
+
+        @media screen and (min-width: @viewport-smaller) {
+            background-image: url("../images/backgrounds/medium/background-training-my-ride.jpg");
+            padding-top: 440px;
+        }
+
+        @media screen and (min-width: @viewport-larger) {
+            background-size: cover;
+        }
+
+        @media screen and (min-width: @viewport-larger) {
+            background-image: url("../images/backgrounds/background-training-my-ride.jpg");
+            background-size: auto;
+            min-height: inherit;
+            padding-top: 0;
+        }
+    }
+
+    // Anti-gravity Yoga
+    &.section-anti-gravity-yoga {
+        background-image: url("../images/backgrounds/small/background-training-anti-gravity-yoga.jpg");
+        background-position: top center;
+        background-repeat: no-repeat;
+        padding-top: 140px;
+
+        @media screen and (min-width: @viewport-smaller) {
+            background-image: url("../images/backgrounds/medium/background-training-anti-gravity-yoga.jpg");
+            padding-top: 200px;
+        }
+
+        @media screen and (min-width: @viewport-larger) {
+            background-size: cover;
+        }
+
+        @media screen and (min-width: @viewport-larger) {
+            background-image: url("../images/backgrounds/background-training-anti-gravity-yoga.jpg");
+            background-size: auto;
+            min-height: inherit;
+        }
+    }
+
+    /*
+     * Equipment
+     */
+
+    // Wattbike
+    &.section-the-wattbike {
+        background-color: @colour-chinook;
+        background-image: url("../images/backgrounds/small/background-equipment-the-wattbike.png");
+        background-position: top center;
+        background-repeat: no-repeat;
+        padding-top: 300px;
+
+        @media screen and (min-width: @viewport-smaller) {
+            background-image: url("../images/backgrounds/medium/background-equipment-the-wattbike.png");
+            padding-top: 600px;
+        }
+
+        @media screen and (min-width: @viewport-larger) {
+            background-image: url("../images/backgrounds/background-equipment-the-wattbike.png");
+            padding-top: 0;
+        }
+    }
+
+    // Technogym
+    &.section-technogym {
+        background-color: @colour-white;
+        position: relative;
+
+        @media screen and (min-width: @viewport-larger) {
+            background-image: url("../images/backgrounds/background-equipment-technogym.jpg");
+            background-position: bottom center;
+            background-repeat: no-repeat;
+
+            div.slider {
+                display: none;
+            }
+        }
+    }
+
+    // Queenax Units
+    &.section-queenax-units {
+        background-color: @colour-white;
+        background-image: url("../images/backgrounds/small/background-equipment-queenax-units.png");
+        background-position: top center;
+        background-repeat: no-repeat;
+        padding-top: 140px;
+
+        @media screen and (min-width: @viewport-smaller) {
+            background-image: url("../images/backgrounds/medium/background-equipment-queenax-units.png");
+            padding-top: 200px;
+        }
+
+        @media screen and (min-width: @viewport-larger) {
+            background-size: cover;
+        }
+
+        @media screen and (min-width: @viewport-larger) {
+            background-image: url("../images/backgrounds/background-equipment-queenax-units.png");
+            background-size: auto;
+            min-height: inherit;
+            padding-top: 0;
+        }
+    }
+
+    /*
+     * Facilities
+     */
+
+    // Health Suite
+    &.section-health-suite {
+        background-image: url("../images/backgrounds/small/background-facilities-health-suite.jpg");
+        background-position: top center;
+        background-repeat: no-repeat;
+        padding-top: 300px;
+
+        @media  screen and (min-width: @viewport-smaller) {
+            background-image: url("../images/backgrounds/medium/background-facilities-health-suite.jpg");
+            padding-top: 500px;
+        }
+
+        @media screen and (min-width: @viewport-larger) {
+            background-size: cover;
+        }
+
+        @media screen and (min-width: @viewport-larger) {
+            background-image: url("../images/backgrounds/background-facilities-health-suite.jpg");
+            background-size: auto;
+            min-height: inherit;
+            padding-top: 0;
+        }
+    }
+
+    // Boardroom
+    &.section-boardroom {
+        background-image: url("../images/backgrounds/small/background-facilities-boardroom.png");
+        background-position: 0 0;
+        background-repeat: repeat;
+        padding-top: 300px;
+
+        @media screen and (min-width: @viewport-smaller) {
+            background-image: url("../images/backgrounds/medium/background-facilities-boardroom.png");
+            padding-top: 440px;
+        }
+
+        @media screen and (min-width: @viewport-larger) {
+            background: url("../images/backgrounds/background-facilities-boardroom.png") 0 0 repeat;
+            min-height: inherit;
+            padding-top: 0;
+        }
+    }
+
+    // Poolside Lounge
+    &.section-poolside-lounge {
+        background-image: url("../images/backgrounds/small/background-facilities-poolside-lounge.jpg");
+        background-position: top center;
+        background-repeat: no-repeat;
+        padding-top: 300px;
+
+        @media screen and (min-width: @viewport-smaller) {
+            background-image: url("../images/backgrounds/medium/background-facilities-poolside-lounge.jpg");
+            padding-top: 540px;
+        }
+
+        @media screen and (min-width: @viewport-larger) {
+            background-size: cover;
+        }
+
+        @media screen and (min-width: @viewport-larger) {
+            background-image: url("../images/backgrounds/background-facilities-poolside-lounge.jpg");
+            background-size: auto;
+            min-height: inherit;
+            padding-top: 0;
+        }
+    }
+
+    // Changerooms
+    &.section-changerooms {
+        background-image: url("../images/backgrounds/small/background-facilities-changerooms.png");
+        background-position: top center;
+        background-repeat: no-repeat;
+        padding-top: 300px;
+
+        @media screen and (min-width: @viewport-smaller) {
+            background-image: url("../images/backgrounds/medium/background-facilities-changerooms.png");
+            padding-top: 640px;
+        }
+
+        @media screen and (min-width: @viewport-larger) {
+            background-size: cover;
+        }
+
+        @media screen and (min-width: @viewport-larger) {
+            background-image: url("../images/backgrounds/background-facilities-changerooms.png");
+            background-size: auto;
+            min-height: inherit;
+            padding-top: 0;
+        }
+    }
+
+    /*
+     * Luxury
+     */
+
+    // Fine Dining
+    &.section-fine-dining {
+        background-image: url("../images/backgrounds/small/background-luxury-fine-dining.jpg");
+        background-position: top center;
+        background-repeat: no-repeat;
+        padding-top: 300px;
+
+        @media screen and (min-width: @viewport-smaller) {
+            background-image: url("../images/backgrounds/medium/background-luxury-fine-dining.jpg");
+            padding-top: 440px;
+        }
+
+        @media screen and (min-width: @viewport-larger) {
+            background-size: cover;
+        }
+
+        @media screen and (min-width: @viewport-larger) {
+            background-image: url("../images/backgrounds/background-luxury-fine-dining.jpg");
+            background-size: auto;
+            min-height: inherit;
+            padding-top: 0;
+        }
+    }
+
+    // Shoeshine Bar
+    &.section-shoeshine-bar {
+        background-image: url("../images/backgrounds/small/background-luxury-shoeshine-bar.jpg");
+        background-position: top center;
+        background-repeat: no-repeat;
+        padding-top: 126px;
+
+        @media screen and (min-width: @viewport-smaller) {
+            background-image: url("../images/backgrounds/medium/background-luxury-shoeshine-bar.jpg");
+        }
+
+        @media screen and (min-width: @viewport-large) {
+            background-size: cover;
+        }
+
+        @media screen and (min-width: @viewport-larger) {
+            background-image: url("../images/backgrounds/background-luxury-shoeshine-bar.jpg");
+            background-size: auto;
+        }
+    }
+
+    // Aqua Lounge
+    &.section-aqua-lounge {
+        background-image: url("../images/backgrounds/small/background-luxury-aqua-lounge.jpg");
+        background-position: top center;
+        background-repeat: no-repeat;
+        padding-top: 130px;
+
+        @media screen and (min-width: @viewport-smaller) {
+            background-image: url("../images/backgrounds/medium/background-luxury-aqua-lounge.jpg");
+        }
+
+        @media screen and (min-width: @viewport-large) {
+            background-size: cover;
+        }
+
+        @media screen and (min-width: @viewport-larger) {
+            background-image: url("../images/backgrounds/background-luxury-aqua-lounge.jpg");
+            background-size: auto;
+        }
+    }
+
+    /*
+     * Contact
+     */
+
+    // Contact
+    &.section-contact {
+        position: relative;
+
+        // Map
+        div.map {
+            height: 350px;
+            width: 100%;
+
+            @media screen and (min-width: @viewport-larger) {
+                bottom: inherit;
+                height: 100%;
+                left: 0;
+                position: absolute;
+                top: 0;
+            }
+        }
+    }
+
+    /*
+     * Join Alice Lane
+     */
+
+    // Join Alice Lane
+    &.section-join-alice-lane {
+
+        @media screen and (min-width: @viewport-medium) {
+            min-height: 800px;
+            padding-top: 50px;
+        }
+
+        @media screen and (min-width: @viewport-larger) {
+            padding-top: 0;
+        }
+    }
+}
+
+// Full size container per section
+div.wrapper {
+    height: 100%;
+    width: 100%;
+}
+
+// Inner container for contents per section
+div.contents {
+    height: 100%;
+    margin: 0 auto;
+    padding: 5%;
+    position: relative;
+    z-index: 10;
+
+    @media screen and (min-width: @viewport-larger) {
+        padding: 10% 0 0 0;
+        width: 1100px;
+    }
+
+    /*
+     * General
+     */
+
+    img {
+        margin: 0 auto;
+    }
+
+    p {
+        padding-left: 5px;
+    }
+
+    ul.contact {
+        padding-left: 5px;
+    }
+
+    ul.items {
+        margin: 0;
+        overflow: hidden;
+        padding: 0 0 0 5px;
+
+        li {
+            margin: 0 0 5px 0;
+            padding: 0;
+            width: 100%;
+
+            @media screen and (max-width: @viewport-medium) {
+                margin: 0 0 5px 0;
+            }
+        }
+    }
+
+    /*
+     * Landing
+     */
+
+    &.contents-landing {
+        padding-top: 15%;
+        position: relative;
+
+        @media screen and (min-width: @viewport-larger) {
+            padding-top: 18%;
+        }
+    }
+
+    /*
+     * About
+     */
+
+    // Welcome to Alice Lane
+    &.contents-welcome {
+        padding-top: 10%;
+
+        p {
+            margin-bottom: 5%;
+        }
+
+        // Scroll down animation
+        img.scroll {
+            display: none;
+            height: 44px;
+            margin: 0 auto;
+            width: 54px;
+            visibility: hidden;
+
+            @media screen and (min-width: @viewport-larger) {
+                display: block;
+                padding-bottom: 0;
+                visibility: visible;
+            }
+        }
+    }
+
+    // Our Classic Collection
+    &.contents-our-classic-collection {
+        background-color: inherit;
+        padding-top: 5%;
+
+        @media screen and (min-width: @viewport-larger) {
+            background: none !important;
+        }
+    }
+
+    /*
+     * Training
+     */
+
+    // Rooftop Training
+    &.contents-rooftop-training {
+        padding-top: 5%;
+
+        h1 {
+            display: inline-block;
+            padding: 5px 10px;
+
+            @media screen and (min-width: @viewport-larger) {
+                display: block;
+                padding: 0;
+            }
+        }
+    }
+
+    // Group Exercise
+    &.contents-group-exercise {
+        padding-top: 3%;
+
+        @media screen and (max-width: @viewport-small) {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+
+        @media screen and (min-height: @viewport-medium) {
+            padding-top: 10%;
+        }
+    }
+
+    // Anti-gravity Yoga
+    &.contents-anti-gravity-yoga {
+        padding-top: 5%;
+
+        h1 {
+            display: inline-block;
+            padding: 5px 10px;
+
+            @media screen and (min-width: @viewport-larger) {
+                display: block;
+                padding: 0;
+            }
+        }
+    }
+
+    /*
+     * Equipment
+     */
+
+    // The Wattbike
+    &.contents-the-wattbike {
+        background-color: inherit;
+        padding-top: 8%;
+
+        @media screen and (min-width: @viewport-larger) {
+            background: none !important;
+        }
+    }
+
+    // Technogym
+    &.contents-technogym {
+        padding-top: 5%;
+    }
+
+    // Queenax Units
+    &.contents-queenax-units {
+
+        @media screen and (min-width: @viewport-larger) {
+            padding-top: 12%;
+        }
+
+        h1 {
+            display: inline-block;
+            margin: 0;
+            padding: 5px 10px;
+
+            @media screen and (min-width: @viewport-medium) {
+                padding: 15px 30px;
+            }
+        }
+    }
+
+    /*
+     * Facilities
+     */
+
+    // Health Suite
+    &.contents-health-suite {
+
+        @media screen and (max-width: @viewport-large) {
+            background-color: @colour-white;
+        }
+    }
+
+    // Boardroom Units
+    &.contents-boardroom {
+
+        h1 {
+            padding: 10px;
+
+            @media screen and (min-width: @viewport-medium) {
+                padding: 0;
+            }
+        }
+    }
+
+    // Poolside Lounge
+    &.contents-poolside-lounge {
+        background-color: inherit;
+
+        @media screen and (min-width: @viewport-larger) {
+            background: none !important;
+        }
+    }
+
+    // Changerooms
+    &.contents-changerooms {
+        display: none;
+
+        @media screen and (min-width: @viewport-larger) {
+            display: block;
+        }
+    }
+
+    /*
+     * Luxury
+     */
+
+    // Technogym
+    &.contents-fine-dining {
+       padding-top: 4%;
+    }
+
+    // Shoeshine bar
+    &.contents-shoeshine-bar {
+        padding-top: 10%;
+
+        h1 {
+            display: inline-block;
+            padding: 5px 10px;
+
+            @media screen and (min-width: @viewport-larger) {
+                display: block;
+                padding: 0;
+            }
+        }
+    }
+
+    // Aqua lounge
+    &.contents-aqua-lounge {
+        padding-top: 10%;
+
+        h1 {
+            display: inline-block;
+            padding: 5px 10px;
+
+            @media screen and (min-width: @viewport-larger) {
+                display: block;
+                padding: 0;
+            }
+        }
+    }
+
+    // The Nook
+    &.contents-the-nook {
+        padding-top: 80px;
+        padding-bottom: 80px;
+
+        @media screen and (min-width: @viewport-medium) {
+            padding-top: 200px;
+            padding-bottom: 200px;
+        }
+
+        @media screen and (min-width: @viewport-larger) {
+            padding-right: 560px;
+            padding-bottom: 0;
+        }
+    }
+
+    /*
+     * Contact
+     */
+
+    &.contents-contact {
+        height: auto;
+        padding-bottom: 5%;
+
+        p {
+            margin: 0;
+        }
+
+        @media screen and (min-width: @viewport-larger) {
+            height: 100%;
+            padding-top: 7%;
+            padding-bottom: 0;
+        }
+    }
+
+    /*
+     * Join Alice Lane
+     */
+
+    &.contents-join-alice-lane {
+
+        h1 {
+            width: 100%;
+        }
+
+        @media screen and (min-width: @viewport-medium) {
+
+            h1 {
+                width: 535px;
+            }
+        }
+
+        @media screen and (min-width: @viewport-large) {
+            padding-top: 6%;
+
+            h1 {
+                margin: 0 auto 30px auto;
+                width: 482px;
+            }
+        }
+
+        @media screen and (min-width: @viewport-largest) {
+            padding-top: 10%;
+        }
+    }
+}
+
+/*
+ * Panels
+ */
+
+// Diagonal content panel
+div.panel-diagonal {
+    height: 100%;
+    position: relative;
+    width: 100%;
+    z-index: 2;
+
+    // Left aligned
+    &.panel-diagonal-left {
+        left: 0;
+
+        @media screen and (min-width: @viewport-larger) {
+            left: -64%;
+        }
+
+        @media screen and (min-width: @viewport-largest) {
+            left: -65%;
+        }
+
+        // Slice
+        div.slice {
+            right: -185px;
+        }
+
+        // Contents
+        div.contents {
+
+            h1,
+            p,
+            ul.contact {
+
+                @media screen and (min-width: @viewport-larger) {
+                    float: right;
+                    margin-right: -8%;
+                }
+            }
+        }
+    }
+
+    // Right aligned
+    &.panel-diagonal-right {
+        right: 0;
+
+        @media screen and (min-width: @viewport-larger) {
+            right: -64%;
+        }
+
+        @media screen and (min-width: @viewport-largest) {
+            right: -65%;
+        }
+
+
+        // Slice
+        div.slice {
+            left: -185px;
+        }
+
+        // Contents
+        div.contents {
+
+            h1,
+            p,
+            ul.contact {
+
+                @media screen and (min-width: @viewport-larger) {
+                    float: left;
+                }
+
+                @media screen and (min-width: @viewport-larger) {
+                    margin-left: -8%;
+                }
+            }
+        }
+    }
+
+    // Diagonal "slice" element
+    div.slice {
+        display: none;
+        height: 1600px;
+        position: absolute;
+        top: -100px;
+        /*.transform(rotate(15deg));*/
+        visibility: hidden;
+        width: 366px;
+        z-index: 5;
+
+        @media screen and (min-width: @viewport-larger) {
+            display: block;
+            visibility: visible;
+        }
+    }
+
+    // Contents within the panel
+    div.contents {
+        width: 100%;
+
+        h1,
+        p,
+        ul.contact {
+            clear: both;
+
+            @media screen and (min-width: @viewport-larger) {
+                width: 520px;
+            }
+        }
+    }
+}
+
+// Horizontal content panel
+div.panel-horizontal {
+    width: 100%;
+    z-index: 20;
+
+    @media screen and (min-width: @viewport-larger) {
+        bottom: 350px;
+        height: 350px;
+        left: 0;
+        position: relative;
+    }
+
+    // Tall
+    &.panel-horizontal-tall {
+
+        @media screen and (min-width: @viewport-larger) {
+            bottom: 300px;
+            height: 300px;
+        }
+    }
+
+    // Medium
+    &.panel-horizontal-medium {
+
+        @media screen and (min-width: @viewport-larger) {
+            bottom: 250px;
+            height: 250px;
+        }
+    }
+
+    // Short
+    &.panel-horizontal-short {
+
+        @media screen and (min-width: @viewport-larger) {
+            bottom: 220px;
+            height: 220px;
+        }
+    }
+
+    // Contents with the panel
+    div.contents {
+
+        @media screen and (min-width: @viewport-larger) {
+            padding-top: 2%;
+        }
+    }
+}
+
+/*
+ * Columns
+ */
+
+ol.columns {
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+
+    li {
+        list-style: none;
+        padding: 0 0 10px 0;
+
+        @media screen and (min-width: @viewport-medium) {
+            float: left;
+            padding: 0 2% 0 0;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        // 100%
+        &.column-100 {
+            width: 100%;
+        }
+
+        // 66%
+        &.column-66 {
+            width: 100%;
+
+            @media screen and (min-width: @viewport-medium) {
+                width: 66.666%;
+            }
+        }
+
+        // 33%
+        &.column-33 {
+            width: 100%;
+
+            @media screen and (min-width: @viewport-medium) {
+                width: 33.333%;
+            }
+        }
+
+        // 20%
+        &.column-20 {
+            width: 100%;
+
+            @media screen and (min-width: @viewport-medium) {
+                width: 20%;
+            }
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+}
+
+/* Slider
+   ========================================================================== */
+
+// Slider
+&.slider {
+    margin: 0 auto;
+    width: 250px;
+    position: relative;
+
+    @media screen and (min-width: @viewport-smaller) {
+        width: 350px;
+    }
+
+    @media screen and (min-width: @viewport-medium) {
+        width: 697px;
+    }
+}
+
+// Slides
+&.slides {
+    margin: 0;
+    padding: 0;
+
+    li {
+        display: block;
+        float: left;
+        list-style: none;
+    }
+}
+
+// Slide
+&.slide {
+    height: 236px;
+    width: 250px;
+
+    @media screen and (min-width: @viewport-smaller) {
+        height: 330px;
+        width: 350px;
+    }
+
+    @media screen and (min-width: @viewport-medium) {
+        height: 657px;
+        width: 697px;
+    }
+}
+
+.flex-direction-nav {
+    margin: 0;
+    padding: 0;
+
+    li {
+        list-style: none;
+    }
+}
+
+.flex-direction-nav a {
+    background: url("../images/icons/icon-slider-direction-nav.png") no-repeat 0 0;
+    cursor: pointer;
+    display: block;
+    height: 30px;
+    margin: -20px 0 0;
+    position: absolute;
+    text-indent: -9999px;
+    top: 50%;
+    width: 30px;
+
+    @media screen and (min-width: @viewport-larger) {
+        top: 65%;
+    }
+
+    &:link {
+        outline: none;
+    }
+
+    &.flex-prev {
+        left: 0;
+
+        @media screen and (min-width: @viewport-small) {
+            left: 5px;
+        }
+
+        @media screen and (min-width: @viewport-larger) {
+            left: 80px;
+        }
+    }
+
+    &.flex-next {
+        background-position: 100% 0;
+        right: 0;
+
+        @media screen and (min-width: @viewport-small) {
+            right: 80px;
+        }
+
+        @media screen and (min-width: @viewport-larger) {
+            right: 80px;
+        }
+    }
+}
+
+&.technogym-1 {
+    background-image: url("../images/backgrounds/small/background-equipment-technogym-1.jpg");
+
+    @media screen and (min-width: @viewport-smaller) {
+        background-image: url("../images/backgrounds/medium/background-equipment-technogym-1.jpg");
+    }
+
+    @media screen and (min-width: @viewport-medium) {
+        background-image: url("../images/backgrounds/background-equipment-technogym-1.jpg");
+    }
+}
+
+&.technogym-2 {
+    background-image: url("../images/backgrounds/small/background-equipment-technogym-2.jpg");
+
+    @media screen and (min-width: @viewport-smaller) {
+        background-image: url("../images/backgrounds/medium/background-equipment-technogym-2.jpg");
+    }
+
+    @media screen and (min-width: @viewport-medium) {
+        background-image: url("../images/backgrounds/background-equipment-technogym-2.jpg");
+    }
+}
+
+&.technogym-3 {
+    background-image: url("../images/backgrounds/small/background-equipment-technogym-3.jpg");
+
+    @media screen and (min-width: @viewport-smaller) {
+        background-image: url("../images/backgrounds/medium/background-equipment-technogym-3.jpg");
+    }
+
+    @media screen and (min-width: @viewport-medium) {
+        background-image: url("../images/backgrounds/background-equipment-technogym-3.jpg");
+    }
+}
+
+&.technogym-4 {
+    background-image: url("../images/backgrounds/small/background-equipment-technogym-4.jpg");
+
+    @media screen and (min-width: @viewport-smaller) {
+        background-image: url("../images/backgrounds/medium/background-equipment-technogym-4.jpg");
+    }
+
+    @media screen and (min-width: @viewport-medium) {
+        background-image: url("../images/backgrounds/background-equipment-technogym-4.jpg");
+    }
+}
+
+&.technogym-5 {
+    background-image: url("../images/backgrounds/small/background-equipment-technogym-5.jpg");
+
+    @media screen and (min-width: @viewport-smaller) {
+        background-image: url("../images/backgrounds/medium/background-equipment-technogym-5.jpg");
+    }
+
+    @media screen and (min-width: @viewport-medium) {
+        background-image: url("../images/backgrounds/background-equipment-technogym-5.jpg");
+    }
+}
+
+/* Themes
+   ========================================================================== */
+
+// Colours
+.black {
+    color: @colour-black !important;
+}
+
+.dim-grey {
+    color: @colour-dim-grey !important;
+}
+
+.gainsboro {
+    color: @colour-gainsboro !important;
+}
+
+.white {
+    color: @colour-white !important;
+}
+
+.burgundy-dark {
+    color: @colour-burgundy-dark !important;
+}
+
+.burgundy {
+    color: @colour-burgundy !important;
+}
+
+.red {
+    color: @colour-red !important;
+}
+
+.torch-red {
+    color: @colour-torch-red !important;
+}
+
+.midnight-blue {
+    color: @colour-midnight-blue !important;
+}
+
+.narvik {
+    color: @colour-narvik !important;
+}
+
+.grey {
+    color: @colour-grey !important;
+}
+
+.gorse {
+    color: @colour-gorse !important;
+}
+
+.myrtle {
+    color: @colour-myrtle !important;
+}
+
+.mulberry {
+    color: @colour-mulberry !important;
+}
+
+.pink {
+    color: @colour-pink !important;
+}
+
+.chinook {
+    color: @colour-chinook !important;
+}
+
+.bombay {
+    color: @colour-bombay !important;
+}
+
+.pelorous {
+    color: @colour-pelorous !important;
+}
+
+.onahau {
+    color: @colour-onahau !important;
+}
+
+.pigment-green {
+    color: @colour-pigment-green !important;
+}
+
+.apple {
+    color: @colour-apple !important;
+}
+
+.myrtle {
+    color: @colour-myrtle !important;
+}
+
+.celery {
+    color: @colour-celery !important;
+}
+
+.cerulean {
+    color: @colour-cerulean !important;
+}
+
+.summer-sky {
+    color: @colour-summer-sky !important;
+}
+
+.brown {
+    color: @colour-brown !important;
+}
+
+.pale-pink {
+    color: @colour-pale-pink !important;
+}
+
+.chardonnay {
+    color: @colour-chardonnay !important;
+}
+
+.nero {
+    color: @colour-nero !important;
+}
+
+.denim {
+    color: @colour-denim !important;
+}
+
+.cornflower-blue {
+    color: @colour-cornflower-blue !important;
+}
+
+// Background colours
+.bg-black {
+    background-color: @colour-black !important;
+}
+
+.bg-dim-grey {
+    background-color: @colour-dim-grey !important;
+}
+
+.bg-gainsboro {
+    background-color: @colour-gainsboro !important;
+}
+
+.bg-white {
+    background-color: @colour-white !important;
+}
+
+.bg-burgundy-dark {
+    background-color: @colour-burgundy-dark !important;
+}
+
+.bg-burgundy {
+    background-color: @colour-burgundy !important;
+}
+
+.bg-red {
+    background-color: @colour-red !important;
+}
+
+.bg-torch-red {
+    background-color: @colour-torch-red !important;
+}
+
+.bg-midnight-blue {
+    background-color: @colour-midnight-blue !important;
+}
+
+.bg-narvik {
+    background-color: @colour-narvik !important;
+}
+
+.bg-grey {
+    background-color: @colour-grey !important;
+}
+
+.bg-gorse {
+    background-color: @colour-gorse !important;
+}
+
+.bg-myrtle {
+    background-color: @colour-myrtle !important;
+}
+
+.bg-mulberry {
+    background-color: @colour-mulberry !important;
+}
+
+.bg-pink {
+    background-color: @colour-pink !important;
+}
+
+.bg-chinook {
+    background-color: @colour-chinook !important;
+}
+
+.bg-bombay {
+    background-color: @colour-bombay !important;
+}
+
+.bg-pelorous {
+    background-color: @colour-pelorous !important;
+}
+
+.bg-onahau {
+    background-color: @colour-onahau !important;
+}
+
+.bg-pigment-green {
+    background-color: @colour-pigment-green !important;
+}
+
+.bg-apple {
+    background-color: @colour-apple !important;
+}
+
+.bg-myrtle {
+    background-color: @colour-myrtle !important;
+}
+
+.bg-celery {
+    background-color: @colour-celery !important;
+}
+
+.bg-cerulean {
+    background-color: @colour-cerulean !important;
+}
+
+.bg-summer-sky {
+    background-color: @colour-summer-sky !important;
+}
+
+.bg-brown {
+    background-color: @colour-brown !important;
+}
+
+.bg-pale-pink {
+    background-color: @colour-pale-pink !important;
+}
+
+.bg-chardonnay {
+    background-color: @colour-chardonnay !important;
+}
+
+.bg-nero {
+    background-color: @colour-nero !important;
+}
+
+.bg-denim {
+    background-color: @colour-denim !important;
+}
+
+.bg-cornflower-blue {
+    background-color: @colour-cornflower-blue !important;
+}
+
+/* Upgrade IE
+   ========================================================================== */
+
+div.upgrade-ie {
+    background-color: @colour-burgundy;
+    clear: both;
+    height: 42px;
+
+    a {
+        display: block;
+        margin: 0 auto;
+        width: 820px;
+
+        img {
+            border: 0;
+        }
+    }
+}
+
+/* Style Guide
+   ========================================================================== */
+
+.style-guide {
+
+    div.wrapper {
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    section[role="main"] {
+        padding: 20px 20px 40px 20px;
+    }
+
+    // Home icon
+    a.icon-home {
+        left: 2%;
+        position: fixed;
+        top: 20px;
+
+        @media only screen and (min-width: 481px) {
+            top: 25px;
+        }
+    }
+
+    // Up icon
+    a.back-to-top {
+        display: block;
+    }
+
+    // Headings
+    h1 {
+        margin: 0;
+    }
+
+    // Components
+    div.component {
+        background-color: @colour-white;
+        .box-shadow(0px 0px 4px @colour-bombay);
+        margin: 0 0 20px 0;
+        padding: 10px;
+
+        h1 {
+            margin: 0 0 10px 0;
+            padding: 0 0 6px 0;
+        }
+    }
+
+    // Contents
+    div.contents {
+        clear: both;
+        height: 100%;
+        padding: 0;
+        width: 100%;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+
+    // Buttons
+    a.button {
+        clear: both;
+        float: none;
+        width: auto;
+    }
+
+    // Colours
+    ul.colours {
+        margin: 0;
+        overflow: auto;
+        padding: 0;
+
+        li {
+            list-style: none;
+            float: left;
+            padding: 10px 0 0 0;
+            height: 100px;
+            width: 100px;
+
+            pre {
+                display: inline;
+                padding: 0;
+            }
+        }
+    }
+
+    // Table of Contents
+    ol.table-of-contents {
+        margin: 0.5em 0.5em 0.5em 1em;
+        padding: 0.5em;
+    }
+}
+
+@media only screen and (min-width: 481px) {
+
+    .style-guide {
+
+        // Home icon
+        a.icon-home {
+            top: 25px;
+        }
+    }
+}

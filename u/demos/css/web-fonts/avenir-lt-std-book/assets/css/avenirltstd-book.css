@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'AvenirLtStdBook';
+    src: url("../fonts/avenirltstd-book-webfont.eot");
+    src: local('☺'), url("../fonts/avenirltstd-book-webfont.woff") format('woff'), url("../fonts/avenirltstd-book-webfont.ttf") format('truetype'), url("../fonts/avenirltstd-book-webfont.svg#AvenirLtStdBook") format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

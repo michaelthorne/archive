@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'DroidSans';
+    src: url("../fonts/droidsans-webfont.eot");
+    src: local('☺'), url("../fonts/droidsans-webfont.woff") format('woff'),
+                     url("../fonts/droidsans-webfont.ttf") format('truetype'),
+                     url("../fonts/droidsans-webfont.svg#DroidSans") format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

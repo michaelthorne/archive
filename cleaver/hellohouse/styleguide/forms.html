@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="en" class="sg-html">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Forms – HelloHouse</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/styleguide.css" />
+
+    <!-- Web Fonts -->
+    <script>
+        WebFontConfig = {
+            google: {
+                families: ['Roboto:400,700', 'Source+Sans+Pro:400,700']
+            }
+        };
+    </script>
+
+    <!-- Web Font Loader -->
+    <script>
+        (function(){var e=document.createElement("script");e.src=("https:"==document.location.protocol?"https":"http")+
+        "://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js";e.type="text/javascript";e.async="true";
+        var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})();
+    </script>
+
+    <!-- Picturefill -->
+    <script src="../assets/js/vendor/picturefill.js" async="async"></script>
+
+    <!--[if lt IE 9]>
+    <script src="../assets/js/vendor/polyfills.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!--[if lt IE 9]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/?locale=en">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <header class="sg-header sg-header--primary" role="banner">
+        <div class="sg-wrapper">
+            <a href="index.html" title="HelloHouse" class="logo">
+                <img src="../assets/images/logos/logo-hellohouse-173x72.png" srcset="../assets/images/logos/logo-hellohouse-346x144.png 2x" alt="HelloHouse logo" />
+            </a>
+            <nav class="sg-nav sg-nav--primary" role="navigation">
+                <ol class="sg-list">
+                    <li><a href="elements.html">Elements</a></li>
+                    <li><a href="patterns.html">Patterns</a></li>
+                    <li class="is-active"><a href="forms.html">Forms</a></li>
+                    <li><a href="templates.html">Templates</a></li>
+                </ol>
+            </nav>
+            <button class="sg-btn sg-btn--nav js-sg-toggle-nav"><span class="sg-icon sg-icon--left fa fa-bars" aria-hidden="true"></span>Menu</button>
+        </div>
+    </header>
+
+    <main class="sg-main" role="main">
+        <div class="sg-wrapper">
+            <form class="sg-form sg-form--fixed" action="forms.html" method="post">
+                <label for="sg-jump" class="sg-label">
+                    <select class="sg-input js-sg-jump" id="sg-jump">
+                        <option value="">Jump to…</option>
+                        <option value="sg-form-default">Form – Default</option>
+                        <option value="sg-form-inline">Form – Inline</option>
+                        <option value="sg-form-search">Form – Search</option>
+                        <option value="sg-fieldset-default">Fieldset – Default</option>
+                        <option value="sg-fieldset-bordered">Fieldset – Bordered</option>
+                        <option value="sg-fieldset-horizontal">Fieldset – Horizontal</option>
+                    </select>
+                </label>
+            </form>
+
+            <section id="sg-form-default" class="sg-section">
+                <header class="sg-header sg-header--section">
+                    <h1 class="hN">Form – Default</h1>
+                </header>
+
+                <form id="form-default" action="forms.html" method="post" class="form">
+                    <label for="email" class="label">
+                        Email Address
+                        <input class="input" type="email" id="email" name="email" maxlength="100" />
+                    </label>
+
+                    <div class="toggle-password js-toggle-password">
+                        <label for="password" class="label">
+                            <a class="label__link" href="forms.html#sg-form-default">Forgot password?</a>
+                            Password
+                            <input class="input" type="password" id="password" name="password" maxlength="100" />
+                        </label>
+                        <button class="u-visuallyhidden toggle js-toggle">Show</button>
+                    </div>
+
+                    <label for="remember" class="label label--checkbox">
+                        <input class="input" type="checkbox" id="remember" name="remember" value="1" /> Remember me
+                    </label>
+
+                    <button class="btn" type="submit">Log In</button>
+                </form>
+
+                <div class="sg-example-code js-sg-code">
+                    <button class="sg-btn js-sg-toggle" type="button"><span class="sg-icon sg-icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                    <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup"><form id="form-default-a" action="#" method="post" class="form">
+    <label for="email-a" class="label">
+        Email Address
+        <input class="input" type="email" id="email-a" name="email-a" maxlength="100" />
+    </label>
+
+    <div class="toggle-password js-toggle-password">
+        <label for="password-a" class="label">
+            <a class="label__link" href="#">Forgot password?</a>
+            Password
+            <input class="input" type="password" id="password-a" name="password-a" maxlength="100" />
+        </label>
+        <button class="u-visuallyhidden toggle js-toggle">Show</button>
+    </div>
+
+    <label for="remember-a" class="label">
+        <input class="input" type="checkbox" id="remember-a" name="remember-a" value="1" /> Remember me
+    </label>
+
+    <button class="btn" type="submit">Log In</button>
+</form></code></pre>
+                </div>
+            </section>
+
+            <section id="sg-form-inline" class="sg-section">
+                <header class="sg-header sg-header--section">
+                    <h1 class="hN">Form – Inline</h1>
+                </header>
+
+                <form id="form-inline" action="forms.html" method="post" class="form form--inline">
+                    <label for="email-2" class="label u-visuallyhidden">Email Address</label>
+                    <input class="input" type="email" id="email-2" name="email-2" placeholder="Email Address" maxlength="100" />
+
+                    <label for="password-2" class="label u-visuallyhidden">Password</label>
+                    <input class="input" type="password" id="password-2" name="password-2" placeholder="Password" maxlength="100" />
+
+                    <label for="remember-2" class="label label--checkbox">
+                        <input class="input" type="checkbox" id="remember-2" name="remember-2" value="1" /> Remember me
+                    </label>
+
+                    <button class="btn" type="submit">Log In</button>
+                </form>
+
+                <div class="sg-example-code js-sg-code">
+                    <button class="sg-btn js-sg-toggle" type="button"><span class="sg-icon sg-icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                    <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup"><form id="form-inline-b" action="#" method="post" class="form form--inline">
+    <label for="email-b" class="label u-visuallyhidden">Email Address</label>
+    <input class="input" type="email" id="email-b" name="email-b" placeholder="Email Address" maxlength="100" />
+
+    <label for="password-b" class="label u-visuallyhidden">Password</label>
+    <input class="input" type="password" id="password-b" name="password-b" placeholder="Password" maxlength="100" />
+
+    <label for="remember-b" class="label label--checkbox">
+        <input class="input" type="checkbox" id="remember-b" name="remember-b" value="1" /> Remember me
+    </label>
+
+    <button class="btn" type="submit">Log In</button>
+</form></code></pre>
+                </div>
+            </section>
+
+            <section id="sg-form-search" class="sg-section">
+                <header class="sg-header sg-header--section">
+                    <h1 class="hN">Form – Search</h1>
+                </header>
+
+                <form id="form-search" action="forms.html" method="post" class="form form--search">
+                    <label for="keywords" class="label">
+                        <input class="input" type="text" id="keywords" name="keywords" placeholder="Search by location, development or developer…" maxlength="100" />
+                    </label><!--
+
+                    --><label for="price-from" class="label">
+                        <select class="input" id="price-from" name="price-from">
+                            <option value="">Price from</option>
+                            <option value="100000">R100,000</option>
+                            <option value="200000">R200,000</option>
+                            <option value="300000">R300,000</option>
+                            <option value="400000">R400,000</option>
+                            <option value="500000">R500,000</option>
+                            <option value="600000">R600,000</option>
+                            <option value="700000">R700,000</option>
+                            <option value="800000">R800,000</option>
+                            <option value="900000">R900,000</option>
+                            <option value="1000000">R1,000,000</option>
+                        </select>
+                    </label><!--
+
+                    --><label for="price-to" class="label">
+                        <select class="input" id="price-to" name="price-to">
+                            <option value="">Price to</option>
+                            <option value="100000">R100,000</option>
+                            <option value="200000">R200,000</option>
+                            <option value="300000">R300,000</option>
+                            <option value="400000">R400,000</option>
+                            <option value="500000">R500,000</option>
+                            <option value="600000">R600,000</option>
+                            <option value="700000">R700,000</option>
+                            <option value="800000">R800,000</option>
+                            <option value="900000">R900,000</option>
+                            <option value="1000000">R1,000,000</option>
+                        </select>
+                    </label><!--
+
+                    --><button class="btn btn--icon" type="submit">
+                        <span class="icon icon--only icon--left fa fa-search" aria-hidden="true"></span>
+                        <span class="btn__label">Search</span>
+                    </button>
+                </form>
+
+                <div class="sg-example-code js-sg-code">
+                    <button class="sg-btn js-sg-toggle" type="button"><span class="sg-icon sg-icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                    <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup"><form id="form-search-c" action="#" method="post" class="form form--search">
+    <label for="keywords-c" class="label">
+        <input class="input" type="text" id="keywords-c" name="keywords" placeholder="Search by location, development or developer…" maxlength="100" />
+    </label><!--
+
+    --><label for="price-from-c" class="label u-hide--small">
+        <select class="input" id="price-from-c" name="price-from-c">
+            <option value="">Price from</option>
+            <option value="100000">R100,000</option>
+        </select>
+    </label><!--
+
+    --><label for="price-to-c" class="label u-hide--small">
+        <select class="input" id="price-to-c" name="price-to-c">
+            <option value="">Price to</option>
+            <option value="100000">R100,000</option>
+        </select>
+    </label><!--
+
+    --><button class="btn btn--icon" type="submit">
+        <span class="icon icon--only icon--left fa fa-search u-hide--medium u-hide--large" aria-hidden="true"></span>
+        <span class="u-hide--small">Search</span>
+    </button>
+</form></code></pre>
+                </div>
+            </section>
+
+            <section id="sg-fieldset-default" class="sg-section">
+                <header class="sg-header sg-header--section">
+                    <h1 class="hN">Fieldset – Default</h1>
+                </header>
+
+                <div class="sg-example">
+                    <fieldset class="fieldset">
+                        <legend class="legend">Checkboxes</legend>
+                        <label for="checkbox-7" class="label label--checkbox">
+                            <input id="checkbox-7" type="checkbox" name="checkbox" value="1" /> Choice 1
+                        </label>
+
+                        <label for="checkbox-8" class="label label--disabled label--checkbox">
+                            <input id="checkbox-8" type="checkbox" name="checkbox" value="2" disabled="disabled" /> Choice 2
+                        </label>
+
+                        <label for="checkbox-9" class="label label--checkbox">
+                            <input id="checkbox-9" type="checkbox" name="checkbox" value="3" /> Choice 3
+                        </label>
+                    </fieldset>
+                </div>
+
+                <div class="sg-example-code js-sg-code">
+                    <button class="sg-btn js-sg-toggle" type="button"><span class="sg-icon sg-icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                    <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup"><fieldset class="fieldset">
+    <legend class="legend">Checkboxes</legend>
+    <label for="checkbox-a" class="label label--checkbox">
+        <input id="checkbox-a" type="checkbox" name="checkbox" value="1" /> Choice 1
+    </label>
+</fieldset></code></pre>
+                </div>
+            </section>
+
+            <section id="sg-fieldset-bordered" class="sg-section">
+                <header class="sg-header sg-header--section">
+                    <h1 class="hN">Fieldset – Bordered</h1>
+                </header>
+
+                <div class="sg-example">
+                    <fieldset class="fieldset fieldset--bordered">
+                        <legend class="legend">Radio Buttons</legend>
+                        <label for="radio-7" class="label label--radio">
+                            <input type="radio" id="radio-7" name="radio" value="1" /> Choice 1
+                        </label>
+
+                        <label for="radio-8" class="label label--radio label--disabled">
+                            <input type="radio" id="radio-8" name="radio" value="2" disabled="disabled" /> Choice 2
+                        </label>
+
+                        <label for="radio-9" class="label label--radio">
+                            <input type="radio" id="radio-9" name="radio" value="3" /> Choice 3
+                        </label>
+                    </fieldset>
+                </div>
+
+                <div class="sg-example-code js-sg-code">
+                    <button class="sg-btn js-sg-toggle" type="button"><span class="sg-icon sg-icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                    <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup"><fieldset class="fieldset fieldset--bordered">
+    <legend class="legend">Radio Buttons</legend>
+    <label for="radio-a" class="label label--radio">
+        <input type="radio" id="radio-a" name="radio" value="1" /> Choice 1
+    </label>
+</fieldset></code></pre>
+                </div>
+            </section>
+
+            <section id="sg-fieldset-horizontal" class="sg-section">
+                <header class="sg-header sg-header--section">
+                    <h1 class="hN">Fieldset – Horizontal</h1>
+                </header>
+
+                <div class="sg-example">
+                    <form class="form form--filters" action="forms.html#sg-fieldset-horizontal" method="post">
+                        <fieldset class="fieldset fieldset--horizontal">
+                            <legend class="legend">Price Range</legend>
+
+                            <div class="js-slider" data-range-input-min="range-min" data-range-input-max="range-max" data-range-min="0" data-range-max="10000000" data-start-min="1000000" data-start-max="5000000" data-margin="100000" data-step="100000" data-prefix="R"></div>
+                            <fieldset class="fieldset fieldset--split">
+                                <label class="label" for="range-min">
+                                    <input class="input input--flat" type="text" id="range-min" readonly="readonly" />
+                                </label>
+                                <label class="label" for="range-max">
+                                    <input class="input input--flat" type="text" id="range-max" readonly="readonly" />
+                                </label>
+                            </fieldset>
+                        </fieldset>
+
+                        <fieldset class="fieldset fieldset--horizontal">
+                            <legend class="legend">Property Type</legend>
+
+                            <div class="fieldset__controls">
+                                <label for="checkbox-11" class="label label--checkbox" title="House">
+                                    <input id="checkbox-11" type="checkbox" name="checkbox" value="1" /> House
+                                </label>
+
+                                <label for="checkbox-12" class="label label--checkbox" title="Apartment">
+                                    <input id="checkbox-12" type="checkbox" name="checkbox" value="2" /> Apartment
+                                </label>
+
+                                <label for="checkbox-13" class="label label--checkbox" title="Townhouse">
+                                    <input id="checkbox-13" type="checkbox" name="checkbox" value="3" /> Townhouse
+                                </label>
+
+                                <div class="fieldset__controls fieldset__controls--more is-closed" id="controls-1">
+                                    <label for="checkbox-14" class="label label--checkbox" title="Plot">
+                                        <input id="checkbox-14" type="checkbox" name="checkbox" value="4" /> Plot
+                                    </label>
+                                    <label for="checkbox-24" class="label label--checkbox" title="House">
+                                        <input id="checkbox-24" type="checkbox" name="checkbox" value="1" /> House
+                                    </label>
+
+                                    <label for="checkbox-25" class="label label--checkbox" title="Apartment">
+                                        <input id="checkbox-25" type="checkbox" name="checkbox" value="2" /> Apartment
+                                    </label>
+
+                                    <label for="checkbox-26" class="label label--checkbox" title="Townhouse">
+                                        <input id="checkbox-26" type="checkbox" name="checkbox" value="3" /> Townhouse
+                                    </label>
+
+                                    <label for="checkbox-27" class="label label--checkbox" title="Plot">
+                                        <input id="checkbox-27" type="checkbox" name="checkbox" value="4" /> Plot
+                                    </label>
+                                </div>
+                            </div>
+
+                            <button class="btn btn--transparent js-controls-toggle" data-controls-id="controls-1" data-icon-down="fa-caret-down" data-icon-up="fa-caret-up" type="button">
+                                <span class="btn__label">More</span>
+                                <span class="icon icon--only fa fa-caret-down" aria-hidden="true"></span>
+                            </button>
+                        </fieldset>
+
+                        <fieldset class="fieldset fieldset--horizontal fieldset--select">
+                            <legend class="legend">Plan Info</legend>
+
+                            <div class="fieldset__controls">
+                                <label for="select-5" class="label">
+                                    <select id="select-5" name="select-5" class="input">
+                                        <option value="">Bedrooms</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                    </select>
+                                </label>
+                                <label for="select-6" class="label">
+                                    <select id="select-6" name="select-6" class="input">
+                                        <option value="">Bathrooms</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                    </select>
+                                </label>
+                                <label for="select-7" class="label">
+                                    <select id="select-7" name="select-7" class="input">
+                                        <option value="">Garages</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                    </select>
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="fieldset fieldset--horizontal">
+                            <legend class="legend">Facilities</legend>
+
+                            <div class="fieldset__controls">
+                                <label for="checkbox-15" class="label label--checkbox" title="Gated Security">
+                                    <input id="checkbox-15" type="checkbox" name="checkbox" value="1" /> Gated Security
+                                </label>
+                                <label for="checkbox-16" class="label label--checkbox" title="Perimeter Fence">
+                                    <input id="checkbox-16" type="checkbox" name="checkbox" value="1" /> Perimeter Fence
+                                </label>
+                                <label for="checkbox-17" class="label label--checkbox" title="Boom">
+                                    <input id="checkbox-17" type="checkbox" name="checkbox" value="1" /> Boom
+                                </label>
+                                <label for="checkbox-18" class="label label--checkbox" title="Gated Security">
+                                    <input id="checkbox-18" type="checkbox" name="checkbox" value="1" /> Gated Security
+                                </label>
+                                <label for="checkbox-19" class="label label--checkbox" title="Gated Security">
+                                    <input id="checkbox-19" type="checkbox" name="checkbox" value="1" /> Gated Security
+                                </label>
+                                <label for="checkbox-20" class="label label--checkbox" title="Boom">
+                                    <input id="checkbox-20" type="checkbox" name="checkbox" value="1" /> Boom
+                                </label>
+                                <label for="checkbox-21" class="label label--checkbox" title="Perimeter Fence">
+                                    <input id="checkbox-21" type="checkbox" name="checkbox" value="1" /> Perimeter Fence
+                                </label>
+                                <label for="checkbox-22" class="label label--checkbox" title="Perimeter Fence">
+                                    <input id="checkbox-22" type="checkbox" name="checkbox" value="1" /> Perimeter Fence
+                                </label>
+                                <label for="checkbox-23" class="label label--checkbox" title="Boom">
+                                    <input id="checkbox-23" type="checkbox" name="checkbox" value="1" /> Boom
+                                </label>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+
+                <div class="sg-example-code js-sg-code">
+                    <button class="sg-btn js-sg-toggle" type="button"><span class="sg-icon sg-icon--left fa fa-code" aria-hidden="true"></span>View Code</button>
+                    <pre class="sg-pre code-toolbar line-numbers"><code class="language-markup"><form class="form form--filters" action="#" method="post">
+    <fieldset class="fieldset fieldset--horizontal">
+        <legend class="legend">Price Range</legend>
+
+        <div class="js%2Dslider" data-range-input-min="range-min" data-range-input-max="range-max" data-range-min="0" data-range-max="10000000" data-start-min="1000000" data-start-max="5000000" data-margin="100000" data-step="100000" data-prefix="R"></div>
+        <fieldset class="fieldset fieldset--split">
+            <label class="label" for="range-a">
+                <input class="input input--flat" type="text" id="range-a" readonly="readonly" />
+            </label>
+            <label class="label" for="range-b">
+                <input class="input input--flat" type="text" id="range-b" readonly="readonly" />
+            </label>
+        </fieldset>
+    </fieldset>
+
+    <fieldset class="fieldset fieldset--horizontal">
+
+        <legend class="legend">Property Type</legend>
+        <div class="fieldset__controls">
+            <label for="checkbox-b" class="label label--checkbox" title="House">
+                <input id="checkbox-b" type="checkbox" name="checkbox" value="1" /> House
+            </label>
+        </div>
+    </fieldset>
+
+    <fieldset class="fieldset fieldset--horizontal fieldset--select">
+        <legend class="legend">Plan Info</legend>
+
+        <div class="fieldset__controls">
+            <label for="select-a" class="label">
+                <select id="select-a" name="select-a" class="input">
+                    <option value="">Bedrooms</option>
+                    <option value="1">1</option>
+                </select>
+            </label>
+        </div>
+    </fieldset>
+</form></code></pre>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="sg-footer" role="contentinfo">
+        <div class="sg-wrapper">
+            <ol class="sg-list">
+                <li><b>Version</b>: 1.0.0</li>
+                <li><b>Last Update</b>: 2015-08-28</li>
+                <li><b>Website URL</b>: <a href="http://work.userx.co.za/pe/hellohouse/">work.userx.co.za/pe/hellohouse/</a></li>
+            </ol>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/styleguide/plugins.js"></script>
+    <script src="../assets/js/styleguide/styleguide.js"></script>
+    <script>UTIL.init();</script>
+    <script>STYLEGUIDE_UTIL.init();</script>
+</body>
+</html>

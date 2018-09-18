@@ -1,0 +1,1429 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en-GB" dir="ltr" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en-GB" dir="ltr" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en-GB" dir="ltr" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en-GB" dir="ltr" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+    <title>Spree / Account Restock Requests</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="author" content="" />
+    <meta name="description" content="" />
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:locale" content="en_GB" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <style>
+        @font-face {
+           font-family: 'MyriadPro';
+           src: url("assets/fonts/MyriadPro.eot");
+           src: url("assets/fonts/MyriadPro.eot?#iefix") format("embedded-opentype"),
+                url("assets/fonts/MyriadPro.woff") format("woff"),
+                url("assets/fonts/MyriadPro.ttf") format("truetype"),
+                url("assets/fonts/MyriadPro.svg#MyriadPro") format("svg");
+           font-weight: 400;
+           font-style: normal;
+        }
+    </style>
+    <link rel="stylesheet" href="assets/css/normalize.css" />
+    <link rel="stylesheet" href="assets/css/jquery-ui.css" />
+    <link rel="stylesheet" href="assets/css/mediaelementplayer.css" />
+    <link rel="stylesheet" href="assets/css/layout.css" />
+    <link rel="stylesheet" href="assets/css/typography.css" />
+    <link rel="stylesheet" href="assets/css/forms.css" />
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5.js"></script>
+    <script src="assets/js/selectivizr.js"></script>
+    <![endif]-->
+    <script src="assets/js/detect.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="assets/js/jquery.js"><\/script>');</script>
+    <script>
+        var $j = jQuery.noConflict();
+    </script>
+</head>
+<body>
+    <!--[if lt IE 8]>
+    <div class="chromeframe">
+        <p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/?locale=en" title="Browse Happy &ndash; Upgrade your browser today!" target="_blank">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true" title="Google Chrome Frame &ndash; Make your browser more powerful." target="blank">activate Google Chrome Frame</a> to improve your experience.</p>
+    </div>
+    <![endif]-->
+    <div id="top" class="utilities">
+        <div class="wrapper">
+            <ol class="utilities utilities-sign-up">
+                <li><a href="#" class="newsletter" data-action="newsletter-sign-up">Sign up to our newsletter</a></li>
+            </ol>
+            <ol class="utilities utilities-user">
+                <li class="account">
+                    <!--<a href="account.html">Hi Jen</a>-->
+                    <a href="member-login-register.html">Login | Register</a>
+                </li>
+                <li>
+                    <ul class="languages drop-down">
+                        <li>
+                            <a href="#" data-language-code="en-za" data-language-active="true">English</a>
+                            <ul>
+                                <li><a href="#" data-language-code="af-za">Afrikaans</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="favourites">
+                    <a href="shop-favourites.html" data-util="favourites">Favourites: <span>1</span></a>
+                </li>
+                <li class="cart">
+                    <a href="shop-cart.html" data-util="cart">Cart: <span>1</span></a>
+                </li>
+                <li class="checkout">
+                    <a id="checkout-button" href="checkout-cart.html" class="hidden">Checkout</a>
+                </li>
+            </ol>
+        </div>
+    </div>
+    <header id="primary" role="banner">
+        <div class="wrapper">
+            <a id="logo" href="home.html">
+                <img src="assets/images/logos/logo-spree.png" width="145" height="50" alt="spree" />
+            </a>
+            <ul class="info">
+                <li>
+                    <img src="assets/images/icons/icon-info-free-delivery.png" width="32" height="25" alt="" />
+                    <p>
+                        <b>Free Delivery</b> Within South Africa
+                    </p>
+                </li>
+                <li>
+                    <img src="assets/images/icons/icon-info-free-returns.png" width="23" height="25" alt="" />
+                    <p>
+                        <b>Free Returns</b> Within 30 Days
+                    </p>
+                </li>
+                <li>
+                    <img src="assets/images/icons/icon-info-help-and-enquiries.png" width="18" height="25" alt="" />
+                    <p>
+                        <b>0861 999 501</b> <a href="mailto:support@spree.co.za">support@spree.co.za</a>
+                    </p>
+                </li>
+            </ul>
+            <form id="form-search" name="form-search" method="post" action="home.html" class="form-search">
+                <label for="search">
+                    <input type="text" id="search" name="search" value="Search spree&hellip;" placeholder="Search spree&hellip;" maxlength="50" tabindex="1" data-action="autocomplete" />
+                </label>
+                <input type="submit" id="submit-search" name="submit-search" value="" tabindex="2" />
+            </form>
+        </div>
+    </header>
+    <nav class="primary">
+        <div class="wrapper">
+            <ul class="drop-down" role="navigation">
+                <li>
+                    <a href="home.html">Home</a>
+                </li>
+                <li>
+                    <a href="#">What&rsquo;s New</a>
+                </li>
+                <li>
+                    <a href="products.html">Clothes</a>
+                    <ul>
+                        <li>
+                            <a href="product-category.html">Dresses</a>
+                        </li>
+                        <li>
+                            <a href="product-category.html">Tops</a>
+                        </li>
+                        <li>
+                            <a href="product-category.html">Bottoms</a>
+                        </li>
+                        <li>
+                            <a href="product-category.html">Jeans</a>
+                        </li>
+                        <li>
+                            <a href="product-category.html">Jackets &amp; Knitwear</a>
+                        </li>
+                        <li>
+                            <a href="product-category.html">Sleepwear</a>
+                        </li>
+                        <li>
+                            <a href="product-category.html">Swimwear</a>
+                        </li>
+                        <li>
+                            <a href="product-category.html">Activewear</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Shoes</a>
+                </li>
+                <li>
+                    <a href="#">Accessories</a>
+                </li>
+                <li>
+                    <a href="lookbook.html">Lookbook</a>
+                </li>
+                <li>
+                    <a href="#">Specials</a>
+                </li>
+            </ul>
+        </div>
+        <div class="wrapper-editors-favourites">
+            <ol>
+                <li class="editors-favourites">
+                    <span>Editor&rsquo;s</span> Favourites
+                </li>
+                <li><a href="#"><img src="assets/images/logos/magazine/magazine-drum-grey.png" width="83" height="24" alt="Drum" /></a></li>
+                <li><a href="#"><img src="assets/images/logos/magazine/magazine-fairlady-grey.png" width="95" height="24" alt="Fairlady" /></a></li>
+                <li><a href="#"><img src="assets/images/logos/magazine/magazine-grazia-grey.png" width="75" height="24" alt="Grazia" /></a></li>
+                <li><a href="#"><img src="assets/images/logos/magazine/magazine-huisgenoot-grey.png" width="41" height="24" alt="Huisgenoot" /></a></li>
+                <li><a href="#"><img src="assets/images/logos/magazine/magazine-sarie-grey.png" width="85" height="24" alt="Sarie" /></a></li>
+                <li><a href="#"><img src="assets/images/logos/magazine/magazine-truelove-grey.png" width="98" height="24" alt="True Love" /></a></li>
+                <li><a href="#"><img src="assets/images/logos/magazine/magazine-you-grey.png" width="59" height="24" alt="YOU" /></a></li>
+            </ol>
+        </div>
+    </nav>
+    <section role="main" class="account">
+        <div class="wrapper-inner">
+            <div class="wrapper navigation">
+                <ul class="breadcrumbs">
+                    <li>
+                        <a href="home.html">Home</a> /
+                    </li>
+                    <li class="current">Account Information</li>
+                </ul>
+            </div>
+        </div>
+        <div class="wrapper tabs">
+            <div class="wrapper-tabs">
+                <div data-component="tabs">
+                    <ul>
+                        <li><a href="#tab-account-settings">Account Settings</a></li>
+                        <li><a href="#tab-manage-addresses">Manage Addresses</a></li>
+                        <li><a href="#tab-order-history">Order History</a></li>
+                        <li><a href="#tab-credit-and-points">Credit &amp; Points</a></li>
+                        <li data-selected-tab="true"><a href="#tab-restock-requests">Restock Requests</a></li>
+                        <li><a href="#tab-favourites">Favourites</a></li>
+                        <li><a href="#tab-newsletter-subscription">Newsletter Subscription</a></li>
+                    </ul>
+                    <div id="tab-account-settings">
+                        <div class="tabs-inner">
+                            <header>
+                                <h1>Account Settings</h1>
+                            </header>
+                            <form id="form-account-settings" name="form-account-settings" method="post" action="account.html" class="account">
+                                <label for="first-name">
+                                    First Name:
+                                    <input type="text" id="first-name" name="first-name" value="" maxlength="50" />
+                                </label>
+                                <label for="surname">
+                                    Surname:
+                                    <input type="text" id="surname" name="surname" value="" maxlength="50" />
+                                </label>
+                                <label for="email">
+                                    Email:
+                                    <input type="text" id="email" name="email" value="" maxlength="100" />
+                                </label>
+                                <label for="contact-number">
+                                    Contact Number:
+                                    <input type="text" id="contact-number" name="contact-number" value="" maxlength="20" />
+                                </label>
+                                <input type="submit" id="submit-account-settings" name="submit-account-settings" value="Update" />
+                            </form>
+                            <header>
+                                <h1>Change Password</h1>
+                            </header>
+                            <form id="form-change-password" name="form-account-settings" method="post" action="account.html" class="password">
+                                <label for="password-new">
+                                    New Password:
+                                    <input type="text" id="password-new" name="password-new" value="" maxlength="20" />
+                                </label>
+                                <label for="password-confirm">
+                                    Confirm Password:
+                                    <input type="text" id="password-confirm" name="password-confirm" value="" maxlength="20" />
+                                </label>
+                                <input type="submit" id="submit-change-password" name="submit-change-password" value="Update" />
+                            </form>
+                        </div>
+                    </div>
+                    <div id="tab-manage-addresses">
+                        <div class="tabs-inner">
+                            <div class="feedback feedback-error">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                            <header>
+                                <h1>Manage Addresses</h1>
+                            </header>
+                            <form id="form-manage-address-1" name="form-manage-address-1" method="post" action="account-manage-addresses.html" class="account address">
+                                <label for="first-name-1">
+                                    First Name:
+                                    <input type="text" id="first-name-1" name="first-name-1" value="" maxlength="50" />
+                                    <span class="error">
+                                        Invalid First Name
+                                    </span>
+                                </label>
+                                <label for="surname-1">
+                                    Surname:
+                                    <input type="text" id="surname-1" name="surname-1" value="" maxlength="50" />
+                                </label>
+                                <label for="address-line-1-1">
+                                    Address Line 1:
+                                    <input type="text" id="address-line-1-1" name="address-line-1-1" value="" maxlength="100" />
+                                </label>
+                                <label for="address-line-2-1">
+                                    Address Line 2:
+                                    <input type="text" id="address-line-2-1" name="address-line-2-1" value="" maxlength="100" />
+                                </label>
+                                <label for="city-1">
+                                    City:
+                                    <input type="text" id="city-1" name="city-1" value="" maxlength="100" />
+                                </label>
+                                <label for="postal-code-1">
+                                    Postal Code:
+                                    <input type="text" id="postal-code-1" name="postal-code-1" value="" maxlength="10" />
+                                </label>
+                                <label for="contact-number-1">
+                                    Contact Number:
+                                    <input type="text" id="contact-number-1" name="contact-number-1" value="" maxlength="20" />
+                                </label>
+                                <input type="submit" id="submit-address-1" name="submit-address-1" value="Update" />
+                                <a href="#" class="button button-large button-silver" role="button">Delete</a>
+                            </form>
+                            <form id="form-manage-address-2" name="form-manage-address-2" method="post" action="account-manage-addresses.html" class="account address">
+                                <label for="first-name-2">
+                                    First Name:
+                                    <input type="text" id="first-name-2" name="first-name-2" value="" maxlength="50" />
+                                </label>
+                                <label for="surname-2">
+                                    Surname:
+                                    <input type="text" id="surname-2" name="surname-2" value="" maxlength="50" />
+                                </label>
+                                <label for="address-line-1-2">
+                                    Address Line 1:
+                                    <input type="text" id="address-line-1-2" name="address-line-1-2" value="" maxlength="100" />
+                                </label>
+                                <label for="address-line-2-2">
+                                    Address Line 2:
+                                    <input type="text" id="address-line-2-2" name="address-line-2-2" value="" maxlength="100" />
+                                </label>
+                                <label for="city-2">
+                                    City:
+                                    <input type="text" id="city-2" name="city-2" value="" maxlength="100" />
+                                </label>
+                                <label for="postal-code-2">
+                                    Postal Code:
+                                    <input type="text" id="postal-code-2" name="postal-code-2" value="" maxlength="10" />
+                                </label>
+                                <label for="contact-number-2">
+                                    Contact Number:
+                                    <input type="text" id="contact-number-2" name="contact-number-2" value="" maxlength="20" />
+                                </label>
+                                <input type="submit" id="submit-address-2" name="submit-address-2" value="Update" />
+                                <a href="#" class="button button-large button-silver" role="button">Delete</a>
+                            </form>
+                        </div>
+                        <div class="tabs-inner">
+                            <div class="feedback feedback-success">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                            <header>
+                                <h1>Add a new address</h1>
+                            </header>
+                            <form id="form-manage-address-0" name="form-manage-address-0" method="post" action="account-manage-addresses.html" class="account address">
+                                <label for="first-name-0">
+                                    First Name:
+                                    <input type="text" id="first-name-0" name="first-name-0" value="" maxlength="50" />
+                                </label>
+                                <label for="surname-0">
+                                    Surname:
+                                    <input type="text" id="surname-0" name="surname-0" value="" maxlength="50" />
+                                </label>
+                                <label for="address-line-1-0">
+                                    Address Line 1:
+                                    <input type="text" id="address-line-1-0" name="address-line-1-0" value="" maxlength="100" />
+                                </label>
+                                <label for="address-line-2-0">
+                                    Address Line 2:
+                                    <input type="text" id="address-line-2-0" name="address-line-2-0" value="" maxlength="100" />
+                                </label>
+                                <label for="city-0">
+                                    City:
+                                    <input type="text" id="city-0" name="city-0" value="" maxlength="100" />
+                                </label>
+                                <label for="postal-code-0">
+                                    Postal Code:
+                                    <input type="text" id="postal-code-0" name="postal-code-0" value="" maxlength="10" />
+                                </label>
+                                <label for="contact-number-0">
+                                    Contact Number:
+                                    <input type="text" id="contact-number-0" name="contact-number-0" value="" maxlength="20" />
+                                </label>
+                                <input type="submit" id="submit-address-0" name="submit-address-0" value="Submit" />
+                            </form>
+                        </div>
+                    </div>
+                    <div id="tab-order-history">
+                        <div class="tabs-inner">
+                            <header>
+                                <h1>My Order History</h1>
+                            </header>
+                            <table class="order-history">
+                                <thead>
+                                <tr>
+                                    <th class="order-number">Order #</th>
+                                    <th class="order-date">Date</th>
+                                    <th class="order-address">Ship To</th>
+                                    <th class="order-total">Total</th>
+                                    <th class="order-status">Status</th>
+                                    <th class="order-action">&nbsp;</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class="order-number">300000396</td>
+                                    <td class="order-date">2 Feb 2013</td>
+                                    <td class="order-address">208 Trinity Gardens, Upper Maynard Street, Vredehoek</td>
+                                    <td class="order-total">R94.00</td>
+                                    <td class="order-status">In Transit</td>
+                                    <td class="order-action">
+                                        <div class="action">
+                                            <a href="#" data-action="view-order" data-order-id="1">View Order</a>
+                                            <div class="highlight"><img src="assets/images/icons/icon-tab-active.png" width="24" height="12" alt="" /></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr data-order-id="1" class="order">
+                                    <td colspan="6">
+                                        <div class="order-product">
+                                            <div class="photo">
+                                                <img src="assets/images/products/product-order-01.jpg" width="95" height="127" alt="" />
+                                            </div>
+                                            <ul class="order-product-information">
+                                                <li class="description">
+                                                    <span>Jenni Button</span>
+                                                    Pleated Skirt
+                                                </li>
+                                                <li><span>Qty</span>: 3</li>
+                                                <li><span>Size</span>: 22</li>
+                                                <li class="cost">
+                                                    <span>Cost:</span> R180
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="order-product">
+                                            <div class="photo">
+                                                <img src="assets/images/products/product-order-01.jpg" width="95" height="127" alt="" />
+                                            </div>
+                                            <ul class="order-product-information">
+                                                <li class="description">
+                                                    <span>Jenni Button</span>
+                                                    Pleated Skirt
+                                                </li>
+                                                <li><span>Qty</span>: 3</li>
+                                                <li><span>Size</span>: 22</li>
+                                                <li class="cost">
+                                                    <span>Cost:</span> R180
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="order-product">
+                                            <div class="photo">
+                                                <img src="assets/images/products/product-order-01.jpg" width="95" height="127" alt="" />
+                                            </div>
+                                            <ul class="order-product-information">
+                                                <li class="description">
+                                                    <span>Jenni Button</span>
+                                                    Pleated Skirt
+                                                </li>
+                                                <li><span>Qty</span>: 3</li>
+                                                <li><span>Size</span>: 22</li>
+                                                <li class="cost">
+                                                    <span>Cost:</span> R180
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="order-product">
+                                            <div class="photo">
+                                                <img src="assets/images/products/product-order-01.jpg" width="95" height="127" alt="" />
+                                            </div>
+                                            <ul class="order-product-information">
+                                                <li class="description">
+                                                    <span>Jenni Button</span>
+                                                    Pleated Skirt
+                                                </li>
+                                                <li><span>Qty</span>: 3</li>
+                                                <li><span>Size</span>: 22</li>
+                                                <li class="cost">
+                                                    <span>Cost:</span> R180
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="order-number">300000396</td>
+                                    <td class="order-date">2 Feb 2013</td>
+                                    <td class="order-address">208 Trinity Gardens, Upper Maynard Street, Vredehoek</td>
+                                    <td class="order-total">R94.00</td>
+                                    <td class="order-status">In Transit</td>
+                                    <td class="order-action">
+                                        <div class="action">
+                                            <a href="#" data-action="view-order" data-order-id="2">View Order</a>
+                                            <div class="highlight"><img src="assets/images/icons/icon-tab-active.png" width="24" height="12" alt="" /></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr data-order-id="2" class="order">
+                                    <td colspan="6">
+                                        <div class="order-products">
+                                            <div class="order-product">
+                                                <div class="photo">
+                                                    <img src="assets/images/products/product-order-01.jpg" width="95" height="127" alt="" />
+                                                </div>
+                                                <ul class="order-product-information">
+                                                    <li class="description">
+                                                        <span>Jenni Button</span>
+                                                        Pleated Skirt
+                                                    </li>
+                                                    <li><span>Qty</span>: 3</li>
+                                                    <li><span>Size</span>: 22</li>
+                                                    <li class="cost">
+                                                        <span>Cost:</span> R180
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="order-product">
+                                                <div class="photo">
+                                                    <img src="assets/images/products/product-order-01.jpg" width="95" height="127" alt="" />
+                                                </div>
+                                                <ul class="order-product-information">
+                                                    <li class="description">
+                                                        <span>Jenni Button</span>
+                                                        Pleated Skirt
+                                                    </li>
+                                                    <li><span>Qty</span>: 3</li>
+                                                    <li><span>Size</span>: 22</li>
+                                                    <li class="cost">
+                                                        <span>Cost:</span> R180
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="order-number">300000396</td>
+                                    <td class="order-date">2 Feb 2013</td>
+                                    <td class="order-address">208 Trinity Gardens, Upper Maynard Street, Vredehoek</td>
+                                    <td class="order-total">R94.00</td>
+                                    <td class="order-status">In Transit</td>
+                                    <td class="order-action">
+                                        <div class="action">
+                                            <a href="#" data-action="view-order" data-order-id="3">View Order</a>
+                                            <div class="highlight"><img src="assets/images/icons/icon-tab-active.png" width="24" height="12" alt="" /></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr data-order-id="3" class="order">
+                                    <td colspan="6">
+                                        <div class="order-products">
+                                            <div class="order-product">
+                                                <div class="photo">
+                                                    <img src="assets/images/products/product-order-01.jpg" width="95" height="127" alt="" />
+                                                </div>
+                                                <ul class="order-product-information">
+                                                    <li class="description">
+                                                        <span>Jenni Button</span>
+                                                        Pleated Skirt
+                                                    </li>
+                                                    <li><span>Qty</span>: 3</li>
+                                                    <li><span>Size</span>: 22</li>
+                                                    <li class="cost">
+                                                        <span>Cost:</span> R180
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="order-number">300000396</td>
+                                    <td class="order-date">2 Feb 2013</td>
+                                    <td class="order-address">208 Trinity Gardens, Upper Maynard Street, Vredehoek</td>
+                                    <td class="order-total">R94.00</td>
+                                    <td class="order-status">In Transit</td>
+                                    <td class="order-action">
+                                        <div class="action">
+                                            <a href="#" data-action="view-order" data-order-id="4">View Order</a>
+                                            <div class="highlight"><img src="assets/images/icons/icon-tab-active.png" width="24" height="12" alt="" /></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr data-order-id="4" class="order">
+                                    <td colspan="6">
+                                        <div class="order-products">
+                                            <div class="order-product">
+                                                <div class="photo">
+                                                    <img src="assets/images/products/product-order-01.jpg" width="95" height="127" alt="" />
+                                                </div>
+                                                <ul class="order-product-information">
+                                                    <li class="description">
+                                                        <span>Jenni Button</span>
+                                                        Pleated Skirt
+                                                    </li>
+                                                    <li><span>Qty</span>: 3</li>
+                                                    <li><span>Size</span>: 22</li>
+                                                    <li class="cost">
+                                                        <span>Cost:</span> R180
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="order-product">
+                                                <div class="photo">
+                                                    <img src="assets/images/products/product-order-01.jpg" width="95" height="127" alt="" />
+                                                </div>
+                                                <ul class="order-product-information">
+                                                    <li class="description">
+                                                        <span>Jenni Button</span>
+                                                        Pleated Skirt
+                                                    </li>
+                                                    <li><span>Qty</span>: 3</li>
+                                                    <li><span>Size</span>: 22</li>
+                                                    <li class="cost">
+                                                        <span>Cost:</span> R180
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="order-product">
+                                                <div class="photo">
+                                                    <img src="assets/images/products/product-order-01.jpg" width="95" height="127" alt="" />
+                                                </div>
+                                                <ul class="order-product-information">
+                                                    <li class="description">
+                                                        <span>Jenni Button</span>
+                                                        Pleated Skirt
+                                                    </li>
+                                                    <li><span>Qty</span>: 3</li>
+                                                    <li><span>Size</span>: 22</li>
+                                                    <li class="cost">
+                                                        <span>Cost:</span> R180
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="order-product">
+                                                <div class="photo">
+                                                    <img src="assets/images/products/product-order-01.jpg" width="95" height="127" alt="" />
+                                                </div>
+                                                <ul class="order-product-information">
+                                                    <li class="description">
+                                                        <span>Jenni Button</span>
+                                                        Pleated Skirt
+                                                    </li>
+                                                    <li><span>Qty</span>: 3</li>
+                                                    <li><span>Size</span>: 22</li>
+                                                    <li class="cost">
+                                                        <span>Cost:</span> R180
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="order-product">
+                                                <div class="photo">
+                                                    <img src="assets/images/products/product-order-01.jpg" width="95" height="127" alt="" />
+                                                </div>
+                                                <ul class="order-product-information">
+                                                    <li class="description">
+                                                        <span>Jenni Button</span>
+                                                        Pleated Skirt
+                                                    </li>
+                                                    <li><span>Qty</span>: 3</li>
+                                                    <li><span>Size</span>: 22</li>
+                                                    <li class="cost">
+                                                        <span>Cost:</span> R180
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="order-number">300000396</td>
+                                    <td class="order-date">2 Feb 2013</td>
+                                    <td class="order-address">208 Trinity Gardens, Upper Maynard Street, Vredehoek</td>
+                                    <td class="order-total">R94.00</td>
+                                    <td class="order-status">In Transit</td>
+                                    <td class="order-action">
+                                        <div class="action">
+                                            <a href="#" data-action="view-order" data-order-id="5">View Order</a>
+                                            <div class="highlight"><img src="assets/images/icons/icon-tab-active.png" width="24" height="12" alt="" /></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr data-order-id="5" class="order">
+                                    <td colspan="6">
+                                        <div class="order-products">
+                                            <div class="order-product">
+                                                <div class="photo">
+                                                    <img src="assets/images/products/product-order-01.jpg" width="95" height="127" alt="" />
+                                                </div>
+                                                <ul class="order-product-information">
+                                                    <li class="description">
+                                                        <span>Jenni Button</span>
+                                                        Pleated Skirt
+                                                    </li>
+                                                    <li><span>Qty</span>: 3</li>
+                                                    <li><span>Size</span>: 22</li>
+                                                    <li class="cost">
+                                                        <span>Cost:</span> R180
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="order-product">
+                                                <div class="photo">
+                                                    <img src="assets/images/products/product-order-01.jpg" width="95" height="127" alt="" />
+                                                </div>
+                                                <ul class="order-product-information">
+                                                    <li class="description">
+                                                        <span>Jenni Button</span>
+                                                        Pleated Skirt
+                                                    </li>
+                                                    <li><span>Qty</span>: 3</li>
+                                                    <li><span>Size</span>: 22</li>
+                                                    <li class="cost">
+                                                        <span>Cost:</span> R180
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="order-product">
+                                                <div class="photo">
+                                                    <img src="assets/images/products/product-order-01.jpg" width="95" height="127" alt="" />
+                                                </div>
+                                                <ul class="order-product-information">
+                                                    <li class="description">
+                                                        <span>Jenni Button</span>
+                                                        Pleated Skirt
+                                                    </li>
+                                                    <li><span>Qty</span>: 3</li>
+                                                    <li><span>Size</span>: 22</li>
+                                                    <li class="cost">
+                                                        <span>Cost:</span> R180
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="order-product">
+                                                <div class="photo">
+                                                    <img src="assets/images/products/product-order-01.jpg" width="95" height="127" alt="" />
+                                                </div>
+                                                <ul class="order-product-information">
+                                                    <li class="description">
+                                                        <span>Jenni Button</span>
+                                                        Pleated Skirt
+                                                    </li>
+                                                    <li><span>Qty</span>: 3</li>
+                                                    <li><span>Size</span>: 22</li>
+                                                    <li class="cost">
+                                                        <span>Cost:</span> R180
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="order-product">
+                                                <div class="photo">
+                                                    <img src="assets/images/products/product-order-01.jpg" width="95" height="127" alt="" />
+                                                </div>
+                                                <ul class="order-product-information">
+                                                    <li class="description">
+                                                        <span>Jenni Button</span>
+                                                        Pleated Skirt
+                                                    </li>
+                                                    <li><span>Qty</span>: 3</li>
+                                                    <li><span>Size</span>: 22</li>
+                                                    <li class="cost">
+                                                        <span>Cost:</span> R180
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="order-product">
+                                                <div class="photo">
+                                                    <img src="assets/images/products/product-order-01.jpg" width="95" height="127" alt="" />
+                                                </div>
+                                                <ul class="order-product-information">
+                                                    <li class="description">
+                                                        <span>Jenni Button</span>
+                                                        Pleated Skirt
+                                                    </li>
+                                                    <li><span>Qty</span>: 3</li>
+                                                    <li><span>Size</span>: 22</li>
+                                                    <li class="cost">
+                                                        <span>Cost:</span> R180
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="order-number">300000396</td>
+                                    <td class="order-date">2 Feb 2013</td>
+                                    <td class="order-address">208 Trinity Gardens, Upper Maynard Street, Vredehoek</td>
+                                    <td class="order-total">R94.00</td>
+                                    <td class="order-status">In Transit</td>
+                                    <td class="order-action">
+                                        <div class="action">
+                                            <a href="#" data-action="view-order" data-order-id="6">View Order</a>
+                                            <div class="highlight"><img src="assets/images/icons/icon-tab-active.png" width="24" height="12" alt="" /></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr data-order-id="6" class="order">
+                                    <td colspan="6">
+                                        <div class="order-products">
+                                            <div class="order-product">
+                                                <div class="photo">
+                                                    <img src="assets/images/products/product-order-01.jpg" width="95" height="127" alt="" />
+                                                </div>
+                                                <ul class="order-product-information">
+                                                    <li class="description">
+                                                        <span>Jenni Button</span>
+                                                        Pleated Skirt
+                                                    </li>
+                                                    <li><span>Qty</span>: 3</li>
+                                                    <li><span>Size</span>: 22</li>
+                                                    <li class="cost">
+                                                        <span>Cost:</span> R180
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="order-product">
+                                                <div class="photo">
+                                                    <img src="assets/images/products/product-order-01.jpg" width="95" height="127" alt="" />
+                                                </div>
+                                                <ul class="order-product-information">
+                                                    <li class="description">
+                                                        <span>Jenni Button</span>
+                                                        Pleated Skirt
+                                                    </li>
+                                                    <li><span>Qty</span>: 3</li>
+                                                    <li><span>Size</span>: 22</li>
+                                                    <li class="cost">
+                                                        <span>Cost:</span> R180
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="order-product">
+                                                <div class="photo">
+                                                    <img src="assets/images/products/product-order-01.jpg" width="95" height="127" alt="" />
+                                                </div>
+                                                <ul class="order-product-information">
+                                                    <li class="description">
+                                                        <span>Jenni Button</span>
+                                                        Pleated Skirt
+                                                    </li>
+                                                    <li><span>Qty</span>: 3</li>
+                                                    <li><span>Size</span>: 22</li>
+                                                    <li class="cost">
+                                                        <span>Cost:</span> R180
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="order-product">
+                                                <div class="photo">
+                                                    <img src="assets/images/products/product-order-01.jpg" width="95" height="127" alt="" />
+                                                </div>
+                                                <ul class="order-product-information">
+                                                    <li class="description">
+                                                        <span>Jenni Button</span>
+                                                        Pleated Skirt
+                                                    </li>
+                                                    <li><span>Qty</span>: 3</li>
+                                                    <li><span>Size</span>: 22</li>
+                                                    <li class="cost">
+                                                        <span>Cost:</span> R180
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="order-number">300000396</td>
+                                    <td class="order-date">2 Feb 2013</td>
+                                    <td class="order-address">208 Trinity Gardens, Upper Maynard Street, Vredehoek</td>
+                                    <td class="order-total">R94.00</td>
+                                    <td class="order-status">In Transit</td>
+                                    <td class="order-action">
+                                        <div class="action">
+                                            <a href="#" data-action="view-order" data-order-id="7">View Order</a>
+                                            <div class="highlight"><img src="assets/images/icons/icon-tab-active.png" width="24" height="12" alt="" /></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr data-order-id="7" class="order">
+                                    <td colspan="6">
+                                        <div class="order-products">
+                                            <div class="order-product">
+                                                <div class="photo">
+                                                    <img src="assets/images/products/product-order-01.jpg" width="95" height="127" alt="" />
+                                                </div>
+                                                <ul class="order-product-information">
+                                                    <li class="description">
+                                                        <span>Jenni Button</span>
+                                                        Pleated Skirt
+                                                    </li>
+                                                    <li><span>Qty</span>: 3</li>
+                                                    <li><span>Size</span>: 22</li>
+                                                    <li class="cost">
+                                                        <span>Cost:</span> R180
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="order-number">300000396</td>
+                                    <td class="order-date">2 Feb 2013</td>
+                                    <td class="order-address">208 Trinity Gardens, Upper Maynard Street, Vredehoek</td>
+                                    <td class="order-total">R94.00</td>
+                                    <td class="order-status">In Transit</td>
+                                    <td class="order-action">
+                                        <div class="action">
+                                            <a href="#" data-action="view-order" data-order-id="8">View Order</a>
+                                            <div class="highlight"><img src="assets/images/icons/icon-tab-active.png" width="24" height="12" alt="" /></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr data-order-id="8" class="order">
+                                    <td colspan="6">
+                                        <div class="order-products">
+                                            <div class="order-product">
+                                                <div class="photo">
+                                                    <img src="assets/images/products/product-order-01.jpg" width="95" height="127" alt="" />
+                                                </div>
+                                                <ul class="order-product-information">
+                                                    <li class="description">
+                                                        <span>Jenni Button</span>
+                                                        Pleated Skirt
+                                                    </li>
+                                                    <li><span>Qty</span>: 3</li>
+                                                    <li><span>Size</span>: 22</li>
+                                                    <li class="cost">
+                                                        <span>Cost:</span> R180
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="order-product">
+                                                <div class="photo">
+                                                    <img src="assets/images/products/product-order-01.jpg" width="95" height="127" alt="" />
+                                                </div>
+                                                <ul class="order-product-information">
+                                                    <li class="description">
+                                                        <span>Jenni Button</span>
+                                                        Pleated Skirt
+                                                    </li>
+                                                    <li><span>Qty</span>: 3</li>
+                                                    <li><span>Size</span>: 22</li>
+                                                    <li class="cost">
+                                                        <span>Cost:</span> R180
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="order-product">
+                                                <div class="photo">
+                                                    <img src="assets/images/products/product-order-01.jpg" width="95" height="127" alt="" />
+                                                </div>
+                                                <ul class="order-product-information">
+                                                    <li class="description">
+                                                        <span>Jenni Button</span>
+                                                        Pleated Skirt
+                                                    </li>
+                                                    <li><span>Qty</span>: 3</li>
+                                                    <li><span>Size</span>: 22</li>
+                                                    <li class="cost">
+                                                        <span>Cost:</span> R180
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div id="tab-credit-and-points">
+                        <div class="tabs-inner">
+                            <header>
+                                <h1>My Credit and Points</h1>
+                            </header>
+                            <ul class="account-credit">
+                                <li>Available Credit: <strong>R1000</strong></li>
+                                <li>Successful Referrals: <strong>12</strong></li>
+                            </ul>
+                            <h2>There are 3 easy ways to earn credit:</h2>
+                            <ol class="credits">
+                                <li>
+                                    <img src="assets/images/icons/icon-credit-share.png" width="95" height="90" alt="" />
+                                    <div class="credit">
+                                        <header>
+                                            <h1>Share your Purchase</h1>
+                                        </header>
+                                        <p>Share your purchase on FB, Twitter, Pinterest or Email. You will get R50 when your friends use your post to join and make a purchase over R200.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <img src="assets/images/icons/icon-credit-express.png" width="95" height="90" alt="" />
+                                    <div class="credit">
+                                        <header>
+                                            <h1>Express your Style</h1>
+                                        </header>
+                                        <p>Share you favorite Spree items using our Facebook, Twitter and Pinterest links. You will get R50 when your friends use your post  to make a purchase.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <img src="assets/images/icons/icon-credit-signup.png" width="95" height="90" alt="" />
+                                    <div class="credit">
+                                        <header>
+                                            <h1>Signup for our Newsletter</h1>
+                                        </header>
+                                        <p>Sign up for our newsletter and you’ll receive R20 credit on your first purchase.</p>
+                                    </div>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div id="tab-restock-requests">
+                        <div class="tabs-inner">
+                            <header>
+                                <h1>Restock Requests</h1>
+                            </header>
+                            <table class="cart">
+                                <thead>
+                                <tr>
+                                    <th>&nbsp;</th>
+                                    <th>Product</th>
+                                    <th>Requested On</th>
+                                    <th class="action">&nbsp;</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class="image">
+                                        <a href="product-detail.html"><img src="assets/images/products/product-cart-01.jpg" width="88" height="118" alt="Product 01" /></a>
+                                    </td>
+                                    <td class="description">
+                                        <table>
+                                            <tr>
+                                                <td><strong>Lorem ipsum</strong> dolor sit amet</td>
+                                            </tr>
+                                            <tr>
+                                                <td>&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Colour:</b> Lorem</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Size:</b> Ipsum</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Price:</b> R320</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td class="date">2 Feb 2013</td>
+                                    <td class="action"><a href="#" class="remove" title="Remove"><img src="assets/images/icons/icon-cart-remove.png" width="27" height="27" alt="Remove" /></a></td>
+                                </tr>
+                                <tr>
+                                    <td class="image">
+                                        <a href="product-detail.html"><img src="assets/images/products/product-cart-02.jpg" width="88" height="118" alt="Product 02" /></a>
+                                    </td>
+                                    <td class="description">
+                                        <table>
+                                            <tr>
+                                                <td><strong>Lorem ipsum</strong> dolor sit amet</td>
+                                            </tr>
+                                            <tr>
+                                                <td>&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Colour:</b> Lorem</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Size:</b> Ipsum</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Price:</b> R320</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td class="date">2 Feb 2013</td>
+                                    <td class="action"><a href="#" class="remove" title="Remove"><img src="assets/images/icons/icon-cart-remove.png" width="27" height="27" alt="Remove" /></a></td>
+                                </tr>
+                                <tr>
+                                    <td class="image">
+                                        <a href="product-detail.html"><img src="assets/images/products/product-cart-01.jpg" width="88" height="118" alt="Product 01" /></a>
+                                    </td>
+                                    <td class="description">
+                                        <table>
+                                            <tr>
+                                                <td><strong>Lorem ipsum</strong> dolor sit amet</td>
+                                            </tr>
+                                            <tr>
+                                                <td>&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Colour:</b> Lorem</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Size:</b> Ipsum</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Price:</b> R320</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td class="date">2 Feb 2013</td>
+                                    <td class="action" title="Remove"><a href="#"><img src="assets/images/icons/icon-cart-remove.png" width="27" height="27" alt="Remove" /></a></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div id="tab-favourites">
+                        <div class="tabs-inner">
+                            <header>
+                                <h1>Favourites</h1>
+                            </header>
+                            <table class="cart favourites">
+                                <thead>
+                                <tr>
+                                    <th>&nbsp;</th>
+                                    <th>Product</th>
+                                    <th class="action">Quantity</th>
+                                    <th>Price</th>
+                                    <th class="action">Availability</th>
+                                    <th class="action">&nbsp;</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class="image">
+                                        <a href="product-detail.html"><img src="assets/images/products/product-cart-01.jpg" width="88" height="118" alt="Product 01" /></a>
+                                    </td>
+                                    <td class="description">
+                                        <table>
+                                            <tr>
+                                                <td><strong>Lorem ipsum</strong> dolor sit amet</td>
+                                            </tr>
+                                            <tr>
+                                                <td>&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Lorem:</b> ipsum</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Lorem:</b> ipsum</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td class="action">
+                                        <form>
+                                            <label for="select-01">
+                                            <select id="select-01" name="select-01">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                            </select>
+                                            </label>
+                                        </form>
+                                    </td>
+                                    <td class="price">R320</td>
+                                    <td class="action">
+                                        <a href="#" class="button button-medium button-silver" role="button" data-action="restock-request" data-restock-product-id="123">Request restock</a>
+                                    </td>
+                                    <td class="action"><a href="#" class="remove" title="Remove"><img src="assets/images/icons/icon-cart-remove.png" width="27" height="27" alt="Remove" /></a></td>
+                                </tr>
+                                <tr>
+                                    <td class="image">
+                                        <a href="product-detail.html"><img src="assets/images/products/product-cart-02.jpg" width="88" height="118" alt="Product 02" /></a>
+                                    </td>
+                                    <td class="description">
+                                        <table>
+                                            <tr>
+                                                <td><strong>Lorem ipsum</strong> dolor sit amet</td>
+                                            </tr>
+                                            <tr>
+                                                <td>&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Lorem:</b> ipsum</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Lorem:</b> ipsum</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td class="action">
+                                        <form>
+                                            <label for="select-02">
+                                            <select id="select-02" name="select-02">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                            </select>
+                                            </label>
+                                        </form>
+                                    </td>
+                                    <td class="price">R320</td>
+                                    <td class="action">
+                                        <a href="#" class="button button-medium button-charcoal" data-action="cart" data-cart-add-text="Add to cart" data-cart-remove-text="Remove" role="button">Add to cart</a>
+                                    </td>
+                                    <td class="action"><a href="#" class="remove" title="Remove"><img src="assets/images/icons/icon-cart-remove.png" width="27" height="27" alt="Remove" /></a></td>
+                                </tr>
+                                <tr>
+                                    <td class="image">
+                                        <a href="product-detail.html"><img src="assets/images/products/product-cart-01.jpg" width="88" height="118" alt="Product 01" /></a>
+                                    </td>
+                                    <td class="description">
+                                        <table>
+                                            <tr>
+                                                <td><strong>Lorem ipsum</strong> dolor sit amet</td>
+                                            </tr>
+                                            <tr>
+                                                <td>&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Lorem:</b> ipsum</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Lorem:</b> ipsum</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td class="action">
+                                        <form>
+                                            <label for="select-03">
+                                            <select id="select-03" name="select-03">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                            </select>
+                                            </label>
+                                        </form>
+                                    </td>
+                                    <td class="price">R320</td>
+                                    <td class="action">
+                                        <a href="#" class="button button-medium button-silver" role="button" data-action="restock-request" data-restock-product-id="123">Request restock</a>
+                                    </td>
+                                    <td class="action" title="Remove"><a href="#"><img src="assets/images/icons/icon-cart-remove.png" width="27" height="27" alt="Remove" /></a></td>
+                                </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="6"><a href="#" class="button button-large button-charcoal" role="button">Add all items to your cart</a></td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                    <div id="tab-newsletter-subscription">
+                        <div class="tabs-inner">
+                            <div class="feedback feedback-success">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                            <header>
+                                <h1>Newsletter Subscription</h1>
+                            </header>
+                            <form id="form-account-subscription" name="form-account-subscription" method="post" action="account-newsletter-subscription.html" class="account subscription">
+                                <p>Send me marketing material via email</p>
+                                <fieldset class="radio">
+                                    <label>
+                                        <input type="radio" name="newsletter-subscription-marketing" value="1" />
+                                        Yes
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="newsletter-subscription-marketing" value="0" checked="checked" />
+                                        No
+                                    </label>
+                                </fieldset>
+                                <p>Notify me of sales via email</p>
+                                <fieldset class="radio">
+                                    <label>
+                                        <input type="radio" name="newsletter-subscription-sales" value="1" />
+                                        Yes
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="newsletter-subscription-sales" value="0" checked="checked" />
+                                        No
+                                    </label>
+                                </fieldset>
+                                <input type="submit" id="submit-newsletter-subscription" name="submit-account-settings" value="Update" />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer role="contentinfo">
+        <div class="wrapper">
+            <nav>
+                <ul role="navigation">
+                    <li>
+                        <b>Lorem ipsum</b>
+                        <ul role="navigation">
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Lorem ipsum</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Lorem ipsum</b>
+                        <ul role="navigation">
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Lorem ipsum</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Lorem ipsum</b>
+                        <ul role="navigation">
+                            <li>0861 999 501</li>
+                            <li><a href="mailto:support@spree.co.za">support@spree.co.za</a></li>
+                            <li><img src="assets/images/logos/logo-twitter.png" width="18" height="20" title="Twitter" alt="Twitter" /> <a href="https://twitter.com/spreecoza">Follow us @spreecoza</a></li>
+                            <li><img src="assets/images/logos/logo-facebook.png" width="18" height="20" title="Facebook" alt="Facebook" /> <a href="https://www.facebook.com/spree.co.za">Like us on Facebook</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Lorem ipsum</b>
+                        <form id="form-signup" name="form-signup" method="post" action="home.html" class="form-signup">
+                            <label for="email-signup">
+                                Sign up for our newsletter
+                                <input type="text" id="email-signup" name="email-signup" value="Email address" placeholder="Email address" maxlength="100" />
+                            </label>
+                            <fieldset class="radio">
+                                <label for="form-signup-language-english">
+                                    <input id="form-signup-language-english" name="form-signup-language" type="radio" value="English" checked="checked" /> English
+                                </label>
+                                <label for="form-signup-language-afrikaans">
+                                    <input id="form-signup-language-afrikaans" name="form-signup-language" type="radio"  value="Afrikaans" /> Afrikaans
+                                </label>
+                            </fieldset>
+                            <input type="submit" id="submit-signup" name="submit-signup" value="Sign up now" />
+                        </form>
+                        <!-- Confirmation message after submitting the form -->
+                        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p> -->
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+    <a href="#" class="back-to-top" data-action="back-to-top" title="Back to Top"><img src="assets/images/icons/icon-up.png" width="12" height="12" alt="^" /> Top</a>
+    <div id="language-confirmation" class="modal small">
+        <header>
+            <h1>Magazine Language Change</h1>
+        </header>
+        <p>The products curated by this magazine title are best experienced in <b>Afrikaans</b>. Would you like to change language now?</p>
+        <a href="home.html" class="button button-medium button-charcoal" data-action="language-confirm" role="button">Yes</a>
+        <a href="#" class="secondary" data-action="modal-close">No thanks</a>
+        <p>You can switch your language anytime using the language dropdown in the top right of the website.</p>
+        <a href="#" class="close" data-action="modal-close"><img src="assets/images/icons/icon-modal-close.png" width="20" height="20" alt="X" /></a>
+    </div>
+    <div id="request-restock" class="modal">
+        <a href="#" class="close" data-action="modal-close"><img src="assets/images/icons/icon-modal-close.png" width="20" height="20" alt="X" /></a>
+        <header>
+            <h1>Request a Restock</h1>
+        </header>
+        <p>
+            Enter your email address below and we will notify you once your item has been re&ndash;stocked.
+        </p>
+        <form id="form-request-restock" name="form-request-restock" class="request">
+            <label for="restock-size">
+                <select id="restock-size" name="restock-size">
+                    <option value="">Select size</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                </select>
+            </label>
+            <label for="restock-email">
+                <input type="text" id="restock-email" name="restock-email" value="" maxlength="100" />
+            </label>
+            <label for="restock-opt-in" class="checkbox">
+                <input type="checkbox" id="restock-opt-in" name="restock-opt-in" value="1" /> Join our newsletter and be the first to know about new products and great deals!
+            </label>
+            <input type="hidden" id="restock-product-id" name="restock-product-id" value="" />
+            <input type="submit" id="restock-submit" name="restock-submit" value="Request a Restock" />
+        </form>
+        <a href="#" class="close" data-action="modal-close"><img src="assets/images/icons/icon-modal-close.png" width="20" height="20" alt="X" /></a>
+    </div>
+    <!-- Modal: Newsletter Sign Up -->
+    <div id="newsletter-sign-up" class="modal modal-sign-up">
+        <img src="assets/images/general/newsletter-sign-up-header-english.png" width="372" height="103" alt="Sign Up to our Newsletter" />
+        <!--<img src="assets/images/general/newsletter-sign-up-header-afrikaans.png" width="372" height="103" alt="Teken In op ons Nuusbrief" />-->
+        <p>Get the latest trends, lookbooks and fashion advice, plus the hottest arrivals from your favourite designers, all hand&ndash;picked by our top SA Fashion Editors. Vouchers redeemable against purchases of R200 or more.</p>
+        <!--<p>Kry die jongste 'trends', modegidse en raad, asook al die nuwe produkte vanaf jou gunstelingontwerpers, almal met die hand uitgekies deur ons top-moderedakteurs. Koepons kan gebruik word met transaksies ter waarde van R200 of meer.</p>-->
+        <form id="form-newsletter-sign-up">
+            <label for="newsletter-sign-up-email">
+                <input id="newsletter-sign-up-email" name="newsletter-sign-up-email" type="text" value="" placeholder="Enter your email address" maxlength="100" />
+            </label>
+            <fieldset class="radio">
+                <label for="newsletter-sign-up-english">
+                    <input id="newsletter-sign-up-english" name="newsletter-sign-up-language" type="radio" value="English" checked="checked" /> English
+                </label>
+                <label for="newsletter-sign-up-afrikaans">
+                    <input id="newsletter-sign-up-afrikaans" name="newsletter-sign-up-language" type="radio"  value="Afrikaans" /> Afrikaans
+                </label>
+            </fieldset>
+            <input id="submit-newsletter-sign-up" type="submit" value="Subscribe" />
+            <p>*T&amp;C&rsquo;s apply</p>
+            <!--<p>*Bepalings en voowaardes geld</p>-->
+        </form>
+        <a href="#" class="close" data-action="modal-close"><img src="assets/images/icons/icon-modal-close.png" width="20" height="20" alt="X" /></a>
+    </div>
+    <!-- Modal: Newsletter Sign Up Confirmation -->
+    <div id="newsletter-sign-up-confirmation" class="modal modal-sign-up">
+        <img src="assets/images/general/newsletter-sign-up-header-english.png" width="372" height="103" alt="Sign Up to our Newsletter" />
+        <p>Get the latest trends, lookbooks and fashion advice, plus the hottest arrivals from your favourite designers, all hand&ndash;picked by our top SA Fashion Editors. Vouchers redeemable against purchases of R200 or more.</p>
+        <!--<p>Kry die jongste 'trends', modegidse en raad, asook al die nuwe produkte vanaf jou gunstelingontwerpers, almal met die hand uitgekies deur ons top-moderedakteurs. Koepons kan gebruik word met transaksies ter waarde van R200 of meer.</p>-->
+        <p>
+            <b>Thank you for subscribing to our newsletter</b>
+            <!--<b>Dankie dat jy op ons nuusbrief ingeteken het.</b>-->
+            <br/>
+            Please check your inbox for the R50 voucher to get spree&ndash;ing.
+            <!--Ons het jou R50-koepon vir jou gestuur. Geniet jou &ldquo;spree&rdquo;&ndash;sessie! -->
+        </p>
+        <a href="#" class="close" data-action="modal-close"><img src="assets/images/icons/icon-modal-close.png" width="20" height="20" alt="X" /></a>
+    </div>
+    <script src="assets/js/jquery.easing.js"></script>
+    <script src="assets/js/jquery.placeholder.js"></script>
+    <script src="assets/js/jquery.scrollto.js"></script>
+    <script src="assets/js/jquery.serialscroll.js"></script>
+    <script src="assets/js/jquery.iosslider.js"></script>
+    <script src="assets/js/jquery.modal.js"></script>
+    <script src="assets/js/jquery.mediaelementplayer.js"></script>
+    <script src="assets/js/jquery-ui.js"></script>
+    <script>
+        /*
+         * The URL for the front-end of the website
+         * @type {String}
+         */
+        var frontEndWebsiteURL = null;
+        // var frontEndWebsiteURL = 'http://dev.megastore.local/skin/frontend/site/web';
+    </script>
+    <script src="assets/js/jquery-custom.js"></script>
+    <script>
+        /*
+         * Fade in the checkout button once an item has been added to the cart
+         */
+        fadeInEl('checkout-button');
+    </script>
+</body>
+</html>

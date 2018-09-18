@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en-GB" dir="ltr" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en-GB" dir="ltr" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en-GB" dir="ltr" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en-GB" dir="ltr" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+    <title>Spree / Checkout Delivery Details</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="author" content="Michael Thorne" />
+    <meta name="description" content="" />
+    <!--<meta name="viewport" content="width=device-width" />-->
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:locale" content="en_GB" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="stylesheet" href="assets/css/normalize.css" />
+    <link rel="stylesheet" href="assets/css/jquery-ui.css" />
+    <link rel="stylesheet" href="assets/css/mediaelementplayer.css" />
+    <link rel="stylesheet" href="assets/css/layout.css" />
+    <link rel="stylesheet" href="assets/css/typography.css" />
+    <link rel="stylesheet" href="assets/css/forms.css" />
+    <!--
+        minify: Combines, minifies, and caches JavaScript
+        <link rel="stylesheet" href="/min/b=assets/css&amp;f=normalize.css,layout.css,typography.css,forms.css" />
+    -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5.js"></script>
+    <script src="assets/js/selectivizr.js"></script>
+    <![endif]-->
+    <script src="assets/js/detect.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="assets/js/jquery.js"><\/script>');</script>
+    <script>
+        var $j = jQuery.noConflict();
+    </script>
+</head>
+<body class="checkout">
+    <!--[if lt IE 8]>
+    <div class="chromeframe">
+        <p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" title="Browse Happy &ndash; Upgrade your browser today!" target="_blank">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true" title="Google Chrome Frame &ndash; Make your browser more powerful." target="blank">activate Google Chrome Frame</a> to improve your experience.</p>
+    </div>
+    <![endif]-->
+    <header id="top" role="banner">
+        <div class="wrapper">
+            <a id="logo" href="home.html">
+                <img src="assets/images/logos/logo-spree.png" width="152" height="65" alt="Spree" />
+            </a>
+            <div class="utils">
+                <ul>
+                    <li><b>Need Help?</b> Call us on <strong>0861 999 501</strong></li>
+                    <li>Email <a href="mailto:help@spree.com">help@spree.com</a></li>
+                    <li><a href="#">Live Help</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <section role="main">
+        <div class="wrapper checkout-details">
+            <div class="wrapper-tabs-large">
+                <div data-component="tabs">
+                    <ul>
+                        <li>
+                            <a href="#tab-delivery-details">
+                                Delivery Details
+                                <span>Where would you like this order shipped?</span>
+                                <div class="complete"><img src="assets/images/icons/icon-tick.png" width="20" height="20" alt="" /></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#tab-payment-details">
+                                Payment Details
+                                <span>How would you like to pay?</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div id="tab-delivery-details">
+                        <div class="tabs-inner">
+                            <div class="wrapper-existing-addresses addresses">
+                                <header>
+                                    <h1>Select from an Existing Delivery Address</h1>
+                                </header>
+                                <div class="existing-address">
+                                    <ol>
+                                        <li>Michael Thorne</li>
+                                        <li>208 Trinity Gardens</li>
+                                        <li>Vredehoek</li>
+                                        <li>Cape Town</li>
+                                    </ol>
+                                    <a href="#" class="button grey-small" role="button">Remove this address</a>
+                                    <a href="#" class="button red-small" role="button">Ship to this address</a>
+                                </div>
+                                <div class="existing-address">
+                                    <ol>
+                                        <li>Michael Thorne</li>
+                                        <li>208 Trinity Gardens</li>
+                                        <li>Upper Maynard Street</li>
+                                        <li>Vredehoek</li>
+                                        <li>Cape Town</li>
+                                    </ol>
+                                    <a href="#" class="button grey-small" role="button">Remove this address</a>
+                                    <a href="#" class="button red-small" role="button">Ship to this address</a>
+                                </div>
+                                <div class="existing-address">
+                                    <ol>
+                                        <li>Michael Thorne</li>
+                                        <li>208 Trinity Gardens</li>
+                                        <li>Upper Maynard Street</li>
+                                        <li>Vredehoek</li>
+                                        <li>Cape Town</li>
+                                    </ol>
+                                    <a href="#" class="button grey-small" role="button">Remove this address</a>
+                                    <a href="#" class="button red-small" role="button">Ship to this address</a>
+                                </div>
+                            </div>
+                            <header>
+                                <h1>Add a New Delivery Address</h1>
+                            </header>
+                            <form id="form-delivery-address" name="form-delivery-address" method="post" action="checkout-delivery-details.html" class="checkout" data-submit="disable" data-submit-text="Processing&hellip;">
+                                <label for="first-name">
+                                    First Name:
+                                    <input type="text" id="first-name" name="first-name" value="" maxlength="50" />
+                                </label>
+                                <label for="surname">
+                                    Surname:
+                                    <input type="text" id="surname" name="surname" value="" maxlength="50" />
+                                    <span class="error">
+                                        Invalid Surname
+                                    </span>
+                                </label>
+                                <label for="contact-number">
+                                    Contact Number:
+                                    <input type="text" id="contact-number" name="contact-number" value="" maxlength="20" />
+                                </label>
+                                <fieldset class="large">
+                                    <label for="shipping-address-1" data-component="counter">
+                                        Shipping address:
+                                        <input type="text" id="shipping-address-1" name="shipping-address-1" value="" maxlength="30" />
+                                    </label>
+                                    <label for="shipping-address-2" data-component="counter">
+                                        <input type="text" id="shipping-address-2" name="shipping-address-2" value="" maxlength="30" />
+                                    </label>
+                                </fieldset>
+                                <label for="suburb">
+                                    Suburb:
+                                    <input type="text" id="suburb" name="suburb" value="" maxlength="50" data-address-field="suburb" />
+                                    <span class="error">
+                                        Invalid Suburb
+                                    </span>
+                                </label>
+                                <label for="city">
+                                    City:
+                                    <input type="text" id="city" name="city" value="" maxlength="20" data-address-field="city" />
+                                </label>
+                                <fieldset class="wide">
+                                    <label for="postal-code" class="small">
+                                        Postal Code:
+                                        <input type="text" id="postal-code" name="postal-code" value="" maxlength="4" data-validate-numeric="true" data-suggest-address="true" data-suggest-address-threshold="4" data-address-field="postal-code" />
+                                    </label>
+                                    <label for="country">
+                                        Country:
+                                        <select id="country" name="country" data-address-field="country">
+                                            <option value=""></option>
+                                            <option value="Namibia">Namibia</option>
+                                            <option value="South Africa">South Africa</option>
+                                        </select>
+                                    </label>
+                                </fieldset>
+                                <input type="submit" id="submit-delivery-address" name="submit-delivery-address" value="Ship to this address" />
+                            </form>
+                        </div>
+                    </div>
+                    <div id="tab-payment-details">
+                        <div class="tabs-inner">
+                            <header>
+                                <h1>Voucher Code</h1>
+                            </header>
+                            <form id="form-voucher-code" name="form-voucher-code" method="post" action="checkout-delivery-details.html" class="voucher" data-submit="disable" data-submit-text="Processing&hellip;">
+                                <label for="code">
+                                    <input type="text" id="code" name="code" value="" maxlength="100" />
+                                </label>
+                                <input type="submit" value="Redeem" />
+                                <a href="#" data-action="voucher-code">What is this?</a>
+                            </form>
+                            <form id="form-voucher-code" name="form-voucher-code" method="post" action="checkout-delivery-details.html" class="voucher" data-submit="disable" data-submit-text="Processing&hellip;">
+                                <label for="code">
+                                    <span>Voucher <b>1234567</b> redeemed</span>
+                                </label>
+                                <input type="submit" value="Cancel voucher" />
+                                <a href="#" data-action="voucher-code">What is this?</a>
+                            </form>
+                            <div class="wrapper-payment-method">
+                                <header>
+                                    <h1>Add a New Payment Method</h1>
+                                </header>
+                                <div class="wrapper-tabs">
+                                    <div data-component="tabs">
+                                        <ul>
+                                            <li><a href="#tab-credit-card">Credit Card</a></li>
+                                            <li><a href="#tab-eft">EFT</a></li>
+                                        </ul>
+                                        <div id="tab-credit-card">
+                                            <form id="form-payment-method" name="form-payment-method" method="post" action="checkout-payment-details.html" class="payment" data-submit="disable" data-submit-text="Processing&hellip;">
+                                                <fieldset class="large">
+                                                    <label for="card-name">
+                                                        <span>*</span> Name on card
+                                                        <input id="card-name" name="card-name" type="text" value="" maxlength="100" />
+                                                    </label>
+                                                </fieldset>
+                                                <fieldset class="icons">
+                                                    <label for="card-number">
+                                                        <span>*</span> Card number
+                                                        <input id="card-number" name="card-number" type="text" value="" maxlength="16" data-validate-numeric="true" data-action="highlight-credit-card-icon" />
+                                                    </label>
+                                                    <div class="credit-card-icons">
+                                                        <img src="assets/images/logos/logo-mastercard.png" width="51" height="32" alt="MasterCard" data-credit-card-system="mastercard" />
+                                                        <img src="assets/images/logos/logo-visa.png" width="51" height="32" alt="Mastercard" data-credit-card-system="visa" />
+                                                    </div>
+                                                </fieldset>
+                                                <fieldset class="date">
+                                                    <label>
+                                                        <span>*</span> Expiry date
+                                                    </label>
+                                                    <label for="credit-card-month">
+                                                        <select id="credit-card-month" name="credit-card-month">
+                                                            <option value="">Month</option>
+                                                            <option value="01">January</option>
+                                                            <option value="02">February</option>
+                                                            <option value="03">March</option>
+                                                            <option value="04">April</option>
+                                                            <option value="05">May</option>
+                                                            <option value="06">June</option>
+                                                            <option value="07">July</option>
+                                                            <option value="08">August</option>
+                                                            <option value="09">September</option>
+                                                            <option value="10">October</option>
+                                                            <option value="11">November</option>
+                                                            <option value="12">December</option>
+                                                        </select>
+                                                    </label>
+                                                    <label for="credit-card-year" class="small">
+                                                        <select id="credit-card-year" name="credit-card-year">
+                                                            <option value="">Year</option>
+                                                            <option value="2013">2013</option>
+                                                            <option value="2014">2014</option>
+                                                            <option value="2015">2015</option>
+                                                            <option value="2016">2016</option>
+                                                            <option value="2017">2017</option>
+                                                            <option value="2018">2018</option>
+                                                        </select>
+                                                    </label>
+                                                </fieldset>
+                                                <fieldset class="cvv">
+                                                    <label for="credit-card-cvv" class="small">
+                                                        CVV
+                                                        <input id="credit-card-cvv" name="credit-card-cvv" type="text" value="" maxlength="4" data-validate-numeric="true" />
+                                                    </label>
+                                                    <a href="#" data-action="cvv-icon">What is this?</a>
+                                                    <div class="cvv-icon">
+                                                        <img id="cvv-icon" src="assets/images/icons/icon-cvv.png" width="47" height="26" alt="" />
+                                                        <span>last 3 digits</span>
+                                                    </div>
+                                                </fieldset>
+                                                <fieldset class="footer">
+                                                    <label for="credit-card-billing-address">
+                                                        <input id="credit-card-billing-address" name="credit-card-billing-address" type="checkbox" value="1" checked="checked" data-action="new-billing-address" />
+                                                        My billing address is the same as my shipping address
+                                                    </label>
+                                                    <input type="submit" id="submit-payment-method" name="submit-payment-method" value="Pay now" />
+                                                </fieldset>
+                                                <div id="billing-address">
+                                                    <header>
+                                                        <h1>Add a New Billing Address</h1>
+                                                    </header>
+                                                    <label for="billing-first-name">
+                                                        First Name:
+                                                        <input type="text" id="billing-first-name" name="billing-first-name" value="" maxlength="50" />
+                                                    </label>
+                                                    <label for="billing-surname">
+                                                        Surname:
+                                                        <input type="text" id="billing-surname" name="billing-surname" value="" maxlength="50" />
+                                                        <span class="error">
+                                                            Invalid Surname
+                                                        </span>
+                                                    </label>
+                                                    <label for="billing-contact-number">
+                                                        Contact Number:
+                                                        <input type="text" id="billing-contact-number" name="billing-contact-number" value="" maxlength="20" />
+                                                    </label>
+                                                    <fieldset class="large">
+                                                        <label for="billing-shipping-address-1" data-component="counter">
+                                                            Shipping address:
+                                                            <input type="text" id="billing-shipping-address-1" name="billing-shipping-address-1" value="" maxlength="30" />
+                                                        </label>
+                                                        <label for="billing-shipping-address-2" data-component="counter">
+                                                            <input type="text" id="billing-shipping-address-2" name="billing-shipping-address-2" value="" maxlength="30" />
+                                                        </label>
+                                                    </fieldset>
+                                                    <label for="billing-suburb">
+                                                        Suburb:
+                                                        <input type="text" id="billing-suburb" name="billing-suburb" value="" maxlength="50" data-address-field="suburb" />
+                                                        <span class="error">
+                                                            Invalid Suburb
+                                                        </span>
+                                                    </label>
+                                                    <label for="billing-city">
+                                                        City:
+                                                        <input type="text" id="billing-city" name="billing-city" value="" maxlength="20" data-address-field="city" />
+                                                    </label>
+                                                    <fieldset class="wide">
+                                                        <label for="billing-postal-code" class="small">
+                                                            Postal Code:
+                                                            <input type="text" id="billing-postal-code" name="postal-code" value="" maxlength="4" data-validate-numeric="true" data-suggest-address="true" data-suggest-address-threshold="4" data-address-field="postal-code" />
+                                                        </label>
+                                                        <label for="country">
+                                                            Country:
+                                                            <select id="billing-country" name="billing-country" data-address-field="country">
+                                                                <option value=""></option>
+                                                                <option value="Namibia">Namibia</option>
+                                                                <option value="South Africa">South Africa</option>
+                                                            </select>
+                                                        </label>
+                                                    </fieldset>
+                                                    <input type="submit" name="submit-payment-method" value="Pay now" />
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div id="tab-eft">
+                                            <header>
+                                                <h1>Please Note</h1>
+                                            </header>
+                                            <p>Please pay within one hour to avoid your order being cancelled. Follow the steps on the Payfast site, and be sure to click &ldquo;confirm&rdquo; in Step 3. You&rsquo;ll be redirected to <a href="http://www.sarie.com" target="_blank">SARIE.com</a> afterwards.</p>
+                                            <form id="form-payment-eft" name="form-payment-eft" method="post" action="checkout-delivery-details.html" class="checkout" data-submit="disable" data-submit-text="Processing&hellip;">
+                                                <input type="submit" id="submit-payment-eft" name="submit-payment-eft" value="Process" />
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <aside>
+                <header>
+                    <h2>Your Order</h2>
+                </header>
+                <p>Purchased items and cost breakdown</p>
+                <table class="order-summary">
+                    <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Size</th>
+                        <th>Qnty</th>
+                        <th>Price</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Lorem ipsum dolor&hellip;</td>
+                        <td>S</td>
+                        <td>3</td>
+                        <td>R200</td>
+                    </tr>
+                    <tr>
+                        <td>Lorem ipsum&hellip;</td>
+                        <td>L</td>
+                        <td>1</td>
+                        <td>R20</td>
+                    </tr>
+                    <tr>
+                        <td>Lorem ipsum dolor&hellip;</td>
+                        <td>L</td>
+                        <td>7</td>
+                        <td>R780</td>
+                    </tr>
+                    <tr class="address">
+                        <td colspan="4">
+                            <table>
+                                <tr>
+                                    <td><strong>Shipping Address:</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <td colspan="4"><strong>Lorem ipsum:</strong> &ndash;R300</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4"><strong>Lorem ipsum:</strong> R750</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4"><strong>Lorem ipsum:</strong> R50</td>
+                    </tr>
+                    <tr class="total">
+                        <td colspan="4">Lorem ipsum: R850</td>
+                    </tr>
+                    </tfoot>
+                </table>
+                <div class="payment-methods">
+                    <a href="http://www.thawte.com/" target="_blank"><img src="assets/images/logos/logo-thawte.png" width="82" height="41" alt="Thawte" /></a>
+                    <p>Payment methods:</p>
+                    <ul>
+                        <li>
+                            <a href="http://www.visa.co.za" title="Visa"><img src="assets/images/logos/logo-payment-visa.png" width="34" height="22" alt="Visa" /></a>
+                        </li>
+                        <li>
+                            <a href="http://www.mastercard.co.za" title="MasterCard"><img src="assets/images/logos/logo-payment-mastercard.png" width="34" height="22" alt="MasterCard" /></a>
+                        </li>
+                        <li>
+                            <a href="https://www.paypal.com/" title="PayPal"><img src="assets/images/logos/logo-payment-paypal.png" width="34" height="22" alt="PayPal" /></a>
+                        </li>
+                        <li>
+                            <a href="https://www.americanexpress.co.za/" title="American Express"><img src="assets/images/logos/logo-payment-america-express.png" width="34" height="22" alt="American Express" /></a>
+                        </li>
+                        <li>
+                            <a href="http://www.visa.co.za/" title="Visa Electron"><img src="assets/images/logos/logo-payment-visa-electron.png" width="34" height="22" alt="Visa Electron" /></a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </section>
+    <a href="#" class="back-to-top" data-action="back-to-top" title="Back to Top"><img src="assets/images/icons/icon-up.png" width="12" height="12" alt="^" /> Top</a>
+    <div id="address-suggestions" class="modal medium">
+        <header>
+            <h1>Address Suggestions</h1>
+        </header>
+        <p>Choose the correct address in the list below.</p>
+        <form id="form-address-suggestions" name="form-address-suggestions" method="post" action="checkout-delivery-details.html" class="suggestions">
+            <label for="address-1">
+                <input type="radio" id="address-1" name="address-suggestion" value="Bo-kaap 8001, Cape Town, Western Cape, South Africa" data-address-suburb="Bo-kaap" data-address-city="Cape Town" data-address-postal-code="8001" data-address-country="South Africa" /> Bo-kaap 8001, Cape Town, Western Cape, South Africa
+            </label>
+            <label for="address-2">
+                <input type="radio" id="address-2" name="address-suggestion" value="De Waterkant 8001, Cape Town, Western Cape, South Africa" data-address-suburb="De Waterkant" data-address-city="Cape Town" data-address-postal-code="8001" data-address-country="South Africa" /> De Waterkant 8001, Cape Town, Western Cape, South Africa
+            </label>
+            <label for="address-3">
+                <input type="radio" id="address-3" name="address-suggestion" value="Foreshore 8001, Cape Town, Western Cape, South Africa" data-address-suburb="Foreshore" data-address-city="Cape Town" data-address-postal-code="8001" data-address-country="South Africa" /> Foreshore 8001, Cape Town, Western Cape, South Africa
+            </label>
+            <label for="address-4">
+                <input type="radio" id="address-4" name="address-suggestion" value="Vredehoek 8001, Cape Town, Western Cape, South Africa" data-address-suburb="Vredehoek" data-address-city="Cape Town" data-address-postal-code="8001" data-address-country="South Africa" /> Vredehoek 8001, Cape Town, Western Cape, South Africa
+            </label>
+            <label for="address-5">
+                <input type="radio" id="address-5" name="address-suggestion" value="Windhoek 9000, Windhoek, Khomas Region, Namibia" data-address-suburb="Khomas Region" data-address-city="Windhoek" data-address-postal-code="9000" data-address-country="Namibia" /> Windhoek 9000, Windhoek, Khomas Region, Namibia
+            </label>
+            <input type="submit" id="submit-address-suggestions" name="submit-address-suggestions" value="Use" />
+        </form>
+        <a href="#" class="close" data-action="modal-close"><img src="assets/images/icons/icon-modal-close.png" width="33" height="33" alt="X" /></a>
+    </div>
+    <div id="language-confirmation" class="modal small">
+        <header>
+            <h1>Magazine Language Change</h1>
+        </header>
+        <p>The products curated by this magazine title are best experienced in <b>Afrikaans</b>. Would you like to change language now?</p>
+        <a href="home.html" class="button red" data-action="language-confirm" role="button">Yes</a>
+        <a href="#" class="secondary" data-action="modal-close">No thanks</a>
+        <p>You can switch your language anytime using the language dropdown in the top right of the website.</p>
+        <a href="#" class="close" data-action="modal-close"><img src="assets/images/icons/icon-modal-close.png" width="33" height="33" alt="X" /></a>
+    </div>
+    <div id="fb-root"></div>
+    <script src="assets/js/jquery.easing.js"></script>
+    <script src="assets/js/jquery.placeholder.js"></script>
+    <script src="assets/js/jquery.scrollto.js"></script>
+    <script src="assets/js/jquery.serialscroll.js"></script>
+    <script src="assets/js/jquery.iosslider.js"></script>
+    <script src="assets/js/jquery.modal.js"></script>
+    <script src="assets/js/jquery.mediaelementplayer.js"></script>
+    <script src="assets/js/jquery-ui.js"></script>
+    <script>
+        /*
+         * The URL for the front-end of the website
+         * @type {String}
+         */
+        var frontEndWebsiteURL = null;
+        // var frontEndWebsiteURL = 'http://dev.megastore.local/skin/frontend/site/web';
+    </script>
+    <script src="assets/js/jquery-custom.js"></script>
+    <!--
+        minify: Combines, minifies, and caches JavaScript
+        <script src="/min/b=assets/js&amp;f=jquery.easing.js,jquery.placeholder.js,jquery-custom.js"></script>
+    -->
+    <script>(function(d, s, id)
+    {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+</body>
+</html>

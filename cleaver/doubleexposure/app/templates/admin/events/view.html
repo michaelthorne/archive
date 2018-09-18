@@ -1,0 +1,1047 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>DoubleExposure – Admin / Event View</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Raleway:700%7CLato:400,700">
+
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="../../../assets/css/main.css?v=0.0.0">
+
+    <!--[if lt IE 9]>
+    <script src="../../../assets/js/vendor/polyfills.js"></script><![endif]-->
+</head>
+<body>
+    <!--[if lt IE 9]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/?locale=en">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <nav role="navigation" class="nav-horizontal hide-med hide-large" data-component="nav-horizontal">
+        <div class="header-toggle-nav">
+            <a href="../dashboard.html" class="nav-toggle" data-action="nav-toggle">Menu</a>
+            <a href="#" class="logo"><img src="../../../assets/images/content/logo-jules-morgan-150x150.png" alt="Jules Morgan Photography"></a>
+        </div>
+        <ul class="list list-nav list-nav-horizontal has-drop-down" data-component="nav-drop-down">
+            <li>
+                <a href="../dashboard.html" class="is-active">Dashboard</a>
+            </li>
+            <li>
+                <a href="../dashboard.html">People</a>
+            </li>
+            <li>
+                <a href="list.html">Events</a>
+            </li>
+            <li>
+                <a href="../settings/account.html">Settings</a>
+            </li>
+            <li>
+                <a href="../dashboard.html">Sign Out</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="sidebar hide-small">
+        <a href="../dashboard.html" class="logo"><img src="../../../assets/images/content/logo-jules-morgan-150x150.png" alt="Jules Morgan Photography"></a>
+        <!-- // Logo -->
+
+        <nav role="navigation" class="nav-sidebar">
+            <ul class="list list-nav list-nav-icons list-nav-vertical">
+                <li>
+                    <a href="../dashboard.html">
+                        <span class="icon fa fa-desktop"></span> Dashboard
+                    </a>
+                </li>
+                <li>
+                    <a href="list.html">
+                        <span class="icon fa fa-users"></span> People
+                    </a>
+                </li>
+                <li>
+                    <a href="list.html" class="is-active">
+                        <span class="icon fa fa-camera"></span> Events
+                    </a>
+                </li>
+                <li>
+                    <a href="../settings/account.html">
+                        <span class="icon fa fa-cog"></span> Settings
+                    </a>
+                </li>
+                <li>
+                    <a href="../dashboard.html">
+                        <span class="icon fa fa-unlock"></span> Sign Out
+                    </a>
+                </li>
+            </ul>
+            <!-- // Navigation Items -->
+
+            <a href="../dashboard.html" class="toggle-sidebar" data-action="toggle-sidebar"><span class="icon fa fa-long-arrow-left" aria-hidden="true"></span></a>
+            <!-- // Toggle Sidebar -->
+        </nav>
+        <!-- // Navigation -->
+    </div>
+    <!-- // Sidebar -->
+
+    <main class="main main-admin" role="main" data-action="pin">
+        <div class="wrapper">
+            <header class="header header-admin">
+                <div class="row">
+                    <div class="col col-2-4">
+                        <h1 class="gamma red-dark">Event</h1>
+                        <h2 class="delta grey">Malika and Wamkele&rsquo;s Wedding<a href="view.html" title="Published"><span class="icon green fa fa-circle" aria-hidden="true"></span></a><a href="view.html" title="Unublished"><span class="icon yellow fa fa-circle" aria-hidden="true"></span></a><a href="view.html" title="Expired"><span class="icon red-light fa fa-circle" aria-hidden="true"></span></a></h2>
+                    </div>
+                    <!-- // Heading -->
+                    <div class="col col-2-4">
+                        <div class="button-group right">
+                            <a href="settings.html" class="btn btn-small btn-primary" role="button"><span class="icon fa fa-cog" aria-hidden="true"></span>Settings</a>
+                        </div>
+                    </div>
+                    <!-- // Button Group -->
+                </div>
+            </header>
+            <!-- // Header -->
+
+            <hr class="hr" data-scroll-trigger="true">
+
+            <div class="main-contents">
+                <!--
+
+                <div class="feedback feedback-info">
+                    <h6 class="zeta"><span class="icon fa" aria-hidden="true"></span>This collection is empty</h6>
+                    <p>You haven&rsquo;t uploaded any photos to this collection.</p>
+                </div>
+                // Feedback
+
+                -->
+                <div class="toolbar" data-component="toolbar">
+                    <div class="toolbar-item status" data-toolbar-perform="true">
+                        <p class="selected-count-prepend"><b>2</b> selected</p>
+                    </div>
+                    <!-- // Status -->
+
+                    <div class="toolbar-item" data-toolbar-perform="true">
+                        <div class="split-button" data-component="split-button">
+                            <a class="btn btn-secondary btn-small btn-label" role="button">Actions</a>
+                            <a href="view.html" class="btn btn-secondary btn-small btn-icon" role="button"><span class="icon fa fa-caret-down" aria-hidden="true"></span></a>
+                            <div class="split-button-actions">
+                                <ul class="list list-nav list-nav-vertical list-nav-vertical-secondary">
+                                    <li><a href="view.html"><span class="icon fa fa-arrows-alt" aria-hidden="true"></span> Move Photos To</a></li>
+                                    <li><a href="view.html"><span class="icon fa fa-copy" aria-hidden="true"></span> Copy Photos To</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="view.html"><span class="icon fa fa-share-square-o" aria-hidden="true"></span> Share Photos</a></li>
+                                </ul>
+                            </div>
+                            <!-- // Buttons -->
+                        </div>
+                        <!-- // Split Button -->
+                    </div>
+                    <!-- // Actions -->
+
+                    <div class="toolbar-item" data-toolbar-perform="true">
+                        <a href="view.html" class="btn btn-secondary btn-small" role="button"><span class="icon fa fa-trash-o"></span>Delete</a>
+                    </div>
+                    <!-- // Delete -->
+
+                    <div class="toolbar-item right">
+                        <div class="split-button right" data-component="split-button">
+                            <a href="view.html" class="btn btn-secondary btn-small btn-icon" role="button"><span class="icon fa fa-caret-down" aria-hidden="true"></span></a>
+                            <a class="btn btn-secondary btn-small btn-label" role="button">Filter</a>
+                            <div class="split-button-actions">
+                                <ul class="list list-nav list-nav-vertical list-nav-vertical-secondary">
+                                    <li><a href="view.html">Hidden by Client</a></li>
+                                    <li><a href="view.html">Hidden by Me</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="view.html">Shared</a></li>
+                                </ul>
+                            </div>
+                            <!-- // Buttons -->
+                        </div>
+                        <!-- // Split Button -->
+                    </div>
+                    <!-- // Filter -->
+
+                    <div class="toolbar-item right">
+                        <div class="split-button right" data-component="split-button">
+                            <a href="view.html" class="btn btn-secondary btn-small btn-icon" role="button"><span class="icon fa fa-caret-down" aria-hidden="true"></span></a>
+                            <a class="btn btn-secondary btn-small btn-label" role="button">Sort</a>
+                            <div class="split-button-actions">
+                                <ul class="list list-nav list-nav-vertical list-nav-vertical-secondary">
+                                    <li><a href="view.html">By Filename</a></li>
+                                    <li><a href="view.html">By Uploaded Date</a></li>
+                                    <li><a href="view.html">By Taken Date</a></li>
+                                </ul>
+                            </div>
+                            <!-- // Buttons -->
+                        </div>
+                        <!-- // Split Button -->
+                    </div>
+                    <!-- // Sort -->
+                </div>
+                <!-- // Toolbar -->
+
+                <div class="feedback feedback-warning">
+                    <h6 class="zeta"><span aria-hidden="true" class="icon fa"></span>There are no images in this event</h6>
+                    <p>You can <a href="view.html">upload</a> more images or <a href="view.html">delete</a> this event if you no longer need it.</p>
+                </div>
+
+                <ol class="list list-photos unselectable" data-component="photos">
+                    <li data-selected="false" class="is-saving">
+                        <div class="photo">
+                            <img src="../../../assets/images/content/photos/photo-400x220.jpg" alt="Title of the Photo">
+                            <!-- // Photo -->
+
+                            <span class="title">IMG_1727_1727_1727.JPG</span>
+                            <!-- // Title -->
+
+                            <span class="icon move fa fa-arrows" title="Move" aria-hidden="true"></span>
+                            <!-- // Move -->
+
+                            <span class="saving"><img src="../../../assets/images/general/spinner-16x16.gif" width="16" height="16" alt="Saving&hellip;"></span>
+                            <!-- // Saving -->
+                        </div>
+                        <div class="stats">
+                            <ul class="list list-horizontal">
+                                <li>
+                                    <a href="#" title="Collections"><span class="icon fa fa-copy" aria-hidden="true"></span> 34</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Favourites"><span class="icon fa fa-heart"></span> 102</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Shares"><span class="icon fa fa-share-square-o"></span> 972</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- // Stats -->
+                    </li>
+                    <li data-selected="false" data-hidden="true" class="is-hidden">
+                        <div class="photo">
+                            <img src="../../../assets/images/content/photos/photo-400x400.jpg" alt="Title of the Photo">
+                            <!-- // Photo -->
+
+                            <span class="title">IMG_1727_1727_1727.JPG</span>
+                            <!-- // Title -->
+
+                            <span class="icon move fa fa-arrows" title="Move" aria-hidden="true"></span>
+                            <!-- // Move -->
+
+                            <span class="icon status fa fa-eye-slash" title="Hidden by Client" aria-hidden="true"></span>
+                            <!-- // Status -->
+
+                            <span class="saving"><img src="../../../assets/images/general/spinner-16x16.gif" width="16" height="16" alt="Saving&hellip;"></span>
+                            <!-- // Saving -->
+                        </div>
+                        <div class="stats">
+                            <ul class="list list-horizontal">
+                                <li>
+                                    <a href="#" title="Collections"><span class="icon fa fa-copy" aria-hidden="true"></span> 34</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Favourites"><span class="icon fa fa-heart"></span> 102</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Shares"><span class="icon fa fa-share-square-o"></span> 972</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- // Stats -->
+                    </li>
+                    <li data-selected="false" data-hidden="true" class="is-hidden">
+                        <div class="photo">
+                            <img src="../../../assets/images/content/photos/photo-370x480.jpg" alt="Title of the Photo">
+                            <!-- // Photo -->
+
+                            <span class="title">IMG_1727_1727_1727.JPG</span>
+                            <!-- // Title -->
+
+                            <span class="icon move fa fa-arrows" title="Move" aria-hidden="true"></span>
+                            <!-- // Move -->
+
+                            <span class="icon status fa fa-eye-slash" title="Hidden by Client &amp; You" aria-hidden="true"></span>
+                            <!-- // Status -->
+
+                            <span class="saving"><img src="../../../assets/images/general/spinner-16x16.gif" width="16" height="16" alt="Saving&hellip;"></span>
+                            <!-- // Saving -->
+                        </div>
+                        <div class="stats">
+                            <ul class="list list-horizontal">
+                                <li>
+                                    <a href="#" title="Collections"><span class="icon fa fa-copy" aria-hidden="true"></span> 34</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Favourites"><span class="icon fa fa-heart"></span> 102</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Shares"><span class="icon fa fa-share-square-o"></span> 972</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- // Stats -->
+                    </li>
+                    <li data-selected="false" class="is-moving">
+                        <div class="photo">
+                            <img src="../../../assets/images/content/photos/photo-320x160.jpg" alt="Title of the Photo">
+                            <!-- // Photo -->
+
+                            <span class="title">IMG_1727_1727_1727.JPG</span>
+                            <!-- // Title -->
+
+                            <span class="icon move fa fa-arrows" title="Move" aria-hidden="true"></span>
+                            <!-- // Move -->
+
+                            <span class="saving"><img src="../../../assets/images/general/spinner-16x16.gif" width="16" height="16" alt="Saving&hellip;"></span>
+                            <!-- // Saving -->
+                        </div>
+                        <div class="stats">
+                            <ul class="list list-horizontal">
+                                <li>
+                                    <a href="#" title="Collections"><span class="icon fa fa-copy" aria-hidden="true"></span> 34</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Favourites"><span class="icon fa fa-heart"></span> 102</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Shares"><span class="icon fa fa-share-square-o"></span> 972</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- // Stats -->
+                    </li>
+                    <li data-selected="true" class="is-selected">
+                        <div class="photo">
+                            <img src="../../../assets/images/content/photos/photo-400x400.jpg" alt="Title of the Photo">
+                            <!-- // Photo -->
+
+                            <span class="title">IMG_1727_1727_1727.JPG</span>
+                            <!-- // Title -->
+
+                            <span class="icon move fa fa-arrows" title="Move" aria-hidden="true"></span>
+                            <!-- // Move -->
+
+                            <span class="saving"><img src="../../../assets/images/general/spinner-16x16.gif" width="16" height="16" alt="Saving&hellip;"></span>
+                            <!-- // Saving -->
+                        </div>
+                        <div class="stats">
+                            <ul class="list list-horizontal">
+                                <li>
+                                    <a href="#" title="Collections"><span class="icon fa fa-copy" aria-hidden="true"></span> 34</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Favourites"><span class="icon fa fa-heart"></span> 102</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Shares"><span class="icon fa fa-share-square-o"></span> 972</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- // Stats -->
+                    </li>
+                    <li data-selected="false">
+                        <div class="photo">
+                            <img src="../../../assets/images/content/photos/photo-270x480.jpg" alt="Title of the Photo">
+                            <!-- // Photo -->
+
+                            <span class="title">IMG_1727_1727_1727.JPG</span>
+                            <!-- // Title -->
+
+                            <span class="icon move fa fa-arrows" title="Move" aria-hidden="true"></span>
+                            <!-- // Move -->
+
+                            <span class="saving"><img src="../../../assets/images/general/spinner-16x16.gif" width="16" height="16" alt="Saving&hellip;"></span>
+                            <!-- // Saving -->
+                        </div>
+                        <div class="stats">
+                            <ul class="list list-horizontal">
+                                <li>
+                                    <a href="#" title="Collections"><span class="icon fa fa-copy" aria-hidden="true"></span> 34</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Favourites"><span class="icon fa fa-heart"></span> 102</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Shares"><span class="icon fa fa-share-square-o"></span> 972</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- // Stats -->
+                    </li>
+                    <li data-selected="false">
+                        <div class="photo">
+                            <img src="../../../assets/images/content/photos/photo-620x620.jpg" alt="Title of the Photo">
+                            <!-- // Photo -->
+
+                            <span class="title">IMG_1727_1727_1727.JPG</span>
+                            <!-- // Title -->
+
+                            <span class="icon move fa fa-arrows" title="Move" aria-hidden="true"></span>
+                            <!-- // Move -->
+
+                            <span class="saving"><img src="../../../assets/images/general/spinner-16x16.gif" width="16" height="16" alt="Saving&hellip;"></span>
+                            <!-- // Saving -->
+                        </div>
+                        <div class="stats">
+                            <ul class="list list-horizontal">
+                                <li>
+                                    <a href="#" title="Collections"><span class="icon fa fa-copy" aria-hidden="true"></span> 34</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Favourites"><span class="icon fa fa-heart"></span> 102</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Shares"><span class="icon fa fa-share-square-o"></span> 972</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- // Stats -->
+                    </li>
+                    <li data-selected="false">
+                        <div class="photo">
+                            <img src="../../../assets/images/content/photos/photo-400x220.jpg" alt="Title of the Photo">
+                            <!-- // Photo -->
+
+                            <span class="title">IMG_1727_1727_1727.JPG</span>
+                            <!-- // Title -->
+
+                            <span class="icon move fa fa-arrows" title="Move" aria-hidden="true"></span>
+                            <!-- // Move -->
+
+                            <span class="saving"><img src="../../../assets/images/general/spinner-16x16.gif" width="16" height="16" alt="Saving&hellip;"></span>
+                            <!-- // Saving -->
+                        </div>
+                        <div class="stats">
+                            <ul class="list list-horizontal">
+                                <li>
+                                    <a href="#" title="Collections"><span class="icon fa fa-copy" aria-hidden="true"></span> 34</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Favourites"><span class="icon fa fa-heart"></span> 102</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Shares"><span class="icon fa fa-share-square-o"></span> 972</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- // Stats -->
+                    </li>
+                    <li data-selected="false" data-hidden="true" class="is-hidden">
+                        <div class="photo">
+                            <img src="../../../assets/images/content/photos/photo-400x400.jpg" alt="Title of the Photo">
+                            <!-- // Photo -->
+
+                            <span class="title">IMG_1727_1727_1727.JPG</span>
+                            <!-- // Title -->
+
+                            <span class="icon move fa fa-arrows" title="Move" aria-hidden="true"></span>
+                            <!-- // Move -->
+
+                            <span class="saving"><img src="../../../assets/images/general/spinner-16x16.gif" width="16" height="16" alt="Saving&hellip;"></span>
+                            <!-- // Saving -->
+
+                            <span class="icon status fa fa-eye-slash" title="Hidden by Client" aria-hidden="true"></span>
+                            <!-- // Status -->
+                        </div>
+                        <div class="stats">
+                            <ul class="list list-horizontal">
+                                <li>
+                                    <a href="#" title="Collections"><span class="icon fa fa-copy" aria-hidden="true"></span> 34</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Favourites"><span class="icon fa fa-heart"></span> 102</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Shares"><span class="icon fa fa-share-square-o"></span> 972</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- // Stats -->
+                    </li>
+                    <li data-selected="false" data-hidden="true" class="is-hidden">
+                        <div class="photo">
+                            <img src="../../../assets/images/content/photos/photo-370x480.jpg" alt="Title of the Photo">
+                            <!-- // Photo -->
+
+                            <span class="title">IMG_1727_1727_1727.JPG</span>
+                            <!-- // Title -->
+
+                            <span class="icon move fa fa-arrows" title="Move" aria-hidden="true"></span>
+                            <!-- // Move -->
+
+                            <span class="saving"><img src="../../../assets/images/general/spinner-16x16.gif" width="16" height="16" alt="Saving&hellip;"></span>
+                            <!-- // Saving -->
+
+                            <span class="icon status fa fa-eye-slash" title="Hidden by Client &amp; You" aria-hidden="true"></span>
+                            <!-- // Status -->
+                        </div>
+                        <div class="stats">
+                            <ul class="list list-horizontal">
+                                <li>
+                                    <a href="#" title="Collections"><span class="icon fa fa-copy" aria-hidden="true"></span> 34</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Favourites"><span class="icon fa fa-heart"></span> 102</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Shares"><span class="icon fa fa-share-square-o"></span> 972</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- // Stats -->
+                    </li>
+                    <li data-selected="false">
+                        <div class="photo">
+                            <img src="../../../assets/images/content/photos/photo-320x160.jpg" alt="Title of the Photo">
+                            <!-- // Photo -->
+
+                            <span class="title">IMG_1727_1727_1727.JPG</span>
+                            <!-- // Title -->
+
+                            <span class="icon move fa fa-arrows" title="Move" aria-hidden="true"></span>
+                            <!-- // Move -->
+
+                            <span class="saving"><img src="../../../assets/images/general/spinner-16x16.gif" width="16" height="16" alt="Saving&hellip;"></span>
+                            <!-- // Saving -->
+                        </div>
+                        <div class="stats">
+                            <ul class="list list-horizontal">
+                                <li>
+                                    <a href="#" title="Collections"><span class="icon fa fa-copy" aria-hidden="true"></span> 34</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Favourites"><span class="icon fa fa-heart"></span> 102</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Shares"><span class="icon fa fa-share-square-o"></span> 972</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- // Stats -->
+                    </li>
+                    <li data-selected="false">
+                        <div class="photo">
+                            <img src="../../../assets/images/content/photos/photo-400x400.jpg" alt="Title of the Photo">
+                            <!-- // Photo -->
+
+                            <span class="title">IMG_1727_1727_1727.JPG</span>
+                            <!-- // Title -->
+
+                            <span class="icon move fa fa-arrows" title="Move" aria-hidden="true"></span>
+                            <!-- // Move -->
+
+                            <span class="saving"><img src="../../../assets/images/general/spinner-16x16.gif" width="16" height="16" alt="Saving&hellip;"></span>
+                            <!-- // Saving -->
+                        </div>
+                        <div class="stats">
+                            <ul class="list list-horizontal">
+                                <li>
+                                    <a href="#" title="Collections"><span class="icon fa fa-copy" aria-hidden="true"></span> 34</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Favourites"><span class="icon fa fa-heart"></span> 102</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Shares"><span class="icon fa fa-share-square-o"></span> 972</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- // Stats -->
+                    </li>
+                    <li data-selected="false">
+                        <div class="photo">
+                            <img src="../../../assets/images/content/photos/photo-270x480.jpg" alt="Title of the Photo">
+                            <!-- // Photo -->
+
+                            <span class="title">IMG_1727_1727_1727.JPG</span>
+                            <!-- // Title -->
+
+                            <span class="icon move fa fa-arrows" title="Move" aria-hidden="true"></span>
+                            <!-- // Move -->
+
+                            <span class="saving"><img src="../../../assets/images/general/spinner-16x16.gif" width="16" height="16" alt="Saving&hellip;"></span>
+                            <!-- // Saving -->
+                        </div>
+                        <div class="stats">
+                            <ul class="list list-horizontal">
+                                <li>
+                                    <a href="#" title="Collections"><span class="icon fa fa-copy" aria-hidden="true"></span> 34</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Favourites"><span class="icon fa fa-heart"></span> 102</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Shares"><span class="icon fa fa-share-square-o"></span> 972</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- // Stats -->
+                    </li>
+                    <li data-selected="false">
+                        <div class="photo">
+                            <img src="../../../assets/images/content/photos/photo-620x620.jpg" alt="Title of the Photo">
+                            <!-- // Photo -->
+
+                            <span class="title">IMG_1727_1727_1727.JPG</span>
+                            <!-- // Title -->
+
+                            <span class="icon move fa fa-arrows" title="Move" aria-hidden="true"></span>
+                            <!-- // Move -->
+
+                            <span class="saving"><img src="../../../assets/images/general/spinner-16x16.gif" width="16" height="16" alt="Saving&hellip;"></span>
+                            <!-- // Saving -->
+                        </div>
+                        <div class="stats">
+                            <ul class="list list-horizontal">
+                                <li>
+                                    <a href="#" title="Collections"><span class="icon fa fa-copy" aria-hidden="true"></span> 34</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Favourites"><span class="icon fa fa-heart"></span> 102</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Shares"><span class="icon fa fa-share-square-o"></span> 972</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- // Stats -->
+                    </li>
+                    <li data-selected="false">
+                        <div class="photo">
+                            <img src="../../../assets/images/content/photos/photo-400x220.jpg" alt="Title of the Photo">
+                            <!-- // Photo -->
+
+                            <span class="title">IMG_1727_1727_1727.JPG</span>
+                            <!-- // Title -->
+
+                            <span class="icon move fa fa-arrows" title="Move" aria-hidden="true"></span>
+                            <!-- // Move -->
+
+                            <span class="saving"><img src="../../../assets/images/general/spinner-16x16.gif" width="16" height="16" alt="Saving&hellip;"></span>
+                            <!-- // Saving -->
+                        </div>
+                        <div class="stats">
+                            <ul class="list list-horizontal">
+                                <li>
+                                    <a href="#" title="Collections"><span class="icon fa fa-copy" aria-hidden="true"></span> 34</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Favourites"><span class="icon fa fa-heart"></span> 102</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Shares"><span class="icon fa fa-share-square-o"></span> 972</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- // Stats -->
+                    </li>
+                    <li data-selected="false" data-hidden="true" class="is-hidden">
+                        <div class="photo">
+                            <img src="../../../assets/images/content/photos/photo-400x400.jpg" alt="Title of the Photo">
+                            <!-- // Photo -->
+
+                            <span class="title">IMG_1727_1727_1727.JPG</span>
+                            <!-- // Title -->
+
+                            <span class="icon move fa fa-arrows" title="Move" aria-hidden="true"></span>
+                            <!-- // Move -->
+
+                            <span class="saving"><img src="../../../assets/images/general/spinner-16x16.gif" width="16" height="16" alt="Saving&hellip;"></span>
+                            <!-- // Saving -->
+
+                            <span class="icon status fa fa-eye-slash" title="Hidden by Client" aria-hidden="true"></span>
+                            <!-- // Status -->
+                        </div>
+                        <div class="stats">
+                            <ul class="list list-horizontal">
+                                <li>
+                                    <a href="#" title="Collections"><span class="icon fa fa-copy" aria-hidden="true"></span> 34</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Favourites"><span class="icon fa fa-heart"></span> 102</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Shares"><span class="icon fa fa-share-square-o"></span> 972</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- // Stats -->
+                    </li>
+                    <li data-selected="false" data-hidden="true" class="is-hidden">
+                        <div class="photo">
+                            <img src="../../../assets/images/content/photos/photo-370x480.jpg" alt="Title of the Photo">
+                            <!-- // Photo -->
+
+                            <span class="title">IMG_1727_1727_1727.JPG</span>
+                            <!-- // Title -->
+
+                            <span class="icon move fa fa-arrows" title="Move" aria-hidden="true"></span>
+                            <!-- // Move -->
+
+                            <span class="saving"><img src="../../../assets/images/general/spinner-16x16.gif" width="16" height="16" alt="Saving&hellip;"></span>
+                            <!-- // Saving -->
+
+                            <span class="icon status fa fa-eye-slash" title="Hidden by Client &amp; You" aria-hidden="true"></span>
+                            <!-- // Status -->
+                        </div>
+                        <div class="stats">
+                            <ul class="list list-horizontal">
+                                <li>
+                                    <a href="#" title="Collections"><span class="icon fa fa-copy" aria-hidden="true"></span> 34</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Favourites"><span class="icon fa fa-heart"></span> 102</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Shares"><span class="icon fa fa-share-square-o"></span> 972</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- // Stats -->
+                    </li>
+                    <li data-selected="false">
+                        <div class="photo">
+                            <img src="../../../assets/images/content/photos/photo-320x160.jpg" alt="Title of the Photo">
+                            <!-- // Photo -->
+
+                            <span class="title">IMG_1727_1727_1727.JPG</span>
+                            <!-- // Title -->
+
+                            <span class="icon move fa fa-arrows" title="Move" aria-hidden="true"></span>
+                            <!-- // Move -->
+
+                            <span class="saving"><img src="../../../assets/images/general/spinner-16x16.gif" width="16" height="16" alt="Saving&hellip;"></span>
+                            <!-- // Saving -->
+                        </div>
+                        <div class="stats">
+                            <ul class="list list-horizontal">
+                                <li>
+                                    <a href="#" title="Collections"><span class="icon fa fa-copy" aria-hidden="true"></span> 34</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Favourites"><span class="icon fa fa-heart"></span> 102</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Shares"><span class="icon fa fa-share-square-o"></span> 972</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- // Stats -->
+                    </li>
+                    <li data-selected="false">
+                        <div class="photo">
+                            <img src="../../../assets/images/content/photos/photo-400x400.jpg" alt="Title of the Photo">
+                            <!-- // Photo -->
+
+                            <span class="title">IMG_1727_1727_1727.JPG</span>
+                            <!-- // Title -->
+
+                            <span class="icon move fa fa-arrows" title="Move" aria-hidden="true"></span>
+                            <!-- // Move -->
+
+                            <span class="saving"><img src="../../../assets/images/general/spinner-16x16.gif" width="16" height="16" alt="Saving&hellip;"></span>
+                            <!-- // Saving -->
+                        </div>
+                        <div class="stats">
+                            <ul class="list list-horizontal">
+                                <li>
+                                    <a href="#" title="Collections"><span class="icon fa fa-copy" aria-hidden="true"></span> 34</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Favourites"><span class="icon fa fa-heart"></span> 102</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Shares"><span class="icon fa fa-share-square-o"></span> 972</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- // Stats -->
+                    </li>
+                    <li data-selected="false">
+                        <div class="photo">
+                            <img src="../../../assets/images/content/photos/photo-270x480.jpg" alt="Title of the Photo">
+                            <!-- // Photo -->
+
+                            <span class="title">IMG_1727_1727_1727.JPG</span>
+                            <!-- // Title -->
+
+                            <span class="icon move fa fa-arrows" title="Move" aria-hidden="true"></span>
+                            <!-- // Move -->
+
+                            <span class="saving"><img src="../../../assets/images/general/spinner-16x16.gif" width="16" height="16" alt="Saving&hellip;"></span>
+                            <!-- // Saving -->
+                        </div>
+                        <div class="stats">
+                            <ul class="list list-horizontal">
+                                <li>
+                                    <a href="#" title="Collections"><span class="icon fa fa-copy" aria-hidden="true"></span> 34</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Favourites"><span class="icon fa fa-heart"></span> 102</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Shares"><span class="icon fa fa-share-square-o"></span> 972</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- // Stats -->
+                    </li>
+                    <li data-selected="false">
+                        <div class="photo">
+                            <img src="../../../assets/images/content/photos/photo-620x620.jpg" alt="Title of the Photo">
+                            <!-- // Photo -->
+
+                            <span class="title">IMG_1727_1727_1727.JPG</span>
+                            <!-- // Title -->
+
+                            <span class="icon move fa fa-arrows" title="Move" aria-hidden="true"></span>
+                            <!-- // Move -->
+
+                            <span class="saving"><img src="../../../assets/images/general/spinner-16x16.gif" width="16" height="16" alt="Saving&hellip;"></span>
+                            <!-- // Saving -->
+                        </div>
+                        <div class="stats">
+                            <ul class="list list-horizontal">
+                                <li>
+                                    <a href="#" title="Collections"><span class="icon fa fa-copy" aria-hidden="true"></span> 34</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Favourites"><span class="icon fa fa-heart"></span> 102</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Shares"><span class="icon fa fa-share-square-o"></span> 972</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- // Stats -->
+                    </li>
+                </ol>
+                <!-- // Photos -->
+            </div>
+            <!-- // Contents -->
+
+            <div class="panel">
+                <div class="module">
+                    <div class="image image-bordered">
+                        <img src="../../../assets/images/content/photos/photo-200x160.jpg" title="Title of the Photo" alt="Title of the Photo">
+                        <div class="caption">Cover Image</div>
+                        <a href="view.html" class="action action-icon"><span class="icon fa fa-trash-o" role="aria-hidden"></span></a>
+                    </div>
+                    <!-- // Cover Image -->
+                </div>
+                <!-- // Module -->
+
+                <div class="module">
+                    <div class="collections">
+                        <header class="header">
+                            <h6 class="zeta">Collections</h6>
+                        </header>
+                        <ol class="list list-collections">
+                            <li>
+                                <a href="view.html">Client</a><b class="count">524</b>
+                                <a href="view.html" class="add" data-component="modal" data-modal-action="open" data-modal-id="collection-create"><span class="icon fa fa-plus-square-o" aria-hidden="true"></span></a>
+                                <ol class="list list-vertical">
+                                    <li class="is-placeholder"></li>
+                                    <li class="is-active"><span class="icon icon-move fa fa-bars" aria-hidden="true"></span><a href="view.html">Sed ut perspiciatis unde</a><b class="count">27</b><a href="view.html"><span class="icon icon-delete fa fa-trash-o" aria-hidden="true"></span></a></li>
+                                    <li class="is-saving"><span class="icon icon-move fa fa-bars" aria-hidden="true"></span><a href="view.html">Duis aute irure dolor in</a><b class="count">421</b><a href="view.html"><span class="icon icon-delete fa fa-trash-o" aria-hidden="true"></span></a></li>
+                                    <li class="is-default"><a href="view.html">Excepteur sint occaecat</a><b class="count">36</b><a href="view.html"><span class="icon icon-delete fa fa-trash-o" aria-hidden="true"></span></a></li>
+                                    <li><span class="icon icon-move fa fa-bars" aria-hidden="true"></span><a href="view.html">Sed ut perspiciatis unde</a><b class="count">27</b><a href="view.html"><span class="icon icon-delete fa fa-trash-o" aria-hidden="true"></span></a></li>
+                                </ol>
+                            </li>
+                            <li>
+                                <a href="view.html">Event<b class="count">524</b></a>
+                                <a href="view.html" class="add" data-component="modal" data-modal-action="open" data-modal-id="collection-assign"><span class="icon fa fa-plus-square-o" aria-hidden="true"></span></a>
+                                <ol class="list list-vertical">
+                                    <li><span class="icon icon-move fa fa-bars" aria-hidden="true"></span><a href="view.html">Sed ut perspiciatis unde</a><b class="count">27</b><a href="view.html"><span class="icon icon-delete fa fa-trash-o" aria-hidden="true"></span></a></li>
+                                    <li><span class="icon icon-move fa fa-bars" aria-hidden="true"></span><a href="view.html">Duis aute irure dolor in</a><b class="count">421</b><a href="view.html"><span class="icon icon-delete fa fa-trash-o" aria-hidden="true"></span></a></li>
+                                    <li><span class="icon icon-move fa fa-bars" aria-hidden="true"></span><a href="view.html">Excepteur sint occaecat</a><b class="count">36</b><a href="view.html"><span class="icon icon-delete fa fa-trash-o" aria-hidden="true"></span></a></li>
+                                    <li><span class="icon icon-move fa fa-bars" aria-hidden="true"></span><a href="view.html">Sed ut perspiciatis unde</a><b class="count">27</b><a href="view.html"><span class="icon icon-delete fa fa-trash-o" aria-hidden="true"></span></a></li>
+                                </ol>
+                            </li>
+                            <li>
+                                <a href="view.html">Professional<b class="count">524</b></a>
+                                <a href="view.html" class="add" data-component="modal" data-modal-action="open" data-modal-id="collection-assign"><span class="icon fa fa-plus-square-o" aria-hidden="true"></span></a>
+                                <ol class="list list-vertical">
+                                    <li><span class="icon icon-move fa fa-bars" aria-hidden="true"></span><a href="view.html">Sed ut perspiciatis unde</a><b class="count">27</b><a href="view.html"><span class="icon icon-delete fa fa-trash-o" aria-hidden="true"></span></a></li>
+                                    <li><span class="icon icon-move fa fa-bars" aria-hidden="true"></span><a href="view.html">Duis aute irure dolor in</a><b class="count">421</b><a href="view.html"><span class="icon icon-delete fa fa-trash-o" aria-hidden="true"></span></a></li>
+                                    <li><span class="icon icon-move fa fa-bars" aria-hidden="true"></span><a href="view.html">Excepteur sint occaecat</a><b class="count">36</b><a href="view.html"><span class="icon icon-delete fa fa-trash-o" aria-hidden="true"></span></a></li>
+                                    <li><span class="icon icon-move fa fa-bars" aria-hidden="true"></span><a href="view.html">Sed ut perspiciatis unde</a><b class="count">27</b><a href="view.html"><span class="icon icon-delete fa fa-trash-o" aria-hidden="true"></span></a></li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </div>
+                    <!-- // Collections -->
+                </div>
+                <!-- // Module -->
+
+                <!--
+
+                <div class="module">
+                    <div class="collections">
+                        <header class="header">
+                            <h6 class="zeta">Collections</h6>
+                            <a href="view.html">Add</a>
+                        </header>
+                        <p class="small">You haven&rsquo;t added any collections yet.</p>
+                    </div>
+                </div>
+
+                -->
+
+                <div class="module">
+                    <h6 class="module-heading zeta">Progress<span class="icon fa fa-question-circle" data-component="tooltip" data-placement="top" title="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." aria-hidden="true"></span></h6>
+                    <div class="percentage">
+                        <div class="completed" style="width: 66%"><span class="value">66%</span></div>
+                        <!--
+                        <div class="completed empty" style="width: 0%"><span class="value">0%</span></div>
+                        -->
+                    </div>
+                    <!-- // Percentage -->
+
+                    <ol class="list list-steps">
+                        <li><span class="icon green fa fa-check" aria-hidden="true"></span>Lorem ipsum dolor</li>
+                        <li><span class="icon green fa fa-check" aria-hidden="true"></span>Adipisicing elit</li>
+                        <li><span class="icon red fa fa-times" aria-hidden="true"></span>Tempor incididunt</li>
+                    </ol>
+                    <!-- // Steps -->
+                </div>
+                <!-- // Module -->
+            </div>
+            <!-- // Panel -->
+        </div>
+    </main>
+    <!-- // Main -->
+
+    <div class="modal fade" id="collection-create" tabindex="-1" role="dialog" aria-labelledby="modal-title">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <form class="form" action="view.html" method="post">
+                    <div class="modal-header">
+                        <div class="modal-title" id="modal-title">Create a collection</div>
+
+                        <button class="modal-close" type="button" data-dismiss="modal" aria-label="Close">
+                            <span class="icon fa fa-times" aria-hidden="true">
+                                <span class="visuallyhidden">Close</span>
+                            </span>
+                        </button>
+                    </div>
+
+                    <form id="form-collection-create" name="form-collection-create" method="post" action="view.html" class="form">
+                        <div class="modal-body">
+                            <p><strong>What is an event collection?</strong> It is used to collate images that form the story of the day. <a href="view.html">Find out more</a>.</p>
+
+                            <label for="name" class="label">Name <abbr title="Required" class="red">*</abbr></label>
+                            <input type="text" id="name" name="name" class="input" value="" placeholder="e.g. Getting Ready" required="required" aria-required="true">
+                            <!-- // Name -->
+                        </div>
+
+                        <div class="modal-footer">
+                            <div class="button-group right">
+                                <input type="submit" id="submit" class="btn btn-large btn-primary right" value="Create">
+                                <!-- // Submit -->
+                            </div>
+                        </div>
+                    </form>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Modal: Add a Collection -->
+
+    <div class="modal fade" id="collection-assign" tabindex="-1" role="dialog" aria-labelledby="modal-title-2">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <form class="form" action="view.html" method="post">
+                    <div class="modal-header">
+                        <div class="modal-title" id="modal-title-2">Collections</div>
+                        <p class="modal-synopsis">The <b>2</b> selected images will be assigned to the following collections:</p>
+
+                        <button class="modal-close" type="button" data-dismiss="modal" aria-label="Close">
+                            <span class="icon fa fa-times" aria-hidden="true">
+                                <span class="visuallyhidden">Close</span>
+                            </span>
+                        </button>
+                    </div>
+
+                    <form id="form-collections" name="form-collections" method="post" action="view.html" class="form">
+                        <div class="modal-body">
+                            <fieldset class="fieldset fieldset-border">
+                                <legend class="legend">Event</legend>
+                                <label for="radio-1" class="label label-option label-inline">
+                                    <input type="radio" id="radio-1" name="radio-1" value="1"> Single Image Collection
+                                </label>
+                                <label for="radio-2" class="label label-option label-inline">
+                                    <input type="radio" id="radio-2" name="radio-1" value="2"> Getting Ready
+                                </label>
+                                <label for="radio-3" class="label label-option label-inline">
+                                    <input type="radio" id="radio-3" name="radio-1" value="3"> Bride &amp; Groom
+                                </label>
+                                <label for="radio-4" class="label label-option label-inline">
+                                    <input type="radio" id="radio-4" name="radio-1" value="4"> Reception2
+                                </label>
+                                <label for="radio-5" class="label label-option label-inline">
+                                    <input type="radio" id="radio-5" name="radio-1" value="5"> Test event
+                                </label>
+                            </fieldset>
+                            <fieldset class="fieldset fieldset-border">
+                                <legend class="legend">Client</legend>
+                                <label for="checkbox-b-1" class="label label-option label-inline">
+                                    <input type="checkbox" id="checkbox-b-1" value="1"> Wedding Album
+                                </label>
+                                <label for="checkbox-b-2" class="label label-option label-inline">
+                                    <input type="checkbox" id="checkbox-b-2" value="2"> Granny Album
+                                </label>
+                            </fieldset>
+                            <fieldset class="fieldset fieldset-border">
+                                <legend class="legend">Event</legend>
+                                <label for="checkbox-c-1" class="label label-option label-inline">
+                                    <input type="checkbox" id="checkbox-c-1" value="1"> Cake Makers &amp; Bakers
+                                </label>
+                                <label for="checkbox-c-2" class="label label-option label-inline">
+                                    <input type="checkbox" id="checkbox-c-2" value="2"> Dress Designers
+                                </label>
+                                <label for="checkbox-c-3" class="label label-option label-inline">
+                                    <input type="checkbox" id="checkbox-c-3" value="3"> Jewelry
+                                </label>
+                                <label for="checkbox-c-4" class="label label-option label-inline">
+                                    <input type="checkbox" id="checkbox-c-4" value="4"> Shoes
+                                </label>
+                            </fieldset>
+                        </div>
+
+                        <div class="modal-footer">
+                            <div class="button-group right">
+                                <input type="submit" id="submit-2" class="btn btn-large btn-primary right" value="Assign">
+                                <!-- // Submit -->
+                            </div>
+                        </div>
+                    </form>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Modal: Assign to Collections -->
+
+    <!-- JavaScript -->
+    <script src="../../../assets/js/vendor/jquery.js"></script>
+    <script src="../../../assets/js/plugins.js?v=0.0.0"></script>
+    <script src="../../../assets/js/main.js?v=0.0.0"></script>
+    <script>main.init();</script>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+    <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+    </script>
+</body>
+</html>

@@ -1,0 +1,312 @@
+/* ==========================================================================
+   Forms: form, fieldset, label, input, textarea, select, option
+   ========================================================================== */
+
+/* LESS: Colours
+   ========================================================================== */
+
+@color-black: #000;
+@color-charcoal: #292929;
+@color-grey-dark: #666;
+@color-grey: #808080;
+@color-silver: #ccc;
+@color-silver-blue: #e9eaeb;
+@color-silver-light: #eee;
+@color-white-dark: #f8f8f8;
+@color-white: #fff;
+@color-cream: #ffffcc;
+@color-amber: #f0b323;
+@color-cherry: #ce0058;
+@color-red: #d50032;
+@color-plum: #a15a95;
+@color-heather: #7d55c7;
+@color-aqua: #00a9ce;
+@color-sapphire: #06038d;
+@color-navy: #0d2c56;
+
+/* LESS: Font families */
+
+@font-family-arial: Arial, sans-serif;
+@font-family-georgia: Georgia, sans-serif;
+@font-family-lucida: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+
+/* LESS: Font weights */
+
+@font-weight-light: 200;
+@font-weight-normal: 400;
+@font-weight-bold: 700;
+
+/*
+ * Allow only vertical resizing of textareas
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* Labels */
+
+label {
+    font-size: 13px;
+}
+
+/* Inputs */
+
+input, select {
+    font-size: 13px;
+}
+
+/* Buttons */
+
+button, input[type="submit"] {
+    font-size: 13px;
+}
+
+/* Search
+   ========================================================================== */
+
+form.search {
+    float: right;
+
+    input[type="text"] {
+        border: 1px @color-white solid;
+        color: @color-black;
+        font: 13px/1.3 @font-family-arial;
+        float: left;
+        height: 20px;
+        margin: 4px 4px 0 0;
+        padding: 0 6px;
+        width: 146px;
+
+        &:focus {
+            border: 1px @color-charcoal solid;
+            outline: none;
+        }
+    }
+
+    input[type="submit"] {
+        background: @color-charcoal url('../images/icons/icon-search.png') center center no-repeat;
+        border: 0;
+        float: left;
+        height: 30px;
+        width: 30px;
+    }
+}
+
+/* Comment
+   ========================================================================== */
+
+form.comment {
+    margin: 0 0 20px 0;
+
+    label {
+        display: block;
+        margin: 0 0 15px 0;
+
+        input[type="text"] {
+            background-color: @color-white-dark;
+            border: 1px @color-silver solid;
+            color: @color-grey-dark;
+            padding: 8px;
+            width: 225px;
+
+            &:focus {
+                border: 1px @color-grey solid;
+                outline: none;
+            }
+        }
+
+        textarea {
+            background-color: @color-white-dark;
+            border: 1px @color-silver solid;
+            color: @color-grey-dark;
+            height: 206px;
+            padding: 8px;
+            width: 409px;
+
+            &:focus {
+                border: 1px @color-grey solid;
+                outline: none;
+            }
+        }
+    }
+
+    span.required {
+        color: @color-red;
+        font-size: 13px;
+    }
+
+    // Captcha
+    fieldset.captcha {
+        border: 0;
+        margin: 0 0 15px 0;
+        overflow: hidden;
+        padding: 0;
+
+        #captcha {
+            border: 1px @color-silver solid;
+            float: left;
+
+            img {
+                display: block;
+            }
+        }
+
+        label {
+            color: @color-black;
+            float: left;
+            font-size: 11px;
+            margin: 0 0 0 8px;
+
+            input[type="text"] {
+                display: block;
+                margin: 4px 0 0 0;
+                padding: 3px 5px;
+                width: 101px;
+            }
+        }
+
+        span.required {
+            padding: 0 0 0 4px;
+        }
+    }
+
+    input[type="submit"] {
+        .border-radius(3px);
+        border: 0;
+        color: @color-white;
+        font: 14px/1 @font-family-arial;
+        font-weight: @font-weight-bold;
+        padding: 10px 15px;
+
+        &:focus,
+        &:hover {
+            border: 1px @color-charcoal solid;
+            outline: 0;
+            padding: 9px 14px;
+        }
+    }
+}
+
+// Amber
+.amber {
+
+    input[type="submit"] {
+        background-color: @color-amber;
+    }
+}
+
+// Aqua
+.aqua {
+
+    input[type="submit"] {
+        background-color: @color-aqua;
+    }
+}
+
+// Cherry
+.cherry {
+
+    input[type="submit"] {
+        background-color: @color-cherry;
+    }
+}
+
+/* Search Results
+   ========================================================================== */
+
+#number-of-results-form {
+    margin: 6px 0;
+
+    label {
+        color: @color-grey;
+
+        select {
+            border: 1px @color-silver solid;
+            margin: 0 0 0 10px;
+            padding: 5px;
+        }
+    }
+}
+
+/* Style Guide
+   ========================================================================== */
+
+.style-guide {
+
+    label {
+
+        input[type="email"],
+        input[type="password"],
+        input[type="text"],
+        select {
+            padding: 4px;
+        }
+    }
+}
+
+/* LESS: Mixins
+   ========================================================================== */
+
+.border-radius(@radius: 15px) {
+    -webkit-border-radius: @radius;
+       -moz-border-radius: @radius;
+         -o-border-radius: @radius;
+            border-radius: @radius;
+}
+
+.box-shadow(@arguments) {
+    -webkit-box-shadow: @arguments;
+       -moz-box-shadow: @arguments;
+         -o-box-shadow: @arguments;
+            box-shadow: @arguments;
+}
+
+.box-sizing(@arguments) {
+    -webkit-box-sizing: @arguments;
+       -moz-box-sizing: @arguments;
+         -o-box-sizing: @arguments;
+            box-sizing: @arguments;
+}
+
+.inner-shadow(@horizontal: 0, @vertical: 1px, @blur: 2px, @alpha: 0.4) {
+    -webkit-box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+       -moz-box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+         -o-box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+            box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+}
+
+.opacity(@opacity: 0.5) {
+    -webkit-opacity: @opacity;
+       -moz-opacity: @opacity;
+         -o-opacity: @opacity;
+            opacity: @opacity;
+}
+
+.rotation(@deg: 5deg) {
+    -webkit-transform: rotate(@deg);
+       -moz-transform: rotate(@deg);
+         -o-transform: rotate(@deg);
+            transform: rotate(@deg);
+}
+
+.scale(@ratio: 1.5) {
+    -webkit-transform: scale(@ratio);
+       -moz-transform: scale(@ratio);
+         -o-transform: scale(@ratio);
+            transform: scale(@ratio);
+}
+
+.transform(@arguments) {
+    -webkit-transform: @arguments;
+       -moz-transform: @arguments;
+        -ms-transform: @arguments;
+         -o-transform: @arguments;
+}
+
+.transition(@arguments) {
+    -webkit-transition: @arguments;
+       -moz-transition: @arguments;
+         -o-transition: @arguments;
+            transition: @arguments;
+}

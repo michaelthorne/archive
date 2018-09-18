@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>(Corporate) Checkout – OrderIn</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+
+    <!-- Twitter Card -->
+    <meta property="twitter:title" content="" />
+    <meta property="twitter:description" content="" />
+    <meta property="twitter:image" content="" />
+    <meta property="twitter:url" content="" />
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:site" content="" />
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,700" />
+
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="../../assets/css/style.css?v=2.1.2" />
+
+    <!--[if lt IE 9]>
+    <script src="../../assets/js/vendor/polyfills.js"></script>
+    <![endif]-->
+</head>
+<body class="is-corporate" data-controller="site">
+    <!--[if lt IE 9]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/?locale=en">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div class="l-canvas">
+        <header class="header header--primary" role="banner">
+            <div class="l-wrapper">
+                <button class="btn btn--text btn--toggle" data-action="nav-toggle"><span class="icon fa fa-bars" aria-hidden="true"></span></button>
+
+                <a href="corporate-home.html" class="logo">
+                    <img src="../../assets/images/logos/logo-orderin-208x50.png" width="208" height="50" alt="OrderIn" />
+                </a>
+
+                <nav class="nav" role="navigation" data-component="nav">
+                    <ol class="list">
+                        <li class="nav__label">Hi, Dinesh</li>
+                        <li data-drop-down="true">
+                            <a href="../account/profile.html"><span class="icon fa fa-user"></span>My Account</a>
+                            <ol class="list">
+                                <li class="is-label"><a><span class="orange-light">My Balance:</span> <b>R361.00</b></a></li>
+                                <li><a href="../account/profile.html">My Profile</a></li>
+                                <li><a href="../account/orders.html">My Orders</a></li>
+                                <li><a href="../account/address-book.html">Address Book</a></li>
+                                <li><a href="../account/manage-allocations.html">Manage Allocations</a></li>
+                                <li><a href="../account/top-up-account.html">Top Up Account</a></li>
+                            </ol>
+                        </li>
+                        <li><a href="corporate-home.html"><span class="icon fa fa-power-off"></span>Sign Out</a></li>
+                    </ol>
+                </nav>
+
+                <div class="cart cart--count">
+                    <a href="corporate-cart.html" class="cart__link">
+                        <span class="icon fa fa-shopping-cart" aria-hidden="true"></span>
+                        <div class="cart__count">3</div>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <main class="l-main" role="main">
+            <div class="l-wrapper">
+                <div class="steps">
+                    <ol class="list">
+                        <li><span class="icon fa fa-map-marker" aria-hidden="true"></span><a href="corporate-checkout-participants.html">Enter Your Address</a></li>
+                        <li><span class="icon fa fa-home" aria-hidden="true"></span><a href="corporate-checkout-participants.html">Pick a Restaurant</a></li>
+                        <li><span class="icon fa fa-cutlery" aria-hidden="true"></span><a href="corporate-checkout-participants.html">Order Food</a></li>
+                        <li class="is-active"><span class="icon fa fa-shopping-cart" aria-hidden="true"></span>Checkout</li>
+                    </ol>
+                </div>
+
+                <form id="form-checkout" action="../order-confirmation.html" method="post">
+                    <div class="l-section l-section--narrow l-section--cart">
+                        <div id="cart" class="cart cart--checkout">
+                            <div class="cart__title">My Order</div>
+                            <div class="cart__description">
+                                <p class="cart__description-text"><b>#4475758</b> from <b>Col’cacchio, Cavendish Square</b> for <b>Pickup</b>.</p>
+                                <a class="btn btn--silver btn--small" href="corporate-checkout-participants.html">Change to Delivery</a>
+                            </div>
+                            <div class="cart-items">
+                                <div class="cart-item">
+                                    <div class="cart-item__title">Grilled Calamari & Rocket</div>
+                                    <div class="cart-item__price">R142.00</div>
+                                    <a href="#" class="cart-item__remove" title="Remove"><span class="icon fa fa-times-circle" aria-hidden="true"></span></a>
+                                    <div class="cart-options">
+                                        <div class="cart-option">
+                                            <div class="cart-option__title">Whole wheat bread</div>
+                                            <div class="cart-option__price">R2.50</div>
+                                        </div>
+                                        <div class="cart-option">
+                                            <div class="cart-option__title">Toasted</div>
+                                            <div class="cart-option__price">R7.00</div>
+                                        </div>
+                                        <div class="cart-option">
+                                            <div class="cart-option__title">Seared Norwegian Salmon</div>
+                                            <div class="cart-option__price">R127.00</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart-item">
+                                    <div class="cart-item__title">Half Shell Mussels</div>
+                                    <div class="cart-item__price">R232.00</div>
+                                    <a href="#" class="cart-item__remove" title="Remove"><span class="icon fa fa-times-circle" aria-hidden="true"></span></a>
+                                </div>
+                                <div class="cart-item">
+                                    <div class="cart-item__title">Roasted Peppers & Artichokes Salad</div>
+                                    <div class="cart-item__price">R142.00</div>
+                                    <a href="#" class="cart-item__remove" title="Remove"><span class="icon fa fa-times-circle" aria-hidden="true"></span></a>
+                                    <div class="cart-options">
+                                        <div class="cart-option">
+                                            <div class="cart-option__title">Whole wheat bread</div>
+                                            <div class="cart-option__price">R2.50</div>
+                                        </div>
+                                        <div class="cart-option">
+                                            <div class="cart-option__title">Caramel toffee milkshake</div>
+                                            <div class="cart-option__price">R27.00</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart-totals">
+                                <div class="cart-total">
+                                    <div class="cart-total__label">Subtotal*</div>
+                                    <div class="cart-total__value">R978.00</div>
+                                </div>
+                                <div class="cart-total">
+                                    <div class="cart-total__label cart-total__label--input">Add Gratuity</div>
+                                    <div class="cart-total__value"><label for="gratuity" class="visuallyhidden">R</label><input class="input input--short" type="text" id="gratuity" name="gratuity" placeholder="R0.00" /></div>
+                                </div>
+                                <div class="cart-total">
+                                    <div class="cart-total__label"><b>Total</b></div>
+                                    <div class="cart-total__value"><b>R978.00</b></div>
+                                </div>
+                            </div>
+                            <div class="cart-checkout">
+                                <div class="cart-checkout__label">* Includes VAT</div>
+                            </div>
+                        </div>
+
+                        <div class="box box--bordered">
+                            <div class="box__title">Do you have a Promoter Code?</div>
+                            <p class="box__synopsis">Enter it below for a R20 discount on this order.</p>
+
+                            <label for="promoter-code" class="label">
+                                Code:
+                                <input class="input" type="text" id="promoter-code" name="promoter-code" maxlength="10" />
+                            </label>
+                            <div class="btn-group">
+                                <button type="button" id="redeem-code" class="btn btn--silver btn--small">Redeem Code</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="l-section l-section--narrow">
+                        <div class="box box--bordered">
+                            <div class="box__title">Delivery Information</div>
+
+                            <ol class="list list--details">
+                                <li><b>Name:</b> Dinesh Patel</li>
+                                <li><b>Restaurant:</b> Col’cacchio, Cavendish Square</li>
+                                <li><b>Est. Delivery Time:</b> 45 mins</li>
+                            </ol>
+
+                            <label for="address-1" class="label">
+                                Delivery Address:
+                                <input class="input" type="text" id="address-1" name="address-1" placeholder="Street number and name" maxlength="100" required="required" />
+                            </label>
+
+                            <label for="address-2" class="label">
+                                <input class="input" type="text" id="address-2" name="address-2" placeholder="Unit number and building name" maxlength="100" />
+                            </label>
+
+                            <label for="address-3" class="label">
+                                <input class="input" type="text" id="address-3" name="address-3" placeholder="Suburb" maxlength="100" required="required" />
+                            </label>
+
+                            <label for="contact_number" class="label">
+                                Contact Number:
+                                <input class="input" type="tel" id="contact_number" name="contact_number" maxlength="100" required="required" />
+                            </label>
+
+                            <label for="instructions" class="label">
+                                Delivery Instructions:
+                                <textarea class="input input--textarea" id="instructions" name="instructions" maxlength="100" placeholder="e.g. Ask security to call upon arrival…"></textarea>
+                            </label>
+
+                            <label for="save-address" class="label label--checkbox label--well">
+                                <input id="save-address" type="checkbox" name="save-address" value="1" data-action="toggle-visibility" data-parent-id="js-address-save" data-toggle-id="js-address-save" /> Save this address for future deliveries?
+                                <span class="checkbox"></span>
+                            </label>
+
+                            <div id="js-address-save" class="hidden">
+                                <label for="address-name" class="label">
+                                    Name of Address:
+                                    <input class="input" type="text" id="address-name" name="address-name" placeholder="e.g. Home" maxlength="20" required="required" data-required="true" />
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="box box--bordered">
+                            <div class="payment">
+                                <div class="payment__title">My Account</div>
+                                <div class="payment__synopsis">Please note at least one client code must be entered.</div>
+                                <div class="payment__synopsis">All fields left blank will be ignored.</div>
+                                <div class="payment__label">This Order:</div>
+                                <div class="payment__value orange-light">R124.00</div>
+
+                                <fieldset class="fieldset fieldset--separator">
+                                    <label class="label">Assign Client Code:</label>
+                                    <label for="client_code" class="label label--inline label--btn">
+                                        <input class="input input--inline" type="text" id="client_code" name="client_code" maxlength="20" required="required" />
+                                    </label>
+                                    <button class="btn btn--silver btn--small"><span class="icon fa fa-plus-circle" aria-hidden="true"></span>Add</button>
+
+                                    <div class="tags">
+                                        <div class="tag">2018 – Sanlam<a href="corporate-checkout-participants.html" title="Remove"><span class="icon fa fa-times-circle" aria-hidden="true"></span></a></div>
+                                    </div>
+                                </fieldset>
+
+                                <fieldset class="fieldset fieldset--separator">
+                                    <label class="label">Participants:</label>
+                                    <label for="participants" class="label label--inline label--btn">
+                                        <input class="input input--inline" type="text" id="participants" name="participants" maxlength="20" required="required" />
+                                    </label>
+                                    <button class="btn btn--silver btn--small"><span class="icon fa fa-plus-circle" aria-hidden="true"></span>Add</button>
+
+                                    <div class="tags">
+                                        <div class="tag">Nathan Fourie<a href="corporate-checkout-participants.html" title="Remove"><span class="icon fa fa-times-circle" aria-hidden="true"></span></a></div>
+                                        <div class="tag">Karl Smith<a href="corporate-checkout-participants.html" title="Remove"><span class="icon fa fa-times-circle" aria-hidden="true"></span></a></div>
+                                        <div class="tag">Jeanette De Villiers<a href="corporate-checkout-participants.html" title="Remove"><span class="icon fa fa-times-circle" aria-hidden="true"></span></a></div>
+                                    </div>
+                                </fieldset>
+
+                                <div class="btn-group">
+                                    <button class="btn btn--green" title="Get in my belly!"><span class="icon fa fa-shopping-cart" aria-hidden="true"></span>Checkout</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </main>
+
+        <footer class="footer footer--primary" role="contentinfo">
+            <div class="social">
+                <ol class="list">
+                    <li>
+                        <a href="https://www.facebook.com/orderin.za" target="_blank" title="Follow us on Facebook" class="facebook"><span class="icon fa fa-facebook-square" aria-hidden="true"></span></a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/OrderInSA" target="_blank" title="Follow us on Twitter" class="twitter"><span class="icon fa fa-twitter-square" aria-hidden="true"></span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.pinterest.com/order_in" target="_blank" title="Follow us on Pinterest" class="pinterest"><span class="icon fa fa-pinterest-square" aria-hidden="true"></span></a>
+                    </li>
+                    <li>
+                        <a href="http://www.instagram.com/orderin_sa" target="_blank" title="Follow us on Instagram" class="instagram"><span class="icon fa fa-instagram" aria-hidden="true"></span></a>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="sign-ups">
+                <div class="sign-up">
+                    <h6 class="sign-up__title">Sign up your company</h6>
+                    <p class="sign-up__text">With a corporate account, employees can order food quickly and easily.</p>
+                    <a href="../sign-up-corporate.html" class="btn btn--small"><span class="icon fa fa-caret-right"></span>Sign Up</a>
+                </div>
+                <div class="sign-up">
+                    <h6 class="sign-up__title">Add your restaurant to OrderIn!</h6>
+                    <p class="sign-up__text">Sign up with South Africa’s Premier Online food ordering service.</p>
+                    <a href="../sign-up-restaurant.html" class="btn btn--small"><span class="icon fa fa-caret-right"></span>Sign Up</a>
+                </div>
+            </div>
+
+            <div class="featured">
+                <h6 class="featured__label">As featured in …</h6>
+                <ol class="list">
+                    <li><img src="../../assets/images/logos/logo-forbes-85x25.png" width="85" height="25" alt="Forbes" /></li>
+                    <li><img src="../../assets/images/logos/logo-sunday-times-115x25.png" width="115" height="25" alt="Sunday Times" /></li>
+                    <li><img src="../../assets/images/logos/logo-techcentral-175x25.png" width="175" height="25" alt="TechCentral" /></li>
+                    <li><img src="../../assets/images/logos/logo-financial-mail-29x25.png" width="29" height="25" alt="Financial Mail" /></li>
+                    <li><img src="../../assets/images/logos/logo-finweek-94x25.png" width="94" height="25" alt="Finweek" /></li>
+                </ol>
+            </div>
+
+            <div class="contact">
+                <ol class="list">
+                    <li>
+                        <span class="icon fa fa-envelope" aria-hidden="true"></span><a href="mailto:customerservice@orderin.co.za">customerservice@orderin.co.za</a>
+                    </li>
+                    <li>
+                        <span class="icon fa fa-phone-square" aria-hidden="true"></span><a href="tel:+27212011155">+27 21 201 1155</a><small>(9 AM – 10 PM)</small>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="legal">
+                <ol class="list">
+                    <li>
+                        <p>© Copyright OrderIn (Pty) Ltd. All rights reserved.</p>
+                    </li>
+                    <li>
+                        <a href="../terms-and-conditions.html">Terms &amp; Conditions</a>
+                    </li>
+                </ol>
+                <div class="beta">Beta</div>
+            </div>
+        </footer>
+    </div>
+
+    <nav class="nav nav--vertical" role="navigation" data-component="nav-vertical">
+        <ol class="list">
+            <li class="nav__label nav__label--small">Hi, Dinesh</li>
+            <li class="nav__label"><span class="orange-light">My Balance:</span> <b>R361.00</b></li>
+            <li><a href="../account/profile.html">My Profile</a></li>
+            <li><a href="../account/orders.html">My Orders</a></li>
+            <li><a href="../account/address-book.html">Address Book</a></li>
+            <li><a href="../account/manage-allocations.html">Manage Allocations</a></li>
+            <li><a href="../account/top-up-account.html">Top Up Account</a></li>
+            <li><a href="corporate-home.html"><span class="icon fa fa-power-off"></span>Sign Out</a></li>
+        </ol>
+    </nav>
+
+    <!-- JavaScript -->
+    <script src="../../assets/js/script.js?v=2.1.2"></script>
+    <script>UTIL.init();</script>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site’s ID -->
+    <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+    </script>
+</body>
+</html>

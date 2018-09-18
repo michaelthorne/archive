@@ -1,0 +1,698 @@
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+/*
+ * Styling associated to font and associated decoration
+ */
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ */
+
+::-moz-selection {
+    background: @colour-orange;
+    color: @colour-white;
+    text-shadow: none;
+}
+
+::selection {
+    background: @colour-orange;
+    color: @colour-white;
+    text-shadow: none;
+}
+
+html {
+    color: @colour-grey-darkest;
+    font: 100%/1.5 @ff-titillium;
+}
+
+/* ==========================================================================
+   Custom
+   ========================================================================== */
+
+/* Fonts
+   ========================================================================== */
+
+/*
+ * Titillium
+ */
+
+.ff-titillium {
+    font-family: @ff-titillium;
+}
+
+/*
+ * Weights
+ */
+
+.fw-bold {
+    font-weight: @fw-bold;
+}
+
+.fw-semi-bold {
+    font-weight: @fw-semi-bold;
+}
+
+.fw-normal {
+    font-weight: @fw-normal;
+}
+
+/*
+ * Section
+ */
+
+.section {
+
+    // Content
+    .content-section {
+
+        li,
+        p {
+            line-height: 1.6;
+        }
+    }
+}
+
+/* Headings
+   ========================================================================== */
+
+// Alpha
+h1, .alpha {
+    font-size: 26px;
+    font-weight: @fw-bold;
+    line-height: 1.2;
+}
+
+// Beta
+h2, .beta {
+    font-size: 22px;
+    font-weight: @fw-semi-bold;
+    line-height: 1.2;
+}
+
+// Gamma
+h3, .gamma {
+    font-size: 18px;
+    font-weight: @fw-bold;
+    line-height: 1.2;
+}
+
+// Delta
+h4, .delta {
+    font-size: 16px;
+    font-weight: @fw-bold;
+    line-height: 1.2;
+}
+
+/* Anchors
+   ========================================================================== */
+
+a {
+    .transition(color 0.1s ease);
+}
+
+/* Paragraphs
+   ========================================================================== */
+
+p {
+
+    // Very Large
+    &.very-large {
+        font-size: 22px;
+        line-height: 1.4;
+    }
+
+    // Large
+    &.large {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    // Small
+    &.small {
+        font-size: 14px;
+    }
+
+    // Very Small
+    &.very-small {
+        font-size: 12px;
+        line-height: 1.2;
+    }
+
+    // Tiny
+    &.tiny {
+        font-size: 10px;
+        line-height: 1.1;
+    }
+
+    // Anchors
+    a {
+        color: @colour-orange;
+
+        &:focus,
+        &:hover {
+            color: @colour-orange-light;
+        }
+    }
+}
+
+/* Containers
+   ========================================================================== */
+
+/*
+ * Header
+ */
+
+.header {
+
+    // Call to Action
+    .call-to-action {
+
+        // Button
+        .btn {
+            font-size: 16px;
+            font-weight: @fw-bold;
+        }
+    }
+}
+
+/*
+ * Headline
+ */
+
+.headline {
+    text-align: center;
+}
+
+/* Lists
+   ========================================================================== */
+
+/*
+ * Definition
+ */
+
+dt {
+    font-weight: @fw-bold;
+}
+
+/*
+ * Colours
+ */
+
+.list-colours {
+
+    li {
+        text-align: center;
+
+        pre {
+            background-color: @colour-white;
+        }
+    }
+}
+
+/*
+ * Button
+ */
+
+.list-button {
+
+    li {
+
+        &:focus,
+        &:hover {
+
+            // Button
+            .btn {
+                .opacity(1);
+                outline: none;
+            }
+
+            // Textual details related for specific item
+            .list-button-details {
+                color: @colour-white;
+            }
+        }
+
+        // Textual details related for specific item
+        .list-button-details {
+            color: @colour-orange;
+            font-weight: @fw-bold;
+            text-decoration: none;
+            text-shadow: 1px 1px 1px @colour-grey-darkest; /* X, Y, Blur, Colour */
+        }
+    }
+}
+
+/*
+ * Icon
+ */
+
+.list-icon {
+
+    li {
+        color: @colour-white;
+        font-weight: @fw-bold;
+        text-shadow: 1px 1px 1px @colour-grey-darkest; /* X, Y, Blur, Colour */
+
+        // Icon
+        i {
+            color: @colour-orange;
+            font-size: 18px;
+        }
+
+        // Anchor
+        a {
+            color: @colour-orange;
+            text-decoration: none;
+            text-shadow: 1px 1px 1px @colour-grey-darkest; /* X, Y, Blur, Colour */
+
+            &:hover {
+                color: @colour-orange-light;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+/*
+ * Navigation (Primary)
+ */
+
+.list-nav-primary {
+
+    li {
+
+        a {
+            color: @colour-grey;
+            font-weight: @fw-bold;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+
+            &.active,
+            &:focus,
+            &:hover {
+                color: @colour-white;
+                text-shadow: 1px 1px 1px @colour-brown; /* X, Y, Blur, Colour */
+            }
+        }
+    }
+}
+
+/*
+ * Table of Contents
+ */
+
+.list-table-of-contents {
+
+    li {
+
+        // Anchors
+        a {
+            color: @colour-grey-darkest;
+            text-decoration: none;
+
+            &:focus,
+            &:hover {
+                color: @colour-orange-light;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+/*
+ * Star
+ */
+
+.list-star {
+
+    li {
+
+        // Anchor
+        a {
+            font-weight: @fw-bold;
+            text-decoration: none;
+        }
+    }
+
+    // Orange
+    &.list-star-orange {
+
+        li {
+
+            &.active,
+            &:focus,
+            &:hover {
+
+                // Anchor
+                a {
+                    color: @colour-white;
+                    text-shadow: 1px 1px 1px @colour-black; /* X, Y, Blur, Colour */
+                }
+            }
+
+            // Anchor
+            a {
+                color: @colour-orange;
+                text-shadow: 1px 1px 1px @colour-grey-darkest; /* X, Y, Blur, Colour */
+
+                &:focus,
+                &:hover {
+                    color: @colour-white;
+                    text-shadow: 1px 1px 1px @colour-black; /* X, Y, Blur, Colour */
+                }
+            }
+        }
+    }
+
+    // Black
+    &.list-star-black {
+
+        li {
+
+            &.active,
+            &:focus,
+            &:hover {
+
+                // Anchor
+                a {
+                    color: @colour-white;
+                    text-shadow: 1px 1px 1px @colour-brown; /* X, Y, Blur, Colour */
+                }
+            }
+
+            // Anchor
+            a {
+                color: @colour-grey-darkest;
+
+                &:focus,
+                &:hover {
+                    color: @colour-white;
+                    text-shadow: 1px 1px 1px @colour-brown; /* X, Y, Blur, Colour */
+                }
+            }
+        }
+    }
+}
+
+/* Buttons
+   ========================================================================== */
+
+.btn {
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    /*
+     * Large
+     */
+
+    &.btn-large {
+        font-size: 25px;
+        font-weight: @fw-semi-bold;
+        letter-spacing: 1px;
+
+        /*
+         * Icon
+         */
+
+        i {
+            font-size: 20px;
+        }
+    }
+
+    /*
+     * Small
+     */
+
+    &.btn-small {
+        font-size: 16px;
+        font-weight: @fw-bold;
+
+        /*
+         * Icon
+         */
+
+        i {
+            font-size: 14px;
+        }
+    }
+
+    /*
+     * Square
+     */
+
+    &.btn-square {
+
+        /*
+         * Icon
+         */
+
+        i {
+            font-size: 20px;
+        }
+    }
+
+    /*
+     * Black
+     */
+
+    &.btn-black {
+        color: @colour-orange;
+        text-shadow: 1px 1px 1px @colour-black; /* X, Y, Blur, Colour */
+
+        &:active {
+            text-shadow: 1px 1px 1px @colour-grey-darkest; /* X, Y, Blur, Colour */
+        }
+
+        &:focus,
+        &:hover {
+            text-shadow: 1px 1px 1px @colour-grey-darkest; /* X, Y, Blur, Colour */
+        }
+    }
+
+    /*
+     * Orange
+     */
+
+    &.btn-orange {
+        color: @colour-white-dark;
+        text-shadow: 1px 1px 1px @colour-brown; /* X, Y, Blur, Colour */
+
+        &:active {
+            color: @colour-white;
+            text-shadow: 1px 1px 1px @colour-brown-dark; /* X, Y, Blur, Colour */
+        }
+
+        &:focus,
+        &:hover {
+            color: @colour-white;
+            text-shadow: 1px 1px 1px @colour-brown-dark; /* X, Y, Blur, Colour */
+        }
+    }
+
+    /*
+     * Menu Toggle
+     */
+
+    &.btn-menu-toggle {
+        color: @colour-black-light;
+        font-size: 18px;
+        font-weight: @fw-bold;
+    }
+}
+
+/* Utilities
+   ========================================================================== */
+
+/*
+ * Text Transform
+ */
+
+// Uppercase
+.tf-uppercase {
+    text-transform: uppercase;
+}
+
+/*
+ * Text Shadow
+ */
+
+// Black
+.ts-black {
+    text-shadow: 1px 1px 1px @colour-black; /* X, Y, Blur, Colour */
+}
+
+// Brown
+.ts-brown {
+    text-shadow: 1px 1px 1px @colour-brown; /* X, Y, Blur, Colour */
+}
+
+/* Style Guide
+   ========================================================================== */
+
+/*
+ * Headings
+ */
+
+// Primary
+.sg-heading-primary {
+    color: @colour-orange;
+    font-size: 28px;
+    text-transform: inherit;
+}
+
+// Section
+.sg-heading-section {
+    color: @colour-grey-dark;
+    font-size: 1.1em;
+    font-weight: @fw-bold;
+    text-transform: uppercase;
+}
+
+// Section
+.sg-heading-section-sub {
+    color: @colour-grey-dark;
+    font-size: 1em;
+    font-weight: @fw-bold;
+    text-transform: inherit;
+}
+
+/* Media Queries
+   =========================================================================== */
+
+/*
+ * Width: 760px
+ */
+
+@media all and (min-width: 760px) {
+
+    /* Lists
+       ========================================================================== */
+
+    /*
+     * Navigation (Primary)
+     */
+
+    .list-nav-primary {
+
+        li {
+
+            a {
+                text-align: left;
+
+                &.active,
+                &:focus,
+                &:hover {
+                    color: @colour-black;
+                    text-shadow: none;
+                }
+            }
+        }
+    }
+}
+
+/*
+ * Width: 960px
+ */
+
+@media all and (min-width: 960px) {
+
+    /* Headings
+       ========================================================================== */
+
+    // Alpha
+    h1, .alpha {
+        font-size: 36px;
+    }
+
+    // Beta
+    h2, .beta {
+        font-size: 28px;
+    }
+
+    // Gamma
+    h3, .gamma {
+        font-size: 20px;
+        font-weight: @fw-semi-bold;
+    }
+
+    // Delta
+    h4, .delta {
+        font-size: 19px;
+        font-weight: @fw-semi-bold;
+    }
+
+    /* Paragraphs
+       ========================================================================== */
+
+    p {
+
+        // Very Large
+        &.very-large {
+            font-size: 28px;
+        }
+
+        // Large
+        &.large {
+            font-size: 20px;
+        }
+
+        // Call to Action
+        &.call-to-action {
+            font-size: 20px;
+
+            // Supplementary information
+            .supplementary {
+                font-size: 16px;
+                text-align: right;
+            }
+        }
+    }
+
+    /* Containers
+       ========================================================================== */
+
+    /*
+     * Header
+     */
+
+    .header {
+
+        // Call to Action
+        .call-to-action {
+
+            // Button
+            .btn {
+                font-size: 25px;
+                font-weight: @fw-semi-bold;
+                letter-spacing: 1px;
+            }
+        }
+    }
+}
+
+/*
+ * Width: 1200px
+ */
+
+@media all and (min-width: 1200px) {
+
+    /* Paragraphs
+       ========================================================================== */
+
+    p {
+
+        // Call to Action
+        &.call-to-action {
+            font-size: 25px;
+        }
+    }
+}

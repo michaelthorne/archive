@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Accessing a Grunt connect server on your WiFi network | Michael Thorne</title>
+    <meta name="description" content="Until now, I haven’t found a way to easily view my front-end HTML templates on my phone or iPad, without uploading them to a live (staging) server." />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Open Graph -->
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:title" content="Accessing a Grunt connect server on your WiFi network" />
+    <meta property="og:description" content="Until now, I haven’t found a way to easily view my front-end HTML templates on my phone or iPad, without uploading them to a live (staging) server." />
+    <meta property="og:url" content="http://www.userx.co.za/journal/accessing-grunt-connect-server-on-wifi-network" />
+    <meta property="og:image" content="http://www.userx.co.za/assets/images/general/michael-thorne-300x300.jpg" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@mikkelz_za" />
+    <meta name="twitter:title" content="Accessing a Grunt connect server on your WiFi network" />
+    <meta name="twitter:description" content="Until now, I haven’t found a way to easily view my front-end HTML templates on my phone or iPad, without uploading them to a live (staging) server." />
+    <meta name="twitter:image" content="http://www.userx.co.za/assets/images/general/michael-thorne-300x300.jpg" />
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
+
+    <!-- Google+ -->
+    <link rel="publisher" href="https://plus.google.com/+MichaelThorne_za" />
+
+    <link rel="prev" title="Working remotely can work" href="http://www.userx.co.za/journal/working-remotely-can-work" />
+    <link rel="next" title="Cape Town UX Craft – July Meetup" href="http://www.userx.co.za/cape-town-ux-craft-july-meetup" />
+
+    <!-- Fonts -->
+    <script>
+        WebFontConfig = {
+            google: {
+                families: ['Raleway:400,700']
+            },
+            custom: {
+                families: ['icomoon'],
+                    urls: ['../assets/css/style.css']
+            }
+        };
+    </script>
+
+    <!-- Web Font Loader -->
+    <script>
+        (function(){var e=document.createElement("script");e.src=("https:"==document.location.protocol?"https":"http")+"://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js";e.type="text/javascript";e.async="true";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})();
+    </script>
+
+    <!-- Picturefill -->
+    <script src="../assets/js/vendor/picturefill.js" async="async"></script>
+
+    <!--[if lt IE 9]>
+    <script src="../assets/js/vendor/polyfills.js"></script>
+    <![endif]-->
+</head>
+<body id="top">
+    <a href="#main" class="visuallyhidden">Skip to main content</a>
+
+    <div class="l-sidebar">
+        <a href="../" class="photo">
+            <picture>
+                <source srcset="../assets/images/general/michael-thorne-300x300.jpg" media="(min-width: 80em)">
+                <source srcset="../assets/images/general/michael-thorne-60x60.jpg" media="(min-width: 40em)">
+                <img src="../assets/images/general/michael-thorne-50x50.jpg" alt="Michael Thorne" />
+            </picture>
+            <span class="icon icon-home" aria-hidden="true"></span>
+        </a>
+
+        <h6 class="zeta hN">Michael Thorne<span class="role">Front-end Web Developer</span></h6>
+
+        <nav class="nav nav--primary" role="navigation">
+            <ol class="list list--nav">
+                <li class="is-active"><a href="../journal">Journal</a></li>
+                <li><a href="../about">About</a></li>
+                <li><a href="../contact">Contact</a></li>
+            </ol>
+
+            <ul class="list list--social">
+                <li><a href="http://flickr.com/mikkelz" title="My photos on Flickr"><span class="icon icon-flickr" aria-hidden="true"></span></a></li>
+                <li><a href="http://github.com/michaelthorne" title="My code on GitHub"><span class="icon icon-github" aria-hidden="true"></span></a></li>
+                <li><a href="http://twitter.com/mikkelz_za" title="My thoughts on Twitter"><span class="icon icon-twitter" aria-hidden="true"></span></a></li>
+                <li><a href="http://youtube.com/mikkelzZA" title="My videos on YouTube"><span class="icon icon-youtube-play" aria-hidden="true"></span></a></li>
+            </ul>
+        </nav>
+
+        <a href="#" class="btn btn--secondary btn--small toggle" data-action="toggle-nav">
+            <span class="icon icon--left icon-bars hide-small hide-large" aria-hidden="true"></span>Menu
+        </a>
+    </div>
+
+    <main id="main" class="l-main" role="main">
+        <div class="l-wrapper">
+            <!--[if lt IE 9]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/?locale=en">upgrade your browser</a> to improve your experience.</p>
+            <![endif]-->
+
+            <div class="section">
+                <article class="article" itemscope itemType="http://schema.org/BlogPosting">
+                    <header class="header header--article">
+                        <time class="time" datetime="2014-06-08" itemprop="datePublished">
+                            <a href="accessing-grunt-connect-server-on-wifi-network" itemprop="url"><span class="icon icon-book" aria-hidden="true"></span>June 08, 2014</a>
+                        </time>
+                        <h1 class="beta hN" itemprop="headline">Accessing a Grunt connect server on your WiFi network</h1>
+                        <div class="share">
+                            <a class="share__link" href="https://www.facebook.com/sharer/sharer.php?u=http://www.userx.co.za/journal/accessing-grunt-connect-server-on-wifi-network" title="Share on Facebook"><span class="icon icon-facebook-square" aria-hidden="true"></span></a>
+                            <a class="share__link" href="https://twitter.com/intent/tweet?text=Accessing%20a%20Grunt%20connect%20server%20on%20your%20WiFi%20network&amp;url=http://www.userx.co.za/journal/accessing-grunt-connect-server-on-wifi-network&amp;via=mikkelz_za" title="Share on Twitter"><span class="icon icon-twitter-square" aria-hidden="true"></span></a>
+                        </div>
+                    </header>
+
+                    <div itemprop="articleBody">
+                        <p>Before I get started, if you’ve heard of Grunt but haven’t tried it out, I’m not going to be able to do it the justice it deserves. But someone who can, is Chris Coyier and his excellent tutorial on 24 ways: <a href="http://www.24ways.org/2013/grunt-is-not-weird-and-hard">Grunt for People Who Think Things Like Grunt are Weird and Hard</a>.</p>
+
+                        <p><em>Disclaimer: I’m not going to entertain a “Grunt vs Gulp” argument here. This is specifically for those of you, like myself, currently using Grunt for automating web development tasks. And I work on a Windows PC and laptop, so no OS wars, please. The principles, however, are the same.</em></p>
+
+                        <p>I’ve been using Grunt for a while now and battle to think back to the days before it was part of my workflow. In my current “<a href="https://github.com/michaelthorne/boilerplate">HTML5 Boilerplate</a>” project, I have, amongst others, a configuration for the <a href="https://github.com/gruntjs/grunt-contrib-connect">grunt-contrib-connect</a> plugin. As per it’s description on GitHub, it allows you to “Start a static web server”. This allows me to access my static HTML templates via a web server on my computer whenever I run the plugin.</p>
+
+                        <p>Until now, I haven’t found a way to easily view my front-end HTML templates on my phone or iPad, without uploading them to a live (staging) server. This extra step of uploading is not only repetitive and time-consuming, but it also means you’re using unnecessary bandwidth which is an issue when working remotely (on a mobile connection) as well with needing to bust cache every time you upload.</p>
+
+                        <p>So this process essentially requires two steps:</p>
+
+                        <ol>
+                            <li>Configure Windows Firewall on your local machine</li>
+                            <li>Configure Grunt Connect to allow access on your network</li>
+                        </ol>
+
+                        <p>After a little bit of Googling, I managed to find an article which explains the necessary configuration steps you need to make to Windows Firewall in order to <a href="http://www.mobitechie.com/android-2/how-to-access-localhost-on-android-over-wifi">access localhost over WiFi</a>.</p>
+
+                        <p>Essentially, all I did was add a new rule for port <b>1337</b> which is the port I use for Grunt Connect. The default is <b>8000</b> and this will still work, as long as you configure your firewall accordingly.</p>
+
+                        <p>Then I modified the <b>hostname</b> option to be <code>*</code>. According to the documentation, it does the following: “Setting it to <code>*</code> will make the server accessible from anywhere.”</p>
+
+                        <p>Lastly, I set the <b>open</b> option to an object with the key <b>target</b> and a value of <code>127.0.0.1:1337</code> (replace 1337 with 8000 if you’re using the default in Grunt Connect).</p>
+
+                        <p>The reason for setting the <b>open</b> option in the configuration is to override the default IP address of <code>0.0.0.0</code> which is what gets used as the URL that Grunt Connect opens up in your browser when the server starts. <code>127.0.0.1</code> should always be accessible on your local machine by default, where as 0.0.0.0 requires additional configuration outside the realm of this guide.</p>
+
+                        <p>You should now be able to run your Grunt Connect server, it’ll open your web browser to <code>127.0.0.1:1337|8000</code> depending on which port you’ve used.</p>
+
+                        <p>All you need to do now, is get the IP address of the machine running your Grunt Connect server. That requires you to run the <b>ipconfig</b> command from your Command Prompt and then look for the IP address next to <b>IPv4 Address</b> e.g. <code>192.168.0.1</code></p>
+
+                        <p>Type that IP address into any mobile device connected to your WiFi network, followed by the port you’ve configured for Grunt Connect e.g. <code>192.168.0.1:1337</code> You should now be able to view the static web server on your phone, tablet or any other computer on the network.</p>
+
+                        <p>The full configuration for the <b>grunt-contrib-connect</b> plugin in my <b>Gruntfile.js</b> looks like this:</p>
+
+                        <code class="code code--block">connect: {<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;server: {<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;options: {<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hostname: '*',<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;livereload: true,<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;open: {<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;target: 'http://127.0.0.1:1337'<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;port: 1337,<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;useAvailablePort: true<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+                        }</code>
+
+                        <p>In summary:</p>
+
+                        <ul>
+                            <li>Make sure your firewall can access the port that you configure Grunt Connect to use (8000 by default)</li>
+                            <li>Configure Grunt Connect to open <code>127.0.0.1:8000</code> as it’s target when the server starts up</li>
+                        </ul>
+
+                        <p>I hope this can be of use to you. It’s certainly made my workflow a lot easier!</p>
+
+                        <p><em>Update: I’ve just realised that the <code>livereload: true</code> option also forces a reload on all connected devices. No more having to press refresh on your mobile phone or tablet.</em></p>
+                    </div>
+                </article>
+
+                <div class="pagination">
+                    <a href="working-remotely-can-work" class="pagination__prev btn btn--secondary" title="Working remotely can work" role="button"><span class="icon icon--left icon-long-arrow-left" aria-hidden="true"></span>Prev</a>
+                    <a href="cape-town-ux-craft-july-meetup" class="pagination__next btn btn--secondary" title="Cape Town UX Craft – July Meetup" role="button">Next<span class="icon icon-long-arrow-right" aria-hidden="true"></span></a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer footer--primary" role="contentinfo">
+        <div class="l-wrapper">
+            <div class="legal">
+                <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license" class="license">
+                    <img src="../assets/images/logos/creative-commons-by-nc-sa-80x15.png" width="80" height="15" alt="Creative Commons License" />
+                </a>
+                <small>This work by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.userx.co.za/about" property="cc:attributionName" rel="cc:attributionURL">Michael Thorne</a> is licensed under a <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</small>
+            </div>
+
+            <a href="../styleguide" class="btn btn--small" role="button">
+                <span class="icon icon--left icon-file-text" aria-hidden="true"></span>Style Guide
+            </a>
+
+            <a href="#top" class="btn btn--secondary btn--icon btn--small" role="button" title="Back to Top">
+                <span class="icon icon-arrow-up"></span>
+            </a>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/script.js"></script>
+
+    <!-- Google Analytics -->
+    <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-29325015-1','auto');ga('require', 'displayfeatures');ga('send','pageview');
+    </script>
+</body>
+</html>

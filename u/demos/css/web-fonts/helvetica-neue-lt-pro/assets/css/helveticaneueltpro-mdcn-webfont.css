@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'HelveticaNeueLtProMdCn';
+    src: url("../fonts/helveticaneueltpro-mdcn-webfont.eot");
+    src: local('☺'), url("../fonts/helveticaneueltpro-mdcn-webfont.woff") format('woff'), url("../fonts/helveticaneueltpro-mdcn-webfont.ttf") format('truetype'), url("../fonts/helveticaneueltpro-mdcn-webfont.svg#HelveticaNeueLtProMdCn") format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

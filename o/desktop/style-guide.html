@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<!--[if IE 7]>         <html lang="en-GB" class="ie7"> <![endif]-->
+<!--[if IE 8]>         <html lang="en-GB" class="ie8"> <![endif]-->
+<!--[if IE 9]>         <html lang="en-GB" class="ie9"> <![endif]-->
+<!--[if gt IE 9]><!--> <html lang="en-GB">         <!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+    <title>OrderIn &mdash; Style Guide</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="author" content="Michael Thorne" />
+    <meta name="description" content="" />
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:locale" content="en_GB" />
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,700" />
+
+    <!-- Font Awesome: http://fortawesome.github.io/Font-Awesome -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" />
+
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/styleguide.css" />
+
+    <!--[if lt IE 9]>
+    <script src="assets/js/vendor/polyfills.js"></script>
+    <![endif]-->
+</head>
+<body class="style-guide">
+    <!--[if lt IE 9]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/?locale=en">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <a id="top"></a>
+    <div class="wrapper">
+        <!-- Home -->
+        <a href="index.html" class="icon fa fa-home"></a>
+
+        <section role="main">
+            <header role="banner">
+                <h1>OrderIn &mdash; Style Guide</h1>
+            </header>
+            <p>This document is a guide to the mark&ndash;up and associated styles for the website.</p>
+            <div class="component">
+                <h1>Table of Contents</h1>
+                <ol class="table-of-contents">
+                    <li><a href="#colours">Colors</a></li>
+                    <li><a href="#typography">Typography</a></li>
+                    <li><a href="#headings">Headings</a></li>
+                    <li><a href="#text">Text</a></li>
+                    <li><a href="#feedback">Feedback</a></li>
+                    <li><a href="#anchors">Anchors</a></li>
+                    <li><a href="#lists">Lists</a></li>
+                    <li><a href="#tables">Tables</a></li>
+                    <li><a href="#forms">Forms</a></li>
+                    <li><a href="#buttons">Buttons</a></li>
+                    <li><a href="#icons">Icons</a></li>
+                    <li><a href="#tags">Tags</a></li>
+                </ol>
+            </div>
+
+            <!-- Colors -->
+            <div id="colours" class="component">
+                <h1>Colors</h1>
+                <ul class="colours">
+                    <li class="bg-black">
+                        <pre class="code">#000</pre>
+                    </li>
+                    <li class="bg-mortar">
+                        <pre class="code">#5c5c5c</pre>
+                    </li>
+                    <li class="bg-grey">
+                        <pre class="code">#a5a5a5</pre>
+                    </li>
+                    <li class="bg-silver">
+                        <pre class="code">#bbb</pre>
+                    </li>
+                    <li class="bg-gainsboro">
+                        <pre class="code">#dbdbdb</pre>
+                    </li>
+                    <li class="bg-mercury">
+                        <pre class="code">#e9e9e9</pre>
+                    </li>
+                    <li class="bg-white-smoke">
+                        <pre class="code">#f1f1f1</pre>
+                    </li>
+                    <li class="bg-alablaster">
+                        <pre class="code">#f9f9f9</pre>
+                    </li>
+                    <li class="bg-white">
+                        <pre class="code">#fff</pre>
+                    </li>
+                    <li class="bg-green">
+                        <pre class="code">#46790c</pre>
+                    </li>
+                    <li class="bg-christi-dark">
+                        <pre class="code">#4d7d10</pre>
+                    </li>
+                    <li class="bg-christi">
+                        <pre class="code">#a0c81c</pre>
+                    </li>
+                    <li class="bg-maroon-dark">
+                        <pre class="code">#560e07</pre>
+                    </li>
+                    <li class="bg-maroon">
+                        <pre class="code">#5f0f08</pre>
+                    </li>
+                    <li class="bg-maroon-light">
+                        <pre class="code">#79120a</pre>
+                    </li>
+                    <li class="bg-sangria">
+                        <pre class="code">#92180b</pre>
+                    </li>
+                    <li class="bg-rust-dark">
+                        <pre class="code">#9d180d</pre>
+                    </li>
+                    <li class="bg-rust">
+                        <pre class="code">#ad1c0d</pre>
+                    </li>
+                    <li class="bg-orange-dark">
+                        <pre class="code">#c9210f</pre>
+                    </li>
+                    <li class="bg-orange">
+                        <pre class="code">#dd2f19</pre>
+                    </li>
+                    <li class="bg-olive">
+                        <pre class="code">#634d00</pre>
+                    </li>
+                    <li class="bg-tangerine">
+                        <pre class="code">#d2a400</pre>
+                    </li>
+                    <li class="bg-gamboge">
+                        <pre class="code">#dead04</pre>
+                    </li>
+                    <li class="bg-golden-poppy-dark">
+                        <pre class="code">#e6b300</pre>
+                    </li>
+                    <li class="bg-yellow-dark">
+                        <pre class="code">#ffb500</pre>
+                    </li>
+                    <li class="bg-golden-poppy">
+                        <pre class="code">#ffc600</pre>
+                    </li>
+                    <li class="bg-yellow">
+                        <pre class="code">#ffe100</pre>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Typography -->
+            <div id="typography" class="component">
+                <h1>Typography</h1>
+                <div class="contents">
+                    <pre class="code">Roboto</pre>
+                    <p class="roboto">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                </div>
+            </div>
+
+            <!-- Headings -->
+            <div id="headings" class="component">
+                <h1>Headings</h1>
+                <div class="contents">
+                    <!-- h1 -->
+                    <pre class="code">h1</pre>
+                    <h1>Lorem ipsum dolor sit amet</h1>
+
+                    <!-- h2 -->
+                    <pre class="code">h2</pre>
+                    <h2>Lorem ipsum dolor sit amet</h2>
+
+                    <!-- h3 -->
+                    <pre class="code">h3</pre>
+                    <h3>Lorem ipsum dolor sit amet</h3>
+
+                    <!-- Heading, Tiny -->
+                    <pre class="code">.heading-tiny</pre>
+                    <span class="heading-tiny">Lorem ipsum dolor sit amet</span>
+
+                    <!-- Heading, Small -->
+                    <pre class="code">.heading-small</pre>
+                    <span class="heading-small">Lorem ipsum dolor sit amet</span>
+
+                    <!-- Heading, Medium -->
+                    <pre class="code">.heading-medium</pre>
+                    <span class="heading-medium">Lorem ipsum dolor sit amet</span>
+
+                    <!-- Heading, Large -->
+                    <pre class="code">.heading-large</pre>
+                    <span class="heading-large">Lorem ipsum dolor sit amet</span>
+
+                    <!-- Heading, Large, Bold -->
+                    <pre class="code">.heading-large .heading-bold</pre>
+                    <span class="heading-large heading-bold">Lorem ipsum dolor sit amet</span>
+
+                    <!-- Heading, Large, Bold, Orange -->
+                    <pre class="code">.heading-large .heading-bold orange</pre>
+                    <span class="heading-large heading-bold orange">Lorem ipsum dolor sit amet</span>
+                </div>
+            </div>
+
+            <!-- Text -->
+            <div id="text" class="component">
+                <h1>Text</h1>
+                <div class="contents">
+                    <!-- Paragraph -->
+                    <pre class="code">p</pre>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+
+                    <!-- Paragraph (Small) -->
+                    <pre class="code">p .small</pre>
+                    <p class="small">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+
+                    <!-- Paragraph (Tiny) -->
+                    <pre class="code">p .tiny</pre>
+                    <p class="tiny">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                </div>
+            </div>
+
+            <!-- Feedback -->
+           <div id="feedback" class="component">
+               <h1>Feedback</h1>
+               <div class="contents">
+                   <!-- Feedback (Warning) -->
+                   <pre class="code">.feedback .feedback-warning</pre>
+                   <div class="feedback feedback-warning">
+                       <h1 class="heading-tiny heading-bold olive"><span class="icon fa fa-exclamation-triangle" aria-hidden="true"></span>Lorem ipsum dolor sit amet</h1>
+                       <p>Lorem ipsum dolor sit amet, <strong>consectetuer adipiscing elit</strong>, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                       <a href="style-guide.html#feedback" class="anchor anchor-olive">Lorem ipsum dolor sit amet</a>
+                   </div>
+
+                   <!-- Feedback (Error) -->
+                   <pre class="code">.feedback .feedback-error</pre>
+                   <div class="feedback feedback-error">
+                       <h1 class="heading-tiny heading-bold maroon-dark"><span class="icon fa fa-exclamation-triangle" aria-hidden="true"></span>Lorem ipsum dolor sit amet</h1>
+                       <p>Lorem ipsum dolor sit amet, <strong>consectetuer adipiscing elit</strong>, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                       <a href="style-guide.html#feedback" class="anchor anchor-maroon-dark">Lorem ipsum dolor sit amet</a>
+                   </div>
+
+                   <!-- Feedback (Success) -->
+                   <pre class="code">.feedback .feedback-success</pre>
+                   <div class="feedback feedback-success">
+                       <h1 class="heading-tiny heading-bold green"><span class="icon fa fa-check-circle" aria-hidden="true"></span>Lorem ipsum dolor sit amet</h1>
+                       <p>Lorem ipsum dolor sit amet, <strong>consectetuer adipiscing elit</strong>, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                       <a href="style-guide.html#feedback" class="anchor anchor-green">Lorem ipsum dolor sit amet</a>
+                   </div>
+               </div>
+           </div>
+
+            <!-- Anchors -->
+            <div id="anchors" class="component">
+                <h1>Anchors</h1>
+                <div class="contents">
+                    <!-- a -->
+                    <pre class="code">a</pre>
+                    <p>Lorem ipsum dolor sit amet, <a href="style-guide.html#anchors">consectetuer adipiscing elit</a>, sed diam nonummy nibh <a href="style-guide.html#anchors">euismod tincidunt</a> ut laoreet dolore magna aliquam erat volutpat.</p>
+
+                    <!-- Anchor (Maroon, Dark) -->
+                    <pre class="code">a .anchor .anchor-maroon-dark</pre>
+                    <a href="style-guide.html#anchors" class="anchor anchor-maroon-dark">Lorem ipsum dolor sit amet</a>
+
+                    <!-- Anchor (Maroon) -->
+                    <pre class="code">a .anchor .anchor-maroon</pre>
+                    <a href="style-guide.html#anchors" class="anchor anchor-maroon">Lorem ipsum dolor sit amet</a>
+
+                    <!-- Anchor (Orange) -->
+                    <pre class="code">a .anchor .anchor-orange</pre>
+                    <a href="style-guide.html#anchors" class="anchor anchor-orange">Lorem ipsum dolor sit amet</a>
+
+                    <!-- Anchor (Orange, Dark) -->
+                    <pre class="code">a .anchor .anchor-orange-dark</pre>
+                    <a href="style-guide.html#anchors" class="anchor anchor-orange-dark">Terms &amp; Conditions</a>
+
+                    <!-- Anchor (Green) -->
+                    <pre class="code">a .anchor .anchor-green</pre>
+                    <a href="style-guide.html#anchors" class="anchor anchor-green">Lorem ipsum dolor sit amet</a>
+
+                    <!-- Anchor (Olive) -->
+                    <pre class="code">a .anchor .anchor-olive</pre>
+                    <a href="style-guide.html#anchors" class="anchor anchor-olive">Nevermind, I&rsquo;ll pick it up.</a>
+
+                    <!-- Anchor (Grey) -->
+                    <pre class="code">a .anchor .anchor-grey</pre>
+                    <a href="style-guide.html#anchors" class="anchor anchor-grey">Forgot Password?</a>
+
+                    <!-- Anchor (Grey, Tiny) -->
+                    <pre class="code">a .anchor .anchor-grey .anchor-tiny</pre>
+                    <a href="style-guide.html#anchors" class="anchor anchor-grey anchor-tiny">Lorem ipsum dolor sit amet</a>
+
+                    <!-- Anchor (Grey, Medium) -->
+                    <pre class="code">a .anchor .anchor-grey .anchor-medium</pre>
+                    <a href="style-guide.html#anchors" class="anchor anchor-grey anchor-medium">Lorem ipsum dolor sit amet</a>
+
+                    <!-- Anchor (Grey, Large) -->
+                    <pre class="code">a .anchor .anchor-grey .anchor-large</pre>
+                    <a href="style-guide.html#anchors" class="anchor anchor-grey anchor-large">Lorem ipsum dolor sit amet</a>
+
+                    <!-- Anchor (Grey, Icon) -->
+                    <pre class="code">a .anchor .anchor-grey .anchor-icon</pre>
+                    <a href="style-guide.html#anchors" class="anchor anchor-grey anchor-icon"><span class="icon fa fa-map-marker" aria-hidden="true"></span>Help me find my location</a>
+                </div>
+            </div>
+
+            <!-- Lists -->
+            <div id="lists" class="component">
+                <h1>Lists</h1>
+                <div class="contents">
+                    <!-- Ordered -->
+                    <pre class="code">ol</pre>
+                    <ol>
+                        <li>Lorem ipsum</li>
+                        <li>Lorem ipsum</li>
+                        <li>
+                            Lorem ipsum
+                            <ol>
+                                <li>Lorem ipsum</li>
+                                <li>Lorem ipsum</li>
+                                <li>Lorem ipsum</li>
+                                <li>Lorem ipsum</li>
+                                <li>Lorem ipsum</li>
+                                <li>Lorem ipsum</li>
+                            </ol>
+                        </li>
+                        <li>Lorem ipsum</li>
+                        <li>Lorem ipsum</li>
+                        <li>Lorem ipsum</li>
+                    </ol>
+
+                    <!-- Unordered -->
+                    <pre class="code">ul</pre>
+                    <ul>
+                        <li>Lorem ipsum</li>
+                        <li>Lorem ipsum</li>
+                        <li>
+                            Lorem ipsum
+                            <ul>
+                                <li>Lorem ipsum</li>
+                                <li>Lorem ipsum</li>
+                                <li>Lorem ipsum</li>
+                                <li>Lorem ipsum</li>
+                                <li>Lorem ipsum</li>
+                                <li>Lorem ipsum</li>
+                            </ul>
+                        </li>
+                        <li>Lorem ipsum</li>
+                        <li>Lorem ipsum</li>
+                        <li>Lorem ipsum</li>
+                    </ul>
+
+                    <!-- Definition -->
+                    <pre class="code">dl</pre>
+                    <dl>
+                        <dt>Lorem ipsum</dt>
+                        <dd>Consectetuer adipiscing elit</dd>
+                        <dt>Lorem ipsum</dt>
+                        <dd>Consectetuer adipiscing elit</dd>
+                    </dl>
+
+                    <!-- Unordered (Legend: Menu) -->
+                    <pre class="code">ul .list-unordered .list-legend-menu</pre>
+                    <ul class="list-unordered list-legend-menu">
+                        <li>
+                            <span class="icon fa fa-leaf orange" aria-hidden="true"></span> Vegetarian
+                        </li>
+                        <li>
+                            <span class="icon fa fa-leaf yellow" aria-hidden="true"></span> Vegetarian
+                        </li>
+                        <li>
+                            <span class="icon fa fa-leaf christi-dark" aria-hidden="true"></span> Vegetarian
+                        </li>
+                    </ul>
+
+                    <!-- Unordered (Restaurant Information) -->
+                    <pre class="code">ul .list-unordered .list-restaurant-information</pre>
+                    <ul class="list-unordered list-restaurant-information">
+                        <li>
+                            <span class="icon fa fa-map-marker" aria-hidden="true"></span> 32 Kildare Road, Cape Town, 7700
+                        </li>
+                        <li>
+                            <span class="icon fa fa-phone" aria-hidden="true"></span> +27 21 000 0000
+                        </li>
+                        <li>
+                            <span class="icon fa fa-clock-o" aria-hidden="true"></span> Mon &ndash; Sat: 12 pm &ndash; 11 pm
+                        </li>
+                    </ul>
+
+                    <!-- Unordered (Footer) -->
+                    <pre class="code">ul .list-unordered .list-footer</pre>
+                    <ul class="list-unordered list-footer">
+                        <li>
+                            <h3>How it works</h3>
+                        </li>
+                        <li>
+                            <h3>Need some help?</h3>
+                        </li>
+                        <li>
+                            <h3>Got something to say?</h3>
+                        </li>
+                        <li>
+                            <h3>Restaurant Sign Up</h3>
+                        </li>
+                    </ul>
+
+                    <!-- Unordered (Footer) -->
+                    <pre class="code">ul .list-unordered .list-links .list-links-horizontal</pre>
+                    <ul class="list-unordered list-links list-links-horizontal">
+                        <li>
+                            <a href="style-guide.html#lists" class="anchor anchor-tiny anchor-orange-dark">Terms &amp; Conditions</a>
+                        </li>
+                        <li>
+                            <a href="style-guide.html#lists" class="anchor anchor-tiny anchor-orange-dark">Sitemap</a>
+                        </li>
+                    </ul>
+
+                    <!-- Unordered (Allocations) -->
+                    <pre class="code">ul .list-unordered .list-allocations</pre>
+                    <ul class="list-unordered list-allocations">
+                        <li>
+                            <p class="label">Current Allocation</p>
+                            <span class="amount">R200.00</span>
+                        </li>
+                        <li>
+                            <p class="label">Remaining Balance</p>
+                            <span class="amount rust-dark">R178.22</span>
+                        </li>
+                    </ul>
+
+                    <!-- Ordered (Menu) -->
+                    <pre class="code">ol .list-ordered .list-menu</pre>
+                    <ol class="list-ordered list-menu">
+                        <li>
+                            <p>
+                                <b>Mozzarella &amp; Tomato Salad <span class="icon fa fa-leaf christi-dark" aria-hidden="true"></span></b>
+                                Drizzled with basil oil.
+                            </p>
+                            <span class="price">R 46.00</span>
+                            <a href="style-guide.html#lists" class="button button-small button-grey"><span class="icon fa fa-plus-circle" aria-hidden="true"></span>Add</a>
+                        </li>
+                        <li>
+                            <p>
+                                <b>Roast Peppers &amp; Artichokes Salad <span class="icon fa fa-leaf christi-dark" aria-hidden="true"></span></b>
+                                Warm salad with pecorino shavings & basil oil.
+                            </p>
+                            <span class="price">R 999.99</span>
+                            <a href="style-guide.html#lists" class="button button-small button-grey"><span class="icon fa fa-plus-circle" aria-hidden="true"></span>Add</a>
+                        </li>
+                        <li>
+                            <p>
+                                <b>Springbok Carpaccio</b>
+                                Served with pecorino shavings & herb pita.
+                            </p>
+                            <span class="price">R 42.00</span>
+                            <a href="style-guide.html#lists" class="button button-small button-grey"><span class="icon fa fa-plus-circle" aria-hidden="true"></span>Add</a>
+                        </li>
+                        <li>
+                            <p>
+                                <b>Mozzarella &amp; Tomato Salad <span class="icon fa fa-leaf christi-dark" aria-hidden="true"></span></b>
+                                Drizzled with basil oil.
+                            </p>
+                            <span class="price">R 46.00</span>
+                            <a href="style-guide.html#lists" class="button button-small button-grey"><span class="icon fa fa-plus-circle" aria-hidden="true"></span>Add</a>
+                        </li>
+                        <li>
+                            <p>
+                                <b>Roast Peppers &amp; Artichokes Salad <span class="icon fa fa-leaf christi-dark" aria-hidden="true"></span></b>
+                                Warm salad with pecorino shavings & basil oil.
+                            </p>
+                            <span class="price">R 999.99</span>
+                            <a href="style-guide.html#lists" class="button button-small button-grey"><span class="icon fa fa-plus-circle" aria-hidden="true"></span>Add</a>
+                        </li>
+                        <li>
+                            <p>
+                                <b>Springbok Carpaccio</b>
+                                Served with pecorino shavings & herb pita.
+                            </p>
+                            <span class="price">R 42.00</span>
+                            <a href="style-guide.html#lists" class="button button-small button-grey"><span class="icon fa fa-plus-circle" aria-hidden="true"></span>Add</a>
+                        </li>
+                    </ol>
+
+                    <!-- Ordered (Progress) -->
+                    <pre class="code">ol .list-ordered .list-progress</pre>
+                    <ol class="list-ordered list-progress">
+                        <li>
+                            <span class="icon fa fa-map-marker" aria-hidden="true"></span>
+                            <a href="home.html">Enter Your Address</a>
+                            <span class="icon fa fa-angle-right separator" aria-hidden="true"></span>
+                        </li>
+                        <li class="current">
+                            <span class="icon fa fa-home" aria-hidden="true"></span>
+                            <span>Pick A Restaurant</span>
+                            <span class="icon fa fa-angle-right separator" aria-hidden="true"></span>
+                        </li>
+                        <li>
+                            <span class="icon fa fa-cutlery" aria-hidden="true"></span>
+                            <span>Order Food</span>
+                            <span class="icon fa fa-angle-right separator" aria-hidden="true"></span>
+                        </li>
+                        <li>
+                            <span class="icon fa fa-shopping-cart" aria-hidden="true"></span>
+                            <span>Checkout</span>
+                        </li>
+                    </ol>
+
+                    <!-- Ordered (Steps) -->
+                    <pre class="code">ol .list-ordered .list-steps</pre>
+                    <ol class="list-ordered list-steps">
+                        <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore</li>
+                        <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore</li>
+                        <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore</li>
+                    </ol>
+
+                    <!-- Ordered (How It Works, Businesses) -->
+                    <pre class="code">ol .list-ordered .list-how-it-works-businesses</pre>
+                    <ol class="list-ordered list-how-it-works-businesses">
+                        <li>
+                            <span class="icon fa fa-laptop" aria-hidden="true"></span>
+                            <span class="heading-medium heading-bold heading-center white">Online Ordering</span>
+                            <p>
+                                Customers view your menu, build their order and pay through OrderIn&rsquo;s website.
+                            </p>
+                        </li>
+                        <li>
+                            <span class="icon fa fa-cutlery small" aria-hidden="true"></span>
+                            <span class="heading-medium heading-bold heading-center white">Prepare Your Food</span>
+                            <p>
+                                Orders are electronically received by your restaurant and you prepare the food.
+                            </p>
+                        </li>
+                        <li>
+                            <span class="icon fa fa-truck medium" aria-hidden="true"></span>
+                            <span class="heading-medium heading-bold heading-center white">Delivery or Pickup</span>
+                            <p>
+                                Delicious meals are delivered to, or picked up by the customer.
+                            </p>
+                        </li>
+                        <li>
+                            <span class="icon fa fa-money" aria-hidden="true"></span>
+                            <span class="heading-medium heading-bold heading-center white">Get Paid</span>
+                            <p>
+                                You get a cheque or EFT for the orders you&rsquo;ve fulfilled.
+                            </p>
+                        </li>
+                    </ol>
+
+                    <!-- Ordered (How It Works) -->
+                    <pre class="code">ol .list-ordered .list-how-it-works</pre>
+                    <ol class="list-ordered list-how-it-works">
+                        <li>
+                            <span class="icon fa fa-map-marker" aria-hidden="true"></span>
+                            <p>
+                                <b>Enter your address</b> to find restaurants in your area.
+                            </p>
+                        </li>
+                        <li>
+                            <span class="icon fa fa-cutlery" aria-hidden="true"></span>
+                            <p>
+                                <b>Select a restaurant</b> and create an order from the menu.
+                            </p>
+                        </li>
+                        <li>
+                            <span class="icon fa fa-shopping-cart" aria-hidden="true"></span>
+                            <p>
+                                <b>Checkout online</b> safely and securely.
+                            </p>
+                        </li>
+                        <li>
+                            <span class="icon fa fa-smile-o" aria-hidden="true"></span>
+                            <p>
+                                <b>Get your food!</b>
+                            </p>
+                        </li>
+                    </ol>
+
+                    <!-- Ordered (Contact) -->
+                    <pre class="code">ol .list-ordered .list-contact</pre>
+                    <ol class="list-ordered list-contact">
+                        <li>
+                            <a href="mailto:customerservice@orderin.co.za">
+                                <span class="icon fa fa-envelope" aria-hidden="true"></span>
+                                <p>
+                                    <b>Customer Service</b>
+                                    Suggestions or feedback? Email us and our staff will get back to you.
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <span class="icon fa fa-phone-square" aria-hidden="true"></span>
+                                <p>
+                                    <b>+27 21 201 1155</b>
+                                    Open 9AM &ndash; 10PM
+                                </p>
+                            </a>
+                        </li>
+                    </ol>
+
+                    <!-- Ordered (Social Media) -->
+                    <pre class="code">ol .list-ordered .list-social-media</pre>
+                    <ol class="list-ordered list-social-media">
+                        <li>
+                            <a href="https://www.facebook.com/orderin.za" title="Follow us on Facebook" target="_blank">
+                                <span class="icon fa fa-facebook-square facebook" aria-hidden="true"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/OrderInSA" title="Follow us on Twitter" target="_blank">
+                                <span class="icon fa fa-twitter-square twitter" aria-hidden="true"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/company/3185839" title="Follow us on LinkedIn" target="_blank">
+                                <span class="icon fa fa-linkedin-square linkedin" aria-hidden="true"></span>
+                            </a>
+                        </li>
+                    </ol>
+
+                    <!-- Ordered (Account) -->
+                    <pre class="code">ol .list-ordered .list-account</pre>
+                    <ol class="list-ordered list-account" data-component="drop-down">
+                        <li>
+                            <span>Hi there, Dinesh.</span>
+                        </li>
+                        <li data-drop-down="true">
+                            <a href="my-account.html">
+                                <span class="icon fa fa-user" aria-hidden="true"></span>
+                                My Account
+                            </a>
+                            <ol class="list-ordered list-drop-down">
+                                <li><a href="my-account-address-book.html">Address Book</a></li>
+                                <li><a href="my-account-my-orders.html">My Orders</a></li>
+                                <li><a href="my-account-manage-allocations.html">Manage Allocations</a></li>
+                                <li><a href="my-account-change-password.html">Change Password</a></li>
+                            </ol>
+                        </li>
+                        <li>
+                            <a href="home.html">
+                                <span class="icon fa fa-lock" aria-hidden="true"></span>
+                                Log Out
+                            </a>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- Tables -->
+            <div id="tables" class="component">
+                <h1>Tables</h1>
+                <div class="contents">
+                    <!-- Table -->
+                    <pre class="code">table</pre>
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Lorem</th>
+                            <th>Ipsum</th>
+                            <th>Lorem</th>
+                            <th>Ipsum</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Consectetuer</td>
+                            <td>Adipiscing</td>
+                            <td>Consectetuer</td>
+                            <td>Adipiscing</td>
+                        </tr>
+                        </tbody>
+                        <tfoot>
+                        <tr>
+                            <td>Sed</td>
+                            <td>Dam</td>
+                            <td>Sed</td>
+                            <td>Dam</td>
+                        </tr>
+                        </tfoot>
+                    </table>
+
+                    <!-- Table (Small) -->
+                    <pre class="code">.table .table-small .table-grey</pre>
+                    <table class="table table-small table-grey">
+                        <thead>
+                        <tr>
+                            <th>Lorem</th>
+                            <th>Ipsum</th>
+                            <th>Lorem</th>
+                            <th>Ipsum</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Consectetuer</td>
+                            <td>Adipiscing</td>
+                            <td>Consectetuer</td>
+                            <td>Adipiscing</td>
+                        </tr>
+                        </tbody>
+                        <tfoot>
+                        <tr>
+                            <td>Sed</td>
+                            <td>Dam</td>
+                            <td>Sed</td>
+                            <td>Dam</td>
+                        </tr>
+                        </tfoot>
+                    </table>
+
+                    <!-- Table (Medium) -->
+                    <pre class="code">.table .table-medium .table-grey .table-box-shadow</pre>
+                    <form id="form-order" name="form-order" action="style-guide.html#tables" method="post">
+                    <table class="table table-medium table-grey table-box-shadow">
+                        <thead>
+                            <tr>
+                                <th colspan="3" class="heading-tiny heading-bold">My Order</th>
+                            </tr>
+                            <tr>
+                                <th colspan="3" class="small"><b>#4475758</b> from <b>Basilico Newlands</b> for <b>Pickup</b>.</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Roast Peppers &amp; Artichokes Salad</td>
+                                <td>R 42.00</td>
+                                <td class="action">
+                                    <a href="style-guide.html#tables" title="Remove"><span class="icon fa fa-times-circle" aria-hidden="true"></span></a>
+                                </td>
+                            </tr>
+                            <tr class="choice">
+                                <td>Whole wheat bread and a fresh tomato salad</td>
+                                <td>R 0.00</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr class="choice">
+                                <td>Toasted</td>
+                                <td>R 0.00</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>Half Shell Mussels</td>
+                                <td>R 42.00</td>
+                                <td class="action">
+                                    <a href="style-guide.html#tables" title="Remove"><span class="icon fa fa-times-circle" aria-hidden="true"></span></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Roast Peppers &amp; Artichokes Salad</td>
+                                <td>R 42.00</td>
+                                <td class="action">
+                                    <a href="style-guide.html#tables" title="Remove"><span class="icon fa fa-times-circle" aria-hidden="true"></span></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Half Shell Mussels</td>
+                                <td>R 42.00</td>
+                                <td class="action">
+                                    <a href="style-guide.html#tables" title="Remove"><span class="icon fa fa-times-circle" aria-hidden="true"></span></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td class="small">Subtotal*</td>
+                                <td class="small">R 168.00</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td class="small">Add Gratuity</td>
+                                <td class="small">
+                                    <label for="gratuity">
+                                        R <input id="gratuity" name="gratuity" type="text" class="input-grey input-tiny" placeholder="0.00" value="" maxlength="10" />
+                                    </label>
+                                </td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr class="total">
+                                <td>Total</td>
+                                <td>R 168.00</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">
+                                    <span class="small">* Includes VAT</span>
+                                    <a href="#" class="button button-small button-green" role="button" data-action="form-submit"><span class="icon fa fa-shopping-cart" aria-hidden="true"></span>Checkout</a>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    </form>
+
+                    <!-- Table (Medium) -->
+                    <pre class="code">.table .table-medium .table-grey .table-box-shadow</pre>
+                    <form id="form-order2" name="form-order2" action="style-guide.html#tables" method="post">
+                    <table class="table table-medium table-grey table-box-shadow">
+                        <thead>
+                            <tr>
+                                <th colspan="2" class="heading-tiny heading-bold">My Order</th>
+                            </tr>
+                            <tr>
+                                <th colspan="2" class="small"><b>#4475758</b> from <b>Basilico Newlands</b> for <b>Pickup</b>.</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Roast Peppers &amp; Artichokes Salad</td>
+                                <td>R 42.00</td>
+                            </tr>
+                            <tr class="choice">
+                                <td>Whole wheat bread and a fresh tomato salad</td>
+                                <td>R 0.00</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td class="small">Subtotal*</td>
+                                <td class="small">R 168.00</td>
+                            <tr>
+                                <td class="small">Add Gratuity</td>
+                                <td class="small">
+                                    <label for="gratuity2">
+                                        R <input id="gratuity2" name="gratuity2" type="text" class="input-grey input-tiny" placeholder="0.00" value="" maxlength="10" />
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr class="total">
+                                <td>Total</td>
+                                <td>R 168.00</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <span class="small">* Includes VAT</span>
+                                    <a href="#" class="button button-small button-green" role="button" data-action="form-submit"><span class="icon fa fa-shopping-cart" aria-hidden="true"></span>Checkout</a>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    </form>
+
+                    <!-- Table (Large) -->
+                    <pre class="code">.table .table-large .table-grey</pre>
+                    <table class="table table-large table-grey" data-action="table-row-link">
+                        <thead>
+                        <tr>
+                            <th>Restaurant</th>
+                            <th>Description</th>
+                            <th>Services</th>
+                            <th>Est. Time</th>
+                            <th>Distance</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr data-href="restaurant-menu.html">
+                            <td class="logo">
+                                <a href="menu.html">
+                                    <img src="assets/images/restaurants/restaurant-logo-basilico-50x50.jpg" width="50" height="50" alt="" />
+                                    <span class="title">Basilico</span>
+                                    32 Kildare Road<br/>
+                                    Newlands
+                                </a>
+                            </td>
+                            <td>The most delectable place for lunch or dinner in Newlands.</td>
+                            <td>Delivery &amp; Pickup</td>
+                            <td>35 min</td>
+                            <td class="nowrap">4.5 km</td>
+                        </tr>
+                        <tr data-href="restaurant-menu.html" class="disabled">
+                            <td class="logo">
+                                <a href="menu.html">
+                                    <img src="assets/images/restaurants/restaurant-logo-kauai-50x50.jpg" width="50" height="50" alt="" />
+                                    <span class="title">Kauai</span>
+                                    32 Kildare Road<br/>
+                                    Cape Town<br/>
+                                    7700
+                                </a>
+                            </td>
+                            <td>The most delectable place for lunch or dinner in Newlands.</td>
+                            <td>Delivery &amp; Pickup</td>
+                            <td class="status status-warning">
+                                <span class="icon fa fa-exclamation-triangle" aria-hidden="true"></span>
+                                Closed
+                            </td>
+                            <td class="nowrap">4.5 km</td>
+                        </tr>
+                        <tr data-href="restaurant-menu.html">
+                            <td class="logo">
+                                <a href="menu.html">
+                                    <img src="assets/images/restaurants/restaurant-logo-borruso-50x50.jpg" width="50" height="50" alt="" />
+                                    <span class="title">Borruso&rsquo;s</span>
+                                    32 Kildare Road<br/>
+                                    Newlands
+                                </a>
+                            </td>
+                            <td>The most delectable place for lunch or dinner in Newlands.</td>
+                            <td>Pickup Only</td>
+                            <td>35 min</td>
+                            <td class="nowrap">4.5 km</td>
+                        </tr>
+                        <tr data-href="restaurant-menu.html">
+                            <td class="logo">
+                                <a href="menu.html">
+                                    <img src="assets/images/restaurants/restaurant-logo-chuck-yang-50x50.jpg" width="50" height="50" alt="" />
+                                    <span class="title">Chuck Yang&rsquo;s</span>
+                                    32 Kildare Road<br/>
+                                    Newlands
+                                </a>
+                            </td>
+                            <td>The most delectable place for lunch or dinner in Newlands.</td>
+                            <td>Pickup Only</td>
+                            <td>35 min</td>
+                            <td class="nowrap">4.5 km</td>
+                        </tr>
+                        </tbody>
+                        <tfoot>
+                        <tr>
+                            <td colspan="5">
+                                <p>There are <strong data-component="restaurant-count">3</strong> restaurants serving you.</p>
+                                <a href="style-guide.html#tables" class="button button-small button-white mortar" role="button" data-action="back-to-top"><span class="icon fa fa-arrow-circle-up" aria-hidden="true"></span>Back to Top</a>
+                            </td>
+                        </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Forms -->
+            <div id="forms" class="component">
+                <h1>Forms</h1>
+                <div class="contents">
+                    <form id="form" name="form" action="style-guide.html#forms" method="get">
+                        <pre class="code">input[type="text"] .input-grey</pre>
+                        <label for="input">
+                            Lorem ipsum
+                            <input id="input" name="input" type="text" class="input-grey" placeholder="Lorem ipsum&hellip;" value="" maxlength="20" />
+                        </label>
+
+                        <pre class="code">input[type="text"] .input-grey disabled="disabled"</pre>
+                        <label for="input2">
+                            Lorem ipsum
+                            <input id="input2" name="input2" type="text" class="input-grey" placeholder="Lorem ipsum&hellip;" value="" disabled="disabled" maxlength="20" />
+                        </label>
+
+                        <pre class="code">input[type="text"] .input-grey .input-large</pre>
+                        <label for="input-3">
+                            Lorem ipsum
+                            <input id="input-3" name="input-3" type="text" class="input-grey input-large" placeholder="Lorem ipsum&hellip;" value="" maxlength="20" />
+                        </label>
+
+                        <pre class="code">input[type="text"] .input-yellow</pre>
+                        <label for="input-4">
+                            Lorem ipsum
+                            <input id="input-4" name="input-4" type="text" class="input-yellow" placeholder="Lorem ipsum&hellip;" value="" maxlength="20" />
+                        </label>
+
+                        <pre class="code">input[type="text"] .input-grey .input-tiny</pre>
+                        <label for="input-5">
+                            R
+                            <input id="input-5" name="input-5" type="text" class="input-grey input-tiny" placeholder="999.99" value="" maxlength="6" />
+                        </label>
+
+                        <pre class="code">input[type="text"] .input-grey .input-small</pre>
+                        <label for="input-6">
+                            Lorem ipsum
+                            <input id="input-6" name="input=6" type="text" class="input-grey input-small" placeholder="Lorem ipsum&hellip;" value="" maxlength="20" />
+                        </label>
+
+                        <pre class="code">input[type="text"] .input-grey .input-medium</pre>
+                        <label for="input-7">
+                            Lorem ipsum
+                            <input id="input-7" name="input=6" type="text" class="input-grey input-medium" placeholder="Lorem ipsum&hellip;" value="" maxlength="20" />
+                        </label>
+
+                        <pre class="code">input[type="tel"] .input-grey</pre>
+                        <label for="tel">
+                            Lorem ipsum
+                            <input id="tel" name="tel" type="text" class="input-grey" placeholder="Lorem ipsum&hellip;" value="" maxlength="20" />
+                        </label>
+
+                        <pre class="code">input[type="password"] .input-grey</pre>
+                        <label for="password">
+                            Lorem ipsum
+                            <input id="password" name="password" type="password" class="input-grey" placeholder="Lorem ipsum&hellip;" value="" maxlength="20" />
+                        </label>
+
+                        <pre class="code">input[type="email"] .input-grey</pre>
+                        <label for="email">
+                            Lorem ipsum
+                            <input id="email" name="email" type="email" class="input-grey" placeholder="john.smith@gmail.com" value="" maxlength="100" />
+                        </label>
+
+                        <pre class="code">input[type="checkbox"]</pre>
+                        <label for="checkbox">
+                            <input id="checkbox" name="checkbox" type="checkbox" value="1" />
+                            Lorem ipsum
+                        </label>
+
+                        <pre class="code">input[type="radio"]</pre>
+                        <label for="radio">
+                            <input id="radio" name="radio" type="radio" value="1" />
+                            Lorem ipsum
+                        </label>
+
+                        <pre class="code">input[type="radio"] .input-radio</pre>
+                        <fieldset class="fieldset">
+                            <input id="radio-a" name="radio-2" type="radio" value="a" class="input-radio" />
+                            <label for="radio-a" class="label-tiny">Lorem ipsum</label>
+                            <input id="radio-b" name="radio-2" type="radio" value="b" class="input-radio" />
+                            <label for="radio-b" class="label-tiny">Euismod tincidunt</label>
+                        </fieldset>
+
+                        <pre class="code">input[type="radio"] .input-radio .input-medium</pre>
+                        <fieldset class="fieldset">
+                            <input id="radio-c" name="radio-3" type="radio" value="c" class="input-radio input-medium" />
+                            <label for="radio-c" class="label-medium">Lorem ipsum</label>
+                            <input id="radio-d" name="radio-3" type="radio" value="d" class="input-radio input-medium" />
+                            <label for="radio-d" class="label-medium">Euismod tincidunt</label>
+                        </fieldset>
+
+                        <pre class="code">input[type="radio"] .input-radio .input-large</pre>
+                        <fieldset class="fieldset">
+                            <input id="radio-e" name="radio-4" type="radio" value="c" class="input-radio input-large" />
+                            <label for="radio-e" class="label-large">Lorem ipsum</label>
+                            <input id="radio-f" name="radio-4" type="radio" value="d" class="input-radio input-large" />
+                            <label for="radio-f" class="label-large">Euismod tincidunt</label>
+                        </fieldset>
+
+                        <pre class="code">input[type="checkbox"] .input-checkbox</pre>
+                        <fieldset class="fieldset">
+                            <input id="checkbox-a" name="checkbox-2" type="checkbox" value="a" class="input-checkbox" />
+                            <label for="checkbox-a" class="label-tiny">Lorem ipsum</label>
+                            <input id="checkbox-b" name="checkbox-2" type="checkbox" value="b" class="input-checkbox" />
+                            <label for="checkbox-b" class="label-tiny">Euismod tincidunt</label>
+                        </fieldset>
+
+                        <pre class="code">input[type="checkbox"] .input-checkbox .input-large</pre>
+                        <fieldset class="fieldset">
+                            <input id="checkbox-c" name="checkbox-3" type="checkbox" value="a" class="input-checkbox input-large" />
+                            <label for="checkbox-c">Lorem ipsum</label>
+                            <input id="checkbox-d" name="checkbox-3" type="checkbox" value="b" class="input-checkbox input-large" />
+                            <label for="checkbox-d">Euismod tincidunt</label>
+                        </fieldset>
+
+                        <pre class="code">select .input-grey</pre>
+                        <label for="select">
+                            Lorem ipsum
+                            <select id="select" name="select" class="input-grey">
+                                <option value="">Please Select</option>
+                                <option value="Lorem">Lorem</option>
+                                <option value="Ipsum">Ipsum</option>
+                            </select>
+                        </label>
+
+                        <pre class="code">textarea .input-grey</pre>
+                        <label for="textarea">
+                            <textarea id="textarea" name="textarea" class="input-grey" placeholder="Lorem ipsum dolor sit amet&hellip;" maxlength="255"></textarea>
+                        </label>
+
+                        <pre class="code">textarea .input-grey .input-medium</pre>
+                        <label for="textarea-2">
+                            <textarea id="textarea-2" name="textarea-2" class="input-grey input-medium" placeholder="Lorem ipsum dolor sit amet&hellip;" maxlength="255"></textarea>
+                        </label>
+
+                        <pre class="code">textarea .input-grey .input-large</pre>
+                        <label for="textarea-3">
+                            <textarea id="textarea-3" name="textarea-3" class="input-grey input-large" placeholder="Lorem ipsum dolor sit amet&hellip;" maxlength="255"></textarea>
+                        </label>
+
+                        <pre class="code">button .button .button-large .button-grey</pre>
+                        <button id="button" name="button" class="button button-large button-red">Lorem ipsum</button>
+
+                        <pre class="code">input[type="submit"] .button .button-medium</pre>
+                        <input id="submit" name="submit" type="submit" value="Lorem ipsum" class="button button-medium button-red" />
+
+                        <pre class="code">input[type="submit"] .button .button-large</pre>
+                        <input id="submit2" name="submit2" type="submit" value="Lorem ipsum" class="button button-large button-red" />
+                    </form>
+                </div>
+            </div>
+
+            <!-- Buttons -->
+            <div id="buttons" class="component">
+                <h1>Buttons</h1>
+                <div class="contents">
+                    <!-- White, Small (Sign Up) -->
+                    <pre class="code">.button .button-small .button-white .orange-dark</pre>
+                    <a href="style-guide.html#buttons" class="button button-small button-white orange-dark"><span class="icon fa fa-chevron-circle-right" aria-hidden="true"></span>Sign Up</a>
+
+                    <!-- White, Small (Back to Top) -->
+                    <pre class="code">.button .button-small .button-white .regular</pre>
+                    <a href="style-guide.html#buttons" class="button button-small button-white mortar"><span class="icon fa fa-arrow-circle-up" aria-hidden="true"></span>Back to Top</a>
+
+                    <!-- Grey, Small -->
+                    <pre class="code">.button .button-small .button-grey</pre>
+                    <a href="style-guide.html#buttons" class="button button-small button-grey">Lorem ipsum</a>
+
+                    <!-- Grey, Small (Refresh) -->
+                    <pre class="code">.button .button-small .button-grey i.icon-refresh</pre>
+                    <a href="style-guide.html#buttons" class="button button-small button-grey"><span class="icon fa fa-refresh" aria-hidden="true"></span>Refresh</a>
+
+                    <!-- Grey, Small (Change Location) -->
+                    <pre class="code">.button .button-small .button-grey i.icon-map-marker</pre>
+                    <a href="style-guide.html#buttons" class="button button-small button-grey"><span class="icon fa fa-map-marker" aria-hidden="true"></span>Change Location</a>
+
+                    <!-- Grey, Small (Add) -->
+                    <pre class="code">.button .button-small .button-grey i.icon-plus-sign</pre>
+                    <a href="style-guide.html#buttons" class="button button-small button-grey"><span class="icon fa fa-plus-circle" aria-hidden="true"></span>Add</a>
+
+                    <!-- Grey, Small (Confirm) -->
+                    <pre class="code">.button .button-small .button-grey i.icon-ok</pre>
+                    <a href="style-guide.html#buttons" class="button button-small button-grey"><span class="icon fa fa-check" aria-hidden="true"></span>Confirm</a>
+
+                    <!-- Grey, Small (Cancel) -->
+                    <pre class="code">.button .button-small .button-grey i.icon-remove</pre>
+                    <a href="style-guide.html#buttons" class="button button-small button-grey"><span class="icon fa fa-times" aria-hidden="true"></span>Cancel</a>
+
+                    <!-- Green, Small -->
+                    <pre class="code">.button .button-small .button-green</pre>
+                    <a href="style-guide.html#buttons" class="button button-small button-green">Lorem ipsum</a>
+
+                    <!-- Yellow, Small -->
+                    <pre class="code">.button .button-small .button-yellow</pre>
+                    <a href="style-guide.html#buttons" class="button button-small button-yellow">Lorem ipsum</a>
+
+                    <!-- Red, Small -->
+                    <pre class="code">.button .button-small .button-red</pre>
+                    <a href="style-guide.html#buttons" class="button button-small button-red">Lorem ipsum</a>
+
+                    <!-- Red, Small (Shopping Cart) -->
+                    <pre class="code">.button .button-small .button-red i.icon-shopping-cart</pre>
+                    <a href="style-guide.html#buttons" class="button button-small button-red"><span class="icon fa fa-shopping-cart" aria-hidden="true"></span>Checkout</a>
+
+                    <!-- Green, Small (Shopping Cart) -->
+                    <pre class="code">.button .button-small .button-green i.icon-shopping-cart</pre>
+                    <a href="style-guide.html#buttons" class="button button-small button-green"><span class="icon fa fa-shopping-cart" aria-hidden="true"></span>Checkout</a>
+
+                    <!-- Red, Small (Add to Cart) -->
+                    <pre class="code">.button .button-small .button-red i.icon-plus-sign</pre>
+                    <a href="style-guide.html#buttons" class="button button-small button-red"><span class="icon fa fa-plus-circle" aria-hidden="true"></span>Add to Cart</a>
+
+                    <!-- Red, Medium -->
+                    <pre class="code">.button .button-medium .button-red</pre>
+                    <a href="style-guide.html#buttons" class="button button-medium button-red">Lorem ipsum</a>
+
+                    <!-- Red, Large -->
+                    <pre class="code">.button .button-large .button-red</pre>
+                    <a href="style-guide.html#buttons" class="button button-large button-red">Lorem ipsum</a>
+                </div>
+            </div>
+
+            <!-- Icons -->
+            <div id="icons" class="component">
+                <h1>Icons</h1>
+                <div class="contents contents-icons">
+                    <pre class="code">.fa-lock</pre>
+                    <span class="icon fa fa-lock" aria-hidden="true"></span>
+                    <pre class="code">.fa-user</pre>
+                    <span class="icon fa fa-user" aria-hidden="true"></span>
+                    <pre class="code">.fa-map-marker</pre>
+                    <span class="icon fa fa-map-marker" aria-hidden="true"></span>
+                    <pre class="code">.fa-home</pre>
+                    <span class="icon fa fa-home" aria-hidden="true"></span>
+                    <pre class="code">.fa-cutlery</pre>
+                    <span class="icon fa fa-cutlery" aria-hidden="true"></span>
+                    <pre class="code">.fa-shopping-cart</pre>
+                    <span class="icon fa fa-shopping-cart" aria-hidden="true"></span>
+                    <pre class="code">.fa-smile-o</pre>
+                    <span class="icon fa fa-smile-o" aria-hidden="true"></span>
+                    <pre class="code">.fa-envelope</pre>
+                    <span class="icon fa fa-envelope" aria-hidden="true"></span>
+                    <pre class="code">.fa-phone-square</pre>
+                    <span class="icon fa fa-phone-square" aria-hidden="true"></span>
+                    <pre class="code">.fa-facebook-square</pre>
+                    <span class="icon fa fa-facebook-square facebook" aria-hidden="true"></span>
+                    <pre class="code">.fa-twitter-square</pre>
+                    <span class="icon fa fa-twitter-square twitter" aria-hidden="true"></span>
+                    <pre class="code">.fa-linkedin-square</pre>
+                    <span class="icon fa fa-linkedin-square linkedin" aria-hidden="true"></span>
+                    <pre class="code">.fa-chevron-circle-right</pre>
+                    <span class="icon fa fa-chevron-circle-right" aria-hidden="true"></span>
+                    <pre class="code">.fa-arrow-right</pre>
+                    <span class="icon fa fa-arrow-right" aria-hidden="true"></span>
+                    <pre class="code">.fa-exclamation-triangle</pre>
+                    <span class="icon fa fa-exclamation-triangle" aria-hidden="true"></span>
+                    <pre class="code">.fa-check-circle</pre>
+                    <span class="icon fa fa-check-circle" aria-hidden="true"></span>
+                    <pre class="code">.fa-refresh</pre>
+                    <span class="icon fa fa-refresh" aria-hidden="true"></span>
+                    <pre class="code">.fa-reply</pre>
+                    <span class="icon fa fa-reply" aria-hidden="true"></span>
+                    <pre class="code">.fa-arrow-circle-up</pre>
+                    <span class="icon fa fa-arrow-circle-up" aria-hidden="true"></span>
+                    <pre class="code">.fa-times</pre>
+                    <span class="icon fa fa-times" aria-hidden="true"></span>
+                    <pre class="code">.fa-times-circle</pre>
+                    <span class="icon fa fa-times-circle" aria-hidden="true"></span>
+                    <pre class="code">.fa-plus</pre>
+                    <span class="icon fa fa-plus" aria-hidden="true"></span>
+                    <pre class="code">.fa-plus-square-o</pre>
+                    <span class="icon fa fa-plus-square-o" aria-hidden="true"></span>
+                    <pre class="code">.fa-minus</pre>
+                    <span class="icon fa fa-minus" aria-hidden="true"></span>
+                    <pre class="code">.fa-minus-square-o</pre>
+                    <span class="icon fa fa-minus-square-o" aria-hidden="true"></span>
+                    <pre class="code">.fa-laptop</pre>
+                    <span class="icon fa fa-laptop" aria-hidden="true"></span>
+                    <pre class="code">.fa-food</pre>
+                    <span class="icon fa fa-cutlery" aria-hidden="true"></span>
+                    <pre class="code">.fa-truck</pre>
+                    <span class="icon fa fa-truck" aria-hidden="true"></span>
+                    <pre class="code">.fa-money</pre>
+                    <span class="icon fa fa-money" aria-hidden="true"></span>
+                    <pre class="code">.loading .loading-bars</pre>
+                    <div class="loading loading-bars"></div>
+                    <pre class="code">.loading .loading-snake</pre>
+                    <div class="loading loading-snake"></div>
+                </div>
+            </div>
+
+            <!-- Tags -->
+            <div id="tags" class="component">
+                <h1>Tags</h1>
+
+                <div class="tag">Lorem ipsum<a href="style-guide.html#tags"><span class="icon fa fa-times-circle" aria-hidden="true"></span></a></div>
+                <div class="tag">Dolor sit amet<a href="style-guide.html#tags"><span class="icon fa fa-times-circle" aria-hidden="true"></span></a></div>
+                <div class="tag">2013 &ndash; Erat volutpat<a href="style-guide.html#tags"><span class="icon fa fa-times-circle" aria-hidden="true"></span></a></div>
+            </div>
+        </section>
+
+        <!-- Back to Top -->
+        <a href="#top" class="icon fa fa-arrow-up" data-action="back-to-top"></a>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="assets/js/script.js"></script>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+    <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+    </script>
+</body>
+</html>

@@ -1,0 +1,399 @@
+/* ==========================================================================
+   Typography: color, font-size, font-weight, line-height, text-decoration
+   ========================================================================== */
+/* LESS: Colours */
+/* LESS: Font families */
+/* LESS: Font weights */
+/* Fonts */
+@font-face {
+  font-family: 'TradeGothicLTStd';
+  src: url("../fonts/TradeGothicLTStd.eot");
+  src: url("../fonts/TradeGothicLTStd.eot?#iefix") format("embedded-opentype"), url("../fonts/TradeGothicLTStd.woff") format("woff"), url("../fonts/TradeGothicLTStd.ttf") format("truetype"), url("../fonts/TradeGothicLTStd.svg#TradeGothicLTStd") format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'TradeGothicLTStd-Bold';
+  src: url("../fonts/TradeGothicLTStd-Bold.eot");
+  src: url("../fonts/TradeGothicLTStd-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/TradeGothicLTStd-Bold.woff") format("woff"), url("../fonts/TradeGothicLTStd-Bold.ttf") format("truetype"), url("../fonts/TradeGothicLTStd-Bold.svg#TradeGothicLTStd-Bold") format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+/**
+ * Example: 1.4em = 14px, 2.2em = 22px
+ *
+ * 62.5% allows you to easily use em's for font-sizing
+ */
+body {
+  font: 62.5%/1 Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+/* Headings
+   ========================================================================== */
+h1 {
+  color: #082865;
+  font: 33px/1 'TradeGothicLTStd-Bold', Arial, sans-serif;
+  text-transform: uppercase;
+}
+.home h1 {
+  font-size: 40px;
+}
+h2 {
+  color: #082865;
+  font: 24px/1 'TradeGothicLTStd-Bold', Arial, sans-serif;
+  text-transform: uppercase;
+}
+/* Text
+   ========================================================================== */
+pre {
+  background-color: #f0f0f0;
+  border: 1px #777777 solid;
+  color: #000000;
+  font-size: 15px;
+}
+p {
+  color: #666666;
+  font: 14px/1 Arial, sans-serif;
+}
+p.intro {
+  color: #082865;
+  font: 18px/1 Arial, sans-serif;
+}
+.landing p.intro {
+  color: #777777;
+  font: 18px/1.3 Arial, sans-serif;
+}
+/* Anchors
+   ========================================================================== */
+a {
+  color: #9f9f9f;
+  font-size: 14px;
+}
+a:hover {
+  color: #666666;
+}
+/* Buttons */
+a.button {
+  text-align: center;
+  text-decoration: none;
+}
+a.grey {
+  background-color: #e9e9e9;
+  color: #082865;
+  font: 23px/1 'TradeGothicLTStd', Arial, sans-serif;
+  text-transform: uppercase;
+}
+a.grey:hover {
+  background: #f6f6f6;
+  -webkit-box-shadow: 0 0 3px #9f9f9f;
+  -moz-box-shadow: 0 0 3px #9f9f9f;
+  -o-box-shadow: 0 0 3px #9f9f9f;
+  box-shadow: 0 0 3px #9f9f9f;
+}
+a.navy {
+  background-color: #082865;
+  color: #ffffff;
+  font: 23px/1 'TradeGothicLTStd', Arial, sans-serif;
+  text-transform: uppercase;
+}
+/* Table
+   ========================================================================== */
+/* Lists
+   ========================================================================== */
+ul li {
+  font-size: 14px;
+}
+/* Style Guide */
+ul.style-guide li {
+  color: #666666;
+}
+ul.style-guide li a {
+  color: #666666;
+}
+ul.style-guide li a:hover {
+  color: #082865;
+}
+/* Navigation
+   ========================================================================== */
+nav.primary ol li.current a {
+  color: #082865;
+}
+nav.primary ol li a {
+  color: #666666;
+  font: 11px/1 Arial, sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+nav.primary ol li a:focus,
+nav.primary ol li a:hover {
+  color: #082865;
+  outline: none;
+}
+/* Contents
+   ========================================================================== */
+div.wrapper-inner > header {
+  border-top: 1px #f0f0f0 solid;
+}
+div.wrapper-inner > header h1 {
+  text-align: center;
+}
+section[role="main"].member div.contents > header h1 {
+  text-align: center;
+}
+/* Offers
+   ========================================================================== */
+div.offers > header h1 {
+  font-size: 40px;
+  text-align: center;
+}
+div.offers a.offer {
+  text-decoration: none;
+}
+/* Amici
+   ========================================================================== */
+div.amici p {
+  color: #082865;
+  font: 33px/1 'TradeGothicLTStd-Bold', Arial, sans-serif;
+  text-transform: uppercase;
+}
+div.amici p.login {
+  color: #9f9f9f;
+}
+div.amici a {
+  color: #9f9f9f;
+  font: 33px/1 'TradeGothicLTStd-Bold', Arial, sans-serif;
+  text-transform: uppercase;
+}
+div.amici a:hover {
+  color: #666666;
+}
+div.amici div.counter a {
+  color: #ffffff;
+  font: 20px/1 'TradeGothicLTStd-Bold', Arial, sans-serif;
+  text-align: center;
+  text-decoration: none;
+}
+/* Profile
+   ========================================================================== */
+div.profile > header h1 {
+  font-size: 40px;
+  text-align: center;
+}
+div.profile div.member ul li {
+  text-transform: uppercase;
+}
+div.profile div.member ul li.name {
+  color: #082865;
+  font: 16px/1 Arial, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+div.profile div.member ul li.province {
+  color: #082865;
+  font: 14px/1 Arial, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+div.profile div.member ul li a {
+  color: #9aa0a5;
+  font: 11px/1 Arial, sans-serif;
+}
+div.profile div.member ul li a:hover {
+  color: #666666;
+}
+/* Feed */
+div.feed header {
+  text-align: center;
+}
+div.feed header h2 {
+  background-color: #f6f6f6;
+  color: #082865;
+  font: 20px/1 'TradeGothicLTStd-Bold', Arial, sans-serif;
+  text-transform: uppercase;
+}
+div.feed p {
+  color: #666666;
+  font: 15px/1 Arial, sans-serif;
+}
+/* Character Counter */
+div.character-counter {
+  color: #666666;
+  font: 12px/1 Arial, sans-serif;
+}
+div.warning {
+  color: #e61d38;
+  font-weight: 700;
+}
+/* Footer
+   ========================================================================== */
+footer[role="contentinfo"] ol li a {
+  font-size: 13px;
+  line-height: 1.2;
+  text-decoration: none;
+}
+footer[role="contentinfo"] ol li a:hover {
+  text-decoration: underline;
+}
+/* Carousel
+   ========================================================================== */
+div.wrapper-carousel > header h1 {
+  text-align: center;
+}
+div.wrapper-carousel div.carousel div.slide header h2 {
+  font-size: 28px;
+}
+div.wrapper-carousel div.carousel div.slide p {
+  line-height: 1.3;
+}
+/* Slider
+   ========================================================================== */
+div.slider p.title {
+  color: #9f9f9f;
+  font: 19px/1 'TradeGothicLTStd-Bold', Arial, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+}
+div.slider p.title b {
+  color: #082865;
+}
+/* Contents
+   ========================================================================== */
+section[role="main"].interaction div.contents header h1 {
+  text-align: center;
+}
+/* Media Queries
+   ========================================================================== */
+@media only screen and (min-width: 481px) {
+  h1 {
+    font-size: 45px;
+  }
+  p {
+    font-size: 16px;
+  }
+  p.intro {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+  .landing p.intro {
+    font-size: 20px;
+    font-family: 'TradeGothicLTStd', Arial, sans-serif;
+  }
+  /* Navigation
+         ========================================================================== */
+  nav.primary ol li a {
+    color: #777777;
+    font: 16px/1 'TradeGothicLTStd-Bold', Arial, sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  nav.primary ol li a:hover {
+    color: #082865;
+  }
+  /* Contents
+         ========================================================================== */
+  section[role="main"].member div.contents > header h1 {
+    text-align: left;
+  }
+  section[role="main"].interaction div.contents header h1 {
+    font-size: 35px;
+    text-align: left;
+  }
+  section[role="main"].interaction div.contents p {
+    font-size: 14px;
+    line-height: 1.3;
+  }
+  section[role="main"].interaction div.contents p.intro {
+    font-size: 18px;
+  }
+  /* Amici
+         ========================================================================== */
+  div.amici p {
+    font-size: 36px;
+  }
+  div.amici p.login {
+    font-size: 20px;
+  }
+  div.amici a.join {
+    font-size: 36px;
+  }
+  div.amici a.login {
+    font-size: 20px;
+  }
+  /* Profile
+         ========================================================================== */
+  div.profile > header h1 {
+    font-size: 40px;
+  }
+  div.profile div.member ul li {
+    text-transform: uppercase;
+  }
+  div.profile div.member ul li.name {
+    font: 25px/1 'TradeGothicLTStd-Bold', Arial, sans-serif;
+  }
+  div.profile div.member ul li.province {
+    font: 17px/1 'TradeGothicLTStd-Bold', Arial, sans-serif;
+  }
+  div.profile div.member ul li a {
+    font: 13px/1 'TradeGothicLTStd-Bold', Arial, sans-serif;
+  }
+  /* Feed */
+  div.feed header h2 {
+    background-color: #f0f0f0;
+  }
+  /* Carousel
+         ========================================================================== */
+  div.wrapper-carousel div.carousel div.slide header h2 {
+    font-size: 28px;
+  }
+  div.wrapper-carousel div.carousel div.slide p {
+    font-size: 16px;
+  }
+  /* Slider
+         ========================================================================== */
+  div.slider p.title {
+    font-size: 30px;
+  }
+  /* Character Counter */
+  div.character-counter {
+    text-align: right;
+  }
+}
+/* Wide Screens */
+@media only screen and (min-width: 1160px) {
+  /* Contents
+         ========================================================================== */
+  section[role="main"].interaction div.contents header h1 {
+    font-size: 45px;
+  }
+  section[role="main"].interaction div.contents p {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  section[role="main"].interaction div.contents p.intro {
+    font-size: 20px;
+  }
+  /* Slider
+         ========================================================================== */
+  div.slider p.title {
+    font-size: 35px;
+  }
+}
+/* Chrome Frame
+   ========================================================================== */
+div.chromeframe p {
+  color: #ffffff;
+  font-size: 14px;
+  text-align: center;
+}
+div.chromeframe p a {
+  color: #9f9f9f;
+}
+div.chromeframe p a:hover {
+  color: #e61d38;
+}
+div.chromeframe p a:visited {
+  color: #9f9f9f;
+}
+/* LESS: Mixins */

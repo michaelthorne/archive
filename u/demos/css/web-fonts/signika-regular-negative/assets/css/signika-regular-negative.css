@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'SignikaRegularNegative';
+    src: url("../fonts/signikanegative-regular-webfont.eot");
+    src: local('☺'), url("../fonts/signikanegative-regular-webfont.woff") format('woff'),
+                     url("../fonts/signikanegative-regular-webfont.ttf") format('truetype'),
+                     url("../fonts/signikanegative-regular-webfont.svg#SignikaRegularNegative") format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

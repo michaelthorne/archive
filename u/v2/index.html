@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Michael Thorne | Front-end Web Developer</title>
+    <meta name="description" content="Front-end web developer at Next in Cape Town, South Africa. Focused on web standards, performance and usability. Interested in design and photography." />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Open Graph -->
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:title" content="Michael Thorne | Front-end Web Developer" />
+    <meta property="og:description" content="Front-end web developer at Next in Cape Town, South Africa. Focused on web standards, performance and usability. Interested in design and photography." />
+    <meta property="og:url" content="http://www.userx.co.za" />
+    <meta property="og:image" content="http://www.userx.co.za/assets/images/general/michael-thorne-300x300.jpg" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@mikkelz_za" />
+    <meta name="twitter:title" content="Michael Thorne | Front-end Web Developer" />
+    <meta name="twitter:description" content="Front-end web developer at Next in Cape Town, South Africa. Focused on web standards, performance and usability. Interested in design and photography." />
+    <meta name="twitter:image" content="http://www.userx.co.za/assets/images/general/michael-thorne-300x300.jpg" />
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- Google+ -->
+    <link rel="publisher" href="https://plus.google.com/+MichaelThorne_za" />
+
+    <!-- Fonts -->
+    <script>
+        WebFontConfig = {
+            google: {
+                families: ['Raleway:400,700']
+            },
+            custom: {
+                families: ['icomoon'],
+                    urls: ['assets/css/style.css']
+            }
+        };
+    </script>
+
+    <!-- Web Font Loader -->
+    <script>
+        (function(){var e=document.createElement("script");e.src=("https:"==document.location.protocol?"https":"http")+"://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js";e.type="text/javascript";e.async="true";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})();
+    </script>
+
+    <!-- Picturefill -->
+    <script src="assets/js/vendor/picturefill.js" async="async"></script>
+
+    <!--[if lt IE 9]>
+    <script src="assets/js/vendor/polyfills.js"></script>
+    <![endif]-->
+</head>
+<body id="top">
+    <a href="#main" class="visuallyhidden">Skip to main content</a>
+
+    <div class="l-sidebar">
+        <a href="/" class="photo">
+            <picture>
+                <source srcset="assets/images/general/michael-thorne-300x300.jpg" media="(min-width: 80em)">
+                <source srcset="assets/images/general/michael-thorne-60x60.jpg" media="(min-width: 40em)">
+                <img src="assets/images/general/michael-thorne-50x50.jpg" alt="Michael Thorne" />
+            </picture>
+            <span class="icon icon-home" aria-hidden="true"></span>
+        </a>
+
+        <h6 class="zeta hN">Michael Thorne<span class="role">Front-end Web Developer</span></h6>
+
+        <nav class="nav nav--primary" role="navigation">
+            <ol class="list list--nav">
+                <li><a href="/journal">Journal</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ol>
+
+            <ul class="list list--social">
+                <li><a href="http://flickr.com/mikkelz" title="My photos on Flickr"><span class="icon icon-flickr" aria-hidden="true"></span></a></li>
+                <li><a href="http://github.com/michaelthorne" title="My code on GitHub"><span class="icon icon-github" aria-hidden="true"></span></a></li>
+                <li><a href="http://twitter.com/mikkelz_za" title="My thoughts on Twitter"><span class="icon icon-twitter" aria-hidden="true"></span></a></li>
+                <li><a href="http://youtube.com/mikkelzZA" title="My videos on YouTube"><span class="icon icon-youtube-play" aria-hidden="true"></span></a></li>
+            </ul>
+        </nav>
+
+        <a href="#" class="btn btn--secondary btn--small toggle" data-action="toggle-nav">
+            <span class="icon icon--left icon-bars hide-small hide-large" aria-hidden="true"></span>Menu
+        </a>
+    </div>
+
+    <main id="main" class="l-main" role="main">
+        <div class="l-wrapper">
+            <!--[if lt IE 9]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/?locale=en">upgrade your browser</a> to improve your experience.</p>
+            <![endif]-->
+
+            <div class="section">
+                <article class="article" itemscope itemType="http://schema.org/BlogPosting">
+                    <header class="header header--article">
+                        <time class="time" datetime="2014-12-08" itemprop="datePublished">
+                            <a href="journal/front-end-style-guides" itemprop="url"><span class="icon icon-book" aria-hidden="true"></span>December 08, 2014</a>
+                        </time>
+                        <h1 class="beta hN" itemprop="headline">Front-end Style Guides</h1>
+                    </header>
+
+                    <div itemprop="articleBody">
+                        <p>A style guide is a set of rules and standards to help enforce consistency. Originally created for publications and organisations, they are now commonplace in front-end web design and development.</p>
+
+                        <p>My first experience with a style guide, although nothing like how I know them to be structured today, was in creating an HTML document to preview typography on the Web. While I was working at Hellocomputer in 2010, embedding custom Web Fonts via <code>@font-face</code> was still quite tricky for consistent cross-browser rendering. So I created a <a href="http://www.userx.co.za/c/hc/s/typography.html">template</a> so that the designer and I could see how a font family would render in the browser. Fortunately we had <a href="http://www.paulirish.com/2009/bulletproof-font-face-implementation-syntax">Paul Irish’s bulletproof @font-face syntax</a> article along with <a href="http://www.fontsquirrel.com">Font Squirrel’s</a> free service for converting web fonts. Things are a little easier nowadays with the wide selection of font families provided by services like <a href="http://www.google.com/fonts">Google Fonts</a> and <a href="https://typekit.com">Typekit</a>.</p>
+
+                        <p>Fast forward nearly 4 years and the style guides I build and work with are complex systems, with typography forming only one section of the entire guide. Needless to say, typography is one of the more important aspects of web design, but there are numerous other components to consider. Based on <a href="http://patternlab.io">Pattern Lab’s</a> philosophy of “atomic design”, we need to cater for all the standard HTML elements, which are the building blocks for our design. These are combined to form patterns and later, templates which are finally displayed as the web pages our users see in their browsers.</p>
+
+                        <figure class="figure">
+                            <img src="assets/images/journal/orderin-front-end-style-guide.jpg" width="1350" height="631" alt="OrderIn Front-end Style Guide" />
+                            <figcaption class="figure__caption">The front-end style guide I created for <a href="http://www.orderin.co.za">OrderIn</a>.</figcaption>
+                        </figure>
+
+                        <p>Whilst some clients I’ve worked with haven’t fully grasped all the benefits of style guide driven development, there have been a few major advantages. The biggest benefit of this approach, is the ability to view the basic design styles in the browser as actual HTML elements far earlier in the project life cycle. Some of which includes typography and color palettes. This allows for earlier communication and discussion over design decisions, which can be easily altered at this early stage. No longer is the client left in the dark for months before the “big launch”.</p>
+
+                        <p>Personally, I’ve found the ability to write better and more consistent HTML and CSS as a result of being able to troubleshoot cross-browser inconsistencies of elements and patterns in isolation. No longer are you trying to debug why a single element isn’t rendering correctly in a template due to some or other overriding style. It’s also forced me to work in a more modular way and look at reusing elements and patterns wherever possible. Because you’re building a system and not creating individual templates, you start to quickly see how pages are structured and what is shared and common amongst them.</p>
+
+                        <p>The <a href="http://www.userx.co.za/styleguide">style guide</a> I created for my website is quite basic, focusing primarily on typography. I found it helpful, even with a small number of templates, to have a consistent set of styles which I could define once and use throughout the website.</p>
+
+                        <hr />
+
+                        <p><a href="http://twitter.com/anna_debenham">Anna Debenham</a> recently started a super project on GitHub, which is a collection of <a href="http://styleguides.io">style guide resources</a>. She, along with a <a href="https://github.com/maban/styleguides/graphs/contributors">bunch of contributors</a> have added articles, examples and tools to help you understand and create your own style guides. It’s great to see how the community contributed and worked together to consolidate all these amazing resources under one URL.</p>
+
+                        <p>If you have any resources of your own, please feel free to <a href=" https://github.com/maban/styleguides#how-to-add-resources-the-easy-way">contribute</a> to the project.</p>
+                    </div>
+                </article>
+            </div>
+
+            <section class="section">
+                <ol class="list list--articles">
+                    <li>
+                        <time class="time" datetime="2014-11-10">November 10, 2014</time>
+                        <h2 class="gamma hN"><a href="journal/restore-the-personal-hotspot-on-your-ipad-ios8">How to restore the Personal Hotspot on your iPad in iOS 8</a></h2>
+                        <p>A few weeks ago I upgraded my 4th generation iPad (retina) to iOS 8. However, I was recently <a href="working-remotely-can-work">working remotely</a> and to my disappointment, the option to create a personal hotspot on my iPad was missing.</p>
+                        <a href="journal/restore-the-personal-hotspot-on-your-ipad-ios8" class="btn btn--secondary" role="button">Continue Reading<span class="icon icon-long-arrow-right" aria-hidden="true"></span></a>
+                    </li>
+                    <li>
+                        <time class="time" datetime="2014-10-20">October 20, 2014</time>
+                        <h2 class="gamma hN"><a href="journal/phpstorm-performance-optimisation-tips">PhpStorm performance optimisation tips</a></h2>
+                        <p>My first experience of JetBrains products was back in 2006 with IntelliJ when I was doing Java development. Over the last few years I’ve been happily using PhpStorm, but I’m always keen to optimise it’s performance wherever possible.</p>
+                        <a href="journal/phpstorm-performance-optimisation-tips" class="btn btn--secondary" role="button">Continue Reading<span class="icon icon-long-arrow-right" aria-hidden="true"></span></a>
+                    </li>
+                    <li>
+                        <time class="time" datetime="2014-08-22">August 22, 2014</time>
+                        <h2 class="gamma hN"><a href="journal/cape-town-ux-craft-august-meetup">Cape Town UX Craft – August Meetup</a></h2>
+                        <p>The topic for the most recent meetup was: Content’s Forgotten Corners, presented by content strategist Kerry-Anne Gilowey.</p>
+                        <a href="journal/cape-town-ux-craft-august-meetup" class="btn btn--secondary" role="button">Continue Reading<span class="icon icon-long-arrow-right" aria-hidden="true"></span></a>
+                    </li>
+                    <li>
+                        <time class="time" datetime="2014-08-14">August 14, 2014</time>
+                        <h2 class="gamma hN"><a href="journal/cape-town-front-end-developers-july-meetup">Cape Town Front-end Developers – July Meetup</a></h2>
+                        <p>Building a front-end style guide with Jekyll was the topic for the most recent Cape Town Front-end Developers meetup. The topic was presented by Justin Slack who currently works at New Media Labs.</p>
+                        <a href="journal/cape-town-front-end-developers-july-meetup" class="btn btn--secondary" role="button">Continue Reading<span class="icon icon-long-arrow-right" aria-hidden="true"></span></a>
+                    </li>
+                    <li>
+                        <time class="time" datetime="2014-08-05">August 5, 2014</time>
+                        <h2 class="gamma hN"><a href="journal/cape-town-ux-craft-july-meetup">Cape Town UX Craft – July Meetup</a></h2>
+                        <p>The Cape Town UX Craft is a group on the popular service, Meetup. They held their second meetup on the 23rd of July at Ogilvy’s office in Cape Town.</p>
+                        <a href="journal/cape-town-ux-craft-july-meetup" class="btn btn--secondary" role="button">Continue Reading<span class="icon icon-long-arrow-right" aria-hidden="true"></span></a>
+                    </li>
+                    <li>
+                        <time class="time" datetime="2014-06-08">June 8, 2014</time>
+                        <h2 class="gamma hN"><a href="journal/accessing-grunt-connect-server-on-wifi-network">Accessing a Grunt connect server on your WiFi network</a></h2>
+                        <p>Until now, I haven’t found a way to easily view my front-end HTML templates on my phone or iPad, without uploading them to a live (staging) server.</p>
+                        <a href="journal/accessing-grunt-connect-server-on-wifi-network" class="btn btn--secondary" role="button">Continue Reading<span class="icon icon-long-arrow-right" aria-hidden="true"></span></a>
+                    </li>
+                    <li>
+                        <time class="time" datetime="2014-04-24">April 24, 2014</time>
+                        <h2 class="gamma hN"><a href="journal/working-remotely-can-work">Working remotely can work</a></h2>
+                        <p>I spent last year freelancing, but was offered a great opportunity to work at Joe Public n (now known as Next) on a full-time basis this year.</p>
+                        <a href="journal/working-remotely-can-work" class="btn btn--secondary" role="button">Continue Reading<span class="icon icon-long-arrow-right" aria-hidden="true"></span></a>
+                    </li>
+                    <li>
+                        <time class="time" datetime="2013-11-22">November 22, 2013</time>
+                        <h2 class="gamma hN"><a href="journal/tips-for-freelance-front-end-web-developers">Tips for freelance front-end web developers</a></h2>
+                        <p>Having just reflected on my year of freelancing, I thought it would be good to look back and share some of things that helped make my year a successful one.</p>
+                        <a href="journal/tips-for-freelance-front-end-web-developers" class="btn btn--secondary" role="button">Continue Reading<span class="icon icon-long-arrow-right" aria-hidden="true"></span></a>
+                    </li>
+                    <li>
+                        <time class="time" datetime="2013-11-21">November 21, 2013</time>
+                        <h2 class="gamma hN"><a href="journal/reflecting-on-a-year-of-freelancing">Reflecting on a year of freelancing</a></h2>
+                        <p>When I began this chapter of my life as a freelance front-end web developer, I had the best of intentions, but obviously had no idea on how it would pan out.</p>
+                        <a href="journal/reflecting-on-a-year-of-freelancing" class="btn btn--secondary" role="button">Continue Reading<span class="icon icon-long-arrow-right" aria-hidden="true"></span></a>
+                    </li>
+                    <li>
+                        <time class="time" datetime="2013-03-27">March 27, 2013</time>
+                        <h2 class="delta hN"><a href="journal/hello-world">Hello World!</a></h2>
+                        <p>Welcome to my small, but carefully positioned footprint in the world wide web. With over 10 years of industry–related experience, I made the decision to specialise in front-end development towards the end of last year, 2012.</p>
+                        <a href="journal/hello-world" class="btn btn--secondary" role="button">Continue Reading<span class="icon icon-long-arrow-right" aria-hidden="true"></span></a>
+                    </li>
+                </ol>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer footer--primary" role="contentinfo">
+        <div class="l-wrapper">
+            <div class="legal">
+                <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license" class="license">
+                    <img src="assets/images/logos/creative-commons-by-nc-sa-80x15.png" width="80" height="15" alt="Creative Commons License" />
+                </a>
+                <small>This work by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.userx.co.za/about" property="cc:attributionName" rel="cc:attributionURL">Michael Thorne</a> is licensed under a <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</small>
+            </div>
+
+            <a href="styleguide" class="btn btn--small" role="button">
+                <span class="icon icon--left icon-file-text" aria-hidden="true"></span>Style Guide
+            </a>
+
+            <a href="#top" class="btn btn--secondary btn--icon btn--small" role="button" title="Back to Top">
+                <span class="icon icon-arrow-up"></span>
+            </a>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/script.js"></script>
+
+    <!-- Google Analytics -->
+    <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-29325015-1','auto');ga('require', 'displayfeatures');ga('send','pageview');
+    </script>
+</body>
+</html>

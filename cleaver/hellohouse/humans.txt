@@ -1,0 +1,12 @@
+# humanstxt.org
+
+# TEAM
+
+    Simon Comley   | Product Owner, Developer | @simonthetwit
+    Michael Thorne | Front-end Web Developer  | @mikkelz_za
+
+# SITE
+
+    Last Update: 2015/07/20
+    Standards: HTML5, CSS3
+    Components: Font Awesome, Grunt, jQuery, Less, Normalize.css

@@ -1,0 +1,16 @@
+/* TEAM */
+
+	Developer: Michael Thorne
+	Twitter: @mikkelz_za
+	From: Cape Town, South Africa
+
+/* THANKS */
+
+    ...
+
+/* SITE */
+
+	Last update: 2012/08/25
+	Language: English
+	Doctype: HTML5
+	IDE: PhpStorm

@@ -1,0 +1,55 @@
+body {
+    background: #fff;
+}
+
+#container {
+    margin: 0 auto;
+    width: 960px;
+}
+
+#container ul li {
+    list-style-type: square;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+header {
+    background: #000;
+    color: #fff;
+    height: 45px;
+    width: 100%;
+}
+
+header h1 {
+    font-size: 20px;
+    margin: 0 auto;
+    padding: 10px;
+    width: 960px;
+}
+
+header a {
+    color: #00d2ff;
+    left: 13px;
+    position: absolute;
+    text-decoration: none;
+    top: 13px;
+}
+
+code {
+    background: #ececec;
+    font-size: 13px;
+    position: absolute;
+    right: 50px;
+    top: 90px;
+    white-space: pre;
+}

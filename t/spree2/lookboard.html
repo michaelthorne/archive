@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en-GB" dir="ltr" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en-GB" dir="ltr" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en-GB" dir="ltr" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en-GB" dir="ltr" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+    <title>Spree / Lookboard</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="author" content="" />
+    <meta name="description" content="" />
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:locale" content="en_GB" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <style>
+        @font-face {
+            font-family: 'MyriadPro';
+            src: url("assets/fonts/MyriadPro.eot");
+            src: url("assets/fonts/MyriadPro.eot?#iefix") format("embedded-opentype"),
+            url("assets/fonts/MyriadPro.woff") format("woff"),
+            url("assets/fonts/MyriadPro.ttf") format("truetype"),
+            url("assets/fonts/MyriadPro.svg#MyriadPro") format("svg");
+            font-weight: 400;
+            font-style: normal;
+        }
+    </style>
+    <link rel="stylesheet" href="assets/css/normalize.css" />
+    <link rel="stylesheet" href="assets/css/jquery-ui.css" />
+    <link rel="stylesheet" href="assets/css/mediaelementplayer.css" />
+    <link rel="stylesheet" href="assets/css/layout.css" />
+    <link rel="stylesheet" href="assets/css/typography.css" />
+    <link rel="stylesheet" href="assets/css/forms.css" />
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5.js"></script>
+    <script src="assets/js/selectivizr.js"></script>
+    <![endif]-->
+    <script src="assets/js/detect.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="assets/js/jquery.js"><\/script>');</script>
+    <script>
+        var $j = jQuery.noConflict();
+    </script>
+</head>
+<body>
+    <!--[if lt IE 8]>
+    <div class="chromeframe">
+        <p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/?locale=en" title="Browse Happy &ndash; Upgrade your browser today!" target="_blank">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true" title="Google Chrome Frame &ndash; Make your browser more powerful." target="blank">activate Google Chrome Frame</a> to improve your experience.</p>
+    </div>
+    <![endif]-->
+    <div id="top" class="utilities">
+        <div class="wrapper">
+            <ol class="utilities utilities-sign-up">
+                <li><a href="#" class="newsletter" data-action="newsletter-sign-up">Sign up to our newsletter</a></li>
+            </ol>
+            <ol class="utilities utilities-user">
+                <li class="account">
+                    <!--<a href="account.html">Hi Jen</a>-->
+                    <a href="member-login-register.html">Login | Register</a>
+                </li>
+                <li>
+                    <ul class="languages drop-down">
+                        <li>
+                            <a href="#" data-language-code="en-za" data-language-active="true">English</a>
+                            <ul>
+                                <li><a href="#" data-language-code="af-za">Afrikaans</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="favourites">
+                    <a href="shop-favourites.html" data-util="favourites">Favourites: <span>1</span></a>
+                </li>
+                <li class="cart">
+                    <a href="shop-cart.html" data-util="cart">Cart: <span>1</span></a>
+                </li>
+                <li class="checkout">
+                    <a id="checkout-button" href="checkout-cart.html" class="hidden">Checkout</a>
+                </li>
+            </ol>
+        </div>
+    </div>
+    <header id="primary" role="banner">
+        <div class="wrapper">
+            <a id="logo" href="home.html">
+                <img src="assets/images/logos/logo-spree.png" width="145" height="50" alt="spree" />
+            </a>
+            <ul class="info">
+                <li>
+                    <img src="assets/images/icons/icon-info-free-delivery.png" width="32" height="25" alt="" />
+                    <p>
+                        <b>Free Delivery</b> Within South Africa
+                    </p>
+                </li>
+                <li>
+                    <img src="assets/images/icons/icon-info-free-returns.png" width="23" height="25" alt="" />
+                    <p>
+                        <b>Free Returns</b> Within 30 Days
+                    </p>
+                </li>
+                <li>
+                    <img src="assets/images/icons/icon-info-help-and-enquiries.png" width="18" height="25" alt="" />
+                    <p>
+                        <b>0861 999 501</b> <a href="mailto:support@spree.co.za">support@spree.co.za</a>
+                    </p>
+                </li>
+            </ul>
+            <form id="form-search" name="form-search" method="post" action="home.html" class="form-search">
+                <label for="search">
+                    <input type="text" id="search" name="search" value="Search spree&hellip;" placeholder="Search spree&hellip;" maxlength="50" tabindex="1" data-action="autocomplete" />
+                </label>
+                <input type="submit" id="submit-search" name="submit-search" value="" tabindex="2" />
+            </form>
+        </div>
+    </header>
+    <nav class="primary">
+        <div class="wrapper">
+            <ul class="drop-down" role="navigation">
+                <li>
+                    <a href="home.html">Home</a>
+                </li>
+                <li>
+                    <a href="#">What&rsquo;s New</a>
+                </li>
+                <li>
+                    <a href="products.html">Clothes</a>
+                    <ul>
+                        <li>
+                            <a href="product-category.html">Dresses</a>
+                        </li>
+                        <li>
+                            <a href="product-category.html">Tops</a>
+                        </li>
+                        <li>
+                            <a href="product-category.html">Bottoms</a>
+                        </li>
+                        <li>
+                            <a href="product-category.html">Jeans</a>
+                        </li>
+                        <li>
+                            <a href="product-category.html">Jackets &amp; Knitwear</a>
+                        </li>
+                        <li>
+                            <a href="product-category.html">Sleepwear</a>
+                        </li>
+                        <li>
+                            <a href="product-category.html">Swimwear</a>
+                        </li>
+                        <li>
+                            <a href="product-category.html">Activewear</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Shoes</a>
+                </li>
+                <li>
+                    <a href="#">Accessories</a>
+                </li>
+                <li>
+                    <a href="lookbook.html">Lookbook</a>
+                </li>
+                <li>
+                    <a href="#">Specials</a>
+                </li>
+            </ul>
+        </div>
+        <div class="wrapper-editors-favourites">
+            <ol>
+                <li class="editors-favourites">
+                    <span>Editor&rsquo;s</span> Favourites
+                </li>
+                <li><a href="#"><img src="assets/images/logos/magazine/magazine-drum-grey.png" width="83" height="24" alt="Drum" /></a></li>
+                <li><a href="#"><img src="assets/images/logos/magazine/magazine-fairlady-grey.png" width="95" height="24" alt="Fairlady" /></a></li>
+                <li><a href="#"><img src="assets/images/logos/magazine/magazine-grazia-grey.png" width="75" height="24" alt="Grazia" /></a></li>
+                <li><a href="#"><img src="assets/images/logos/magazine/magazine-huisgenoot-grey.png" width="41" height="24" alt="Huisgenoot" /></a></li>
+                <li><a href="#"><img src="assets/images/logos/magazine/magazine-sarie-grey.png" width="85" height="24" alt="Sarie" /></a></li>
+                <li><a href="#"><img src="assets/images/logos/magazine/magazine-truelove-grey.png" width="98" height="24" alt="True Love" /></a></li>
+                <li><a href="#"><img src="assets/images/logos/magazine/magazine-you-grey.png" width="59" height="24" alt="YOU" /></a></li>
+            </ol>
+        </div>
+    </nav>
+    <section role="main">
+        <div class="wrapper">
+            <br/><br/><br/><br/>
+            <div class="lookboard lookboard-product" data-component="lookboard-product">
+                <div class="product">
+                    <img src="assets/images/lookboard/lookboard-product-01-422x599.jpg" width="422" height="599" alt="Product 01 422x599" />
+                    <div class="footer">
+                        <div class="details">
+                            <span class="product-title">Lorem ipsum dolor</span>
+                            <span class="product-designer">Ut enim ad minim</span>
+                            <span class="product-price">R350</span>
+                        </div>
+                        <a href="#" class="btn btn-black" role="button" data-anchor="lookboard-product">Buy This Item</a>
+                    </div>
+                    <!-- // Footer -->
+                </div>
+                <!-- // Product -->
+                <div class="related">
+                    <div class="header">
+                        <span class="title">
+                            Featured Items
+                            <a href="#" title="Close" role="button"><img src="assets/images/icons/icon-lookboard-close.png" width="12" height="12" alt="Close" /></a>
+                        </span>
+                    </div>
+                    <!-- // Header -->
+                    <div class="thumbnails">
+                        <div class="col span-2">
+                            <div class="col span-1">
+                                <a href="#" class="selected" data-status="" data-large="assets/images/lookboard/lookboard-product-01-422x599.jpg" data-medium="assets/images/lookboard/lookboard-product-01-155x218.jpg" data-title="Product Title 01" data-designer="Product Designer 01" data-price="R350" data-url="product-detail.html">
+                                    <img src="assets/images/lookboard/lookboard-product-01-204x282.jpg" width="75" height="105" alt="Product 01 204x282" />
+                                </a>
+                                <!-- // Product 01 -->
+                            </div>
+                            <div class="col span-1 last">
+                                <a href="#" data-status="" data-large="assets/images/lookboard/lookboard-product-02-422x599.jpg" data-medium="assets/images/lookboard/lookboard-product-02-155x218.jpg" data-title="Product Title 02" data-designer="Product Designer 02" data-price="R270.99" data-url="product-detail.html">
+                                    <div class="status status-grey">Sold Out</div>
+                                    <img src="assets/images/lookboard/lookboard-product-02-204x282.jpg" width="75" height="105" alt="Product 02 204x282" />
+                                </a>
+                                <!-- // Product 02 -->
+                            </div>
+                            <div class="col span-2">
+                                <a href="#" data-status="" data-large="assets/images/lookboard/lookboard-product-03-422x599.jpg" data-medium="assets/images/lookboard/lookboard-product-03-155x218.jpg" data-title="Product Title 03" data-designer="Product Designer 03" data-price="R250" data-url="product-detail.html">
+                                    <div class="status status-black">17 Left</div>
+                                    <img src="assets/images/lookboard/lookboard-product-03-204x282.jpg" width="160" height="218" alt="Product 03 160x218" />
+                                </a>
+                                <!-- // Product 03 -->
+                            </div>
+                            <div class="col span-2">
+                                <a href="#" data-status="" data-large="assets/images/lookboard/lookboard-product-04-422x599.jpg" data-medium="assets/images/lookboard/lookboard-product-04-155x218.jpg" data-title="Product Title 04" data-designer="Product Designer 04" data-price="R150" data-url="product-detail.html">
+                                    <img src="assets/images/lookboard/lookboard-product-04-204x282.jpg" width="160" height="218" alt="Product 04 160x218" />
+                                </a>
+                                <!-- // Product 04 -->
+                            </div>
+                        </div>
+                        <!-- // Col: Span 2 -->
+                        <div class="col span-2 last">
+                            <div class="col span-2">
+                                <a href="#" data-status="" data-large="assets/images/lookboard/lookboard-product-05-422x599.jpg" data-medium="assets/images/lookboard/lookboard-product-05-155x218.jpg" data-title="Product Title 05" data-designer="Product Designer 05" data-price="R50" data-url="product-detail.html">
+                                    <div class="status status-grey">Sold Out</div>
+                                    <img src="assets/images/lookboard/lookboard-product-05-204x282.jpg" width="160" height="218" alt="Product 05 160x218" />
+                                </a>
+                                <!-- // Product 05 -->
+                            </div>
+                            <div class="col span-2">
+                                <a href="#" data-status="" data-large="assets/images/lookboard/lookboard-product-06-422x599.jpg" data-medium="assets/images/lookboard/lookboard-product-06-155x218.jpg" data-title="Product Title 06" data-designer="Product Designer 06" data-price="R350" data-url="product-detail.html">
+                                    <img src="assets/images/lookboard/lookboard-product-06-204x282.jpg" width="160" height="218" alt="Product 06 155x218" />
+                                </a>
+                                <!-- // Product 06 -->
+                            </div>
+                            <div class="col span-1">
+                                <a href="#" data-status="" data-large="assets/images/lookboard/lookboard-product-07-422x599.jpg" data-medium="assets/images/lookboard/lookboard-product-07-155x218.jpg" data-title="Product Title 07" data-designer="Product Designer 07" data-price="R70" data-url="product-detail.html">
+                                    <img src="assets/images/lookboard/lookboard-product-07-204x282.jpg" width="75" height="105" alt="Product 07 204x282" />
+                                </a>
+                                <!-- // Product 07 -->
+                            </div>
+                            <div class="col span-1 last">
+                                <a href="#" data-status="" data-large="assets/images/lookboard/lookboard-product-08-422x599.jpg" data-medium="assets/images/lookboard/lookboard-product-08-155x218.jpg" data-title="Product Title 08" data-designer="Product Designer 08" data-price="R270" data-url="product-detail.html">
+                                    <img src="assets/images/lookboard/lookboard-product-08-204x282.jpg" width="75" height="105" alt="Product 08 204x282" />
+                                </a>
+                                <!-- // Product 08 -->
+                            </div>
+                        </div>
+                        <!-- // Col: Span 2 -->
+                    </div>
+                    <!-- // Thumbnails -->
+                </div>
+                <!-- // Related -->
+            </div>
+            <!-- // Lookboard -->
+            <br/><br/><br/><br/>
+            <div class="lookboard lookboard-story">
+                <div class="header">
+                    <img src="assets/images/lookboard/lookboard-story-header-01-567x331.jpg" width="567" height="331" alt="Modern Florals &ndash; From beautiful blossoms to tropical blooms" />
+                </div>
+                <a href="#" title="Close" role="button"><img src="assets/images/icons/icon-lookboard-close.png" width="12" height="12" alt="Close" /></a>
+                <div class="text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <ul class="list-grid">
+                    <li>
+                        <a href="#"><img src="assets/images/lookboard/lookboard-story-product-01-204x282.jpg" width="204" height="282" alt="Product 01 204x282" /></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="assets/images/lookboard/lookboard-story-product-01-204x282.jpg" width="204" height="282" alt="Product 02 204x282" /></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="assets/images/lookboard/lookboard-story-product-01-204x282.jpg" width="204" height="282" alt="Product 03 204x282" /></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="assets/images/lookboard/lookboard-story-product-01-204x282.jpg" width="204" height="282" alt="Product 04 204x282" /></a>
+                    </li>
+                </ul>
+                <a href="#" title="Close" role="button"><img src="assets/images/icons/icon-lookboard-close.png" width="12" height="12" alt="Close" /></a>
+            </div>
+            <br/><br/><br/><br/>
+        </div>
+    </section>
+    <footer role="contentinfo">
+        <div class="wrapper">
+            <nav>
+                <ul role="navigation">
+                    <li>
+                        <b>Lorem ipsum</b>
+                        <ul role="navigation">
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Lorem ipsum</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Lorem ipsum</b>
+                        <ul role="navigation">
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Lorem ipsum</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Lorem ipsum</b>
+                        <ul role="navigation">
+                            <li>0861 999 501</li>
+                            <li><a href="mailto:support@spree.co.za">support@spree.co.za</a></li>
+                            <li><img src="assets/images/logos/logo-twitter.png" width="18" height="20" title="Twitter" alt="Twitter" /> <a href="https://twitter.com/spreecoza">Follow us @spreecoza</a></li>
+                            <li><img src="assets/images/logos/logo-facebook.png" width="18" height="20" title="Facebook" alt="Facebook" /> <a href="https://www.facebook.com/spree.co.za">Like us on Facebook</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Lorem ipsum</b>
+                        <form id="form-signup" name="form-signup" method="post" action="home.html" class="form-signup">
+                            <label for="email-signup">
+                                Sign up for our newsletter
+                                <input type="text" id="email-signup" name="email-signup" value="Email address" placeholder="Email address" maxlength="100" />
+                            </label>
+                            <fieldset class="radio">
+                                <label for="form-signup-language-english">
+                                    <input id="form-signup-language-english" name="form-signup-language" type="radio" value="English" checked="checked" /> English
+                                </label>
+                                <label for="form-signup-language-afrikaans">
+                                    <input id="form-signup-language-afrikaans" name="form-signup-language" type="radio"  value="Afrikaans" /> Afrikaans
+                                </label>
+                            </fieldset>
+                            <input type="submit" id="submit-signup" name="submit-signup" value="Sign up now" />
+                        </form>
+                        <!-- Confirmation message after submitting the form -->
+                        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p> -->
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+    <a href="#" class="back-to-top" data-action="back-to-top" title="Back to Top"><img src="assets/images/icons/icon-up.png" width="12" height="12" alt="^" /> Top</a>
+    <!-- Modal: Magazine Language Change -->
+    <div id="language-confirmation" class="modal small">
+        <header>
+            <h1>Magazine Language Change</h1>
+        </header>
+        <p>The products curated by this magazine title are best experienced in <b>Afrikaans</b>. Would you like to change language now?</p>
+        <a href="home.html" class="button button-medium button-charcoal" data-action="language-confirm" role="button">Yes</a>
+        <a href="#" class="secondary" data-action="modal-close">No thanks</a>
+        <p>You can switch your language anytime using the language dropdown in the top right of the website.</p>
+        <a href="#" class="close" data-action="modal-close"><img src="assets/images/icons/icon-modal-close.png" width="20" height="20" alt="X" /></a>
+    </div>
+    <!-- Modal: Newsletter Sign Up -->
+    <div id="newsletter-sign-up" class="modal modal-sign-up">
+        <img src="assets/images/general/newsletter-sign-up-header-english.png" width="372" height="103" alt="Sign Up to our Newsletter" />
+        <!--<img src="assets/images/general/newsletter-sign-up-header-afrikaans.png" width="372" height="103" alt="Teken In op ons Nuusbrief" />-->
+        <p>Get the latest trends, lookbooks and fashion advice, plus the hottest arrivals from your favourite designers, all hand&ndash;picked by our top SA Fashion Editors. Vouchers redeemable against purchases of R200 or more.</p>
+        <!--<p>Kry die jongste 'trends', modegidse en raad, asook al die nuwe produkte vanaf jou gunstelingontwerpers, almal met die hand uitgekies deur ons top-moderedakteurs. Koepons kan gebruik word met transaksies ter waarde van R200 of meer.</p>-->
+        <form id="form-newsletter-sign-up">
+            <label for="newsletter-sign-up-email">
+                <input id="newsletter-sign-up-email" name="newsletter-sign-up-email" type="text" value="" placeholder="Enter your email address" maxlength="100" />
+            </label>
+            <fieldset class="radio">
+                <label for="newsletter-sign-up-english">
+                    <input id="newsletter-sign-up-english" name="newsletter-sign-up-language" type="radio" value="English" checked="checked" /> English
+                </label>
+                <label for="newsletter-sign-up-afrikaans">
+                    <input id="newsletter-sign-up-afrikaans" name="newsletter-sign-up-language" type="radio"  value="Afrikaans" /> Afrikaans
+                </label>
+            </fieldset>
+            <input id="submit-newsletter-sign-up" type="submit" value="Subscribe" />
+            <p>*T&amp;C&rsquo;s apply</p>
+            <!--<p>*Bepalings en voowaardes geld</p>-->
+        </form>
+        <a href="#" class="close" data-action="modal-close"><img src="assets/images/icons/icon-modal-close.png" width="20" height="20" alt="X" /></a>
+    </div>
+    <!-- Modal: Newsletter Sign Up Confirmation -->
+    <div id="newsletter-sign-up-confirmation" class="modal modal-sign-up">
+        <img src="assets/images/general/newsletter-sign-up-header-english.png" width="372" height="103" alt="Sign Up to our Newsletter" />
+        <p>Get the latest trends, lookbooks and fashion advice, plus the hottest arrivals from your favourite designers, all hand&ndash;picked by our top SA Fashion Editors. Vouchers redeemable against purchases of R200 or more.</p>
+        <!--<p>Kry die jongste 'trends', modegidse en raad, asook al die nuwe produkte vanaf jou gunstelingontwerpers, almal met die hand uitgekies deur ons top-moderedakteurs. Koepons kan gebruik word met transaksies ter waarde van R200 of meer.</p>-->
+        <p>
+            <b>Thank you for subscribing to our newsletter</b>
+            <!--<b>Dankie dat jy op ons nuusbrief ingeteken het.</b>-->
+            <br/>
+            Please check your inbox for the R50 voucher to get spree&ndash;ing.
+            <!--Ons het jou R50-koepon vir jou gestuur. Geniet jou &ldquo;spree&rdquo;&ndash;sessie! -->
+        </p>
+        <a href="#" class="close" data-action="modal-close"><img src="assets/images/icons/icon-modal-close.png" width="20" height="20" alt="X" /></a>
+    </div>
+    <script src="assets/js/jquery.easing.js"></script>
+    <script src="assets/js/jquery.placeholder.js"></script>
+    <script src="assets/js/jquery.scrollto.js"></script>
+    <script src="assets/js/jquery.serialscroll.js"></script>
+    <script src="assets/js/jquery.iosslider.js"></script>
+    <script src="assets/js/jquery.modal.js"></script>
+    <script src="assets/js/jquery.mediaelementplayer.js"></script>
+    <script src="assets/js/jquery-ui.js"></script>
+    <script>
+        /*
+         * The URL for the front-end of the website
+         * @type {String}
+         */
+        var frontEndWebsiteURL = null;
+        // var frontEndWebsiteURL = 'http://dev.megastore.local/skin/frontend/site/web';
+    </script>
+    <script src="assets/js/jquery-custom.js"></script>
+    <script>
+        /*
+         * Open a modal window with the specified HTML element's ID
+         */
+        // openModalWindow('newsletter-sign-up-confirmation', 5000);
+
+        /*
+         * Fade in the checkout button once an item has been added to the cart
+         */
+        fadeInEl('checkout-button');
+    </script>
+</body>
+</html>

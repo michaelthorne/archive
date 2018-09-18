@@ -1,0 +1,42 @@
+[
+    {
+        "id" : "1",
+        "label" : "Addis in Cape"
+    },
+    {
+        "id" : "2",
+        "label" : "Al's Place"
+    },
+    {
+        "id" : "3",
+        "label" : "Alibama Sports Bar"
+    },
+    {
+        "id" : "4",
+        "label" : "Bacini's Restaurant"
+    },
+    {
+        "id" : "5",
+        "label" : "Bardelli's Restaurant"
+    },
+    {
+        "id" : "6",
+        "label" : "Basilico"
+    },
+    {
+        "id" : "7",
+        "label" : "Blowfish Restaurant"
+    },
+    {
+        "id" : "8",
+        "label" : "Bon Amis Café & Deli"
+    },
+    {
+        "id" : "9",
+        "label" : "Café Paradiso"
+    },
+    {
+        "id" : "10",
+        "label" : "Cantina Tequila at Edward Street"
+    }
+]

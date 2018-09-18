@@ -1,0 +1,54 @@
+{"addressList": [
+    {
+        "id": 5,
+        "name": "FREE STATE"
+    },
+    {
+        "id": 6,
+        "name": "KWAZULU-NATAL"
+    },
+    {
+        "id": 7,
+        "name": "NORTH WEST"
+    },
+    {
+        "id": 8,
+        "name": "GAUTENG"
+    },
+    {
+        "id": 9,
+        "name": "NORTHERN CAPE"
+    },
+    {
+        "id": 10,
+        "name": "EASTERN CAPE"
+    },
+    {
+        "id": 11,
+        "name": "MPUMALANGA"
+    },
+    {
+        "id": 12,
+        "name": "LIMPOPO"
+    },
+    {
+        "id": 13,
+        "name": "WESTERN CAPE"
+    },
+    {
+        "id": 51,
+        "name": "GOODWOOD"
+    },
+    {
+        "id": 52,
+        "name": "GRAAFWATER"
+    },
+    {
+        "id": 53,
+        "name": "CALEDON\/MYDDLETON"
+    },
+    {
+        "id": 275,
+        "name": "LAMBERTS BAY"
+    }
+]}

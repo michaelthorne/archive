@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en-GB" dir="ltr" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en-GB" dir="ltr" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en-GB" dir="ltr" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en-GB" dir="ltr" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+    <title>Spree / Cart (Checkout)</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="author" content="Michael Thorne" />
+    <meta name="description" content="" />
+    <!--<meta name="viewport" content="width=device-width" />-->
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:locale" content="en_GB" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="stylesheet" href="assets/css/normalize.css" />
+    <link rel="stylesheet" href="assets/css/jquery-ui.css" />
+    <link rel="stylesheet" href="assets/css/mediaelementplayer.css" />
+    <link rel="stylesheet" href="assets/css/layout.css" />
+    <link rel="stylesheet" href="assets/css/typography.css" />
+    <link rel="stylesheet" href="assets/css/forms.css" />
+    <!--
+        minify: Combines, minifies, and caches JavaScript
+        <link rel="stylesheet" href="/min/b=assets/css&amp;f=normalize.css,layout.css,typography.css,forms.css" />
+    -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5.js"></script>
+    <script src="assets/js/selectivizr.js"></script>
+    <![endif]-->
+    <script src="assets/js/detect.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="assets/js/jquery.js"><\/script>');</script>
+    <script>
+        var $j = jQuery.noConflict();
+    </script>
+</head>
+<body class="checkout">
+    <!--[if lt IE 8]>
+    <div class="chromeframe">
+        <p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" title="Browse Happy &ndash; Upgrade your browser today!" target="_blank">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true" title="Google Chrome Frame &ndash; Make your browser more powerful." target="blank">activate Google Chrome Frame</a> to improve your experience.</p>
+    </div>
+    <![endif]-->
+    <header id="top" role="banner">
+        <div class="wrapper">
+            <a id="logo" href="home.html">
+                <img src="assets/images/logos/logo-spree.png" width="152" height="65" alt="Spree" />
+            </a>
+            <div class="utils">
+                <ul>
+                    <li><b>Need Help?</b> Call us on <strong>0861 999 501</strong></li>
+                    <li>Email <a href="mailto:help@spree.com">help@spree.com</a></li>
+                    <li><a href="#">Live Help</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <section role="main">
+        <div class="wrapper">
+            <header>
+                <h1>Cart</h1>
+            </header>
+            <table class="cart">
+                <thead>
+                <tr>
+                    <th>&nbsp;</th>
+                    <th>Item</th>
+                    <th class="action">Quantity</th>
+                    <th>Price</th>
+                    <th class="action">Remove</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="image">
+                        <a href="product-detail.html"><img src="assets/images/products/product-cart-01.jpg" width="88" height="118" alt="Product 01" /></a>
+                    </td>
+                    <td class="description">
+                        <table>
+                            <tr>
+                                <td><strong>Lorem ipsum</strong> dolor sit amet</td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td><b>Colour:</b> Lorem</td>
+                            </tr>
+                            <tr>
+                                <td><b>Size:</b> Ipsum</td>
+                            </tr>
+                            <tr>
+                                <td><b>Price:</b> R320</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td class="action">
+                        <form>
+                            <label for="select-01">
+                            <select id="select-01" name="select-01">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                            </label>
+                        </form>
+                    </td>
+                    <td class="price">R320</td>
+                    <td class="action"><a href="#" class="remove" title="Remove"><img src="assets/images/icons/icon-cart-remove.png" width="27" height="27" alt="Remove" /></a></td>
+                </tr>
+                <tr>
+                    <td class="image">
+                        <a href="product-detail.html"><img src="assets/images/products/product-cart-02.jpg" width="88" height="118" alt="Product 02" /></a>
+                    </td>
+                    <td class="description">
+                        <table>
+                            <tr>
+                                <td><strong>Lorem ipsum</strong> dolor sit amet</td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td><b>Colour:</b> Lorem</td>
+                            </tr>
+                            <tr>
+                                <td><b>Size:</b> Ipsum</td>
+                            </tr>
+                            <tr>
+                                <td><b>Price:</b> R320</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td class="action">
+                        <form>
+                            <label for="select-02">
+                            <select id="select-02" name="select-02">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                            </label>
+                        </form>
+                    </td>
+                    <td class="price">R320</td>
+                    <td class="action"><a href="#" class="remove" title="Remove"><img src="assets/images/icons/icon-cart-remove.png" width="27" height="27" alt="Remove" /></a></td>
+                </tr>
+                <tr>
+                    <td class="image">
+                        <a href="product-detail.html"><img src="assets/images/products/product-cart-01.jpg" width="88" height="118" alt="Product 01" /></a>
+                    </td>
+                    <td class="description">
+                        <table>
+                            <tr>
+                                <td><strong>Lorem ipsum</strong> dolor sit amet</td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td><b>Colour:</b> Lorem</td>
+                            </tr>
+                            <tr>
+                                <td><b>Size:</b> Ipsum</td>
+                            </tr>
+                            <tr>
+                                <td><b>Price:</b> R320</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td class="action">
+                        <form>
+                            <label for="select-03">
+                            <select id="select-03" name="select-03">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                            </label>
+                        </form>
+                    </td>
+                    <td class="price">R320</td>
+                    <td class="action" title="Remove"><a href="#"><img src="assets/images/icons/icon-cart-remove.png" width="27" height="27" alt="Remove" /></a></td>
+                </tr>
+                <tr class="previous">
+                    <td colspan="5">The items below are from a previous Spree.</td>
+                </tr>
+                <tr class="inactive">
+                    <td class="action">
+                        <a href="#"><img src="assets/images/products/product-cart-01.jpg" width="88" height="118" alt="Product 01" /></a>
+                    </td>
+                    <td>
+                        <table>
+                            <tr>
+                                <td><strong>Lorem ipsum</strong> dolor sit amet</td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td><b>Lorem:</b> ipsum</td>
+                            </tr>
+                            <tr>
+                                <td><b>Lorem:</b> ipsum</td>
+                            </tr>
+                            <tr>
+                                <td><b>Lorem:</b> ipsum</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td class="action">
+                        <span>Item has timed out</span>
+                        <a href="#" class="button navy narrow" role="button">Renew<br/>item</a>
+                    </td>
+                    <td>R320</td>
+                    <td class="action" title="Remove"><a href="#"><img src="assets/images/icons/icon-cart-remove.png" width="27" height="27" alt="Remove" /></a></td>
+                </tr>
+                <tr class="inactive">
+                    <td class="action">
+                        <a href="#"><img src="assets/images/products/product-cart-01.jpg" width="88" height="118" alt="Product 01" /></a>
+                    </td>
+                    <td>
+                        <table>
+                            <tr>
+                                <td><strong>Lorem ipsum</strong> dolor sit amet</td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td><b>Lorem:</b> ipsum</td>
+                            </tr>
+                            <tr>
+                                <td><b>Lorem:</b> ipsum</td>
+                            </tr>
+                            <tr>
+                                <td><b>Lorem:</b> ipsum</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td class="action">
+                        <span>Out of stock</span>
+                        <a href="#" class="button navy narrow" role="button" data-action="restock-request" data-restock-product-id="123">Request restock</a>
+                    </td>
+                    <td>R320</td>
+                    <td class="action" title="Remove"><a href="#"><img src="assets/images/icons/icon-cart-remove.png" width="27" height="27" alt="Remove" /></a></td>
+                </tr>
+                </tbody>
+                <tfoot>
+                    <tr class="subtotal">
+                        <td colspan="5"><em>Subtotal:</em> R850</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <div class="cart-footer">
+                <div class="payment-methods">
+                    <a href="http://www.thawte.com/" target="_blank"><img src="assets/images/logos/logo-thawte.png" width="82" height="41" alt="Thawte" /></a>
+                    <p>Payment methods:</p>
+                    <ul>
+                        <li>
+                            <a href="http://www.visa.co.za" title="Visa"><img src="assets/images/logos/logo-payment-visa.png" width="34" height="22" alt="Visa" /></a>
+                        </li>
+                        <li>
+                            <a href="http://www.mastercard.co.za" title="MasterCard"><img src="assets/images/logos/logo-payment-mastercard.png" width="34" height="22" alt="MasterCard" /></a>
+                        </li>
+                        <li>
+                            <a href="https://www.paypal.com/" title="PayPal"><img src="assets/images/logos/logo-payment-paypal.png" width="34" height="22" alt="PayPal" /></a>
+                        </li>
+                        <li>
+                            <a href="https://www.americanexpress.co.za/" title="American Express"><img src="assets/images/logos/logo-payment-america-express.png" width="34" height="22" alt="American Express" /></a>
+                        </li>
+                        <li>
+                            <a href="http://www.visa.co.za/" title="Visa Electron"><img src="assets/images/logos/logo-payment-visa-electron.png" width="34" height="22" alt="Visa Electron" /></a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="products.html" class="button grey-large" role="button">Continue shopping</a>
+                <a href="checkout-delivery-details.html" class="button red-large" role="button">Proceed to checkout</a>
+            </div>
+        </div>
+    </section>
+    <footer role="contentinfo">
+        <div class="wrapper">
+            <nav>
+                <ul role="navigation">
+                    <li>
+                        <b>Lorem ipsum</b>
+                        <ul role="navigation">
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Lorem ipsum</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Lorem ipsum</b>
+                        <ul role="navigation">
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Lorem ipsum</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Lorem ipsum</b>
+                        <ul role="navigation">
+                            <li>+27 83 987 2341</li>
+                            <li><a href="mailto:lorem@ipsum.com">lorem@ipsum.com</a></li>
+                            <li><img src="assets/images/logos/logo-twitter.png" width="18" height="20" title="Twitter" alt="Twitter" /> <a href="#">Lorem ipsum</a></li>
+                            <li><img src="assets/images/logos/logo-facebook.png" width="18" height="20" title="Facebook" alt="Facebook" /> <a href="#">Lorem ipsum</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Lorem ipsum</b>
+                        <form id="form-signup" name="form-signup" method="post" action="home.html" class="form-signup">
+                            <label for="email-signup">
+                                Sign up and get a <strong>R50 Voucher</strong>
+                                <input type="text" id="email-signup" name="email-signup" value="Email address" placeholder="Email address" maxlength="100" />
+                            </label>
+                            <input type="submit" id="submit-signup" name="submit-signup" value="Sign up now" />
+                        </form>
+                        <!-- Confirmation message after submitting the form -->
+                        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p> -->
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+    <a href="#" class="back-to-top" data-action="back-to-top" title="Back to Top"><img src="assets/images/icons/icon-up.png" width="12" height="12" alt="^" /> Top</a>
+    <div id="language-confirmation" class="modal small">
+        <header>
+            <h1>Magazine Language Change</h1>
+        </header>
+        <p>The products curated by this magazine title are best experienced in <b>Afrikaans</b>. Would you like to change language now?</p>
+        <a href="home.html" class="button red" data-action="language-confirm" role="button">Yes</a>
+        <a href="#" class="secondary" data-action="modal-close">No thanks</a>
+        <p>You can switch your language anytime using the language dropdown in the top right of the website.</p>
+        <a href="#" class="close" data-action="modal-close"><img src="assets/images/icons/icon-modal-close.png" width="33" height="33" alt="X" /></a>
+    </div>
+    <div id="request-restock" class="modal">
+        <a href="#" class="close" data-action="modal-close"><img src="assets/images/icons/icon-modal-close.png" width="33" height="33" alt="X" /></a>
+        <header>
+            <h1>Request a Restock</h1>
+        </header>
+        <p>
+            Enter your email address below and we will notify you once your item has been re&ndash;stocked.
+        </p>
+        <form id="form-request-restock" name="form-request-restock" class="request">
+            <label for="restock-size">
+                <select id="restock-size" name="restock-size">
+                    <option value="">Select size</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                </select>
+            </label>
+            <label for="restock-email">
+                <input type="text" id="restock-email" name="restock-email" value="" maxlength="100" />
+            </label>
+            <label for="restock-opt-in" class="checkbox">
+                <input type="checkbox" id="restock-opt-in" name="restock-opt-in" value="1" /> Join our newsletter and be the first to know about new products and great deals!
+            </label>
+            <input type="hidden" id="restock-product-id" name="restock-product-id" value="" />
+            <input type="submit" id="restock-submit" name="restock-submit" value="Request a Restock" />
+        </form>
+        <a href="#" class="close" data-action="modal-close"><img src="assets/images/icons/icon-modal-close.png" width="33" height="33" alt="X" /></a>
+    </div>
+    <div id="fb-root"></div>
+    <script src="assets/js/jquery.easing.js"></script>
+    <script src="assets/js/jquery.placeholder.js"></script>
+    <script src="assets/js/jquery.scrollto.js"></script>
+    <script src="assets/js/jquery.serialscroll.js"></script>
+    <script src="assets/js/jquery.iosslider.js"></script>
+    <script src="assets/js/jquery.modal.js"></script>
+    <script src="assets/js/jquery.mediaelementplayer.js"></script>
+    <script src="assets/js/jquery-ui.js"></script>
+    <script>
+        /*
+         * The URL for the front-end of the website
+         * @type {String}
+         */
+        var frontEndWebsiteURL = null;
+        // var frontEndWebsiteURL = 'http://dev.megastore.local/skin/frontend/site/web';
+    </script>
+    <script src="assets/js/jquery-custom.js"></script>
+    <!--
+        minify: Combines, minifies, and caches JavaScript
+        <script src="/min/b=assets/js&amp;f=jquery.easing.js,jquery.placeholder.js,jquery-custom.js"></script>
+    -->
+    <script>(function(d, s, id)
+    {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+</body>
+</html>

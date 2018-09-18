@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" dir="ltr" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" dir="ltr" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" dir="ltr" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" dir="ltr" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>StarSat &ndash; Components</title>
+
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Open Graph: http://ogp.me -->
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:locale" content="en" />
+
+    <!-- Twitter Cards: https://dev.twitter.com/docs/cards -->
+    <meta name="twitter:card" content="" />
+    <meta name="twitter:site" content="" />
+    <meta name="twitter:creator" content="" />
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:image" content="" />
+
+    <!-- Avoiding the FOUC v3.0: http://www.paulirish.com/2009/avoiding-the-fouc-v3 -->
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+
+    <!-- Google+ Page: https://support.google.com/webmasters/answer/1708844 -->
+    <link rel="publisher" href="https://plus.google.com/{+PageId}/" />
+
+    <!-- Font Awesome: http://fortawesome.github.io/Font-Awesome -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" />
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome-ie7.min.css" />
+    <![endif]-->
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Titillium+Web:400,600,700" media="screen and (min-width: 480px)" />
+
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" href="apple-touch-icon-precomposed.png" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+    <!--[if lt IE 9]>
+    <script src="assets/js/vendor/polyfills.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <header class="header sg-header" role="banner">
+        <!--[if lt IE 9]>
+        <div class="upgrade-ie"><a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie" target="_blank"><img src="assets/images/logos/logo-upgrade-ie.png" width="820" height="42" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div>
+        <![endif]-->
+        <div class="wrapper">
+            <a href="index.html" class="logo"></a>
+            <!-- // Logo -->
+
+            <h1 class="sg-heading-primary">Components</h1>
+        </div>
+    </header>
+
+    <main class="sg-main" role="main">
+        <div class="wrapper">
+
+            <section id="sg-table-of-contents" class="sg-section">
+                <h2 class="sg-heading-section">Table of Contents</h2>
+                <ol class="list list-table-of-contents">
+                    <li><a href="components.html#sg-nav-primary">Navigation (Primary)</a></li>
+                    <li><a href="components.html#sg-carousel">Carousel</a></li>
+                    <li><a href="components.html#sg-channels-and-shows">Channels &amp; Shows</a></li>
+                    <li><a href="components.html#sg-shows">Shows</a></li>
+                    <li><a href="components.html#sg-packages">Packages</a></li>
+                    <li><a href="components.html#sg-decoder">Decoder</a></li>
+                </ol>
+            </section>
+            <!-- // Table of Contents -->
+
+            <section id="sg-nav-primary" class="sg-section">
+                <h2 class="sg-heading-section">Navigation (Primary)</h2>
+                <pre class="sg-pre">nav.nav / ol.list-nav-primary</pre>
+                <nav class="nav" role="navigation">
+                    <ol class="list list-nav-primary">
+                        <li><a href="components.html#sg-nav-primary" class="active">Lorem</a></li>
+                        <li><a href="components.html#sg-nav-primary">Architecto</a></li>
+                        <li><a href="components.html#sg-nav-primary">Dolor</a></li>
+                        <li><a href="components.html#sg-nav-primary">Consectetur</a></li>
+                        <li><a href="components.html#sg-nav-primary">Ipsum</a></li>
+                    </ol>
+                </nav>
+            </section>
+            <!-- // Navigation (Primary) -->
+        </div>
+        <!-- // Wrapper -->
+
+        <section id="sg-carousel" class="sg-section">
+            <div class="wrapper">
+                <h2 class="sg-heading-section">Carousel</h2>
+                <pre class="sg-pre">.carousel</pre>
+            </div>
+            <!-- // Wrapper -->
+
+            <div class="carousel" data-component="carousel">
+                <div class="carousel-image" style="background-image:url('assets/images/shows/show-the-walking-dead-2000x598.jpg');">
+                    <div class="wrapper">
+                        <div class="carousel-contents">
+                            <img class="strapline" src="assets/images/general/change-your-view-white.png" alt="Change Your View to a New Entertainment Experience" />
+                            <h2 class="show-title beta white tf-uppercase ts-black">The Walking Dead S4</h2>
+                            <img class="show-logo" src="assets/images/channels/channel-fox.png" alt="FOX" />
+                            <p class="show-info white fw-bold tf-uppercase ts-black">Channel 87 | Wednesdays 9pm</p>
+                            <a href="components.html#sg-carousel" class="btn btn-orange btn-small bs-black"><i class="icon-plus"></i> View All Shows</a>
+                        </div>
+                    </div>
+                <img src="assets/images/general/loading.gif" width="32" height="32" alt="Loading..." class="carousel-loading" style="display: none" />
+                </div>
+                <!-- // Carousel (Image) -->
+                <div class="carousel-thumbs">
+                    <ol class="list list-carousel-thumbs">
+                        <li>
+                            <a href="components.html#sg-carousel" title="The Walking Dead" data-show-title="The Walking Dead" data-show-info="Channel 87 | Wednesdays 9pm" data-show-channel="FOX" data-show-channel-image="assets/images/channels/channel-fox.png" data-show-image="assets/images/shows/show-the-walking-dead-2000x598.jpg" class="active"><img src="assets/images/shows/show-the-walking-dead-328x250.jpg" alt="The Walking Dead" /></a>
+                        </li>
+                        <li>
+                            <a href="components.html#sg-carousel" title="Cougar Town" data-show-title="Cougar Town" data-show-info="Channel 103 | Tuesdays 7pm" data-show-channel="Setanta Africa" data-show-channel-image="assets/images/channels/channel-setanta-africa.png" data-show-image="assets/images/shows/show-cougar-town-2000x598.jpg"><img src="assets/images/shows/show-cougar-town-328x250.jpg" alt="Cougar Town" /></a>
+                        </li>
+                        <li>
+                            <a href="components.html#sg-carousel" title="Glee" data-show-title="Glee" data-show-info="Channel 65 | Fridays 9am" data-show-channel="BET" data-show-channel-image="assets/images/channels/channel-bet.png" data-show-image="assets/images/shows/show-glee-2000x598.jpg"><img src="assets/images/shows/show-glee-328x250.jpg" alt="Glee" /></a>
+                        </li>
+                        <li>
+                            <a href="components.html#sg-carousel" title="Raising Hope" data-show-title="Raising Hope" data-show-info="Channel 87 | Thursdays 9am" data-show-channel="FOX" data-show-channel-image="assets/images/channels/channel-fox.png" data-show-image="assets/images/shows/show-raising-hope-2000x598.jpg"><img src="assets/images/shows/show-raising-hope-328x250.jpg" alt="Raising Hope" /></a>
+                        </li>
+                        <li>
+                            <a href="components.html#sg-carousel" title="Grey&rsquo;s Anatomy" data-show-title="Grey&rsquo;s Anatomy" data-show-info="Channel 97 | Weekdays 7am" data-show-channel="Kids Co" data-show-channel-image="assets/images/channels/channel-kids-co.png" data-show-image="assets/images/shows/show-greys-anatomy-2000x598.jpg"><img src="assets/images/shows/show-greys-anatomy-328x250.jpg" alt="Grey&rsquo;s Anatomy" /></a>
+                        </li>
+                    </ol>
+                </div>
+                <!-- // Carousel (Thumbs) -->
+            </div>
+        </section>
+        <!-- // Carousel -->
+
+        <div class="wrapper">
+
+            <section id="sg-channels-and-shows" class="sg-section">
+                <h2 class="sg-heading-section">Channels &amp; Shows</h2>
+                <pre class="sg-pre">.channel / .channel-header .list-channels .col-2</pre>
+                <div class="channel">
+                    <header class="channel-header">
+                        <div class="channel-logo">
+                            <img src="assets/images/channels/channel-fox.png" alt="FOX" />
+                        </div>
+                        <h2 class="beta channel-name">Fox</h2>
+                        <p>Channel 87</p>
+                    </header>
+                    <ol class="list list-channels cols-2">
+                        <li>
+                            <h3 class="gamma orange tf-uppercase">Falling Skies, S3</h3>
+                            <p class="fw-bold">Tuesdays 7pm</p>
+                        </li>
+                        <li>
+                            <h3 class="gamma orange tf-uppercase">Cougar Town</h3>
+                            <p class="fw-bold">Tuesdays 7pm</p>
+                        </li>
+                        <li>
+                            <h3 class="gamma orange tf-uppercase">Glee, S1</h3>
+                            <p class="fw-bold">Fridays 9am</p>
+                        </li>
+                        <li>
+                            <h3 class="gamma orange tf-uppercase">Raising Hope, S1</h3>
+                            <p class="fw-bold">Fridays 9am</p>
+                        </li>
+                        <li>
+                            <h3 class="gamma orange tf-uppercase">Camelot</h3>
+                            <p class="fw-bold">Wednesday 9pm</p>
+                        </li>
+                        <li>
+                            <h3 class="gamma orange tf-uppercase">The Walking Dead, S4</h3>
+                            <p class="fw-bold">Wednesday 9pm</p>
+                        </li>
+                    </ol>
+                    <hr class="hr hr-silver" />
+                </div>
+
+                <pre class="sg-pre">.channel / .channel-header .list-channels .cols-1</pre>
+                <div class="channel">
+                    <header class="channel-header">
+                        <div class="channel-logo">
+                            <img src="assets/images/channels/channel-kids-co.png" alt="Kids Co" />
+                        </div>
+                        <h2 class="beta channel-name">Kids Co</h2>
+                        <p>Children | Channel 97</p>
+                    </header>
+                    <ol class="list list-channels cols-1">
+                        <li>
+                            <h3 class="gamma orange tf-uppercase">Sendokai</h3>
+                            <p class="fw-bold">Weekdays 7am &ndash; 9am</p>
+                        </li>
+                    </ol>
+                    <hr class="hr hr-silver" />
+                </div>
+
+                <pre class="sg-pre">.channel / .channel-header .list-channels .cols-3</pre>
+                <div class="channel">
+                    <header class="channel-header">
+                        <h3 class="gamma orange tf-uppercase">StarSat Special TV Channels</h3>
+                    </header>
+                    <ol class="list list-channels cols-3">
+                        <li>
+                            <p class="fw-bold">Setanta Africa</p>
+                        </li>
+                        <li>
+                            <p class="fw-bold">BBC World</p>
+                        </li>
+                        <li>
+                            <p class="fw-bold">Baby TV</p>
+                        </li>
+                        <li>
+                            <p class="fw-bold">Setanta Africa</p>
+                        </li>
+                        <li>
+                            <p class="fw-bold">BBC World</p>
+                        </li>
+                        <li>
+                            <p class="fw-bold">Baby TV</p>
+                        </li>
+                    </ol>
+                    <hr class="hr hr-silver" />
+                </div>
+            </section>
+            <!-- // Channels & Shows -->
+
+            <section id="sg-shows" class="sg-section">
+                <h2 class="sg-heading-section">Shows</h2>
+                <pre class="sg-pre">.shows / .list-shows</pre>
+                <aside class="aside sg-aside bg-lg-orange-left" style="padding: 10px">
+                    <div class="content-aside">
+                        <div class="shows">
+                            <header class="header-aside">
+                                <h1 class="alpha white tf-uppercase ts-brown">This Month</h1>
+                            </header>
+                            <ul class="list list-shows">
+                                <li><img src="assets/images/shows/show-the-walking-dead-328x250.jpg" title="The Walking Dead, Season 4" alt="The Walking Dead, Season 4" /></li>
+                                <li><img src="assets/images/shows/show-glee-328x250.jpg" title="Glee, Season 1" alt="Glee, Season 1" /></li>
+                                <li><img src="assets/images/shows/show-cougar-town-328x250.jpg" title="Cougar Town, Season 4" alt="Cougar Town, Season 4" /></li>
+                                <li><img src="assets/images/shows/show-raising-hope-328x250.jpg" title="Raising Hope" alt="Raising Hope" /></li>
+                            </ul>
+                        </div>
+                    </div>
+                </aside>
+            </section>
+            <!-- // Shows -->
+
+            <section id="sg-packages" class="sg-section">
+                <h2 class="sg-heading-section">Packages</h2>
+                <pre class="sg-pre">.package</pre>
+                <div class="package">
+                    <img class="package-highlights" src="assets/images/packages/packages-starsat-special.png" alt="StarSat &ndash; Special R99pm" />
+                    <p>Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio. Etiam at risus et justo dignissim congue.</p>
+                    <p>Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio.</p>
+                    <hr class="hr hr-silver" />
+                </div>
+                <!-- // Package -->
+
+                <pre class="sg-pre">.packages / .list-packages</pre>
+                <aside class="aside sg-aside bg-lg-orange-left" style="padding: 10px">
+                    <div class="packages">
+                        <header class="header-aside">
+                            <h1 class="alpha white tf-uppercase ts-brown">Packages</h1>
+                        </header>
+                        <ul class="list list-packages">
+                            <li><a href="components.html#sg-packages"><img src="assets/images/packages/packages-starsat-special.png" alt="StarSat &ndash; Special R99pm" /></a></li>
+                            <li><a href="components.html#sg-packages"><img src="assets/images/packages/packages-starsat-sensation.png" alt="StarSat &ndash; Sensation R149pm" /></a></li>
+                            <li><a href="components.html#sg-packages"><img src="assets/images/packages/packages-starsat-superior.png" alt="StarSat &ndash; Superior R199pm" /></a></li>
+                            <li><a href="components.html#sg-packages"><img src="assets/images/packages/packages-starsat-indian-chinese.png" alt="StarSat &ndash; Indian R69pm, StarSat &ndash; Chinese R149pm" /></a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </section>
+            <!-- // Packages -->
+
+            <section id="sg-decoder" class="sg-section">
+                <h2 class="sg-heading-section">Decoder</h2>
+                <pre class="sg-pre">.decoder / .decoder-photo, .decoder-info / .decoder-price / .decoder-features</pre>
+                <div class="decoder">
+                    <div class="wrapper">
+                        <img class="decoder-photo" src="assets/images/general/starsat-decoder.png" alt="StarSat Full HD Decoder" />
+                        <div class="decoder-info">
+                            <p class="tf-uppercase fw-bold">For the biggest blockbusters that the whole family can enjoy, StarSat is the new way to experience full HD digital satellite TV.</p>
+                            <div class="decoder-price">
+                                <img src="assets/images/general/starsat-price-R599.png" alt="R599" />
+                                <div class="decoder-features">
+                                    <img src="assets/images/general/starsat-decoder-full-hd.png" alt="Full HD" />
+                                    <p class="small tf-uppercase fw-bold">Fully installed</p>
+                                    <p class="very-small tf-uppercase fw-bold">Includes decoder, satellite dish and installation.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- // Decoder -->
+        </div>
+    </main>
+
+    <footer class="footer sg-footer" role="contentinfo">
+        <div class="wrapper">
+            <small class="white">Copyright &copy; <time datetime="2013">2013</time></small>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/vendor/jquery.js"></script>
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>main.init();</script>
+
+    <!-- Google Analytics -->
+    <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create', 'UA-45571066-1', 'starsat.co.za');ga('send','pageview');
+    </script>
+
+    <!-- Google Tag Manager -->
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MJ6FQS" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-MJ6FQS');
+    </script>
+</body>
+</html>

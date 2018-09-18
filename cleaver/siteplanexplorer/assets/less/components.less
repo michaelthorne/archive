@@ -1,0 +1,1192 @@
+/* ==========================================================================
+   Components: all the jQuery components used throughout the website.
+   ========================================================================== */
+
+@import-once "inc/breakpoints";
+@import-once "inc/colours.less";
+@import-once "inc/fonts.less";
+@import-once "inc/mixins.less";
+
+/* Autocomplete
+   ========================================================================== */
+
+.tt-query {
+    vertical-align: middle !important;
+}
+
+// Drop-down
+.tt-dropdown-menu {
+    background-color: @colour-lavendar;
+    border: 1px @colour-blue solid;
+    .border-radius(3px);
+    margin-top: 1px;
+    padding: 5px 10px;
+    width: 100%;
+    z-index: 200 !important;
+
+    // Suggestion
+    .tt-suggestion {
+        color: @colour-blue-dark;
+        border-bottom: 1px @colour-blue-lightest solid;
+
+        // Text
+        p {
+            margin: 0;
+            padding: 6px 2px;
+            text-transform: none;
+        }
+
+        &:last-child {
+            border-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        // Highlight
+        &.tt-is-under-cursor {
+            color: @colour-black
+        }
+    }
+}
+
+/* Drop-down
+   ========================================================================== */
+
+ol.drop-down {
+    background-color: @colour-white;
+    border: 1px @colour-silver-dark solid;
+    .border-radius(3px);
+    .box-shadow(0 0 4px @colour-silver);
+    display: none;
+    left: 0;
+    min-width: 100%;
+    padding: 12px 15px 15px 15px;
+    position: absolute;
+    top: 48px;
+    z-index: 300;
+
+    &:before, &:after {
+        border: solid @colour-white;
+    	bottom: 100%;
+    	content: " ";
+    	height: 0;
+        left: 20%;
+        pointer-events: none;
+    	position: absolute;
+        width: 0;
+    }
+
+    &:before {
+        border-color: transparent;
+        border-bottom-color: @colour-silver-dark;
+    	border-width: 11px;
+    	margin-left: -11px;
+    }
+
+    &:after {
+        border-color: transparent;
+        border-bottom-color: @colour-white;
+    	border-width: 10px;
+    	margin-left: -10px;
+    }
+
+    // Drop-down is visible
+    &.is-visible {
+        display: block;
+    }
+
+    > li {
+        border-bottom: 1px @colour-grey-light solid;
+        padding: 7px 0 10px 0;
+
+        &:first-child {
+            padding-top: 0;
+        }
+
+        &:last-child {
+            border-bottom: 0;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        a {
+            color: @colour-charcoal;
+            font-size: 12px;
+            text-transform: uppercase;
+
+            &:active {
+
+                // Icon
+                i {
+                    color: @colour-silver;
+                }
+            }
+
+            &:hover {
+                color: @colour-black;
+                text-decoration: none;
+
+                // Icon
+                i {
+                    color: @colour-silver-dark;
+                }
+            }
+
+            // Selected
+            &.selected {
+                color: @colour-black;
+                outline: 0;
+
+                // Icon
+                i {
+                    color: @colour-blue;
+                }
+            }
+
+            // Icon
+            i {
+                color: @colour-silver;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+/* Gallery
+   ========================================================================== */
+
+#colorbox,
+#cboxOverlay,
+#cboxWrapper {
+    left: 0;
+    position: absolute;
+    top: 0;
+    z-index: 400;
+}
+
+#cboxOverlay {
+    height: 100%;
+    position: fixed;
+    width: 100%;
+}
+
+#cboxMiddleLeft,
+#cboxBottomLeft {
+    clear: left;
+}
+
+#cboxContent {
+    position: relative;
+}
+
+#cboxLoadedContent {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+#cboxLoadingOverlay,
+#cboxLoadingGraphic {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+#cboxPrevious,
+#cboxNext,
+#cboxClose {
+    cursor: pointer;
+}
+
+.cboxPhoto {
+    border: 0;
+    display: block;
+    float: left;
+    margin: auto;
+    max-width: none;
+    -ms-interpolation-mode: bicubic;
+}
+
+.cboxIframe {
+    border: 0;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+#colorbox,
+#cboxContent,
+#cboxLoadedContent {
+    box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+}
+
+/*
+    User Style:
+    Change the following styles to modify the appearance of Colorbox.  They are
+    ordered & tabbed in a way that represents the nesting of the generated HTML.
+*/
+#cboxOverlay {
+    background: @colour-black;
+}
+
+#colorbox {
+    .border-radius(3px);
+    .box-shadow(0 0 20px @colour-grey-dark);
+    outline: 0;
+}
+
+#cboxContent {
+    background: @colour-white;
+    overflow: visible;
+}
+
+.cboxIframe {
+    background: @colour-white;
+}
+
+#cboxError {
+    border: 1px solid @colour-silver;
+    padding: 50px;
+}
+
+#cboxLoadedContent {
+    background: @colour-white;
+    margin-bottom: 60px;
+
+    // Photo
+    img {
+        height: auto;
+        max-width: 290px;
+        width: 100%;
+    }
+}
+
+#cboxLoadingGraphic {
+    background: url("../images/icons/icon-loading-bars.gif") no-repeat center center;
+}
+
+#cboxLoadingOverlay {
+    background: @colour-white;
+}
+
+#cboxTitle {
+    background: @colour-white;
+    bottom: 13px;
+    color: @colour-grey;
+    font-size: 12px;
+    left: 0;
+    margin: 0;
+    padding: 11px 15px 0 15px;
+    position: absolute;
+    width: 100%;
+
+    b {
+        color: @colour-black;
+        display: block;
+        text-transform: uppercase;
+    }
+}
+
+#cboxCurrent {
+    position: absolute;
+    right: 205px;
+    text-indent: -9999px;
+    top: -22px;
+}
+
+#cboxPrevious,
+#cboxNext,
+#cboxClose {
+    background-color: @colour-white;
+    border: 0;
+    height: 40px;
+    margin: 0;
+    outline: 0;
+    overflow: visible;
+    padding: 0;
+    position: absolute;
+    width: 40px;
+
+    // Icon
+    i {
+        color: @colour-grey-light;
+        font-size: 16px;
+    }
+}
+
+#cboxPrevious:active,
+#cboxNext:active,
+#cboxClose:active {
+    outline: 0;
+}
+
+#cboxPrevious {
+    .border-radius-top-right(3px);
+    .border-radius-bottom-right(3px);
+    left: 0;
+    top: 177px;
+
+    &:hover {
+
+        // Icon
+        i {
+            color: @colour-blue;
+        }
+    }
+}
+
+#cboxNext {
+    .border-radius-top-left(3px);
+    .border-radius-bottom-left(3px);
+    right: 0;
+    top: 177px;
+
+    &:hover {
+
+        // Icon
+        i {
+            color: @colour-blue;
+        }
+    }
+}
+
+#cboxClose {
+    .border-radius-bottom-left(3px);
+    right: 0;
+    top: 0;
+
+    i {
+        font-size: 20px;
+    }
+
+    &:hover {
+
+        // Icon
+        i {
+            color: @colour-blue;
+        }
+    }
+}
+
+/* List Navigator
+   ========================================================================== */
+
+// Wrapper
+.list-navigator {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    .transition(height 0.3s ease);
+    width: 100%;
+
+    // Individual list data items
+    .list-navigator-data-item {
+        background-color: @colour-white;
+        min-height: 1020px;
+        position: absolute;
+        right: -100%;
+        .transition(right 0.3s ease);
+        top: 0;
+        width: 100%;
+
+        // Position on screen
+        &.visible {
+            right: 0;
+        }
+
+        // Back button
+        > a.button {
+            margin-top: 15px;
+        }
+    }
+}
+
+/* Modal
+   ========================================================================== */
+
+div.modal {
+    background-color: @colour-white;
+    .box-shadow(0 0 20px @colour-grey-dark);
+    display: none;
+    padding: 0 10px;
+    width: 50%;
+
+    // Close
+    a.close {
+        background-color: @colour-white;
+        .border-radius-top-right(3px);
+        .border-radius-bottom-right(3px);
+        color: @colour-grey;
+        display: block;
+        font-size: 20px;
+        height: 40px;
+        line-height: 40px;
+        position: absolute;
+        right: -40px;
+        text-align: center;
+        text-decoration: none;
+        top: 0;
+        width: 40px;
+
+        &:hover {
+            color: @colour-grey-dark;
+        }
+
+        // Icon
+        i {
+            color: @colour-grey;
+            font-size: 20px;
+            text-decoration: none;
+        }
+    }
+}
+
+/* Select (SelectBoxIt)
+   ========================================================================== */
+
+/* SelectBoxIt container */
+.selectboxit-container {
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+}
+
+/* Styles that apply to all SelectBoxIt elements */
+.selectboxit-container * {
+    font-family: @font-family-open-sans;
+    font-size: 12px;
+    outline: none;
+    /* Prevents text selection */
+    -webkit-touch-callout: none;
+      -webkit-user-select: none;
+       -khtml-user-select: none;
+         -moz-user-select: -moz-none;
+           ms-user-select: none;
+           -o-user-select: none;
+              user-select: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+/* Button */
+.selectboxit-container .selectboxit {
+    .border-radius(3px);
+    cursor: pointer;
+    display: block;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    width: 100%; /* Width of the dropdown button */
+}
+
+/* Height and Vertical Alignment of Text */
+.selectboxit-container span, .selectboxit-container .selectboxit-options a {
+    display: block;
+    height: 36px; /* Height of the drop down */
+    line-height: 36px; /* Vertically positions the drop down text */
+}
+
+/* Focus pseudo selector */
+.selectboxit-container .selectboxit:focus {
+    outline: 0;
+}
+
+/* Disabled Mouse Interaction */
+.selectboxit.selectboxit-disabled, .selectboxit-options .selectboxit-disabled {
+    .box-shadow(none);
+    cursor: default;
+    filter: alpha(opacity=65);
+    opacity: 0.65;
+}
+
+/* Button Text */
+.selectboxit-text {
+    float: left;
+    overflow: hidden;
+    text-indent: 15px;
+    text-overflow: ellipsis;
+}
+
+.selectboxit .selectboxit-option-icon-container {
+    margin-left: 0;
+}
+
+/* Options List */
+.selectboxit-container .selectboxit-options {
+    .box-shadow(none);
+    .border-radius(3px);
+    cursor: pointer;
+    display: none;
+    list-style: none;
+    margin: 0;
+    min-width: 100%; /* Minimum Width of the dropdown list box options */
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 0;
+    position: absolute;
+    text-align: left;
+    *width: 100%;
+    z-index: 9999999999999;
+}
+
+/* Individual options */
+.selectboxit-option .selectboxit-option-anchor {
+    padding: 0 2px;
+}
+
+/* Individual Option Hover Action */
+.selectboxit-option .selectboxit-option-anchor:hover {
+    text-decoration: none;
+}
+
+/* Individual Option Optgroup Header */
+.selectboxit-option, .selectboxit-optgroup-header {
+    list-style-type: none;
+    margin: 0;
+    text-indent: 5px; /* Horizontal Positioning of the select box option text */
+}
+
+/* The first Drop Down option */
+.selectboxit-option-first {
+    .border-radius-top-right(3px);
+    .border-radius-top-left(3px);
+}
+
+/* The first Drop Down option optgroup */
+.selectboxit-optgroup-header + .selectboxit-option-first {
+    .border-radius-top-right(0);
+    .border-radius-top-left(0);
+}
+
+/* The last Drop Down option */
+.selectboxit-option-last {
+    .border-radius-bottom-right(3px);
+    .border-radius-bottom-left(3px);
+}
+
+/* Drop Down optgroup headers */
+.selectboxit-optgroup-header {
+    font-weight: bold;
+}
+
+/* Drop Down optgroup header hover psuedo class */
+.selectboxit-optgroup-header:hover {
+    cursor: default;
+}
+
+/* Drop Down down arrow container */
+.selectboxit-arrow-container {
+    /* Positions the down arrow */
+    position: absolute;
+    right: 0;
+    width: 40px;
+}
+
+/* Drop Down down arrow */
+.selectboxit .selectboxit-arrow-container .selectboxit-arrow {
+    /* Horizontally centers the down arrow */
+    position: absolute;
+    right: 14px;
+    top: 14px;
+}
+
+/* Drop Down down arrow for jQueryUI and jQuery Mobile */
+.selectboxit .selectboxit-arrow-container .selectboxit-arrow.ui-icon {
+    top: 30%;
+}
+
+/* Drop Down individual option icon positioning */
+.selectboxit-option-icon-container {
+    float: left;
+}
+
+.selectboxit-container .selectboxit-option-icon {
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+}
+
+/* Drop Down individual option icon positioning */
+.selectboxit-option-icon-url {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+    float: left;
+    height: 100%;
+    width: 18px;
+}
+
+/*
+  Default Theme
+  -------------
+  Note: Feel free to remove all of the CSS underneath this line if you are not using the default theme
+*/
+.selectboxit-btn {
+    background-color: @colour-white-dark;
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(@colour-white-dark), to(@colour-gainsboro));
+    background: -moz-linear-gradient(top, @colour-white-dark, @colour-gainsboro);
+    background: -ms-linear-gradient(top, @colour-white-dark, @colour-gainsboro);
+    background: -o-linear-gradient(top, @colour-white-dark, @colour-gainsboro);
+    border: 1px @colour-silver solid;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=@colour-white-dark, endColorstr=@colour-gainsboro, GradientType=0);
+}
+
+.selectboxit-btn.selectboxit-enabled:hover,
+.selectboxit-btn.selectboxit-enabled:focus,
+.selectboxit-btn.selectboxit-enabled:active {
+    background-color: @colour-white;
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(@colour-white), to(@colour-gainsboro));
+    background: -moz-linear-gradient(top, @colour-white, @colour-gainsboro);
+    background: -ms-linear-gradient(top, @colour-white, @colour-gainsboro);
+    background: -o-linear-gradient(top, @colour-white, @colour-gainsboro);
+    border: 1px @colour-silver-dark solid;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=@colour-white, endColorstr=@colour-gainsboro, GradientType=0);
+}
+
+.selectboxit-open {
+
+    .selectboxit-default-arrow {
+        border-top: 5px @colour-blue solid;
+    }
+}
+
+.selectboxit-default-arrow {
+    border-top: 5px @colour-grey-dark solid;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    height: 0;
+    width: 0;
+}
+
+.selectboxit-list {
+    background-color: @colour-white;
+    border: 1px @colour-silver solid;
+}
+
+.selectboxit-list .selectboxit-option-anchor {
+    color: @colour-grey-dark;
+}
+
+.selectboxit-list > .selectboxit-focus > .selectboxit-option-anchor {
+    background-color: @colour-blue;
+    color: @colour-white;
+}
+
+.selectboxit-list > .selectboxit-disabled > .selectboxit-option-anchor {
+    color: @colour-grey-light;
+}
+
+/* Slider
+   ========================================================================== */
+
+div.slider {
+    min-height: 182px;
+    position: relative;
+    zoom: 1;
+
+    // Viewport
+    .flex-viewport {
+        min-height: 145px;
+    }
+
+    // Controls: Pagination
+    .flex-control-paging {
+        margin: 15px 0 0 0;
+        overflow: hidden;
+        padding: 0;
+        text-align: center;
+        width: 100%;
+
+        li {
+            margin: 0 15px 0 0;
+            display: inline-block;
+            zoom: 1;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            a {
+                background-color: @colour-silver;
+                .border-radius(20px);
+                cursor: pointer;
+                display: block;
+                height: 15px;
+                text-indent: -9999px;
+                .transition(all 0.2s ease);
+                width: 15px;
+
+                &:hover {
+                    background-color: @colour-grey-light;
+                }
+
+                &.flex-active {
+                    background-color: @colour-blue;
+                    cursor: default;
+                }
+            }
+        }
+    }
+
+    // Controls: Previous and Next
+    ul.flex-direction-nav {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+// Slides
+ul.slides {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+
+    > li {
+        display: none;
+    }
+
+    img {
+        display: block;
+        width: 100%;
+    }
+}
+
+/* Slide Toggle
+   ========================================================================== */
+
+div.slide-down {
+    overflow: inherit;
+    position: relative;
+
+    /*
+     * Filters
+     */
+
+    &.slide-down-filters {
+        height: 40px;
+        max-width: 400px;
+
+        > a {
+            background-color: @colour-gainsboro;
+            background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(@colour-gainsboro), to(@colour-silver-light));
+            background: -moz-linear-gradient(top, @colour-gainsboro, @colour-silver-light);
+            background: -ms-linear-gradient(top, @colour-gainsboro, @colour-silver-light);
+            background: -o-linear-gradient(top, @colour-gainsboro, @colour-silver-light);
+            color: @colour-grey-dark;
+            font-size: 12px;
+            display: block;
+            padding: 11px 6px 12px 14px;
+            position: relative;
+            text-decoration: none;
+            text-transform: uppercase;
+            width: 100%;
+            z-index: 200;
+
+            &:link {
+                outline: 0;
+            }
+
+            &:hover {
+                background-color: @colour-white-dark;
+                background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(@colour-white-dark), to(@colour-gainsboro));
+                background: -moz-linear-gradient(top, @colour-white-dark, @colour-gainsboro);
+                background: -ms-linear-gradient(top, @colour-white-dark, @colour-gainsboro);
+                background: -o-linear-gradient(top, @colour-white-dark, @colour-gainsboro);
+                color: @colour-black;
+            }
+
+            &.selected {
+                background-color: @colour-white-dark;
+                background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(@colour-white-dark), to(@colour-gainsboro));
+                background: -moz-linear-gradient(top, @colour-white-dark, @colour-gainsboro);
+                background: -ms-linear-gradient(top, @colour-white-dark, @colour-gainsboro);
+                background: -o-linear-gradient(top, @colour-white-dark, @colour-gainsboro);
+                color: @colour-black;
+
+                // Icon
+                i {
+                    color: @colour-blue;
+                }
+            }
+
+            // Icon
+            i {
+                float: right;
+                font-size: 16px;
+                padding-right: 10px;
+            }
+        }
+    }
+}
+
+// Slide-down content wrapper
+div.slide-down-wrapper {
+    display: none;
+    left: 0;
+    position: absolute;
+    z-index: 200;
+
+    // Slide-down contents
+    div.slide-down-contents {
+        background-color: @colour-white;
+    }
+}
+
+/* Tabs
+   ========================================================================== */
+
+/*
+ * Navigation
+ */
+
+ul.tab-nav {
+    border-bottom: 1px @colour-silver solid;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+    > li {
+        list-style: none;
+        margin-bottom: -1px;
+
+        &:first-child {
+
+            > a {
+                .border-radius-top-left(3px);
+            }
+        }
+
+        &:last-child {
+
+            &.active {
+
+                > a {
+                    border-right: 1px @colour-silver solid;
+                }
+            }
+
+            > a {
+                .border-radius-top-right(3px);
+                border-right: 1px @colour-silver solid;
+            }
+        }
+
+        &.active {
+
+            > a {
+                background-color: @colour-silver-light;
+                background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(@colour-silver-light), to(@colour-white));
+                background: -moz-linear-gradient(top, @colour-silver-light, @colour-white);
+                background: -ms-linear-gradient(top, @colour-silver-light, @colour-white);
+                background: -o-linear-gradient(top, @colour-silver-light, @colour-white);
+                border: 1px @colour-silver solid;
+                color: @colour-black;
+                cursor: default;
+                height: 36px;
+                outline: 0;
+
+                &:focus {
+                    background-color: @colour-silver-light;
+                    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(@colour-silver-light), to(@colour-white));
+                    background: -moz-linear-gradient(top, @colour-silver-light, @colour-white);
+                    background: -ms-linear-gradient(top, @colour-silver-light, @colour-white);
+                    background: -o-linear-gradient(top, @colour-silver-light, @colour-white);
+                    outline: 0;
+                }
+
+                &:hover {
+                    background-color: @colour-silver-light;
+                    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(@colour-silver-light), to(@colour-white));
+                    background: -moz-linear-gradient(top, @colour-silver-light, @colour-white);
+                    background: -ms-linear-gradient(top, @colour-silver-light, @colour-white);
+                    background: -o-linear-gradient(top, @colour-silver-light, @colour-white);
+                }
+            }
+        }
+
+        > a {
+            background-color: @colour-white-dark;
+            background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(@colour-white-dark), to(@colour-gainsboro));
+            background: -moz-linear-gradient(top, @colour-white-dark, @colour-gainsboro);
+            background: -ms-linear-gradient(top, @colour-white-dark, @colour-gainsboro);
+            background: -o-linear-gradient(top, @colour-white-dark, @colour-gainsboro);
+            border: 1px @colour-silver solid;
+            color: @colour-grey-dark;
+            display: block;
+            font-size: 12px;
+            height: 36px;
+            padding: 9px 0 0 13px;
+            text-decoration: none;
+            text-transform: uppercase;
+            .transition(none);
+
+            &:focus {
+                background-color: @colour-white;
+                background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(@colour-white), to(@colour-gainsboro));
+                background: -moz-linear-gradient(top, @colour-white, @colour-gainsboro);
+                background: -ms-linear-gradient(top, @colour-white, @colour-gainsboro);
+                background: -o-linear-gradient(top, @colour-white, @colour-gainsboro);
+                color: @colour-black;
+                height: 36px;
+                outline: 0;
+            }
+
+            &:hover {
+                background-color: @colour-white;
+                background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(@colour-white), to(@colour-gainsboro));
+                background: -moz-linear-gradient(top, @colour-white, @colour-gainsboro);
+                background: -ms-linear-gradient(top, @colour-white, @colour-gainsboro);
+                background: -o-linear-gradient(top, @colour-white, @colour-gainsboro);
+                color: @colour-black;
+                height: 36px;
+            }
+        }
+    }
+}
+
+/*
+ * Contents
+ */
+
+div.tab-content {
+    border: 1px @colour-silver solid;
+    border-top: 0;
+    overflow: auto;
+    padding: 0;
+
+    // Individual tab pane
+    div.tab-pane {
+        display: none;
+
+        &.active {
+            display: block;
+        }
+
+        // Paragraph
+        > p {
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+    }
+}
+
+/* Zoom
+   ========================================================================== */
+
+div.zoom {
+    background-color: @colour-gainsboro;
+    .box-shadow(0 0 10px 5px @colour-silver);
+    overflow: hidden;
+    width: 40px;
+
+    // Buttons: plus and minus
+    a.button-zoom {
+        background-color: @colour-gainsboro;
+        .border-radius(0);
+        color: @colour-grey-light;
+        float: left;
+        height: 40px;
+        line-height: 40px;
+        .transition(background-color 0.1s ease);
+        width: 40px;
+
+        &:hover {
+            background-color: @colour-blue;
+            color: @colour-white;
+        }
+
+        // Zoom
+        &.zoom-plus {
+            border-bottom: 1px @colour-silver solid;
+        }
+
+        // Minus
+        &.zoom-minus {
+            border-top: 1px @colour-silver solid;
+        }
+
+        // Icon
+        i {
+            padding-left: 0;
+        }
+    }
+
+    // Track
+    ol.zoom-track {
+        background: @colour-white url("../images/interface/zoom-track.png") center center no-repeat;
+        background-size: 50%;
+        float: left;
+        padding: 30px 0;
+        width: 40px;
+
+        li {
+            height: 18px;
+            position: relative;
+            width: 40px;
+
+            // Selected zoom level
+            &.selected {
+
+                a {
+                    background: url("../images/interface/zoom-handle.png") center center no-repeat;
+                    background-size: 115%;
+                    display: block;
+                    height: 26px;
+                    left: 7px;
+                    position: absolute;
+                    top: -3px;
+                    width: 26px;
+                    z-index: 10;
+
+                    &:hover {
+                        background-image: url("../images/interface/zoom-handle-over.png");
+                    }
+                }
+            }
+
+            // Active
+            &.active {
+
+                a {
+                    background: url("../images/interface/zoom-handle-over.png") center center no-repeat;
+                    background-size: 115%;
+                    display: block;
+                    height: 26px;
+                    left: 7px;
+                    position: absolute;
+                    top: -3px;
+                    width: 26px;
+                    z-index: 10;
+                }
+            }
+
+            a {
+                display: block;
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: @media-query-horizontal-small) {
+
+    /* Drop-down
+       ========================================================================== */
+
+    ol.drop-down {
+        min-width: 190px;
+    }
+
+    /* Gallery
+       ========================================================================== */
+
+    #cboxLoadedContent {
+        margin-bottom: 60px;
+
+        // Photo
+        img {
+            max-width: 100%;
+        }
+    }
+
+    /* Tabs
+       ========================================================================== */
+
+    ul.tab-nav {
+        height: 36px;
+
+        > li {
+            float: left;
+
+            &.active {
+
+                > a {
+                    border-right: 0;
+                    border-bottom-color: @colour-white;
+                }
+            }
+
+            > a {
+                border-right: 0;
+                display: block;
+                padding: 9px 30px 0 30px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: @media-query-horizontal-medium) {
+
+    /* Slider
+       ========================================================================== */
+
+    div.slider {
+        max-width: 290px;
+    }
+}
+
+@media only screen and (min-width: @media-query-horizontal-large) {
+
+    /* Tabs
+       ========================================================================== */
+
+    ul.tab-nav,
+    div.tab-content {
+        max-width: 400px;
+    }
+}
+
+@media only screen and (min-width: @media-query-horizontal-largest) {
+
+/* Style Guide
+   ========================================================================== */
+
+    .style-guide {
+
+        /* Gallery
+           ========================================================================== */
+
+        #cboxOverlay {
+            left: 0;
+            top: 0;
+            right: inherit;
+        }
+    }
+
+    /* Gallery
+       ========================================================================== */
+
+    #cboxOverlay {
+        left: inherit;
+        top: 67px;
+        right: 337px;
+    }
+
+    #cboxPrevious,
+    #cboxNext,
+    #cboxClose {
+        .border-radius-top-right(3px);
+        .border-radius-bottom-right(3px);
+        right: -40px;
+    }
+
+    #cboxPrevious {
+        left: inherit;
+        top: 90px;
+    }
+
+    #cboxNext {
+        .border-radius-top-left(0);
+        .border-radius-bottom-left(0);
+        top: 45px;
+    }
+
+    #cboxClose {
+        .border-radius-bottom-left(0);
+        top: 0;
+    }
+}

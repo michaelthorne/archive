@@ -1,0 +1,158 @@
+html, body {
+    height: 100%;
+    font-family: Georgia, serif;
+    width: 100%;
+}
+
+// Arrow to indicate downwards scrolling
+a.scroll-down {
+    bottom: 10%;
+    color: #000;
+    display: block;
+    height: 50px;
+    left: 47%;
+    position: absolute;
+    text-align: center;
+    text-decoration: none;
+    width: 50px;
+
+    &:link {
+        outline: 0;
+    }
+
+    i {
+        display: block;
+        font-size: 2em;
+    }
+}
+
+// Container for each scene (section)
+.scene {
+    height: 100%;
+    overflow: hidden;
+    padding: 50px 0 0 0;
+    position: relative;
+    top: 0%;
+    width: 100%;
+
+    .window {
+        background-color: #000;
+        bottom: 0;
+        height: 100%;
+        left: 0;
+        margin: 0 auto;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+    }
+}
+
+// Background colours
+.bg-blue {
+    background-color: blue;
+}
+
+.bg-green {
+    background-color: green;
+}
+
+.bg-grey {
+    background-color: grey;
+}
+
+.bg-orange {
+    background-color: orange;
+}
+
+.bg-purple {
+    background-color: purple;
+}
+
+.bg-red {
+    background-color: red;
+}
+
+// Contents wrapper
+.wrapper {
+    margin: 0 auto;
+    overflow: hidden;
+    width: 70%;
+}
+
+// Top navigation
+.top {
+    background-color: silver;
+    height: 50px;
+    position: fixed;
+    top: -50px;
+    width: 100%;
+    z-index: 10;
+
+    ol {
+        float: left;
+        margin: 0;
+        padding: 0;
+
+        li {
+            float: left;
+            list-style: none;
+            position: relative;
+
+            a {
+                color: blue;
+                display: block;
+                padding: 1em;
+                text-decoration: none;
+
+                &:hover {
+                    background-color: #000;
+                    color: #fff;
+                }
+
+                &:link {
+                    outline: 0;
+                }
+
+                &.active {
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+// Primary drop-down navigation
+ol.primary-navigation {
+    background-color: #fff;
+    display: none;
+    width: 100%;
+
+    li {
+        clear: both;
+        float: none;
+        position: inherit;
+    }
+}
+
+ol.scene-navigation {
+
+    a.current {
+        color: #fff;
+        text-decoration: underline;
+    }
+}
+
+// Scroll count
+.scroll-count {
+    background-color: #000;
+    bottom: 0;
+    color: #fff;
+    padding: 10px;
+    position: fixed;
+    right: 0;
+
+    span {
+        font-weight: bold;
+    }
+}

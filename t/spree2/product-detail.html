@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en-GB" dir="ltr" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en-GB" dir="ltr" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en-GB" dir="ltr" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en-GB" dir="ltr" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+    <title>Spree / Product (Detail)</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="author" content="" />
+    <meta name="description" content="" />
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:locale" content="en_GB" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <style>
+        @font-face {
+           font-family: 'MyriadPro';
+           src: url("assets/fonts/MyriadPro.eot");
+           src: url("assets/fonts/MyriadPro.eot?#iefix") format("embedded-opentype"),
+                url("assets/fonts/MyriadPro.woff") format("woff"),
+                url("assets/fonts/MyriadPro.ttf") format("truetype"),
+                url("assets/fonts/MyriadPro.svg#MyriadPro") format("svg");
+           font-weight: 400;
+           font-style: normal;
+        }
+    </style>
+    <link rel="stylesheet" href="assets/css/normalize.css" />
+    <link rel="stylesheet" href="assets/css/jquery-ui.css" />
+    <link rel="stylesheet" href="assets/css/mediaelementplayer.css" />
+    <link rel="stylesheet" href="assets/css/layout.css" />
+    <link rel="stylesheet" href="assets/css/typography.css" />
+    <link rel="stylesheet" href="assets/css/forms.css" />
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5.js"></script>
+    <script src="assets/js/selectivizr.js"></script>
+    <![endif]-->
+    <script src="assets/js/detect.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="assets/js/jquery.js"><\/script>');</script>
+    <script>
+        var $j = jQuery.noConflict();
+    </script>
+</head>
+<body>
+    <!--[if lt IE 8]>
+    <div class="chromeframe">
+        <p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/?locale=en" title="Browse Happy &ndash; Upgrade your browser today!" target="_blank">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true" title="Google Chrome Frame &ndash; Make your browser more powerful." target="blank">activate Google Chrome Frame</a> to improve your experience.</p>
+    </div>
+    <![endif]-->
+    <div id="top" class="utilities">
+        <div class="wrapper">
+            <ol class="utilities utilities-sign-up">
+                <li><a href="#" class="newsletter" data-action="newsletter-sign-up">Sign up to our newsletter</a></li>
+            </ol>
+            <ol class="utilities utilities-user">
+                <li class="account">
+                    <!--<a href="account.html">Hi Jen</a>-->
+                    <a href="member-login-register.html">Login | Register</a>
+                </li>
+                <li>
+                    <ul class="languages drop-down">
+                        <li>
+                            <a href="#" data-language-code="en-za" data-language-active="true">English</a>
+                            <ul>
+                                <li><a href="#" data-language-code="af-za">Afrikaans</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="favourites">
+                    <a href="shop-favourites.html" data-util="favourites">Favourites: <span>1</span></a>
+                </li>
+                <li class="cart">
+                    <a href="shop-cart.html" data-util="cart">Cart: <span>1</span></a>
+                </li>
+                <li class="checkout">
+                    <a id="checkout-button" href="checkout-cart.html" class="hidden">Checkout</a>
+                </li>
+            </ol>
+        </div>
+    </div>
+    <header id="primary" role="banner">
+        <div class="wrapper">
+            <a id="logo" href="home.html">
+                <img src="assets/images/logos/logo-spree.png" width="145" height="50" alt="spree" />
+            </a>
+            <ul class="info">
+                <li>
+                    <img src="assets/images/icons/icon-info-free-delivery.png" width="32" height="25" alt="" />
+                    <p>
+                        <b>Free Delivery</b> Within South Africa
+                    </p>
+                </li>
+                <li>
+                    <img src="assets/images/icons/icon-info-free-returns.png" width="23" height="25" alt="" />
+                    <p>
+                        <b>Free Returns</b> Within 30 Days
+                    </p>
+                </li>
+                <li>
+                    <img src="assets/images/icons/icon-info-help-and-enquiries.png" width="18" height="25" alt="" />
+                    <p>
+                        <b>0861 999 501</b> <a href="mailto:support@spree.co.za">support@spree.co.za</a>
+                    </p>
+                </li>
+            </ul>
+            <form id="form-search" name="form-search" method="post" action="home.html" class="form-search">
+                <label for="search">
+                    <input type="text" id="search" name="search" value="Search spree&hellip;" placeholder="Search spree&hellip;" maxlength="50" tabindex="1" data-action="autocomplete" />
+                </label>
+                <input type="submit" id="submit-search" name="submit-search" value="" tabindex="2" />
+            </form>
+        </div>
+    </header>
+    <nav class="primary">
+        <div class="wrapper">
+            <ul class="drop-down" role="navigation">
+                <li>
+                    <a href="home.html">Home</a>
+                </li>
+                <li>
+                    <a href="#">What&rsquo;s New</a>
+                </li>
+                <li>
+                    <a href="products.html">Clothes</a>
+                    <ul>
+                        <li>
+                            <a href="product-category.html">Dresses</a>
+                        </li>
+                        <li>
+                            <a href="product-category.html">Tops</a>
+                        </li>
+                        <li>
+                            <a href="product-category.html">Bottoms</a>
+                        </li>
+                        <li>
+                            <a href="product-category.html">Jeans</a>
+                        </li>
+                        <li>
+                            <a href="product-category.html">Jackets &amp; Knitwear</a>
+                        </li>
+                        <li>
+                            <a href="product-category.html">Sleepwear</a>
+                        </li>
+                        <li>
+                            <a href="product-category.html">Swimwear</a>
+                        </li>
+                        <li>
+                            <a href="product-category.html">Activewear</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Shoes</a>
+                </li>
+                <li>
+                    <a href="#">Accessories</a>
+                </li>
+                <li>
+                    <a href="lookbook.html">Lookbook</a>
+                </li>
+                <li>
+                    <a href="#">Specials</a>
+                </li>
+            </ul>
+        </div>
+        <div class="wrapper-editors-favourites">
+            <ol>
+                <li class="editors-favourites">
+                    <span>Editor&rsquo;s</span> Favourites
+                </li>
+                <li><a href="#"><img src="assets/images/logos/magazine/magazine-drum-grey.png" width="83" height="24" alt="Drum" /></a></li>
+                <li><a href="#"><img src="assets/images/logos/magazine/magazine-fairlady-grey.png" width="95" height="24" alt="Fairlady" /></a></li>
+                <li><a href="#"><img src="assets/images/logos/magazine/magazine-grazia-grey.png" width="75" height="24" alt="Grazia" /></a></li>
+                <li><a href="#"><img src="assets/images/logos/magazine/magazine-huisgenoot-grey.png" width="41" height="24" alt="Huisgenoot" /></a></li>
+                <li><a href="#"><img src="assets/images/logos/magazine/magazine-sarie-grey.png" width="85" height="24" alt="Sarie" /></a></li>
+                <li><a href="#"><img src="assets/images/logos/magazine/magazine-truelove-grey.png" width="98" height="24" alt="True Love" /></a></li>
+                <li><a href="#"><img src="assets/images/logos/magazine/magazine-you-grey.png" width="59" height="24" alt="YOU" /></a></li>
+            </ol>
+        </div>
+    </nav>
+    <section role="main" class="product-detail">
+        <div class="wrapper-inner">
+            <div class="wrapper navigation">
+                <ul class="breadcrumbs">
+                    <li>
+                        <a href="home.html">Home</a> /
+                    </li>
+                    <li>
+                        <a href="products.html">Clothes</a> /
+                    </li>
+                    <li>
+                        <a href="product-category.html">Dresses</a> /
+                    </li>
+                    <li class="current">Cherry-Blossom Dress</li>
+                </ul>
+            </div>
+        </div>
+        <div class="wrapper product-detail">
+            <div class="column product-media">
+                <div class="contents">
+                    <div class="share">
+                        <p>Share this item</p>
+                        <ul>
+                            <li>
+                                <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.spree.co.za" title="Share on Facebook" target="_blank"><img src="assets/images/logos/logo-share-facebook.png" width="21" height="21" alt="Facebook" /></a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/intent/tweet?status=Cherry-Blossom%20Dress:+http%3A%2F%2Fwww.spree.co.za+via+%40Spree&amp;url=http%3A%2F%2Fwww.spree.co.za" title="Share on Twitter" target="_blank"><img src="assets/images/logos/logo-share-twitter.png" width="21" height="21" alt="Twitter" /></a>
+                            </li>
+                            <li>
+                                <a href="http://pinterest.com/pin/create/button/?media=&description=Cherry-Blossom%20Dress&url=http%3A%2F%2Fwww.spree.co.za" title="Share on Tumblr" target="_blank"><img src="assets/images/logos/logo-share-pinterest.png" width="21" height="21" alt="Pinterest" /></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="media" data-media-type="video">
+                        <div class="photo">
+                            <!--<img src="assets/images/products/product-large-02.jpg" width="422" height="565" alt="Cherry-Blossom Dress" />-->
+                        </div>
+                        <video width="422" height="565" poster="assets/media/video-02.jpg" preload="auto" autoplay="autoplay">
+                            <source type="video/mp4" src="assets/media/video-02.mp4" />
+                            <source type="video/webm" src="assets/media/video-02.webm" />
+                            <source type="video/ogg" src="assets/media/video-02.ogg" />
+                            <object width="422" height="565" type="application/x-shockwave-flash" data="assets/swf/flashmediaelement.swf">
+                                <param name="movie" value="assets/swf/flashmediaelement.swf" />
+                                <param name="flashvars" value="controls=true&amp;file=assets/media/video-02.mp4" />
+                                <img src="assets/media/video-02.jpg" width="422" height="565" alt="" />
+                            </object>
+                        </video>
+                        <div class="loading"></div>
+                    </div>
+                    <div class="gallery-wrapper" data-component="carousel" data-component-min-items="4">
+                        <div class="gallery">
+                            <ul>
+                                <li class="active">
+                                    <a href="#" data-media-type="video"><img src="assets/images/products/thumbs/product-thumb-01.jpg" width="95" height="127" alt="" /></a>
+                                    <div class="play-video"><img src="assets/images/icons/icon-video-play.png" width="36" height="37" alt="Play" /></div>
+                                </li>
+                                <li>
+                                    <a href="#" data-media-type="photo" data-photo-url="assets/images/products/product-large-02.jpg"><img src="assets/images/products/thumbs/product-thumb-02.jpg" width="95" height="127" alt="" /></a>
+                                </li>
+                                <li>
+                                    <a href="#" data-media-type="photo" data-photo-url="assets/images/products/product-large-03.jpg"><img src="assets/images/products/thumbs/product-thumb-03.jpg" width="95" height="127" alt="" /></a>
+                                </li>
+                                <li>
+                                    <a href="#" data-media-type="photo" data-photo-url="assets/images/products/product-large-04.jpg"><img src="assets/images/products/thumbs/product-thumb-04.jpg" width="95" height="127" alt="" /></a>
+                                </li>
+                                <li>
+                                    <a href="#" data-media-type="photo" data-photo-url="assets/images/products/product-large-01.jpg"><img src="assets/images/products/thumbs/product-thumb-01.jpg" width="95" height="127" alt="" /></a>
+                                </li>
+                                <li>
+                                    <a href="#" data-media-type="photo" data-photo-url="assets/images/products/product-large-02.jpg"><img src="assets/images/products/thumbs/product-thumb-02.jpg" width="95" height="127" alt="" /></a>
+                                </li>
+                                <li>
+                                    <a href="#" data-media-type="photo" data-photo-url="assets/images/products/product-large-03.jpg"><img src="assets/images/products/thumbs/product-thumb-03.jpg" width="95" height="127" alt="" /></a>
+                                </li>
+                                <li>
+                                    <a href="#" data-media-type="photo" data-photo-url="assets/images/products/product-large-04.jpg"><img src="assets/images/products/thumbs/product-thumb-04.jpg" width="95" height="127" alt="" /></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="#" class="controls scroll-prev" role="button"><img src="assets/images/icons/icon-prev-medium.png" width="18" height="36" alt="Previous" /></a>
+                        <a href="#" class="controls scroll-next" role="button"><img src="assets/images/icons/icon-next-medium.png" width="18" height="36" alt="Next" /></a>
+                    </div>
+                </div>
+            </div>
+            <div class="column product-information">
+                <div class="contents">
+                    <header>
+                        <h1>Cherry&ndash;Blossom Dress</h1>
+                        <h2>Levis</h2>
+                        <h3>R850</h3>
+                    </header>
+                    <div class="product-sizes">
+                        <h4>Size</h4>
+                        <ul data-toggle="product-size">
+                            <li>
+                                <a title="Small" data-sold-out="true">S</a>
+                            </li>
+                            <li>
+                                <a title="Medium" data-sold-out="true">M</a>
+                            </li>
+                            <li>
+                                <a title="Large" href="#">L</a>
+                            </li>
+                            <li>
+                                <a title="Extra Large" href="#">XL</a>
+                            </li>
+                        </ul>
+                        <!--<p>If your size is sold out, <a href="#" data-action="restock-request" data-restock-product-id="123">request a re&ndash;stock of the item!</a></p>-->
+                        <a href="#" class="button button-large button-black" data-action="cart" data-cart-add-text="Add to cart" data-cart-remove-text="Remove from cart" role="button">Add to cart</a>
+                        <a href="#" class="favourite-large" data-action="favourite" data-favourite-add-text="Add to favourites" data-favourite-remove-text="Remove from favourites"><img src="assets/images/icons/icon-heart-large.png" width="22" height="20" title="Add to Favourites" alt="" /><span>Add to favourites</span></a>
+                        <div class="size-guide">
+                            <img src="assets/images/icons/icon-size-guide.png" width="18" height="18" alt="" />
+                            <a href="#" data-action="size-guide">Compare sizes</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper-tabs">
+                    <div data-component="tabs">
+                        <ul>
+                            <li><a href="#tab-why-buy">Why buy</a></li>
+                            <li><a href="#tab-detail">Detail</a></li>
+                            <li><a href="#tab-size">Size</a></li>
+                        </ul>
+                        <div id="tab-why-buy">
+                            <div class="tabs-inner">
+                                <div class="endorsement active" data-magazine="sarie">
+                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                                    <img src="assets/images/editors/chris-viljoen.jpg" width="156" height="53" alt="Chris Viljoen" />
+                                </div>
+                                <div class="endorsement" data-magazine="you">
+                                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    <img src="assets/images/logos/magazine/magazine-you-colour.png" width="156" height="53" alt="You" />
+                                </div>
+                                <div class="endorsement" data-magazine="huisgenoot">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                    <img src="assets/images/logos/magazine/magazine-huisgenoot-colour.png" width="156" height="53" alt="Huisgenoot" />
+                                </div>
+                            </div>
+                            <div class="endorsements-wrapper" data-component="carousel" data-component-min-items="3">
+                                <span>
+                                    <i>Endorsed by</i>
+                                </span>
+                                <div class="endorsements">
+                                    <ul>
+                                        <li>
+                                            <a href="#" data-magazine="sarie"><img src="assets/images/logos/magazine/magazine-sarie-small.png" width="52" height="29" alt="Sarie" /></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-magazine="you"><img src="assets/images/logos/magazine/magazine-you-small.png" width="52" height="29" alt="You" /></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-magazine="huisgenoot"><img src="assets/images/logos/magazine/magazine-huisgenoot-small.png" width="52" height="29" alt="Huis Genoot" /></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-magazine="sarie"><img src="assets/images/logos/magazine/magazine-sarie-small.png" width="52" height="29" alt="Sarie" /></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-magazine="you"><img src="assets/images/logos/magazine/magazine-you-small.png" width="52" height="29" alt="You" /></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-magazine="huisgenoot"><img src="assets/images/logos/magazine/magazine-huisgenoot-small.png" width="52" height="29" alt="Huis Genoot" /></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-magazine="sarie"><img src="assets/images/logos/magazine/magazine-sarie-small.png" width="52" height="29" alt="Sarie" /></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-magazine="you"><img src="assets/images/logos/magazine/magazine-you-small.png" width="52" height="29" alt="You" /></a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-magazine="huisgenoot"><img src="assets/images/logos/magazine/magazine-huisgenoot-small.png" width="52" height="29" alt="Huis Genoot" /></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="highlight"><img src="assets/images/icons/icon-tab-active.png" width="24" height="12" alt="" /></div>
+                                <a href="#" class="controls scroll-prev" role="button"><img src="assets/images/icons/icon-prev-small.png" width="11" height="20" alt="Previous" /></a>
+                                <a href="#" class="controls scroll-next" role="button"><img src="assets/images/icons/icon-next-small.png" width="11" height="20" alt="Next" /></a>
+                            </div>
+                        </div>
+                        <div id="tab-detail">
+                            <div class="tabs-inner">
+                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                            </div>
+                        </div>
+                        <div id="tab-size">
+                            <div class="tabs-inner">
+                                <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="payment-methods"><img src="assets/images/logos/logo-payment-methods.png" width="322" height="37" alt="Thawte" /></div>
+            </div>
+        </div>
+        <div class="wrapper-related">
+            <div class="wrapper">
+                <header>
+                    <h1>Related Products</h1>
+                </header>
+                <div class="wrapper-scroller" data-component="scroller">
+                    <div class="scroller">
+                        <div class="scroll">
+                            <div class="slide">
+                                <div class="products">
+                                    <div class="product">
+                                        <a href="product-detail.html">
+                                            <img src="assets/images/products/product-02.jpg" width="206" height="284" alt="Pearl Dress by Mui Mui &emdash; R450.00" />
+                                        </a>
+                                        <div class="product-details">
+                                            <header>
+                                                <h1>Lorem ipsum</h1>
+                                                <h2>Ut enim ad minim</h2>
+                                            </header>
+                                            <span>R350</span>
+                                            <a href="#" class="favourite" data-action="favourite"><img src="assets/images/icons/icon-heart.png" width="18" height="16" title="Add to Favourites" alt="Favourite" /></a>
+                                        </div>
+                                    </div>
+                                    <div class="product">
+                                        <a href="product-detail.html">
+                                            <img src="assets/images/products/product-01.jpg" width="206" height="284" alt="Pearl Dress by Mui Mui &emdash; R450.00" />
+                                        </a>
+                                        <div class="product-details">
+                                            <header>
+                                                <h1>Lorem ipsum</h1>
+                                                <h2>Ut enim ad minim</h2>
+                                            </header>
+                                            <span>R350</span>
+                                            <a href="#" class="favourite" data-action="favourite"><img src="assets/images/icons/icon-heart.png" width="18" height="16" title="Add to Favourites" alt="Favourite" /></a>
+                                        </div>
+                                    </div>
+                                    <div class="product">
+                                        <a href="product-detail.html">
+                                            <img src="assets/images/products/product-02.jpg" width="206" height="284" alt="Pearl Dress by Mui Mui &emdash; R450.00" />
+                                        </a>
+                                        <div class="product-details">
+                                            <header>
+                                                <h1>Lorem ipsum</h1>
+                                                <h2>Ut enim ad minim</h2>
+                                            </header>
+                                            <span>R350</span>
+                                            <a href="#" class="favourite" data-action="favourite"><img src="assets/images/icons/icon-heart.png" width="18" height="16" title="Add to Favourites" alt="Favourite" /></a>
+                                        </div>
+                                    </div>
+                                    <div class="product">
+                                        <a href="product-detail.html">
+                                            <img src="assets/images/products/product-01.jpg" width="206" height="284" alt="Pearl Dress by Mui Mui &emdash; R450.00" />
+                                        </a>
+                                        <div class="product-details">
+                                            <header>
+                                                <h1>Lorem ipsum</h1>
+                                                <h2>Ut enim ad minim</h2>
+                                            </header>
+                                            <span>R350</span>
+                                            <a href="#" class="favourite" data-action="favourite"><img src="assets/images/icons/icon-heart.png" width="18" height="16" title="Add to Favourites" alt="Favourite" /></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="products">
+                                    <div class="product">
+                                        <a href="product-detail.html">
+                                            <img src="assets/images/products/product-02.jpg" width="206" height="284" alt="Pearl Dress by Mui Mui &emdash; R450.00" />
+                                        </a>
+                                        <div class="product-details">
+                                            <header>
+                                                <h1>Lorem ipsum</h1>
+                                                <h2>Ut enim ad minim</h2>
+                                            </header>
+                                            <span>R350</span>
+                                            <a href="#" class="favourite" data-action="favourite"><img src="assets/images/icons/icon-heart.png" width="18" height="16" title="Add to Favourites" alt="Favourite" /></a>
+                                        </div>
+                                    </div>
+                                    <div class="product">
+                                        <a href="product-detail.html">
+                                            <img src="assets/images/products/product-01.jpg" width="206" height="284" alt="Pearl Dress by Mui Mui &emdash; R450.00" />
+                                        </a>
+                                        <div class="product-details">
+                                            <header>
+                                                <h1>Lorem ipsum</h1>
+                                                <h2>Ut enim ad minim</h2>
+                                            </header>
+                                            <span>R350</span>
+                                            <a href="#" class="favourite" data-action="favourite"><img src="assets/images/icons/icon-heart.png" width="18" height="16" title="Add to Favourites" alt="Favourite" /></a>
+                                        </div>
+                                    </div>
+                                    <div class="product">
+                                        <a href="product-detail.html">
+                                            <img src="assets/images/products/product-02.jpg" width="206" height="284" alt="Pearl Dress by Mui Mui &emdash; R450.00" />
+                                        </a>
+                                        <div class="product-details">
+                                            <header>
+                                                <h1>Lorem ipsum</h1>
+                                                <h2>Ut enim ad minim</h2>
+                                            </header>
+                                            <span>R350</span>
+                                            <a href="#" class="favourite" data-action="favourite"><img src="assets/images/icons/icon-heart.png" width="18" height="16" title="Add to Favourites" alt="Favourite" /></a>
+                                        </div>
+                                    </div>
+                                    <div class="product">
+                                        <a href="product-detail.html">
+                                            <img src="assets/images/products/product-01.jpg" width="206" height="284" alt="Pearl Dress by Mui Mui &emdash; R450.00" />
+                                        </a>
+                                        <div class="product-details">
+                                            <header>
+                                                <h1>Lorem ipsum</h1>
+                                                <h2>Ut enim ad minim</h2>
+                                            </header>
+                                            <span>R350</span>
+                                            <a href="#" class="favourite" data-action="favourite"><img src="assets/images/icons/icon-heart.png" width="18" height="16" title="Add to Favourites" alt="Favourite" /></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide">
+                                <div class="products">
+                                    <div class="product">
+                                        <a href="product-detail.html">
+                                            <img src="assets/images/products/product-02.jpg" width="206" height="284" alt="Pearl Dress by Mui Mui &emdash; R450.00" />
+                                        </a>
+                                        <div class="product-details">
+                                            <header>
+                                                <h1>Lorem ipsum</h1>
+                                                <h2>Ut enim ad minim</h2>
+                                            </header>
+                                            <span>R350</span>
+                                            <a href="#" class="favourite" data-action="favourite"><img src="assets/images/icons/icon-heart.png" width="18" height="16" title="Add to Favourites" alt="Favourite" /></a>
+                                        </div>
+                                    </div>
+                                    <div class="product">
+                                        <a href="product-detail.html">
+                                            <img src="assets/images/products/product-01.jpg" width="206" height="284" alt="Pearl Dress by Mui Mui &emdash; R450.00" />
+                                        </a>
+                                        <div class="product-details">
+                                            <header>
+                                                <h1>Lorem ipsum</h1>
+                                                <h2>Ut enim ad minim</h2>
+                                            </header>
+                                            <span>R350</span>
+                                            <a href="#" class="favourite" data-action="favourite"><img src="assets/images/icons/icon-heart.png" width="18" height="16" title="Add to Favourites" alt="Favourite" /></a>
+                                        </div>
+                                    </div>
+                                    <div class="product">
+                                        <a href="product-detail.html">
+                                            <img src="assets/images/products/product-02.jpg" width="206" height="284" alt="Pearl Dress by Mui Mui &emdash; R450.00" />
+                                        </a>
+                                        <div class="product-details">
+                                            <header>
+                                                <h1>Lorem ipsum</h1>
+                                                <h2>Ut enim ad minim</h2>
+                                            </header>
+                                            <span>R350</span>
+                                            <a href="#" class="favourite" data-action="favourite"><img src="assets/images/icons/icon-heart.png" width="18" height="16" title="Add to Favourites" alt="Favourite" /></a>
+                                        </div>
+                                    </div>
+                                    <div class="product">
+                                        <a href="product-detail.html">
+                                            <img src="assets/images/products/product-01.jpg" width="206" height="284" alt="Pearl Dress by Mui Mui &emdash; R450.00" />
+                                        </a>
+                                        <div class="product-details">
+                                            <header>
+                                                <h1>Lorem ipsum</h1>
+                                                <h2>Ut enim ad minim</h2>
+                                            </header>
+                                            <span>R350</span>
+                                            <a href="#" class="favourite" data-action="favourite"><img src="assets/images/icons/icon-heart.png" width="18" height="16" title="Add to Favourites" alt="Favourite" /></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="controls scroll-prev" role="button"><img src="assets/images/icons/icon-prev-large.png" width="50" height="50" alt="Previous" /></a>
+                    <a href="#" class="controls scroll-next" role="button"><img src="assets/images/icons/icon-next-large.png" width="50" height="50" alt="Next" /></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer role="contentinfo">
+        <div class="wrapper">
+            <nav>
+                <ul role="navigation">
+                    <li>
+                        <b>Lorem ipsum</b>
+                        <ul role="navigation">
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Lorem ipsum</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Lorem ipsum</b>
+                        <ul role="navigation">
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Lorem ipsum</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Lorem ipsum</b>
+                        <ul role="navigation">
+                            <li>0861 999 501</li>
+                            <li><a href="mailto:support@spree.co.za">support@spree.co.za</a></li>
+                            <li><img src="assets/images/logos/logo-twitter.png" width="18" height="20" title="Twitter" alt="Twitter" /> <a href="https://twitter.com/spreecoza">Follow us @spreecoza</a></li>
+                            <li><img src="assets/images/logos/logo-facebook.png" width="18" height="20" title="Facebook" alt="Facebook" /> <a href="https://www.facebook.com/spree.co.za">Like us on Facebook</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Lorem ipsum</b>
+                        <form id="form-signup" name="form-signup" method="post" action="home.html" class="form-signup">
+                            <label for="email-signup">
+                                Sign up for our newsletter
+                                <input type="text" id="email-signup" name="email-signup" value="Email address" placeholder="Email address" maxlength="100" />
+                            </label>
+                            <fieldset class="radio">
+                                <label for="form-signup-language-english">
+                                    <input id="form-signup-language-english" name="form-signup-language" type="radio" value="English" checked="checked" /> English
+                                </label>
+                                <label for="form-signup-language-afrikaans">
+                                    <input id="form-signup-language-afrikaans" name="form-signup-language" type="radio"  value="Afrikaans" /> Afrikaans
+                                </label>
+                            </fieldset>
+                            <input type="submit" id="submit-signup" name="submit-signup" value="Sign up now" />
+                        </form>
+                        <!-- Confirmation message after submitting the form -->
+                        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p> -->
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+    <a href="#" class="back-to-top" data-action="back-to-top" title="Back to Top"><img src="assets/images/icons/icon-up.png" width="12" height="12" alt="^" /> Top</a>
+    <div id="language-confirmation" class="modal small">
+        <header>
+            <h1>Magazine Language Change</h1>
+        </header>
+        <p>The products curated by this magazine title are best experienced in <b>Afrikaans</b>. Would you like to change language now?</p>
+        <a href="product-detail.html" class="button button-medium button-charcoal" data-action="language-confirm" role="button">Yes</a>
+        <a href="#" class="secondary" data-action="modal-close">No thanks</a>
+        <p>You can switch your language anytime using the language dropdown in the top right of the website.</p>
+        <a href="#" class="close" data-action="modal-close"><img src="assets/images/icons/icon-modal-close.png" width="20" height="20" alt="X" /></a>
+    </div>
+    <div id="size-guide" class="modal">
+        <header>
+            <h1>Size Guide</h1>
+        </header>
+        <table class="size-guide">
+            <thead>
+            <tr>
+                <th>Lorem</th>
+                <th>Ipsum</th>
+                <th>Lorem</th>
+                <th>Ipsum</th>
+                <th>Lorem</th>
+                <th>Ipsum</th>
+                <th>Lorem</th>
+                <th>Ipsum</th>
+                <th>Lorem</th>
+                <th>Ipsum</th>
+                <th>Lorem</th>
+                <th>Ipsum</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77&rdquo;</td>
+                <td>88 1/2&rdquo;</td>
+                <td>11</td>
+                <td>22</td>
+                <td>77&rdquo;</td>
+                <td>88 1/2&rdquo;</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77&rdquo;</td>
+                <td>88 1/2&rdquo;</td>
+                <td>11</td>
+                <td>22</td>
+                <td>77&rdquo;</td>
+                <td>88 1/2&rdquo;</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77&rdquo;</td>
+                <td>88 1/2&rdquo;</td>
+                <td>11</td>
+                <td>22</td>
+                <td>77&rdquo;</td>
+                <td>88 1/2&rdquo;</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77&rdquo;</td>
+                <td>88 1/2&rdquo;</td>
+                <td>11</td>
+                <td>22</td>
+                <td>77&rdquo;</td>
+                <td>88 1/2&rdquo;</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77&rdquo;</td>
+                <td>88 1/2&rdquo;</td>
+                <td>11</td>
+                <td>22</td>
+                <td>77&rdquo;</td>
+                <td>88 1/2&rdquo;</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77&rdquo;</td>
+                <td>88 1/2&rdquo;</td>
+                <td>11</td>
+                <td>22</td>
+                <td>77&rdquo;</td>
+                <td>88 1/2&rdquo;</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77&rdquo;</td>
+                <td>88 1/2&rdquo;</td>
+                <td>11</td>
+                <td>22</td>
+                <td>77&rdquo;</td>
+                <td>88 1/2&rdquo;</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77&rdquo;</td>
+                <td>88 1/2&rdquo;</td>
+                <td>11</td>
+                <td>22</td>
+                <td>77&rdquo;</td>
+                <td>88 1/2&rdquo;</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77&rdquo;</td>
+                <td>88 1/2&rdquo;</td>
+                <td>11</td>
+                <td>22</td>
+                <td>77&rdquo;</td>
+                <td>88 1/2&rdquo;</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77&rdquo;</td>
+                <td>88 1/2&rdquo;</td>
+                <td>11</td>
+                <td>22</td>
+                <td>77&rdquo;</td>
+                <td>88 1/2&rdquo;</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>22</td>
+                <td>33</td>
+                <td>44</td>
+                <td>55</td>
+                <td>66</td>
+                <td>77&rdquo;</td>
+                <td>88 1/2&rdquo;</td>
+                <td>11</td>
+                <td>22</td>
+                <td>77&rdquo;</td>
+                <td>88 1/2&rdquo;</td>
+            </tr>
+            </tbody>
+        </table>
+        <a href="#" class="close" data-action="modal-close"><img src="assets/images/icons/icon-modal-close.png" width="20" height="20" alt="X" /></a>
+    </div>
+    <div id="request-restock" class="modal">
+        <a href="#" class="close" data-action="modal-close"><img src="assets/images/icons/icon-modal-close.png" width="20" height="20" alt="X" /></a>
+        <header>
+            <h1>Request a Restock</h1>
+        </header>
+        <p>
+            Enter your email address below and we will notify you once your item has been re&ndash;stocked.
+        </p>
+        <form id="form-request-restock" name="form-request-restock" class="request">
+            <label for="restock-size">
+                <select id="restock-size" name="restock-size">
+                    <option value="">Select size</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                </select>
+            </label>
+            <label for="restock-email">
+                <input type="text" id="restock-email" name="restock-email" value="" maxlength="100" />
+            </label>
+            <label for="restock-opt-in" class="checkbox">
+                <input type="checkbox" id="restock-opt-in" name="restock-opt-in" value="1" /> Join our newsletter and be the first to know about new products and great deals!
+            </label>
+            <input type="hidden" id="restock-product-id" name="restock-product-id" value="" />
+            <input type="submit" id="restock-submit" name="restock-submit" value="Request a Restock" />
+        </form>
+        <a href="#" class="close" data-action="modal-close"><img src="assets/images/icons/icon-modal-close.png" width="20" height="20" alt="X" /></a>
+    </div>
+    <!-- Modal: Newsletter Sign Up -->
+    <div id="newsletter-sign-up" class="modal modal-sign-up">
+        <img src="assets/images/general/newsletter-sign-up-header-english.png" width="372" height="103" alt="Sign Up to our Newsletter" />
+        <!--<img src="assets/images/general/newsletter-sign-up-header-afrikaans.png" width="372" height="103" alt="Teken In op ons Nuusbrief" />-->
+        <p>Get the latest trends, lookbooks and fashion advice, plus the hottest arrivals from your favourite designers, all hand&ndash;picked by our top SA Fashion Editors. Vouchers redeemable against purchases of R200 or more.</p>
+        <!--<p>Kry die jongste 'trends', modegidse en raad, asook al die nuwe produkte vanaf jou gunstelingontwerpers, almal met die hand uitgekies deur ons top-moderedakteurs. Koepons kan gebruik word met transaksies ter waarde van R200 of meer.</p>-->
+        <form id="form-newsletter-sign-up">
+            <label for="newsletter-sign-up-email">
+                <input id="newsletter-sign-up-email" name="newsletter-sign-up-email" type="text" value="" placeholder="Enter your email address" maxlength="100" />
+            </label>
+            <fieldset class="radio">
+                <label for="newsletter-sign-up-english">
+                    <input id="newsletter-sign-up-english" name="newsletter-sign-up-language" type="radio" value="English" checked="checked" /> English
+                </label>
+                <label for="newsletter-sign-up-afrikaans">
+                    <input id="newsletter-sign-up-afrikaans" name="newsletter-sign-up-language" type="radio"  value="Afrikaans" /> Afrikaans
+                </label>
+            </fieldset>
+            <input id="submit-newsletter-sign-up" type="submit" value="Subscribe" />
+            <p>*T&amp;C&rsquo;s apply</p>
+            <!--<p>*Bepalings en voowaardes geld</p>-->
+        </form>
+        <a href="#" class="close" data-action="modal-close"><img src="assets/images/icons/icon-modal-close.png" width="20" height="20" alt="X" /></a>
+    </div>
+    <!-- Modal: Newsletter Sign Up Confirmation -->
+    <div id="newsletter-sign-up-confirmation" class="modal modal-sign-up">
+        <img src="assets/images/general/newsletter-sign-up-header-english.png" width="372" height="103" alt="Sign Up to our Newsletter" />
+        <p>Get the latest trends, lookbooks and fashion advice, plus the hottest arrivals from your favourite designers, all hand&ndash;picked by our top SA Fashion Editors. Vouchers redeemable against purchases of R200 or more.</p>
+        <!--<p>Kry die jongste 'trends', modegidse en raad, asook al die nuwe produkte vanaf jou gunstelingontwerpers, almal met die hand uitgekies deur ons top-moderedakteurs. Koepons kan gebruik word met transaksies ter waarde van R200 of meer.</p>-->
+        <p>
+            <b>Thank you for subscribing to our newsletter</b>
+            <!--<b>Dankie dat jy op ons nuusbrief ingeteken het.</b>-->
+            <br/>
+            Please check your inbox for the R50 voucher to get spree&ndash;ing.
+            <!--Ons het jou R50-koepon vir jou gestuur. Geniet jou &ldquo;spree&rdquo;&ndash;sessie! -->
+        </p>
+        <a href="#" class="close" data-action="modal-close"><img src="assets/images/icons/icon-modal-close.png" width="20" height="20" alt="X" /></a>
+    </div>
+    <script src="assets/js/jquery.easing.js"></script>
+    <script src="assets/js/jquery.placeholder.js"></script>
+    <script src="assets/js/jquery.scrollto.js"></script>
+    <script src="assets/js/jquery.serialscroll.js"></script>
+    <script src="assets/js/jquery.iosslider.js"></script>
+    <script src="assets/js/jquery.modal.js"></script>
+    <script src="assets/js/jquery.mediaelementplayer.js"></script>
+    <script src="assets/js/jquery-ui.js"></script>
+    <script>
+        /*
+         * The URL for the front-end of the website
+         * @type {String}
+         */
+        var frontEndWebsiteURL = null;
+        // var frontEndWebsiteURL = 'http://dev.megastore.local/skin/frontend/site/web';
+    </script>
+    <script src="assets/js/jquery-custom.js"></script>
+    <script>
+        /*
+         * Fade in the checkout button once an item has been added to the cart
+         */
+        // fadeInEl('checkout-button');
+    </script>
+</body>
+</html>

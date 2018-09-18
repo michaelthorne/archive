@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'LucidaBright';
+    src: url("../fonts/lucida-bright.eot");
+    src: local('☺'), url("../fonts/lucida-bright.woff") format('woff'),
+                     url("../fonts/lucida-bright.ttf") format('truetype'),
+                     url("../fonts/lucida-bright.svg#LucidaBright") format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

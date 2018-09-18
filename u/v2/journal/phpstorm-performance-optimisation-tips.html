@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>PhpStorm performance optimisation tips | Michael Thorne</title>
+    <meta name="description" content="My first experience of JetBrains products was back in 2006 with IntelliJ when I was doing Java development. Over the last few years I’ve been happily using PhpStorm, but I’m always keen to optimise it’s performance wherever possible." />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Open Graph -->
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:title" content="PhpStorm performance optimisation tips" />
+    <meta property="og:description" content="My first experience of JetBrains products was back in 2006 with IntelliJ when I was doing Java development. Over the last few years I’ve been happily using PhpStorm, but I’m always keen to optimise it’s performance wherever possible." />
+    <meta property="og:url" content="http://www.userx.co.za/journal/phpstorm-performance-optimisation-tips" />
+    <meta property="og:image" content="http://www.userx.co.za/assets/images/general/michael-thorne-300x300.jpg" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@mikkelz_za" />
+    <meta name="twitter:title" content="PhpStorm performance optimisation tips" />
+    <meta name="twitter:description" content="My first experience of JetBrains products was back in 2006 with IntelliJ when I was doing Java development. Over the last few years I’ve been happily using PhpStorm, but I’m always keen to optimise it’s performance wherever possible." />
+    <meta name="twitter:image" content="http://www.userx.co.za/assets/images/general/michael-thorne-300x300.jpg" />
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
+
+    <!-- Google+ -->
+    <link rel="publisher" href="https://plus.google.com/+MichaelThorne_za" />
+
+    <link rel="prev" title="Cape Town UX Craft – August Meetup" href="http://www.userx.co.za/journal/cape-town-ux-craft-august-meetup" />
+    <link rel="next" title="How to restore the Personal Hotspot on your iPad in iOS 8" href="http://www.userx.co.za/journal/restore-the-personal-hotspot-on-your-ipad-ios8.html" />
+
+    <!-- Fonts -->
+    <script>
+        WebFontConfig = {
+            google: {
+                families: ['Raleway:400,700']
+            },
+            custom: {
+                families: ['icomoon'],
+                    urls: ['../assets/css/style.css']
+            }
+        };
+    </script>
+
+    <!-- Web Font Loader -->
+    <script>
+        (function(){var e=document.createElement("script");e.src=("https:"==document.location.protocol?"https":"http")+"://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js";e.type="text/javascript";e.async="true";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})();
+    </script>
+
+    <!-- Picturefill -->
+    <script src="../assets/js/vendor/picturefill.js" async="async"></script>
+
+    <!--[if lt IE 9]>
+    <script src="../assets/js/vendor/polyfills.js"></script>
+    <![endif]-->
+</head>
+<body id="top">
+    <a href="#main" class="visuallyhidden">Skip to main content</a>
+
+    <div class="l-sidebar">
+        <a href="../" class="photo">
+            <picture>
+                <source srcset="../assets/images/general/michael-thorne-300x300.jpg" media="(min-width: 80em)">
+                <source srcset="../assets/images/general/michael-thorne-60x60.jpg" media="(min-width: 40em)">
+                <img src="../assets/images/general/michael-thorne-50x50.jpg" alt="Michael Thorne" />
+            </picture>
+            <span class="icon icon-home" aria-hidden="true"></span>
+        </a>
+
+        <h6 class="zeta hN">Michael Thorne<span class="role">Front-end Web Developer</span></h6>
+
+        <nav class="nav nav--primary" role="navigation">
+            <ol class="list list--nav">
+                <li class="is-active"><a href="../journal">Journal</a></li>
+                <li><a href="../about">About</a></li>
+                <li><a href="../contact">Contact</a></li>
+            </ol>
+
+            <ul class="list list--social">
+                <li><a href="http://flickr.com/mikkelz" title="My photos on Flickr"><span class="icon icon-flickr" aria-hidden="true"></span></a></li>
+                <li><a href="http://github.com/michaelthorne" title="My code on GitHub"><span class="icon icon-github" aria-hidden="true"></span></a></li>
+                <li><a href="http://twitter.com/mikkelz_za" title="My thoughts on Twitter"><span class="icon icon-twitter" aria-hidden="true"></span></a></li>
+                <li><a href="http://youtube.com/mikkelzZA" title="My videos on YouTube"><span class="icon icon-youtube-play" aria-hidden="true"></span></a></li>
+            </ul>
+        </nav>
+
+        <a href="#" class="btn btn--secondary btn--small toggle" data-action="toggle-nav">
+            <span class="icon icon--left icon-bars hide-small hide-large" aria-hidden="true"></span>Menu
+        </a>
+    </div>
+
+    <main id="main" class="l-main" role="main">
+        <div class="l-wrapper">
+            <!--[if lt IE 9]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/?locale=en">upgrade your browser</a> to improve your experience.</p>
+            <![endif]-->
+
+            <div class="section">
+                <article class="article" itemscope itemType="http://schema.org/BlogPosting">
+                    <header class="header header--article">
+                        <time class="time" datetime="2014-10-20" itemprop="datePublished">
+                            <a href="phpstorm-performance-optimisation-tips" itemprop="url"><span class="icon icon-book" aria-hidden="true"></span>October 20, 2014</a>
+                        </time>
+                        <h1 class="beta hN" itemprop="headline">PhpStorm performance optimisation tips</h1>
+                        <div class="share">
+                            <a class="share__link" href="https://www.facebook.com/sharer/sharer.php?u=http://www.userx.co.za/journal/phpstorm-performance-optimisation-tips" title="Share on Facebook"><span class="icon icon-facebook-square" aria-hidden="true"></span></a>
+                            <a class="share__link" href="https://twitter.com/intent/tweet?text=PhpStorm%20performance%20optimisation%20tips&amp;url=http://www.userx.co.za/journal/phpstorm-performance-optimisation-tips&amp;via=mikkelz_za" title="Share on Twitter"><span class="icon icon-twitter-square" aria-hidden="true"></span></a>
+                        </div>
+                    </header>
+
+                    <div itemprop="articleBody">
+                        <p>My first experience of JetBrains products was back in 2006 with IntelliJ when I was doing Java development. Over the last few years I’ve been happily using PhpStorm, but I’m always keen to optimise it’s performance wherever possible.</p>
+
+                        <p>My work computer is a pretty neat <a href="http://www.samsung.com/africa_en/consumer/pc-peripherals-printer/notebook-pc/laptops/NP730U3E-K01ZA">Samsung</a> laptop with an Intel i5 processor, 4GB of DDR3 memory and a 128GB solid-state drive. The SSD has made the noticeable performance improvement over previous computers I’ve worked on.</p>
+
+                        <p>However, with the latest version of PhpStorm (8.0.1 at the time of writing this), I’ve noticed that it feels quite sluggish when working with relatively large projects. I primarily only PhpStorm for front-end web development, consisting of HTML, CSS (Less), JavaScript and Mustache templates. So I could really be using WebStorm, but I previously did a lot of PHP development and I still like to occasionally view PHP source code in the projects that I’m involved with.</p>
+
+                        <p>After doing some research, I found two tips which were applicable to my environment which includes Windows 8, as well as using TortoiseGit and Grunt with numerous plugins. Here are the tips:</p>
+
+                        <ol>
+                            <li>Exclude the <code>node_modules</code> directory with a project in PhpStorm. Due to the large number of files in this folder (over 5,000 in one of my projects), these are all accessible and appear in search results whenever you use the built in search or navigation functionality. For example: when you navigate to a file <kbd>CTRL + SHIFT + N</kbd> or find/replace in path <kbd>CTRL + SHIFT + F/R</kbd>. So to prevent all those files from being accessible in your project, right click on the <code>node_modules</code> folder within the Project window and select “Mark Directory As…” and then choose “Excluded”.</li>
+                            <li>Disable icon overlays by TortoiseGit in your operating system. Within TortoiseGit, browse to Settings → Icon Overlays → Status cache: “None”.</li>
+                        </ol>
+
+                        <p>Thanks to the answer provided on <a href="http://stackoverflow.com/questions/18514438/ignore-node-modules-in-webstorm-when-using-navigation-pop-up">Stack Overflow</a> and to the article on <a href="http://www.locked.de/2014/06/09/intellij-idea-and-scala-being-awfully-slow-on-windows-8-1">Frickelblog</a> respectively for the tips.</p>
+
+                        <p>The “responsiveness” of PhpStorm on my laptop has definitely increased with these changes that I made. Finding and navigating to files feels instant again, which is something that I sorely missed after upgrading to version 8. I’m not sure if it’s related to something in my environment, or if it is part of a change in version 8 of PhpStorm, but there was definitely a noticeable decrease in the overall performance on my laptop.</p>
+
+                        <p>As always, it is great when developers share their findings and are able to help out people in need. Keep it up!</p>
+                    </div>
+                </article>
+
+                <div class="pagination">
+                    <a href="cape-town-ux-craft-august-meetup" class="pagination__prev btn btn--secondary" title="Cape Town UX Craft – August Meetup" role="button"><span class="icon icon--left icon-long-arrow-left" aria-hidden="true"></span>Prev</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer footer--primary" role="contentinfo">
+        <div class="l-wrapper">
+            <div class="legal">
+                <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license" class="license">
+                    <img src="../assets/images/logos/creative-commons-by-nc-sa-80x15.png" width="80" height="15" alt="Creative Commons License" />
+                </a>
+                <small>This work by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.userx.co.za/about" property="cc:attributionName" rel="cc:attributionURL">Michael Thorne</a> is licensed under a <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</small>
+            </div>
+
+            <a href="../styleguide" class="btn btn--small" role="button">
+                <span class="icon icon--left icon-file-text" aria-hidden="true"></span>Style Guide
+            </a>
+
+            <a href="#top" class="btn btn--secondary btn--icon btn--small" role="button" title="Back to Top">
+                <span class="icon icon-arrow-up"></span>
+            </a>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/script.js"></script>
+
+    <!-- Google Analytics -->
+    <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-29325015-1','auto');ga('require', 'displayfeatures');ga('send','pageview');
+    </script>
+</body>
+</html>

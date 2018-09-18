@@ -1,0 +1,793 @@
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+
+/*
+ * Styling specific to forms and associated elements
+ */
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+/*
+ * Remove default fieldset styles
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Custom
+   ========================================================================== */
+
+/*
+ * Forms
+ */
+
+.form {
+    padding-bottom: 1px;
+
+    /*
+     * Margin
+     */
+
+    &.form-margin {
+        max-width: 670px;
+        overflow: hidden;
+
+        // Label
+        .label {
+            margin-right: 1px;
+            margin-bottom: 25px;
+
+            // Empty label
+            &.label-empty {
+                margin-bottom: 5px;
+            }
+        }
+
+        // Select
+        .select {
+            display: block;
+            margin-top: 5px;
+            max-width: 100%;
+        }
+
+        // Text Input
+        .input-text {
+            display: block;
+            margin-top: 5px;
+            max-width: 100%;
+        }
+
+        // Button
+        .btn {
+            margin-bottom: 10px;
+        }
+    }
+
+    /*
+     * Vertical
+     */
+
+    &.form-vertical {
+
+        // Label
+        .label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        // Select
+        .select {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        // Text Input
+        .input-text {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        // Button
+        .btn {
+            margin-top: 10px;
+        }
+    }
+
+    /*
+     * Horizontal Rule
+     */
+
+    .hr {
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    /*
+     * Buttons
+     */
+
+    .btn {
+        width: 100%;
+    }
+}
+
+/*
+ * Label
+ */
+
+.label {
+    display: block;
+    line-height: 24px;
+    margin-bottom: 5px;
+    position: relative;
+
+    /*
+     * Black
+     */
+
+    &.label-black {
+        color: @colour-grey-dark;
+        font-weight: @fw-bold;
+    }
+
+    /*
+     * White
+     */
+
+    &.label-white {
+        color: @colour-white-dark;
+        font-weight: @fw-bold;
+    }
+
+    /*
+     * Orange
+     */
+
+    &.label-orange {
+        color: @colour-orange;
+        font-weight: @fw-bold;
+    }
+}
+
+/*
+ * Related label
+ */
+
+.label-related {
+    display: block;
+    margin-left: 24px;
+}
+
+/*
+ * Fieldset
+ */
+
+.fieldset {
+    overflow: hidden;
+
+    // Margin inbetween fieldsets
+    + .fieldset {
+        margin-bottom: 20px;
+    }
+
+    /*
+     * Option Group
+     */
+
+    &.fieldset-option-group {
+        margin-bottom: 20px;
+
+        // Label
+        .label {
+            margin-bottom: 5px;
+            text-align: left;
+        }
+    }
+
+    /*
+     * Select Group
+     */
+
+    &.fieldset-select-group {
+
+        // Select
+        .select {
+            margin-bottom: 15px;
+        }
+    }
+
+    /*
+     * Total
+     */
+
+    &.fieldset-total {
+        padding-top: 10px;
+
+        // Related label
+        .label-related {
+            margin-left: 0;
+            margin-top: 2px;
+        }
+
+        // Legend
+        .legend {
+            padding-bottom: 10px;
+        }
+    }
+
+    /*
+     * Verification Code
+     */
+
+    &.fieldset-verification-code {
+
+        // Text input
+        .input-text {
+            float: left;
+            margin-right: 15px;
+            max-width: 150px;
+        }
+
+        // Server generated verification image
+        > img {
+            float: left;
+            margin-top: 10px;
+        }
+    }
+}
+
+/*
+ * Legend
+ */
+
+.legend {
+    color: @colour-grey-dark;
+    font-size: 22px;
+    font-weight: @fw-bold;
+    margin-bottom: 20px;
+    position: relative;
+
+    // Section
+    &.legend-section {
+        margin-bottom: 20px;
+    }
+}
+
+/*
+ * Checkboxes
+ */
+
+.input-checkbox {
+    margin-top: 5px;
+    margin-right: 7px;
+    margin-left: 1px;
+    vertical-align: top;
+
+    &:focus {
+        outline: 1px @colour-grey-light dotted;
+    }
+}
+
+/*
+ * Radio Buttons
+ */
+
+.input-radio {
+    margin-top: 5px;
+    margin-right: 7px;
+    margin-left: 1px;
+    vertical-align: top;
+
+    &:focus {
+        outline: 1px @colour-grey-light dotted;
+    }
+}
+
+/*
+ * Select
+ */
+
+.select {
+    .border-radius(5px);
+    border: 0;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: @fw-bold;
+    .opacity(0.85);
+    padding: 6px 15px 7px 15px;
+    text-transform: capitalize;
+    .transition(opacity 0.2s ease);
+    -webkit-appearance: none;
+    width: 100%;
+
+    &:focus,
+    &:hover {
+        .opacity(1);
+        outline: 0;
+    }
+
+    /*
+     * Black
+     */
+
+    &.select-black {
+        background: @colour-black-light;
+        background-image: url("../images/icons/icon-arrow-down-white.png");
+        background-image: url("../images/icons/icon-arrow-down-white.png"), -webkit-linear-gradient(top, @colour-grey, @colour-black-light);
+        background-image: url("../images/icons/icon-arrow-down-white.png"),    -moz-linear-gradient(top, @colour-grey, @colour-black-light);
+        background-image: url("../images/icons/icon-arrow-down-white.png"),      -o-linear-gradient(top, @colour-grey, @colour-black-light);
+        background-image: url("../images/icons/icon-arrow-down-white.png"),         linear-gradient(top, @colour-grey, @colour-black-light);
+        background-position: right center;
+        background-repeat: no-repeat;
+        color: @colour-white-dark;
+        text-shadow: 1px 1px 1px @colour-black-light; /* X, Y, Blur, Colour */
+
+        &:focus,
+        &:hover {
+            color: @colour-white;
+            text-shadow: 1px 1px 1px @colour-black; /* X, Y, Blur, Colour */
+        }
+    }
+
+    /*
+     * Orange
+     */
+
+    &.select-orange {
+        background: @colour-orange-dark;
+        background-image: url("../images/icons/icon-arrow-down-white.png");
+        background-image: url("../images/icons/icon-arrow-down-white.png"), -webkit-linear-gradient(top, @colour-orange-light, @colour-orange-dark);
+        background-image: url("../images/icons/icon-arrow-down-white.png"),    -moz-linear-gradient(top, @colour-orange-light, @colour-orange-dark);
+        background-image: url("../images/icons/icon-arrow-down-white.png"),      -o-linear-gradient(top, @colour-orange-light, @colour-orange-dark);
+        background-image: url("../images/icons/icon-arrow-down-white.png"),         linear-gradient(top, @colour-orange-light, @colour-orange-dark);
+        background-position: right center;
+        background-repeat: no-repeat;
+        color: @colour-white-dark;
+        text-shadow: 1px 1px 1px @colour-brown; /* X, Y, Blur, Colour */
+
+        &:focus,
+        &:hover {
+            color: @colour-white;
+            text-shadow: 1px 1px 1px @colour-brown-dark; /* X, Y, Blur, Colour */
+        }
+
+        &:disabled {
+            color: @colour-silver;
+            background-image: none;
+            background: @colour-silver-lightest;
+            background-image: url("../images/icons/icon-arrow-down-silver.png");
+            background-image: url("../images/icons/icon-arrow-down-silver.png"), -webkit-linear-gradient(top, @colour-white, @colour-silver-lightest);
+            background-image: url("../images/icons/icon-arrow-down-silver.png"),    -moz-linear-gradient(top, @colour-white, @colour-silver-lightest);
+            background-image: url("../images/icons/icon-arrow-down-silver.png"),      -o-linear-gradient(top, @colour-white, @colour-silver-lightest);
+            background-image: url("../images/icons/icon-arrow-down-silver.png"),         linear-gradient(top, @colour-white, @colour-silver-lightest);
+            background-position: right center;
+            background-repeat: no-repeat;
+            .opacity(1);
+            text-shadow: none;
+        }
+    }
+}
+
+/*
+ * Text
+ */
+
+.input-text {
+    .border-radius(5px);
+    font-size: 16px;
+    font-weight: @fw-bold;
+    padding: 7px 15px 8px 15px;
+    .transition(border 0.2s ease);
+    width: 100%;
+
+    &:focus {
+        outline: 0;
+    }
+
+    /*
+     * Black
+     */
+
+    &.input-text-black {
+        border-style: solid;
+        border-width: 1px;
+        background-color: @colour-grey-darkest;
+        border-top-color: @colour-black;
+        border-right-color: rgba(255, 255, 255, 0.2);
+        border-bottom-color: rgba(255, 255, 255, 0.2);
+        border-left-color: @colour-black;
+        .box-shadow(inset 0 0 1px @colour-black-light); /* X, Y, Blur, Spread, Colour */
+        color: @colour-silver;
+        text-shadow: 1px 1px 1px @colour-black-light; /* X, Y, Blur, Colour */
+
+        &:disabled {
+            background-color: @colour-grey-dark;
+            border: 1px @colour-grey solid;
+
+            &:focus,
+            &:hover {
+                border: 1px @colour-grey solid;
+            }
+        }
+
+        &:focus,
+        &:hover {
+            border: 1px @colour-grey solid;
+        }
+
+        &::-webkit-input-placeholder {
+            color: @colour-silver;
+        }
+
+        &:-moz-placeholder {
+            color: @colour-silver;
+        }
+
+        &::-moz-placeholder {
+            color: @colour-silver;
+        }
+
+        &:-ms-input-placeholder {
+            color: @colour-silver;
+        }
+    }
+
+    /*
+     * White
+     */
+
+    &.input-text-white {
+        border-style: solid;
+        border-width: 1px;
+        background-color: @colour-silver-lightest;
+        border-top-color: @colour-silver;
+        border-right-color: @colour-white;
+        border-bottom-color: @colour-white;
+        border-left-color: @colour-silver;
+        .box-shadow(inset 1px 1px 2px @colour-silver-light); /* X, Y, Blur, Spread, Colour */
+        color: @colour-grey;
+
+        &:disabled {
+            background-color: @colour-white-dark;
+            border: 1px @colour-silver-light solid;
+            .box-shadow(none);
+
+            &:focus,
+            &:hover {
+                border: 1px @colour-silver-light solid;
+                .box-shadow(none);
+            }
+        }
+
+        &:focus,
+        &:hover {
+            border: 1px @colour-silver-light solid;
+            .box-shadow(none);
+        }
+
+        &::-webkit-input-placeholder {
+            color: @colour-grey;
+        }
+
+        &:-moz-placeholder {
+            color: @colour-grey;
+        }
+
+        &::-moz-placeholder {
+            color: @colour-grey;
+        }
+
+        &:-ms-input-placeholder {
+            color: @colour-grey;
+        }
+    }
+}
+
+/*
+ * Error Messages
+ */
+
+span.error {
+    display: block;
+    font-size: 13px;
+    font-style: italic;
+    font-weight: @fw-semi-bold;
+    margin-bottom: 1px;
+}
+
+// Red
+.error-red {
+
+    // Error
+    span.error {
+        color: @colour-red;
+    }
+}
+
+// Black
+.error-black {
+
+    // Error
+    span.error {
+        color: @colour-black;
+    }
+}
+
+/* Media Queries
+   =========================================================================== */
+
+@media all and (min-width: 480px) {
+
+    /*
+     * Forms
+     */
+
+    .form {
+
+        /*
+         * Buttons
+         */
+
+        .btn {
+            width: auto;
+        }
+    }
+
+    /*
+     * Fieldset
+     */
+
+    .fieldset {
+
+        /*
+         * Total
+         */
+
+        &.fieldset-total {
+
+            // Related label
+            .label-related {
+                display: inline-block;
+                margin-top: 0;
+            }
+        }
+    }
+
+    /*
+     * Text
+     */
+
+    .input-text {
+        max-width: 300px;
+    }
+}
+
+@media all and (min-width: 760px) {
+
+    /*
+     * Forms
+     */
+
+    .form {
+
+        /*
+         * Margin
+         */
+
+        &.form-margin {
+
+            // Label
+            .label {
+                max-width: 720px;
+                text-align: right;
+
+                // Empty label
+                &.label-empty {
+                    float: left;
+                    margin-top: 11px;
+                    margin-bottom: 5px;
+                    width: 249px;
+                }
+
+                // Fieldset
+                &+ .fieldset {
+                    display: inline-block;
+                    margin-left: 15px;
+                    max-width: 416px;
+
+                    /*
+                     * Select Group
+                     */
+
+                    &.fieldset-select-group {
+                        float: left;
+                        margin-left: 3px;
+                        overflow: hidden;
+
+                        // Select
+                        .select {
+                            float: left;
+
+                            // Remove bottom margin from the last two elements
+                            &:last-child,
+                            &:nth-last-child(2) {
+                                margin-bottom: 5px;
+                            }
+
+                            // Small
+                            &.select-small {
+                                width: 192px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            // Select
+            .select {
+                display: inline-block;
+                margin-left: 15px;
+                max-width: 400px;
+
+                // Small
+                &.select-small {
+                    width: 192px;
+                }
+            }
+
+            // Text Input
+            .input-text {
+                display: inline-block;
+                margin-left: 15px;
+                max-width: 400px;
+            }
+
+            // Button
+            .btn {
+                float: right;
+                margin-top: 10px;
+                margin-bottom: 20px;
+            }
+
+            /*
+             * Error Messages
+             */
+
+            span.error {
+                margin-left: 270px;
+            }
+        }
+    }
+
+    /*
+     * Fieldset
+     */
+
+    .fieldset {
+
+        /*
+         * Option Group
+         */
+
+        &.fieldset-option-group {
+
+            // Label
+            .label {
+                text-align: left;
+            }
+
+            /*
+             * Error Messages
+             */
+
+            span.error {
+                margin-left: 0;
+            }
+        }
+    }
+
+    /*
+     * Related label
+     */
+
+    .label-related {
+        left: 320px;
+        margin-left: 0;
+        position: absolute;
+        top: 0;
+    }
+
+    /*
+     * Legend
+     */
+
+    .legend {
+        font-size: 27px;
+
+        // Section
+        &.legend-section {
+            margin-bottom: 45px;
+        }
+    }
+}
+
+@media all and (min-width: 960px) {
+
+    /*
+     * Text inputs
+     */
+
+    .input-text {
+        max-width: 410px;
+    }
+}
+
+/* Internet Explorer
+   =========================================================================== */
+
+/*
+ * IE8 and below
+ */
+
+.lt-ie9 {
+
+    /*
+     * Forms
+     */
+
+    .form {
+
+        /*
+         * Margin
+         */
+
+        &.form-margin {
+
+            // Label
+            .label {
+
+                // Empty label
+                &.label-empty {
+                    width: 243px;
+                }
+
+                // Fieldset
+                &+ .fieldset {
+
+                    /*
+                     * Select Group
+                     */
+
+                    &.fieldset-select-group {
+                        float: right;
+                    }
+                }
+            }
+
+            // Text Input
+            .input-text {
+                width: 400px;
+            }
+
+            // Select
+            .select {
+                width: 400px;
+            }
+        }
+    }
+}

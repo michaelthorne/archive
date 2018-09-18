@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Prototypes in JavaScript</title>
+	<link href="//fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css" />
+	<style>
+		html {
+			font-family: 'Open Sans', sans-serif;
+			font-size: 100%;
+		}
+		
+		body, h1, h2, h3, h4, h5, h6, p, pre, code {
+			margin: 0;
+			padding: 0;
+		}
+		
+		.main {
+			margin: 0 auto;
+			padding-top: 2%;
+			padding-bottom: 2%;
+			width: 90%;
+		}
+		
+		.heading-main {
+			border-bottom: 1px #777 dotted;
+			margin-bottom: 2em;
+			padding-bottom: 0.5em;
+		}
+		
+		.heading-section {
+			border-bottom: 1px #555 dotted;
+			margin-top: 2em;
+			margin-bottom: 0.5em;
+			padding-bottom: 0.5em;
+		}
+		
+		.example {
+			margin-top: 2%;
+		}
+		
+		.code {
+			background-color: #f5f5f5;
+			white-space: pre;
+		}
+	</style>
+</head>
+<body>
+	<main class="main">
+		<h1 class="heading-main">Prototypes in JavaScript</h1>
+		
+		<h2 class="heading-section">Example #1</h2>
+<code class="code">var myCar = function (name)
+{
+	this.name = name;
+	return this;
+}</code>
+		<div id="example1" class="example"></div>
+		<!-- // Example #1 -->
+		
+		<h2 class="heading-section">Example #2</h2>
+<code class="code">function Pet(name, species)
+{
+	this.name = name;
+	this.species = species;
+}
+
+function view()
+{
+	return this.name + " is a " + this.species + "!";
+}
+Pet.prototype.view = view;
+
+var pet1 = new Pet('Trudy', 'Bird');</code>
+		<div id="example2" class="example"></div>
+		<!-- // Example #2 -->
+		
+		<h2 class="heading-section">Example #3</h2>
+<code class="code">function Dog(name)
+{
+	Pet.call(this, name, "dog");
+}
+Dog.prototype = new Pet();
+
+Dog.prototype.bark = function()
+{
+	return "Woof";
+}
+
+var pet2 = new Dog('Gabriella');</code>
+		<div id="example3" class="example"></div>
+		<!-- // Example # -->
+	</main>
+	<script>
+		var myCar = function (name)
+		{
+			this.name = name;
+			return this;
+		}
+		
+		// Example #1
+		document.getElementById('example1').innerHTML = 'The <i>typeof</i> myCar.prototype is <i>' + typeof myCar.prototype + '</i>';
+		
+		function Pet(name, species)
+		{
+			this.name = name;
+			this.species = species;
+		}
+		
+		function view()
+		{
+			return this.name + " is a " + this.species + "!";
+		}
+		Pet.prototype.view = view;
+		
+		// Example #2
+		var pet1 = new Pet('Trudy', 'Bird');
+		document.getElementById('example2').innerHTML = pet1.view();
+		
+		function Dog(name)
+		{
+			Pet.call(this, name, "dog");
+		}
+		Dog.prototype = new Pet();
+		
+		Dog.prototype.bark = function()
+		{
+			return "woof";
+		}
+		
+		// Example #3
+		var pet2 = new Dog('Gabriella');
+		document.getElementById('example3').innerHTML = '<i>' + pet2.name + '</i> is a <i>' + pet2.species + '</i> who goes <b>' + pet2.bark() + '</b>!';
+	</script>
+</body>
+</html>

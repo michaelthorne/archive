@@ -1,0 +1,187 @@
+[
+    {
+        "debug" : false
+    },
+    {
+        "photo-1" : {
+            "popups" : [
+                {
+                    "id" : "1",
+                    "popup_top" : "200",
+                    "popup_left" : "470",
+                    "thumbnail_src" : "assets/images/lookbook/thumbs/lookbook-product-thumb-01.jpg",
+                    "title" : "Fifi-Peplumtop",
+                    "description" : "Friede&ndash;Mari Kellerman",
+                    "price" : "R550",
+                    "anchor_text" : "View detail &amp; buy",
+                    "anchor_href" : "product-detail.html",
+                    "anchor_target" : "",
+                    "indicator_x" : "right",
+                    "indicator_y" : "top",
+                    "hotspot_top" : "140",
+                    "hotspot_left" : "610"
+                },
+                {
+                    "id" : "2",
+                    "popup_top" : "330",
+                    "popup_left" : "850",
+                    "thumbnail_src" : "assets/images/lookbook/thumbs/lookbook-product-thumb-02.jpg",
+                    "title" : "Eiusmod tempor",
+                    "description" : "Lorem ipsum dolor sit amet",
+                    "price" : "R250",
+                    "anchor_text" : "View detail &amp; buy",
+                    "anchor_href" : "product-detail.html",
+                    "anchor_target" : "",
+                    "indicator_x" : "left",
+                    "indicator_y" : "top",
+                    "hotspot_top" : "300",
+                    "hotspot_left" : "730"
+                }
+            ]
+        },
+        "photo-2" : {
+            "popups" : [
+                {
+                    "id" : "3",
+                    "popup_top" : "270",
+                    "popup_left" : "780",
+                    "thumbnail_src" : "assets/images/lookbook/thumbs/lookbook-product-thumb-02.jpg",
+                    "title" : "Excepteur sint occaecat",
+                    "description" : "Sunt in culpa qui officia deserunt",
+                    "price" : "R499",
+                    "anchor_text" : "View detail &amp; buy",
+                    "anchor_href" : "product-detail.html",
+                    "anchor_target" : "",
+                    "indicator_x" : "left",
+                    "indicator_y" : "top",
+                    "hotspot_top" : "200",
+                    "hotspot_left" : "610"
+                },
+                {
+                    "id" : "4",
+                    "popup_top" : "190",
+                    "popup_left" : "260",
+                    "thumbnail_src" : "assets/images/lookbook/thumbs/lookbook-product-thumb-01.jpg",
+                    "title" : "Excepteur sint occaecat",
+                    "description" : "Sunt in culpa qui officia deserunt",
+                    "price" : "R499",
+                    "anchor_text" : "View detail &amp; buy",
+                    "anchor_href" : "product-detail.html",
+                    "anchor_target" : "",
+                    "indicator_x" : "right",
+                    "indicator_y" : "bottom",
+                    "hotspot_top" : "380",
+                    "hotspot_left" : "400"
+                }
+            ]
+        },
+        "photo-3" : {
+            "popups" : [
+                {
+                    "id" : "5",
+                    "popup_top" : "100",
+                    "popup_left" : "350",
+                    "thumbnail_src" : "assets/images/lookbook/thumbs/lookbook-product-thumb-03.jpg",
+                    "title" : "Reprehenderit",
+                    "description" : "Ut enim ad minim veniam",
+                    "price" : "R123",
+                    "anchor_text" : "View detail &amp; buy",
+                    "anchor_href" : "product-detail.html",
+                    "anchor_target" : "",
+                    "indicator_x" : "left",
+                    "indicator_y" : "top",
+                    "hotspot_top" : "50",
+                    "hotspot_left" : "180"
+                },
+                {
+                    "id" : "6",
+                    "popup_top" : "150",
+                    "popup_left" : "570",
+                    "thumbnail_src" : "assets/images/lookbook/thumbs/lookbook-product-thumb-04.jpg",
+                    "title" : "Incididunt ut labore",
+                    "description" : "Officia deserunt mollit",
+                    "price" : "R720",
+                    "anchor_text" : "View detail &amp; buy",
+                    "anchor_href" : "product-detail.html",
+                    "anchor_target" : "",
+                    "indicator_x" : "right",
+                    "indicator_y" : "top",
+                    "hotspot_top" : "150",
+                    "hotspot_left" : "750"
+                },
+                {
+                    "id" : "7",
+                    "popup_top" : "350",
+                    "popup_left" : "850",
+                    "thumbnail_src" : "assets/images/lookbook/thumbs/lookbook-product-thumb-01.jpg",
+                    "title" : "Aute irure dolor",
+                    "description" : "Ullamco laboris nisi",
+                    "price" : "R2560",
+                    "anchor_text" : "View detail &amp; buy",
+                    "anchor_href" : "product-detail.html",
+                    "anchor_target" : "",
+                    "indicator_x" : "left",
+                    "indicator_y" : "bottom",
+                    "hotspot_top" : "450",
+                    "hotspot_left" : "730"
+                }
+            ]
+        },
+        "photo-4" : {
+            "popups" : [
+                {
+                    "id" : "8",
+                    "popup_top" : "300",
+                    "popup_left" : "500",
+                    "thumbnail_src" : "assets/images/lookbook/thumbs/lookbook-product-thumb-05.jpg",
+                    "title" : "Excepteur sint occaecat",
+                    "description" : "Sunt in culpa qui officia deserunt",
+                    "price" : "R499",
+                    "anchor_text" : "View detail &amp; buy",
+                    "anchor_href" : "product-detail.html",
+                    "anchor_target" : "",
+                    "indicator_x" : "right",
+                    "indicator_y" : "top",
+                    "hotspot_top" : "300",
+                    "hotspot_left" : "650"
+                }
+            ]
+        },
+        "photo-5" : {
+            "popups" : [
+                {
+                    "id" : "9",
+                    "popup_top" : "180",
+                    "popup_left" : "80",
+                    "thumbnail_src" : "assets/images/lookbook/thumbs/lookbook-product-thumb-03.jpg",
+                    "title" : "Aute irure dolor",
+                    "description" : "Sunt in culpa qui officia deserunt",
+                    "price" : "R333",
+                    "anchor_text" : "View detail &amp; buy",
+                    "anchor_href" : "product-detail.html",
+                    "anchor_target" : "",
+                    "indicator_x" : "right",
+                    "indicator_y" : "top",
+                    "hotspot_top" : "150",
+                    "hotspot_left" : "220"
+                },
+                {
+                    "id" : "10",
+                    "popup_top" : "320",
+                    "popup_left" : "430",
+                    "thumbnail_src" : "assets/images/lookbook/thumbs/lookbook-product-thumb-01.jpg",
+                    "title" : "Excepteur sint occaecat",
+                    "description" : "Lorem ipsum dolor sit amet",
+                    "price" : "R499",
+                    "anchor_text" : "View detail &amp; buy",
+                    "anchor_href" : "product-detail.html",
+                    "anchor_target" : "",
+                    "indicator_x" : "left",
+                    "indicator_y" : "bottom",
+                    "hotspot_top" : "450",
+                    "hotspot_left" : "250"
+                }
+            ]
+        }
+    }
+]

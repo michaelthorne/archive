@@ -1,0 +1,47 @@
+/* =============================================================================
+   Layout
+   ========================================================================== */
+
+header {
+    padding: 10px;
+    text-align: center;
+}
+
+#wrapper {
+    margin: 0 auto;
+    width: 800px;
+}
+
+#accordion {
+    border-bottom: 1px #000 solid;
+}
+
+.header {
+    border: 1px #000 solid;
+    border-bottom: 0;
+    height: 60px;
+    padding: 10px;
+}
+
+.header a {
+    display: block;
+    height: 32px;
+    outline: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    width: 32px;
+}
+
+.contents {
+    border-top: 1px #000 solid;
+    border-right:  1px #000 solid;
+    border-left:  1px #000 solid;
+    display: none;
+    overflow: hidden;
+    width: 798px;
+}
+
+.contents p {
+    margin: 10px;
+}

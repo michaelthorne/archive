@@ -1,0 +1,85 @@
+/* =============================================================================
+   Layout
+   ========================================================================== */
+
+body {
+    background-color: #000;
+}
+
+#wrapper {
+    margin: 0 auto;
+    padding: 20px 0 0 0;
+    width: 800px;
+}
+
+header {
+    clear: both;
+    height: 50px;
+    margin: 0 0 20px 0;
+}
+
+#wrapper img {
+    float: left;
+}
+
+#wrapper h1 {
+    float: right;
+    margin: 0;
+}
+
+#wrapper img:hover {
+    -moz-animation-name: logo;
+    -moz-animation-duration: .2s;
+    -moz-animation-iteration-count: 1;
+    -moz-animation-timing-function: linear;
+    -webkit-animation-name: logo;
+    -webkit-animation-duration: .2s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: linear;
+}
+
+@-webkit-keyframes logo {
+  from   { -webkit-transform: scale(1)}
+  80% { -webkit-transform: scale(1.05);}
+  to {-webkit-transform: scale(1);}
+}
+
+h1:hover {
+    -moz-animation-name: buldge;
+    -moz-animation-duration: .2s;
+    -moz-animation-direction: alternate;
+    -moz-animation-timing-function: linear;
+    -webkit-animation-name: buldge;
+    -webkit-animation-duration: .2s;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-timing-function: linear;
+}
+
+@-moz-keyframes logo {
+  from   { -moz-transform: scale(1)}
+  80% { -moz-transform: scale(1.05);}
+  to {-moz-transform: scale(1);}
+}
+
+@-moz-keyframes buldge {
+	0%, 100% {
+		font-size: 30px;
+	}
+	30% {
+		font-size: 35px;
+	}
+}
+
+@-webkit-keyframes buldge {
+	0%, 100% {
+		font-size: 30px;
+	}
+	30% {
+		font-size: 35px;
+	}
+}
+
+footer {
+    clear: both;
+    margin-top: 20px;
+}

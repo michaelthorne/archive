@@ -1,0 +1,240 @@
+/* ==========================================================================
+   Video Player
+   ========================================================================== */
+/* LESS: Colours */
+/* LESS: Font families */
+/* LESS: Font weights */
+/* Fonts */
+@font-face {
+  font-family: 'TradeGothicLTStd';
+  src: url("../fonts/TradeGothicLTStd.eot");
+  src: url("../fonts/TradeGothicLTStd.eot?#iefix") format("embedded-opentype"), url("../fonts/TradeGothicLTStd.woff") format("woff"), url("../fonts/TradeGothicLTStd.ttf") format("truetype"), url("../fonts/TradeGothicLTStd.svg#TradeGothicLTStd") format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'TradeGothicLTStd-Bold';
+  src: url("../fonts/TradeGothicLTStd-Bold.eot");
+  src: url("../fonts/TradeGothicLTStd-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/TradeGothicLTStd-Bold.woff") format("woff"), url("../fonts/TradeGothicLTStd-Bold.ttf") format("truetype"), url("../fonts/TradeGothicLTStd-Bold.svg#TradeGothicLTStd-Bold") format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+span.icon {
+  background: url("../images/backgrounds/background-sprites.png");
+  display: block;
+  position: relative;
+  text-indent: -9999px;
+}
+/* Play */
+a.play {
+  background: url("../images/icons/icon-play.png") left -113px no-repeat;
+  cursor: pointer;
+  display: block;
+  height: 111px;
+  left: 210px;
+  -webkit-opacity: 0.8;
+  -moz-opacity: 0.8;
+  -o-opacity: 0.8;
+  opacity: 0.8;
+  position: relative;
+  top: 180px;
+  width: 111px;
+}
+a.play:hover {
+  background-position: 0 0;
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  -o-opacity: 1;
+  opacity: 1;
+}
+/* Video container replaced by SWFObject if JavaScript/Flash enabled */
+#video p {
+  color: #000000;
+  font: 18px/1.2 'TradeGothicLTStd', Arial, sans-serif;
+  text-align: center;
+}
+#video p:first-of-type {
+  margin: 190px 0 0 0;
+}
+#video p a {
+  color: #082865;
+  font-size: 18px;
+}
+/* Main wrapper */
+div.wrapper-video {
+  background: url("../images/backgrounds/background-video-player.png") 0 0 repeat;
+  height: 525px;
+  position: absolute;
+  width: 1140px;
+  z-index: 400;
+}
+div.wrapper-video div.wrapper-video-inner {
+  height: 480px;
+  width: 853px;
+}
+div.wrapper-video div.wrapper-video-inner object {
+  -webkit-box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+  -o-box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+div.wrapper-video div.wrapper-video-inner div.video-controls {
+  height: 25px;
+  position: relative;
+  top: -4px;
+  width: 853px;
+  z-index: 300;
+  /* Pause */
+
+  /* Mute */
+
+  /* Timer */
+
+  /* Close */
+
+}
+div.wrapper-video div.wrapper-video-inner div.video-controls a,
+div.wrapper-video div.wrapper-video-inner div.video-controls div {
+  background: #e2e2e2 url("../images/backgrounds/background-controls.png") left top;
+}
+div.wrapper-video div.wrapper-video-inner div.video-controls a:link {
+  outline: 0;
+}
+div.wrapper-video div.wrapper-video-inner div.video-controls a.pause {
+  cursor: pointer;
+  float: left;
+  height: 25px;
+  border-right: 1px solid #f0f0f0;
+  width: 57px;
+}
+div.wrapper-video div.wrapper-video-inner div.video-controls a.pause:hover {
+  background-position: left bottom;
+}
+div.wrapper-video div.wrapper-video-inner div.video-controls a.pause:hover span.icon {
+  background-position: -135px -56px;
+}
+div.wrapper-video div.wrapper-video-inner div.video-controls a.pause.pressed {
+  background-position: left bottom;
+}
+div.wrapper-video div.wrapper-video-inner div.video-controls a.pause.pressed span.icon {
+  background-position: -173px -178px;
+}
+div.wrapper-video div.wrapper-video-inner div.video-controls a.pause span.icon {
+  width: 11px;
+  height: 12px;
+  background-position: -122px -56px;
+  top: 6px;
+  left: 23px;
+}
+div.wrapper-video div.wrapper-video-inner div.video-controls a.mute {
+  width: 34px;
+  height: 25px;
+  float: left;
+  border-left: 1px solid #e2e2e2;
+  border-right: 1px solid #f0f0f0;
+  cursor: pointer;
+}
+div.wrapper-video div.wrapper-video-inner div.video-controls a.mute:hover {
+  background-position: left bottom;
+}
+div.wrapper-video div.wrapper-video-inner div.video-controls a.mute:hover span.icon {
+  background-position: -172px -196px;
+}
+div.wrapper-video div.wrapper-video-inner div.video-controls a.mute.pressed {
+  background-position: left bottom;
+}
+div.wrapper-video div.wrapper-video-inner div.video-controls a.mute.pressed span.icon {
+  background-position: -172px -213px;
+}
+div.wrapper-video div.wrapper-video-inner div.video-controls a.mute span.icon {
+  background-position: -151px -196px;
+  height: 12px;
+  left: 9px;
+  position: relative;
+  top: 6px;
+  width: 18px;
+}
+div.wrapper-video div.wrapper-video-inner div.video-controls div.timer {
+  height: 25px;
+  border-left: 1px solid #e2e2e2;
+  float: left;
+  width: 726px;
+}
+div.wrapper-video div.wrapper-video-inner div.video-controls div.timer span {
+  color: #082865;
+  display: block;
+  font: 16px/1 'TradeGothicLTStd-Bold', Arial, sans-serif;
+  margin: 5px 0 0 8px;
+}
+div.wrapper-video div.wrapper-video-inner div.video-controls a.close {
+  border-left: 1px solid #e2e2e2;
+  cursor: pointer;
+  float: right;
+  height: 25px;
+  width: 31px;
+}
+div.wrapper-video div.wrapper-video-inner div.video-controls a.close:hover {
+  background-position: left bottom;
+}
+div.wrapper-video div.wrapper-video-inner div.video-controls a.close:hover span.icon {
+  background-position: -121px -220px;
+}
+div.wrapper-video div.wrapper-video-inner div.video-controls a.close span.icon {
+  width: 11px;
+  height: 10px;
+  background-position: -133px -220px;
+  position: relative;
+  top: 7px;
+  left: 10px;
+}
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+/* Media Queries
+   ========================================================================== */
+/* Smaller Screens */
+@media only screen and (min-width: 481px) {
+  div.wrapper-video {
+    width: 960px;
+  }
+  div.wrapper-video div.wrapper-video-inner {
+    height: 360px;
+    margin: 21px auto 0 auto;
+    width: 640px;
+  }
+  div.wrapper-video div.wrapper-video-inner div.video-controls {
+    width: 640px;
+  }
+  div.wrapper-video div.wrapper-video-inner div.video-controls div.timer {
+    width: 513px;
+  }
+}
+/* Wide Screens */
+@media only screen and (min-width: 1160px) {
+  div.wrapper-video {
+    width: 1140px;
+  }
+  div.wrapper-video div.wrapper-video-inner {
+    height: 480px;
+    margin: 11px auto 0 auto;
+    width: 853px;
+  }
+  div.wrapper-video div.wrapper-video-inner div.video-controls {
+    width: 853px;
+  }
+  div.wrapper-video div.wrapper-video-inner div.video-controls div.timer {
+    width: 726px;
+  }
+  /* Video container replaced by SWFObject if JavaScript/Flash enabled */
+  #video p {
+    font-size: 20px;
+  }
+  #video p:first-of-type {
+    margin: 240px 0 0 0;
+  }
+  #video p a {
+    font-size: 20px;
+  }
+}
+/* LESS: Mixins */

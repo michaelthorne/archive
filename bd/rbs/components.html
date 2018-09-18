@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en-GB" dir="ltr">
+<head>
+    <meta charset="utf-8" />
+    <title>RBS Blog &mdash; Components</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="author" content="Michael Thorne" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width" />
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:locale" content="en_GB" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="stylesheet" href="assets/css/normalize.css" />
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="assets/css/layout.css" />
+    <link rel="stylesheet" href="assets/css/typography.css" />
+    <link rel="stylesheet" href="assets/css/forms.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/prettify.css" />
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5.js"></script>
+    <script src="assets/js/selectivizr.js"></script>
+    <![endif]-->
+</head>
+<body class="style-guide">
+    <!--[if lt IE 8]>
+    <div class="chromeframe">
+        <p>&#9755; You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com" title="Browse Happy &ndash; Upgrade your browser today!" target="_blank">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true" title="Google Chrome Frame &ndash; Make your browser more powerful." target="blank">activate Google Chrome Frame</a> to improve your experience.</p>
+    </div>
+    <![endif]-->
+    <a id="top"></a>
+    <section role="main">
+        <!-- Home -->
+        <a href="index.html" class="icon-home"></a>
+
+        <div class="wrapper">
+            <h1>RBS Blog / Components</h1>
+            <p>
+                This is a guide to the jQuery components used throughout the site.
+            </p>
+
+            <!-- Navigation -->
+            <article>
+                <header>
+                    <h2>Navigation</h2>
+                </header>
+
+                <nav class="primary drop-down bg-aqua" role="navigation" data-component="drop-down">
+                    <ol>
+                        <li class="current"><a href="home.html">Home</a></li>
+                        <li>
+                            <a href="stories.html" class="drop-down">Stories</a>
+                            <ol>
+                                <li>
+                                    <a href="stories.html">News</a>
+                                </li>
+                                <li>
+                                    <a href="stories.html">Features</a>
+                                </li>
+                                <li>
+                                    <a href="stories.html">Outside in</a>
+                                </li>
+                            </ol>
+                        </li>
+                        <li>
+                            <a href="blogs.html" class="drop-down">Blogs</a>
+                            <ol>
+                                <li>
+                                    <a href="blogs.html" class="drop-down">Advice blogs</a>
+                                    <ol>
+                                        <li>
+                                            <a href="blogs.html">Life&rsquo;s Big Questions</a>
+                                        </li>
+                                        <li>
+                                            <a href="blogs.html">Environment</a>
+                                        </li>
+                                        <li>
+                                            <a href="blogs.html">Life Skills</a>
+                                        </li>
+                                        <li>
+                                            <a href="blogs.html">Parenting</a>
+                                        </li>
+                                        <li>
+                                            <a href="blogs.html">Psychology</a>
+                                        </li>
+                                        <li>
+                                            <a href="blogs.html">Relationships</a>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <a href="blogs.html" class="drop-down">Lifestyle blogs</a>
+                                    <ol>
+                                        <li>
+                                            <a href="blogs.html">Dieting</a>
+                                        </li>
+                                        <li>
+                                            <a href="blogs.html">Fashion</a>
+                                        </li>
+                                        <li>
+                                            <a href="blogs.html">Gaming</a>
+                                        </li>
+                                        <li>
+                                            <a href="blogs.html">Music</a>
+                                        </li>
+                                    </ol>
+                                </li>
+                            </ol>
+                        </li>
+                        <li>
+                            <a class="drop-down">Time out</a>
+                            <ol>
+                                <li>
+                                    <a href="competitions.html">Competitions</a>
+                                </li>
+                                <li>
+                                    <a href="downloads.html">RBS World Magazine</a>
+                                </li>
+                                <li>
+                                    <a href="galleries.html">Galleries</a>
+                                </li>
+                                <li>
+                                    <a href="gallery-page-outside-in-on-tour.html">Outside In On Tour</a>
+                                </li>
+                            </ol>
+                        </li>
+                        <li><a href="#">Contacts</a></li>
+                        <li>
+                            <a href="helpful-leadership-forum.html" class="drop-down">Helpful Leadership Forum</a>
+                            <ol>
+                                <li>
+                                    <a href="helpful-leadership-forum-section.html">Helpful Thoughts</a>
+                                </li>
+                                <li>
+                                    <a href="helpful-leadership-forum-section.html">Helpful Discussion</a>
+                                </li>
+                                <li>
+                                    <a href="helpful-leadership-forum-section.html">Help Yourself</a>
+                                </li>
+                                <li>
+                                    <a href="helpful-leadership-forum-section.html">Leaders as Teachers</a>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                </nav>
+
+                <br/><br/>
+            </article>
+
+<pre class="prettyprint linenums">
+&lt;nav class="primary drop-down bg-aqua" role="navigation" data-component="drop-down"&gt;
+    &lt;ol&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#"&gt;Stories&lt;/a&gt;
+            &lt;ol&gt;
+                &lt;li&gt;
+                    &lt;a href="#"&gt;News&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href="#"&gt;Features&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href="#"&gt;Outside in&lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ol&gt;
+        &lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Time out&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Contacts&lt;/a&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+&lt;/nav&gt;
+</pre>
+
+            <!-- Slider -->
+            <article>
+                <header>
+                    <h2>Slider</h2>
+                </header>
+
+                <div class="slider" data-component="slider">
+                    <ol>
+                        <li>
+                            <img src="assets/images/content/content-feature-1-650x350.jpg" width="650" height="350" alt="" />
+                            <div class="feature">
+                                <h3>
+                                    <span>Feature</span>
+                                    Standing up to depression
+                                </h3>
+                                <p>
+                                    Phil Collins works for Group Services in London. He is 26 years old and has suffered from depression for the past 10 years.
+                                </p>
+                                <a href="#" class="nav prev" role="button"><img src="assets/images/icons/icon-slider-prev.png" width="21" height="20" alt="Previous" /></a>
+                                <a href="#" class="nav next" role="button"><img src="assets/images/icons/icon-slider-next.png" width="21" height="20" alt="Next" /></a>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="assets/images/content/content-feature-2-650x350.jpg" width="650" height="350" alt="" />
+                            <div class="feature">
+                                <h3>
+                                    <span>Feature</span>
+                                    Lorem ipsum dolor sit amet
+                                </h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                </p>
+                                <a href="#" class="nav prev" role="button"><img src="assets/images/icons/icon-slider-prev.png" width="21" height="20" alt="Previous" /></a>
+                                <a href="#" class="nav next" role="button"><img src="assets/images/icons/icon-slider-next.png" width="21" height="20" alt="Next" /></a>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="assets/images/content/content-feature-3-650x350.jpg" width="650" height="350" alt="" />
+                            <div class="feature">
+                                <h3>
+                                    <span>Feature</span>
+                                    Duis aute irure dolor in reprehenderit
+                                </h3>
+                                <p>
+                                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                </p>
+                                <a href="#" class="nav prev" role="button"><img src="assets/images/icons/icon-slider-prev.png" width="21" height="20" alt="Previous" /></a>
+                                <a href="#" class="nav next" role="button"><img src="assets/images/icons/icon-slider-next.png" width="21" height="20" alt="Next" /></a>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="assets/images/content/content-feature-4-650x350.jpg" width="650" height="350" alt="" />
+                            <div class="feature">
+                                <h3>
+                                    <span>Feature</span>
+                                    Sed ut perspiciatis unde omnis
+                                </h3>
+                                <p>
+                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                                </p>
+                                <a href="#" class="nav prev" role="button"><img src="assets/images/icons/icon-slider-prev.png" width="21" height="20" alt="Previous" /></a>
+                                <a href="#" class="nav next" role="button"><img src="assets/images/icons/icon-slider-next.png" width="21" height="20" alt="Next" /></a>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </article>
+
+<pre class="prettyprint linenums">
+&lt;div class="wrapper-slider"&gt;
+    &lt;div class="slider" data-component="slider"&gt;
+        &lt;ol&gt;
+            &lt;li&gt;
+                &lt;img src="assets/images/content/content-feature-1-650x350.jpg" width="650" height="350" alt="" /&gt;
+                &lt;div class="feature"&gt;
+                    &lt;h3&gt;
+                        &lt;span&gt;Feature&lt;/span&gt;
+                        Standing up to depression
+                    &lt;/h3&gt;
+                    &lt;p&gt;
+                        Phil Collins works for Group Services in London. He is 26 years old and has suffered from depression for the past 10 years.
+                    &lt;/p&gt;
+                    &lt;a href="#" class="nav prev" role="button"&gt;&lt;img src="assets/images/icons/icon-slider-prev.png" width="21" height="20" alt="Previous" /&gt;&lt;/a&gt;
+                    &lt;a href="#" class="nav next" role="button"&gt;&lt;img src="assets/images/icons/icon-slider-next.png" width="21" height="20" alt="Next" /&gt;&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+        </div>
+
+        <!-- Back to Top -->
+        <a href="#top" class="icon-arrow-up"></a>
+    </section>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="assets/js/jquery.js"><\/script>');</script>
+    <script src="assets/js/jquery.easing.js"></script>
+    <script src="assets/js/jquery.placeholder.js"></script>
+    <script src="assets/js/jquery.serialscroll.js"></script>
+    <script src="assets/js/jquery.scrollto.js"></script>
+    <script src="assets/js/prettify.js"></script>
+    <script src="assets/js/jquery-components.js"></script>
+    <script src="assets/js/jquery-custom.js"></script>
+    <!--
+        Google Analytics: change UA-XXXXX-X to be your site's ID.
+    -->
+    <script>
+        var _gaq = [
+            ['_setAccount', 'UA-XXXXX-X'],
+            ['_trackPageview']
+        ];
+        (function(d, t)
+        {
+            var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
+            g.src = ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g, s)
+        }(document, 'script'));
+    </script>
+</body>
+</html>

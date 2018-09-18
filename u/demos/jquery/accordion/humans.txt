@@ -1,0 +1,18 @@
+/* TEAM */
+
+	Web developer: Michael Thorne
+	Contact: michael [at] hellocomputer.net
+	Twitter: @mikkelz_za
+	From: Cape Town, South Africa
+
+/* THANKS */
+
+    Copywriter:
+    Contact:
+    From:
+
+/* SITE */
+	Last update: 2012/02/13
+	Language: English
+	Doctype: HTML5
+	IDE: PhpStorm

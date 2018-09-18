@@ -1,0 +1,498 @@
+/* ==========================================================================
+   Forms: form, fieldset, label, input, textarea, select, option
+   ========================================================================== */
+
+@import-once "inc/breakpoints";
+@import-once "inc/colours.less";
+@import-once "inc/fonts.less";
+@import-once "inc/mixins.less";
+
+/*
+ * Form: Search (Quick)
+ */
+
+.form-search-quick {
+    height: 36px;
+
+    // Label
+    label {
+        float: left;
+
+        &:first-child {
+
+            input[type="text"] {
+                border-right: 0;
+                .border-radius-top-left(3px);
+                .border-radius-bottom-left(3px);
+            }
+        }
+
+        input[type="text"] {
+            .border-radius(0);
+            margin-top: 0;
+        }
+    }
+
+    // Button
+    .button {
+        .border-radius(0);
+        float: left;
+
+        &:last-child {
+            .border-radius-top-right(3px);
+            .border-radius-bottom-right(3px);
+        }
+
+        &+button {
+            margin-left: 2px;
+        }
+    }
+}
+
+/*
+ * Form: Search
+ */
+
+.form-search {
+    overflow: hidden;
+
+    input[type="email"],
+    input[type="password"],
+    input[type="tel"],
+    input[type="text"],
+    select,
+    textarea {
+        display: block;
+        margin-left: 0;
+    }
+}
+
+/*
+ * Form: Search (Advanced)
+ */
+
+.form-search-advanced {
+    margin-bottom: 15px;
+    text-align: left;
+
+    input[type="email"],
+    input[type="password"],
+    input[type="tel"],
+    input[type="text"],
+    select,
+    textarea {
+        display: block;
+        margin-left: 0;
+    }
+
+    /*
+     * Fieldset
+     */
+
+    fieldset {
+
+        // Individual search filters
+        &.fieldset-search-filter {
+            margin-right: 30px;
+
+            // Label
+            label {
+                display: block;
+                float: none;
+                margin-right: 0;
+                padding-top: 0;
+                padding-bottom: 5px;
+            }
+        }
+    }
+}
+
+/*
+ * Fieldset
+ */
+
+fieldset {
+
+    &.fieldset {
+        border: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+    // Row of search filters
+    &.fieldset-section {
+        border-bottom: 1px @colour-silver solid;
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+        width: 100%;
+    }
+
+    // Individual search filters
+    &.fieldset-search-filter {
+        margin-bottom: 15px;
+    }
+}
+
+/*
+ * Textareas
+ */
+
+textarea {
+    resize: vertical; // Only allow vertical resizing
+}
+
+/*
+ * Labels
+ */
+
+label {
+    font-size: 12px;
+    text-transform: uppercase;
+
+    /*
+     * Placeholder
+     */
+
+    // Webkit
+    ::-webkit-input-placeholder {
+        color: @colour-grey-light;
+    }
+
+    // Mozilla 4 - 18
+    :-moz-placeholder {
+        color: @colour-grey-light;
+    }
+
+    // Mozilla 19+
+    ::-moz-placeholder {
+        color: @colour-grey-light;
+    }
+
+    // Internet Explorer 10+
+    :-ms-input-placeholder {
+        color: @colour-grey-light;
+    }
+
+    // White
+    &.placeholder-white {
+
+        // Webkit
+        ::-webkit-input-placeholder {
+            color: @colour-white-dark;
+        }
+
+        // Mozilla 4 - 18
+        :-moz-placeholder {
+            color: @colour-white-dark;
+        }
+
+        // Mozilla 19+
+        ::-moz-placeholder {
+            color: @colour-white-dark;
+        }
+
+        // Internet Explorer 10+
+        :-ms-input-placeholder {
+            color: @colour-white-dark;
+        }
+    }
+}
+
+/*
+ * Inputs
+ */
+
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="text"],
+select,
+textarea {
+    background-color: @colour-white;
+    .border-radius(3px);
+    border: 1px @colour-silver solid;
+    display: block;
+    font-size: 12px;
+    height: 36px;
+    line-height: 36px;
+    margin-bottom: 4px;
+    padding: 0 15px;
+    width: 100%;
+
+    &:focus {
+        border: 1px @colour-silver-dark solid;
+        outline: 0;
+        .transition(e('border-color 0.2s ease, color 0.2s ease'));
+    }
+
+    // Small
+    &.input-small {
+        height: 28px;
+        line-height: 28px;
+        max-width: 100px;
+        padding: 0 8px;
+    }
+
+    // Blue
+    &.input-blue {
+        background-color: @colour-blue-light;
+        border: 1px @colour-blue-light solid;
+        color: @colour-white;
+
+        /*
+         * Placeholder
+         */
+
+        // Webkit
+        ::-webkit-input-placeholder {
+            color: @colour-white-dark;
+        }
+
+        // Mozilla 4 - 18
+        :-moz-placeholder {
+            color: @colour-white-dark;
+        }
+
+        // Mozilla 19+
+        ::-moz-placeholder {
+            color: @colour-white-dark;
+        }
+
+        // Internet Explorer 10+
+        :-ms-input-placeholder {
+            color: @colour-white-dark;
+        }
+
+        &:focus {
+            background-color: @colour-blue;
+            border: 1px @colour-blue-dark solid;
+        }
+    }
+
+    // Wide
+    &.input-wide {
+        max-width: 100px;
+    }
+
+    // Text Align: Right
+    &.input-align-right {
+        text-align: right;
+    }
+}
+
+select {
+    height: auto;
+    padding: 8px 10px;
+}
+
+textarea {
+    height: inherit;
+    line-height: inherit;
+    padding: 8px 10px;
+    width: 100%;
+}
+
+/*
+ * Submit Buttons
+ */
+
+input[type="submit"] {
+    height: 36px;
+
+    &:active {
+        position: relative;
+        top: 1px;
+    }
+}
+
+@media only screen and (min-width: @media-query-horizontal-small) {
+
+    /*
+     * Inputs
+     */
+
+    input[type="email"],
+    input[type="password"],
+    input[type="tel"],
+    input[type="text"],
+    select,
+    textarea {
+        display: inline-block;
+        margin-left: 10px;
+        max-width: 230px;
+    }
+
+    textarea {
+        min-height: 70px;
+        max-width: 230px;
+        width: 100%;
+    }
+
+    /*
+     * Forms
+     */
+
+    // Horizontal
+    &.form-horizontal {
+
+        input[type="email"],
+        input[type="password"],
+        input[type="tel"],
+        input[type="text"],
+        select,
+        textarea {
+            margin-left: 0;
+        }
+    }
+}
+
+@media only screen and (min-width: @media-query-horizontal-small) and (max-width: @media-query-horizontal-medium) {
+
+    /*
+     * Inputs
+     */
+
+    input[type="email"],
+    input[type="password"],
+    input[type="tel"],
+    input[type="text"],
+    select,
+    textarea {
+
+        // Wide
+        &.input-wide {
+            max-width: 100%;
+            width: 200px;
+        }
+    }
+}
+
+@media only screen and (min-width: @media-query-horizontal-large) {
+
+    /*
+     * Inputs
+     */
+
+    input[type="email"],
+    input[type="password"],
+    input[type="tel"],
+    input[type="text"],
+    select,
+    textarea {
+
+        // Wide
+        &.input-wide {
+            max-width: 100%;
+            width: 300px;
+        }
+    }
+}
+
+@media only screen and (min-width: @media-query-horizontal-largest) {
+
+    /*
+     * Form: Search
+     */
+
+    .form-search {
+        display: inline-block;
+        margin: 0;
+    }
+
+    /*
+     * Form: Search (Advanced)
+     */
+
+    .form-search-advanced {
+        display: inline-block;
+
+        fieldset {
+
+            // Individual search filters
+            &.fieldset-search-filter {
+                margin-right: 30px;
+            }
+        }
+    }
+
+    /*
+     * Fieldset
+     */
+
+    fieldset {
+
+        // Row of search filters
+        &.fieldset-section {
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+        }
+
+        // Individual search filters
+        &.fieldset-search-filter {
+            float: left;
+            margin-right: 15px;
+            margin-bottom: 5px;
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+
+            // Label
+            label {
+                float: left;
+                margin-right: 9px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+
+            // Input
+            input[type="text"] {
+                float: left;
+                margin-top: 0;
+                margin-right: 7px;
+                margin-bottom: 0;
+                margin-left: 0;
+
+                &:last-of-type {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    /*
+     * Inputs
+     */
+
+    input[type="email"],
+    input[type="password"],
+    input[type="tel"],
+    input[type="text"],
+    select,
+    textarea {
+
+        // Wide
+        &.input-wide {
+            max-width: 100%;
+            width: 450px;
+        }
+    }
+}
+
+/* Fix IE
+   ========================================================================== */
+
+/*
+ * IE8
+ */
+
+.ie8 {
+
+    label[for="search-text"] {
+        width: 450px;
+
+        .twitter-typeahead {
+            width: 450px;
+        }
+    }
+}

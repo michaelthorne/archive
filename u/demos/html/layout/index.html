@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Layout</title>
+    <link type="text/css" rel="stylesheet" href="assets/css/normalize.css" />
+    <style>
+        body, html {
+            height: 100%;
+            width: 100%;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        #wrapper {
+            background-color: blue;
+            height: 100%;
+            margin: 0 auto;
+            width: 960px;
+        }
+
+        .inner-wrapper {
+            background-color: #b6d8ff;
+            float: left;
+            margin: 100px 0 0 200px;
+            width: 680px;
+        }
+
+        #header {
+            margin: 0 0 0 200px;
+            padding: 50px 0 0 0;
+        }
+
+        #contents {
+            float: left;
+            width: 100%;
+        }
+
+        h1, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        p {
+            background-color: green;
+            margin: 50px 0 0 0;
+        }
+
+        label {
+            clear: both;
+            display: block;
+        }
+
+        label.checkbox {
+            width: 50%;
+        }
+
+        input[type="text"] {
+            margin: 10px 0 0 100px;
+        }
+
+        form {
+            background-color: #b6d8ff;
+            float: left;
+            margin: 50px 0 0 0;
+            width: 500px;
+        }
+
+        fieldset {
+            border: 0;
+            float: left;
+            margin: 10px 0 0 0;
+            padding: 0;
+            width: 100%;
+        }
+
+        fieldset label {
+            float: left;
+        }
+
+        input[type="submit"] {
+            float: right;
+        }
+
+        #footer {
+            background-color: #48c6f0;
+            float: left;
+            margin: 20px 0 0 200px;
+            overflow: hidden;
+        }
+
+        #footer ul {
+            float: left;
+            margin: 0;
+            padding: 0;
+        }
+
+        #footer li {
+            border-right: 1px #fff solid;
+            float: left;
+            list-style: none;
+            margin: 0 10px 0 0;
+            padding: 0 10px 0 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <h1>Lorem ipsum dolor sit amet</h1>
+        </div>
+        <div id="contents">
+            <div class="inner-wrapper">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+                <form>
+                    <label>
+                        Label
+                        <input type="text" />
+                    </label>
+                    <label>
+                        Label
+                        <input type="text" />
+                    </label>
+                    <label>
+                        Label
+                        <input type="text" />
+                    </label>
+                    <fieldset>
+                        <label class="checkbox">
+                            <input type="checkbox" value="" /> Opt in?
+                        </label>
+                        <input type="submit" value="Submit" />
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <div id="footer">
+            <ul>
+                <li>Lorem</li>
+                <li>ipsum</li>
+                <li>dolor</li>
+                <li>sit</li>
+                <li>amet</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

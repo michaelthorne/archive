@@ -1,0 +1,13 @@
+# humanstxt.org
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Michael Thorne -- Front-end Web Developer -- @mikkelz_za
+    Simon Comley -- Product Owner, Developer -- @simonthetwit
+
+# SITE
+
+    Last Update: 2014/08/08
+    Standards: HTML5, CSS3
+    Components: Font Awesome, Grunt, jQuery, LESS, Normalize.css

@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en-GB" dir="ltr" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en-GB" dir="ltr" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en-GB" dir="ltr" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en-GB" dir="ltr" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+    <title>Spree / Product (Category)</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="author" content="Michael Thorne" />
+    <meta name="description" content="" />
+    <!--<meta name="viewport" content="width=device-width" />-->
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:locale" content="en_GB" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="stylesheet" href="assets/css/normalize.css" />
+    <link rel="stylesheet" href="assets/css/jquery-ui.css" />
+    <link rel="stylesheet" href="assets/css/mediaelementplayer.css" />
+    <link rel="stylesheet" href="assets/css/layout.css" />
+    <link rel="stylesheet" href="assets/css/typography.css" />
+    <link rel="stylesheet" href="assets/css/forms.css" />
+    <!--
+        minify: Combines, minifies, and caches JavaScript
+        <link rel="stylesheet" href="/min/b=assets/css&amp;f=normalize.css,layout.css,typography.css,forms.css" />
+    -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5.js"></script>
+    <script src="assets/js/selectivizr.js"></script>
+    <![endif]-->
+    <script src="assets/js/detect.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="assets/js/jquery.js"><\/script>');</script>
+    <script>
+        var $j = jQuery.noConflict();
+    </script>
+</head>
+<body>
+    <!--[if lt IE 8]>
+    <div class="chromeframe">
+        <p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" title="Browse Happy &ndash; Upgrade your browser today!" target="_blank">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true" title="Google Chrome Frame &ndash; Make your browser more powerful." target="blank">activate Google Chrome Frame</a> to improve your experience.</p>
+    </div>
+    <![endif]-->
+    <header id="top" role="banner">
+        <div class="wrapper">
+            <a id="logo" href="home.html">
+                <img src="assets/images/logos/logo-spree.png" width="152" height="65" alt="Spree" />
+            </a>
+            <div class="utils">
+                <ul class="members">
+                    <li>
+                        <a href="member-login-register.html" class="active">Login</a>
+                    </li>
+                    <li>
+                        <a href="member-login-register.html">Register</a>
+                    </li>
+                </ul>
+                <ul class="languages drop-down">
+                    <li>
+                        <a href="#">English</a>
+                        <ul>
+                            <li><a href="#" data-language-code="en-za" data-language-active="true">English</a></li>
+                            <li><a href="#" data-language-code="af-za">Afrikaans</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="shop">
+                    <li class="favourites">
+                        <a href="shop-favourites.html" data-util="favourites">Favourites</a>
+                        <span>1</span>
+                    </li>
+                    <li class="cart">
+                        <a href="shop-cart.html" data-util="cart">Cart</a>
+                        <span>0</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <nav class="primary">
+        <div class="wrapper">
+            <ul class="drop-down" role="navigation">
+                <li>
+                    <a href="home.html">Home</a>
+                </li>
+                <li>
+                    <a href="#">What&rsquo;s New</a>
+                </li>
+                <li>
+                    <a href="products.html" class="active" data-current="true">Clothes</a>
+                    <ul>
+                        <li>
+                            <a href="product-category.html">Dresses</a>
+                        </li>
+                        <li>
+                            <a href="product-category.html">Tops</a>
+                        </li>
+                        <li>
+                            <a href="product-category.html">Bottoms</a>
+                        </li>
+                        <li>
+                            <a href="product-category.html">Jeans</a>
+                        </li>
+                        <li>
+                            <a href="product-category.html">Jackets &amp; Knitwear</a>
+                        </li>
+                        <li>
+                            <a href="product-category.html">Sleepwear</a>
+                        </li>
+                        <li>
+                            <a href="product-category.html">Swimwear</a>
+                        </li>
+                        <li>
+                            <a href="product-category.html">Activewear</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Shoes</a>
+                </li>
+                <li>
+                    <a href="#">Accessories</a>
+                </li>
+                <li>
+                    <a href="lookbook.html">Lookbook</a>
+                </li>
+                <li>
+                    <a href="#">Clearance</a>
+                </li>
+                <li>
+                    <a>Stores</a>
+                    <ul>
+                        <li>
+                            <a href="home-fairlady.html">Fairlady</a>
+                        </li>
+                        <li>
+                            <a href="home-drum.html">Drum</a>
+                        </li>
+                        <li>
+                            <a href="home-grazia.html">Grazia</a>
+                        </li>
+                        <li>
+                            <a href="home-huisgenoot.html">Huisgenoot</a>
+                        </li>
+                        <li>
+                            <a href="home-you.html">You</a>
+                        </li>
+                        <li>
+                            <a href="home-true-love.html">True Love</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <form id="form-search" name="form-search" method="post" action="home.html" class="form-search">
+                <label for="search">
+                    <input type="text" id="search" name="search" value="Search&hellip;" placeholder="Search&hellip;" maxlength="50" tabindex="1" data-action="autocomplete" />
+                </label>
+                <input type="submit" id="submit-search" name="submit-search" value="" tabindex="2" />
+            </form>
+        </div>
+    </nav>
+    <div class="wrapper-outer">
+        <div class="wrapper info">
+            <ul class="info">
+                <li>
+                    <img src="assets/images/icons/icon-info-newsletter.png" width="30" height="28" alt="" />
+                    <p>
+                        <b>Sign up to our Newsletter</b> Get Updates to Awesome Deals
+                    </p>
+                </li>
+                <li>
+                    <form id="form-signup-newsletter" name="form-signup-newsletter" method="post" action="home.html" class="form-signup-newsletter">
+                        <label for="email-signup-newsletter" data-component="newsletter-language-selection">
+                            <input type="text" id="email-signup-newsletter" name="email-signup-newsletter" value="Email address" placeholder="Email address" maxlength="100" />
+                        </label>
+                        <div id="newsletter-language-selection">
+                            <fieldset class="radio">
+                                <label>
+                                    <input type="radio" name="newsletter-language" value="en-za" checked="checked" />
+                                    English
+                                </label>
+                                <label>
+                                    <input type="radio" name="newsletter-language" value="af-za" />
+                                    Afrikaans
+                                </label>
+                            </fieldset>
+                        </div>
+                        <input type="submit" id="submit-signup-newsletter" name="submit-signup-newsletter" value="Sign up now" />
+                    </form>
+                    <!-- Confirmation message after submitting the form -->
+                    <!-- <p class="feedback">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p> -->
+                </li>
+                <li>
+                    <img src="assets/images/icons/icon-info-free-delivery.png" width="33" height="29" alt="" />
+                    <p>
+                        <b>Free Delivery</b> Within South Africa
+                    </p>
+                </li>
+                <li>
+                    <img src="assets/images/icons/icon-info-free-returns.png" width="25" height="30" alt="" />
+                    <p>
+                        <b>Free Returns</b> Within 30 Days
+                    </p>
+                </li>
+                <li>
+                    <img src="assets/images/icons/icon-info-help-and-enquiries.png" width="20" height="29" alt="" />
+                    <p>
+                        <b>0861 999 501</b> Help &amp; Enquiries
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <section role="main" class="product-category">
+        <div class="wrapper-inner">
+            <div class="wrapper navigation">
+                <ul class="breadcrumbs">
+                    <li>
+                        <a href="home.html">Home</a> /
+                    </li>
+                    <li>
+                        <a href="products.html">Clothes</a> /
+                    </li>
+                    <li class="current">Dresses</li>
+                </ul>
+                <ol class="pagination">
+                    <li>
+                        <a href="#" title="Previous">&#9666;</a>
+                    </li>
+                    <li>
+                        <a href="#">1</a>
+                    </li>
+                    <li class="current">
+                        <a href="#">2</a>
+                    </li>
+                    <li>
+                        <a href="#">3</a>
+                    </li>
+                    <li>
+                        <a href="#" title="More">&hellip;</a>
+                    </li>
+                    <li>
+                        <a href="#" title="Next">&#9656;</a>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="wrapper">
+            <aside>
+                <div class="filter">
+                    <header>
+                        <h3>Clothes</h3>
+                    </header>
+                    <ul class="product-categories">
+                        <li>
+                            <a href="#">All Clothes (117)</a>
+                        </li>
+                        <li class="active">
+                            <a href="#">Dresses (12)</a>
+                            <ul>
+                                <li>
+                                    <a href="#">&ndash; Lorem ipsum (1)</a>
+                                </li>
+                                <li>
+                                    <a href="#">&ndash; Lorem ipsum (2)</a>
+                                </li>
+                                <li>
+                                    <a href="#">&ndash; Lorem ipsum (3)</a>
+                                </li>
+                                <li>
+                                    <a href="#">&ndash; Lorem ipsum (4)</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Pants (0)</a>
+                        </li>
+                        <li>
+                            <a href="#">Jackets (10)</a>
+                            <ul>
+                                <li>
+                                    <a href="#">&ndash; Lorem ipsum (1)</a>
+                                </li>
+                                <li>
+                                    <a href="#">&ndash; Lorem ipsum (2)</a>
+                                </li>
+                                <li>
+                                    <a href="#">&ndash; Lorem ipsum (3)</a>
+                                </li>
+                                <li>
+                                    <a href="#">&ndash; Lorem ipsum (4)</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Tops (23)</a>
+                            <ul>
+                                <li>
+                                    <a href="#">&ndash; Lorem ipsum (1)</a>
+                                </li>
+                                <li>
+                                    <a href="#">&ndash; Lorem ipsum (2)</a>
+                                </li>
+                                <li>
+                                    <a href="#">&ndash; Lorem ipsum (3)</a>
+                                </li>
+                                <li>
+                                    <a href="#">&ndash; Lorem ipsum (4)</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Jerseys (37)</a>
+                            <ul>
+                                <li>
+                                    <a href="#">&ndash; Lorem ipsum (1)</a>
+                                </li>
+                                <li>
+                                    <a href="#">&ndash; Lorem ipsum (2)</a>
+                                </li>
+                                <li>
+                                    <a href="#">&ndash; Lorem ipsum (3)</a>
+                                </li>
+                                <li>
+                                    <a href="#">&ndash; Lorem ipsum (4)</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Shirts (42)</a>
+                            <ul>
+                                <li>
+                                    <a href="#">&ndash; Lorem ipsum (1)</a>
+                                </li>
+                                <li>
+                                    <a href="#">&ndash; Lorem ipsum (2)</a>
+                                </li>
+                                <li>
+                                    <a href="#">&ndash; Lorem ipsum (3)</a>
+                                </li>
+                                <li>
+                                    <a href="#">&ndash; Lorem ipsum (4)</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="filter">
+                    <header>
+                        <h3>Colour</h3>
+                    </header>
+                    <ul class="product-colours">
+                        <li>
+                            <a href="#" title="Red"><img src="assets/images/products/colours/colour-red.png" width="17" height="17" alt="Red" /></a>
+                        </li>
+                        <li>
+                            <a href="#" title="Orange"><img src="assets/images/products/colours/colour-orange.png" width="17" height="17" alt="Orange" /></a>
+                        </li>
+                        <li>
+                            <a href="#" title="Yellow"><img src="assets/images/products/colours/colour-yellow.png" width="17" height="17" alt="Yellow" /></a>
+                        </li>
+                        <li>
+                            <a href="#" title="Green"><img src="assets/images/products/colours/colour-green.png" width="17" height="17" alt="Green" /></a>
+                        </li>
+                        <li>
+                            <a href="#" title="Red"><img src="assets/images/products/colours/colour-red.png" width="17" height="17" alt="Red" /></a>
+                        </li>
+                        <li>
+                            <a href="#" title="Orange"><img src="assets/images/products/colours/colour-orange.png" width="17" height="17" alt="Orange" /></a>
+                        </li>
+                        <li>
+                            <a href="#" title="Yellow"><img src="assets/images/products/colours/colour-yellow.png" width="17" height="17" alt="Yellow" /></a>
+                        </li>
+                        <li>
+                            <a href="#" title="Green"><img src="assets/images/products/colours/colour-green.png" width="17" height="17" alt="Green" /></a>
+                        </li>
+                        <li>
+                            <a href="#" title="Red"><img src="assets/images/products/colours/colour-red.png" width="17" height="17" alt="Red" /></a>
+                        </li>
+                        <li>
+                            <a href="#" title="Orange"><img src="assets/images/products/colours/colour-orange.png" width="17" height="17" alt="Orange" /></a>
+                        </li>
+                        <li>
+                            <a href="#" title="Yellow"><img src="assets/images/products/colours/colour-yellow.png" width="17" height="17" alt="Yellow" /></a>
+                        </li>
+                        <li>
+                            <a href="#" title="Green"><img src="assets/images/products/colours/colour-green.png" width="17" height="17" alt="Green" /></a>
+                        </li>
+                        <li>
+                            <a href="#" title="Red"><img src="assets/images/products/colours/colour-red.png" width="17" height="17" alt="Red" /></a>
+                        </li>
+                        <li>
+                            <a href="#" title="Orange"><img src="assets/images/products/colours/colour-orange.png" width="17" height="17" alt="Orange" /></a>
+                        </li>
+                        <li>
+                            <a href="#" title="Yellow"><img src="assets/images/products/colours/colour-yellow.png" width="17" height="17" alt="Yellow" /></a>
+                        </li>
+                        <li>
+                            <a href="#" title="Green"><img src="assets/images/products/colours/colour-green.png" width="17" height="17" alt="Green" /></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="filter">
+                    <header>
+                        <h3>Price</h3>
+                    </header>
+                    <form>
+                        <label for="toggle-01">
+                            <input type="radio" id="toggle-01" name="toggle" value="1" /> Lowest to Highest
+                        </label>
+                        <label for="toggle-02">
+                            <input type="radio" id="toggle-02" name="toggle" value="1" /> Highest Lowest
+                        </label>
+                    </form>
+                </div>
+            </aside>
+            <div class="product-category-listing">
+                <div class="promotion-magazine">
+                    <!--<img src="assets/images/promotions/magazine/promotion-spree.jpg" width="727" height="213" alt="Spree &ndash; The Future Belongs to the Curious" />-->
+                    <img src="assets/images/promotions/magazine/promotion-sarie.jpg" width="727" height="213" alt="Sarie &ndash; Fall Lookbook" />
+                </div>
+                <div class="products">
+                    <div class="product">
+                        <div class="badge red">Sale</div>
+                        <a href="product-detail.html">
+                            <img src="assets/images/products/product-01.jpg" width="206" height="284" alt="Pearl Dress by Mui Mui &emdash; R450.00" />
+                        </a>
+                        <header>
+                            <h1>Lorem ipsum</h1>
+                            <h2>Ut enim ad minim</h2>
+                        </header>
+                        <span>R350</span>
+                        <a href="#" class="favourite" data-action="favourite"><img src="assets/images/icons/icon-heart.png" width="19" height="16" title="Add to Favourites" alt="Favourite" /></a>
+                    </div>
+                    <div class="product">
+                        <a href="product-detail.html">
+                            <img src="assets/images/products/product-02.jpg" width="206" height="284" alt="Pearl Dress by Mui Mui &emdash; R450.00" />
+                        </a>
+                        <header>
+                            <h1>Lorem ipsum</h1>
+                            <h2>Ut enim ad minim</h2>
+                        </header>
+                        <span>R350</span>
+                        <a href="#" class="favourite" data-action="favourite"><img src="assets/images/icons/icon-heart.png" width="19" height="16" title="Add to Favourites" alt="Favourite" /></a>
+                    </div>
+                    <div class="product">
+                        <a href="product-detail.html">
+                            <img src="assets/images/products/product-01.jpg" width="206" height="284" alt="Pearl Dress by Mui Mui &emdash; R450.00" />
+                        </a>
+                        <header>
+                            <h1>Lorem ipsum</h1>
+                            <h2>Ut enim ad minim</h2>
+                        </header>
+                        <span>R350</span>
+                        <a href="#" class="favourite" data-action="favourite"><img src="assets/images/icons/icon-heart.png" width="19" height="16" title="Add to Favourites" alt="Favourite" /></a>
+                    </div>
+                    <div class="product">
+                        <a href="product-detail.html">
+                            <img src="assets/images/products/product-02.jpg" width="206" height="284" alt="Pearl Dress by Mui Mui &emdash; R450.00" />
+                        </a>
+                        <header>
+                            <h1>Lorem ipsum</h1>
+                            <h2>Ut enim ad minim</h2>
+                        </header>
+                        <span>R350</span>
+                        <a href="#" class="favourite" data-action="favourite"><img src="assets/images/icons/icon-heart.png" width="19" height="16" title="Add to Favourites" alt="Favourite" /></a>
+                    </div>
+                    <div class="product">
+                        <div class="badge navy">Sold Out</div>
+                        <a href="product-detail.html">
+                            <img src="assets/images/products/product-01.jpg" width="206" height="284" alt="Pearl Dress by Mui Mui &emdash; R450.00" />
+                        </a>
+                        <header>
+                            <h1>Lorem ipsum</h1>
+                            <h2>Ut enim ad minim</h2>
+                        </header>
+                        <span>R350</span>
+                        <a href="#" class="favourite" data-action="favourite"><img src="assets/images/icons/icon-heart.png" width="19" height="16" title="Add to Favourites" alt="Favourite" /></a>
+                    </div>
+                    <div class="product">
+                        <a href="product-detail.html">
+                            <img src="assets/images/products/product-02.jpg" width="206" height="284" alt="Pearl Dress by Mui Mui &emdash; R450.00" />
+                        </a>
+                        <header>
+                            <h1>Lorem ipsum</h1>
+                            <h2>Ut enim ad minim</h2>
+                        </header>
+                        <span>R350</span>
+                        <a href="#" class="favourite" data-action="favourite"><img src="assets/images/icons/icon-heart.png" width="19" height="16" title="Add to Favourites" alt="Favourite" /></a>
+                    </div>
+                    <div class="product">
+                        <a href="product-detail.html">
+                            <img src="assets/images/products/product-01.jpg" width="206" height="284" alt="Pearl Dress by Mui Mui &emdash; R450.00" />
+                        </a>
+                        <header>
+                            <h1>Lorem ipsum</h1>
+                            <h2>Ut enim ad minim</h2>
+                        </header>
+                        <span>R350</span>
+                        <a href="#" class="favourite" data-action="favourite"><img src="assets/images/icons/icon-heart.png" width="19" height="16" title="Add to Favourites" alt="Favourite" /></a>
+                    </div>
+                    <div class="product">
+                        <a href="product-detail.html">
+                            <img src="assets/images/products/product-02.jpg" width="206" height="284" alt="Pearl Dress by Mui Mui &emdash; R450.00" />
+                        </a>
+                        <header>
+                            <h1>Lorem ipsum</h1>
+                            <h2>Ut enim ad minim</h2>
+                        </header>
+                        <span>R350</span>
+                        <a href="#" class="favourite" data-action="favourite"><img src="assets/images/icons/icon-heart.png" width="19" height="16" title="Add to Favourites" alt="Favourite" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="wrapper navigation">
+                <ol class="pagination">
+                    <li>
+                        <a href="#" title="Previous">&#9666;</a>
+                    </li>
+                    <li>
+                        <a href="#">1</a>
+                    </li>
+                    <li class="current">
+                        <a href="#">2</a>
+                    </li>
+                    <li>
+                        <a href="#">3</a>
+                    </li>
+                    <li>
+                        <a href="#" title="More">&hellip;</a>
+                    </li>
+                    <li>
+                        <a href="#" title="Next">&#9656;</a>
+                    </li>
+                </ol>
+            </div>
+        </footer>
+        <div class="load-more">
+            <div class="wrapper">
+                <p>You have reached the end of Spree&rsquo;s dresses, would you like to load dresses from the other magazines?</p>
+                <a href="#" class="button red" role="button">Yes <img src="assets/images/icons/icon-load-more.png" width="16" height="17" alt="" /></a>
+            </div>
+        </div>
+    </section>
+    <footer role="contentinfo">
+        <div class="wrapper">
+            <nav>
+                <ul role="navigation">
+                    <li>
+                        <b>Lorem ipsum</b>
+                        <ul role="navigation">
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Lorem ipsum</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Lorem ipsum</b>
+                        <ul role="navigation">
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Lorem ipsum</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Lorem ipsum</b>
+                        <ul role="navigation">
+                            <li>+27 83 987 2341</li>
+                            <li><a href="mailto:lorem@ipsum.com">lorem@ipsum.com</a></li>
+                            <li><img src="assets/images/logos/logo-twitter.png" width="18" height="20" title="Twitter" alt="Twitter" /> <a href="#">Lorem ipsum</a></li>
+                            <li><img src="assets/images/logos/logo-facebook.png" width="18" height="20" title="Facebook" alt="Facebook" /> <a href="#">Lorem ipsum</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Lorem ipsum</b>
+                        <form id="form-signup" name="form-signup" method="post" action="home.html" class="form-signup">
+                            <label for="email-signup">
+                                Sign up and get a <strong>R50 Voucher</strong>
+                                <input type="text" id="email-signup" name="email-signup" value="Email address" placeholder="Email address" maxlength="100" />
+                            </label>
+                            <input type="submit" id="submit-signup" name="submit-signup" value="Sign up now" />
+                        </form>
+                        <!-- Confirmation message after submitting the form -->
+                        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p> -->
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+    <a href="#" class="back-to-top" data-action="back-to-top" title="Back to Top"><img src="assets/images/icons/icon-up.png" width="12" height="12" alt="^" /> Top</a>
+    <div id="language-confirmation" class="modal small">
+        <header>
+            <h1>Magazine Language Change</h1>
+        </header>
+        <p>The products curated by this magazine title are best experienced in <b>Afrikaans</b>. Would you like to change language now?</p>
+        <a href="product-category.html" class="button red" data-action="language-confirm" role="button">Yes</a>
+        <a href="#" class="secondary" data-action="modal-close">No thanks</a>
+        <p>You can switch your language anytime using the language dropdown in the top right of the website.</p>
+        <a href="#" class="close" data-action="modal-close"><img src="assets/images/icons/icon-modal-close.png" width="33" height="33" alt="X" /></a>
+    </div>
+    <div id="fb-root"></div>
+    <script src="assets/js/jquery.easing.js"></script>
+    <script src="assets/js/jquery.placeholder.js"></script>
+    <script src="assets/js/jquery.scrollto.js"></script>
+    <script src="assets/js/jquery.serialscroll.js"></script>
+    <script src="assets/js/jquery.iosslider.js"></script>
+    <script src="assets/js/jquery.modal.js"></script>
+    <script src="assets/js/jquery.mediaelementplayer.js"></script>
+    <script src="assets/js/jquery-ui.js"></script>
+    <script>
+        /*
+         * The URL for the front-end of the website
+         * @type {String}
+         */
+        var frontEndWebsiteURL = null;
+        // var frontEndWebsiteURL = 'http://dev.megastore.local/skin/frontend/site/web';
+    </script>
+    <script src="assets/js/jquery-custom.js"></script>
+    <!--
+        minify: Combines, minifies, and caches JavaScript
+        <script src="/min/b=assets/js&amp;f=jquery.easing.js,jquery.placeholder.js,jquery-custom.js"></script>
+    -->
+    <script>(function(d, s, id)
+    {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+</body>
+</html>

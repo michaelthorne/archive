@@ -1,0 +1,228 @@
+/* ==========================================================================
+   Layout: display, float, height, margin, padding, position, width, z-index
+   ========================================================================== */
+
+/* LESS: Colours */
+
+@color-black: #000;
+@color-silver: #c0c0c0;
+@color-white: #fff;
+
+section {
+    margin: 0 auto;
+    width: 320px;
+
+    header {
+        margin: 0 auto;
+        width: 291px;
+    }
+}
+
+.wrapper-slider {
+    margin: 0 auto;
+    width: 291px;
+
+    .slider {
+        width: 291px;
+    }
+}
+
+ul {
+    margin: 0 0 100px 0;
+    overflow: hidden;
+    padding: 0;
+    width: 291px;
+
+    li {
+        clear: both;
+        float: left;
+        list-style: none;
+        margin: 0 0 28px 0;
+        position: relative;
+        width: 291px;
+
+        &:last-child {
+            margin: 0;
+        }
+
+        img {
+            display: block;
+            height: auto;
+            margin: 0 0 5px 0;
+            width: 100%;
+        }
+
+        a[role="button"] {
+            background-color: @color-black;
+            clear: both;
+            display: block;
+            float: left;
+            height: 27px;
+            padding: 9px 0 0 0;
+            width: 291px;
+        }
+    }
+}
+
+div.title {
+    background-color: @color-white;
+    height: 27px;
+    left: 13px;
+    position: absolute;
+    padding: 8px 0 0 0;
+    top: 235px;
+    width: 265px;
+}
+
+#navigation {
+    display: none;
+}
+
+/* Media Queries
+   ========================================================================== */
+
+@media screen and (min-width: 481px) {
+
+    section {
+        width: 540px;
+
+        header {
+            width: 540px;
+        }
+    }
+
+    .wrapper-slider {
+        position: relative;
+        width: 540px;
+
+        .slider {
+            overflow: hidden;
+            width: 540px;
+        }
+
+        .controls {
+            background-color: @color-silver;
+            display: block;
+            height: 51px;
+            padding: 32px 0 0 0;
+            position: absolute;
+            top: 232px;
+            width: 29px;
+        }
+
+        a.prev {
+            display: none;
+            left: 0;
+        }
+
+        a.next {
+            right: 0;
+        }
+    }
+
+    ul {
+        height: 525px;
+        width: 1620px;
+
+        li {
+            clear: none;
+            width: 540px;
+
+            &:hover {
+
+                a[role="button"] {
+                    display: block;
+                }
+            }
+
+            img {
+                z-index: 5;
+            }
+
+            a[role="button"] {
+                background-color: @color-black;
+                clear: none;
+                display: none;
+                float: none;
+                height: 100px;
+                left: 179px;
+                padding: 82px 0 0 0;
+                position: absolute;
+                top: 167px;
+                width: 182px;
+                z-index: 10;
+            }
+        }
+    }
+
+    div.title {
+        height: 47px;
+        left: 26px;
+        padding: 18px 0 0 0;
+        top: 436px;
+        width: 488px;
+    }
+}
+
+/* Chrome Frame
+   ========================================================================== */
+
+div.chromeframe {
+    background: @color-black;
+    padding: 10px;
+
+    p {
+        margin: 0 auto;
+    }
+}
+
+/* LESS: Mixins */
+
+.border-radius(@radius: 15px) {
+    -webkit-border-radius: @radius;
+       -moz-border-radius: @radius;
+         -o-border-radius: @radius;
+            border-radius: @radius;
+}
+
+.box-shadow(@arguments) {
+    -webkit-box-shadow: @arguments;
+       -moz-box-shadow: @arguments;
+         -o-box-shadow: @arguments;
+            box-shadow: @arguments;
+}
+
+.inner-shadow(@horizontal: 0, @vertical: 1px, @blur: 2px, @alpha: 0.4) {
+    -webkit-box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+       -moz-box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+         -o-box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+            box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+}
+
+.opacity(@opacity: 0.5) {
+    -webkit-opacity: @opacity;
+       -moz-opacity: @opacity;
+         -o-opacity: @opacity;
+            opacity: @opacity;
+}
+
+.rotation(@deg: 5deg) {
+    -webkit-transform: rotate(@deg);
+       -moz-transform: rotate(@deg);
+         -o-transform: rotate(@deg);
+            transform: rotate(@deg);
+}
+
+.scale(@ratio: 1.5) {
+    -webkit-transform: scale(@ratio);
+       -moz-transform: scale(@ratio);
+         -o-transform: scale(@ratio);
+            transform: scale(@ratio);
+}
+
+.transition(@arguments) {
+    -webkit-transition: @arguments;
+       -moz-transition: @arguments;
+         -o-transition: @arguments;
+            transition: @arguments;
+}

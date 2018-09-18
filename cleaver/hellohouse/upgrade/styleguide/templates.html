@@ -1,0 +1,191 @@
+<!doctype html>
+<html class="sg-html" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Templates | Style Guide – HelloHouse</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/styleguide/styleguide.css">
+
+    <!-- Web Fonts -->
+    <script>
+        WebFontConfig = {
+            google: {
+                families: ['Roboto:400,400italic,700', 'Open+Sans:400,700']
+            },
+            custom: {
+                urls: ['../assets/css/fonts/fonts.css']
+            }
+        };
+    </script>
+
+    <!-- Web Font Loader -->
+    <script src="../assets/js/vendor/webfontloader.js" async="async"></script>
+
+    <!--[if lt IE 9]>
+    <script src="../assets/js/vendor/polyfills.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!--[if lt IE 9]>
+    <p class="upgrade">You are using an <strong>outdated</strong> browser. Please <a class="upgrade__link" href="http://browsehappy.com/?locale=en">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <aside class="sg-l-aside">
+        <nav class="sg-nav" role="navigation">
+            <a class="sg-nav__logo" href="index.html">
+                <img src="../assets/images/logos/logo-hellohouse-173x72.png" srcset="../assets/images/logos/logo-hellohouse-173x72@2x.png 2x" width="173" height="72" alt="HelloHouse">
+            </a>
+
+            <a class="sg-nav-toggle js-sg-nav-toggle" href="index.html">
+                <span class="sg-nav-toggle__bar"></span>
+            </a>
+
+            <ol class="sg-nav__list js-sg-nav">
+                <li class="sg-nav__item"><a class="sg-nav__link" href="elements.html">Elements</a></li>
+                <li class="sg-nav__item"><a class="sg-nav__link" href="forms.html">Forms</a></li>
+                <li class="sg-nav__item"><a class="sg-nav__link" href="patterns.html">Patterns</a></li>
+                <li class="sg-nav__item">
+                    <a class="sg-nav__link" href="templates.html">Templates</a>
+                    <ol class="sg-nav__list">
+                        <li class="sg-nav__item"><a class="sg-nav__link" href="../index.html">Home</a></li>
+                        <li class="sg-nav__item"><a class="sg-nav__link" href="../search/index.html">Search</a></li>
+                        <li class="sg-nav__item"><a class="sg-nav__link" href="../developer/index.html">Developer</a></li>
+                        <li class="sg-nav__item">
+                            <a class="sg-nav__link" href="../development/index.html">Development</a>
+                            <ol class="sg-nav__list">
+                                <li class="sg-nav__item"><a class="sg-nav__link" href="../development/units.html">Units</a></li>
+                                <li class="sg-nav__item"><a class="sg-nav__link" href="../development/progress.html">Progress</a></li>
+                                <li class="sg-nav__item"><a class="sg-nav__link" href="../development/directions.html">Directions</a></li>
+                            </ol>
+                        </li>
+                        <li class="sg-nav__item">
+                            <a class="sg-nav__link" href="../news/index.html">News</a>
+                            <ol class="sg-nav__list">
+                                <li class="sg-nav__item"><a class="sg-nav__link" href="../news/article.html">Article</a></li>
+                            </ol>
+                        </li>
+                        <li class="sg-nav__item">
+                            <a class="sg-nav__link" href="../publications/index.html">Publications</a>
+                            <ol class="sg-nav__list">
+                                <li class="sg-nav__item"><a class="sg-nav__link" href="../publications/publication.html">Publication</a></li>
+                            </ol>
+                        </li>
+                        <li class="sg-nav__item">
+                            <a class="sg-nav__link" href="../service-providers/index.html">Service Providers</a>
+                            <ol class="sg-nav__list">
+                                <li class="sg-nav__item"><a class="sg-nav__link" href="../service-providers/service-provider.html">Service Provider</a></li>
+                            </ol>
+                        </li>
+                        <li class="sg-nav__item">
+                            <a class="sg-nav__link" href="../account/index.html">Account</a>
+                            <ol class="sg-nav__list">
+                                <li class="sg-nav__item"><a class="sg-nav__link" href="../account/dashboard.html">Dashboard</a></li>
+                                <li class="sg-nav__item"><a class="sg-nav__link" href="../account/register.html">Register</a></li>
+                                <li class="sg-nav__item"><a class="sg-nav__link" href="../account/login.html">Login</a></li>
+                                <li class="sg-nav__item"><a class="sg-nav__link" href="../account/forgot-password.html">Forgot password</a></li>
+                                <li class="sg-nav__item"><a class="sg-nav__link" href="../account/reset-password.html">Reset password</a></li>
+                            </ol>
+                        </li>
+                        <li class="sg-nav__item"><a class="sg-nav__link" href="../about-us.html">About us</a></li>
+                        <li class="sg-nav__item"><a class="sg-nav__link" href="../contact-us.html">Contact us</a></li>
+                        <li class="sg-nav__item"><a class="sg-nav__link" href="../generic.html">Generic</a></li>
+                        <li class="sg-nav__item"><a class="sg-nav__link" href="../sitemap.html">Sitemap</a></li>
+                        <li class="sg-nav__item"><a class="sg-nav__link" href="../terms-and-conditions.html">Terms</a></li>
+                        <li class="sg-nav__item">
+                            Errors
+                            <ol class="sg-nav__list">
+                                <li class="sg-nav__item"><a class="sg-nav__link" href="../404.html">404</a></li>
+                                <li class="sg-nav__item"><a class="sg-nav__link" href="../500.html">500</a></li>
+                            </ol>
+                        </li>
+                        <li class="sg-nav__item"><a class="sg-nav__link" href="typography.html">Typography</a></li>
+                    </ol>
+                </li>
+            </ol>
+        </nav>
+    </aside>
+
+    <main class="sg-l-main" role="main">
+        <header class="sg-header sg-header--main">
+            <h1 class="sg-h1">Templates</h1>
+            <ul class="sg-list">
+                <li><strong>Version</strong> 2.0.0</li>
+                <li><strong>Updated</strong> 2016-08-19 17:05:56</li>
+            </ul>
+        </header>
+
+        <section class="sg-l-section" id="sg-toc">
+            <header class="sg-header sg-header--section">
+                <h2 class="sg-h2"><a class="sg-anchor" href="#sg-toc">#</a>Table of Contents</h2>
+            </header>
+
+            <ol class="sg-list sg-list--templates">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../search/index.html">Search</a></li>
+                <li><a href="../developer/index.html">Developer</a></li>
+                <li>
+                    <a href="../development/index.html">Development</a>
+                    <ol class="sg-list">
+                        <li><a href="../development/units.html">Units</a></li>
+                        <li><a href="../development/progress.html">Progress</a></li>
+                        <li><a href="../development/directions.html">Directions</a></li>
+                    </ol>
+                </li>
+                <li>
+                    <a href="../news/index.html">News</a>
+                    <ol class="sg-list">
+                        <li><a href="../news/article.html">Article</a></li>
+                    </ol>
+                </li>
+                <li>
+                    <a href="../publications/index.html">Publications</a>
+                    <ol class="sg-list">
+                        <li><a href="../publications/publication.html">Publication</a></li>
+                    </ol>
+                </li>
+                <li>
+                    <a href="../service-providers/index.html">Service Providers</a>
+                    <ol class="sg-list">
+                        <li><a href="../service-providers/service-provider.html">Service Provider</a></li>
+                    </ol>
+                </li>
+                <li>
+                    <a href="../account/index.html">Account</a>
+                    <ol class="sg-list">
+                        <li><a href="../account/dashboard.html">Dashboard</a></li>
+                        <li><a href="../account/register.html">Register</a></li>
+                        <li><a href="../account/login.html">Login</a></li>
+                        <li><a href="../account/forgot-password.html">Forgot password</a></li>
+                        <li><a href="../account/reset-password.html">Reset password</a></li>
+                    </ol>
+                </li>
+                <li><a href="../about-us.html">About us</a></li>
+                <li><a href="../contact-us.html">Contact us</a></li>
+                <li><a href="../generic.html">Generic</a></li>
+                <li><a href="../sitemap.html">Sitemap</a></li>
+                <li><a href="../terms-and-conditions.html">Terms</a></li>
+                <li>
+                    Errors
+                    <ol class="sg-list">
+                        <li><a href="../404.html">404</a></li>
+                        <li><a href="../500.html">500</a></li>
+                    </ol>
+                </li>
+                <li><a href="typography.html">Typography</a></li>
+            </ol>
+        </section>
+    </main>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/styleguide/plugins.js"></script>
+    <script src="../assets/js/styleguide/styleguide.js"></script>
+</body>
+</html>

@@ -1,0 +1,731 @@
+<!doctype html>
+<html class="sg-html" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Patterns | Style Guide – Name of Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/styleguide/styleguide.css">
+
+    <!-- Web Fonts -->
+    <script>
+        WebFontConfig = {
+            google: {
+                families: ['Roboto:400,700', 'Source+Sans+Pro:400,600,700']
+            }
+        };
+    </script>
+
+    <!-- Web Font Loader -->
+    <script src="../assets/js/vendor/webfontloader.js" async="async"></script>
+
+    <!--[if lt IE 9]>
+    <script src="../assets/js/vendor/polyfills.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!--[if lt IE 9]>
+    <p class="upgrade">You are using an <strong>outdated</strong> browser. Please <a class="upgrade__link" href="http://browsehappy.com/?locale=en">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <aside class="sg-l-aside">
+        <nav class="sg-nav" role="navigation">
+            <a class="sg-nav__logo" href="index.html">
+                <img src="../assets/images/logos/logo-151x40.png" srcset="../assets/images/logos/logo-151x40@2x.png 2x" width="151" height="40" alt="Name of Project">
+            </a>
+
+            <a class="sg-nav-toggle js-sg-nav-toggle" href="index.html">
+                <span class="sg-nav-toggle__bar"></span>
+            </a>
+
+            <ol class="sg-nav__list js-sg-nav">
+                <li class="sg-nav__item"><a class="sg-nav__link" href="elements.html">Elements</a></li>
+                <li class="sg-nav__item"><a class="sg-nav__link" href="forms.html">Forms</a></li>
+                <li class="sg-nav__item">
+                    <a class="sg-nav__link" href="patterns.html">Patterns</a>
+                    <ol class="sg-nav__list">
+                        <li class="sg-nav__item"><a class="sg-nav__link" href="#sg-accordion">Accordion</a></li>
+                        <li class="sg-nav__item"><a class="sg-nav__link" href="#sg-alert">Alert</a></li>
+                        <li class="sg-nav__item"><a class="sg-nav__link" href="#sg-breadcrumbs">Breadcrumbs</a></li>
+                        <li class="sg-nav__item"><a class="sg-nav__link" href="#sg-card">Card</a></li>
+                        <li class="sg-nav__item"><a class="sg-nav__link" href="#sg-carousel">Carousel</a></li>
+                        <li class="sg-nav__item"><a class="sg-nav__link" href="#sg-collapse">Collapse</a></li>
+                        <li class="sg-nav__item"><a class="sg-nav__link" href="#sg-modal">Modal</a></li>
+                        <li class="sg-nav__item"><a class="sg-nav__link" href="#sg-navigation">Navigation</a></li>
+                        <li class="sg-nav__item"><a class="sg-nav__link" href="#sg-pagination">Pagination</a></li>
+                        <li class="sg-nav__item"><a class="sg-nav__link" href="#sg-social">Social</a></li>
+                        <li class="sg-nav__item"><a class="sg-nav__link" href="#sg-tabs">Tabs</a></li>
+                        <li class="sg-nav__item"><a class="sg-nav__link" href="#sg-tooltips">Tooltips</a></li>
+                    </ol>
+                </li>
+                <li class="sg-nav__item"><a class="sg-nav__link" href="templates.html">Templates</a></li>
+            </ol>
+        </nav>
+    </aside>
+
+    <main class="sg-l-main" role="main">
+        <header class="sg-header sg-header--main">
+            <h1 class="sg-h1">Patterns</h1>
+            <ul class="sg-list">
+                <li><strong>Version</strong> 4.0.0</li>
+                <li><strong>Updated</strong> 2017-02-07 11:03:33</li>
+            </ul>
+        </header>
+
+        <button class="sg-btn sg-btn--small js-sg-patchwork" data-label-alt="View with Code Examples" data-label-default="View as Patchwork">View as Patchwork</button>
+
+        <section class="sg-l-section" id="sg-accordion">
+            <header class="sg-header sg-header--section">
+                <h2 class="sg-h2"><a class="sg-anchor" href="#sg-accordion">#</a>Accordion</h2>
+            </header>
+
+            <div class="accordion js-accordion" data-icon-up="fa-caret-up" data-icon-down="fa-caret-down" role="tablist">
+                <div class="accordion-item is-selected" role="tab" aria-selected="true" aria-hidden="false">
+                    <div class="accordion-item__title" id="accordion-tab-1" aria-controls="accordion-panel-1" role="tab">
+                        <a class="accordion-item__link" href="#sg-accordion">Lorem ipsum dolor sit amet 1<span class="icon fa fa-caret-up" aria-hidden="true"></span></a>
+                    </div>
+
+                    <div class="accordion-item__body" id="accordion-panel-1" aria-labelledby="accordion-tab-1" role="tabpanel">
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                            totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                            dicta sunt explicabo.</p>
+
+                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
+                            magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item" role="tab" aria-selected="false" aria-hidden="true">
+                    <div class="accordion-item__title" id="accordion-tab-2" aria-controls="accordion-panel-2" role="tab">
+                        <a class="accordion-item__link" href="#sg-accordion">Lorem ipsum dolor sit amet 2<span class="icon fa fa-caret-down" aria-hidden="true"></span></a>
+                    </div>
+
+                    <div class="accordion-item__body" id="accordion-panel-2" aria-labelledby="accordion-tab-2" role="tabpanel">
+                        <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
+                            sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item" role="tab" aria-selected="false" aria-hidden="true">
+                    <div class="accordion-item__title" id="accordion-tab-3" aria-controls="accordion-panel-3" role="tab">
+                        <a class="accordion-item__link" href="#sg-accordion">Lorem ipsum dolor sit amet 3<span class="icon fa fa-caret-down" aria-hidden="true"></span></a>
+                    </div>
+
+                    <div class="accordion-item__body" id="accordion-panel-3" aria-labelledby="accordion-tab-3" role="tabpanel">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</p>
+
+                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+                            id est laborum.</p>
+
+                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
+                            magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="js-sg-code">
+                <code class="sg-code prettyprint lang-html"><div class="accordion js-accordion" data-icon-up="fa-caret-up" data-icon-down="fa-caret-down" role="tablist">
+    <div class="accordion-item is-selected" role="tab" aria-selected="true" aria-hidden="false">
+        <div class="accordion-item__title" id="accordion-tab-a" aria-controls="accordion-panel-a" role="tab">
+            <a class="accordion-item__link" href="#sg-accordion">Lorem ipsum dolor sit amet 1<span class="icon fa fa-caret-up" aria-hidden="true"></span></a>
+        </div>
+
+        <div class="accordion-item__body" id="accordion-panel-a" aria-labelledby="accordion-tab-a" role="tabpanel">
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem…</p>
+        </div>
+    </div>
+
+    <div class="accordion-item" role="tab" aria-selected="false" aria-hidden="true">
+        <div class="accordion-item__title" id="accordion-tab-b" aria-controls="accordion-panel-b" role="tab">
+            <a class="accordion-item__link" href="#sg-accordion">Lorem ipsum dolor sit amet 2<span class="icon fa fa-caret-down" aria-hidden="true"></span></a>
+        </div>
+
+        <div class="accordion-item__body" id="accordion-panel-b" aria-labelledby="accordion-tab-b" role="tabpanel">
+            <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non…</p>
+        </div>
+    </div>
+</div></code>
+            </div>
+        </section>
+
+        <section class="sg-l-section" id="sg-alert">
+            <header class="sg-header sg-header--section">
+                <h2 class="sg-h2"><a class="sg-anchor" href="#sg-alert">#</a>Alert</h2>
+            </header>
+
+            <header class="sg-header sg-header--subsection" id="sg-alert-success">
+                <h3 class="sg-h4"><a class="sg-anchor" href="#sg-alert-success">#</a>Success</h3>
+            </header>
+
+            <div class="alert alert--success js-alert" role="alert">
+                <div class="alert__title">Success</div>
+
+                <p class="alert__message">
+                    <b>Well done!</b> You’ve successfully read <a href="#sg-alert-success">this important alert message</a>.
+                </p>
+
+                <button class="alert__dismiss js-dismiss" type="button"><span class="icon fa fa-times" aria-hidden="true"></span></button>
+            </div>
+
+            <div class="js-sg-code">
+                <code class="sg-code prettyprint lang-html"><div class="alert alert--success js-alert" role="alert">
+    <div class="alert__title">Success</div>
+
+    <p class="alert__message">
+        <b>Well done!</b> You successfully read <a href="#">this important alert message</a>.
+    </p>
+
+    <button class="alert__dismiss js-dismiss" type="button"><span class="icon fa fa-times" aria-hidden="true"></span></button>
+</div></code>
+            </div>
+
+            <header class="sg-header sg-header--subsection" id="sg-alert-information">
+                <h3 class="sg-h4"><a class="sg-anchor" href="#sg-alert-information">#</a>Information</h3>
+            </header>
+
+            <div class="alert alert--information js-alert" role="alert">
+                <div class="alert__title">Information</div>
+
+                <p class="alert__message">
+                    <b>Heads up!</b> This <a href="#sg-alert-information">alert needs your attention</a>, but it’s not super important.
+                </p>
+
+                <button class="alert__dismiss js-dismiss" type="button"><span class="icon fa fa-times" aria-hidden="true"></span></button>
+            </div>
+
+            <div class="js-sg-code">
+                <code class="sg-code prettyprint lang-html"><div class="alert alert--information js-alert" role="alert">
+    <div class="alert__title">Information</div>
+
+    <p class="alert__message">
+        <b>Heads up!</b> This <a href="#">alert needs your attention</a>, but it’s not super important.
+    </p>
+
+    <button class="alert__dismiss js-dismiss" type="button"><span class="icon fa fa-times" aria-hidden="true"></span></button>
+</div></code>
+            </div>
+
+            <header class="sg-header sg-header--subsection" id="sg-alert-warning">
+                <h3 class="sg-h4"><a class="sg-anchor" href="#sg-alert-warning">#</a>Warning</h3>
+            </header>
+
+            <div class="alert alert--warning js-alert" role="alert">
+                <div class="alert__title">Warning!</div>
+
+                <p class="alert__message">
+                    Better <a href="#sg-alert-warning">check yourself</a>, you’re not looking too good.
+                </p>
+
+                <button class="alert__dismiss js-dismiss" type="button"><span class="icon fa fa-times" aria-hidden="true"></span></button>
+            </div>
+
+            <div class="js-sg-code">
+                <code class="sg-code prettyprint lang-html"><div class="alert alert--warning js-alert" role="alert">
+    <div class="alert__title">Warning!</div>
+
+    <p class="alert__message">
+        Better <a href="#">check yourself</a>, you’re not looking too good.
+    </p>
+
+    <button class="alert__dismiss js-dismiss" type="button"><span class="icon fa fa-times" aria-hidden="true"></span></button>
+</div></code>
+            </div>
+
+            <header class="sg-header sg-header--subsection" id="sg-alert-error">
+                <h3 class="sg-h4"><a class="sg-anchor" href="#sg-alert-error">#</a>Error</h3>
+            </header>
+
+            <div class="alert alert--error js-alert" role="alert">
+                <div class="alert__title">Error</div>
+
+                <p class="alert__message">
+                    <b>Oh snap!</b> Change a few things up and <a href="#sg-alert-error">try submitting again</a>.
+                </p>
+
+                <button class="alert__dismiss js-dismiss" type="button"><span class="icon fa fa-times" aria-hidden="true"></span></button>
+            </div>
+
+            <div class="js-sg-code">
+                <code class="sg-code prettyprint lang-html"><div class="alert alert--error js-alert" role="alert">
+    <div class="alert__title">Error</div>
+
+    <p class="alert__message">
+        <b>Oh snap!</b> <a href="#">Change a few things up</a> and try submitting again.
+    </p>
+
+    <button class="alert__dismiss js-dismiss" type="button"><span class="icon fa fa-times" aria-hidden="true"></span></button>
+</div></code>
+            </div>
+        </section>
+
+        <section class="sg-l-section" id="sg-breadcrumbs">
+            <header class="sg-header sg-header--section">
+                <h2 class="sg-h2"><a class="sg-anchor" href="#sg-breadcrumbs">#</a>Breadcrumbs</h2>
+            </header>
+
+            <div class="breadcrumbs">
+                <ol class="breadcrumbs__list">
+                    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#sg-breadcrumbs">Services</a></li>
+                    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#sg-breadcrumbs">Strategy</a></li>
+                    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#sg-breadcrumbs">Design & UX</a></li>
+                    <li class="breadcrumbs__item is-active">Technology</li>
+                </ol>
+            </div>
+
+            <div class="js-sg-code">
+                <code class="sg-code prettyprint lang-html"><div class="breadcrumbs">
+    <ol class="breadcrumbs__list">
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Services</a></li>
+        <li class="breadcrumbs__item is-active">Technology</li>
+    </ol>
+</div></code>
+            </div>
+        </section>
+
+        <section class="sg-l-section" id="sg-card">
+            <header class="sg-header sg-header--section">
+                <h2 class="sg-h2"><a class="sg-anchor" href="#sg-card">#</a>Card</h2>
+            </header>
+
+            <div class="card">
+                <a class="card__link" href="#sg-card">
+                    <img class="card__img" src="../assets/images/general/300x169.jpg" width="300" height="169" alt="">
+                </a>
+
+                <div class="card__body">
+                    <h3 class="card__title">
+                        <a href="#sg-card">Lorem ipsum dolor sit amet</a>
+                    </h3>
+
+                    <p class="card__synopsis">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium…</p>
+
+                    <time class="card__time" datetime="2016-03-17">17 March, 2016</time>
+                </div>
+            </div>
+
+            <div class="js-sg-code">
+                <code class="sg-code prettyprint lang-html"><div class="card">
+    <a class="card__link" href="#">
+        <img class="card__img" src="../assets/images/general/300x169.jpg" width="300" height="169" alt="">
+    </a>
+
+    <div class="card__body">
+        <h3 class="card__title">
+            <a href="#">Lorem ipsum dolor sit amet</a>
+        </h3>
+
+        <p class="card__synopsis">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium…</p>
+
+        <time class="card__time" datetime="2016-03-17">17 March, 2016</time>
+    </div>
+</div></code>
+            </div>
+        </section>
+
+        <section class="sg-l-section" id="sg-carousel">
+            <header class="sg-header sg-header--section">
+                <h2 class="sg-h2"><a class="sg-anchor" href="#sg-carousel">#</a>Carousel</h2>
+            </header>
+
+            <div class="slick js-carousel" data-dots="true" data-infinite="false">
+                <div>
+                    <img src="../assets/images/general/1400x787-1.jpg" width="1400" height="787" alt="">
+                </div>
+
+                <div>
+                    <img src="../assets/images/general/1400x787-2.jpg" width="1400" height="787" alt="">
+                </div>
+
+                <div>
+                    <img src="../assets/images/general/1400x787-3.jpg" width="1400" height="787" alt="">
+                </div>
+            </div>
+
+            <div class="js-sg-code">
+                <code class="sg-code prettyprint lang-html"><div class="slick js%2Dcarousel" data-dots="true" data-infinite="false">
+    <div>
+        <img src="../assets/images/general/1400x787-1.jpg" width="1400" height="787" alt="">
+    </div>
+
+    <div>
+        <img src="../assets/images/general/1400x787-2.jpg" width="1400" height="787" alt="">
+    </div>
+
+    <div>
+        <img src="../assets/images/general/1400x787-3.jpg" width="1400" height="787" alt="">
+    </div>
+</div></code>
+            </div>
+        </section>
+
+        <section class="sg-l-section" id="sg-collapse">
+            <header class="sg-header sg-header--section">
+                <h2 class="sg-h2"><a class="sg-anchor" href="#sg-collapse">#</a>Collapse</h2>
+            </header>
+
+            <p><a class="btn btn--secondary js-collapse u-hidden" href="#sg-collapse" data-collapse-id="collapse-1" data-collapse-toggle="true">Toggle</a></p>
+
+            <div id="collapse-1">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+            </div>
+
+            <div class="js-sg-code">
+                <code class="sg-code prettyprint lang-html"><a class="btn btn--secondary js-collapse" href="#" data-collapse-id="collapse-1" data-collapse-toggle="true">Toggle</a>
+
+<div id="collapse-a">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+</div></code>
+            </div>
+        </section>
+
+        <section class="sg-l-section" id="sg-modal">
+            <header class="sg-header sg-header--section">
+                <h2 class="sg-h2"><a class="sg-anchor" href="#sg-modal">#</a>Modal</h2>
+            </header>
+
+            <p>Lorem ipsum dolor sit amet, <a class="js-modal" href="#sg-modal" data-modal-id="modal-1">consectetur adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+            <div class="modal fade" id="modal-1" tabindex="-1" aria-labelledby="modal-label-1" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="modal-label-1">Modal Title</h4>
+
+                            <button class="modal-close" type="button" data-dismiss="modal" aria-label="Close">
+                                <span class="icon fa fa-times" aria-hidden="true"></span>
+                            </button>
+                        </div>
+
+                        <div class="modal-body">
+                            <p>“The quick brown fox jumps over the lazy dog” is an English–language pangram — a phrase that contains all of the letters of the alphabet. It is used to show fonts and to test typewriters and computer keyboards, and in other applications involving all of the letters in the English alphabet. Owing to its brevity and coherence, it has become widely known.</p>
+                            <p>“The quick brown fox jumps over the lazy dog” is an English–language pangram — a phrase that contains all of the letters of the alphabet. It is used to show fonts and to test typewriters and computer keyboards, and in other applications involving all of the letters in the English alphabet. Owing to its brevity and coherence, it has become widely known.</p>
+                            <p>“The quick brown fox jumps over the lazy dog” is an English–language pangram — a phrase that contains all of the letters of the alphabet. It is used to show fonts and to test typewriters and computer keyboards, and in other applications involving all of the letters in the English alphabet. Owing to its brevity and coherence, it has become widely known.</p>
+                        </div>
+
+                        <div class="modal-footer">
+                            <div class="btn-group btn-group--flat">
+                                <a class="btn btn--secondary" href="#sg-modal" data-dismiss="modal">Cancel</a>
+                                <a class="btn" href="#sg-modal">Save</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="js-sg-code">
+                <code class="sg-code prettyprint lang-html"><p>Lorem ipsum dolor sit amet, <a class="js-modal" href="#" data-modal-id="modal-2">consectetur adipisicing</a> elit, sed…</p>
+
+<div class="modal fade" id="modal-2" tabindex="-1" aria-labelledby="modal-label-2" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="modal-label-2">Modal Title</h4>
+
+                <button class="modal-close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span class="icon fa fa-times" aria-hidden="true"></span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <p>“The quick brown fox jumps over the lazy dog” is an English–language pangram — a phrase that contains…</p>
+            </div>
+
+            <div class="modal-footer">
+                <div class="btn-group btn-group--flat">
+                    <a class="btn btn--secondary" href="#" data-dismiss="modal">Cancel</a>
+                    <a class="btn" href="#">Save</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div></code>
+            </div>
+        </section>
+
+        <section class="sg-l-section" id="sg-navigation">
+            <header class="sg-header sg-header--section">
+                <h2 class="sg-h2"><a class="sg-anchor" href="#sg-navigation">#</a>Navigation</h2>
+            </header>
+
+            <header class="sg-header sg-header--subsection" id="sg-navigation-primary">
+                <h3 class="sg-h4"><a class="sg-anchor" href="#sg-navigation-primary">#</a>Primary</h3>
+            </header>
+
+            <nav class="nav nav--primary js-menu-dropdown" data-icon-up="fa-caret-up" data-icon-down="fa-caret-down" role="navigation">
+                <ol class="nav__list">
+                    <li class="nav__item is-active"><a class="nav__link" href="#sg-navigation-primary">Home</a></li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="#sg-navigation-primary">Services<span class="icon fa fa-caret-down" aria-hidden="true"></span></a>
+                        <div class="menu js-menu" aria-hidden="true" role="menu">
+                            <ol class="menu__list">
+                                <li class="menu__item"><a class="menu__link" href="#sg-navigation-primary">Web Design</a></li>
+                                <li class="menu__item"><a class="menu__link" href="#sg-navigation-primary">Front-end Development</a></li>
+                                <li class="menu__item"><a class="menu__link" href="#sg-navigation-primary">Strategy</a></li>
+                            </ol>
+                        </div>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="#sg-navigation-primary">Work<span class="icon fa fa-caret-down" aria-hidden="true"></span></a>
+                        <div class="menu js-menu" aria-hidden="true" role="menu">
+                            <ol class="menu__list menu__list--menu js-menu" aria-hidden="true" role="menu">
+                                <li class="menu__item"><a class="menu__link" href="#sg-navigation-primary">Project – 01</a></li>
+                                <li class="menu__item"><a class="menu__link" href="#sg-navigation-primary">Project – 02</a></li>
+                                <li class="menu__item"><a class="menu__link" href="#sg-navigation-primary">Project – 03</a></li>
+                            </ol>
+                        </div>
+                    </li>
+                    <li class="nav__item"><a class="nav__link" href="#sg-navigation-primary">News</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#sg-navigation-primary">Contact</a></li>
+                </ol>
+            </nav>
+
+            <div class="js-sg-code">
+                <code class="sg-code prettyprint lang-html"><nav class="nav nav--primary js-menu-dropdown" data-icon-up="fa-caret-up" data-icon-down="fa-caret-down" role="navigation">
+    <ol class="nav__list">
+        <li class="nav__item is-active"><a class="nav__link" href="#">Home</a></li>
+        <li class="nav__item">
+            <a class="nav__link" href="#">Services<span class="icon fa fa-caret-down" aria-hidden="true"></span></a>
+            <div class="menu js-menu" aria-hidden="true" role="menu">
+                <ol class="menu__list">
+                    <li class="menu__item"><a class="menu__link" href="#">Web Design</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Front-end Development</a></li>
+                </ol>
+            </div>
+        </li>
+    </ol>
+</nav></code>
+            </div>
+
+            <header class="sg-header sg-header--subsection" id="sg-navigation-secondary">
+                <h3 class="sg-h4"><a class="sg-anchor" href="#sg-navigation-secondary">#</a>Secondary</h3>
+            </header>
+
+            <nav class="nav nav--secondary" role="navigation">
+                <ol class="nav__list">
+                    <li class="nav__item is-active"><a class="nav__link" href="#sg-navigation-secondary">Home</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#sg-navigation-secondary">Services</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#sg-navigation-secondary">Work</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#sg-navigation-secondary">News</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#sg-navigation-secondary">Contact</a></li>
+                </ol>
+            </nav>
+
+            <div class="js-sg-code">
+                <code class="sg-code prettyprint lang-html"><nav class="nav nav--secondary" role="navigation">
+    <ol class="nav__list">
+        <li class="nav__item is-active"><a class="nav__link" href="#">Home</a></li>
+        <li class="nav__item"><a class="nav__link" href="#">Services</a></li>
+    </ol>
+</nav></code>
+            </div>
+        </section>
+
+        <section class="sg-l-section" id="sg-pagination">
+            <header class="sg-header sg-header--section">
+                <h2 class="sg-h2"><a class="sg-anchor" href="#sg-pagination">#</a>Pagination</h2>
+            </header>
+
+            <div class="pagination">
+                <ol class="pagination__list">
+                    <li class="pagination__item is-disabled"><span class="icon fa fa-chevron-left" aria-hidden="true"></span>Prev</li>
+                    <li class="pagination__item is-selected"><a class="pagination__link" href="#sg-pagination">1</a></li>
+                    <li class="pagination__item"><a class="pagination__link" href="#sg-pagination">2</a></li>
+                    <li class="pagination__item"><a class="pagination__link" href="#sg-pagination">3</a></li>
+                    <li class="pagination__item is-spacer">…</li>
+                    <li class="pagination__item"><a class="pagination__link" href="#sg-pagination">7</a></li>
+                    <li class="pagination__item"><a class="pagination__link" href="#sg-pagination">8</a></li>
+                    <li class="pagination__item"><a class="pagination__link" href="#sg-pagination">9</a></li>
+                    <li class="pagination__item"><a class="pagination__link" href="#sg-pagination">Next<span class="icon fa fa-chevron-right" aria-hidden="true"></span></a></li>
+                </ol>
+            </div>
+
+            <div class="js-sg-code">
+                <code class="sg-code prettyprint lang-html"><div class="pagination">
+    <ol class="pagination__list">
+        <li class="pagination__item is-disabled"><span class="icon fa fa-chevron-left" aria-hidden="true"></span>Prev</li>
+        <li class="pagination__item is-selected"><a class="pagination__link" href="#">1</a></li>
+        <li class="pagination__item is-spacer">…</li>
+        <li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
+        <li class="pagination__item"><a class="pagination__link" href="#">Next<span class="icon fa fa-chevron-right" aria-hidden="true"></span></a></li>
+    </ol>
+</div></code>
+            </div>
+        </section>
+
+        <section class="sg-l-section" id="sg-social">
+            <header class="sg-header sg-header--section">
+                <h2 class="sg-h2"><a class="sg-anchor" href="#sg-social">#</a>Social</h2>
+            </header>
+
+            <div class="social">
+                <ol class="social__list">
+                    <li class="social__item">
+                        <a class="social__link" href="#sg-social">
+                            <span class="icon fa fa-facebook" aria-hidden="true"></span>
+                            <span class="u-visuallyhidden">Follow us on Facebook</span>
+                        </a>
+                    </li>
+
+                    <li class="social__item">
+                        <a class="social__link" href="#sg-social">
+                            <span class="icon fa fa-twitter" aria-hidden="true"></span>
+                            <span class="u-visuallyhidden">Follow us on Twitter</span>
+                        </a>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="js-sg-code">
+                <code class="sg-code prettyprint lang-html"><div class="social">
+    <ol class="social__list">
+        <li class="social__item">
+            <a class="social__link" href="#">
+                <span class="icon fa fa-facebook" aria-hidden="true"></span>
+                <span class="u-visuallyhidden">Follow us on Facebook</span>
+            </a>
+        </li>
+
+        <li class="social__item">
+            <a class="social__link" href="#">
+                <span class="icon fa fa-twitter" aria-hidden="true"></span>
+                <span class="u-visuallyhidden">Follow us on Twitter</span>
+            </a>
+        </li>
+    </ol>
+</div></code>
+            </div>
+        </section>
+
+        <section class="sg-l-section" id="sg-tabs">
+            <header class="sg-header sg-header--section">
+                <h2 class="sg-h2"><a class="sg-anchor" href="#sg-tabs">#</a>Tabs</h2>
+            </header>
+
+            <div class="tabs js-tabs">
+                <ol class="tab-list" role="tablist">
+                    <li class="tab-list__tab is-selected" id="tab-1" aria-controls="panel-1" aria-selected="true" role="tab">
+                        <a class="tab-list__link" href="#sg-tabs">Tab 1</a>
+                    </li>
+
+                    <li class="tab-list__tab" id="tab-2" aria-controls="panel-2" aria-selected="false" role="tab">
+                        <a class="tab-list__link" href="#sg-tabs">Tab 2</a>
+                    </li>
+
+                    <li class="tab-list__tab" id="tab-3" aria-controls="panel-3" aria-selected="false" role="tab">
+                        <a class="tab-list__link" href="#sg-tabs">Tab 3</a>
+                    </li>
+                </ol>
+
+                <div class="tab-panel is-selected" id="panel-1" aria-labelledby="tab-1" aria-hidden="false" role="tabpanel">
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                </div>
+
+                <div class="tab-panel" id="panel-2" aria-labelledby="tab-2" aria-hidden="true" role="tabpanel">
+                    <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+                </div>
+
+                <div class="tab-panel" id="panel-3" aria-labelledby="tab-3" aria-hidden="true" role="tabpanel">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                </div>
+            </div>
+
+            <div class="js-sg-code">
+                <code class="sg-code prettyprint lang-html"><div class="tabs js-tabs">
+    <ol class="tab-list" role="tablist">
+        <li class="tab-list__tab is-selected" id="tab-a" aria-controls="panel-a" aria-selected="true" role="tab">
+            <a class="tab-list__link" href="#">Tab 1</a>
+        </li>
+
+        <li class="tab-list__tab" id="tab-b" aria-controls="panel-b" aria-selected="false" role="tab">
+            <a class="tab-list__link" href="#">Tab 2</a>
+        </li>
+    </ol>
+
+    <div class="tab-panel is-active" id="panel-a" aria-labelledby="tab-a" aria-hidden="false" role="tabpanel">
+        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam…</p>
+    </div>
+
+    <div class="tab-panel" id="panel-b" aria-labelledby="tab-b" aria-hidden="true" role="tabpanel">
+        <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia…</p>
+    </div>
+</div></code>
+            </div>
+        </section>
+
+        <section class="sg-l-section" id="sg-tooltips">
+            <header class="sg-header sg-header--section">
+                <h2 class="sg-h2"><a class="sg-anchor" href="#sg-tooltips">#</a>Tooltips</h2>
+            </header>
+
+            <p>Sed ut <a class="js-tooltip" href="#" data-tooltip-placement="top" title="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">perspiciatis unde omnis</a>
+                iste natus error sit voluptatem accusantium <a class="js-tooltip" href="#" data-placement="right" title="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.">doloremque laudantium</a>,
+                totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta
+                sunt explicabo. Nemo enim ipsam voluptatem <a class="js-tooltip" href="#" data-placement="bottom" title="Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.">quia voluptas</a>
+                sit aspernatur aut odit aut fugit, sed quia consequuntur <a class="js-tooltip" href="#" data-tooltip-placement="left" title="Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.">magni dolores</a>
+                eos qui ratione voluptatem sequi nesciunt.</p>
+
+            <div class="js-sg-code">
+                <code class="sg-code prettyprint lang-html"><p>Sed ut <a class="js%2Dtooltip" href="#" data-placement="top" title="Lorem ipsum dolor">perspiciatis unde omnis</a> iste natus</p>
+<p>Sed ut <a class="js%2Dtooltip" href="#" data-placement="right" title="Lorem ipsum dolor">perspiciatis unde omnis</a> iste natus</p>
+<p>Sed ut <a class="js%2Dtooltip" href="#" data-placement="bottom" title="Lorem ipsum dolor">perspiciatis unde omnis</a> iste natus</p>
+<p>Sed ut <a class="js%2Dtooltip" href="#" data-placement="left" title="Lorem ipsum dolor">perspiciatis unde omnis</a> iste natus</p></code>
+            </div>
+        </section>
+
+        <footer class="sg-footer" role="contentinfo">
+            <a class="sg-footer__logo" href="https://wearenext.co.za">
+                <img src="https://wearenext.co.za/images/logos/logo-next-74x28.png" srcset="https://wearenext.co.za/images/logos/logo-next-74x28@2x.png 2x" width="74" height="28" alt="Next">
+            </a>
+
+            <ol class="sg-footer__list">
+                <li class="sg-footer__item">
+                    <a class="sg-footer__link" href="mailto:hello@wearenext.co.za" title="Email us">
+                        <span class="sg-icon next-envelope" aria-hidden="true"></span>
+                    </a>
+                </li>
+                <li class="sg-footer__item">
+                    <a class="sg-footer__link" href="https://github.com/we-are-next" title="Follow us on GitHub">
+                        <span class="sg-icon next-github" aria-hidden="true"></span>
+                    </a>
+                </li>
+                <li class="sg-footer__item">
+                    <a class="sg-footer__link" href="https://www.linkedin.com/company/next-cape-town-" title="Follow us on LinkedIn">
+                        <span class="sg-icon next-linkedin" aria-hidden="true"></span>
+                    </a>
+                </li>
+                <li class="sg-footer__item">
+                    <a class="sg-footer__link" href="https://www.twitter.com/nextct" title="Follow us on Twitter">
+                        <span class="sg-icon next-twitter" aria-hidden="true"></span>
+                    </a>
+                </li>
+            </ol>
+
+            <p class="sg-footer__legal">© 2016 Next</p>
+        </footer>
+    </main>
+
+    <!-- Google Analytics -->
+    <script>
+        window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+        ga('create','UA-81706063-1','auto');ga('send','pageview')
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/styleguide/plugins.js"></script>
+    <script src="../assets/js/styleguide/styleguide.js"></script>
+</body>
+</html>

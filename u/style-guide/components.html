@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<!--[if IE 7]>         <html lang="en" dir="ltr" class="no-js lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" dir="ltr" class="no-js lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]>         <html lang="en" dir="ltr" class="no-js lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!--> <html lang="en" dir="ltr" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+    <title>Components</title>
+
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Open Graph: http://ogp.me -->
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:locale" content="en" />
+
+    <!-- Twitter Cards: https://dev.twitter.com/docs/cards -->
+    <meta name="twitter:card" content="" />
+    <meta name="twitter:site" content="" />
+    <meta name="twitter:creator" content="" />
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:image" content="" />
+
+    <!-- Avoiding the FOUC v3.0: http://www.paulirish.com/2009/avoiding-the-fouc-v3 -->
+    <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+
+    <!-- Google+ Page: https://support.google.com/webmasters/answer/1708844 -->
+    <link rel="publisher" href="//plus.google.com/{+PageId}/" />
+
+    <!-- Font Awesome: http://fortawesome.github.io/Font-Awesome -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" />
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Droid+Sans:400,600,700" />
+
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="assets/css/main.css?v=0.2.3" />
+    <link rel="stylesheet" href="assets/css/style-guide/main.css?v=0.2.3" />
+
+    <!--[if lt IE 9]>
+    <script src="assets/js/vendor/polyfills.js"></script>
+    <![endif]-->
+</head>
+<body class="sg-body" data-component="prettyprint">
+    <header class="sg-header" role="banner">
+        <div class="sg-wrapper">
+            <a href="index.html" class="sg-home"><i class="fa fa-home"></i></a>
+            <h1 class="delta white">Components</h1>
+            <a href="components.html#sg-table-of-contents" class="sg-nav-toggle" data-action="sg-nav-toggle"><i class="fa fa-bars"></i></a>
+        </div>
+    </header>
+    <!-- // Header -->
+
+    <nav class="sg-nav" data-container="sg-nav" role="navigation">
+        <div class="sg-wrapper">
+            <ol class="sg-list sg-list-nav">
+                <li><a href="#sg-accordion"><i class="fa fa-caret-right"></i> Accordion</a></li>
+                <li><a href="#sg-carousel"><i class="fa fa-caret-right"></i> Carousel</a></li>
+                <li><a href="#sg-modals"><i class="fa fa-caret-right"></i> Modals</a></li>
+                <li><a href="#sg-navigation"><i class="fa fa-caret-right"></i> Navigation</a></li>
+                <li><a href="#sg-sliders"><i class="fa fa-caret-right"></i> Sliders</a></li>
+                <li><a href="#sg-tabs"><i class="fa fa-caret-right"></i> Tabs</a></li>
+                <li><a href="#sg-tooltips"><i class="fa fa-caret-right"></i> Tooltips</a></li>
+            </ol>
+        </div>
+    </nav>
+    <!-- // Navigation -->
+
+    <main id="top" class="sg-main" role="main">
+        <div class="sg-wrapper">
+            <a id="sg-accordion" class="sg-section-link"></a>
+
+            <!--[if lt IE 9]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/?locale=en">upgrade your browser</a> to improve your experience.</p>
+            <![endif]-->
+
+            <section class="sg-section">
+                <h5 class="epsilon sg-section-heading-primary">Accordion <a href="#top" data-action="sg-back-to-top">Back to Top <i class="fa fa-arrow-up"></i></a></h5>
+                
+                <div class="accordion" data-component="accordion">
+                    <div class="accordion-item-header is-active" data-accordion-id="1">
+                        <a href="#">
+                            <i class="fa fa-caret-down"></i> Lorem ipsum dolor sit amet
+                        </a>
+                    </div>
+                    <div class="accordion-item-contents is-visible" data-accordion="1">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                    <!-- // Item -->
+
+                    <div class="accordion-item-header" data-accordion-id="2">
+                        <a href="#">
+                            <i class="fa fa-caret-down"></i> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                        </a>
+                    </div>
+                    <div class="accordion-item-contents" data-accordion="2">
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?</p>
+                        <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                    <!-- // Item -->
+
+                    <div class="accordion-item-header" data-accordion-id="3">
+                        <a href="#">
+                            <i class="fa fa-caret-down"></i> Quis autem vel eum iure reprehenderit qui in ea voluptate velit
+                        </a>
+                    </div>
+                    <div class="accordion-item-contents" data-accordion="3">
+                        <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+                        <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?</p>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+                    <!-- // Item -->
+                </div>
+                <!-- // Accordion -->
+
+                <div class="sg-source-code">
+                    <a href="#" class="sg-btn" data-action="sg-toggle-source-code" role="button">View Source</a>
+                    <div class="sg-source-code-wrapper" data-container="sg-source-code">
+<code class="prettyprint linenums">&lt;div class="accordion" data-component="accordion"&gt;
+    &lt;div class="accordion-item-header"&gt;
+        &lt;a href="#"&gt;
+            &lt;i class="fa fa-caret-down"&gt;&lt;/i&gt; Lorem ipsum dolor sit amet
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;!-- // Header --&gt;
+    
+    &lt;div class="accordion-item-contents"&gt;
+        &lt;p&gt;Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim&hellip;&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;!-- // Contents --&gt;
+&lt;/div&gt;
+</code>
+                    </div>
+                </div>
+                <!-- // Source Code -->
+            </section>
+            <!-- // Accordion -->
+
+            <a id="sg-carousel" class="sg-section-link"></a>
+            <section class="sg-section">
+                <h5 class="epsilon sg-section-heading-primary">Carousel <a href="#top" data-action="sg-back-to-top">Back to Top <i class="fa fa-arrow-up"></i></a></h5>
+
+				<div class="flexslider" data-component="carousel" data-slideshow="false">
+					<ul class="slides">
+						<li><img src="http://placekitten.com/300/300" alt="Caption of the Figure" /></li>
+						<li><img src="http://placekitten.com/300/300" alt="Caption of the Figure" /></li>
+						<li><img src="http://placekitten.com/300/300" alt="Caption of the Figure" /></li>
+						<li><img src="http://placekitten.com/300/300" alt="Caption of the Figure" /></li>
+						<li><img src="http://placekitten.com/300/300" alt="Caption of the Figure" /></li>
+						<li><img src="http://placekitten.com/300/300" alt="Caption of the Figure" /></li>
+					</ul>
+					<!-- // Slides -->
+				</div>
+                <!-- // Carousel -->
+
+                <div class="sg-source-code">
+                    <a href="#" class="sg-btn" data-action="sg-toggle-source-code" role="button">View Source</a>
+                    <div class="sg-source-code-wrapper" data-container="sg-source-code">
+<code class="prettyprint linenums">&lt;div class="flexslider" data-component="carousel" data-slideshow="false"&gt;
+	&lt;ul class="slides"&gt;
+		&lt;li&gt;&lt;img src="http://placekitten.com/300/300" alt="Caption of the Figure" /&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;img src="http://placekitten.com/300/300" alt="Caption of the Figure" /&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;img src="http://placekitten.com/300/300" alt="Caption of the Figure" /&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;img src="http://placekitten.com/300/300" alt="Caption of the Figure" /&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;img src="http://placekitten.com/300/300" alt="Caption of the Figure" /&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;img src="http://placekitten.com/300/300" alt="Caption of the Figure" /&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;!-- // Slides --&gt;
+&lt;/div&gt;
+</code>
+                    </div>
+                </div>
+                <!-- // Source Code -->
+            </section>
+            <!-- // Carousel -->
+
+            <a id="sg-modals" class="sg-section-link"></a>
+            <section class="sg-section">
+                <h5 class="epsilon sg-section-heading-primary">Modals <a href="#top" data-action="sg-back-to-top">Back to Top <i class="fa fa-arrow-up"></i></a></h5>
+
+                <p>Lorem ipsum <a href="#modal-1" data-component="modal" data-modal-action="open" data-modal-id="modal-1">dolor sit amet</a>, consectetur adipisicing elit, <a href="#modal-1" data-component="modal" data-modal-action="open" data-modal-id="modal-1">sed do eiusmod</a> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad <a href="#modal-2" data-component="modal" data-modal-action="open" data-modal-id="modal-2">minim veniam</a>, quis nostrud exercitation ullamco <a href="#modal-1" data-component="modal" data-modal-action="open" data-modal-id="modal-1">laboris nisi</a> ut aliquip ex ea commodo consequat. Duis aute irure dolor in <a href="#modal-1" data-component="modal" data-modal-action="open" data-modal-id="modal-2">reprehenderit velit esse</a> cillum dolore eu fugiat nulla pariatur.</p>
+                <div id="modal-1" class="modal" role="dialog">
+                    <a href="#" class="close-modal" data-component="modal" data-modal-action="close" role="button"><i class="fa fa-times"></i></a>
+                    <!-- // Close -->
+
+                    <p>You can press <kbd>ESC</kbd> to close this modal.</p>
+                    <p>At vero eos et <a href="#modal-2" data-component="modal" data-modal-action="open" data-modal-id="modal-2">dolor sit amet</a> et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati <a href="#modal-2" data-component="modal" data-modal-action="open" data-modal-id="modal-2">minim veniam</a> non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+                    <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus <a href="#modal-2" data-component="modal" data-modal-action="open" data-modal-id="modal-2">autem quibusdam</a> et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non <a href="#modal-2" data-component="modal" data-modal-action="open" data-modal-id="modal-2">recusandae</a>.</p>
+                    <p>Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+                    <!-- // Contents -->
+                </div>
+                <!-- // Modal: 1 -->
+
+                <div id="modal-2" class="modal" role="dialog">
+                    <a href="#" class="close-modal" data-component="modal" data-modal-action="close" role="button"><i class="fa fa-times"></i></a>
+                    <!-- // Close -->
+                    <p>You can press <kbd>ESC</kbd> to close this modal.</p>
+                    <p>Sed ut perspiciatis <a href="#modal-1" data-component="modal" data-modal-action="open" data-modal-id="modal-1">unde omnis</a> iste natus error sit voluptatem <a href="#modal-1" data-component="modal" data-modal-action="open" data-modal-id="modal-1">accusantium doloremque laudantium</a>, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                    <p><a href="#modal-1" data-component="modal" data-modal-action="open" data-modal-id="modal-1">Nemo enim ipsam</a> voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia <a href="#modal-1" data-component="modal" data-modal-action="open" data-modal-id="modal-1">consequuntur magni</a> dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                    <!-- // Contents -->
+                </div>
+                <!-- // Modal: 2 -->
+
+                <div class="sg-source-code">
+                    <a href="#" class="sg-btn" data-action="sg-toggle-source-code" role="button">View Source</a>
+                    <div class="sg-source-code-wrapper" data-container="sg-source-code">
+<code class="prettyprint linenums">&lt;p&gt;Lorem ipsum &lt;a href="#modal-1" data-component="modal" data-modal-action="open" data-modal-id="modal-1"&gt;dolor sit amet&lt;/a&gt;&lt;/p&gt;
+&lt;!-- // Open --&gt;
+
+&lt;div id="modal-1" class="modal" role="dialog"&gt;
+    &lt;a href="#" class="close-modal" data-component="modal" data-modal-action="close" role="button"&gt;&lt;i class="fa fa-times"&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;!-- // Close --&gt;
+
+    &lt;p&gt;You can press &lt;kbd&gt;ESC&lt;/kbd&gt; to close this modal.&lt;/p&gt;
+    &lt;p&gt;At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis&hellip;&lt;/p&gt;
+    &lt;!-- // Contents --&gt;
+&lt;/div&gt;
+&lt;!-- // Modal --&gt;
+</code>
+                    </div>
+                </div>
+                <!-- // Source Code -->
+            </section>
+            <!-- // Modals -->
+
+            <a id="sg-navigation" class="sg-section-link"></a>
+            <section class="sg-section">
+                <h5 class="epsilon sg-section-heading-primary">Navigation <a href="#top" data-action="sg-back-to-top">Back to Top <i class="fa fa-arrow-up"></i></a></h5>
+
+                <h6 class="zeta grey-light sg-section-heading-secondary">Drop&ndash;down <a href="#top" data-action="sg-back-to-top">Back to Top <i class="fa fa-arrow-up"></i></a></h6>
+                <nav role="navigation" class="nav-horizontal" data-component="nav-horizontal">
+					<div class="header-toggle-nav">
+                        <a href="components.html#sg-navigation" class="nav-toggle" data-action="nav-toggle"><i class="fa fa-bars"></i></a>
+					</div>
+                    <ul class="list list-nav list-nav-horizontal has-drop-down" data-component="nav-drop-down">
+                        <li><a href="components.html#sg-navigation">Lorem ipsum dolor</a></li>
+                        <li><a href="components.html#sg-navigation">Sit amet consectetur</a></li>
+                        <li data-drop-down="true">
+                            <a href="components.html#sg-navigation">Adipisicing elit <i class="fa fa-caret-down"></i></a>
+                            <ul class="list list-nav list-nav-drop-down">
+                                <li><a href="components.html#sg-navigation">Lorem ipsum dolor</a></li>
+                                <li><a href="components.html#sg-navigation">Ducimus qui</a></li>
+                                <li><a href="components.html#sg-navigation">Magni dolores eos</a></li>
+                                <li><a href="components.html#sg-navigation">Autem quibusdam</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="components.html#sg-navigation">Sed do eiusmod</a></li>
+                        <li data-drop-down="true">
+                            <a href="components.html#sg-navigation">Tempor incididunt <i class="fa fa-caret-down"></i></a>
+                            <ul class="list list-nav list-nav-drop-down right">
+                                <li><a href="components.html#sg-navigation">Neque porro quisquam</a></li>
+                                <li><a href="components.html#sg-navigation">Sed do eiusmod</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="components.html#sg-navigation">Ut labore</a></li>
+                    </ul>
+                </nav>
+                <!-- Navigation (Drop–down) -->
+
+                <div class="sg-source-code">
+                    <a href="#" class="sg-btn" data-action="sg-toggle-source-code" role="button">View Source</a>
+                    <div class="sg-source-code-wrapper" data-container="sg-source-code">
+<code class="prettyprint linenums">&lt;nav role="navigation" class="nav-horizontal" data-component="nav-horizontal"&gt;
+    &lt;div class="header-toggle-nav"&gt;
+        &lt;a href="#" class="nav-toggle" data-action="nav-toggle"&gt;&lt;i class="fa fa-bars"&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;ul class="list list-nav list-nav-horizontal has-drop-down" data-component="nav-drop-down"&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Lorem ipsum dolor&lt;/a&gt;&lt;/li&gt;
+        &lt;li data-drop-down="true"&gt;
+            &lt;a href="#"&gt;Adipisicing elit &lt;i class="fa fa-caret-down"&gt;&lt;/i&gt;&lt;/a&gt;
+            &lt;ul class="list list-nav list-nav-drop-down"&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Ducimus qui&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+</code>
+                    </div>
+                </div>
+                <!-- // Source Code -->
+
+                <h6 class="zeta grey-light sg-section-heading-secondary">Horizontal <a href="#top" data-action="sg-back-to-top">Back to Top <i class="fa fa-arrow-up"></i></a></h6>
+                <nav role="navigation" class="nav-horizontal" data-component="nav-horizontal">
+					<div class="header-toggle-nav">
+                        <a href="components.html#sg-navigation" class="nav-toggle" data-action="nav-toggle"><i class="fa fa-bars"></i></a>
+					</div>
+                    <ul class="list list-nav list-nav-horizontal is-visible">
+                        <li><a href="components.html#sg-navigation">Lorem ipsum dolor</a></li>
+                        <li><a href="components.html#sg-navigation">Sit amet consectetur</a></li>
+                        <li><a href="components.html#sg-navigation">Adipisicing elit</a></li>
+                        <li><a href="components.html#sg-navigation">Sed do eiusmod</a></li>
+                        <li><a href="components.html#sg-navigation">Tempor incididunt</a></li>
+                        <li><a href="components.html#sg-navigation">Ut labore</a></li>
+                    </ul>
+                </nav>
+                <!-- Navigation (Horizontal) -->
+
+                <div class="sg-source-code">
+                    <a href="#" class="sg-btn" data-action="sg-toggle-source-code" role="button">View Source</a>
+                    <div class="sg-source-code-wrapper" data-container="sg-source-code">
+<code class="prettyprint linenums">&lt;nav role="navigation" class="nav-horizontal" data-component="nav-horizontal"&gt;
+    &lt;div class="header-toggle-nav"&gt;
+        &lt;a href="#" class="nav-toggle" data-action="nav-toggle"&gt;&lt;i class="fa fa-bars"&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;/div>
+	&lt;ul class="list list-nav list-nav-horizontal"&gt;
+		&lt;li&gt;&lt;a href="#"&gt;Lorem ipsum dolor&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#"&gt;Sit amet consectetur&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#"&gt;Adipisicing elit&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/nav&gt;
+</code>
+                    </div>
+                </div>
+                <!-- // Source Code -->
+
+                <h6 class="zeta grey-light sg-section-heading-secondary">Off&ndash;canvas <a href="#top" data-action="sg-back-to-top">Back to Top <i class="fa fa-arrow-up"></i></a></h6>
+                <div class="wrapper-canvas" data-component="nav-canvas">
+                    <nav class="nav-canvas" role="navigation">
+                        <ul class="list list-nav list-nav-vertical">
+                            <li><a href="components.html#sg-navigation">Lorem ipsum dolor</a></li>
+                            <li><a href="components.html#sg-navigation">Sit amet consectetur</a></li>
+                            <li><a href="components.html#sg-navigation">Adipisicing elit</a></li>
+                            <li><a href="components.html#sg-navigation">Sed do eiusmod</a></li>
+                            <li><a href="components.html#sg-navigation">Tempor incididunt</a></li>
+                            <li><a href="components.html#sg-navigation">Ut labore</a></li>
+                        </ul>
+                    </nav>
+                    <!-- // Nav -->
+
+                    <div class="contents-canvas" data-canvas="true">
+                        <header class="header-toggle-nav">
+                            <a href="#" class="toggle-canvas" data-canvas-action="toggle"><i class="fa fa-bars"></i></a>
+                            <!-- // Toggle -->
+                        </header>
+                        <!-- // Header -->
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                    </div>
+                    <!-- // Canvas -->
+                </div>
+                <!-- // Off–canvas Navigation -->
+
+                <div class="sg-source-code">
+                    <a href="#" class="sg-btn" data-action="sg-toggle-source-code" role="button">View Source</a>
+                    <div class="sg-source-code-wrapper" data-container="sg-source-code">
+<code class="prettyprint linenums">&lt;div class="wrapper-canvas" data-component="nav-canvas"&gt;
+    &lt;nav class="nav-canvas" role="navigation"&gt;
+        &lt;ul class="list list-nav list-nav-vertical"&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Lorem ipsum dolor&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Sit amet consectetur&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Adipisicing elit&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+    &lt;!-- // Nav --&gt;
+
+    &lt;div class="contents-canvas" data-canvas="true"&gt;
+        &lt;header class="header-toggle-nav"&gt;
+            &lt;a href="#" class="toggle-canvas" data-canvas-action="toggle"&gt;&lt;i class="fa fa-bars"&gt;&lt;/i&gt;&lt;/a&gt;
+            &lt;!-- // Toggle --&gt;
+        &lt;/header&gt;
+        &lt;!-- // Header --&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt&hellip;&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;!-- // Canvas --&gt;
+&lt;/div&gt;
+</code>
+                    </div>
+                </div>
+                <!-- // Source Code -->
+
+                <h6 class="zeta grey-light sg-section-heading-secondary">Vertical <a href="#top" data-action="sg-back-to-top">Back to Top <i class="fa fa-arrow-up"></i></a></h6>
+                <nav role="navigation">
+                    <ul class="list list-nav list-nav-vertical">
+                        <li><a href="components.html#sg-navigation">Lorem ipsum dolor</a></li>
+                        <li><a href="components.html#sg-navigation">Sit amet consectetur</a></li>
+                        <li><a href="components.html#sg-navigation">Adipisicing elit</a></li>
+                        <li><a href="components.html#sg-navigation">Sed do eiusmod</a></li>
+                        <li><a href="components.html#sg-navigation">Tempor incididunt</a></li>
+                        <li><a href="components.html#sg-navigation">Ut labore</a></li>
+                    </ul>
+                </nav>
+                <!-- Navigation (Vertical) -->
+
+                <div class="sg-source-code">
+                    <a href="#" class="sg-btn" data-action="sg-toggle-source-code" role="button">View Source</a>
+                    <div class="sg-source-code-wrapper" data-container="sg-source-code">
+                        <code class="prettyprint linenums">&lt;nav role="navigation"&gt;
+                            &lt;ul class="list list-nav list-nav-vertical"&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;Lorem ipsum dolor&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;Sit amet consectetur&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="#"&gt;Adipisicing elit&lt;/a&gt;&lt;/li&gt;
+                            &lt;/ul&gt;
+                            &lt;/nav&gt;
+                        </code>
+                    </div>
+                </div>
+                <!-- // Source Code -->
+            </section>
+            <!-- // Navigation -->
+
+            <a id="sg-sliders" class="sg-section-link"></a>
+            <section class="sg-section">
+                <h5 class="epsilon sg-section-heading-primary">Sliders <a href="#top" data-action="sg-back-to-top">Back to Top <i class="fa fa-arrow-up"></i></a></h5>
+
+                <h6 class="zeta grey-light sg-section-heading-secondary">Slider <i>with slideshow</i> <a href="#top" data-action="sg-back-to-top">Back to Top <i class="fa fa-arrow-up"></i></a></h6>
+
+                <div class="flexslider" data-component="slider" data-slideshow="true">
+                    <ul class="slides">
+                        <li><img src="http://placekitten.com/680/400" alt="Caption of the Figure" /></li>
+                        <li><img src="http://placekitten.com/680/400" alt="Caption of the Figure" /></li>
+                        <li><img src="http://placekitten.com/680/400" alt="Caption of the Figure" /></li>
+                        <li><img src="http://placekitten.com/680/400" alt="Caption of the Figure" /></li>
+                    </ul>
+                </div>
+                <!-- // Basic Slider -->
+
+                <div class="sg-source-code">
+                    <a href="#" class="sg-btn" data-action="sg-toggle-source-code" role="button">View Source</a>
+                    <div class="sg-source-code-wrapper" data-container="sg-source-code">
+<code class="prettyprint linenums">&lt;div class="flexslider" data-component="slider" data-slideshow="true"&gt;
+    &lt;ul class="slides"&gt;
+        &lt;li&gt;&lt;img src="http://placekitten.com/680/400" alt="Caption of the Figure" /&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;img src="http://placekitten.com/680/400" alt="Caption of the Figure" /&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;img src="http://placekitten.com/680/400" alt="Caption of the Figure" /&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;img src="http://placekitten.com/680/400" alt="Caption of the Figure" /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+	&lt;!-- // Slides --&gt;
+&lt;/div&gt;
+</code>
+                    </div>
+                </div>
+                <!-- // Source Code -->
+
+                <h6 class="zeta grey-light sg-section-heading-secondary">Slider <i>with thumbnail navigation</i> <a href="#top" data-action="sg-back-to-top">Back to Top <i class="fa fa-arrow-up"></i></a></h6>
+
+                <div class="flexslider" data-component="slider" data-slider-navigation="thumbnails">
+                    <ul class="slides">
+                        <li data-thumb="http://placekitten.com/340/200"><img src="http://placekitten.com/680/400" alt="Caption of the Figure" /></li>
+                        <li data-thumb="http://placekitten.com/340/200"><img src="http://placekitten.com/680/400" alt="Caption of the Figure" /></li>
+                        <li data-thumb="http://placekitten.com/340/200"><img src="http://placekitten.com/680/400" alt="Caption of the Figure" /></li>
+                        <li data-thumb="http://placekitten.com/340/200"><img src="http://placekitten.com/680/400" alt="Caption of the Figure" /></li>
+                    </ul>
+                </div>
+                <!-- // Basic Slider with Thumbnail Navigation -->
+
+                <div class="sg-source-code">
+                    <a href="#" class="sg-btn" data-action="sg-toggle-source-code" role="button">View Source</a>
+                    <div class="sg-source-code-wrapper" data-container="sg-source-code">
+<code class="prettyprint linenums">&lt;div class="flexslider" data-component="slider" data-slider-navigation="thumbnails"&gt;
+    &lt;ul class="slides"&gt;
+        &lt;li data-thumb="http://placekitten.com/340/200"&gt;&lt;img src="http://placekitten.com/680/400" alt="Caption of the Figure" /&gt;&lt;/li&gt;
+        &lt;li data-thumb="http://placekitten.com/340/200"&gt;&lt;img src="http://placekitten.com/680/400" alt="Caption of the Figure" /&gt;&lt;/li&gt;
+        &lt;li data-thumb="http://placekitten.com/340/200"&gt;&lt;img src="http://placekitten.com/680/400" alt="Caption of the Figure" /&gt;&lt;/li&gt;
+        &lt;li data-thumb="http://placekitten.com/340/200"&gt;&lt;img src="http://placekitten.com/680/400" alt="Caption of the Figure" /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+	&lt;!-- // Slides --&gt;
+&lt;/div&gt;
+</code>
+                    </div>
+                </div>
+                <!-- // Source Code -->
+            </section>
+            <!-- // Slider -->
+
+            <a id="sg-tabs" class="sg-section-link"></a>
+            <section class="sg-section">
+                <h5 class="epsilon sg-section-heading-primary">Tabs <a href="#top" data-action="sg-back-to-top">Back to Top <i class="fa fa-arrow-up"></i></a></h5>
+                
+				<div class="tabs" data-component="tabs">
+					<ol class="tabs-navigation">
+						<li><a href="#" class="is-active" data-tab-id="1">Lorem</a></li>
+						<li><a href="#" data-tab-id="2">Consectetur</a></li>
+						<li><a href="#" data-tab-id="3">Aliquip Ex</a></li>
+					</ol>
+					<!-- // Navigation -->
+
+					<div class="tabs-content">
+						<div class="tab-content is-visible" data-tab="1">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit velit esse cillum dolore eu fugiat nulla pariatur.</p>
+							<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</div>
+						<!-- // Tab -->
+
+						<div class="tab-content" data-tab="2">
+							<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit velit esse cillum dolore eu fugiat nulla pariatur.</p>
+							<p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?</p>
+							<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+							<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</div>
+						<!-- // Tab -->
+
+						<div class="tab-content" data-tab="3">
+							<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+							<p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?</p>
+							<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+						</div>
+						<!-- // Tab -->
+					</div>
+					<!-- // Content -->
+				</div>
+                <!-- // Tabs -->
+
+                <div class="sg-source-code">
+                    <a href="#" class="sg-btn" data-action="sg-toggle-source-code" role="button">View Source</a>
+                    <div class="sg-source-code-wrapper" data-container="sg-source-code">
+<code class="prettyprint linenums">&lt;div class="tabs" data-component="tabs"&gt;
+	&lt;ol class="tabs-navigation"&gt;
+		&lt;li&gt;&lt;a href="#" class="is-active" data-tab-id="1"&gt;Lorem&lt;/a&gt;&lt;/li&gt;
+	&lt;/ol&gt;
+	&lt;!-- // Navigation --&gt;
+
+	&lt;div class="tabs-content"&gt;
+		&lt;div class="tab-content is-visible" data-tab="1"&gt;
+			&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;!-- // Tab --&gt;
+	&lt;/div&gt;
+	&lt;!-- // Content --&gt;
+&lt;/div&gt;
+</code>
+                    </div>
+                </div>
+                <!-- // Source Code -->
+            </section>
+            <!-- // Tooltips -->
+
+            <a id="sg-tooltips" class="sg-section-link"></a>
+            <section class="sg-section">
+                <h5 class="epsilon sg-section-heading-primary">Tooltips <a href="#top" data-action="sg-back-to-top">Back to Top <i class="fa fa-arrow-up"></i></a></h5>
+
+                <p>Sed ut <a href="components.html#sg-tooltips" data-component="tooltip" data-placement="top" title="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">perspiciatis unde omnis</a> iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, <a href="components.html#sg-tooltips" data-component="tooltip" data-placement="right" title="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.">eaque ipsa quae</a> ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem <a href="components.html#sg-tooltips" data-component="tooltip" data-placement="left" title="Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.">quia voluptas sit</a> aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                <!-- // Tooltips -->
+
+                <div class="sg-source-code">
+                    <a href="#" class="sg-btn" data-action="sg-toggle-source-code" role="button">View Source</a>
+                    <div class="sg-source-code-wrapper" data-container="sg-source-code">
+<code class="prettyprint linenums">&lt;p&gt;Sed ut &lt;a href="#" data-component="tooltip" data-placement="top" title="Lorem ipsum dolor"&gt;perspiciatis unde omnis&lt;/a&gt; iste natus&lt;/p&gt;</code>
+                    </div>
+                </div>
+                <!-- // Source Code -->
+            </section>
+            <!-- // Tooltips -->
+
+			<a id="sg-table-of-contents" class="sg-section-link js-hidden"></a>
+			<section class="sg-section js-hidden">
+				<h6 class="zeta sg-section-heading-primary">Table of Contents <a href="#top" data-action="sg-back-to-top">Back to Top <i class="fa fa-arrow-up"></i></a></h6>
+				<ul class="sg-list sg-list-table-of-contents">
+					<li><a href="#sg-accordion">Accordion</a></li>
+					<li><a href="#sg-carousel">Carousel</a></li>
+					<li><a href="#sg-modals">Modals</a></li>
+					<li><a href="#sg-navigation">Off&ndash;canvas Navigation</a></li>
+					<li><a href="#sg-sliders">Slider</a></li>
+					<li><a href="#sg-tabs">Tabs</a></li>
+					<li><a href="#sg-tooltips">Tooltips</a></li>
+				</ul>
+			</section>
+			<!-- // Table of Contents -->
+        </div>
+    </main>
+    <!-- // Main -->
+
+    <footer class="sg-footer" role="contentinfo">
+        <div class="sg-wrapper">
+            <p>
+                <small><b>Last Modified</b>: <time datetime="2013-11-30" data-component="last-modified">November 30, 2013</time></small>
+            </p>
+            <p>
+                <small><b>Version</b>: 0.2.3</small>
+            </p>
+        </div>
+    </footer>
+    <!-- // Footer -->
+
+    <!-- JavaScript -->
+    <script src="assets/js/vendor/jquery.js"></script>
+    <script src="assets/js/plugins.js?v=0.2.3"></script>
+    <script src="assets/js/main.js?v=0.2.3"></script>
+    <script src="assets/js/style-guide/prettify.js?v=0.2.3"></script>
+    <script src="assets/js/style-guide/main.js?v=0.2.3"></script>
+    <script>main.init();</script>
+    <script>style_guide.init();</script>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+    <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+</body>
+</html>

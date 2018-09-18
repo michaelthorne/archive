@@ -1,0 +1,613 @@
+/* ==========================================================================
+   Typography: color, font-size, font-weight, line-height, text-decoration
+   ========================================================================== */
+
+@import-once "inc/colours.less";
+@import-once "inc/fonts.less";
+@import-once "inc/mixins.less";
+@import-once "inc/viewports";
+
+body {
+    font: 100% @font-family-muli; // Target ÷ Context = Result
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Navigation
+   ========================================================================== */
+
+// Navigation
+.navigation {
+
+    li {
+
+        a {
+            font-size: 14px;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+    }
+}
+
+// Primary drop-down navigation
+.navigation-primary {
+    background-color: @colour-white;
+
+    li {
+
+        a {
+            color: @colour-black;
+        }
+    }
+}
+
+// Secondary section navigation
+.navigation-secondary {
+
+    li {
+
+        a {
+            font-size: 13px;
+            color: @colour-gainsboro;
+        }
+    }
+}
+
+// Active section navigation anchor
+#active {
+    color: @colour-black;
+
+    span {
+        font-size: 14px;
+    }
+
+    i {
+        font-size: 40px;
+    }
+}
+
+/*
+ * Accordion
+ */
+
+// Wrapper
+ul.wrapper-accordion {
+    display: block;
+    height: 100px;
+    width: 100%;
+}
+
+// Unordered lists
+ul.accordion {
+
+    li {
+
+        // Main sections
+        &.accordion-primary {
+
+            a {
+                color: @colour-black;
+            }
+        }
+
+        // Sub sections
+        &.accordion-secondary {
+
+            a {
+                color: @colour-white;
+            }
+        }
+
+        a {
+            font-size: 12px;
+            line-height: 1;
+            text-decoration: none;
+            text-transform: uppercase;
+
+            span {
+                font-size: 12px;
+                line-height: 1;
+            }
+        }
+    }
+}
+
+// Back to Top
+a.back-to-top {
+
+    &:active {
+        outline: 1px @colour-white solid;
+    }
+}
+
+/* Headings
+   ========================================================================== */
+
+h1 {
+    font-family: @font-family-raleway;
+    font-size: 70px;
+    font-weight: @font-weight-normal;
+    letter-spacing: -3px;
+    text-transform: uppercase;
+
+    @media screen and (max-width: @viewport-small) {
+        font-size: 40px;
+    }
+
+    @media screen and (min-width: @viewport-larger) {
+        font-size: 80px;
+    }
+
+    // Alice Lane logo
+    &.logo {
+        font-size: inherit;
+        line-height: 1;
+    }
+
+    // Small headings
+    &.small {
+        font-size: 64px;
+
+        @media screen and (max-width: @viewport-small) {
+            font-size: 40px;
+        }
+    }
+
+    // Medium headings
+    &.medium {
+        font-size: 70px;
+
+        @media screen and (max-width: @viewport-small) {
+            font-size: 40px;
+        }
+    }
+
+    // Large headings {
+    &.large {
+        font-size: 70px;
+
+        @media screen and (max-width: @viewport-small) {
+            font-size: 40px;
+        }
+
+        @media screen and (min-width: @viewport-larger) {
+            font-size: 100px;
+        }
+    }
+
+
+    // Center aligned text
+    &.center {
+        text-align: left;
+
+        @media screen and (min-width: @viewport-larger) {
+            text-align: center;
+        }
+    }
+
+    // Right aligned text
+    &.right {
+        text-align: left;
+
+        @media screen and (min-width: @viewport-larger) {
+            text-align: right;
+        }
+    }
+}
+
+// Rooftop Training
+&.contents-rooftop-training {
+
+    h1 {
+
+        @media screen and (max-width: @viewport-large) {
+            background-color: @colour-gorse;
+            color: @colour-denim !important;
+        }
+    }
+}
+
+// Anti-gravity Yoga
+&.contents-anti-gravity-yoga {
+
+    h1 {
+
+        @media screen and (max-width: @viewport-large) {
+            background-color: @colour-mulberry;
+            color: @colour-white !important;
+        }
+    }
+}
+
+// Queenax Units
+&.contents-queenax-units {
+    text-align: center;
+
+    @media screen and (min-width: @viewport-large) {
+
+        h1 {
+            font-size: 75px;
+        }
+    }
+}
+
+// Shoeshine Bar
+&.contents-shoeshine-bar {
+
+    h1 {
+
+        @media screen and (max-width: @viewport-large) {
+            background-color: @colour-chardonnay;
+            color: @colour-black !important;
+        }
+    }
+}
+
+// Aqua Lounge
+&.contents-aqua-lounge {
+
+    h1 {
+
+        @media screen and (max-width: @viewport-large) {
+            background-color: @colour-cornflower-blue;
+            color: @colour-black !important;
+        }
+    }
+}
+
+// Fine Dining
+&.contents-fine-dining {
+
+    h1 {
+
+        &.small {
+            font-size: 65px;
+
+            @media screen and (max-width: @viewport-small) {
+                font-size: 40px;
+            }
+
+            @media screen and (min-width: @viewport-larger) and (min-height: @viewport-medium) {
+                font-size: 80px;
+            }
+        }
+    }
+}
+
+// Join Alice Lane
+&.contents-join-alice-lane {
+
+    h1 {
+        font-size: 40px;
+
+        @media screen and (min-width: @viewport-medium) {
+            font-size: 70px;
+
+            &.center {
+                text-align: center;
+            }
+        }
+
+        &.center {
+            text-align: left;
+        }
+    }
+}
+
+/* Text
+   ========================================================================== */
+
+// Block quotes
+blockquote {
+    font-family: @font-family-muli-italic;
+    font-size: 20px;
+    font-style: italic;
+    line-height: 1.4;
+
+    @media screen and (max-width: @viewport-medium) {
+        font-size: 16px;
+    }
+
+    @media screen and (min-width: @viewport-larger) {
+        font-size: 25px;
+    }
+}
+
+// Paragraphs
+p {
+    font-size: 16px;
+    line-height: 1.5;
+
+    @media screen and (min-width: @viewport-larger) {
+        font-size: 18px;
+    }
+
+    // Small
+    &.small {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    // Large
+    &.large {
+        font-size: 16px;
+        line-height: 1.5;
+
+        @media screen and (min-width: @viewport-larger) {
+            font-size: 25px;
+        }
+    }
+
+    // Center aligned text
+    &.center {
+        text-align: left;
+
+        @media screen and (min-width: @viewport-larger) {
+            text-align: center;
+        }
+    }
+
+    // Right aligned text
+    &.right {
+        text-align: left;
+
+        @media screen and (min-width: @viewport-larger) {
+            text-align: right;
+        }
+    }
+}
+
+// Spans
+span {
+    font-size: 18px;
+    line-height: 1.5;
+    text-transform: uppercase;
+
+    // Small
+    &.small {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    // Large
+    &.large {
+        font-size: 25px;
+        line-height: 1.5;
+    }
+
+    // Center aligned text
+    &.center {
+        text-align: center;
+    }
+
+    // Right aligned text
+    &.right {
+        text-align: right;
+    }
+}
+
+sup {
+    font-size: 50%;
+}
+
+/* Buttons
+   ========================================================================== */
+
+// General
+a.button {
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    // Red
+    &.button-red {
+        color: @colour-red;
+        font: 14px/1 @font-family-muli;
+        font-weight: @font-weight-bold;
+
+        &:hover {
+            color: @colour-burgundy-dark;
+        }
+    }
+
+    // Black
+    &.button-black {
+        color: @colour-gainsboro;
+        font: 14px/1 @font-family-muli;
+        font-weight: @font-weight-bold;
+
+        &:hover {
+            color: @colour-white;
+        }
+    }
+}
+
+// Navigation
+.navigation-secondary {
+
+    a.button {
+        color: @colour-gainsboro;
+        font-size: 13px;
+        .transition(all 0.20s ease 0s);
+
+        &:hover {
+            color: @colour-white;
+        }
+    }
+}
+
+/* Lists
+   ========================================================================== */
+
+// Contact
+ul.contact {
+
+    li {
+        color: @colour-white;
+        font-size: 16px;
+        line-height: 1.5;
+
+        a {
+            color: @colour-white;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+// Contents
+div.contents {
+
+    ul.items {
+
+        // Medium text
+        &.medium {
+
+            li {
+                font-size: 18px;
+
+                @media screen and (min-width: @viewport-larger) {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        // Small text
+        &.small {
+
+            li {
+                font-size: 16px;
+
+                @media screen and (min-width: @viewport-larger) {
+                    font-size: 18px;
+                    line-height: 1.5;
+                }
+            }
+        }
+    }
+}
+
+/* Style Guide
+   ========================================================================== */
+
+.style-guide {
+    font-family: @font-family-muli;
+
+    header {
+
+        > h1 {
+            font-family: @font-family-raleway;
+            font-size: 1.500em; /* 24px / 16px */
+            font-weight: @font-weight-normal;
+            text-transform: uppercase;
+        }
+    }
+
+    div.component {
+
+        > h1 {
+            border-bottom: 1px @colour-grey dashed;
+            font-family: @font-family-raleway;
+            font-size: 1.250em; /* 20px / 16px */
+            font-weight: @font-weight-normal;
+            letter-spacing: inherit;
+            text-transform: uppercase;
+        }
+    }
+
+    @media only screen and (min-width: 481px) {
+
+        header {
+
+            > h1 {
+                font-family: @font-family-raleway;
+                font-size: 3.125em; /* 50px / 16px */
+            }
+        }
+
+        div.component {
+
+            > h1 {
+                font-size: 1.875em; /* 30px / 16px */
+            }
+        }
+    }
+
+    // Home icon
+    a.icon-home {
+        color: @colour-burgundy;
+        font-size: 1.5625em; /* 25px / 16px */
+        .opacity(0.8);
+        .transition(all 0.20s ease 0s);
+
+        &:hover {
+            color: @colour-black;
+            .opacity(1.0);
+        }
+    }
+
+    // Up icon
+    a.icon-arrow-up {
+        color: @colour-black;
+        font-size: 1.5625em; /* 25px / 16px */
+        .opacity(0.8);
+        .transition(all 0.20s ease 0s);
+
+        &:hover {
+            color: @colour-black;
+            .opacity(1.0);
+        }
+    }
+
+    // Table of Contents
+    ol.table-of-contents {
+
+        li {
+            color: @colour-black;
+
+            a {
+                color: @colour-black;
+                text-decoration: none;
+
+                &:hover {
+                    color: @colour-burgundy;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    pre {
+        color: @colour-cerulean;
+    }
+
+    // Individual components of the Style Guide
+    div.contents {
+
+        // Typography
+        p {
+
+            &.raleway {
+                font-family: @font-family-raleway;
+            }
+
+            &.muli {
+                font-family: @font-family-muli;
+            }
+        }
+    }
+
+    // Colours
+    ul.colours {
+
+        li {
+            text-align: center;
+
+            pre {
+                background-color: @colour-white;
+            }
+        }
+    }
+}

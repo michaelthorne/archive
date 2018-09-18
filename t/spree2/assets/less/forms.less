@@ -1,0 +1,1240 @@
+/* ==========================================================================
+   Forms: form, fieldset, label, input, textarea, select, option
+   ========================================================================== */
+
+/* LESS: Colours */
+
+@color-black: #000;
+@color-charcoal-dark: #222;
+@color-charcoal: #303030;
+@color-grey-dark: #666;
+@color-grey: #8c8c8c;
+@color-grey-light: #9fa2a1;
+@color-silver-dark: #b8b8b8;
+@color-silver: #ccc;
+@color-silver-light: #ddd;
+@color-white-dark: #f0f0ee;
+@color-white: #fff;
+@color-rust: #4f3d3b;
+@color-green: #79b66d;
+@color-salmon: #ed6769;
+@color-red: #e41518;
+
+/* LESS: Font families */
+
+@font-family-myriadpro: 'MyriadPro', Arial, sans-serif;
+@font-family-arial: Arial, sans-serif;
+@font-family-verdana: Verdana, sans-serif;
+
+/* LESS: Font weights */
+
+@font-weight-light: 200;
+@font-weight-normal: 400;
+@font-weight-bold: 700;
+
+/* Allow only vertical resizing of textareas */
+
+textarea {
+    resize: vertical;
+}
+
+fieldset {
+    border: 0;
+    clear: both;
+    margin: 0;
+    padding: 0;
+}
+
+/* Search
+   ========================================================================== */
+
+form.form-search {
+    float: right;
+    margin: 4px 0 0 0;
+
+    input[type="text"] {
+        border: 1px @color-silver-dark solid;
+        border-right: 0;
+        color: @color-charcoal;
+        float: left;
+        font: 14px/28px @font-family-myriadpro;
+        height: 30px;
+        padding: 1px 0 0 10px;
+        width: 171px;
+
+        // Validation Error
+        &.error {
+            border: 1px @color-red solid;
+        }
+
+        &:focus {
+            border: 1px @color-black solid;
+            border-right: 0;
+            color: @color-charcoal;
+            outline: 0;
+        }
+    }
+
+    input[type="text"].placeholder {
+        color: @color-grey-light;
+    }
+
+    input[type="submit"] {
+        background: @color-grey-dark url("../images/icons/icon-search.png") center center no-repeat;
+        border: 0;
+        height: 33px;
+        width: 38px;
+
+        &:focus {
+            outline: 0;
+        }
+    }
+}
+
+/* Sign Up
+   ========================================================================== */
+
+form.form-signup {
+    margin: 18px 0 0 0;
+    width: 196px;
+
+    label {
+        display: block;
+        color: @color-white-dark;
+        font: 14px/14px @font-family-myriadpro;
+
+        input[type="text"] {
+            border: 0;
+            color: @color-charcoal;
+            display: block;
+            font-family: @font-family-myriadpro;
+            font-size: 14px;
+            margin: 15px 0;
+            padding: 10px;
+            width: 176px;
+
+            // Validation Error
+            &.error {
+                border: 1px @color-red solid;
+            }
+
+            &:focus {
+                color: @color-charcoal;
+                outline: 0;
+            }
+        }
+
+        input[type="text"].placeholder {
+            color: @color-charcoal;
+        }
+    }
+
+    fieldset.radio {
+        clear: both;
+        margin: 0 0 15px 0;
+        overflow: hidden;
+        width: 100%;
+
+        label {
+            float: left;
+            margin: 0 15px 0 0;
+        }
+    }
+
+    input[type="submit"] {
+        background-color: @color-white;
+        border: 0;
+        color: @color-charcoal-dark;
+        float: right;
+        font-family: @font-family-myriadpro;
+        font-size: 11px;
+        height: 32px;
+        line-height: 1;
+        text-transform: uppercase;
+        padding: 0 10px;
+
+        &:active {
+            outline: 0;
+            padding-top: 1px;
+        }
+    }
+}
+
+/* Member: Login, Registration, Forgotten Password
+   ========================================================================== */
+
+form.member {
+    margin: 0 35px;
+
+    label {
+        color: @color-charcoal;
+        display: block;
+        font: 14px/1 @font-family-myriadpro;
+
+        input {
+            display: block;
+            margin: 8px 0 25px -4px;
+        }
+
+        input[type="password"],
+        input[type="text"] {
+            border: 1px @color-silver-light solid;
+            color: @color-charcoal;
+            font: 14px/1 @font-family-myriadpro;
+            padding: 10px;
+            width: 250px;
+
+            // Validation Error
+            &.error {
+                border: 1px @color-red solid;
+            }
+
+            &:focus {
+                border: 1px @color-charcoal solid;
+                outline: 0;
+            }
+        }
+
+        // Checkboxes
+        &.checkbox {
+            display: inline-block;
+            float: left;
+            margin: 3px 0 0 20px;
+
+            input[type="checkbox"] {
+                display: inline-block;
+                margin: 0 2px 2px 0;
+            }
+        }
+
+        // Remember Me
+        &.remember-me {
+            margin-top: 8px;
+        }
+
+        // Opt-in
+        &.opt-in {
+            width: 140px;
+        }
+    }
+
+    input[type="submit"] {
+        background-color: @color-charcoal-dark;
+        border: 0;
+        color: @color-white;
+        display: inline-block;
+        float: left;
+        font-family: @font-family-myriadpro;
+        font-size: 18px;
+        line-height: 1;
+        height: 49px;
+        padding: 0 15px;
+
+        &:active {
+            outline: 0;
+            padding-top: 1px;
+        }
+    }
+}
+
+/* Checkout: Delivery Details
+   ========================================================================== */
+
+form.checkout {
+    overflow: hidden;
+    padding: 20px;
+
+    // Large text inputs for e.g. address
+    fieldset.large {
+        clear: both;
+        margin: 0 0 6px 0;
+
+        label {
+            height: 63px;
+
+            input[type="text"] {
+                float: left;
+                width: 448px;
+            }
+        }
+    }
+
+    // Full-width fieldset
+    fieldset.wide {
+        clear: both;
+        width: 100%;
+    }
+
+    label {
+        color: @color-charcoal;
+        display: block;
+        float: left;
+        font: 14px/1 @font-family-myriadpro;
+        height: 83px;
+        margin: 0 52px 0 0;
+
+        &:nth-child(2n+2) {
+            margin-right: 0;
+        }
+
+        // Narrow text inputs for e.g. postal code
+        &.small {
+            margin: 0 20px 0 0;
+
+            input[type="text"] {
+                width: 70px;
+            }
+        }
+
+        // Required field marker
+        span {
+            color: @color-red;
+            font-weight: @font-weight-bold;
+        }
+
+        select,
+        input {
+            display: block;
+            margin: 8px 0 0 0;
+        }
+
+        input[type="text"] {
+            border: 1px @color-silver-light solid;
+            color: @color-charcoal;
+            font: 14px/1 @font-family-myriadpro;
+            padding: 10px;
+            width: 187px;
+
+            // Validation Error
+            &.error {
+                border: 1px @color-red solid;
+            }
+
+            &:focus {
+                border: 1px @color-charcoal solid;
+                outline: 0;
+            }
+        }
+
+        select {
+            border: 1px @color-silver-light solid;
+            color: @color-grey;
+            font: 14px/1 @font-family-myriadpro;
+            padding: 9px 10px;
+            width: 150px;
+
+            // Validation Error
+            &.error {
+                border: 1px @color-red solid;
+            }
+
+            &:focus {
+                border: 1px @color-charcoal solid;
+                outline: 0;
+            }
+        }
+
+        // Counter for maximum letter limit
+        span.counter {
+            display: block;
+            float: left;
+            margin: 20px 0 0 9px;
+        }
+    }
+
+    input[type="submit"] {
+        background-color: @color-charcoal-dark;
+        border: 0;
+        color: @color-white;
+        display: inline-block;
+        float: right;
+        font-family: @font-family-myriadpro;
+        font-size: 18px;
+        line-height: 1;
+        height: 49px;
+        padding: 0 15px;
+
+        &:active {
+            outline: 0;
+            padding-top: 1px;
+        }
+
+        &:disabled {
+            background-color: @color-white-dark;
+            color: @color-grey-light;
+        }
+    }
+}
+
+/* Add new billing address */
+
+#billing-address {
+    display: none;
+
+    header {
+        border-top: 1px @color-grey-light solid;
+        margin: 20px 0 10px 0;
+        padding: 20px 0 10px 0;
+    }
+
+    // Large text inputs for e.g. address
+    fieldset.large {
+        margin: 0 0 6px 0;
+
+        label {
+            height: 63px;
+
+            input[type="text"] {
+                float: left;
+                width: 448px;
+            }
+        }
+    }
+
+    label {
+        clear: none;
+        display: inline-block;
+        float: left;
+        margin: 0 52px 0 0;
+
+        // Narrow text inputs for e.g. postal code
+        &.small {
+            margin: 0 20px 0 0;
+
+            input[type="text"] {
+                width: 70px;
+            }
+        }
+
+        select {
+            width: 150px;
+        }
+    }
+}
+
+/* Checkout: Payment Method
+   ========================================================================== */
+
+form.payment {
+    overflow: hidden;
+    padding: 20px 20px 16px 20px;
+
+    // Large text inputs for e.g. address
+    fieldset.large {
+        clear: both;
+
+        label {
+
+            input[type="text"] {
+                width: 317px;
+            }
+        }
+    }
+
+    // Icons
+    fieldset.icons {
+        clear: both;
+        overflow: hidden;
+
+        label {
+            float: left;
+            margin: 0 12px 0 0;
+        }
+
+        // Credit card icons
+        div.credit-card-icons {
+            float: left;
+            margin: 25px 0 0 0;
+
+            img {
+                float: left;
+                margin: 0 8px 0 0;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    // Date
+    fieldset.date {
+        clear: both;
+        overflow: hidden;
+
+        label {
+            clear: none;
+            float: left;
+            height: 69px;
+            margin: 0 15px 0 0;
+
+            &:first-child {
+                clear: both;
+                height: 14px;
+                margin: 0;
+                width: 100%;
+            }
+        }
+    }
+
+    // CVV
+    fieldset.cvv {
+        clear: both;
+        overflow: hidden;
+        position: relative;
+
+        label {
+            float: left;
+        }
+
+        // CVV icon: "What is this?"
+        a {
+            color: @color-charcoal;
+            float: left;
+            font: 14px/1 @font-family-myriadpro;
+            margin: 35px 0 0 0;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        // CVV icon
+        div.cvv-icon {
+            display: none;
+            left: 81px;
+            overflow: hidden;
+            position: absolute;
+            top: 28px;
+            width: 200px;
+
+            img {
+                float: left;
+            }
+
+            span {
+                display: block;
+                color: @color-charcoal;
+                float: left;
+                font: 13px/1 @font-family-myriadpro;
+                margin: 8px 0 0 5px;
+            }
+        }
+    }
+
+    // Footer
+    fieldset.footer {
+        clear: both;
+        overflow: hidden;
+
+        label {
+            clear: none;
+            float: left;
+            height: 39px;
+            margin: 11px 0 0 0;
+            width: 215px;
+
+            input[type="checkbox"] {
+                clear: both;
+                float: left;
+                margin: 5px 10px 10px 0;
+            }
+        }
+
+        input[type="submit"] {
+            clear: none;
+            float: right;
+        }
+    }
+
+    label {
+        color: @color-charcoal;
+        clear: both;
+        display: block;
+        font: 14px/1 @font-family-myriadpro;
+        height: 83px;
+        margin: 0;
+
+        // Narrow text inputs for e.g. postal code
+        &.small {
+            margin: 0 20px 0 0;
+
+            input[type="text"] {
+                width: 40px;
+            }
+
+            select {
+                width: 80px;
+            }
+        }
+
+        // Required field marker
+        span {
+            color: @color-red;
+            font-weight: @font-weight-bold;
+        }
+
+        select,
+        input {
+            display: block;
+            margin: 8px 0 0 0;
+        }
+
+        input[type="text"] {
+            border: 1px @color-silver-dark solid;
+            color: @color-charcoal;
+            font: 14px/1 @font-family-myriadpro;
+            padding: 10px;
+            width: 187px;
+
+            // Validation Error
+            &.error {
+                border: 1px @color-red solid;
+            }
+
+            &:focus {
+                border: 1px @color-charcoal solid;
+                outline: 0;
+            }
+        }
+
+        select {
+            border: 1px @color-silver-dark solid;
+            color: @color-grey;
+            font: 14px/1 @font-family-myriadpro;
+            padding: 9px 10px;
+            width: 120px;
+
+            // Validation Error
+            &.error {
+                border: 1px @color-red solid;
+            }
+
+            &:focus {
+                border: 1px @color-charcoal solid;
+                outline: 0;
+            }
+        }
+
+        // Counter for maximum letter limit
+        span.counter {
+            display: block;
+            float: left;
+            margin: 20px 0 0 9px;
+        }
+    }
+
+    input[type="submit"] {
+        background-color: @color-charcoal-dark;
+        border: 0;
+        color: @color-white;
+        display: inline-block;
+        float: right;
+        font-family: @font-family-myriadpro;
+        font-size: 18px;
+        line-height: 1;
+        height: 49px;
+        padding: 0 15px;
+
+        &:active {
+            outline: 0;
+            padding-top: 1px;
+        }
+
+        &:disabled {
+            background-color: @color-white-dark;
+            color: @color-grey-light;
+        }
+    }
+}
+
+/* Address Suggestions
+   ========================================================================== */
+
+form.suggestions {
+    margin: 15px 0 0 0;
+    overflow: hidden;
+    padding: 0 3px;
+
+    label {
+        clear: both;
+        color: @color-grey-dark;
+        display: block;
+        font: 14px/1 @font-family-myriadpro;
+        width: 450px;
+
+        input {
+            margin: 0 0 10px 0;
+        }
+    }
+
+    input[type="submit"] {
+        background-color: @color-charcoal-dark;
+        border: 0;
+        color: @color-white;
+        display: inline-block;
+        float: right;
+        font-family: @font-family-myriadpro;
+        font-size: 14px;
+        line-height: 1;
+        height: 39px;
+        padding: 0 10px;
+
+        &:active {
+            outline: 0;
+            padding-top: 1px;
+        }
+
+        &:disabled {
+            background-color: @color-white-dark;
+            color: @color-grey-light;
+        }
+    }
+}
+
+/* Account
+   ========================================================================== */
+
+/* Settings */
+
+form.account {
+    margin: 0 0 10px 0;
+    overflow: hidden;
+    padding-left: 5px;
+    width: 425px;
+
+    label {
+        color: @color-charcoal;
+        display: block;
+        float: left;
+        font: 14px/1 @font-family-myriadpro;
+        height: 83px;
+
+        input {
+            display: block;
+            margin: 8px 0 0 0;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            border: 1px @color-silver solid;
+            color: @color-charcoal;
+            font: 14px/1 @font-family-myriadpro;
+            padding: 10px;
+            width: 403px;
+
+            // Validation Error
+            &.error {
+                border: 1px @color-red solid;
+            }
+
+            &:focus {
+                border: 1px @color-charcoal solid;
+                outline: 0;
+            }
+        }
+    }
+
+    a.button {
+        float: right;
+        margin-right: 10px;
+    }
+}
+
+/* Addresses */
+
+form.address {
+    float: left;
+
+    // Left margin for every odd numbered form
+    &:nth-child(odd) {
+        margin-right: 30px;
+    }
+}
+
+/* Password */
+
+form.password {
+    margin: 0 0 30px 0;
+    overflow: hidden;
+    padding-left: 5px;
+    width: 425px;
+
+    label {
+        color: @color-charcoal;
+        display: block;
+        float: left;
+        font: 14px/1 @font-family-myriadpro;
+        margin: 0 50px 20px 0;
+        width: 180px;
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+
+        input {
+            display: block;
+            margin: 8px 0 0 -4px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            border: 1px @color-silver solid;
+            color: @color-charcoal;
+            font: 14px/1 @font-family-myriadpro;
+            padding: 10px;
+            width: 173px;
+
+            &:focus {
+                border: 1px @color-charcoal solid;
+                outline: 0;
+            }
+        }
+    }
+}
+
+/* Subscription */
+
+form.subscription {
+    width: 920px;
+
+    p {
+        color: @color-charcoal;
+        clear: both;
+        font-weight: @font-weight-bold;
+        margin: 10px 0;
+    }
+
+    fieldset.radio {
+        border-bottom: 1px @color-silver-light solid;
+        margin: 0 0 20px 0;
+        padding: 0 0 20px 0;
+
+        label {
+            color: @color-charcoal-dark;
+            float: left;
+            height: 30px;
+            margin: 0 40px 0 0;
+
+            input[type="radio"] {
+                display: inline-block;
+            }
+        }
+    }
+}
+
+/* Buttons */
+
+section.account {
+
+    input[type="submit"] {
+        background-color: @color-charcoal-dark;
+        border: 0;
+        color: @color-white;
+        display: inline-block;
+        float: right;
+        font-family: @font-family-myriadpro;
+        font-size: 18px;
+        line-height: 1;
+        height: 49px;
+        padding: 0 15px;
+
+        &:active {
+            outline: 0;
+            padding-top: 1px;
+        }
+    }
+
+    form.subscription {
+
+        input[type="submit"] {
+            clear: both;
+            float: left;
+        }
+    }
+}
+
+/* Filters
+   ========================================================================== */
+
+div.filter {
+
+    form {
+        overflow: hidden;
+
+        label {
+            clear: both;
+            color: @color-charcoal;
+            display: block;
+            float: left;
+            font: 1.400em/16px @font-family-myriadpro;
+            margin: 0 0 2px 0;
+            width: 100%;
+
+            input {
+                clear: both;
+                float: left;
+                margin: 1px 6px 0 0;
+            }
+        }
+    }
+}
+
+/* Request a Restock
+   ========================================================================== */
+
+form.request {
+
+    label {
+        color: @color-charcoal;
+        display: block;
+        font: 14px/1 @font-family-myriadpro;
+
+        select,
+        input {
+            display: block;
+            margin: 0 0 15px 0;
+        }
+
+        input[type="text"] {
+            border: 1px @color-silver solid;
+            color: @color-charcoal;
+            font: 14px/1 @font-family-myriadpro;
+            padding: 10px;
+            width: 281px;
+
+            // Validation Error
+            &.error {
+                border: 1px @color-red solid;
+            }
+
+            &:focus {
+                border: 1px @color-charcoal solid;
+                outline: 0;
+            }
+        }
+
+        select {
+            border: 1px @color-silver solid;
+            color: @color-charcoal;
+            font: 14px/1 @font-family-myriadpro;
+            padding: 9px 10px;
+
+            // Validation Error
+            &.error {
+                border: 1px @color-red solid;
+            }
+
+            &:focus {
+                border: 1px @color-charcoal solid;
+                outline: 0;
+            }
+        }
+
+        // Checkboxes
+        &.checkbox {
+            clear: both;
+            display: inline-block;
+            float: left;
+            font-size: 12px;
+            margin: 0 0 15px 0;
+
+            input[type="checkbox"] {
+                display: inline-block;
+                margin: 0 2px 2px 0;
+            }
+        }
+    }
+
+    input[type="submit"] {
+        background-color: @color-charcoal-dark;
+        border: 0;
+        color: @color-white;
+        display: inline-block;
+        float: right;
+        font-family: @font-family-myriadpro;
+        font-size: 14px;
+        line-height: 1;
+        height: 39px;
+        padding: 0 10px;
+
+        &:active {
+            outline: 0;
+            padding-top: 1px;
+        }
+    }
+}
+
+/* Voucher Code
+   ========================================================================== */
+
+form.voucher {
+    clear: both;
+    overflow: hidden;
+    padding: 10px 0 20px 24px;
+
+    label {
+        color: @color-charcoal;
+        float: left;
+        font: 14px/1 @font-family-myriadpro;
+        margin: 0 12px 0 0;
+
+        span {
+            display: block;
+            margin: 11px 0 0 0;
+
+            b {
+                color: @color-red;
+                font-weight: @font-weight-normal;
+            }
+        }
+
+        input[type="text"] {
+            border: 1px @color-silver solid;
+            color: @color-charcoal;
+            font: 14px/1 @font-family-myriadpro;
+            margin: 0 0 15px 0;
+            padding: 9px 10px 11px 10px;
+            width: 80px;
+
+            // Validation Error
+            &.error {
+                border: 1px @color-red solid;
+            }
+
+            &:focus {
+                border: 1px @color-charcoal solid;
+                outline: 0;
+            }
+        }
+    }
+
+    input[type="submit"] {
+        background-color: @color-charcoal-dark;
+        border: 0;
+        color: @color-white;
+        display: inline-block;
+        float: left;
+        font-family: @font-family-myriadpro;
+        font-size: 14px;
+        line-height: 1;
+        height: 39px;
+        padding: 0 10px;
+
+        &:active {
+            outline: 0;
+            padding-top: 1px;
+        }
+
+        &:disabled {
+            background-color: @color-white-dark;
+            color: @color-grey-light;
+        }
+    }
+
+    a {
+        color: @color-charcoal;
+        float: left;
+        font: 14px/1 @font-family-myriadpro;
+        margin: 11px 0 0 13px;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+/* Newsletter Sign Up
+   ========================================================================== */
+
+#form-newsletter-sign-up {
+
+    label {
+        float: left;
+
+        input[type="text"] {
+            border: 1px @color-silver-dark solid;
+            color: @color-charcoal;
+            font: 14px/28px @font-family-myriadpro;
+            height: 30px;
+            padding: 0 0 0 10px;
+            width: 200px;
+
+            // Validation Error
+            &.error {
+                border: 1px @color-red solid;
+            }
+
+            &:focus {
+                border: 1px @color-black solid;
+                color: @color-charcoal;
+                outline: 0;
+            }
+        }
+    }
+
+    fieldset.radio {
+        clear: none;
+        float: left;
+        overflow: hidden;
+
+        label {
+            color: @color-black;
+            font: 14px/1 @font-family-myriadpro;
+            margin: 10px 0 0 10px;
+        }
+    }
+
+    input[type="submit"] {
+        background-color: @color-charcoal-dark;
+        border: 0;
+        clear: both;
+        color: @color-white;
+        display: inline-block;
+        float: left;
+        font-family: @font-family-myriadpro;
+        font-size: 14px;
+        height: 39px;
+        line-height: 1;
+        margin: 10px 0 0 0;
+        padding: 0 10px;
+
+        &:active {
+            outline: 0;
+            padding-top: 1px;
+        }
+    }
+}
+
+/* General
+   ========================================================================== */
+
+/* Select */
+
+select {
+    border: 1px @color-silver-light solid;
+    color: @color-charcoal;
+    font: 14px/14px @font-family-myriadpro;
+    padding: 5px 10px;
+
+    // Validation Error
+    &.error {
+        border: 1px @color-red solid;
+    }
+
+    &:focus {
+        border: 1px @color-charcoal solid;
+        color: @color-charcoal;
+        outline: 0;
+    }
+}
+
+/* Submit Buttons */
+
+input[type="submit"] {
+
+    // Button
+    &.button {
+        border: 0;
+        font-family: @font-family-myriadpro;
+        line-height: 1;
+    }
+
+    // Small
+    &.button-small {
+        font-size: 11px;
+        height: 32px;
+        text-transform: uppercase;
+        padding: 0 10px;
+    }
+
+    // Large
+    &.button-large {
+        font-size: 18px;
+        height: 49px;
+        padding: 0 15px;
+    }
+
+    // White
+    &.button-white {
+        background-color: @color-white;
+        color: @color-charcoal-dark;
+    }
+
+    // Silver
+    &.button-silver {
+        background-color: @color-silver-light;
+        color: @color-charcoal;
+    }
+
+    // Charcoal
+    &.button-charcoal {
+        background-color: @color-charcoal-dark;
+        color: @color-white;
+    }
+
+    // Black
+    &.button-black {
+        background-color: @color-black;
+        color: @color-white-dark;
+    }
+
+    // Active
+    &:active {
+        outline: 0;
+        padding-top: 1px;
+    }
+}
+
+/* LESS: Mixins */
+
+.border-radius(@radius: 15px) {
+    -webkit-border-radius: @radius;
+       -moz-border-radius: @radius;
+         -o-border-radius: @radius;
+            border-radius: @radius;
+}
+
+.box-shadow(@arguments) {
+    -webkit-box-shadow: @arguments;
+       -moz-box-shadow: @arguments;
+         -o-box-shadow: @arguments;
+            box-shadow: @arguments;
+}
+
+.inner-shadow(@horizontal: 0, @vertical: 1px, @blur: 2px, @alpha: 0.4) {
+    -webkit-box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+       -moz-box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+         -o-box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+            box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+}
+
+.opacity(@opacity: 0.5) {
+    -webkit-opacity: @opacity;
+       -moz-opacity: @opacity;
+         -o-opacity: @opacity;
+            opacity: @opacity;
+}
+
+.rotation(@deg: 5deg) {
+    -webkit-transform: rotate(@deg);
+       -moz-transform: rotate(@deg);
+         -o-transform: rotate(@deg);
+            transform: rotate(@deg);
+}
+
+.scale(@ratio: 1.5) {
+    -webkit-transform: scale(@ratio);
+       -moz-transform: scale(@ratio);
+         -o-transform: scale(@ratio);
+            transform: scale(@ratio);
+}
+
+.transition(@arguments) {
+    -webkit-transition: @arguments;
+       -moz-transition: @arguments;
+         -o-transition: @arguments;
+            transition: @arguments;
+}

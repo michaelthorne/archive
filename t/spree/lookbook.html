@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en-GB" dir="ltr" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en-GB" dir="ltr" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en-GB" dir="ltr" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en-GB" dir="ltr" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+    <title>Spree / Lookbook</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="author" content="Michael Thorne" />
+    <meta name="description" content="" />
+    <!--<meta name="viewport" content="width=device-width" />-->
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:locale" content="en_GB" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="stylesheet" href="assets/css/normalize.css" />
+    <link rel="stylesheet" href="assets/css/jquery-ui.css" />
+    <link rel="stylesheet" href="assets/css/mediaelementplayer.css" />
+    <link rel="stylesheet" href="assets/css/layout.css" />
+    <link rel="stylesheet" href="assets/css/typography.css" />
+    <link rel="stylesheet" href="assets/css/forms.css" />
+    <!--
+        minify: Combines, minifies, and caches JavaScript
+        <link rel="stylesheet" href="/min/b=assets/css&amp;f=normalize.css,layout.css,typography.css,forms.css" />
+    -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5.js"></script>
+    <script src="assets/js/selectivizr.js"></script>
+    <![endif]-->
+    <script src="assets/js/detect.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="assets/js/jquery.js"><\/script>');</script>
+    <script>
+        var $j = jQuery.noConflict();
+    </script>
+</head>
+<body>
+    <!--[if lt IE 8]>
+    <div class="chromeframe">
+        <p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" title="Browse Happy &ndash; Upgrade your browser today!" target="_blank">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true" title="Google Chrome Frame &ndash; Make your browser more powerful." target="blank">activate Google Chrome Frame</a> to improve your experience.</p>
+    </div>
+    <![endif]-->
+    <header id="top" role="banner">
+        <div class="wrapper">
+            <a id="logo" href="home.html">
+                <img src="assets/images/logos/logo-spree.png" width="152" height="65" alt="Spree" />
+            </a>
+            <div class="utils">
+                <ul class="members">
+                    <li>
+                        <a href="member-login-register.html" class="active">Login</a>
+                    </li>
+                    <li>
+                        <a href="member-login-register.html">Register</a>
+                    </li>
+                </ul>
+                <ul class="languages drop-down">
+                    <li>
+                        <a href="#">English</a>
+                        <ul>
+                            <li><a href="#" data-language-code="en-za" data-language-active="true">English</a></li>
+                            <li><a href="#" data-language-code="af-za">Afrikaans</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="shop">
+                    <li class="favourites">
+                        <a href="shop-favourites.html" data-util="favourites">Favourites</a>
+                        <span>1</span>
+                    </li>
+                    <li class="cart">
+                        <a href="shop-cart.html" data-util="cart">Cart</a>
+                        <span>0</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <nav class="primary">
+        <div class="wrapper">
+            <ul class="drop-down" role="navigation">
+                <li>
+                    <a href="home.html">Home</a>
+                </li>
+                <li>
+                    <a href="#">What&rsquo;s New</a>
+                </li>
+                <li>
+                    <a href="products.html">Clothes</a>
+                    <ul>
+                        <li>
+                            <a href="product-category.html">Dresses</a>
+                        </li>
+                        <li>
+                            <a href="product-category.html">Tops</a>
+                        </li>
+                        <li>
+                            <a href="product-category.html">Bottoms</a>
+                        </li>
+                        <li>
+                            <a href="product-category.html">Jeans</a>
+                        </li>
+                        <li>
+                            <a href="product-category.html">Jackets &amp; Knitwear</a>
+                        </li>
+                        <li>
+                            <a href="product-category.html">Sleepwear</a>
+                        </li>
+                        <li>
+                            <a href="product-category.html">Swimwear</a>
+                        </li>
+                        <li>
+                            <a href="product-category.html">Activewear</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Shoes</a>
+                </li>
+                <li>
+                    <a href="#">Accessories</a>
+                </li>
+                <li>
+                    <a href="lookbook.html" class="active" data-current="true">Lookbook</a>
+                </li>
+                <li>
+                    <a href="#">Clearance</a>
+                </li>
+                <li>
+                    <a>Stores</a>
+                    <ul>
+                        <li>
+                            <a href="home-fairlady.html">Fairlady</a>
+                        </li>
+                        <li>
+                            <a href="home-drum.html">Drum</a>
+                        </li>
+                        <li>
+                            <a href="home-grazia.html">Grazia</a>
+                        </li>
+                        <li>
+                            <a href="home-huisgenoot.html">Huisgenoot</a>
+                        </li>
+                        <li>
+                            <a href="home-you.html">You</a>
+                        </li>
+                        <li>
+                            <a href="home-true-love.html">True Love</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <form id="form-search" name="form-search" method="post" action="home.html" class="form-search">
+                <label for="search">
+                    <input type="text" id="search" name="search" value="Search&hellip;" placeholder="Search&hellip;" maxlength="50" tabindex="1" data-action="autocomplete" />
+                </label>
+                <input type="submit" id="submit-search" name="submit-search" value="" tabindex="2" />
+            </form>
+        </div>
+    </nav>
+    <div class="wrapper-lookbook">
+        <div class="lookbook">
+            <ol>
+                <li><img src="assets/images/lookbook/lookbook-product-01.jpg" width="980" height="637" alt="" /></li>
+                <li><img src="assets/images/lookbook/lookbook-product-02.jpg" width="980" height="637" alt="" /></li>
+                <li><img src="assets/images/lookbook/lookbook-product-03.jpg" width="980" height="637" alt="" /></li>
+                <li><img src="assets/images/lookbook/lookbook-product-04.jpg" width="980" height="637" alt="" /></li>
+                <li><img src="assets/images/lookbook/lookbook-product-05.jpg" width="980" height="637" alt="" /></li>
+            </ol>
+            <a href="#" class="info icon" data-action="open-info"><img src="assets/images/icons/icon-lookbook-info.png" width="14" height="14" alt="" /></a>
+            <div class="info text" data-component="lookbook-info">
+                <p>Hover over the model for the details.</p>
+                <a href="#" class="close" data-action="close-info"><img src="assets/images/icons/icon-lookbook-close.png" width="12" height="12" alt="" /></a>
+            </div>
+            <a class="controls prev" role="button"><img src="assets/images/icons/icon-lookbook-prev.png" width="27" height="53" alt="Previous" /></a>
+            <a class="controls next" role="button"><img src="assets/images/icons/icon-lookbook-next.png" width="27" height="53" alt="Next" /></a>
+        </div>
+    </div>
+    <footer role="contentinfo">
+        <div class="wrapper">
+            <nav>
+                <ul role="navigation">
+                    <li>
+                        <b>Lorem ipsum</b>
+                        <ul role="navigation">
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Lorem ipsum</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Lorem ipsum</b>
+                        <ul role="navigation">
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Lorem ipsum</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Lorem ipsum</b>
+                        <ul role="navigation">
+                            <li>+27 83 987 2341</li>
+                            <li><a href="mailto:lorem@ipsum.com">lorem@ipsum.com</a></li>
+                            <li><img src="assets/images/logos/logo-twitter.png" width="18" height="20" title="Twitter" alt="Twitter" /> <a href="#">Lorem ipsum</a></li>
+                            <li><img src="assets/images/logos/logo-facebook.png" width="18" height="20" title="Facebook" alt="Facebook" /> <a href="#">Lorem ipsum</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Lorem ipsum</b>
+                        <form id="form-signup" name="form-signup" method="post" action="home.html" class="form-signup">
+                            <label for="email-signup">
+                                Sign up and get a <strong>R50 Voucher</strong>
+                                <input type="text" id="email-signup" name="email-signup" value="Email address" placeholder="Email address" maxlength="100" />
+                            </label>
+                            <input type="submit" id="submit-signup" name="submit-signup" value="Sign up now" />
+                        </form>
+                        <!-- Confirmation message after submitting the form -->
+                        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p> -->
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+    <a href="#" class="back-to-top" data-action="back-to-top" title="Back to Top"><img src="assets/images/icons/icon-up.png" width="12" height="12" alt="^" /> Top</a>
+    <div id="language-confirmation" class="modal small">
+        <header>
+            <h1>Magazine Language Change</h1>
+        </header>
+        <p>The products curated by this magazine title are best experienced in <b>Afrikaans</b>. Would you like to change language now?</p>
+        <a href="home.html" class="button red" data-action="language-confirm" role="button">Yes</a>
+        <a href="#" class="secondary" data-action="modal-close">No thanks</a>
+        <p>You can switch your language anytime using the language dropdown in the top right of the website.</p>
+        <a href="#" class="close" data-action="modal-close"><img src="assets/images/icons/icon-modal-close.png" width="33" height="33" alt="X" /></a>
+    </div>
+    <div id="fb-root"></div>
+    <script src="assets/js/jquery.easing.js"></script>
+    <script src="assets/js/jquery.placeholder.js"></script>
+    <script src="assets/js/jquery.scrollto.js"></script>
+    <script src="assets/js/jquery.serialscroll.js"></script>
+    <script src="assets/js/jquery.iosslider.js"></script>
+    <script src="assets/js/jquery.modal.js"></script>
+    <script src="assets/js/jquery.mediaelementplayer.js"></script>
+    <script src="assets/js/jquery-ui.js"></script>
+    <script>
+        /*
+         * The URL for the front-end of the website
+         * @type {String}
+         */
+        var frontEndWebsiteURL = null;
+        // var frontEndWebsiteURL = 'http://dev.megastore.local/skin/frontend/site/web';
+
+        /*
+         * The JSON array for the Lookbook data
+         * @type {Array}
+         */
+        var lookbookJSON = [
+            {
+                "debug" : false
+            },
+            {
+                "photo-1" : {
+                    "popups" : [
+                        {
+                            "id" : "1",
+                            "popup_top" : "200",
+                            "popup_left" : "470",
+                            "thumbnail_src" : "assets/images/lookbook/thumbs/lookbook-product-thumb-01.jpg",
+                            "title" : "Fifi-Peplumtop",
+                            "description" : "Friede&ndash;Mari Kellerman",
+                            "price" : "R550",
+                            "anchor_text" : "View detail &amp; buy",
+                            "anchor_href" : "product-detail.html",
+                            "anchor_target" : "",
+                            "indicator_x" : "right",
+                            "indicator_y" : "top",
+                            "hotspot_top" : "140",
+                            "hotspot_left" : "610"
+                        },
+                        {
+                            "id" : "2",
+                            "popup_top" : "330",
+                            "popup_left" : "850",
+                            "thumbnail_src" : "assets/images/lookbook/thumbs/lookbook-product-thumb-02.jpg",
+                            "title" : "Eiusmod tempor",
+                            "description" : "Lorem ipsum dolor sit amet",
+                            "price" : "R250",
+                            "anchor_text" : "View detail &amp; buy",
+                            "anchor_href" : "product-detail.html",
+                            "anchor_target" : "",
+                            "indicator_x" : "left",
+                            "indicator_y" : "top",
+                            "hotspot_top" : "300",
+                            "hotspot_left" : "730"
+                        }
+                    ]
+                },
+                "photo-2" : {
+                    "popups" : [
+                        {
+                            "id" : "3",
+                            "popup_top" : "270",
+                            "popup_left" : "780",
+                            "thumbnail_src" : "assets/images/lookbook/thumbs/lookbook-product-thumb-02.jpg",
+                            "title" : "Excepteur sint occaecat",
+                            "description" : "Sunt in culpa qui officia deserunt",
+                            "price" : "R499",
+                            "anchor_text" : "View detail &amp; buy",
+                            "anchor_href" : "product-detail.html",
+                            "anchor_target" : "",
+                            "indicator_x" : "left",
+                            "indicator_y" : "top",
+                            "hotspot_top" : "200",
+                            "hotspot_left" : "610"
+                        },
+                        {
+                            "id" : "4",
+                            "popup_top" : "190",
+                            "popup_left" : "260",
+                            "thumbnail_src" : "assets/images/lookbook/thumbs/lookbook-product-thumb-01.jpg",
+                            "title" : "Excepteur sint occaecat",
+                            "description" : "Sunt in culpa qui officia deserunt",
+                            "price" : "R499",
+                            "anchor_text" : "View detail &amp; buy",
+                            "anchor_href" : "product-detail.html",
+                            "anchor_target" : "",
+                            "indicator_x" : "right",
+                            "indicator_y" : "bottom",
+                            "hotspot_top" : "380",
+                            "hotspot_left" : "400"
+                        }
+                    ]
+                },
+                "photo-3" : {
+                    "popups" : [
+                        {
+                            "id" : "5",
+                            "popup_top" : "100",
+                            "popup_left" : "350",
+                            "thumbnail_src" : "assets/images/lookbook/thumbs/lookbook-product-thumb-03.jpg",
+                            "title" : "Reprehenderit",
+                            "description" : "Ut enim ad minim veniam",
+                            "price" : "R123",
+                            "anchor_text" : "View detail &amp; buy",
+                            "anchor_href" : "product-detail.html",
+                            "anchor_target" : "",
+                            "indicator_x" : "left",
+                            "indicator_y" : "top",
+                            "hotspot_top" : "50",
+                            "hotspot_left" : "180"
+                        },
+                        {
+                            "id" : "6",
+                            "popup_top" : "150",
+                            "popup_left" : "570",
+                            "thumbnail_src" : "assets/images/lookbook/thumbs/lookbook-product-thumb-04.jpg",
+                            "title" : "Incididunt ut labore",
+                            "description" : "Officia deserunt mollit",
+                            "price" : "R720",
+                            "anchor_text" : "View detail &amp; buy",
+                            "anchor_href" : "product-detail.html",
+                            "anchor_target" : "",
+                            "indicator_x" : "right",
+                            "indicator_y" : "top",
+                            "hotspot_top" : "150",
+                            "hotspot_left" : "750"
+                        },
+                        {
+                            "id" : "7",
+                            "popup_top" : "350",
+                            "popup_left" : "850",
+                            "thumbnail_src" : "assets/images/lookbook/thumbs/lookbook-product-thumb-01.jpg",
+                            "title" : "Aute irure dolor",
+                            "description" : "Ullamco laboris nisi",
+                            "price" : "R2560",
+                            "anchor_text" : "View detail &amp; buy",
+                            "anchor_href" : "product-detail.html",
+                            "anchor_target" : "",
+                            "indicator_x" : "left",
+                            "indicator_y" : "bottom",
+                            "hotspot_top" : "450",
+                            "hotspot_left" : "730"
+                        }
+                    ]
+                },
+                "photo-4" : {
+                    "popups" : [
+                        {
+                            "id" : "8",
+                            "popup_top" : "300",
+                            "popup_left" : "500",
+                            "thumbnail_src" : "assets/images/lookbook/thumbs/lookbook-product-thumb-05.jpg",
+                            "title" : "Excepteur sint occaecat",
+                            "description" : "Sunt in culpa qui officia deserunt",
+                            "price" : "R499",
+                            "anchor_text" : "View detail &amp; buy",
+                            "anchor_href" : "product-detail.html",
+                            "anchor_target" : "",
+                            "indicator_x" : "right",
+                            "indicator_y" : "top",
+                            "hotspot_top" : "300",
+                            "hotspot_left" : "650"
+                        }
+                    ]
+                },
+                "photo-5" : {
+                    "popups" : [
+                        {
+                            "id" : "9",
+                            "popup_top" : "180",
+                            "popup_left" : "80",
+                            "thumbnail_src" : "assets/images/lookbook/thumbs/lookbook-product-thumb-03.jpg",
+                            "title" : "Aute irure dolor",
+                            "description" : "Sunt in culpa qui officia deserunt",
+                            "price" : "R333",
+                            "anchor_text" : "View detail &amp; buy",
+                            "anchor_href" : "product-detail.html",
+                            "anchor_target" : "",
+                            "indicator_x" : "right",
+                            "indicator_y" : "top",
+                            "hotspot_top" : "150",
+                            "hotspot_left" : "220"
+                        },
+                        {
+                            "id" : "10",
+                            "popup_top" : "320",
+                            "popup_left" : "430",
+                            "thumbnail_src" : "assets/images/lookbook/thumbs/lookbook-product-thumb-01.jpg",
+                            "title" : "Excepteur sint occaecat",
+                            "description" : "Lorem ipsum dolor sit amet",
+                            "price" : "R499",
+                            "anchor_text" : "View detail &amp; buy",
+                            "anchor_href" : "product-detail.html",
+                            "anchor_target" : "",
+                            "indicator_x" : "left",
+                            "indicator_y" : "bottom",
+                            "hotspot_top" : "450",
+                            "hotspot_left" : "250"
+                        }
+                    ]
+                }
+            }
+        ]
+    </script>
+    <script src="assets/js/jquery-custom.js"></script>
+    <!--
+        minify: Combines, minifies, and caches JavaScript
+        <script src="/min/b=assets/js&amp;f=jquery.easing.js,jquery.placeholder.js,jquery-custom.js"></script>
+    -->
+    <script>(function(d, s, id)
+    {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+</body>
+</html>

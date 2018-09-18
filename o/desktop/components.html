@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<!--[if IE 7]>         <html lang="en-GB" class="ie7"> <![endif]-->
+<!--[if IE 8]>         <html lang="en-GB" class="ie8"> <![endif]-->
+<!--[if IE 9]>         <html lang="en-GB" class="ie9"> <![endif]-->
+<!--[if gt IE 9]><!--> <html lang="en-GB">         <!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+    <title>OrderIn &mdash; Components</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="author" content="Michael Thorne" />
+    <meta name="description" content="" />
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:locale" content="en_GB" />
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,700" />
+
+    <!-- Font Awesome: http://fortawesome.github.io/Font-Awesome -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" />
+
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/styleguide.css" />
+    <link rel="stylesheet" href="assets/css/prettify.css" />
+
+    <!--[if lt IE 9]>
+    <script src="assets/js/vendor/polyfills.js"></script>
+    <![endif]-->
+    <script src="assets/js/vendor/prettify.js"></script>
+</head>
+<body class="style-guide">
+    <!--[if lt IE 9]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/?locale=en">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <a id="top"></a>
+    <div class="wrapper">
+        <!-- Home -->
+        <a href="index.html" class="icon fa fa-home"></a>
+
+        <section role="main">
+            <header role="banner">
+                <h1>OrderIn &mdash; Components</h1>
+            </header>
+            <p>This document is a guide to the jQuery components for the website.</p>
+            <div class="component">
+                <h1>Table of Contents</h1>
+                <ol class="table-of-contents">
+                    <li><a href="#component-map">Map</a></li>
+                    <li><a href="#component-messaging">Messaging</a></li>
+                    <li><a href="#component-navigation">Navigation</a></li>
+                    <li><a href="#component-accordion">Accordion</a></li>
+                    <li><a href="#component-accordion-large">Accordion (Large)</a></li>
+                    <li><a href="#component-autocomplete">Autocomplete</a></li>
+                </ol>
+            </div>
+
+            <!-- Map -->
+            <div id="component-map" class="component">
+                <h1>Map</h1>
+                <div class="contents">
+                    <br/>
+                    <div class="wrapper-map">
+                        <label for="street-address">
+                            <input id="street-address" name="street-address" type="text" class="input-grey input-large" placeholder="" value="" maxlength="100" data-component="street-address" />
+                        </label>
+                        <br/><br/>
+                        <span class="example">E.g. &ldquo;90 Victoria Road, Woodstock&rdquo;</span>
+                        <a href="#" class="anchor anchor-grey anchor-icon" data-component="map-show"><span class="icon fa fa-map-marker" aria-hidden="true"></span>Help me find my location</a>
+                        <div id="map" class="map">
+                            <span class="heading-tiny mortar">We think you&rsquo;re here.</span>
+                            <p class="small grey">Move the red marker to your location, then confirm below.</p>
+                            <div id="map-canvas" class="loading map-canvas"></div>
+                            <a href="#" class="button button-small button-grey" role="button" data-component="reverse-geocode-marker"><span class="icon fa fa-check" aria-hidden="true"></span>Confirm</a>
+                            <a href="#" class="button button-small button-grey" role="button" data-component="map-hide"><span class="icon fa fa-times" aria-hidden="true"></span>Cancel</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<pre class="code prettyprint linenums">
+&lt;div class="wrapper-map"&gt;
+    &lt;label for="street-address"&gt;
+        &lt;input id="street-address" name="street-address" type="text" class="input-grey input-large" placeholder="" value="" maxlength="100" data-component="street-address" /&gt;
+    &lt;/label&gt;
+    &lt;br/&gt;&lt;br/&gt;
+    &lt;span class="example"&gt;E.g. &ldquo;90 Victoria Road, Woodstock&rdquo;&lt;/span&gt;
+    &lt;a href="#" class="anchor anchor-grey anchor-icon" data-component="map-show"&gt;&lt;span class="icon fa fa-map-marker" aria-hidden="true"&gt;&lt;/span&gt;Help me find my location&lt;/a&gt;
+    &lt;div id="map" class="map"&gt;
+        &lt;span class="heading-tiny mortar"&gt;We think you&rsquo;re here.&lt;/span&gt;
+        &lt;p class="small grey"&gt;Move the red marker to your location, then confirm below.&lt;/p&gt;
+        &lt;div id="map-canvas" class="loading map-canvas"&gt;&lt;/div&gt;
+        &lt;a href="#" class="button button-small button-grey" data-component="reverse-geocode-marker"&gt;&lt;span class="icon fa fa-check" aria-hidden="true"&gt;&lt;/span&gt;Confirm&lt;/a&gt;
+        &lt;a href="#" class="button button-small button-grey" data-component="map-hide"&gt;&lt;span class="icon fa fa-times" aria-hidden="true"&gt;&lt;/span&gt;Cancel&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+            <!-- Navigation -->
+            <div id="component-navigation" class="component">
+                <h1>Navigation</h1>
+                <div class="contents">
+                    <ol class="list-ordered list-account" data-component="drop-down">
+                        <li>
+                            <span>Hi there, Dinesh.</span>
+                        </li>
+                        <li data-drop-down="true">
+                            <a href="components.html#component-navigation">
+                                <span class="icon fa fa-user" aria-hidden="true"></span>
+                                My Account
+                            </a>
+                            <ol class="list-ordered list-drop-down">
+                                <li><a href="components.html#component-navigation">Address Book</a></li>
+                                <li><a href="components.html#component-navigation">My Orders</a></li>
+                                <li><a href="components.html#component-navigation">Manage Allocations</a></li>
+                                <li><a href="components.html#component-navigation">Change Password</a></li>
+                            </ol>
+                        </li>
+                        <li>
+                            <a href="components.html#component-navigation">
+                                <span class="icon fa fa-lock" aria-hidden="true"></span>
+                                Log Out
+                            </a>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+
+<pre class="prettyprint linenums">
+&lt;ol class="list-ordered list-account" data-component="drop-down"&gt;
+    &lt;li&gt;
+        &lt;span&gt;Hi there, Dinesh.&lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li data-drop-down="true"&gt;
+        &lt;a href="#"&gt;
+            &lt;span class="icon fa fa-user" aria-hidden="true"&gt;&lt;/span&gt;
+            My Account
+        &lt;/a&gt;
+        &lt;ol class="list-ordered list-drop-down"&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Address Book&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;My Orders&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Manage Allocations&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Change Password&lt;/a&gt;&lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href="#"&gt;
+            &lt;span class="icon fa fa-lock" aria-hidden="true"&gt;&lt;/span&gt;
+            Log Out
+        &lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+
+            <!-- Messaging -->
+            <div id="component-messaging" class="component" style="background-image: url('assets/images/restaurants/restaurant-background-simply-asia-1680x1050.jpg')">
+                <h1 class="white ts-dark">Messaging</h1>
+
+                <!-- Message: Restaurant delivers, address search form -->
+                <div class="message">
+                    <div class="status-icon">
+                        <span class="icon fa fa-exclamation-triangle yellow" aria-hidden="true"></span>
+                    </div>
+                    <div class="message-contents">
+                        <h6 class="heading-tiny hN">This restaurant delivers.</h6>
+                        <p class="medium">To find out if this restaurant delivers to your location, enter your address below, otherwise click &ldquo;Place Pickup Order&rdquo;</p>
+                        <form id="form-address" name="form-address" action="components.html#component-messaging" method="post" class="form-search-restaurant">
+                            <label for="address">
+                                <input id="address" name="address" type="text" class="input-grey" placeholder="Enter your address" maxlength="100" />
+                            </label>
+                            <input id="submit" name="submit" type="submit" value="Check Address" class="button button-red button-small" />
+                            <p class="tiny grey">E.g. &ldquo;90 Victoria Road, Woodstock&rdquo;</p>
+                        </form>
+                        <div class="secondary-action">
+                            <p>or <a href="components.html#component-messaging" class="button button-red button-small" role="button">Place Pickup Order</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Message: Restaurant does not deliver to your location, but nearby restaurant does -->
+                <div class="message">
+                    <div class="status-icon">
+                        <span class="icon fa fa-exclamation-triangle yellow" aria-hidden="true"></span>
+                    </div>
+                    <div class="message-contents">
+                        <h6 class="heading-tiny hN">This restaurant does not currently deliver to your location</h6>
+                        <p class="medium">But <b>Simply Asia Cavendish</b> does. You can view their menu or place a pickup order instead.</p>
+                        <a href="components.html#component-messaging" class="button button-red button-small" role="button">View menu for <b>Simply Asia Cavendish</b></a>
+                        <a href="components.html#component-messaging" class="button button-red button-small" role="button">Place Pickup Order</a>
+                    </div>
+                    <a href="#" class="close" data-action="feedback-dismiss"><span class="icon fa fa-times-circle" aria-hidden="true"></span></a>
+                </div>
+
+                <!-- Message: Restaurant does not deliver to your location -->
+                <div class="message">
+                    <div class="status-icon">
+                        <span class="icon fa fa-exclamation-triangle yellow" aria-hidden="true"></span>
+                    </div>
+                    <div class="message-contents">
+                        <h6 class="heading-tiny hN">Simpy Asia does not currently deliver to your location</h6>
+                        <p class="medium">Please click on the button below to place a pickup order.</p>
+                        <a href="components.html#component-messaging" class="button button-red button-small" role="button">Place Pickup Order</a>
+                    </div>
+                    <a href="#" class="close" data-action="feedback-dismiss"><span class="icon fa fa-times-circle" aria-hidden="true"></span></a>
+                </div>
+
+                <!-- Message: Restaurant delivers to your address -->
+                <div class="message">
+                    <div class="status-icon">
+                        <span class="icon fa fa-check-circle green" aria-hidden="true"></span>
+                    </div>
+                    <div class="message-contents">
+                        <p class="status large">This restaurant delivers to <b>123 Bree Street, Cape Town.</b></p>
+                        <form id="form-2" name="form-2" action="components.html#component-messaging" method="post">
+                            <fieldset class="fieldset">
+                                <input id="order-delivery" name="order-type" type="radio" value="Delivery" class="input-radio input-medium" checked="checked" />
+                                <label for="order-delivery">Delivery</label>
+                                <input id="order-pickup" name="order-type" type="radio" value="Pickup" class="input-radio input-medium" />
+                                <label for="order-pickup">Pickup</label>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <a href="#" class="close" data-action="feedback-dismiss"><span class="icon fa fa-times-circle" aria-hidden="true"></span></a>
+                </div>
+
+                <!-- Message: Restaurant does not deliver, order placed for pickup -->
+                <div class="message">
+                    <div class="status-icon">
+                        <span class="icon fa fa-info-circle green" aria-hidden="true"></span>
+                    </div>
+                    <div class="message-contents">
+                        <p class="status large">This restaurant does not deliver. <b>Your order will be placed for pickup.</b></p>
+                    </div>
+                    <a href="#" class="close" data-action="feedback-dismiss"><span class="icon fa fa-times-circle" aria-hidden="true"></span></a>
+                </div>
+
+                <!-- Message: Pickup order placed, but restaurant delivers -->
+                <div class="message">
+                    <div class="status-icon">
+                        <span class="icon fa fa-info-circle green" aria-hidden="true"></span>
+                    </div>
+                    <div class="message-contents">
+                        <h6 class="heading-tiny hN">This restaurant delivers.</h6>
+                        <p class="medium">You&rsquo;re placing a pickup order. But if you&rsquo;d like to see if it can be it delivered to your location, enter your address below.</p>
+                        <form id="form-address" name="form-address" action="components.html#component-messaging" method="post" class="form-search-restaurant">
+                            <label for="address">
+                                <input id="address" name="address" type="text" class="input-grey" placeholder="Enter your address" maxlength="100" />
+                            </label>
+                            <input id="submit" name="submit" type="submit" value="Check Address" class="button button-red button-small" />
+                            <p class="tiny grey">E.g. &ldquo;90 Victoria Road, Woodstock&rdquo;</p>
+                        </form>
+                    </div>
+                    <a href="#" class="close" data-action="feedback-dismiss"><span class="icon fa fa-times-circle" aria-hidden="true"></span></a>
+                </div>
+
+                <!-- Message: Order placed for pickup, restaurant does not deliver to your location -->
+                <div class="message">
+                    <div class="status-icon">
+                        <span class="icon fa fa-info-circle green" aria-hidden="true"></span>
+                    </div>
+                    <div class="message-contents">
+                        <p class="status large">This restaurant does not deliver to your location. <b>Your order will be placed for pickup.</b></p>
+                    </div>
+                    <a href="#" class="close" data-action="feedback-dismiss"><span class="icon fa fa-times-circle" aria-hidden="true"></span></a>
+                </div>
+            </div>
+
+<pre class="prettyprint linenums">
+&lt;div class="message"&gt;
+    &lt;div class="status-icon"&gt;
+        &lt;span class="icon fa fa-exclamation-triangle yellow" aria-hidden="true"&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="message-contents"&gt;
+        &lt;h6 class="heading-tiny hN"&gt;This restaurant delivers.&lt;/h6&gt;
+        &lt;p class="medium"&gt;To find out if this restaurant delivers to your location, enter your address below, otherwise click &ldquo;Place Pickup Order&rdquo;&lt;/p&gt;
+        &lt;form id="form-address" name="form-address" action="#" method="post" class="form-search-restaurant"&gt;
+            &lt;label for="address"&gt;
+                &lt;input id="address" name="address" type="text" class="input-grey" placeholder="Enter your address" maxlength="100" /&gt;
+            &lt;/label&gt;
+            &lt;input id="submit" name="submit" type="submit" value="Check Address" class="button button-red button-small" /&gt;
+            &lt;p class="tiny grey"&gt;E.g. &ldquo;90 Victoria Road, Woodstock&rdquo;&lt;/p&gt;
+        &lt;/form&gt;
+        &lt;div class="secondary-action"&gt;
+            &lt;p&gt;or &lt;a href="#" class="button button-red button-small" role="button"&gt;Place Pickup Order&lt;/a&gt;&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;a href="#" class="close" data-action="feedback-dismiss"&gt;&lt;span class="icon fa fa-times-circle" aria-hidden="true"&gt;&lt;/span&gt;&lt;/a&gt;
+&lt;/div&gt;
+</pre>
+
+            <!-- Autocomplete -->
+            <div id="component-autocomplete" class="component">
+                <h1>Autocomplete</h1>
+                <div class="contents">
+                    <form id="form" name="form" action="components.html#component-autocomplete" method="post">
+                        <label for="input">
+                            <input id="input" name="input" type="text" class="input-grey input-large" placeholder="" value="" maxlength="100" data-component="autocomplete" />
+                        </label>
+                    </form>
+                </div>
+            </div>
+
+<pre class="prettyprint linenums">
+&lt;form id="form" name="form" action="#" method="post"&gt;
+    &lt;label for="input"&gt;
+        &lt;input id="input" name="input" type="text" class="input-grey input-large" placeholder="" value="" maxlength="100" data-component="autocomplete" /&gt;
+    &lt;/label&gt;
+&lt;/form&gt;
+</pre>
+
+            <!-- Accordion -->
+            <div id="component-accordion" class="component">
+                <h1>Accordion</h1>
+                <div class="contents">
+                    <br/>
+                    <dl class="accordion" data-component="accordion">
+                        <dt>
+                            <a href="#">Lorem ipsum dolor sit amet</a>
+                            <span class="icon fa fa-minus-square-o" aria-hidden="true"></span>
+                        </dt>
+                        <dd class="open">
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                        </dd>
+                        <dt>
+                            <a href="#">Lorem ipsum dolor sit amet</a>
+                            <span class="icon fa fa-plus-square-o" aria-hidden="true"></span>
+                        </dt>
+                        <dd>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                        </dd>
+                        <dt>
+                            <a href="#">Lorem ipsum dolor sit amet</a>
+                            <span class="icon fa fa-plus-square-o" aria-hidden="true"></span>
+                        </dt>
+                        <dd>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                        </dd>
+                        <dt>
+                            <a href="#">Lorem ipsum dolor sit amet</a>
+                            <span class="icon fa fa-plus-square-o" aria-hidden="true"></span>
+                        </dt>
+                        <dd>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                        </dd>
+                        <dt>
+                            <a href="#">Lorem ipsum dolor sit amet</a>
+                            <span class="icon fa fa-plus-square-o" aria-hidden="true"></span>
+                        </dt>
+                        <dd>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+
+<pre class="prettyprint linenums">
+&lt;dl class="accordion" data-component="accordion"&gt;
+    &lt;dt&gt;
+        &lt;a href="#"&gt;Lorem ipsum dolor sit amet&lt;/a&gt;
+        &lt;span class="icon fa fa-plus-square-o" aria-hidden="true"&gt;&lt;/span&gt;
+    &lt;/dt&gt;
+    &lt;dd&gt;
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+    &lt;/dd&gt;
+&lt;/dl&gt;
+</pre>
+
+            <!-- Accordion -->
+            <div id="component-accordion-large" class="component">
+                <h1>Accordion (Large)</h1>
+                <div class="contents">
+                    <br/>
+                    <div class="accordion-large" data-component="accordion-large">
+                        <div class="accordion-header current">
+                            <a href="#">Lorem ipsum dolor <span class="icon fa fa-angle-down" aria-hidden="true"></span></a>
+                        </div>
+                        <div class="accordion-contents open">
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                        </div>
+                        <div class="accordion-header">
+                            <a href="#">Lorem ipsum dolor <span class="icon fa fa-angle-right" aria-hidden="true"></span></a>
+                        </div>
+                        <div class="accordion-contents">
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                        </div>
+                        <div class="accordion-header">
+                            <a href="#">Lorem ipsum dolor <span class="icon fa fa-angle-right" aria-hidden="true"></span></a>
+                        </div>
+                        <div class="accordion-contents">
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<pre class="prettyprint linenums">&lt;div class="accordion-large" data-component="accordion-large"&gt;
+    &lt;div class="accordion-header current"&gt;
+        &lt;a href="#"&gt;Lorem ipsum dolor &lt;span class="icon fa fa-angle-down" aria-hidden="true"&gt;&lt;/span&gt;&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class="accordion-contents open"&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+        </section>
+
+        <!-- Back to Top -->
+        <a href="#top" class="icon fa fa-arrow-up" data-action="back-to-top"></a>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="//maps.googleapis.com/maps/api/js?v=3&amp;sensor=false"></script>
+    <script src="assets/js/script.js"></script>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+    <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+    </script>
+</body>
+</html>

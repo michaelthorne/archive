@@ -1,0 +1,33 @@
+body {
+    color: #000;
+    font-family: "Tahoma", Arial, sans-serif;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+p, li {
+    font-size: 1em;
+}
+
+a {
+    color: #00d2ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+li a {
+    color: #000;
+}
+
+footer p {
+    color: #fff;
+}

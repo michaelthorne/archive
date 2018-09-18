@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en-GB" dir="ltr" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en-GB" dir="ltr" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en-GB" dir="ltr" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en-GB" dir="ltr" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+    <title>Spree / Order Processed Successfully</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="author" content="Michael Thorne" />
+    <meta name="description" content="" />
+    <!--<meta name="viewport" content="width=device-width" />-->
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:locale" content="en_GB" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="stylesheet" href="assets/css/normalize.css" />
+    <link rel="stylesheet" href="assets/css/jquery-ui.css" />
+    <link rel="stylesheet" href="assets/css/mediaelementplayer.css" />
+    <link rel="stylesheet" href="assets/css/layout.css" />
+    <link rel="stylesheet" href="assets/css/typography.css" />
+    <link rel="stylesheet" href="assets/css/forms.css" />
+    <!--
+        minify: Combines, minifies, and caches JavaScript
+        <link rel="stylesheet" href="/min/b=assets/css&amp;f=normalize.css,layout.css,typography.css,forms.css" />
+    -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5.js"></script>
+    <script src="assets/js/selectivizr.js"></script>
+    <![endif]-->
+    <script src="assets/js/detect.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="assets/js/jquery.js"><\/script>');</script>
+    <script>
+        var $j = jQuery.noConflict();
+    </script>
+</head>
+<body>
+    <!--[if lt IE 8]>
+    <div class="chromeframe">
+        <p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" title="Browse Happy &ndash; Upgrade your browser today!" target="_blank">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true" title="Google Chrome Frame &ndash; Make your browser more powerful." target="blank">activate Google Chrome Frame</a> to improve your experience.</p>
+    </div>
+    <![endif]-->
+    <header id="top" role="banner">
+        <div class="wrapper">
+            <a id="logo" href="home.html">
+                <img src="assets/images/logos/logo-spree.png" width="152" height="65" alt="Spree" />
+            </a>
+            <div class="utils">
+                <ul class="members">
+                    <li>
+                        <a href="member-login-register.html" class="active">Login</a>
+                    </li>
+                    <li>
+                        <a href="member-login-register.html">Register</a>
+                    </li>
+                </ul>
+                <ul class="languages drop-down">
+                    <li>
+                        <a href="#">English</a>
+                        <ul>
+                            <li><a href="#" data-language-code="en-za" data-language-active="true">English</a></li>
+                            <li><a href="#" data-language-code="af-za">Afrikaans</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="shop">
+                    <li class="favourites">
+                        <a href="shop-favourites.html" data-util="favourites">Favourites</a>
+                        <span>1</span>
+                    </li>
+                    <li class="cart">
+                        <a href="shop-cart.html" data-util="cart">Cart</a>
+                        <span>0</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <nav class="primary">
+        <div class="wrapper">
+            <ul class="drop-down" role="navigation">
+                <li>
+                    <a href="home.html">Home</a>
+                </li>
+                <li>
+                    <a href="#">What&rsquo;s New</a>
+                </li>
+                <li>
+                    <a href="products.html">Clothes</a>
+                    <ul>
+                        <li>
+                            <a href="product-category.html">Dresses</a>
+                        </li>
+                        <li>
+                            <a href="product-category.html">Tops</a>
+                        </li>
+                        <li>
+                            <a href="product-category.html">Bottoms</a>
+                        </li>
+                        <li>
+                            <a href="product-category.html">Jeans</a>
+                        </li>
+                        <li>
+                            <a href="product-category.html">Jackets &amp; Knitwear</a>
+                        </li>
+                        <li>
+                            <a href="product-category.html">Sleepwear</a>
+                        </li>
+                        <li>
+                            <a href="product-category.html">Swimwear</a>
+                        </li>
+                        <li>
+                            <a href="product-category.html">Activewear</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Shoes</a>
+                </li>
+                <li>
+                    <a href="#">Accessories</a>
+                </li>
+                <li>
+                    <a href="lookbook.html">Lookbook</a>
+                </li>
+                <li>
+                    <a href="#">Clearance</a>
+                </li>
+                <li>
+                    <a>Stores</a>
+                    <ul>
+                        <li>
+                            <a href="home-fairlady.html">Fairlady</a>
+                        </li>
+                        <li>
+                            <a href="home-drum.html">Drum</a>
+                        </li>
+                        <li>
+                            <a href="home-grazia.html">Grazia</a>
+                        </li>
+                        <li>
+                            <a href="home-huisgenoot.html">Huisgenoot</a>
+                        </li>
+                        <li>
+                            <a href="home-you.html">You</a>
+                        </li>
+                        <li>
+                            <a href="home-true-love.html">True Love</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <form id="form-search" name="form-search" method="post" action="home.html" class="form-search">
+                <label for="search">
+                    <input type="text" id="search" name="search" value="Search&hellip;" placeholder="Search&hellip;" maxlength="50" tabindex="1" data-action="autocomplete" />
+                </label>
+                <input type="submit" id="submit-search" name="submit-search" value="" tabindex="2" />
+            </form>
+        </div>
+    </nav>
+    <div class="wrapper-outer">
+        <div class="wrapper info">
+            <ul class="info">
+                <li>
+                    <img src="assets/images/icons/icon-info-newsletter.png" width="30" height="28" alt="" />
+                    <p>
+                        <b>Sign up to our Newsletter</b> Get Updates to Awesome Deals
+                    </p>
+                </li>
+                <li>
+                    <form id="form-signup-newsletter" name="form-signup-newsletter" method="post" action="home.html" class="form-signup-newsletter">
+                        <label for="email-signup-newsletter" data-component="newsletter-language-selection">
+                            <input type="text" id="email-signup-newsletter" name="email-signup-newsletter" value="Email address" placeholder="Email address" maxlength="100" />
+                        </label>
+                        <div id="newsletter-language-selection">
+                            <fieldset class="radio">
+                                <label>
+                                    <input type="radio" name="newsletter-language" value="en-za" checked="checked" />
+                                    English
+                                </label>
+                                <label>
+                                    <input type="radio" name="newsletter-language" value="af-za" />
+                                    Afrikaans
+                                </label>
+                            </fieldset>
+                        </div>
+                        <input type="submit" id="submit-signup-newsletter" name="submit-signup-newsletter" value="Sign up now" />
+                    </form>
+                    <!-- Confirmation message after submitting the form -->
+                    <!-- <p class="feedback">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p> -->
+                </li>
+                <li>
+                    <img src="assets/images/icons/icon-info-free-delivery.png" width="33" height="29" alt="" />
+                    <p>
+                        <b>Free Delivery</b> Within South Africa
+                    </p>
+                </li>
+                <li>
+                    <img src="assets/images/icons/icon-info-free-returns.png" width="25" height="30" alt="" />
+                    <p>
+                        <b>Free Returns</b> Within 30 Days
+                    </p>
+                </li>
+                <li>
+                    <img src="assets/images/icons/icon-info-help-and-enquiries.png" width="20" height="29" alt="" />
+                    <p>
+                        <b>0861 999 501</b> Help &amp; Enquiries
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <section role="main">
+        <div class="wrapper-inner">
+            <div class="wrapper navigation">
+                <ul class="breadcrumbs">
+                    <li>
+                        <a href="home.html">Home</a> /
+                    </li>
+                    <li class="current">Checkout Success</li>
+                </ul>
+            </div>
+        </div>
+        <div class="wrapper order-successful">
+            <header>
+                <h1>Order processed successfully.</h1>
+            </header>
+            <ul class="order-details">
+                <li>
+                    Estimated Delivery: <span>Friday, 19 Feb 2012</span>
+                </li>
+                <li>
+                    Order Number: <span>12345678</span>
+                </li>
+            </ul>
+            <p>
+                You can track your order anytime by logging into <a href="account.html">your account</a>.
+            </p>
+            <p>
+                Email <a href="mailto:koop@sarie.com">koop@sarie.com</a> or call us on 0861 999 501 for inquiries on your profile or anything else.
+            </p>
+        </div>
+        <header class="navy">
+            <div class="wrapper">
+                <h2>What happens next?</h2>
+            </div>
+        </header>
+        <div class="wrapper order-process">
+            <ol class="order-process">
+                <li>
+                    <img src="assets/images/general/order-process-step-1.png" width="245" height="145" alt="" />
+                    <p>Order is placed on <a href="http://www.spree.com">Spree.com</a></p>
+                </li>
+                <li>
+                    <img src="assets/images/general/order-process-step-2.png" width="245" height="145" alt="" />
+                    <p>Order is prepared by the warehouse</p>
+                </li>
+                <li>
+                    <img src="assets/images/general/order-process-step-3.png" width="245" height="145" alt="" />
+                    <p>Courier collects &amp; dispatches order</p>
+                </li>
+                <li>
+                    <img src="assets/images/general/order-process-step-4.png" width="225" height="145" alt="" />
+                    <p>Order is delivered to your door / nearest post office</p>
+                </li>
+            </ol>
+        </div>
+        <header class="grey">
+            <div class="wrapper">
+                <h2>Spread the love</h2>
+            </div>
+        </header>
+        <div class="wrapper spread-the-love">
+            <ul class="spread-the-love">
+                <li>
+                    <div class="wrapper">
+                        <div class="mechanism">
+                            <img src="assets/images/logos/logo-facebook-large.png" width="71" height="61" alt="" />
+                            <header>
+                                <h3>Share on Facebook</h3>
+                            </header>
+                            <p>Your friends will get R25 when they use your post to join and shop SPREE &ndash; and you&rsquo;ll get R25 after their first order ships. It&rsquo;s simple! <a href="#">Learn more</a></p>
+                        </div>
+                        <a href="#" class="button navy-large" role="button">Start Sharing</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="wrapper">
+                        <div class="mechanism">
+                            <img src="assets/images/icons/icon-invite-friends.png" width="71" height="61" alt="" />
+                            <header>
+                                <h3>Invite Your Friends</h3>
+                            </header>
+                            <p>Email your friends and invite them to join SPREE. They&rsquo;ll get R25 when they place their first order, and you&rsquo;ll get R25 after their first order ships.</p>
+                        </div>
+                        <a href="#" class="button navy-large" role="button">Invite Friends</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <footer role="contentinfo">
+        <div class="wrapper">
+            <nav>
+                <ul role="navigation">
+                    <li>
+                        <b>Lorem ipsum</b>
+                        <ul role="navigation">
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Lorem ipsum</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Lorem ipsum</b>
+                        <ul role="navigation">
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Lorem ipsum</a></li>
+                            <li><a href="#">Lorem ipsum</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Lorem ipsum</b>
+                        <ul role="navigation">
+                            <li>+27 83 987 2341</li>
+                            <li><a href="mailto:lorem@ipsum.com">lorem@ipsum.com</a></li>
+                            <li><img src="assets/images/logos/logo-twitter.png" width="18" height="20" title="Twitter" alt="Twitter" /> <a href="#">Lorem ipsum</a></li>
+                            <li><img src="assets/images/logos/logo-facebook.png" width="18" height="20" title="Facebook" alt="Facebook" /> <a href="#">Lorem ipsum</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>Lorem ipsum</b>
+                        <form id="form-signup" name="form-signup" method="post" action="home.html" class="form-signup">
+                            <label for="email-signup">
+                                Sign up and get a <strong>R50 Voucher</strong>
+                                <input type="text" id="email-signup" name="email-signup" value="Email address" placeholder="Email address" maxlength="100" />
+                            </label>
+                            <input type="submit" id="submit-signup" name="submit-signup" value="Sign up now" />
+                        </form>
+                        <!-- Confirmation message after submitting the form -->
+                        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p> -->
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+    <a href="#" class="back-to-top" data-action="back-to-top" title="Back to Top"><img src="assets/images/icons/icon-up.png" width="12" height="12" alt="^" /> Top</a>
+    <div id="language-confirmation" class="modal small">
+        <header>
+            <h1>Magazine Language Change</h1>
+        </header>
+        <p>The products curated by this magazine title are best experienced in <b>Afrikaans</b>. Would you like to change language now?</p>
+        <a href="home.html" class="button red" data-action="language-confirm" role="button">Yes</a>
+        <a href="#" class="secondary" data-action="modal-close">No thanks</a>
+        <p>You can switch your language anytime using the language dropdown in the top right of the website.</p>
+        <a href="#" class="close" data-action="modal-close"><img src="assets/images/icons/icon-modal-close.png" width="33" height="33" alt="X" /></a>
+    </div>
+    <div id="fb-root"></div>
+    <script src="assets/js/jquery.easing.js"></script>
+    <script src="assets/js/jquery.placeholder.js"></script>
+    <script src="assets/js/jquery.scrollto.js"></script>
+    <script src="assets/js/jquery.serialscroll.js"></script>
+    <script src="assets/js/jquery.iosslider.js"></script>
+    <script src="assets/js/jquery.modal.js"></script>
+    <script src="assets/js/jquery.mediaelementplayer.js"></script>
+    <script src="assets/js/jquery-ui.js"></script>
+    <script>
+        /*
+         * The URL for the front-end of the website
+         * @type {String}
+         */
+        var frontEndWebsiteURL = null;
+        // var frontEndWebsiteURL = 'http://dev.megastore.local/skin/frontend/site/web';
+    </script>
+    <script src="assets/js/jquery-custom.js"></script>
+    <!--
+        minify: Combines, minifies, and caches JavaScript
+        <script src="/min/b=assets/js&amp;f=jquery.easing.js,jquery.placeholder.js,jquery-custom.js"></script>
+    -->
+    <script>(function(d, s, id)
+    {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+</body>
+</html>
