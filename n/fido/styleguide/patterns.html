@@ -1,0 +1,2893 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Style Guide – Patterns | Fido</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/styleguide/styleguide.css">
+
+    <!-- Web Fonts -->
+    <script>
+        WebFontConfig = {
+            google: {
+                families: ['Varela+Round:400', 'Open+Sans:300,400']
+            }
+        };
+    </script>
+
+    <!-- Web Font Loader -->
+    <script src="../assets/js/vendor/webfontloader.js" async="async"></script>
+
+    <!--[if lt IE 9]>
+    <script src="../assets/js/vendor/polyfills.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!--[if lt IE 9]>
+    <p class="upgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/?locale=en">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <header class="sg-header sg-header--primary" role="banner">
+        <div class="sg-l-wrapper">
+            <a class="sg-logo" href="index.html">
+                <img src="../assets/images/logos/logo-fido-white-183x32.png" srcset="../assets/images/logos/logo-fido-white-183x32@2x.png 2x" width="183" height="32" alt="Fido by FRANK.NET logo">
+            </a>
+
+            <nav class="sg-nav sg-nav--primary">
+                <ol class="sg-list">
+                    <li><a href="elements.html">Elements</a></li>
+                    <li><a class="is-active" href="patterns.html">Patterns</a></li>
+                    <li><a href="forms.html">Forms</a></li>
+                    <li><a href="templates.html">Templates</a></li>
+                </ol>
+
+                <form class="sg-form">
+                    <label class="sg-label">
+                        <select class="sg-input js-sg-jump" id="sg-jump">
+                            <option value="">Jump to…</option>
+                            <option value="sg-navigation">Navigation</option>
+                            <option value="sg-toolbar">Toolbar</option>
+                            <option value="sg-notification">Notification</option>
+                            <option value="sg-hero">Hero</option>
+                            <option value="sg-header">Header</option>
+                            <option value="sg-feature">Feature</option>
+                            <option value="sg-bar">Bar</option>
+                            <option value="sg-chart-circle">Chart – Circle</option>
+                            <option value="sg-loader">Loader</option>
+                            <option value="sg-credit-score">Credit Score</option>
+                            <option value="sg-card">Card</option>
+                            <option value="sg-card-wide">Card – Wide</option>
+                            <option value="sg-card-empty">Card – Empty</option>
+                            <option value="sg-account">Account</option>
+                            <option value="sg-legal-action">Legal Action</option>
+                            <option value="sg-alerts">Alerts</option>
+                            <option value="sg-faq">FAQ</option>
+                            <option value="sg-post">Post</option>
+                            <option value="sg-legal">Legal</option>
+                            <option value="sg-offer">Offer</option>
+                            <option value="sg-cta">CTA</option>
+                            <option value="sg-sign-up">Sign Up</option>
+                            <option value="sg-box">Box</option>
+                            <option value="sg-carousel">Carousel</option>
+                            <option value="sg-modal">Modal</option>
+                            <option value="sg-social">Social</option>
+                            <option value="sg-tooltips">Tooltips</option>
+                        </select>
+                    </label>
+                </form>
+            </nav>
+
+            <button class="sg-btn js-sg-toggle-nav">Menu</button>
+        </div>
+    </header>
+
+    <main class="sg-main" role="main">
+        <div class="sg-l-wrapper">
+            <section class="sg-l-section" id="sg-navigation">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">Navigation</h1>
+                </header>
+
+                <h2 class="sg-heading-spacer">Default</h2>
+
+                <div style="background-color: #2d4276; padding: 1em">
+                    <nav class="nav" role="navigation">
+                        <ol class="list">
+                            <li class="is-active"><a href="#sg-navigation">About Fido</a></li>
+                            <li><a href="#sg-navigation">FAQ</a></li>
+                            <li><a href="#sg-navigation"><span class="icon icon-user" aria-hidden="true"></span>Log In</a></li>
+                        </ol>
+                    </nav>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><nav class="nav" role="navigation">
+    <ol class="list">
+        <li class="is-active"><a href="#">About Fido</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#"><span class="icon icon-user" aria-hidden="true"></span>Log In</a></li>
+    </ol>
+</nav></code>
+                </div>
+
+                <h2 class="sg-heading-spacer">Separator</h2>
+
+                <nav class="nav nav--gray nav--separator" role="navigation">
+                    <ol class="list">
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="#sg-navigation">About Fido</a></li>
+                        <li><a href="#sg-navigation">Privacy Policy</a></li>
+                        <li><a href="#sg-navigation">Terms & Conditions</a></li>
+                    </ol>
+                </nav>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><nav class="nav nav--gray nav--separator" role="navigation">
+    <ol class="list">
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">About Fido</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+    </ol>
+</nav></code>
+                </div>
+            </section>
+
+            <section class="sg-l-section" id="sg-toolbar">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">Toolbar</h1>
+                </header>
+
+                <div style="background-color: #2d4276; padding: 1em">
+                    <div class="toolbar js-toolbar">
+                        <div class="toolbar__item">
+                            <a class="toolbar__link" href="#sg-toolbar">
+                                <span class="toolbar__icon icon-treat" aria-hidden="true"></span>
+                                <span class="toolbar__count">1</span>
+                            </a>
+
+                            <div class="toolbar-menu">
+                                <div class="offer">
+                                    <img class="offer__logo" src="../assets/images/logos/logo-frank-120x21.png" srcset="../assets/images/logos/logo-frank-120x21@2x.png 2x" width="120" height="21" alt="FRANK.NET logo">
+
+                                    <p class="offer__synopsis">Protect that paycheque with FRANK.NET 3 months free!</p>
+
+                                    <a class="offer__link" href="#sg-toolbar">Apply Now</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="toolbar__item">
+                            <a class="toolbar__link" href="#sg-toolbar">
+                                <span class="toolbar__icon icon-alert" aria-hidden="true"></span>
+                                <span class="toolbar__count">3</span>
+                            </a>
+
+                            <div class="toolbar-menu">
+                                <div class="notifications">
+                                    <div class="notification notification--positive">
+                                        <span class="notification__icon icon-arrow-up" aria-hidden="true"></span>
+                                        <p class="notification__synopsis">Your credit score improved by <b>12</b> points</p>
+                                    </div>
+
+                                    <div class="notification notification--neutral">
+                                        <span class="notification__icon icon-arrow-down" aria-hidden="true"></span>
+                                        <p class="notification__synopsis">Your credit to debit ratio has decreased by <b>1</b> point</p>
+                                    </div>
+
+                                    <div class="notification notification--negative">
+                                        <span class="notification__icon icon-frown-o" aria-hidden="true"></span>
+                                        <p class="notification__synopsis">You have <b>1</b> judgement pending</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="toolbar__item">
+                            <a class="toolbar__link" href="#sg-toolbar">
+                                <span class="toolbar__icon icon-user" aria-hidden="true"></span>
+                            </a>
+
+                            <div class="toolbar-menu">
+                                <div class="toolbar-menu__header">
+                                    <div class="toolbar-menu__title">Shaun Gardner</div>
+                                    <a class="toolbar-menu__link" href="#sg-toolbar">View Profile</a>
+                                </div>
+
+                                <div class="toolbar-menu__block toolbar-menu__block--silver">
+                                    <span class="icon icon-user" aria-hidden="true"></span>
+                                    <a class="toolbar-menu__link" href="#sg-toolbar">Edit Account</a>
+                                </div>
+
+                                <div class="toolbar-menu__block">
+                                    <span class="icon icon-power-off" aria-hidden="true"></span>
+                                    <a class="toolbar-menu__link" href="#sg-toolbar">Log Out</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><div class="toolbar js-toolbar">
+    <div class="toolbar__item">
+        <a class="toolbar__link" href="#">
+            <span class="toolbar__icon icon-treat" aria-hidden="true"></span>
+        </a>
+        <span class="toolbar__count">1</span>
+
+        <div class="toolbar-menu">
+            <div class="offer">
+                <img class="offer__logo" src="../assets/images/logos/logo-frank-120x21.png" srcset="../assets/images/logos/logo-frank-120x21@2x.png 2x" width="120" height="21" alt="FRANK.NET logo">
+
+                <p class="offer__synopsis">Protect that paycheque with FRANK.NET 3 months free!</p>
+
+                <a class="offer__link" href="#">Apply Now</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="toolbar__item">
+        <a class="toolbar__link" href="#">
+            <span class="toolbar__icon icon-alert" aria-hidden="true"></span>
+            <span class="toolbar__count">3</span>
+        </a>
+
+        <div class="toolbar-menu">
+            <div class="notifications">
+                <div class="notification notification--positive">
+                    <span class="notification__icon icon-arrow-up" aria-hidden="true"></span>
+                    <p class="notification__synopsis">Your credit score improved by <b>12</b> points</p>
+                </div>
+
+                <div class="notification notification--neutral">
+                    <span class="notification__icon icon-arrow-down" aria-hidden="true"></span>
+                    <p class="notification__synopsis">Your credit to debit ratio has decreased by <b>1</b> point</p>
+                </div>
+
+                <div class="notification notification--negative">
+                    <span class="notification__icon icon-frown-o" aria-hidden="true"></span>
+                    <p class="notification__synopsis">You have <b>1</b> judgement pending</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="toolbar__item">
+        <a class="toolbar__link" href="#">
+            <span class="toolbar__icon icon-user" aria-hidden="true"></span>
+        </a>
+
+        <div class="toolbar-menu">
+            <div class="toolbar-menu__header">
+                <div class="toolbar-menu__title">Shaun Gardner</div>
+                <a class="toolbar-menu__link" href="#">View Profile</a>
+            </div>
+
+            <div class="toolbar-menu__block toolbar-menu__block--silver">
+                <span class="icon icon-user" aria-hidden="true"></span>
+                <a class="toolbar-menu__link" href="#">Edit Account</a>
+            </div>
+
+            <div class="toolbar-menu__block">
+                <span class="icon icon-power-off" aria-hidden="true"></span>
+                <a class="toolbar-menu__link" href="#">Log Out</a>
+            </div>
+        </div>
+    </div>
+</div></code>
+                </div>
+            </section>
+
+            <section class="sg-l-section" id="sg-notification">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">Notification</h1>
+                </header>
+
+                <h2 class="sg-heading-spacer">Positive</h2>
+
+                <div class="notification notification--positive">
+                    <span class="notification__icon icon-arrow-up" aria-hidden="true"></span>
+                    <p class="notification__synopsis">Your credit score improved by <b>12</b> points</p>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><div class="notification notification--positive">
+    <span class="notification__icon icon-arrow-up" aria-hidden="true"></span>
+    <p class="notification__synopsis">Your credit score improved by <b>12</b> points</p>
+</div></code>
+                </div>
+
+                <h2 class="sg-heading-spacer">Neutral</h2>
+
+                <div class="notification notification--neutral">
+                    <span class="notification__icon icon-arrow-down" aria-hidden="true"></span>
+                    <p class="notification__synopsis">Your credit to debit ratio has decreased by <b>1</b> point</p>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><div class="notification notification--neutral">
+    <span class="notification__icon icon-arrow-down" aria-hidden="true"></span>
+    <p class="notification__synopsis">Your credit to debit ratio has decreased by <b>1</b> point</p>
+</div></code>
+                </div>
+
+                <h2 class="sg-heading-spacer">Negative</h2>
+
+                <div class="notification notification--negative">
+                    <span class="notification__icon icon-frown-o" aria-hidden="true"></span>
+                    <p class="notification__synopsis">You have <b>1</b> judgement pending</p>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><div class="notification notification--negative">
+    <span class="notification__icon icon-frown-o" aria-hidden="true"></span>
+    <p class="notification__synopsis">You have <b>1</b> judgement pending</p>
+</div></code>
+                </div>
+            </section>
+
+            <section class="sg-l-section" id="sg-hero">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">Hero</h1>
+                </header>
+
+                <div style="background-color: #2d4276">
+                    <div class="hero">
+                        <h1 class="hero__title">Meet Your Money’s Best Friend</h1>
+
+                        <p class="hero__synopsis">Credit reports that are fast, free, automated and awesome.</p>
+
+                        <img class="hero__img" src="../assets/images/general/fido-hero-652x344.gif" srcset="../assets/images/general/fido-hero-652x344@2x.gif 2x" width="652" height="344" alt="">
+
+                        <div class="hero__footer">
+                            <div class="btn-group">
+                                <a class="btn btn--blue" href="#sg-hero">Learn More</a>
+                                <a class="btn" href="#sg-hero">Get Started</a>
+                            </div>
+
+                            <p class="hero__legal">It’s free. No credit card required.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><div class="hero">
+    <h1 class="hero__title">Meet Your Money’s Best Friend</h1>
+
+    <p class="hero__synopsis">Credit reports that are fast, free, automated and awesome.</p>
+
+    <img class="hero__img" src="../assets/images/general/fido-hero-652x344.gif" srcset="../assets/images/general/fido-hero-652x344@2x.gif 2x" width="652" height="344" alt="">
+
+    <div class="hero__footer">
+        <div class="btn-group">
+            <a class="btn btn--blue" href="#">Learn More</a>
+            <a class="btn" href="#">Get Started</a>
+        </div>
+
+        <p class="hero__legal">It’s free. No credit card required.</p>
+    </div>
+</div></code>
+                </div>
+            </section>
+
+            <section class="sg-l-section" id="sg-header">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">Header</h1>
+                </header>
+
+                <h2 class="sg-heading-spacer">Default</h2>
+
+                <header class="header">
+                    <h2 class="hN">4 Ways Fido Makes Credit Reports Awesome</h2>
+                </header>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><header class="header">
+    <h2 class="hN">4 Ways Fido Makes Credit Reports Awesome</h2>
+</header></code>
+                </div>
+
+                <h2 class="sg-heading-spacer">Section</h2>
+
+                <header class="header header--section">
+                    <h2 class="hN">4 Ways Fido Makes Credit Reports Awesome</h2>
+                </header>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><header class="header header--section">
+    <span class="header__label">Step 1 of 2</span>
+    <h2 class="hN">4 Ways Fido Makes Credit Reports Awesome</h2>
+</header></code>
+                </div>
+            </section>
+
+            <section class="sg-l-section" id="sg-feature">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">Feature</h1>
+                </header>
+
+                <h2 class="sg-heading-spacer">Left</h2>
+
+                <div class="feature">
+                    <img class="feature__img feature__img--left" src="../assets/images/features/feature-01-303x300.png" srcset="../assets/images/features/feature-01-303x300@2x.png 2x" width="303" height="300" alt="">
+
+                    <div class="feature__count">01</div>
+
+                    <h3 class="feature__title">Simple & Clear</h3>
+
+                    <p class="feature__synopsis">Fido fetches your credit info and helps you to make sense of the numbers
+                        with a dashboard that makes sense – you don’t even need to create an account.</p>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><div class="feature">
+    <img class="feature__img feature__img--left" src="../assets/images/features/feature-01-303x300.png" srcset="../assets/images/features/feature-01-303x300@2x.png 2x" width="303" height="300" alt="">
+
+    <div class="feature__count">01</div>
+
+    <h3 class="feature__title">Simple & Clear</h3>
+
+    <p class="feature__synopsis">Fido fetches your credit info and helps you to make sense of the numbers with a dashboard that makes sense – you don’t even need to create an account.</p>
+</div></code>
+                </div>
+
+                <h2 class="sg-heading-spacer">Right</h2>
+
+                <div class="feature">
+                    <img class="feature__img feature__img--right" src="../assets/images/features/feature-02-303x300.png" srcset="../assets/images/features/feature-02-303x300@2x.png 2x" width="303" height="300" alt="">
+
+                    <div class="feature__count">02</div>
+
+                    <h3 class="feature__title">Always Up To Date</h3>
+
+                    <p class="feature__synopsis">Create a Free account and get updates whenever there’s positive or negative,
+                        activity on your credit profile.</p>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><div class="feature">
+    <img class="feature__img feature__img--right" src="../assets/images/features/feature-02-303x300.png" srcset="../assets/images/features/feature-02-303x300@2x.png 2x" width="303" height="300" alt="">
+
+    <div class="feature__count">02</div>
+
+    <h3 class="feature__title">Always Up To Date</h3>
+
+    <p class="feature__synopsis">Create a Free account and get updates whenever there’s positive or negative, activity on your credit profile.</p>
+</div></code>
+                </div>
+
+                <h2 class="sg-heading-spacer">Inline</h2>
+
+                <div class="feature">
+                    <img class="feature__img" src="../assets/images/features/feature-01-700x407.png" srcset="../assets/images/features/feature-01-700x407@2x.png 2x" width="700" height="407" alt="">
+
+                    <div class="feature__count feature__count--inline">01</div>
+
+                    <h3 class="feature__title">Playing fetch</h3>
+
+                    <p class="feature__synopsis">Fido has partnered with Experian – a leading international credit
+                        bureau to give you instant access to your important credit information.</p>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><div class="feature">
+    <img class="feature__img" src="../assets/images/features/feature-01-700x407.png" srcset="../assets/images/features/feature-01-700x407@2x.png 2x" width="700" height="407" alt="">
+
+    <div class="feature__count">01</div>
+
+    <h3 class="feature__title">Playing fetch</h3>
+
+    <p class="feature__synopsis">Fido has partnered with Experian – a leading international credit bureau to give you instant access to your important credit information.</p>
+</div></code>
+                </div>
+            </section>
+
+            <section class="sg-l-section" id="sg-bar">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">Bar</h1>
+                </header>
+
+                <h2 class="sg-heading-spacer">Default</h2>
+
+                <div style="background-color: #fff; padding: 1em">
+                    <div class="bar">
+                        <div class="bar__block bar__block--positive js-bar" style="width: 50%" data-bar-percent="50"></div>
+                    </div>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><div class="bar">
+    <div class="bar__block bar__block--positive js%2Dbar" style="width: 50%" data-bar-percent="50"></div>
+</div></code>
+                </div>
+
+                <h2 class="sg-heading-spacer">Loader</h2>
+
+                <div style="background-color: #fff; padding: 1em">
+                    <div class="bar bar--loader">
+                        <div class="bar__block bar__block--neutral js-bar" style="width: 25%" data-bar-percent="25"></div>
+                    </div>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><div class="bar bar--loader">
+    <div class="bar__block bar__block--neutral js%2Dbar" style="width: 50%" data-bar-percent="50"></div>
+</div></code>
+                </div>
+
+                <h2 class="sg-heading-spacer">Credit Score</h2>
+
+                <div style="background-color: #2d4276; padding: 1em">
+                    <div class="bar bar--credit-score js-credit-score" data-credit-score="649">
+                        <div class="bar__label">300</div>
+
+                        <div class="bar__wrapper">
+                            <div class="bar__block bar__block--negative"></div>
+                            <div class="bar__block bar__block--neutral"></div>
+                            <div class="bar__block bar__block--positive"></div>
+
+                            <div class="bar__marker js-credit-score-marker"></div>
+                            <div class="bar__score bar__score--positive">
+                                Your credit score on 26/01/2016
+                                <b>649</b>
+                            </div>
+                        </div>
+
+                        <div class="bar__label">750</div>
+                    </div>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><div class="bar bar--credit-score js%2Dcredit-score" data-credit-score="649">
+    <div class="bar__wrapper">
+        <div class="bar__block bar__block--negative"></div>
+        <div class="bar__block bar__block--neutral"></div>
+        <div class="bar__block bar__block--positive"></div>
+
+        <div class="bar__marker js%2Dcredit-score-marker"></div>
+        <div class="bar__score bar__score--positive">
+            Your credit score on 26/01/2016
+            <b>649</b>
+        </div>
+    </div>
+</div></code>
+                </div>
+            </section>
+
+            <section class="sg-l-section" id="sg-chart-circle">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">Chart – Circle</h1>
+                </header>
+
+                <h2 class="sg-heading-spacer">Negative</h2>
+
+                <div class="chart chart--negative">
+                    <div class="circliful circliful--negative js-circle-chart" data-percent="83" data-text="83<sup>%</sup>"></div>
+                    <p class="chart__synopsis">83% of your monthly salary <b>R14,000.00</b> is going to servicing accounts. You should reduce this.</p>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><div class="chart chart--negative">
+    <div class="circliful circliful--negative js%2Dcircle-chart" data-percent="20" data-text="20<sup>%</sup>"></div>
+    <p class="chart__synopsis">83% of your monthly salary <b>R14,000.00</b> is going to servicing accounts. You should reduce this.</p>
+</div></code>
+                </div>
+
+                <h2 class="sg-heading-spacer">Neutral</h2>
+
+                <div class="chart chart--neutral">
+                    <div class="circliful circliful--neutral js-circle-chart" data-percent="65" data-text="65<sup>%</sup>"></div>
+                    <p class="chart__synopsis">You are spending a significant portion of your monthly salary <b>R14,000.00</b> on account repayments.</p>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><div class="chart chart--neutral">
+    <div class="circliful circliful--neutral js%2Dcircle-chart" data-percent="65" data-text="65<sup>%</sup>"></div>
+    <p class="chart__synopsis">You are spending a significant portion of your monthly salary <b>R14,000.00</b> on account repayments.</p>
+</div></code>
+                </div>
+
+                <h2 class="sg-heading-spacer">Positive</h2>
+
+                <div class="chart chart--positive">
+                    <div class="circliful circliful--positive js-circle-chart" data-percent="12" data-text="12<sup>%</sup>"></div>
+                    <p class="chart__synopsis">You’re spending an acceptable amount of your income <b>R14,000.00</b> on servicing debts.</p>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><div class="chart chart--positive">
+    <div class="circliful circliful--positive js-circle-chart" data-percent="12" data-text="12<sup>%</sup>"></div>
+    <p class="chart__synopsis">You’re spending an acceptable amount of your income <b>R14,000.00</b> on servicing debts.</p>
+</div></code>
+                </div>
+            </section>
+
+            <section class="sg-l-section" id="sg-loader">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">Loader</h1>
+                </header>
+
+                <h2 class="sg-heading-spacer">Default</h2>
+
+                <div class="loader">
+                    <div class="loader__content">
+                        <img class="loader__img" src="../assets/images/general/loader-149x170.gif" srcset="../assets/images/general/loader-149x170@2x.gif 2x" width="149" height="170" alt="">
+
+                        <div class="loader__synopsis">Fido is calculating your score…</div>
+
+                        <div class="bar bar--loader">
+                            <div class="bar__block bar__block--neutral js-bar" style="width: 50%" data-bar-percent="50"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><div class="loader">
+    <div class="loader__content">
+        <img class="loader__img" src="../assets/images/general/loader-149x170.gif" srcset="../assets/images/general/loader-149x170@2x.gif 2x" width="149" height="170" alt="">
+
+        <div class="loader__synopsis">Fido is calculating your score…</div>
+
+        <div class="bar bar--loader">
+            <div class="bar__block bar__block--neutral js%2Dbar" style="width: 50%" data-bar-percent="50"></div>
+        </div>
+    </div>
+</div></code>
+                </div>
+
+                <h2 class="sg-heading-spacer">Notify</h2>
+
+                <div class="loader">
+                    <div class="loader__content">
+                        <img class="loader__img" src="../assets/images/general/loader-149x170.gif" srcset="../assets/images/general/loader-149x170@2x.gif 2x" width="149" height="170" alt="">
+
+                        <div class="loader__synopsis">Hmmm. This is taking longer than expected.</div>
+
+                        <div class="alert alert--info js-alert" role="alert">
+                            <div class="alert__message">
+                                <span class="icon icon-info" aria-hidden="true"></span>
+                                <p> Enter your email address below and we’ll notify you when your credit score is ready.</p>
+                            </div>
+                        </div>
+
+                        <form class="form form--single" action="#sg-loader" method="post">
+                            <label class="label u-visuallyhidden" for="email-2">Email Address</label>
+                            <input class="input input--dark" type="email" id="email-2" name="email-2" placeholder="Email Address" maxlength="100">
+
+                            <input class="btn btn--blue" type="submit" value="Go">
+                        </form>
+                    </div>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><div class="loader">
+    <div class="loader__content">
+        <img class="loader__img" src="../assets/images/general/loader-149x170.gif" srcset="../assets/images/general/loader-149x170@2x.gif 2x" width="149" height="170" alt="">
+
+        <div class="loader__synopsis">Hmmm. This is taking longer than expected.</div>
+
+        <div class="alert alert--info js-alert" role="alert">
+            <div class="alert__message">
+                <span class="icon icon-info" aria-hidden="true"></span>
+                <p> Enter your email address below and we’ll notify you when your credit score is ready.</p>
+            </div>
+        </div>
+
+        <form class="form form--single" action="#" method="post">
+            <label class="label u-visuallyhidden" for="email-b">Email Address</label>
+            <input class="input input--dark" type="email" id="email-b" name="email" placeholder="Email Address" maxlength="100">
+
+            <input class="btn btn--blue" type="submit" value="Go">
+        </form>
+    </div>
+</div></code>
+                </div>
+
+                <h2 class="sg-heading-spacer">Error</h2>
+
+                <div class="loader">
+                    <div class="loader__content">
+                        <img class="loader__img" src="../assets/images/general/loader-149x170.gif" srcset="../assets/images/general/loader-149x170@2x.gif 2x" width="149" height="170" alt="">
+
+                        <div class="loader__synopsis"><b>Uh oh!</b> That wasn’t meant to happen.</div>
+
+                        <div class="alert alert--negative js-alert" role="alert">
+                            <div class="alert__message">
+                                <span class="icon icon-frown-o" aria-hidden="true"></span>
+                                <p>We encountered a problem whilst calculating your score.</p>
+                            </div>
+                        </div>
+
+                        <div class="btn-group">
+                            <a class="btn btn--small btn--blue" href="#sg-loader">Try again</a>
+                            <a class="btn btn--small btn--transparent" href="#sg-loader">Cancel</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><div class="loader">
+    <div class="loader__content">
+        <img class="loader__img" src="../assets/images/general/loader-149x170.gif" srcset="../assets/images/general/loader-149x170@2x.gif 2x" width="149" height="170" alt="">
+
+        <div class="loader__synopsis">Fido is calculating your score…</div>
+
+        <div class="loader__synopsis"><b>Uh oh!</b> That wasn’t meant to happen.</div>
+
+        <div class="alert alert--negative js-alert" role="alert">
+            <div class="alert__message">
+                <span class="icon icon-frown-o" aria-hidden="true"></span>
+                <p>We encountered a problem whilst calculating your score.</p>
+            </div>
+        </div>
+
+        <div class="btn-group">
+            <a class="btn btn--small btn--blue" href="#">Try again</a>
+            <a class="btn btn--small btn--transparent" href="#">Cancel</a>
+        </div>
+    </div>
+</div></code>
+                </div>
+            </section>
+
+            <section class="sg-l-section" id="sg-credit-score">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">Credit Score</h1>
+                </header>
+
+                <h2 class="sg-heading-spacer">Negative</h2>
+
+                <div style="background-color: #2d4276; padding: 1em">
+                    <div class="credit-score credit-score--negative">
+                        <div class="credit-score__content">
+                            <h6 class="credit-score__title">Welcome Shaun</h6>
+                            <p class="credit-score__synopsis"><strong>We need to talk.</strong> Your credit score is not in a good place.
+                                <b>367</b> is bad, but can be fixed if you remedy the issues highlighted below.</p>
+                        </div>
+
+                        <img class="credit-score__img" src="../assets/images/credit-score/score-negative-250x300.gif" srcset="../assets/images/credit-score/score-negative-250x300@2x.gif 2x" width="250" height="300" alt="">
+
+                        <div class="bar bar--credit-score js-credit-score" data-credit-score="367">
+                            <div class="bar__label">300</div>
+
+                            <div class="bar__wrapper">
+                                <div class="bar__block bar__block--negative"></div>
+                                <div class="bar__block bar__block--neutral"></div>
+                                <div class="bar__block bar__block--positive"></div>
+
+                                <div class="bar__marker js-credit-score-marker"></div>
+                                <div class="bar__score bar__score--negative">
+                                    Your credit score on 26/01/2016
+                                    <b>367</b>
+                                </div>
+                            </div>
+
+                            <div class="bar__label">750</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><div class="credit-score credit-score--negative">
+    <div class="credit-score__content">
+        <h6 class="credit-score__title">Welcome Shaun</h6>
+        <p class="credit-score__synopsis"><strong>We need to talk.</strong> Your credit score is not in a good place.
+            <b>367</b> is bad, but can be fixed if you remedy the issues highlighted below.</p>
+    </div>
+
+    <img class="credit-score__img" src="../assets/images/credit-score/score-negative-250x300.gif" srcset="../assets/images/credit-score/score-negative-250x300@2x.gif 2x" width="250" height="300" alt="">
+
+    <div class="bar bar--credit-score js%2Dcredit-score" data-credit-score="367">
+        <div class="bar__label">300</div>
+
+        <div class="bar__wrapper">
+            <div class="bar__block bar__block--negative"></div>
+            <div class="bar__block bar__block--neutral"></div>
+            <div class="bar__block bar__block--positive"></div>
+
+            <div class="bar__marker js%2Dcredit-score-marker"></div>
+            <div class="bar__score bar__score--negative">
+                Your credit score on 26/01/2016
+                <b>367</b>
+            </div>
+        </div>
+
+        <div class="bar__label">750</div>
+    </div>
+</div></code>
+                </div>
+
+                <h2 class="sg-heading-spacer">Neutral</h2>
+
+                <div style="background-color: #2d4276; padding: 1em">
+                    <div class="credit-score credit-score--neutral">
+                        <div class="credit-score__content">
+                            <h6 class="credit-score__title">Welcome Shaun</h6>
+                            <p class="credit-score__synopsis"><strong>Hmmm.</strong> Your credit score of <b>549</b> is
+                                okay but needs some work.</p>
+                        </div>
+
+                        <img class="credit-score__img" src="../assets/images/credit-score/score-neutral-250x300.gif" srcset="../assets/images/credit-score/score-neutral-250x300@2x.gif 2x" width="250" height="300" alt="">
+
+                        <div class="bar bar--credit-score js-credit-score" data-credit-score="549">
+                            <div class="bar__label">300</div>
+
+                            <div class="bar__wrapper">
+                                <div class="bar__block bar__block--negative"></div>
+                                <div class="bar__block bar__block--neutral"></div>
+                                <div class="bar__block bar__block--positive"></div>
+
+                                <div class="bar__marker js-credit-score-marker"></div>
+                                <div class="bar__score bar__score--neutral">
+                                    Your credit score on 26/01/2016
+                                    <b>549</b>
+                                </div>
+                            </div>
+
+                            <div class="bar__label">750</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><div class="credit-score credit-score--neutral">
+    <div class="credit-score__content">
+        <h6 class="credit-score__title">Welcome Shaun</h6>
+        <p class="credit-score__synopsis"><strong>Hmmm.</strong> Your credit score of <b>549</b> is
+            okay but needs some work.</p>
+    </div>
+
+    <img class="credit-score__img" src="../assets/images/credit-score/score-neutral-250x300.gif" srcset="../assets/images/credit-score/score-neutral-250x300@2x.gif 2x" width="250" height="300" alt="">
+
+    <div class="bar bar--credit-score js%2Dcredit-score" data-credit-score="549">
+        <div class="bar__label">300</div>
+
+        <div class="bar__wrapper">
+            <div class="bar__block bar__block--negative"></div>
+            <div class="bar__block bar__block--neutral"></div>
+            <div class="bar__block bar__block--positive"></div>
+
+            <div class="bar__marker js%2Dcredit-score-marker"></div>
+            <div class="bar__score bar__score--neutral">
+                Your credit score on 26/01/2016
+                <b>549</b>
+            </div>
+        </div>
+
+        <div class="bar__label">750</div>
+    </div>
+</div></code>
+                </div>
+
+                <h2 class="sg-heading-spacer">Positive</h2>
+
+                <div style="background-color: #2d4276; padding: 1em">
+                    <div class="credit-score credit-score--positive">
+                        <div class="credit-score__content">
+                            <h6 class="credit-score__title">Welcome Shaun</h6>
+                            <p class="credit-score__synopsis"><strong>Well done!</strong> Your credit score is a delightful
+                                hue of green at <b>711</b> out of 750.</p>
+                        </div>
+
+                        <img class="credit-score__img" src="../assets/images/credit-score/score-positive-250x300.gif" srcset="../assets/images/credit-score/score-positive-250x300@2x.gif 2x" width="250" height="300" alt="">
+
+                        <div class="bar bar--credit-score js-credit-score" data-credit-score="711">
+                            <div class="bar__label">300</div>
+
+                            <div class="bar__wrapper">
+                                <div class="bar__block bar__block--negative"></div>
+                                <div class="bar__block bar__block--neutral"></div>
+                                <div class="bar__block bar__block--positive"></div>
+
+                                <div class="bar__marker js-credit-score-marker"></div>
+                                <div class="bar__score bar__score--positive">
+                                    Your credit score on 26/01/2016
+                                    <b>711</b>
+                                </div>
+                            </div>
+
+                            <div class="bar__label">750</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><div class="credit-score credit-score--positive">
+    <div class="credit-score__content">
+        <h6 class="credit-score__title">Welcome Shaun</h6>
+        <p class="credit-score__synopsis"><strong>Well done!</strong> Your credit score is a delightful
+            hue of green at <b>711</b> out of 750.</p>
+    </div>
+
+    <img class="credit-score__img" src="../assets/images/credit-score/score-positive-250x300.gif" srcset="../assets/images/credit-score/score-positive-250x300@2x.gif 2x" width="250" height="300" alt="">
+
+    <div class="bar bar--credit-score js%2Dcredit-score" data-credit-score="711">
+        <div class="bar__label">300</div>
+
+        <div class="bar__wrapper">
+            <div class="bar__block bar__block--negative"></div>
+            <div class="bar__block bar__block--neutral"></div>
+            <div class="bar__block bar__block--positive"></div>
+
+            <div class="bar__marker js%2Dcredit-score-marker"></div>
+            <div class="bar__score bar__score--positive">
+                Your credit score on 26/01/2016
+                <b>711</b>
+            </div>
+        </div>
+
+        <div class="bar__label">750</div>
+    </div>
+</div></code>
+                </div>
+
+                <h2 class="sg-heading-spacer">Empty</h2>
+
+                <div style="background-color: #2d4276; padding: 1em">
+                    <div class="credit-score">
+                        <div class="credit-score__content">
+                            <h6 class="credit-score__title">We don’t have a score for you yet.</h6>
+                            <p class="credit-score__synopsis">But Fido loves you all the same.</p>
+                            <a class="btn btn--blue" href="#sg-credit-score">Learn More</a>
+                        </div>
+
+                        <img class="credit-score__img" src="../assets/images/credit-score/score-empty-250x370.gif" srcset="../assets/images/credit-score/score-empty-250x370@2x.gif 2x" width="250" height="370" alt="">
+                    </div>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><div class="credit-score">
+    <div class="credit-score__content">
+        <h6 class="credit-score__title">We don’t have a score for you yet.</h6>
+        <p class="credit-score__synopsis">But Fido loves you all the same.</p>
+        <a class="btn btn--blue" href="#">Learn More</a>
+    </div>
+
+    <img class="credit-score__img" src="../assets/images/credit-score/score-empty-250x370.gif" srcset="../assets/images/credit-score/score-empty-250x370@2x.gif 2x" width="250" height="370" alt="">
+</div></code>
+                </div>
+            </section>
+
+            <section class="sg-l-section" id="sg-card">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">Card</h1>
+                </header>
+
+                <h2 class="sg-heading-spacer">Default</h2>
+
+                <div class="card">
+                    <div class="card__header card__header--separator">
+                        <h3 class="card__title">Credit ID</h3>
+
+                        <a class="card__tooltip js-tooltip" data-tooltip-placement="top" title="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">?</a>
+                    </div>
+
+                    <div class="card__body">
+                        <div class="card__label">Full Name</div>
+                        <div class="card__value">Shaun Gardener</div>
+
+                        <div class="card__label">ID Number</div>
+                        <div class="card__value">8888888888888</div>
+
+                        <div class="card__label">Date of Birth</div>
+                        <div class="card__value">11 July 2000</div>
+
+                        <div class="card__label">Address</div>
+                        <div class="card__value">123 Lorem ipsum, Dolor sit amet, Consectetur adipiscing</div>
+
+                        <div class="card__label">City</div>
+                        <div class="card__value">Cape Town</div>
+
+                        <div class="card__label">Postal Code</div>
+                        <div class="card__value">0000</div>
+                    </div>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><div class="card">
+    <div class="card__header card__header--separator">
+        <h3 class="card__title">Credit ID</h3>
+
+        <a class="card__tooltip js%2Dtooltip" data-tooltip-placement="top" title="Lorem ipsum dolor sit amet, consectetur…">?</a>
+    </div>
+
+    <div class="card__body">
+        <div class="card__label">Full Name</div>
+        <div class="card__value">Shaun Gardener</div>
+    </div>
+</div></code>
+                </div>
+
+                <h2 class="sg-heading-spacer">Single</h2>
+
+                <div class="card">
+                    <div class="card__header">
+                        <h3 class="card__title">Legal Action</h3>
+
+                        <a class="card__tooltip js-tooltip" data-tooltip-placement="top" title="Accounts in arrears becomes delinquent and may be handed over to courts. A notice is a warning to pay your account. A judgement is a ruling against you. You want to avoid both.">?</a>
+                    </div>
+
+                    <div class="alert alert--negative js-alert" role="alert">
+                        <div class="alert__message">
+                            <span class="icon icon-frown-o" aria-hidden="true"></span>
+                            <p><b>Uh oh!</b> You have 1 judgement against you.</p>
+                        </div>
+                    </div>
+
+                    <div class="card-toolbar">
+                        <div class="card-toolbar__label label--dark">Your monthly salary is R10,000.00</div>
+                        <button class="btn btn--small btn--gray card-toolbar__toggle js-collapse" data-collapse-id="edit-salary" data-collapse-text="Cancel">Edit</button>
+
+                        <div class="collapse collapse--overlay" id="edit-salary">
+                            <form class="form form--single" action="#sg-card" method="post">
+                                <label class="label u-visuallyhidden" for="salary-1">Salary</label>
+                                <input class="input" type="text" id="salary-1" name="salary" placeholder="Enter your new monthly salary" maxlength="12" required>
+
+                                <button class="btn btn--icon" type="submit"><span class="icon icon--only icon-check" aria-hidden="true"></span></button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="card__body">
+                        <div class="legal-action">
+                            <div class="legal-action__header">
+                                <span class="icon icon-garage-card" aria-hidden="true"></span>
+                                <h3 class="legal-action__title">Toyota Muizenberg Judgement</h3>
+                            </div>
+
+                            <ol class="list list--unstyled">
+                                <li>Date: 28 Oct 2015</li>
+                                <li>Contact: +27 00 000 0000</li>
+                                <li>Court: Muizenberg</li>
+                                <li>Reason: <b>Outstanding payment</b></li>
+                            </ol>
+
+                            <div class="legal-action__value">-R6,000.00</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><div class="card">
+    <div class="card__header">
+        <h3 class="card__title">Legal Action</h3>
+
+        <a class="card__tooltip js%2Dtooltip" data-tooltip-placement="top" title="Lorem ipsum dolor sit amet, consectetur…">?</a>
+    </div>
+
+    <div class="alert alert--negative js-alert" role="alert">
+        <div class="alert__message">
+            <span class="icon icon-frown-o" aria-hidden="true"></span>
+            <p><b>Uh oh!</b> You have 1 judgement against you.</p>
+        </div>
+    </div>
+
+    <div class="card-toolbar">
+        <div class="card-toolbar__label label--dark">Your monthly salary is R10,000.00</div>
+        <button class="btn btn--small btn--gray card-toolbar__toggle js-collapse" data-collapse-id="edit-salary-a" data-collapse-text="Cancel">Edit</button>
+
+        <div class="collapse collapse--overlay" id="edit-salary-a">
+            <form class="form form--single" action="#" method="post">
+                <label class="label u-visuallyhidden" for="salary-b">Salary</label>
+                <input class="input" type="text" id="salary-b" name="salary" placeholder="Enter your new monthly salary" maxlength="12" required>
+
+                <button class="btn btn--icon" type="submit"><span class="icon icon--only icon-check" aria-hidden="true"></span></button>
+            </form>
+        </div>
+    </div>
+
+    <div class="card__body">
+        <div class="legal-action">
+            <div class="legal-action__header">
+                <span class="icon icon-garage-card" aria-hidden="true"></span>
+                <h3 class="legal-action__title">Toyota Muizenberg Judgement</h3>
+            </div>
+
+            <ol class="list list--unstyled">
+                <li>Date: 28 Oct 2015</li>
+                <li>Contact: +27 00 000 0000</li>
+                <li>Court: Muizenberg</li>
+                <li>Reason: <b>Outstanding payment</b></li>
+            </ol>
+
+            <div class="legal-action__value">-R6,000.00</div>
+        </div>
+    </div>
+</div></code>
+                </div>
+
+                <h2 class="sg-heading-spacer">Scroller</h2>
+
+                <div class="card">
+                    <div class="card__header">
+                        <h3 class="card__title">My Accounts</h3>
+
+                        <a class="card__tooltip js-tooltip" data-tooltip-placement="top" title="This is a list of all the active accounts you currently have registered with the credit bureau. Many people pay for services they’ve closed but are, in fact, still open!">?</a>
+                    </div>
+
+                    <div class="alert alert--info alert--form js-alert" role="alert">
+                        <div class="alert__message">
+                            <span class="icon icon-info" aria-hidden="true"></span>
+                            <p>R12,400.00 being paid monthly with 4 debit orders.</p>
+                        </div>
+
+                        <form class="form form--inline" action="#sg-card" method="post">
+                            <label class="label u-visuallyhidden" for="filter-2">Filter by</label>
+                            <select class="input input--select" id="filter-2" name="filter">
+                                <option value="0">All</option>
+                                <option value="6">6 months</option>
+                                <option value="12">12 months</option>
+                                <option value="24">24 months</option>
+                            </select>
+                        </form>
+                    </div>
+
+                    <div class="card__body">
+                        <div class="card__scroller card__scroller--large">
+                            <div class="account account--detail account--negative">
+                                <div class="account__header">
+                                    <span class="account__icon icon icon-home" aria-hidden="true"></span>
+                                    <h3 class="account__title">Home Loan</h3>
+                                    <p class="account__synopsis">-R725.00</p>
+                                </div>
+
+                                <ol class="list list--unstyled">
+                                    <li><b>Acc. Number</b>: 1234567890</li>
+                                    <li><b>Acc. Type</b>: Short term insurance</li>
+                                    <li><b>Date Opened</b>: 13 Jan 2016</li>
+                                    <li><b>Status</b>: Paid</li>
+                                </ol>
+                            </div>
+
+                            <div class="account account--detail account--neutral">
+                                <div class="account__header">
+                                    <span class="account__icon icon icon-credit-card" aria-hidden="true"></span>
+                                    <h3 class="account__title">Credit Card</h3>
+                                    <p class="account__synopsis">-R725.00</p>
+                                </div>
+
+                                <ol class="list list--unstyled">
+                                    <li><b>Acc. Number</b>: 1234567890</li>
+                                    <li><b>Acc. Type</b>: Short term insurance</li>
+                                    <li><b>Date Opened</b>: 13 Jan 2016</li>
+                                    <li><b>Status</b>: Paid</li>
+                                </ol>
+                            </div>
+
+                            <div class="account account--detail account--positive">
+                                <div class="account__header">
+                                    <span class="account__icon icon icon-bank" aria-hidden="true"></span>
+                                    <h3 class="account__title">Student Loan</h3>
+                                    <p class="account__synopsis">-R725.00</p>
+                                </div>
+
+                                <ol class="list list--unstyled">
+                                    <li><b>Acc. Number</b>: 1234567890</li>
+                                    <li><b>Acc. Type</b>: Short term insurance</li>
+                                    <li><b>Date Opened</b>: 13 Jan 2016</li>
+                                    <li><b>Status</b>: Missed payment</li>
+                                </ol>
+                            </div>
+
+                            <div class="account account--detail account--negative">
+                                <div class="account__header">
+                                    <span class="account__icon icon icon-home" aria-hidden="true"></span>
+                                    <h3 class="account__title">Home Loan</h3>
+                                    <p class="account__synopsis">-R725.00</p>
+                                </div>
+
+                                <ol class="list list--unstyled">
+                                    <li><b>Acc. Number</b>: 1234567890</li>
+                                    <li><b>Acc. Type</b>: Short term insurance</li>
+                                    <li><b>Date Opened</b>: 13 Jan 2016</li>
+                                    <li><b>Status</b>: Paid</li>
+                                </ol>
+                            </div>
+
+                            <div class="account account--detail account--neutral">
+                                <div class="account__header">
+                                    <span class="account__icon icon icon-credit-card" aria-hidden="true"></span>
+                                    <h3 class="account__title">Credit Card</h3>
+                                    <p class="account__synopsis">-R725.00</p>
+                                </div>
+
+                                <ol class="list list--unstyled">
+                                    <li><b>Acc. Number</b>: 1234567890</li>
+                                    <li><b>Acc. Type</b>: Short term insurance</li>
+                                    <li><b>Date Opened</b>: 13 Jan 2016</li>
+                                    <li><b>Status</b>: Paid</li>
+                                </ol>
+                            </div>
+
+                            <div class="account account--detail account--positive">
+                                <div class="account__header">
+                                    <span class="account__icon icon icon-bank" aria-hidden="true"></span>
+                                    <h3 class="account__title">Student Loan</h3>
+                                    <p class="account__synopsis">-R725.00</p>
+                                </div>
+
+                                <ol class="list list--unstyled">
+                                    <li><b>Acc. Number</b>: 1234567890</li>
+                                    <li><b>Acc. Type</b>: Short term insurance</li>
+                                    <li><b>Date Opened</b>: 13 Jan 2016</li>
+                                    <li><b>Status</b>: Missed payment</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><div class="card card--neutral">
+    <div class="card__header">
+        <h3 class="card__title">My Accounts</h3>
+
+        <a class="card__tooltip js%2Dtooltip" data-tooltip-placement="top" title="Lorem ipsum dolor sit amet, consectetur…">?</a>
+    </div>
+
+    <div class="alert alert--info alert--form js-alert" role="alert">
+        <div class="alert__message">
+            <p>R12,400.00 being paid monthly with 4 debit orders.</p>
+        </div>
+
+        <form class="form form--inline" action="#" method="post">
+            <label class="label u-visuallyhidden" for="filter-b">Filter by</label>
+            <select class="input input--select" id="filter-b" name="filter">
+                <option value="0">All</option>
+                <option value="6">6 months</option>
+                <option value="12">12 months</option>
+                <option value="24">24 months</option>
+            </select>
+        </form>
+    </div>
+
+    <div class="card__body">
+        <div class="card__scroller card__scroller--large">
+            <div class="account account--detail account--negative">
+                <div class="account__header">
+                    <span class="account__icon icon icon-home" aria-hidden="true"></span>
+                    <h3 class="account__title">Home Loan</h3>
+                    <p class="account__synopsis">-R725.00</p>
+                </div>
+
+                <ol class="list list--unstyled">
+                    <li><b>Acc. Number</b>: 1234567890</li>
+                    <li><b>Acc. Type</b>: Short term insurance</li>
+                    <li><b>Date Opened</b>: 13 Jan 2016</li>
+                    <li><b>Status</b>: Paid</li>
+                </ol>
+            </div>
+
+            <div class="account account--detail account--neutral">
+                <div class="account__header">
+                    <span class="account__icon icon icon-credit-card" aria-hidden="true"></span>
+                    <h3 class="account__title">Credit Card</h3>
+                    <p class="account__synopsis">-R725.00</p>
+                </div>
+
+                <ol class="list list--unstyled">
+                    <li><b>Acc. Number</b>: 1234567890</li>
+                    <li><b>Acc. Type</b>: Short term insurance</li>
+                    <li><b>Date Opened</b>: 13 Jan 2016</li>
+                    <li><b>Status</b>: Paid</li>
+                </ol>
+            </div>
+
+            <div class="account account--detail account--positive">
+                <div class="account__header">
+                    <span class="account__icon icon icon-bank" aria-hidden="true"></span>
+                    <h3 class="account__title">Student Loan</h3>
+                    <p class="account__synopsis">-R725.00</p>
+                </div>
+
+                <ol class="list list--unstyled">
+                    <li><b>Acc. Number</b>: 1234567890</li>
+                    <li><b>Acc. Type</b>: Short term insurance</li>
+                    <li><b>Date Opened</b>: 13 Jan 2016</li>
+                    <li><b>Status</b>: Missed payment</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div></code>
+                </div>
+
+                <h2 class="sg-heading-spacer">Carousel</h2>
+
+                <div class="card card--neutral">
+                    <div class="card__header">
+                        <h3 class="card__title">Credit Usage</h3>
+
+                        <a class="card__tooltip js-tooltip" data-tooltip-placement="top" title="The total amount of credit available to you that you’re currently using, shown as a percentage. Ideally you should be using some of your credit, but not too much of it.">?</a>
+                    </div>
+
+                    <div class="chart chart--neutral">
+                        <div class="circliful circliful--neutral js-circle-chart" data-percent="81" data-text="81<sup>%</sup>"></div>
+                        <p class="chart__synopsis">You’re spending an acceptable amount of your income <b>R14,000.00</b> on servicing debts.</p>
+                    </div>
+
+                    <div class="card-toolbar">
+                        <div class="card-toolbar__label label--dark">Showing 1 of 3 account types</div>
+                        <button class="btn btn--small btn--gray card-toolbar__toggle js-collapse" data-collapse-id="edit-accounts" data-collapse-text="Cancel">Edit</button>
+
+                        <div class="collapse collapse--overlay" id="edit-accounts">
+                            <form class="form" action="#sg-card" method="post">
+                                <label class="label label--dark label--checkbox" for="account-1">
+                                    <input type="checkbox" id="account-1" name="checkbox" value="1" checked> Credits & Accounts
+                                </label>
+
+                                <label class="label label--dark label--checkbox" for="account-2">
+                                    <input type="checkbox" id="account-2" name="checkbox" value="2"> Vehicle Repayments
+                                </label>
+
+                                <label class="label label--dark label--checkbox" for="account-3">
+                                    <input type="checkbox" id="account-3" name="checkbox" value="3"> Loans
+                                </label>
+
+                                <input class="btn" type="submit" value="Update">
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="card__body">
+                        <div class="slick slick--card js-carousel" data-dots="true" data-draggable="false" data-infinite="false">
+                            <div>
+                                <div class="account account--balance account--neutral">
+                                    <div class="account__header">
+                                        <span class="account__icon icon icon-cash" aria-hidden="true"></span>
+                                        <h3 class="account__title">Credit Card</h3>
+                                        <p class="account__synopsis">50% used</p>
+                                    </div>
+
+                                    <div class="bar">
+                                        <div class="bar__block bar__block--neutral js-bar" style="width: 75%" data-bar-percent="75"></div>
+                                    </div>
+
+                                    <div class="account__item">
+                                        <div class="account__label">Balance</div>
+                                        <div class="account__value">-R2,000.00</div>
+                                    </div>
+
+                                    <div class="account__item">
+                                        <div class="account__label">Limit</div>
+                                        <div class="account__value">R4,000.00</div>
+                                    </div>
+                                </div>
+
+                                <div class="account account--balance account--neutral">
+                                    <div class="account__header">
+                                        <span class="account__icon icon icon-cash" aria-hidden="true"></span>
+                                        <h3 class="account__title">Personal Cash Loans</h3>
+                                        <p class="account__synopsis">50% used</p>
+                                    </div>
+
+                                    <div class="bar">
+                                        <div class="bar__block bar__block--neutral js-bar" style="width: 50%" data-bar-percent="50"></div>
+                                    </div>
+
+                                    <div class="account__item">
+                                        <div class="account__label">Balance</div>
+                                        <div class="account__value">-R2,000.00</div>
+                                    </div>
+
+                                    <div class="account__item">
+                                        <div class="account__label">Limit</div>
+                                        <div class="account__value">R4,000.00</div>
+                                    </div>
+                                </div>
+
+                                <div class="account account--balance account--neutral">
+                                    <div class="account__header">
+                                        <span class="account__icon icon icon-cash" aria-hidden="true"></span>
+                                        <h3 class="account__title">Single Credit Facility</h3>
+                                        <p class="account__synopsis">25% used</p>
+                                    </div>
+
+                                    <div class="bar">
+                                        <div class="bar__block bar__block--neutral js-bar" style="width: 25%" data-bar-percent="25"></div>
+                                    </div>
+
+                                    <div class="account__item">
+                                        <div class="account__label">Balance</div>
+                                        <div class="account__value">-R2,000.00</div>
+                                    </div>
+
+                                    <div class="account__item">
+                                        <div class="account__label">Limit</div>
+                                        <div class="account__value">R4,000.00</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="account account--balance account--neutral">
+                                    <div class="account__header">
+                                        <span class="account__icon icon icon-cash" aria-hidden="true"></span>
+                                        <h3 class="account__title">Credit Card</h3>
+                                        <p class="account__synopsis">50% used</p>
+                                    </div>
+
+                                    <div class="bar">
+                                        <div class="bar__block bar__block--neutral js-bar" style="width: 75%" data-bar-percent="75"></div>
+                                    </div>
+
+                                    <div class="account__item">
+                                        <div class="account__label">Balance</div>
+                                        <div class="account__value">-R2,000.00</div>
+                                    </div>
+
+                                    <div class="account__item">
+                                        <div class="account__label">Limit</div>
+                                        <div class="account__value">R4,000.00</div>
+                                    </div>
+                                </div>
+
+                                <div class="account account--balance account--neutral">
+                                    <div class="account__header">
+                                        <span class="account__icon icon icon-cash" aria-hidden="true"></span>
+                                        <h3 class="account__title">Personal Cash Loans</h3>
+                                        <p class="account__synopsis">50% used</p>
+                                    </div>
+
+                                    <div class="bar">
+                                        <div class="bar__block bar__block--neutral js-bar" style="width: 50%" data-bar-percent="50"></div>
+                                    </div>
+
+                                    <div class="account__item">
+                                        <div class="account__label">Balance</div>
+                                        <div class="account__value">-R2,000.00</div>
+                                    </div>
+
+                                    <div class="account__item">
+                                        <div class="account__label">Limit</div>
+                                        <div class="account__value">R4,000.00</div>
+                                    </div>
+                                </div>
+
+                                <div class="account account--balance account--neutral">
+                                    <div class="account__header">
+                                        <span class="account__icon icon icon-cash" aria-hidden="true"></span>
+                                        <h3 class="account__title">Single Credit Facility</h3>
+                                        <p class="account__synopsis">25% used</p>
+                                    </div>
+
+                                    <div class="bar">
+                                        <div class="bar__block bar__block--neutral js-bar" style="width: 25%" data-bar-percent="25"></div>
+                                    </div>
+
+                                    <div class="account__item">
+                                        <div class="account__label">Balance</div>
+                                        <div class="account__value">-R2,000.00</div>
+                                    </div>
+
+                                    <div class="account__item">
+                                        <div class="account__label">Limit</div>
+                                        <div class="account__value">R4,000.00</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="account account--balance account--neutral">
+                                    <div class="account__header">
+                                        <span class="account__icon icon icon-cash" aria-hidden="true"></span>
+                                        <h3 class="account__title">Credit Card</h3>
+                                        <p class="account__synopsis">50% used</p>
+                                    </div>
+
+                                    <div class="bar">
+                                        <div class="bar__block bar__block--neutral js-bar" style="width: 75%" data-bar-percent="75"></div>
+                                    </div>
+
+                                    <div class="account__item">
+                                        <div class="account__label">Balance</div>
+                                        <div class="account__value">-R2,000.00</div>
+                                    </div>
+
+                                    <div class="account__item">
+                                        <div class="account__label">Limit</div>
+                                        <div class="account__value">R4,000.00</div>
+                                    </div>
+                                </div>
+
+                                <div class="account account--balance account--neutral">
+                                    <div class="account__header">
+                                        <span class="account__icon icon icon-cash" aria-hidden="true"></span>
+                                        <h3 class="account__title">Personal Cash Loans</h3>
+                                        <p class="account__synopsis">50% used</p>
+                                    </div>
+
+                                    <div class="bar">
+                                        <div class="bar__block bar__block--neutral js-bar" style="width: 50%" data-bar-percent="50"></div>
+                                    </div>
+
+                                    <div class="account__item">
+                                        <div class="account__label">Balance</div>
+                                        <div class="account__value">-R2,000.00</div>
+                                    </div>
+
+                                    <div class="account__item">
+                                        <div class="account__label">Limit</div>
+                                        <div class="account__value">R4,000.00</div>
+                                    </div>
+                                </div>
+
+                                <div class="account account--balance account--neutral">
+                                    <div class="account__header">
+                                        <span class="account__icon icon icon-cash" aria-hidden="true"></span>
+                                        <h3 class="account__title">Single Credit Facility</h3>
+                                        <p class="account__synopsis">25% used</p>
+                                    </div>
+
+                                    <div class="bar">
+                                        <div class="bar__block bar__block--neutral js-bar" style="width: 25%" data-bar-percent="25"></div>
+                                    </div>
+
+                                    <div class="account__item">
+                                        <div class="account__label">Balance</div>
+                                        <div class="account__value">-R2,000.00</div>
+                                    </div>
+
+                                    <div class="account__item">
+                                        <div class="account__label">Limit</div>
+                                        <div class="account__value">R4,000.00</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card__footer"></div>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><div class="card card--neutral">
+    <div class="card__header">
+        <h3 class="card__title">Credit Usage</h3>
+
+        <a class="card__tooltip js%2Dtooltip" data-tooltip-placement="top" title="Lorem ipsum dolor sit amet, consectetur…">?</a>
+    </div>
+
+    <div class="chart chart--neutral">
+        <div class="circliful circliful--neutral js%2Dcircle-chart" data-percent="81" data-text="81<sup>%</sup>"></div>
+        <p class="chart__synopsis">You’re spending an acceptable amount of your income <b>R14,000.00</b> on servicing debts.</p>
+    </div>
+
+    <div class="card-toolbar">
+        <div class="card-toolbar__label label--dark">Showing 1 of 3 account types</div>
+        <button class="btn btn--small btn--gray card-toolbar__toggle js-toggle" data-collapse-id="edit-accounts-a" data-collapse-text="Cancel">Edit</button>
+
+        <div class="collapse collapse--overlay" id="edit-accounts-a">
+            <form class="form" action="#" method="post">
+                <label class="label label--dark label--checkbox" for="account-a">
+                    <input type="checkbox" id="account-a" name="checkbox" value="1" checked> Credits & Accounts
+                </label>
+
+                <label class="label label--dark label--checkbox" for="account-b">
+                    <input type="checkbox" id="account-b" name="checkbox" value="2"> Vehicle Repayments
+                </label>
+
+                <label class="label label--dark label--checkbox" for="account-c">
+                    <input type="checkbox" id="account-c" name="checkbox" value="3"> Loans
+                </label>
+
+                <input class="btn" type="submit" value="Update">
+            </form>
+        </div>
+    </div>
+
+    <div class="card__body">
+        <div class="slick slick--card js%2Dcarousel" data-dots="true" data-draggable="false" data-infinite="false">
+            <div>
+                <div class="account account--balance account--neutral">
+                    <div class="account__header">
+                        <span class="account__icon icon icon-cash" aria-hidden="true"></span>
+                        <h3 class="account__title">Credit Card</h3>
+                        <p class="account__synopsis">50% used</p>
+                    </div>
+
+                    <div class="bar">
+                        <div class="bar__block bar__block--neutral js-bar" style="width: 75%" data-bar-percent="75"></div>
+                    </div>
+
+                    <div class="account__item">
+                        <div class="account__label">Balance</div>
+                        <div class="account__value">-R2,000.00</div>
+                    </div>
+
+                    <div class="account__item">
+                        <div class="account__label">Limit</div>
+                        <div class="account__value">R4,000.00</div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="account account--balance account--neutral">
+                    <div class="account__header">
+                        <span class="account__icon icon icon-cash" aria-hidden="true"></span>
+                        <h3 class="account__title">Credit Card</h3>
+                        <p class="account__synopsis">50% used</p>
+                    </div>
+
+                    <div class="bar">
+                        <div class="bar__block bar__block--neutral js-bar" style="width: 75%" data-bar-percent="75"></div>
+                    </div>
+
+                    <div class="account__item">
+                        <div class="account__label">Balance</div>
+                        <div class="account__value">-R2,000.00</div>
+                    </div>
+
+                    <div class="account__item">
+                        <div class="account__label">Limit</div>
+                        <div class="account__value">R4,000.00</div>
+                    </div>
+                </div>
+
+                <div class="account account--balance account--neutral">
+                    <div class="account__header">
+                        <span class="account__icon icon icon-cash" aria-hidden="true"></span>
+                        <h3 class="account__title">Personal Cash Loans</h3>
+                        <p class="account__synopsis">50% used</p>
+                    </div>
+
+                    <div class="bar">
+                        <div class="bar__block bar__block--neutral js-bar" style="width: 50%" data-bar-percent="50"></div>
+                    </div>
+
+                    <div class="account__item">
+                        <div class="account__label">Balance</div>
+                        <div class="account__value">-R2,000.00</div>
+                    </div>
+
+                    <div class="account__item">
+                        <div class="account__label">Limit</div>
+                        <div class="account__value">R4,000.00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card__footer"></div>
+</div></code>
+                </div>
+            </section>
+
+            <section class="sg-l-section" id="sg-card-wide">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">Card – Wide</h1>
+                </header>
+
+                <h2 class="sg-heading-spacer">Default</h2>
+
+                <div class="card card--wide card--neutral">
+                    <div class="card__header">
+                        <h3 class="card__title">Accounts in Arrears</h3>
+
+                        <a class="card__tooltip js-tooltip" data-tooltip-placement="top" title="Missed account payments are logged with the credit bureau. They negatively affect your credit score and can lead to notices or judgements being issued against you, which is a bad thing.">?</a>
+                    </div>
+
+                    <div class="alert alert--neutral alert--form js-alert" role="alert">
+                        <div class="alert__message">
+                            <span class="icon icon-meh-o" aria-hidden="true"></span>
+                            <p><b>Oh no!</b> you have 6 accounts in arrears. Pay up soon!</p>
+                        </div>
+
+                        <form class="form form--inline" action="#sg-card" method="post">
+                            <label class="label" for="filter-1">
+                                Filter by
+                                <select class="input input--select" id="filter-1" name="filter">
+                                    <option value="">All</option>
+                                    <option value="6">6 months</option>
+                                    <option value="12">12 months</option>
+                                    <option value="24">24 months</option>
+                                </select>
+                            </label>
+                        </form>
+                    </div>
+
+                    <div class="card__body">
+                        <div class="card__scroller">
+                            <div class="account account--summary account--neutral">
+                                <div class="account__header">
+                                    <span class="account__icon icon icon-cash" aria-hidden="true"></span>
+                                    <h3 class="account__title">Personal Cash Loans</h3>
+                                    <p class="account__synopsis account__synopsis--large">6 months in arrears</p>
+                                </div>
+
+                                <div class="account__item">
+                                    <div class="account__label">Outstanding</div>
+                                    <div class="account__value">-R72,000.00</div>
+                                </div>
+
+                                <div class="account__item">
+                                    <div class="account__label">Balance</div>
+                                    <div class="account__value">R570.00</div>
+                                </div>
+
+                                <div class="account__item">
+                                    <div class="account__label">In arrears since</div>
+                                    <div class="account__value">12 Jan 2016</div>
+                                </div>
+                            </div>
+
+                            <div class="account account--summary account--neutral">
+                                <div class="account__header">
+                                    <span class="account__icon icon icon-home" aria-hidden="true"></span>
+                                    <h3 class="account__title">Building Loan</h3>
+                                    <p class="account__synopsis account__synopsis--large">6 months in arrears</p>
+                                </div>
+
+                                <div class="account__item">
+                                    <div class="account__label">Outstanding</div>
+                                    <div class="account__value">-R72,000.00</div>
+                                </div>
+
+                                <div class="account__item">
+                                    <div class="account__label">Balance</div>
+                                    <div class="account__value">R570.00</div>
+                                </div>
+
+                                <div class="account__item">
+                                    <div class="account__label">In arrears since</div>
+                                    <div class="account__value">12 Jan 2016</div>
+                                </div>
+                            </div>
+
+                            <div class="account account--summary account--neutral">
+                                <div class="account__header">
+                                    <span class="account__icon icon icon-garage-card" aria-hidden="true"></span>
+                                    <h3 class="account__title">Garage Card</h3>
+                                    <p class="account__synopsis account__synopsis--large">6 months in arrears</p>
+                                </div>
+
+                                <div class="account__item">
+                                    <div class="account__label">Outstanding</div>
+                                    <div class="account__value">-R72,000.00</div>
+                                </div>
+
+                                <div class="account__item">
+                                    <div class="account__label">Balance</div>
+                                    <div class="account__value">R570.00</div>
+                                </div>
+
+                                <div class="account__item">
+                                    <div class="account__label">In arrears since</div>
+                                    <div class="account__value">12 Jan 2016</div>
+                                </div>
+                            </div>
+
+                            <div class="account account--summary account--neutral">
+                                <div class="account__header">
+                                    <span class="account__icon icon icon-cash" aria-hidden="true"></span>
+                                    <h3 class="account__title">Personal Cash Loans</h3>
+                                    <p class="account__synopsis account__synopsis--large">6 months in arrears</p>
+                                </div>
+
+                                <div class="account__item">
+                                    <div class="account__label">Outstanding</div>
+                                    <div class="account__value">-R72,000.00</div>
+                                </div>
+
+                                <div class="account__item">
+                                    <div class="account__label">Balance</div>
+                                    <div class="account__value">R570.00</div>
+                                </div>
+
+                                <div class="account__item">
+                                    <div class="account__label">In arrears since</div>
+                                    <div class="account__value">12 Jan 2016</div>
+                                </div>
+                            </div>
+
+                            <div class="account account--summary account--neutral">
+                                <div class="account__header">
+                                    <span class="account__icon icon icon-home" aria-hidden="true"></span>
+                                    <h3 class="account__title">Building Loan</h3>
+                                    <p class="account__synopsis account__synopsis--large">6 months in arrears</p>
+                                </div>
+
+                                <div class="account__item">
+                                    <div class="account__label">Outstanding</div>
+                                    <div class="account__value">-R72,000.00</div>
+                                </div>
+
+                                <div class="account__item">
+                                    <div class="account__label">Balance</div>
+                                    <div class="account__value">R570.00</div>
+                                </div>
+
+                                <div class="account__item">
+                                    <div class="account__label">In arrears since</div>
+                                    <div class="account__value">12 Jan 2016</div>
+                                </div>
+                            </div>
+
+                            <div class="account account--summary account--neutral">
+                                <div class="account__header">
+                                    <span class="account__icon icon icon-garage-card" aria-hidden="true"></span>
+                                    <h3 class="account__title">Garage Card</h3>
+                                    <p class="account__synopsis account__synopsis--large">6 months in arrears</p>
+                                </div>
+
+                                <div class="account__item">
+                                    <div class="account__label">Outstanding</div>
+                                    <div class="account__value">-R72,000.00</div>
+                                </div>
+
+                                <div class="account__item">
+                                    <div class="account__label">Balance</div>
+                                    <div class="account__value">R570.00</div>
+                                </div>
+
+                                <div class="account__item">
+                                    <div class="account__label">In arrears since</div>
+                                    <div class="account__value">12 Jan 2016</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><div class="card card--wide card--neutral">
+    <div class="card__header">
+        <h3 class="card__title">Accounts in Arrears</h3>
+
+        <a class="card__tooltip js%2Dtooltip" data-tooltip-placement="top" title="Lorem ipsum dolor sit amet, consectetur…">?</a>
+    </div>
+
+    <div class="alert alert--neutral alert--form js-alert" role="alert">
+        <div class="alert__message">
+            <span class="icon icon-meh-o" aria-hidden="true"></span>
+            <p><b>Oh no!</b> you have 6 accounts in arrears. Pay up soon!</p>
+        </div>
+
+        <form class="form form--inline" action="#" method="post">
+            <label class="label label--light" for="filter-a">
+                Filter by
+                <select class="input input--select" id="filter-a" name="filter">
+                    <option value="">All</option>
+                    <option value="6">6 months</option>
+                    <option value="12">12 months</option>
+                    <option value="24">24 months</option>
+                </select>
+            </label>
+        </form>
+    </div>
+
+    <div class="card__body">
+        <div class="card__scroller">
+            <div class="account account--summary  account--neutral">
+                <div class="account__header">
+                    <span class="account__icon icon icon-cash" aria-hidden="true"></span>
+                    <h3 class="account__title">Personal Cash Loans</h3>
+                    <p class="account__synopsis account__synopsis--large">6 months in arrears</p>
+                </div>
+
+                <div class="account__item">
+                    <div class="account__label">Outstanding</div>
+                    <div class="account__value">-R72,000.00</div>
+                </div>
+
+                <div class="account__item">
+                    <div class="account__label">Balance</div>
+                    <div class="account__value">R570.00</div>
+                </div>
+
+                <div class="account__item">
+                    <div class="account__label">In arrears since</div>
+                    <div class="account__value">12 Jan 2016</div>
+                </div>
+            </div>
+
+            <div class="account account--summary  account--neutral">
+                <div class="account__header">
+                    <span class="account__icon icon icon-home" aria-hidden="true"></span>
+                    <h3 class="account__title">Building Loan</h3>
+                    <p class="account__synopsis account__synopsis--large">6 months in arrears</p>
+                </div>
+
+                <div class="account__item">
+                    <div class="account__label">Outstanding</div>
+                    <div class="account__value">-R72,000.00</div>
+                </div>
+
+                <div class="account__item">
+                    <div class="account__label">Balance</div>
+                    <div class="account__value">R570.00</div>
+                </div>
+
+                <div class="account__item">
+                    <div class="account__label">In arrears since</div>
+                    <div class="account__value">12 Jan 2016</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div></code>
+                </div>
+            </section>
+
+            <section class="sg-l-section" id="sg-card-empty">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">Card – Empty</h1>
+                </header>
+
+                <h2 class="sg-heading-spacer">Default</h2>
+
+                <div class="card card--empty">
+                    <div class="card__header">
+                        <h3 class="card__title">My Accounts</h3>
+
+                        <a class="card__tooltip js-tooltip" data-tooltip-placement="top" title="This is a list of all the active accounts you currently have registered with the credit bureau. Many people pay for services they’ve closed but are, in fact, still open!">?</a>
+                    </div>
+
+                    <div class="alert alert--info alert--form js-alert" role="alert">
+                        <div class="alert__message">
+                            <span class="icon icon-info" aria-hidden="true"></span>
+                            <p>R12,400.00 being paid monthly with 4 debit orders.</p>
+                        </div>
+
+                        <form class="form form--inline" action="#sg-card" method="post">
+                            <label class="label u-visuallyhidden" for="filter-3">Filter by</label>
+                            <select class="input input--select" id="filter-3" name="filter">
+                                <option value="0">All</option>
+                                <option value="6">6 months</option>
+                                <option value="12">12 months</option>
+                                <option value="24" selected>24 months</option>
+                            </select>
+                        </form>
+                    </div>
+
+                    <div class="card__body">
+                        <h4 class="card__subheading">Sorry, nothing here.</h4>
+                        <p class="card__synopsis">Please try a different filter.</p>
+                    </div>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><div class="card card--empty">
+    <div class="card__header">
+        <h3 class="card__title">My Accounts</h3>
+
+        <a class="card__tooltip js%2Dtooltip" data-tooltip-placement="top" title="Lorem ipsum dolor sit amet, consectetur…">?</a>
+    </div>
+
+    <div class="alert alert--info alert--form js-alert" role="alert">
+        <div class="alert__message">
+            <span class="icon icon-info" aria-hidden="true"></span>
+            <p>R12,400.00 being paid monthly with 4 debit orders.</p>
+        </div>
+
+        <form class="form form--inline" action="#" method="post">
+            <label class="label u-visuallyhidden" for="filter-4">Filter by</label>
+            <select class="input input--select" id="filter-4" name="filter">
+                <option value="0">All</option>
+                <option value="6">6 months</option>
+                <option value="12">12 months</option>
+                <option value="24" selected>24 months</option>
+            </select>
+        </form>
+    </div>
+
+    <div class="card__body">
+        <h4 class="card__subheading">Sorry, nothing here.</h4>
+        <p class="card__synopsis">Please try a different filter.</p>
+    </div>
+</div></code>
+                </div>
+
+                <h2 class="sg-heading-spacer">Neutral</h2>
+
+                <div class="card card--empty card--neutral">
+                    <div class="card__header">
+                        <h3 class="card__title">Salary to Debt Repayment</h3>
+
+                        <a class="card__tooltip js-tooltip" data-tooltip-placement="top" title="The percentage of your income being spent on servicing your credit & retail accounts. If too much of your salary is servicing credit accounts, your credit score might be negatively affected.">?</a>
+                    </div>
+
+                    <div class="card__body">
+                        <h4 class="card__subheading">Oops! We can’t seem to locate your latest salary.</h4>
+                        <p class="card__synopsis">Please enter your current monthly salary below.</p>
+
+                        <form class="form form--single" action="#sg-card-empty" method="post">
+                            <label class="label u-visuallyhidden" for="salary">Salary</label>
+                            <input class="input" type="text" id="salary" name="salary" placeholder="R10,000" maxlength="10" required>
+
+                            <button class="btn btn--icon" type="submit">Go</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><div class="card card--empty card--neutral">
+    <div class="card__header">
+        <h3 class="card__title">Salary to Debt Repayment</h3>
+
+        <a class="card__tooltip js%2Dtooltip" data-tooltip-placement="top" title="Lorem ipsum dolor sit amet, consectetur…">?</a>
+    </div>
+
+    <div class="card__body">
+        <h4 class="card__subheading">Oops! We can’t seem to locate your latest salary.</h4>
+        <p class="card__synopsis">Please enter your current monthly salary below.</p>
+
+        <form class="form form--single" action="#" method="post">
+            <label class="label u-visuallyhidden" for="salary-a">Salary</label>
+            <input class="input" type="text" id="salary-a" name="salary" placeholder="R10,000" maxlength="10" required>
+
+            <button class="btn btn--icon" type="submit">Go</button>
+        </form>
+    </div>
+</div></code>
+                </div>
+
+                <h2 class="sg-heading-spacer">Positive</h2>
+
+                <div class="card card--empty card--positive">
+                    <div class="card__header">
+                        <h3 class="card__title">Judgements</h3>
+
+                        <a class="card__tooltip js-tooltip" data-tooltip-placement="top" title="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">?</a>
+                    </div>
+
+                    <div class="card__body">
+                        <span class="icon icon-smile-o" aria-hidden="true"></span>
+                        <p class="card__synopsis"><b>You’re clear</b>. No record of any judgements or notices on an account of yours.</p>
+                    </div>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><div class="card card--empty card--positive">
+    <div class="card__header">
+        <h3 class="card__title">Judgements</h3>
+
+        <a class="card__tooltip js%2Dtooltip" data-tooltip-placement="top" title="Lorem ipsum dolor sit amet, consectetur…">?</a>
+    </div>
+
+    <div class="card__body">
+        <span class="icon icon-smile-o" aria-hidden="true"></span>
+        <p class="card__synopsis"><b>You’re clear</b>. No record of any judgements or notices on an account of yours.</p>
+    </div>
+</div></code>
+                </div>
+            </section>
+
+            <section class="sg-l-section" id="sg-account">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">Account</h1>
+                </header>
+
+                <h2 class="sg-heading-spacer">Balance</h2>
+
+                <div style="background-color: #fff; padding: 1em">
+                    <div class="account account--balance account--positive">
+                        <div class="account__header">
+                            <span class="account__icon icon icon-cash" aria-hidden="true"></span>
+                            <h3 class="account__title">Credit Card</h3>
+                            <p class="account__synopsis">50% used</p>
+                        </div>
+
+                        <div class="bar">
+                            <div class="bar__block bar__block--positive js-bar" style="width: 50%" data-bar-percent="50"></div>
+                        </div>
+
+                        <div class="account__item">
+                            <div class="account__label">Balance</div>
+                            <div class="account__value">-R2,000.00</div>
+                        </div>
+
+                        <div class="account__item">
+                            <div class="account__label">Limit</div>
+                            <div class="account__value">R4,000.00</div>
+                        </div>
+
+                        <div class="account-meta">
+                            <span class="account-meta__icon icon icon-age" aria-hidden="true"></span>
+                            <div class="account-meta__value">3 months ago</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><div class="account account--balance account--positive">
+    <div class="account__header">
+        <span class="account__icon icon icon-cash" aria-hidden="true"></span>
+        <h3 class="account__title">Credit Card</h3>
+        <p class="account__synopsis">50% used</p>
+    </div>
+
+    <div class="bar">
+        <div class="bar__block bar__block--positive js-bar" style="width: 50%" data-bar-percent="50"></div>
+    </div>
+
+    <div class="account__item">
+        <div class="account__label">Balance</div>
+        <div class="account__value">-R2,000.00</div>
+    </div>
+
+    <div class="account__item">
+        <div class="account__label">Limit</div>
+        <div class="account__value">R4,000.00</div>
+    </div>
+
+    <div class="account-meta">
+        <span class="account-meta__icon icon icon-age" aria-hidden="true"></span>
+        <div class="account-meta__value">3 months ago</div>
+    </div>
+</div></code>
+                </div>
+
+                <h2 class="sg-heading-spacer">Summary</h2>
+
+                <div style="background-color: #fff; padding: 1em">
+                    <div class="account account--summary account--neutral">
+                        <div class="account__header">
+                            <span class="account__icon icon icon-cash" aria-hidden="true"></span>
+                            <h3 class="account__title">Personal Cash Loans</h3>
+                            <p class="account__synopsis account__synopsis--large">6 months in arrears</p>
+
+                            <div class="account-meta">
+                                <span class="account-meta__icon icon icon-age" aria-hidden="true"></span>
+                                <div class="account-meta__value">3 months ago</div>
+                            </div>
+                        </div>
+
+                        <div class="account__item">
+                            <div class="account__label">Outstanding</div>
+                            <div class="account__value">-R72,000.00</div>
+                        </div>
+
+                        <div class="account__item">
+                            <div class="account__label">Balance</div>
+                            <div class="account__value">R570.00</div>
+                        </div>
+
+                        <div class="account__item">
+                            <div class="account__label">In arrears since</div>
+                            <div class="account__value">12 Jan 2016</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><div class="account account--summary account--neutral">
+    <div class="account__header">
+        <span class="account__icon icon icon-cash" aria-hidden="true"></span>
+        <h3 class="account__title">Personal Cash Loans</h3>
+        <p class="account__synopsis account__synopsis--large">6 months in arrears</p>
+
+        <div class="account-meta">
+            <span class="account-meta__icon icon icon-age" aria-hidden="true"></span>
+            <div class="account-meta__value">3 months ago</div>
+        </div>
+    </div>
+
+    <div class="account__item">
+        <div class="account__label">Outstanding</div>
+        <div class="account__value">-R72,000.00</div>
+    </div>
+
+    <div class="account__item">
+        <div class="account__label">Balance</div>
+        <div class="account__value">R570.00</div>
+    </div>
+
+    <div class="account__item">
+        <div class="account__label">In arrears since</div>
+        <div class="account__value">12 Jan 2016</div>
+    </div>
+</div></code>
+                </div>
+
+                <h2 class="sg-heading-spacer">Detail</h2>
+
+                <div style="background-color: #fff; padding: 1em">
+                    <div class="account account--detail account--negative">
+                        <div class="account__header">
+                            <span class="account__icon icon icon-garage-card" aria-hidden="true"></span>
+                            <h3 class="account__title">Garage Card</h3>
+                            <p class="account__synopsis">+27 00 000 0000</p>
+
+                            <div class="account-meta">
+                                <span class="account-meta__icon icon icon-age" aria-hidden="true"></span>
+                                <div class="account-meta__value">3 months ago</div>
+                            </div>
+                        </div>
+
+                        <ol class="list list--unstyled">
+                            <li><b>Date</b>: 15 Oct 2015</li>
+                            <li><b>Reason</b>: Contract</li>
+                            <li><b>Status</b>: Pending</li>
+                            <li><b>Reference</b>: 329141A</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><div class="account account--detail account--negative">
+    <div class="account__header">
+        <span class="account__icon icon icon-garage-card" aria-hidden="true"></span>
+        <h3 class="account__title">Garage Card</h3>
+        <p class="account__synopsis">+27 00 000 0000</p>
+
+        <div class="account-meta">
+            <span class="account-meta__icon icon icon-age" aria-hidden="true"></span>
+            <div class="account-meta__value">3 months ago</div>
+        </div>
+    </div>
+
+    <ol class="list list--unstyled">
+        <li><b>Date</b>: 15 Oct 2015</li>
+        <li><b>Reason</b>: Contract</li>
+        <li><b>Status</b>: Pending</li>
+        <li><b>Reference</b>: 329141A</li>
+    </ol>
+</div></code>
+                </div>
+            </section>
+
+            <section class="sg-l-section" id="sg-legal-action">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">Legal Action</h1>
+                </header>
+
+                <div style="background-color: #fff; padding: 1em">
+                    <div class="legal-action">
+                        <div class="legal-action__header">
+                            <span class="icon icon-garage-card" aria-hidden="true"></span>
+                            <h3 class="legal-action__title">Toyota Muizenberg Judgement</h3>
+                        </div>
+
+                        <ol class="list list--unstyled">
+                            <li>Date: 28 Oct 2015</li>
+                            <li>Contact: +27 00 000 0000</li>
+                            <li>Court: Muizenberg</li>
+                            <li>Reason: <b>Outstanding payment</b></li>
+                        </ol>
+
+                        <div class="legal-action__value">-R6,000.00</div>
+                    </div>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><div class="legal-action">
+    <div class="legal-action__header">
+        <span class="icon icon-garage-card" aria-hidden="true"></span>
+        <h3 class="legal-action__title">Toyota Muizenberg Judgement</h3>
+    </div>
+
+    <ol class="list list--unstyled">
+        <li>Date: 28 Oct 2015</li>
+        <li>Contact: +27 00 000 0000</li>
+    </ol>
+
+    <div class="legal-action__value">-R6,000.00</div>
+</div></code>
+                </div>
+            </section>
+
+            <section class="sg-l-section" id="sg-alerts">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">Alerts</h1>
+                </header>
+
+                <h2 class="sg-heading-spacer">Positive</h2>
+
+                <div class="alert alert--positive js-alert" role="alert">
+                    <div class="alert__message">
+                        <span class="icon icon-smile-o" aria-hidden="true"></span>
+                        <p><b>Well done!</b> The bank loves you.</p>
+                    </div>
+
+                    <button class="alert__dismiss js-dismiss" type="button"><span class="icon icon-close" aria-hidden="true"></span></button>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><div class="alert alert--positive js-alert" role="alert">
+    <div class="alert__message">
+        <span class="icon icon-smile-o" aria-hidden="true"></span>
+        <p><b>Well done!</b> The bank loves you.</p>
+    </div>
+
+    <button class="alert__dismiss js-dismiss" type="button"><span class="icon icon-close" aria-hidden="true"></span></button>
+</div></code>
+                </div>
+
+                <h2 class="sg-heading-spacer">Information</h2>
+
+                <div class="alert alert--info js-alert" role="alert">
+                    <div class="alert__message">
+                        <span class="icon icon-info" aria-hidden="true"></span>
+                        <p>R12,400.00 being paid monthly with 4 debit orders.</p>
+                    </div>
+
+                    <button class="alert__dismiss js-dismiss" type="button"><span class="icon icon-close" aria-hidden="true"></span></button>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><div class="alert alert--info js-alert" role="alert">
+    <div class="alert__message">
+        <span class="icon icon-info" aria-hidden="true"></span>
+        <p>R12,400.00 being paid monthly with 4 debit orders.</p>
+    </div>
+
+    <button class="alert__dismiss js-dismiss" type="button"><span class="icon icon-close" aria-hidden="true"></span></button>
+</div></code>
+                </div>
+
+                <h2 class="sg-heading-spacer">Neutral</h2>
+
+                <div class="alert alert--neutral js-alert" role="alert">
+                    <div class="alert__message">
+                        <span class="icon icon-meh-o" aria-hidden="true"></span>
+                        <p><b>Oh no!</b> you have 6 accounts in arrears. Pay up soon!</p>
+                    </div>
+
+                    <button class="alert__dismiss js-dismiss" type="button"><span class="icon icon-close" aria-hidden="true"></span></button>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><div class="alert alert--neutral js-alert" role="alert">
+    <div class="alert__message">
+        <span class="icon icon-meh-o" aria-hidden="true"></span>
+        <p><b>Oh no!</b> you have 6 accounts in arrears. Pay up soon!</p>
+    </div>
+
+    <button class="alert__dismiss js-dismiss" type="button"><span class="icon icon-close" aria-hidden="true"></span></button>
+</div></code>
+                </div>
+
+                <h2 class="sg-heading-spacer">Negative</h2>
+
+                <div class="alert alert--negative js-alert" role="alert">
+                    <div class="alert__message">
+                        <span class="icon icon-frown-o" aria-hidden="true"></span>
+                        <p><b>Uh oh!</b> You have 1 notice against you.</p>
+                    </div>
+
+                    <button class="alert__dismiss js-dismiss" type="button"><span class="icon icon-close" aria-hidden="true"></span></button>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><div class="alert alert--negative js-alert" role="alert">
+    <div class="alert__message">
+        <span class="icon icon-frown-o" aria-hidden="true"></span>
+        <p><b>Uh oh!</b> You have 1 notice against you.</p>
+    </div>
+
+    <button class="alert__dismiss js-dismiss" type="button"><span class="icon icon-close" aria-hidden="true"></span></button>
+</div></code></div>
+            </section>
+
+            <section class="sg-l-section" id="sg-faq">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">FAQ</h1>
+                </header>
+
+                <div class="faq">
+                    <h2 class="faq__title">Where does Fido get its information?</h2>
+                    <p class="faq__synopsis">Fido is powered by Experian one of the world’s largest credit bureaus used by
+                        the leading financial and retail institutions.</p>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><div class="faq">
+    <h2 class="faq__title">Where does Fido get its information?</h2>
+    <p class="faq__synopsis">Fido is powered by Experian one of the world’s largest credit bureaus used by the leading financial and retail institutions.</p>
+</div></code>
+                </div>
+            </section>
+
+            <section class="sg-l-section" id="sg-post">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">Post</h1>
+                </header>
+
+                <h2 class="sg-heading-spacer">Default</h2>
+
+                <div class="post">
+                    <a class="post__link" href="#sg-post">
+                        <img class="post__img" src="http://placehold.it/240x240" width="240" height="240" alt="">
+                    </a>
+
+                    <h2 class="post__title">Where does Fido get its information?</h2>
+
+                    <time class="post__time" datetime="2016-03-10">10 March, 2016</time>
+
+                    <p class="post__synopsis">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                        ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+                    <a class="btn btn--small" href="#sg-post">Read More</a>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><div class="post">
+    <a class="post__link" href="#">
+        <img class="post__img" src="http://placehold.it/240x240" width="240" height="240" alt="">
+    </a>
+
+    <h2 class="post__title">Where does Fido get its information?</h2>
+
+    <time class="post__time" datetime="2016-03-10">10 March, 2016</time>
+
+    <p class="post__synopsis">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+    <a class="btn btn--small" href="#">Read More</a>
+</div></code>
+                </div>
+
+                <h2 class="sg-heading-spacer">Hero</h2>
+
+                <div class="post post--hero">
+                    <img class="post__img" src="../assets/images/features/feature-01-303x300.png" width="303" height="300" alt="">
+
+                    <h2 class="post__title">Where does Fido get its information?</h2>
+
+                    <time class="post__time" datetime="2016-03-10">10 March, 2016</time>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><div class="post post--hero">
+    <img class="post__img" src="../assets/images/features/feature-01-303x300.png" width="303" height="300" alt="">
+
+    <h2 class="post__title">Where does Fido get its information?</h2>
+
+    <time class="post__time" datetime="2016-03-10">10 March, 2016</time>
+</div></code>
+                </div>
+            </section>
+
+            <section class="sg-l-section" id="sg-legal">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">Legal</h1>
+                </header>
+
+                <div class="legal">
+                    <p class="legal__text">© 2015 Fido. Powered by <a href="https://www.frank.net"><img class="legal__logo" src="../assets/images/logos/logo-frank-184x32.png" srcset="../assets/images/logos/logo-frank-184x32@2x.png 2x" width="184" height="32" alt="FRANK.NET logo"></a></p>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><div class="legal">
+    <p class="legal__text">© 2015 Fido. Powered by <a href="https://www.frank.net"><img class="legal__logo" src="../assets/images/logos/logo-frank-184x32.png" srcset="../assets/images/logos/logo-frank-184x32@2x.png 2x" width="184" height="32" alt="FRANK.NET logo"></a></p>
+</div></code>
+                </div>
+            </section>
+
+            <section class="sg-l-section" id="sg-offer">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">Offer</h1>
+                </header>
+
+                <h2 class="sg-heading-spacer">Default</h2>
+
+                <div class="offer">
+                    <img class="offer__logo" src="../assets/images/logos/logo-frank-120x21.png" srcset="../assets/images/logos/logo-frank-120x21@2x.png 2x" width="120" height="21" alt="FRANK.NET logo">
+
+                    <p class="offer__synopsis">Protect that paycheque with FRANK.NET 3 months free!</p>
+
+                    <a class="offer__link" href="#sg-offer">Apply Now</a>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><div class="offer">
+    <img class="offer__logo" src="../assets/images/logos/logo-frank-120x21.png" srcset="../assets/images/logos/logo-frank-120x21@2x.png 2x" width="120" height="21" alt="FRANK.NET logo">
+
+    <p class="offer__synopsis">Protect that paycheque with FRANK.NET 3 months free!</p>
+
+    <a class="offer__link" href="#">Apply Now</a>
+</div></code>
+                </div>
+
+                <h2 class="sg-heading-spacer">Large</h2>
+
+                <div class="offer offer--large">
+                    <div class="offer__label">Save 20%</div>
+
+                    <h3 class="offer__title">Protect that paycheque with FRANK.NET</h3>
+
+                    <p class="offer__synopsis">Fido’s customers get FRANK.NET’s no nonsense Salary Protection for less. Complete the form
+                        below and we will call you.</p>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><div class="offer offer--large">
+    <div class="offer__label">Save 20%</div>
+
+    <h3 class="offer__title">Protect that paycheque with FRANK.NET</h3>
+
+    <p class="offer__synopsis">Fido’s customers get FRANK.NET’s no nonsense Salary Protection for less. Complete the form below and we will call you.</p>
+</div></code>
+                </div>
+
+                <h2 class="sg-heading-spacer">Featured</h2>
+
+                <div class="offer offer--large offer--featured">
+                    <img class="offer__logo" src="../assets/images/offers/frank-logo-176x31.png" srcset="../assets/images/offers/frank-logo-176x31.png 2x" width="176" height="31" alt="FRANK.NET logo">
+
+                    <img class="offer__img" src="../assets/images/offers/frank-fido-171x219.png" srcset="../assets/images/offers/frank-fido-171x219@2x.png 2x" width="171" height="219" alt="">
+
+                    <h3 class="offer__title">Protect your paycheque with Income Protection from FRANK.NET</h3>
+
+                    <div class="btn-group">
+                        <a class="btn btn--blue" href="#sg-offer">Get A Quote</a>
+                        <a class="btn" href="#sg-offer">Call Me</a>
+                    </div>
+
+                    <a class="offer__dismiss js-dismiss" href="#sg-offer"><span class="icon icon-close" aria-hidden="true"></span></a>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><div class="offer offer--large offer--featured">
+    <img class="offer__logo" src="../assets/images/offers/frank-logo-176x31.png" srcset="../assets/images/offers/frank-logo-176x31.png 2x" width="176" height="31" alt="FRANK.NET logo">
+
+    <img class="offer__img" src="../assets/images/offers/frank-fido-171x219.png" srcset="../assets/images/offers/frank-fido-171x219@2x.png 2x" width="171" height="219" alt="">
+
+    <h3 class="offer__title">Protect your paycheque with Income Protection from FRANK.NET</h3>
+
+    <div class="btn-group">
+        <a class="btn btn--blue" href="#sg-offer">Get A Quote</a>
+        <a class="btn" href="#sg-offer">Call Me</a>
+    </div>
+
+    <a class="offer__dismiss js-dismiss" href="#"><span class="icon icon-close" aria-hidden="true"></span></a>
+</div></code>
+                </div>
+            </section>
+
+            <section class="sg-l-section" id="sg-cta">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">CTA</h1>
+                </header>
+
+                <div class="cta">
+                    <h3 class="cta__title">Questions or queries?</h3>
+                    <p class="cta__synopsis">Give us a whistle on <a href="mailto:info@hellofido.co.za">info@hellofido.co.za</a>
+                        and we’ll come running.</p>
+                    <a class="btn btn--blue" href="mailto:info@hellofido.co.za">Say hello</a>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><div class="cta">
+    <h3 class="cta__title">Questions or queries?</h3>
+    <p class="cta__synopsis">Give us a whistle on <a href="mailto:info@hellofido.co.za">info@hellofido.co.za</a> and we’ll come running.</p>
+    <a class="btn btn--blue" href="mailto:info@hellofido.co.za">Say hello</a>
+</div></code>
+                </div>
+            </section>
+
+            <section class="sg-l-section" id="sg-sign-up">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">Sign Up</h1>
+                </header>
+
+                <div class="sign-up">
+                    <div class="sign-up__header">
+                        <h6 class="hN">Sign Up</h6>
+                        <img class="sign-up__img" src="../assets/images/general/fido-sign-up-188x210.png" srcset="../assets/images/general/fido-sign-up-188x210@2x.png 2x" width="188" height="210" alt="">
+                    </div>
+
+                    <ul class="list list--icons">
+                        <li><span class="icon icon-check green" aria-hidden="true"></span><p>Fido sends monthly
+                            notifications to your inbox or phone.</p></li>
+                        <li><span class="icon icon-check green" aria-hidden="true"></span><p>Fido barks if legal
+                            action is taken on an account of yours.</p></li>
+                        <li><span class="icon icon-check green" aria-hidden="true"></span><p>Fido reports fraudulent
+                            activity by others on your account.</p></li>
+                        <li><span class="icon icon-check green" aria-hidden="true"></span><p>Fido wags when there
+                            are any new treats from Frank for you.</p></li>
+                    </ul>
+
+                    <a class="btn btn--blue" href="#sg-sign-up">Let’s Do This</a>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><div class="sign-up">
+    <div class="sign-up__header">
+        <h6 class="hN">Sign Up</h6>
+        <img class="sign-up__img" src="../assets/images/general/fido-sign-up-188x210.png" srcset="../assets/images/general/fido-sign-up-188x210@2x.png 2x" width="188" height="210" alt="">
+    </div>
+
+    <ul class="list list--icons">
+        <li><span class="icon icon-check green" aria-hidden="true"></span><p>Fido sends monthly notifications to your inbox or phone.</p></li>
+    </ul>
+
+    <a class="btn btn--blue" href="#">Let’s Do This</a>
+</div></code>
+                </div>
+            </section>
+
+            <section class="sg-l-section" id="sg-box">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">Box</h1>
+                </header>
+
+                <div class="box">
+                    <div class="box__header">
+                        <h2 class="hN">Your Profile</h2>
+                    </div>
+
+                    <div class="box__body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                            sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+
+                    <div class="box__footer">
+                        <div class="btn-group btn-group--center">
+                            <a class="btn btn--blue" href="#sg-box">Change Password</a>
+                            <a class="btn" href="#sg-box">Save Changes</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><div class="box">
+    <div class="box__header">
+        <h2 class="hN">Your Profile</h2>
+    </div>
+
+    <div class="box__body">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore…</p>
+    </div>
+
+    <div class="box__footer">
+        <div class="btn-group btn-group--center">
+            <a class="btn btn--blue" href="#">Change Password</a>
+            <a class="btn" href="#">Save Changes</a>
+        </div>
+    </div>
+</div></code>
+                </div>
+            </section>
+
+            <section class="sg-l-section" id="sg-carousel">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">Carousel</h1>
+                </header>
+
+                <div class="slick js-carousel" data-dots="true" data-draggable="false" data-infinite="false">
+                    <div>
+                        <img src="//placehold.it/1400x787" width="1400" height="787" alt="">
+                    </div>
+                    <div>
+                        <img src="//placehold.it/1400x787" width="1400" height="787" alt="">
+                    </div>
+                    <div>
+                        <img src="//placehold.it/1400x787" width="1400" height="787" alt="">
+                    </div>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><div class="slick js%2Dcarousel" data-dots="true" data-infinite="false">
+    <div>
+        <img src="//placehold.it/1400x787" width="1400" height="787" alt="">
+    </div>
+    <div>
+        <img src="//placehold.it/1400x787" width="1400" height="787" alt="">
+    </div>
+    <div>
+        <img src="//placehold.it/1400x787" width="1400" height="787" alt="">
+    </div>
+</div></code>
+                </div>
+            </section>
+
+            <section class="sg-l-section" id="sg-modal">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">Modal</h1>
+                </header>
+
+                <p>Lorem ipsum dolor sit amet, <a class="js-modal" href="#modal" data-modal-id="modal">consectetur adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modal-label" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title" id="modal-label">Modal Title</h3>
+                                <button class="modal-close" type="button" data-dismiss="modal" aria-label="Close">
+                                    <span class="icon icon-close" aria-hidden="true"></span>
+                                </button>
+                            </div>
+
+                            <div class="modal-body">
+                                <p>“The quick brown fox jumps over the lazy dog” is an English–language pangram — a phrase that contains all of the letters of the alphabet. It is used to show fonts and to test typewriters and computer keyboards, and in other applications involving all of the letters in the English alphabet. Owing to its brevity and coherence, it has become widely known.</p>
+                                <p>“The quick brown fox jumps over the lazy dog” is an English–language pangram — a phrase that contains all of the letters of the alphabet. It is used to show fonts and to test typewriters and computer keyboards, and in other applications involving all of the letters in the English alphabet. Owing to its brevity and coherence, it has become widely known.</p>
+                                <p>“The quick brown fox jumps over the lazy dog” is an English–language pangram — a phrase that contains all of the letters of the alphabet. It is used to show fonts and to test typewriters and computer keyboards, and in other applications involving all of the letters in the English alphabet. Owing to its brevity and coherence, it has become widely known.</p>
+                            </div>
+
+                            <div class="modal-footer">
+                                <div class="btn-group">
+                                    <a class="btn btn--transparent" href="#sg-modal" data-dismiss="modal">Close</a>
+                                    <a class="btn btn--blue" href="#sg-modal">Save</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><div class="modal fade" id="modal-2" tabindex="-1" aria-labelledby="modal-label-2" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="modal-label-2">Modal Title</h4>
+                <button class="modal-close" type="button" data-dismiss="modal-2" aria-label="Close">
+                    <span class="icon icon-close" aria-hidden="true"></span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <p>“The quick brown fox jumps over the lazy dog” is an English–language pangram — a phrase that contains…</p>
+            </div>
+
+            <div class="modal-footer">
+                Modal Footer
+            </div>
+        </div>
+    </div>
+</div></code>
+                </div>
+            </section>
+
+            <section class="sg-l-section" id="sg-social">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">Social</h1>
+                </header>
+
+                <div class="social">
+                    <ol class="list">
+                        <li><a href="#sg-social" title="Follow us on Facebook"><span class="icon icon-facebook-circle" aria-hidden="true"></span></a></li>
+                        <li><a href="#sg-social" title="Follow us on Twitter"><span class="icon icon-twitter-circle" aria-hidden="true"></span></a></li>
+                    </ol>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><div class="social">
+    <ol class="list">
+        <li>
+            <a href="#" title="Follow us on Facebook"><span class="icon icon-facebook-circle" aria-hidden="true"></span></a>
+        </li>
+        <li>
+            <a href="#" title="Follow us on Twitter"><span class="icon icon-twitter-circle" aria-hidden="true"></span></a>
+        </li>
+    </ol>
+</div></code>
+                </div>
+            </section>
+
+            <section class="sg-l-section" id="sg-tooltips">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">Tooltips</h1>
+                </header>
+
+                <p>Sed ut <a class="js-tooltip" href="#" data-tooltip-placement="top" title="<a href='#sg-tooltips'>Lorem ipsum</a> dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">perspiciatis unde omnis</a>
+                    iste natus error sit voluptatem accusantium <a class="js-tooltip" href="#" data-placement="right" title="Ut enim ad minim veniam, quis nostrud exercitation ullamco <a href='#sg-tooltips'>laboris nisi ut aliquip</a> ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.">doloremque laudantium</a>,
+                    totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta
+                    sunt explicabo. Nemo enim ipsam voluptatem <a class="js-tooltip" href="#" data-placement="bottom" title="<a href='#sg-tooltips'>Excepteur sint occaecat</a> cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.">quia voluptas</a>
+                    sit aspernatur aut odit aut fugit, sed quia consequuntur <a class="js-tooltip" href="#" data-tooltip-placement="left" title="Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione <a href='#sg-tooltips'>voluptatem sequi nesciunt</a>.">magni dolores</a>
+                    eos qui ratione voluptatem sequi nesciunt.</p>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><p>Sed ut <a class="js%2Dtooltip" href="#" data-placement="top" title="Lorem ipsum dolor">perspiciatis unde omnis</a> iste natus</p>
+    <p>Sed ut <a class="js%2Dtooltip" href="#" data-placement="right" title="Lorem ipsum dolor">perspiciatis unde omnis</a> iste natus</p>
+    <p>Sed ut <a class="js%2Dtooltip" href="#" data-placement="bottom" title="Lorem ipsum dolor">perspiciatis unde omnis</a> iste natus</p>
+    <p>Sed ut <a class="js%2Dtooltip" href="#" data-placement="left" title="Lorem ipsum dolor">perspiciatis unde omnis</a> iste natus</p></code>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="sg-footer" role="contentinfo">
+        <div class="sg-l-wrapper">
+            <a class="sg-logo" href="http://www.wearenext.co.za">
+                <img src="http://www.wearenext.co.za/assets/images/logos/logo-next-light-57x22.png" srcset="http://www.wearenext.co.za/assets/images/logos/logo-next-light-114x44.png 2x" width="57" height="22" alt="Next">
+            </a>
+
+            <div class="sg-social">
+                <ol class="sg-list">
+                    <li>
+                        <a href="mailto:hello@wearenext.co.za" title="Email us">
+                            <span class="sg-icon next-envelope" aria-hidden="true"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/we-are-next" title="Follow us on GitHub">
+                            <span class="sg-icon next-github" aria-hidden="true"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/company/next-cape-town-" title="Follow us on LinkedIn">
+                            <span class="sg-icon next-linkedin" aria-hidden="true"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.twitter.com/nextct" title="Follow us on Twitter">
+                            <span class="sg-icon next-twitter" aria-hidden="true"></span>
+                        </a>
+                    </li>
+                </ol>
+            </div>
+
+            <small class="sg-copyright">© 2015 Next</small>
+        </div>
+    </footer>
+
+    <!-- Google Analytics -->
+    <script>
+        window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+        ga('create','UA-81706063-1','auto');ga('send','pageview')
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/styleguide/plugins.js"></script>
+    <script src="../assets/js/styleguide/styleguide.js"></script>
+</body>
+</html>

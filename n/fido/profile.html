@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Fido – Profile</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Open Graph -->
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="">
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <!-- Style Sheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Web Fonts -->
+    <script>
+        WebFontConfig = {
+            google: {
+                families: ['Varela+Round:400', 'Open+Sans:300,400']
+            }
+        };
+    </script>
+
+    <!-- Web Font Loader -->
+    <script src="assets/js/vendor/webfontloader.js" async="async"></script>
+
+    <!--[if lt IE 9]>
+    <script src="assets/js/vendor/polyfills.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!--[if lt IE 9]>
+    <p class="upgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/?locale=en">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <header class="l-header js-headroom" role="banner">
+        <div class="l-wrapper l-wrapper--large">
+            <a class="logo" href="index.html">
+                <img src="assets/images/logos/logo-fido-white-183x32.png" srcset="assets/images/logos/logo-fido-white-183x32@2x.png 2x" width="183" height="32" alt="Fido logo">
+            </a>
+
+            <a class="nav-toggle js-nav-toggle" href="index.html">
+                <span class="nav-toggle__bar"></span>
+            </a>
+
+            <div class="toolbar js-toolbar">
+                <div class="toolbar__item">
+                    <a class="toolbar__link" href="dashboard.html">
+                        <span class="toolbar__icon icon-treat" aria-hidden="true"></span>
+                        <span class="toolbar__count">1</span>
+                    </a>
+
+                    <div class="toolbar-menu">
+                        <div class="offer">
+                            <img class="offer__logo" src="assets/images/logos/logo-frank-120x21.png" srcset="assets/images/logos/logo-frank-120x21@2x.png 2x" width="120" height="21" alt="FRANK.NET logo">
+
+                            <p class="offer__synopsis">Protect that paycheque with FRANK.NET 3 months free!</p>
+
+                            <a class="offer__link" href="dashboard.html">Apply Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="toolbar__item">
+                    <a class="toolbar__link" href="dashboard.html">
+                        <span class="toolbar__icon icon-alert" aria-hidden="true"></span>
+                        <span class="toolbar__count">3</span>
+                    </a>
+
+                    <div class="toolbar-menu">
+                        <div class="notifications">
+                            <div class="notification notification--positive">
+                                <span class="notification__icon icon-arrow-up" aria-hidden="true"></span>
+                                <p class="notification__synopsis">Your credit score improved by <b>12</b> points</p>
+                            </div>
+
+                            <div class="notification notification--neutral">
+                                <span class="notification__icon icon-arrow-down" aria-hidden="true"></span>
+                                <p class="notification__synopsis">Your credit to debit ratio has decreased by <b>1</b> point</p>
+                            </div>
+
+                            <div class="notification notification--negative">
+                                <span class="notification__icon icon-frown-o" aria-hidden="true"></span>
+                                <p class="notification__synopsis">You have <b>1</b> judgement pending</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="toolbar__item">
+                    <a class="toolbar__link" href="dashboard.html">
+                        <span class="toolbar__icon icon-user" aria-hidden="true"></span>
+                    </a>
+
+                    <div class="toolbar-menu">
+                        <div class="toolbar-menu__header">
+                            <div class="toolbar-menu__title">Shaun Gardner</div>
+                            <a class="toolbar-menu__link" href="dashboard-logged-in.html">View Profile</a>
+                        </div>
+
+                        <div class="toolbar-menu__block toolbar-menu__block--silver">
+                            <span class="icon icon-user" aria-hidden="true"></span>
+                            <a class="toolbar-menu__link" href="profile.html">Edit Account</a>
+                        </div>
+
+                        <div class="toolbar-menu__block">
+                            <span class="icon icon-power-off" aria-hidden="true"></span>
+                            <a class="toolbar-menu__link" href="index.html">Log Out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="nav js-nav" role="navigation">
+                <ol class="list">
+                    <li><a href="dashboard-logged-in.html">Dashboard</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="#">Help</a></li>
+                </ol>
+            </nav>
+        </div>
+    </header>
+
+    <main class="l-main" role="main">
+        <div class="l-section l-section--blue">
+            <div class="l-wrapper l-wrapper--small">
+                <div class="box">
+                    <form class="form" id="form-profile" action="profile.html" method="post">
+                        <div class="box__header">
+                            <h2 class="hN">Your Profile</h2>
+                        </div>
+
+                        <div class="box__body">
+                            <div class="alert alert--positive js-alert" role="alert">
+                                <div class="alert__message">
+                                    <span class="icon icon-smile-o" aria-hidden="true"></span>
+                                    <p><b>Well done!</b> The bank loves you.</p>
+                                </div>
+
+                                <button class="alert__dismiss js-dismiss" type="button"><span class="icon icon-close" aria-hidden="true"></span></button>
+                            </div>
+
+                            <label class="label label--dark has-error" for="first_name">
+                                First Name
+                                <input class="input input--dark" type="text" id="first_name" name="first_name" value="Shaun" maxlength="20" required>
+                                <span class="help-text">Better check yourself, you’re not looking too good.</span>
+                            </label>
+
+                            <label class="label label--dark" for="last_name">
+                                Last Name
+                                <input class="input input--dark" type="text" id="last_name" name="last_name" value="Gardener" maxlength="20" required>
+                            </label>
+
+                            <label class="label label--dark" for="number">
+                                ID Number
+                                <input class="input input--dark" type="text" id="number" name="number" value="8888888888888" maxlength="20" required>
+                            </label>
+
+                            <label class="label label--dark" for="contact_number">
+                                Contact Number
+                                <input class="input input--dark" type="tel" id="contact_number" name="contact_number" maxlength="10" value="0831234567" required>
+                            </label>
+
+                            <label class="label label--dark" for="email">
+                                Email
+                                <input class="input input--dark" type="email" id="email" name="email" maxlength="100" value="shaun.gardener@wearenext.co.za" required>
+                            </label>
+
+                            <label class="label label--dark label--checkbox" for="opt_in">
+                                <input class="input" type="checkbox" id="opt_in" name="opt_in" value="1" checked> I give permission for Fido to communicate with me
+                            </label>
+
+                            <label class="label has-error js-collapse" data-collapse-id="delete">Want to delete your Fido account?</label>
+                            <div class="collapse collapse--well" id="delete">
+                                <p>Please be aware that when you delete your Fido account, we also delete all your transaction information
+                                    and history.</p>
+                                <div class="btn-group">
+                                    <a class="btn btn--blue btn--small js-modal" href="account-delete.html" data-modal-id="modal-delete-account">Yes, delete it</a>
+                                    <a class="btn btn--transparent btn--small js-collapse" href="dashboard.html" data-collapse-id="delete">No, keep it</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box__footer">
+                            <div class="btn-group btn-group--center">
+                                <a class="btn btn--blue js-modal" href="password-change.html" data-modal-id="modal-password">Change Password</a>
+                                <input class="btn" type="submit" value="Save Profile">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="l-footer" role="contentinfo">
+        <div class="l-wrapper l-wrapper--large">
+            <div class="social">
+                <ol class="list">
+                    <li><a href="#" title="Follow us on Facebook"><span class="icon icon-facebook-circle" aria-hidden="true"></span></a></li>
+                    <li><a href="#" title="Follow us on Twitter"><span class="icon icon-twitter-circle" aria-hidden="true"></span></a></li>
+                </ol>
+            </div>
+
+            <nav class="nav nav--gray nav--separator" role="navigation">
+                <ol class="list">
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About Fido</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
+                </ol>
+            </nav>
+
+            <div class="legal">
+                <p class="legal__text">© 2015 Fido. Powered by <a href="https://www.frank.net"><img class="legal__logo" src="assets/images/logos/logo-frank-184x32.png" srcset="assets/images/logos/logo-frank-184x32@2x.png 2x" width="184" height="32" alt="FRANK.NET logo"></a></p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="modal-delete-account" tabindex="-1" aria-labelledby="modal-delete-account-label" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="modal-delete-account-label">Delete Your Account</h3>
+                    <button class="modal-close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span class="icon icon-close" aria-hidden="true"></span>
+                    </button>
+                </div>
+
+                <form class="form" id="form-delete" action="profile.html" method="post">
+                    <div class="modal-body">
+                        <div class="toggle-password js-toggle-password">
+                            <label class="label label--dark" for="password">
+                                Password
+                                <input class="input input--dark" type="password" id="password" name="password" maxlength="100" required>
+                            </label>
+
+                            <button class="u-hidden btn btn--transparent js-toggle" type="button">Show</button>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="btn-group btn-group--center">
+                            <input class="btn" type="submit" value="Delete Account">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-password" tabindex="-1" aria-labelledby="modal-password-label" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="modal-password-label">Change Your Password</h3>
+                    <button class="modal-close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span class="icon icon-close" aria-hidden="true"></span>
+                    </button>
+                </div>
+
+                <form class="form" id="form-password-change" action="profile.html" method="post">
+                    <div class="modal-body">
+                        <div class="toggle-password js-toggle-password">
+                            <label class="label label--dark" for="password_old">
+                                Old Password
+                                <input class="input input--dark" type="password" id="password_old" name="password_old" maxlength="100" required>
+                            </label>
+
+                            <button class="u-hidden btn btn--transparent js-toggle" type="button">Show</button>
+                        </div>
+
+                        <div class="toggle-password js-toggle-password">
+                            <label class="label label--dark" for="password_new">
+                                New Password
+                                <input class="input input--dark" type="password" id="password_new" name="password_new" maxlength="100" required>
+                            </label>
+
+                            <button class="u-hidden btn btn--transparent js-toggle" type="button">Show</button>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="btn-group btn-group--center">
+                            <input class="btn" type="submit" value="Update Password">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Google Analytics -->
+    <script>
+        window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+        ga('create','UA-81706063-1','auto');ga('send','pageview')
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+    <!-- JavaScript -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

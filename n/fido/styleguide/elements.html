@@ -1,0 +1,1497 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Style Guide – Elements | Fido</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/styleguide/styleguide.css">
+
+    <!-- Web Fonts -->
+    <script>
+        WebFontConfig = {
+            google: {
+                families: ['Varela+Round:400', 'Open+Sans:300,400']
+            }
+        };
+    </script>
+
+    <!-- Web Font Loader -->
+    <script src="../assets/js/vendor/webfontloader.js" async="async"></script>
+
+    <!--[if lt IE 9]>
+    <script src="../assets/js/vendor/polyfills.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!--[if lt IE 9]>
+    <p class="upgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/?locale=en">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <header class="sg-header sg-header--primary" role="banner">
+        <div class="sg-l-wrapper">
+            <a class="sg-logo" href="index.html">
+                <img src="../assets/images/logos/logo-fido-white-183x32.png" srcset="../assets/images/logos/logo-fido-white-183x32@2x.png 2x" width="183" height="32" alt="Fido by FRANK.NET logo">
+            </a>
+
+            <nav class="sg-nav sg-nav--primary">
+                <ol class="sg-list">
+                    <li><a class="is-active" href="elements.html">Elements</a></li>
+                    <li><a href="patterns.html">Patterns</a></li>
+                    <li><a href="forms.html">Forms</a></li>
+                    <li><a href="templates.html">Templates</a></li>
+                </ol>
+
+                <form class="sg-form">
+                    <label class="sg-label">
+                        <select class="sg-input js-sg-jump" id="sg-jump">
+                            <option value="">Jump to…</option>
+                            <option value="sg-color-palette">Color Palette</option>
+                            <option value="sg-font-stacks">Font Stacks</option>
+                            <option value="sg-headings">Headings</option>
+                            <option value="sg-paragraph">Paragraph</option>
+                            <option value="sg-blockquote">Block Quote</option>
+                            <option value="sg-horizontal-rule">Horizontal Rule</option>
+                            <option value="sg-inline-elements">Inline Elements</option>
+                            <option value="sg-preformatted-text">Preformatted Text</option>
+                            <option value="sg-address">Address</option>
+                            <option value="sg-time">Time</option>
+                            <option value="sg-list-description">List – Description</option>
+                            <option value="sg-list-ordered">List – Ordered</option>
+                            <option value="sg-list-unordered">List – Unordered</option>
+                            <option value="sg-list-inline">List – Inline</option>
+                            <option value="sg-list-icons">List – Icons</option>
+                            <option value="sg-list-unstyled">List – Unstyled</option>
+                            <option value="sg-table">Table</option>
+                            <option value="sg-figure">Figure</option>
+                            <option value="sg-buttons">Buttons</option>
+                            <option value="sg-buttons-small">Buttons – Small</option>
+                            <option value="sg-buttons-transparent">Buttons – Transparent</option>
+                            <option value="sg-buttons-icon">Buttons – Icon</option>
+                            <option value="sg-button-dropdown">Button Dropdown</option>
+                            <option value="sg-button-dropdown-split">Button Dropdown – Split</option>
+                            <option value="sg-button-groups">Button Groups</option>
+                            <option value="sg-icons">Icons</option>
+                            <option value="sg-grid">Grid</option>
+                            <option value="sg-utilities">Utilities</option>
+                        </select>
+                    </label>
+                </form>
+            </nav>
+
+            <button class="sg-btn js-sg-toggle-nav">Menu</button>
+        </div>
+    </header>
+
+    <main class="sg-main" role="main">
+        <div class="sg-l-wrapper">
+            <section class="sg-l-section" id="sg-color-palette">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">Color Palette</h1>
+                </header>
+
+                <h2 class="sg-heading-spacer">Brand</h2>
+
+                <ol class="sg-list sg-list--colors">
+                    <li class="bg-blue-dark">
+                        <div class="sg-codes">
+                            <code class="sg-code">#2d4276</code>
+                            <code class="sg-code">$color-blue-dark</code>
+                        </div>
+                    </li>
+                    <li class="bg-blue">
+                        <div class="sg-codes">
+                            <code class="sg-code">#4275f4</code>
+                            <code class="sg-code">$color-blue</code>
+                        </div>
+                    </li>
+                    <li class="bg-green">
+                        <div class="sg-codes">
+                            <code class="sg-code">#30eac0</code>
+                            <code class="sg-code">$color-green</code>
+                        </div>
+                    </li>
+                    <li class="bg-red">
+                        <div class="sg-codes">
+                            <code class="sg-code">#f92b60</code>
+                            <code class="sg-code">$color-red</code>
+                        </div>
+                    </li>
+                </ol>
+
+                <h2 class="sg-heading-spacer">Grayscale</h2>
+
+                <ol class="sg-list sg-list--colors">
+                    <li class="bg-black">
+                        <div class="sg-codes">
+                            <code class="sg-code">#222</code>
+                            <code class="sg-code">$color-black</code>
+                        </div>
+                    </li>
+                    <li class="bg-gray-darker">
+                        <div class="sg-codes">
+                            <code class="sg-code">#4a4a4a</code>
+                            <code class="sg-code">$color-gray-darker</code>
+                        </div>
+                    </li>
+                    <li class="bg-gray-dark">
+                        <div class="sg-codes">
+                            <code class="sg-code">#999</code>
+                            <code class="sg-code">$color-gray-dark</code>
+                        </div>
+                    </li>
+                    <li class="bg-gray">
+                        <div class="sg-codes">
+                            <code class="sg-code">#d8d8d8</code>
+                            <code class="sg-code">$color-gray</code>
+                        </div>
+                    </li>
+                    <li class="bg-silver">
+                        <div class="sg-codes">
+                            <code class="sg-code">#ececec</code>
+                            <code class="sg-code">$color-silver</code>
+                        </div>
+                    </li>
+                    <li class="bg-white-dark">
+                        <div class="sg-codes">
+                            <code class="sg-code">#f3f3f3</code>
+                            <code class="sg-code">$color-white-dark</code>
+                        </div>
+                    </li>
+                    <li class="bg-white">
+                        <div class="sg-codes">
+                            <code class="sg-code">#fff</code>
+                            <code class="sg-code">$color-white</code>
+                        </div>
+                    </li>
+                </ol>
+
+                <h2 class="sg-heading-spacer">Social</h2>
+
+                <ol class="sg-list sg-list--colors">
+                    <li class="bg-facebook">
+                        <div class="sg-codes">
+                            <code class="sg-code">#3b5998</code>
+                            <code class="sg-code">$color-facebook</code>
+                        </div>
+                    </li>
+                    <li class="bg-twitter">
+                        <div class="sg-codes">
+                            <code class="sg-code">#55acee</code>
+                            <code class="sg-code">$color-twitter</code>
+                        </div>
+                    </li>
+                </ol>
+            </section>
+
+            <section class="sg-l-section" id="sg-font-stacks">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">Font Stacks</h1>
+                </header>
+
+                <p>Primary font: Open Sans, sans-serif</p>
+                <p><em>Primary font italic: Open Sans, sans-serif</em></p>
+                <p><strong>Primary font bold: Open Sans, sans-serif</strong></p>
+                <p class="u-font--secondary">Secondary font: Varela Round, sans-serif</p>
+                <p class="u-font--secondary"><em>Secondary font italic: Varela Round, sans-serif</em></p>
+                <p class="u-font--secondary"><strong>Secondary font bold: Varela Round, sans-serif</strong></p>
+            </section>
+
+            <section class="sg-l-section" id="sg-headings">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">Headings</h1>
+                </header>
+
+                <h1 class="alpha">h1. The quick brown fox jumps over the lazy dog</h1>
+
+                <h2 class="beta">h2. The quick brown fox jumps over the lazy dog</h2>
+
+                <h3 class="gamma">h3. The quick brown fox jumps over the lazy dog</h3>
+
+                <h4 class="delta">h4. The quick brown fox jumps over the lazy dog</h4>
+
+                <h5 class="epsilon">h5. The quick brown fox jumps over the lazy dog</h5>
+
+                <h6 class="zeta">h6. The quick brown fox jumps over the lazy dog</h6>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><h1 class="alpha">h1. The quick brown fox jumps over the lazy dog</h1>
+<h2 class="beta">h2. The quick brown fox jumps over the lazy dog</h2>
+<h3 class="gamma">h3. The quick brown fox jumps over the lazy dog</h3>
+<h4 class="delta">h4. The quick brown fox jumps over the lazy dog</h4>
+<h5 class="epsilon">h5. The quick brown fox jumps over the lazy dog</h5>
+<h6 class="zeta">h6. The quick brown fox jumps over the lazy dog</h6></code>
+                </div>
+            </section>
+
+            <section class="sg-l-section" id="sg-paragraph">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">Paragraph</h1>
+                </header>
+
+                <p>“The quick brown fox jumps over the lazy dog” is an English–language pangram — a phrase that contains all of the letters of the alphabet. It is used to show fonts and to test typewriters and computer keyboards, and in other applications involving all of the letters in the English alphabet. Owing to its brevity and coherence, it has become widely known.</p>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><p>“The quick brown fox jumps over the lazy dog” is an English–language pangram…</p></code>
+                </div>
+            </section>
+
+            <section class="sg-l-section" id="sg-blockquote">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">Block Quote</h1>
+                </header>
+
+                <blockquote class="blockquote">
+                    <p>The HTML <code>&lt;blockquote&gt;</code> Element (or HTML Block Quotation Element) indicates that the enclosed text is an extended quotation. Usually, this is rendered visually by indentation (see Notes for how to change it). A URL for the source of the quotation may be given using the cite attribute, while a text representation of the source can be given using the <code>&lt;cite&gt;</code> element.</p>
+                    <cite>— <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">MDN</a></cite>
+                </blockquote>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><blockquote class="blockquote">
+    <p>The HTML <code>&lt;blockquote&gt;</code> Element (or HTML Block Quotation Element) indicates…</p>
+    <cite>— <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">MDN</a></cite>
+</blockquote></code>
+                </div>
+            </section>
+
+            <section class="sg-l-section" id="sg-horizontal-rule">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">Horizontal Rule</h1>
+                </header>
+
+                <h2 class="sg-heading-spacer">Default</h2>
+
+                <hr class="hr">
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><hr class="hr"></code>
+                </div>
+
+                <h2 class="sg-heading-spacer">White</h2>
+
+                <div style="background-color: #2d4276; padding: 1em">
+                    <hr class="hr hr--white">
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><hr class="hr hr--white"></code>
+                </div>
+            </section>
+
+            <section class="sg-l-section" id="sg-inline-elements">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">Inline Elements</h1>
+                </header>
+
+                <div class="sg-example">
+                    <p><a href="#sg-inline-elements">This is a text link</a></p>
+                </div>
+                <div class="sg-example">
+                    <p><strong>Strong is used to indicate strong importance</strong></p>
+                </div>
+                <div class="sg-example">
+                    <p><em>This text has added emphasis</em></p>
+                </div>
+                <div class="sg-example">
+                    <p>The <b>b element</b> is stylistically different text from normal text, without any special importance</p>
+                </div>
+                <div class="sg-example">
+                    <p>The <i>i element</i> is text that is set off from the normal text</p>
+                </div>
+                <div class="sg-example">
+                    <p><del>This text is deleted</del> and <ins>This text is inserted</ins></p>
+                </div>
+                <div class="sg-example">
+                    <p><s>This text has a strikethrough</s></p>
+                </div>
+                <div class="sg-example">
+                    <p>Superscript<sup>®</sup></p>
+                </div>
+                <div class="sg-example">
+                    <p>Subscript for things like H<sub>2</sub>O</p>
+                </div>
+                <div class="sg-example">
+                    <p><small>This small text is small for for fine print, etc.</small></p>
+                </div>
+                <div class="sg-example">
+                    <p>Abbreviation: <abbr title="HyperText Markup Language">HTML</abbr></p>
+                </div>
+                <div class="sg-example">
+                    <p>Keybord input: <kbd>Cmd</kbd></p>
+                </div>
+                <div class="sg-example">
+                    <p><q cite="https://developer.mozilla.org/en-US/docs/HTML/Element/q">This text is a short inline quotation</q></p>
+                </div>
+                <div class="sg-example">
+                    <p><cite>This is a citation</cite></p>
+                </div>
+                <div class="sg-example">
+                    <p>The <dfn>dfn element</dfn> indicates a definition</p>
+                </div>
+                <div class="sg-example">
+                    <p>The <mark>mark element</mark> indicates a highlight</p>
+                </div>
+                <div class="sg-example">
+                    <p><code>This is what inline code looks like.</code></p>
+                </div>
+                <div class="sg-example">
+                    <p><samp>This is sample output from a computer program</samp></p>
+                </div>
+                <div class="sg-example">
+                    <p>The <var>variarble element</var>, such as <var>x</var> = <var>y</var></p>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><a href="#">This is a text link</a>
+
+<strong>Strong is used to indicate strong importance</strong>
+
+<em>This text has added emphasis</em>
+
+The <b>b element</b> is stylistically different text from normal text, without any special importance
+
+The <i>i element</i> is text that is set off from the normal text
+
+<del>This text is deleted</del> and <ins>This text is inserted</ins>
+
+<s>This text has a strikethrough</s>
+
+Superscript<sup>®</sup>
+
+Subscript for things like H<sub>2</sub>O
+
+<small>This small text is small for for fine print, etc.</small>
+
+Abbreviation: <abbr title="HyperText Markup Language">HTML</abbr>
+
+Keybord input: <kbd>Cmd</kbd>
+
+<q cite="#">This text is a short inline quotation</q>
+
+<cite>This is a citation</cite>
+
+The <dfn>dfn element</dfn> indicates a definition
+
+The <mark>mark element</mark> indicates a highlight
+
+<code>This is what inline code looks like.</code>
+
+<samp>This is sample output from a computer program</samp>
+
+The <var>variarble element</var>, such as <var>x</var> = <var>y</var></code>
+                </div>
+            </section>
+
+            <section class="sg-l-section" id="sg-preformatted-text">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">Preformatted Text</h1>
+                </header>
+
+                <pre>P R E F O R M A T T E D T E X T
+! " # $ % &amp; ' ( ) * + , - . /
+0 1 2 3 4 5 6 7 8 9 : ; &lt; = &gt; ?
+@ A B C D E F G H I J K L M N O
+P Q R S T U V W X Y Z [ \ ] ^ _
+` a b c d e f g h i j k l m n o
+p q r s t u v w x y z { | } ~ </pre>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><pre>P R E F O R M A T T E D T E X T
+! " # $ % &amp; ' ( ) * + , - . /
+0 1 2 3 4 5 6 7 8 9 : ; &lt; = &gt; ?
+@ A B C D E F G H I J K L M N O
+P Q R S T U V W X Y Z [ \ ] ^ _
+` a b c d e f g h i j k l m n o
+p q r s t u v w x y z { | } ~ </pre></code>
+                </div>
+            </section>
+
+            <section class="sg-l-section" id="sg-address">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">Address</h1>
+                </header>
+
+                <div class="vcard">
+                    <div class="fn org">Next</div>
+                    <div class="adr">
+                        <div class="street-address">
+                            <div>Unit 1, Kings Cross Corner</div>
+                            <div>9 Queens Park Avenue</div>
+                        </div>
+                        <div class="locality">Salt River, <abbr class="region" title="Western Cape">WC</abbr></div>
+                        <div class="postal-code">7925</div>
+                        <div class="country-name">South Africa</div>
+                    </div>
+                    <div class="tel">+27 (0)21 477 0058</div>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><div class="vcard">
+    <div class="fn org">Next</div>
+    <div class="adr">
+        <div class="street-address">
+            <div>Unit 1, Kings Cross Corner</div>
+            <div>9 Queens Park Avenue</div>
+        </div>
+        <div class="locality">Salt River, <abbr class="region" title="Western Cape">WC</abbr></div>
+        <div class="postal-code">7925</div>
+        <div class="country-name">South Africa</div>
+    </div>
+    <div class="tel">+27 (0)21 477 0058</div>
+</div></code>
+                </div>
+            </section>
+
+            <section class="sg-l-section" id="sg-time">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">Time</h1>
+                </header>
+
+                <time datetime="2015-01-01">January 1, 2015</time>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><time datetime="2015-01-01">January 1, 2015</time></code>
+                </div>
+            </section>
+
+            <section class="sg-l-section" id="sg-list-description">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">List – Description</h1>
+                </header>
+
+                <dl>
+                    <dt>The quick brown fox jumps over the lazy dog</dt>
+                    <dd>“The quick brown fox jumps over the lazy dog” is an English–language pangram — a phrase that contains all of the letters of the alphabet. It is used to show fonts and to test typewriters and computer keyboards, and in other applications involving all of the letters in the English alphabet. Owing to its brevity and coherence, it has become widely known.</dd>
+                    <dt>The quick brown fox jumps over the lazy dog</dt>
+                    <dd>“The quick brown fox jumps over the lazy dog” is an English–language pangram — a phrase that contains all of the letters of the alphabet. It is used to show fonts and to test typewriters and computer keyboards, and in other applications involving all of the letters in the English alphabet. Owing to its brevity and coherence, it has become widely known.</dd>
+                    <dt>The quick brown fox jumps over the lazy dog</dt>
+                    <dd>“The quick brown fox jumps over the lazy dog” is an English–language pangram — a phrase that contains all of the letters of the alphabet. It is used to show fonts and to test typewriters and computer keyboards, and in other applications involving all of the letters in the English alphabet. Owing to its brevity and coherence, it has become widely known.</dd>
+                </dl>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><dl>
+    <dt>The quick brown fox jumps over the lazy dog</dt>
+    <dd>“The quick brown fox jumps over the lazy dog” is an English–language pangram…</dd>
+</dl></code>
+                </div>
+            </section>
+
+            <section class="sg-l-section" id="sg-list-ordered">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">List – Ordered</h1>
+                </header>
+
+                <ol class="list list--ordered">
+                    <li>“The quick brown fox jumps over the lazy dog” is an English–language pangram — a phrase that contains all of the letters of the alphabet. It is used to show fonts and to test typewriters and computer keyboards, and in other applications involving all of the letters in the English alphabet. Owing to its brevity and coherence, it has become widely known.</li>
+                    <li>“The quick brown fox jumps over the lazy dog” is an English–language pangram — a phrase that contains all of the letters of the alphabet. It is used to show fonts and to test typewriters and computer keyboards, and in other applications involving all of the letters in the English alphabet. Owing to its brevity and coherence, it has become widely known.</li>
+                    <li>“The quick brown fox jumps over the lazy dog” is an English–language pangram — a phrase that contains all of the letters of the alphabet. It is used to show fonts and to test typewriters and computer keyboards, and in other applications involving all of the letters in the English alphabet. Owing to its brevity and coherence, it has become widely known.</li>
+                </ol>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><ol class="list list--ordered">
+    <li>“The quick brown fox jumps over the lazy dog” is an English–language pangram…</li>
+</ol></code>
+                </div>
+            </section>
+
+            <section class="sg-l-section" id="sg-list-unordered">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">List – Unordered</h1>
+                </header>
+
+                <ul class="list list--unordered">
+                    <li>“The quick brown fox jumps over the lazy dog” is an English–language pangram — a phrase that contains all of the letters of the alphabet. It is used to show fonts and to test typewriters and computer keyboards, and in other applications involving all of the letters in the English alphabet. Owing to its brevity and coherence, it has become widely known.</li>
+                    <li>“The quick brown fox jumps over the lazy dog” is an English–language pangram — a phrase that contains all of the letters of the alphabet. It is used to show fonts and to test typewriters and computer keyboards, and in other applications involving all of the letters in the English alphabet. Owing to its brevity and coherence, it has become widely known.</li>
+                    <li>“The quick brown fox jumps over the lazy dog” is an English–language pangram — a phrase that contains all of the letters of the alphabet. It is used to show fonts and to test typewriters and computer keyboards, and in other applications involving all of the letters in the English alphabet. Owing to its brevity and coherence, it has become widely known.</li>
+                </ul>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><ul class="list list--unordered">
+    <li>“The quick brown fox jumps over the lazy dog” is an English–language pangram…</li>
+</ul></code>
+                </div>
+            </section>
+
+            <section class="sg-l-section" id="sg-list-inline">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">List – Inline</h1>
+                </header>
+
+                <ul class="list list--inline">
+                    <li>Lorem ipsum dolor sit</li>
+                    <li>Sed do eiusmod tempor</li>
+                    <li>Duis aute irure dolor</li>
+                </ul>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><ul class="list list--inline">
+    <li>Lorem ipsum dolor sit</li>
+    <li>Sed do eiusmod tempor</li>
+    <li>Duis aute irure dolor</li>
+</ul></code>
+                </div>
+            </section>
+
+            <section class="sg-l-section" id="sg-list-icons">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">List – Icons</h1>
+                </header>
+
+                <ul class="list list--icons list--cols">
+                    <li><span class="icon icon-check" aria-hidden="true"></span><p>Fido sends monthly notifications to your inbox or phone.</p></li>
+                    <li><span class="icon icon-check" aria-hidden="true"></span><p>Fido barks if legal action is taken on an account of yours.</p></li>
+                    <li><span class="icon icon-check" aria-hidden="true"></span><p>Fido reports fraudulent activity by others on your account.</p></li>
+                    <li><span class="icon icon-check" aria-hidden="true"></span><p>Fido wags when there are any new treats from Frank for you.</p></li>
+                </ul>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><ul class="list list--icons list--cols">
+    <li><span class="icon icon-check" aria-hidden="true"></span><p>Fido sends monthly notifications to your inbox or phone.</p></li>
+    <li><span class="icon icon-check" aria-hidden="true"></span><p>Fido barks if legal action is taken on an account of yours.</p></li>
+    <li><span class="icon icon-check" aria-hidden="true"></span><p>Fido reports fraudulent activity by others on your account.</p></li>
+    <li><span class="icon icon-check" aria-hidden="true"></span><p>Fido wags when there are any new treats from Frank for you.</p></li>
+</ul></code>
+                </div>
+            </section>
+
+            <section class="sg-l-section" id="sg-list-unstyled">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">List – Unstyled</h1>
+                </header>
+
+                <ul class="list list--unstyled">
+                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+                    <li>Sed do eiusmod tempor incididunt ut labore et dolore magna</li>
+                    <li>Duis aute irure dolor in reprehenderit in voluptate velit</li>
+                </ul>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><ul class="list list--unstyled">
+    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+    <li>Sed do eiusmod tempor incididunt ut labore et dolore magna</li>
+    <li>Duis aute irure dolor in reprehenderit in voluptate velit</li>
+</ul></code>
+                </div>
+            </section>
+
+            <section class="sg-l-section" id="sg-table">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">Table</h1>
+                </header>
+
+                <table class="table">
+                    <caption class="table__caption">The Greatest Movie Actors of All Time</caption>
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Movie</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td data-label="#">1</td>
+                        <td data-label="First Name">Marlon</td>
+                        <td data-label="Last Name">Brando</td>
+                        <td data-label="Movie">The Godfather</td>
+                    </tr>
+                    <tr>
+                        <td data-label="#">2</td>
+                        <td data-label="First Name">Jack</td>
+                        <td data-label="Last Name">Nicholson</td>
+                        <td data-label="Movie">The Shining</td>
+                    </tr>
+                    <tr>
+                        <td data-label="#">3</td>
+                        <td data-label="First Name">James</td>
+                        <td data-label="Last Name">Stewart</td>
+                        <td data-label="Movie">Rear Window</td>
+                    </tr>
+                    <tr>
+                        <td data-label="#">4</td>
+                        <td data-label="First Name">Humphrey</td>
+                        <td data-label="Last Name">Bogart</td>
+                        <td data-label="Movie">Casablanca</td>
+                    </tr>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <td colspan="4">Source: <a href="http://www.imdb.com/list/ls050720698">IMDB</a></td>
+                    </tr>
+                    </tfoot>
+                </table>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><table class="table">
+    <caption class="table__caption">The Greatest Movie Actors of All Time</caption>
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Movie</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td data-label="#">1</td>
+        <td data-label="First Name">Marlon</td>
+        <td data-label="Last Name">Brando</td>
+        <td data-label="Movie">The Godfather</td>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+        <td colspan="4">Source: <a href="#">IMDB</a></td>
+    </tr>
+    </tfoot>
+</table></code>
+                </div>
+            </section>
+
+            <section class="sg-l-section" id="sg-figure">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">Figure</h1>
+                </header>
+
+                <figure class="figure">
+                    <img src="//placehold.it/600x400" width="600" height="400" alt="">
+                    <figcaption>This is a placeholder image with a supporting caption.</figcaption>
+                </figure>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><figure class="figure">
+    <img src="//placehold.it/600x400" width="600" height="400" alt="">
+    <figcaption>This is a placeholder image with a supporting caption.</figcaption>
+</figure></code>
+                </div>
+            </section>
+
+            <section class="sg-l-section" id="sg-buttons">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">Buttons</h1>
+                </header>
+
+                <div class="sg-example">
+                    <button class="btn" type="button">Button</button>
+                    <a class="btn btn--blue" href="#sg-buttons">Button</a>
+                    <a class="btn btn--gray" href="#sg-buttons">Button</a>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><button class="btn" type="button">Button</button>
+<a class="btn btn--blue" href="#">Button</a>
+<a class="btn btn--gray" href="#">Button</a></code>
+                </div>
+            </section>
+
+            <section class="sg-l-section" id="sg-buttons-small">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">Buttons – Small</h1>
+                </header>
+
+                <div class="sg-example">
+                    <button class="btn btn--small" type="button">Button</button>
+                    <a class="btn btn--small btn--blue" href="#sg-buttons-small">Button</a>
+                    <a class="btn btn--small btn--gray" href="#sg-buttons-small">Button</a>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><button class="btn btn--small" type="button">Button</button>
+<a class="btn btn--small btn--blue" href="#">Button</a>
+<a class="btn btn--small btn--gray" href="#">Button</a></code>
+                </div>
+            </section>
+
+            <section class="sg-l-section" id="sg-buttons-transparent">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">Buttons – Transparent</h1>
+                </header>
+
+                <div class="sg-example">
+                    <button class="btn btn--transparent btn--small btn--icon" type="button">Button<span class="icon icon-chevron-right" aria-hidden="true"></span></button>
+                    <a class="btn btn--transparent btn--small" href="#sg-buttons-transparent">Button</a>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><button class="btn btn--transparent btn--small btn--icon" type="button">Button<span class="icon icon-chevron-right" aria-hidden="true"></span></button>
+<a class="btn btn--transparent btn--small" href="#">Button</a></code>
+                </div>
+            </section>
+
+            <section class="sg-l-section" id="sg-buttons-icon">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">Buttons – Icon</h1>
+                </header>
+
+                <div class="sg-example">
+                    <a class="btn btn--icon btn--small" href="#sg-buttons-icon"><span class="icon icon--only icon-search" aria-hidden="true"></span></a>
+                    <a class="btn btn--icon btn--small btn--blue" href="#sg-buttons-icon"><span class="icon icon--only icon-search" aria-hidden="true"></span></a>
+                    <a class="btn btn--icon btn--small btn--gray" href="#sg-buttons-icon"><span class="icon icon--only icon-search" aria-hidden="true"></span></a>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><a class="btn btn--icon btn--small" href="#"><span class="icon icon--only icon-search" aria-hidden="true"></span></a>
+<a class="btn btn--icon btn--small btn--blue" href="#"><span class="icon icon--only icon-search" aria-hidden="true"></span></a>
+<a class="btn btn--icon btn--small btn--gray" href="#"><span class="icon icon--only icon-search" aria-hidden="true"></span></a></code>
+                </div>
+            </section>
+
+            <section class="sg-l-section" id="sg-button-dropdown">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">Button Dropdown</h1>
+                </header>
+
+                <div class="btn-group">
+                    <div class="btn-dropdown js-toggle-dropdown-btn">
+                        <button class="btn btn--icon" type="button" data-dropdown-id="dropdown-btn-1">Primary<span class="icon icon-chevron-down" aria-hidden="true"></span></button>
+                        <div class="dropdown" id="dropdown-btn-1" aria-hidden="true" role="menu">
+                            <ol class="list">
+                                <li><a href="#sg-button-dropdown">Action 1</a></li>
+                                <li class="is-separator"><a href="#sg-button-dropdown">Action 2</a></li>
+                                <li><a href="#sg-button-dropdown">Action 3</a></li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="btn-dropdown js-toggle-dropdown-btn">
+                        <button class="btn btn--icon btn--blue" type="button" data-dropdown-id="dropdown-btn-2">Secondary<span class="icon icon-chevron-down" aria-hidden="true"></span></button>
+                        <div class="dropdown" id="dropdown-btn-2" aria-hidden="true" role="menu">
+                            <ol class="list">
+                                <li><a href="#sg-button-dropdown">Action 1</a></li>
+                                <li class="is-separator"><a href="#sg-button-dropdown">Action 2</a></li>
+                                <li><a href="#sg-button-dropdown">Action 3</a></li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><div class="btn-group">
+    <div class="btn-dropdown js-toggle-dropdown-btn">
+        <button class="btn btn--icon" type="button" data-dropdown-id="dropdown-btn-a">Primary<span class="icon icon-chevron-down" aria-hidden="true"></span></button>
+        <div class="dropdown" id="dropdown-btn-a" aria-hidden="true" role="menu">
+            <ol class="list">
+                <li><a href="#">Action 1</a></li>
+                <li class="is-separator"><a href="#">Action 2</a></li>
+                <li><a href="#">Action 3</a></li>
+            </ol>
+        </div>
+    </div>
+</div></code>
+                </div>
+            </section>
+
+            <section class="sg-l-section" id="sg-button-dropdown-split">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">Button Dropdown – Split</h1>
+                </header>
+
+                <div class="btn-group">
+                    <div class="btn-dropdown js-toggle-dropdown-btn">
+                        <button class="btn" type="button">Primary</button>
+                        <button class="btn btn--icon" type="button" data-dropdown-id="dropdown-btn-3"><span class="icon icon--only icon-chevron-down" aria-hidden="true"></span></button>
+                        <div class="dropdown" id="dropdown-btn-3" aria-hidden="true" role="menu">
+                            <ol class="list">
+                                <li><a href="#sg-button-dropdown">Action 1</a></li>
+                                <li class="is-separator"><a href="#sg-button-dropdown">Action 2</a></li>
+                                <li><a href="#sg-button-dropdown">Action 3</a></li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="btn-dropdown js-toggle-dropdown-btn">
+                        <button class="btn btn--blue" type="button">Secondary</button>
+                        <button class="btn btn--icon btn--blue" type="button" data-dropdown-id="dropdown-btn-4"><span class="icon icon--only icon-chevron-down" aria-hidden="true"></span></button>
+                        <div class="dropdown" id="dropdown-btn-4" aria-hidden="true" role="menu">
+                            <ol class="list">
+                                <li><a href="#sg-button-dropdown">Action 1</a></li>
+                                <li class="is-separator"><a href="#sg-button-dropdown">Action 2</a></li>
+                                <li><a href="#sg-button-dropdown">Action 3</a></li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><div class="btn-group">
+    <div class="btn-dropdown js-toggle-dropdown-btn">
+        <button class="btn" type="button">Primary</button>
+        <button class="btn btn--icon" type="button" data-dropdown-id="dropdown-btn-b"><span class="icon icon--only icon-chevron-down" aria-hidden="true"></span></button>
+        <div class="dropdown" id="dropdown-btn-b" aria-hidden="true" role="menu">
+            <ol class="list">
+                <li><a href="#">Action 1</a></li>
+                <li class="is-separator"><a href="#">Action 2</a></li>
+                <li><a href="#">Action 3</a></li>
+            </ol>
+        </div>
+    </div>
+</div></code>
+                </div>
+            </section>
+
+            <section class="sg-l-section" id="sg-button-groups">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">Button Groups</h1>
+                </header>
+
+                <h2 class="sg-heading-spacer">Left–aligned</h2>
+
+                <div class="btn-group">
+                    <a class="btn" href="#sg-button-groups">Primary</a>
+                    <a class="btn btn--blue" href="#sg-button-groups">Secondary</a>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><div class="btn-group">
+    <a class="btn" href="#">Primary</a>
+    <a class="btn btn--blue" href="#">Secondary</a>
+</div></code>
+                </div>
+
+                <h2 class="sg-heading-spacer">Center–aligned</h2>
+
+                <div class="btn-group btn-group--center">
+                    <a class="btn" href="#sg-button-groups">Primary</a>
+                    <a class="btn btn--blue" href="#sg-button-groups">Secondary</a>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><div class="btn-group btn-group--center">
+    <a class="btn" href="#">Primary</a>
+    <a class="btn btn--blue" href="#">Secondary</a>
+</div></code>
+                </div>
+
+                <h2 class="sg-heading-spacer">Right–aligned</h2>
+
+                <div class="btn-group btn-group--right">
+                    <a class="btn" href="#sg-button-groups">Primary</a>
+                    <a class="btn btn--blue" href="#sg-button-groups">Secondary</a>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><div class="btn-group btn-group--right">
+    <a class="btn" href="#">Primary</a>
+    <a class="btn btn--blue" href="#">Secondary</a>
+</div></code>
+                </div>
+            </section>
+
+            <section class="sg-l-section" id="sg-icons">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">Icons</h1>
+                </header>
+
+                <ol class="sg-list sg-list--icons">
+                    <li>
+                        <span class="icon icon-age" aria-hidden="true"></span>
+                        <code class="sg-code">icon-age</code>
+                    </li>
+                    <li>
+                        <span class="icon icon-alert" aria-hidden="true"></span>
+                        <code class="sg-code">icon-alert</code>
+                    </li>
+                    <li>
+                        <span class="icon icon-arrow-up" aria-hidden="true"></span>
+                        <code class="sg-code">icon-arrow-up</code>
+                    </li>
+                    <li>
+                        <span class="icon icon-arrow-right" aria-hidden="true"></span>
+                        <code class="sg-code">icon-arrow-right</code>
+                    </li>
+                    <li>
+                        <span class="icon icon-arrow-down" aria-hidden="true"></span>
+                        <code class="sg-code">icon-arrow-down</code>
+                    </li>
+                    <li>
+                        <span class="icon icon-arrow-left" aria-hidden="true"></span>
+                        <code class="sg-code">icon-arrow-left</code>
+                    </li>
+                    <li>
+                        <span class="icon icon-bank" aria-hidden="true"></span>
+                        <code class="sg-code">icon-bank</code>
+                    </li>
+                    <li>
+                        <span class="icon icon-cash" aria-hidden="true"></span>
+                        <code class="sg-code">icon-cash</code>
+                    </li>
+                    <li>
+                        <span class="icon icon-check" aria-hidden="true"></span>
+                        <code class="sg-code">icon-check</code>
+                    </li>
+                    <li>
+                        <span class="icon icon-chevron-up" aria-hidden="true"></span>
+                        <code class="sg-code">icon-chevron-up</code>
+                    </li>
+                    <li>
+                        <span class="icon icon-chevron-right" aria-hidden="true"></span>
+                        <code class="sg-code">icon-chevron-right</code>
+                    </li>
+                    <li>
+                        <span class="icon icon-chevron-down" aria-hidden="true"></span>
+                        <code class="sg-code">icon-chevron-down</code>
+                    </li>
+                    <li>
+                        <span class="icon icon-chevron-left" aria-hidden="true"></span>
+                        <code class="sg-code">icon-chevron-left</code>
+                    </li>
+                    <li>
+                        <span class="icon icon-close" aria-hidden="true"></span>
+                        <code class="sg-code">icon-close</code>
+                    </li>
+                    <li>
+                        <span class="icon icon-credit-card" aria-hidden="true"></span>
+                        <code class="sg-code">icon-credit-card</code>
+                    </li>
+                    <li>
+                        <span class="icon icon-facebook" aria-hidden="true"></span>
+                        <code class="sg-code">icon-facebook</code>
+                    </li>
+                    <li>
+                        <span class="icon icon-facebook-circle" aria-hidden="true"></span>
+                        <code class="sg-code">icon-facebook-circle</code>
+                    </li>
+                    <li>
+                        <span class="icon icon-frown-o" aria-hidden="true"></span>
+                        <code class="sg-code">icon-frown-o</code>
+                    </li>
+                    <li>
+                        <span class="icon icon-garage-card" aria-hidden="true"></span>
+                        <code class="sg-code">icon-garage-card</code>
+                    </li>
+                    <li>
+                        <span class="icon icon-home" aria-hidden="true"></span>
+                        <code class="sg-code">icon-home</code>
+                    </li>
+                    <li>
+                        <span class="icon icon-info" aria-hidden="true"></span>
+                        <code class="sg-code">icon-info</code>
+                    </li>
+                    <li>
+                        <span class="icon icon-insurance" aria-hidden="true"></span>
+                        <code class="sg-code">icon-insurance</code>
+                    </li>
+                    <li>
+                        <span class="icon icon-meh-o" aria-hidden="true"></span>
+                        <code class="sg-code">icon-meh-o</code>
+                    </li>
+                    <li>
+                        <span class="icon icon-open-account" aria-hidden="true"></span>
+                        <code class="sg-code">icon-open-account</code>
+                    </li>
+                    <li>
+                        <span class="icon icon-pension" aria-hidden="true"></span>
+                        <code class="sg-code">icon-pension</code>
+                    </li>
+                    <li>
+                        <span class="icon icon-power-off" aria-hidden="true"></span>
+                        <code class="sg-code">icon-power-off</code>
+                    </li>
+                    <li>
+                        <span class="icon icon-search" aria-hidden="true"></span>
+                        <code class="sg-code">icon-search</code>
+                    </li>
+                    <li>
+                        <span class="icon icon-smile-o" aria-hidden="true"></span>
+                        <code class="sg-code">icon-smile-o</code>
+                    </li>
+                    <li>
+                        <span class="icon icon-student-loan" aria-hidden="true"></span>
+                        <code class="sg-code">icon-student-loan</code>
+                    </li>
+                    <li>
+                        <span class="icon icon-treat" aria-hidden="true"></span>
+                        <code class="sg-code">icon-treat</code>
+                    </li>
+                    <li>
+                        <span class="icon icon-twitter" aria-hidden="true"></span>
+                        <code class="sg-code">icon-twitter</code>
+                    </li>
+                    <li>
+                        <span class="icon icon-twitter-circle" aria-hidden="true"></span>
+                        <code class="sg-code">icon-twitter-circle</code>
+                    </li>
+                    <li>
+                        <span class="icon icon-user" aria-hidden="true"></span>
+                        <code class="sg-code">icon-user</code>
+                    </li>
+                    <li>
+                        <span class="icon icon-utility" aria-hidden="true"></span>
+                        <code class="sg-code">icon-utility</code>
+                    </li>
+                </ol>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><span class="icon icon-alert" aria-hidden="true"></span>
+<span class="icon icon-arrow-up" aria-hidden="true"></span>
+<span class="icon icon-arrow-right" aria-hidden="true"></span>
+<span class="icon icon-arrow-down" aria-hidden="true"></span>
+<span class="icon icon-arrow-left" aria-hidden="true"></span>
+<span class="icon icon-bank" aria-hidden="true"></span>
+<span class="icon icon-cash" aria-hidden="true"></span>
+<span class="icon icon-check" aria-hidden="true"></span>
+<span class="icon icon-chevron-up" aria-hidden="true"></span>
+<span class="icon icon-chevron-right" aria-hidden="true"></span>
+<span class="icon icon-chevron-down" aria-hidden="true"></span>
+<span class="icon icon-chevron-left" aria-hidden="true"></span>
+<span class="icon icon-close" aria-hidden="true"></span>
+<span class="icon icon-credit-card" aria-hidden="true"></span>
+<span class="icon icon-facebook-circle" aria-hidden="true"></span>
+<span class="icon icon-frown-o" aria-hidden="true"></span>
+<span class="icon icon-garage-card" aria-hidden="true"></span>
+<span class="icon icon-home" aria-hidden="true"></span>
+<span class="icon icon-info" aria-hidden="true"></span>
+<span class="icon icon-insurance" aria-hidden="true"></span>
+<span class="icon icon-meh-o" aria-hidden="true"></span>
+<span class="icon icon-open-account" aria-hidden="true"></span>
+<span class="icon icon-pension" aria-hidden="true"></span>
+<span class="icon icon-power-off" aria-hidden="true"></span>
+<span class="icon icon-search" aria-hidden="true"></span>
+<span class="icon icon-smile-o" aria-hidden="true"></span>
+<span class="icon icon-student-loan" aria-hidden="true"></span>
+<span class="icon icon-treat" aria-hidden="true"></span>
+<span class="icon icon-twitter-circle" aria-hidden="true"></span>
+<span class="icon icon-user" aria-hidden="true"></span>
+<span class="icon icon-utility" aria-hidden="true"></span></code>
+                </div>
+            </section>
+
+            <section class="sg-l-section" id="sg-grid">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">Grid</h1>
+                </header>
+
+                <div class="sg-row row">
+                    <div class="sg-col col">
+                        <code class="sg-code">col</code>
+                    </div>
+                </div>
+
+                <div class="sg-row row">
+                    <div class="sg-col col col-1-2">
+                        <code class="sg-code">col-1-2</code>
+                    </div>
+                    <div class="sg-col col col-1-2">
+                        <code class="sg-code">col-1-2</code>
+                    </div>
+                </div>
+
+                <div class="sg-row row">
+                    <div class="sg-col col col-1-3">
+                        <code class="sg-code">col-1-3</code>
+                    </div>
+                    <div class="sg-col col col-2-3">
+                        <code class="sg-code">col-2-3</code>
+                    </div>
+                </div>
+
+                <div class="sg-row row">
+                    <div class="sg-col col col-1-4">
+                        <code class="sg-code">col-1-4</code>
+                    </div>
+                    <div class="sg-col col col-3-4">
+                        <code class="sg-code">col-3-4</code>
+                    </div>
+                </div>
+
+                <div class="sg-row row">
+                    <div class="sg-col col col-1-5">
+                        <code class="sg-code">col-1-5</code>
+                    </div>
+                    <div class="sg-col col col-4-5">
+                        <code class="sg-code">col-4-5</code>
+                    </div>
+                </div>
+
+                <div class="sg-row row">
+                    <div class="sg-col col col-1-6">
+                        <code class="sg-code">col-1-6</code>
+                    </div>
+                    <div class="sg-col col col-5-6">
+                        <code class="sg-code">col-5-6</code>
+                    </div>
+                </div>
+
+                <div class="sg-row row">
+                    <div class="sg-col col col-1-3">
+                        <code class="sg-code">col-1-3</code>
+                    </div>
+                    <div class="sg-col col col-1-3">
+                        <code class="sg-code">col-1-3</code>
+                    </div>
+                    <div class="sg-col col col-1-3">
+                        <code class="sg-code">col-1-3</code>
+                    </div>
+                </div>
+
+                <div class="sg-row row">
+                    <div class="sg-col col col-1-4">
+                        <code class="sg-code">col-1-4</code>
+                    </div>
+                    <div class="sg-col col col-1-4">
+                        <code class="sg-code">col-1-4</code>
+                    </div>
+                    <div class="sg-col col col-1-4">
+                        <code class="sg-code">col-1-4</code>
+                    </div>
+                    <div class="sg-col col col-1-4">
+                        <code class="sg-code">col-1-4</code>
+                    </div>
+                </div>
+
+                <div class="sg-row row">
+                    <div class="sg-col col col-1-5">
+                        <code class="sg-code">col-1-5</code>
+                    </div>
+                    <div class="sg-col col col-1-5">
+                        <code class="sg-code">col-1-5</code>
+                    </div>
+                    <div class="sg-col col col-1-5">
+                        <code class="sg-code">col-1-5</code>
+                    </div>
+                    <div class="sg-col col col-1-5">
+                        <code class="sg-code">col-1-5</code>
+                    </div>
+                    <div class="sg-col col col-1-5">
+                        <code class="sg-code">col-1-5</code>
+                    </div>
+                </div>
+
+                <div class="sg-row row">
+                    <div class="sg-col col col-1-6">
+                        <code class="sg-code">col-1-6</code>
+                    </div>
+                    <div class="sg-col col col-1-6">
+                        <code class="sg-code">col-1-6</code>
+                    </div>
+                    <div class="sg-col col col-1-6">
+                        <code class="sg-code">col-1-6</code>
+                    </div>
+                    <div class="sg-col col col-1-6">
+                        <code class="sg-code">col-1-6</code>
+                    </div>
+                    <div class="sg-col col col-1-6">
+                        <code class="sg-code">col-1-6</code>
+                    </div>
+                    <div class="sg-col col col-1-6">
+                        <code class="sg-code">col-1-6</code>
+                    </div>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><div class="row">
+    <div class="col">
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="col col-1-2">
+
+    </div>
+    <div class="col col-1-2">
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="col col-1-3">
+
+    </div>
+    <div class="col col-2-3">
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="col col-1-4">
+
+    </div>
+    <div class="col col-3-4">
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="col col-1-5">
+
+    </div>
+    <div class="col col-4-5">
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="col col-1-6">
+
+    </div>
+    <div class="col col-5-6">
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="col col-1-3">
+
+    </div>
+    <div class="col col-1-3">
+
+    </div>
+    <div class="col col-1-3">
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="col col-1-4">
+
+    </div>
+    <div class="col col-1-4">
+
+    </div>
+    <div class="col col-1-4">
+
+    </div>
+    <div class="col col-1-4">
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="col col-1-5">
+
+    </div>
+    <div class="col col-1-5">
+
+    </div>
+    <div class="col col-1-5">
+
+    </div>
+    <div class="col col-1-5">
+
+    </div>
+    <div class="col col-1-5">
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="col col-1-6">
+
+    </div>
+    <div class="col col-1-6">
+
+    </div>
+    <div class="col col-1-6">
+
+    </div>
+    <div class="col col-1-6">
+
+    </div>
+    <div class="col col-1-6">
+
+    </div>
+    <div class="col col-1-6">
+
+    </div>
+</div></code>
+                </div>
+            </section>
+
+            <section class="sg-l-section" id="sg-utilities">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">Utilities</h1>
+                </header>
+
+                <h2 class="sg-heading-spacer">Display</h2>
+
+                <p>Hide visually and from screen readers</p>
+
+                <p>Hide only visually, but have it available for screen readers</p>
+
+                <p>Hide visually and from screen readers, but maintain layout</p>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><p class="u-hidden">Hide visually and from screen readers</p>
+<p class="u-visuallyhidden">Hide only visually, but have it available for screen readers</p>
+<p class="u-invisible">Hide visually and from screen readers, but maintain layout</p></code>
+                </div>
+
+                <h2 class="sg-heading-spacer">Visibility</h2>
+
+                <p class="u-hide--small">This text is hidden on smaller screens</p>
+
+                <p class="u-hide--medium u-hide--large"><em>This text is only visible on smaller screens</em></p>
+
+                <p class="u-hide--medium">This text is hidden on medium screens only</p>
+
+                <p class="u-hide--small u-hide--large"><em>This text is only visible on medium screens</em></p>
+
+                <p class="u-hide--large">This text is hidden on large screens</p>
+
+                <p class="u-hide--small u-hide--medium"><em>This text is only visible on large screens</em></p>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+<code class="sg-code prettyprint"><p class="u-hide--small">This text is hidden on smaller screens</p>
+<p class="u-hide--medium u-hide--large"><em>This text is only visible on smaller screens</em></p>
+<p class="u-hide--medium">This text is hidden on medium screens only</p>
+<p class="u-hide--small u-hide--large"><em>This text is only visible on medium screens</em></p>
+<p class="u-hide--large">This text is hidden on large screens</p>
+<p class="u-hide--small u-hide--medium"><em>This text is only visible on large screens</em></p></code>
+                </div>
+
+                <h2 class="sg-heading-spacer">Embed</h2>
+
+                <div class="u-fluid-embed">
+                    <iframe src="https://www.youtube.com/embed/7rW9vTrN6OU" allowfullscreen="allowfullscreen"></iframe>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><div class="u-fluid-embed">
+    <iframe src="https://www.youtube.com/embed/7rW9vTrN6OU" allowfullscreen="allowfullscreen"></iframe>
+</div></code>
+                </div>
+
+                <h2 class="sg-heading-spacer">Floats</h2>
+
+                <div class="clearfix">
+                    <p class="u-pull--left">This element is floated left</p>
+                </div>
+
+                <div class="clearfix">
+                    <p class="u-pull--right">This element is floated right</p>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><p class="u-pull--left">This element is floated left</p>
+<p class="u-pull--right">This element is floated right</p></code>
+                </div>
+
+                <h2 class="sg-heading-spacer">Font</h2>
+
+                <p class="u-weight--bold">This font weight is bold</p>
+
+                <p class="u-weight--normal">This font weight is normal</p>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><p class="u-weight--bold">This font weight is bold</p>
+<p class="u-weight--normal">This font weight is normal</p></code>
+                </div>
+
+                <h2 class="sg-heading-spacer">Text</h2>
+
+                <p class="u-align--left">This text is aligned left</p>
+
+                <p class="u-align--center">This text is aligned center</p>
+
+                <p class="u-align--right">This text is aligned right</p>
+
+                <p class="u-transform--capitalize">This text transform is capitalize</p>
+
+                <p class="u-transform--inherit">This text transform is inherit</p>
+
+                <p class="u-transform--lowercase">This text transform is lowercase</p>
+
+                <p class="u-transform--uppercase">This text transform is uppercase</p>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><p class="u-align--left">This text is aligned left</p>
+<p class="u-align--center">This text is aligned center</p>
+<p class="u-align--right">This text is aligned right</p>
+<p class="u-transform--capitalize">This text transform is capitalize</p>
+<p class="u-transform--inherit">This text transform is inherit</p>
+<p class="u-transform--lowercase">This text transform is lowercase</p>
+<p class="u-transform--uppercase">This text transform is uppercase</p></code>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="sg-footer" role="contentinfo">
+        <div class="sg-l-wrapper">
+            <a class="sg-logo" href="http://www.wearenext.co.za">
+                <img src="http://www.wearenext.co.za/assets/images/logos/logo-next-light-57x22.png" srcset="http://www.wearenext.co.za/assets/images/logos/logo-next-light-114x44.png 2x" width="57" height="22" alt="Next">
+            </a>
+
+            <div class="sg-social">
+                <ol class="sg-list">
+                    <li>
+                        <a href="mailto:hello@wearenext.co.za" title="Email us">
+                            <span class="icon next-envelope" aria-hidden="true"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/we-are-next" title="Follow us on GitHub">
+                            <span class="icon next-github" aria-hidden="true"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/company/next-cape-town-" title="Follow us on LinkedIn">
+                            <span class="icon next-linkedin" aria-hidden="true"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.twitter.com/nextct" title="Follow us on Twitter">
+                            <span class="icon next-twitter" aria-hidden="true"></span>
+                        </a>
+                    </li>
+                </ol>
+            </div>
+
+            <small class="sg-copyright">© 2015 Next</small>
+        </div>
+    </footer>
+
+    <!-- Google Analytics -->
+    <script>
+        window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+        ga('create','UA-81706063-1','auto');ga('send','pageview')
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/styleguide/plugins.js"></script>
+    <script src="../assets/js/styleguide/styleguide.js"></script>
+</body>
+</html>

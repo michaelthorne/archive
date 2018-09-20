@@ -1,0 +1,681 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Style Guide – Forms | Fido</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/styleguide/styleguide.css">
+
+    <!-- Web Fonts -->
+    <script>
+        WebFontConfig = {
+            google: {
+                families: ['Varela+Round:400', 'Open+Sans:300,400']
+            }
+        };
+    </script>
+
+    <!-- Web Font Loader -->
+    <script src="../assets/js/vendor/webfontloader.js" async="async"></script>
+
+    <!--[if lt IE 9]>
+    <script src="../assets/js/vendor/polyfills.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!--[if lt IE 9]>
+    <p class="upgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/?locale=en">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <header class="sg-header sg-header--primary" role="banner">
+        <div class="sg-l-wrapper">
+            <a class="sg-logo" href="index.html">
+                <img src="../assets/images/logos/logo-fido-white-183x32.png" srcset="../assets/images/logos/logo-fido-white-183x32@2x.png 2x" width="183" height="32" alt="Fido by FRANK.NET logo">
+            </a>
+
+            <nav class="sg-nav sg-nav--primary">
+                <ol class="sg-list">
+                    <li><a href="elements.html">Elements</a></li>
+                    <li><a href="patterns.html">Patterns</a></li>
+                    <li><a class="is-active" href="forms.html">Forms</a></li>
+                    <li><a href="templates.html">Templates</a></li>
+                </ol>
+
+                <form class="sg-form">
+                    <label class="sg-label">
+                        <select class="sg-input js-sg-jump" id="sg-jump">
+                            <option value="">Jump to…</option>
+                            <option value="sg-form-control-inputs">Form Control – Inputs</option>
+                            <option value="sg-form-control-checkboxes">Form Control – Checkboxes</option>
+                            <option value="sg-form-control-radio-buttons">Form Control – Radio Buttons</option>
+                            <option value="sg-form-control-select">Form Control – Select</option>
+                            <option value="sg-form-control-textarea">Form Control – Textarea</option>
+                            <option value="sg-form-control-validation">Form Control – Validation</option>
+                            <option value="sg-fieldset-default">Fieldset – Default</option>
+                            <option value="sg-fieldset-mega">Fieldset – Mega</option>
+                            <option value="sg-form-default">Form – Default</option>
+                            <option value="sg-form-inline">Form – Inline</option>
+                            <option value="sg-form-single">Form – Single</option>
+                        </select>
+                    </label>
+                </form>
+            </nav>
+
+            <button class="sg-btn js-sg-toggle-nav">Menu</button>
+        </div>
+    </header>
+
+    <main class="sg-main" role="main">
+        <div class="sg-l-wrapper">
+
+            <section class="sg-l-section" id="sg-form-control-inputs">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">Form Control – Inputs</h1>
+                </header>
+
+                <div class="sg-example">
+                    <label class="label" for="text">
+                        Text
+                        <input class="input" type="text" id="text" name="text" placeholder="Placeholder text…" maxlength="100">
+                    </label>
+                </div>
+
+                <div class="sg-example">
+                    <label class="label label--disabled" for="text-2">
+                        Disabled
+                        <input class="input" type="text" id="text-2" name="text-2" placeholder="Placeholder text…" value="You cannot interact with this form control" maxlength="100" disabled>
+                    </label>
+                </div>
+
+                <div class="sg-example">
+                    <label class="label" for="text-3">
+                        Read-only
+                        <input class="input" type="text" id="text-3" name="text-3" placeholder="Placeholder text…" value="You cannot modify the value of this form control" maxlength="100" readonly>
+                    </label>
+                </div>
+
+                <div class="sg-example">
+                    <label class="label" for="email">
+                        Email
+                        <input class="input" type="email" id="email" name="email" placeholder="user@domain.com" value="" maxlength="100">
+                        <span class="help-text">This is default help text for this form control.</span>
+                    </label>
+                </div>
+
+                <div class="sg-example">
+                    <div class="toggle-password js-toggle-password">
+                        <label class="label" for="password">
+                            Password
+                            <input class="input" type="password" id="password" name="password" placeholder="" value="" maxlength="100">
+                            <span class="help-text help-text--right">This is right-aligned help text for this form control.</span>
+                        </label>
+
+                        <button class="u-hidden btn btn--blue js-toggle" type="button">Show</button>
+                    </div>
+                </div>
+
+                <div class="sg-example">
+                    <label class="label" for="url">
+                        URL
+                        <input class="input" type="url" id="url" name="url" placeholder="http://www.google.com" value="" maxlength="100">
+                    </label>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><label class="label" for="text-a">
+    Text
+    <input class="input" type="text" id="text-a" name="text-a" placeholder="Placeholder text…" value="" maxlength="100">
+</label>
+
+<label class="label label--disabled" for="text-b">
+    Disabled
+    <input class="input" type="text" id="text-b" name="text-b" placeholder="Placeholder text…" value="You cannot interact with this form control" maxlength="100" disabled>
+</label>
+
+<label class="label" for="text-c">
+    Readonly
+    <input class="input" type="text" id="text-c" name="text-c" placeholder="Placeholder text…" value="You cannot modify the value of this form control" maxlength="100" readonly>
+</label>
+
+<label class="label" for="email-d">
+    Email
+    <input class="input" type="email" id="email-d" name="email-d" placeholder="user@domain.com" value="" maxlength="100">
+    <span class="help-text">This is default help text for this form control.</span>
+</label>
+
+<div class="toggle-password">
+    <label class="label" for="password-e">
+        Password
+        <input class="input" type="password" id="password-e" name="password-e" placeholder="" value="" maxlength="100">
+        <span class="help-text help-text--right">This is right-aligned help text for this form control.</span>
+    </label>
+
+    <button class="u-hidden btn btn--transparent js-toggle" type="button">Show</button>
+</div>
+
+<label class="label" for="url-a">
+    URL
+    <input class="input" type="url" id="url-a" name="url-a" placeholder="http://www.google.com" value="" maxlength="100">
+</label></code>
+                </div>
+            </section>
+
+            <section class="sg-l-section" id="sg-form-control-checkboxes">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">Form Control – Checkboxes</h1>
+                </header>
+
+                <h2 class="sg-heading-spacer">Default</h2>
+
+                <label class="label label--checkbox" for="checkbox-1">
+                    <input type="checkbox" id="checkbox-1" name="checkbox" value="1"> Choice 1
+                </label>
+
+                <label class="label label--checkbox label--disabled" for="checkbox-2">
+                    <input type="checkbox" id="checkbox-2" name="checkbox" value="2" disabled> Choice 2
+                </label>
+
+                <label class="label label--checkbox" for="checkbox-3">
+                    <input type="checkbox" id="checkbox-3" name="checkbox" value="3"> Choice 3
+                </label>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><label class="label label--checkbox" for="checkbox-a">
+    <input type="checkbox" id="checkbox-a" name="checkbox" value="1"> Choice 1
+</label>
+
+<label class="label label--checkbox label--disabled" for="checkbox-b">
+    <input type="checkbox" id="checkbox-b" name="checkbox" value="2" disabled> Choice 2
+</label></code>
+                </div>
+
+                <h2 class="sg-heading-spacer">Inline</h2>
+
+                <label class="label label--checkbox label--inline" for="checkbox-4">
+                    <input type="checkbox" id="checkbox-4" name="checkbox2" value="1"> Choice 1
+                </label>
+
+                <label class="label label--checkbox label--inline label--disabled" for="checkbox-5">
+                    <input type="checkbox" id="checkbox-5" name="checkbox2" value="2" disabled> Choice 2
+                </label>
+
+                <label class="label label--checkbox label--inline" for="checkbox-6">
+                    <input type="checkbox" id="checkbox-6" name="checkbox2" value="3"> Choice 3
+                </label>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><label class="label label--checkbox label--inline" for="checkbox-c">
+    <input type="checkbox" id="checkbox-c" name="checkbox" value="1"> Choice 1
+</label>
+
+<label class="label label--checkbox label--inline label--disabled" for="checkbox-d">
+    <input type="checkbox" id="checkbox-d" name="checkbox" value="2" disabled> Choice 2
+</label></code>
+                </div>
+            </section>
+
+            <section class="sg-l-section" id="sg-form-control-radio-buttons">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">Form Control – Radio Buttons</h1>
+                </header>
+
+                <h2 class="sg-heading-spacer">Default</h2>
+
+                <label class="label label--radio" for="radio-1">
+                    <input type="radio" id="radio-1" name="radio" value="1"> Choice 1
+                </label>
+
+                <label class="label label--radio label--disabled" for="radio-2">
+                    <input type="radio" id="radio-2" name="radio" value="2" disabled> Choice 2
+                </label>
+
+                <label class="label label--radio" for="radio-3">
+                    <input type="radio" id="radio-3" name="radio" value="3"> Choice 3
+                </label>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><label class="label label--radio" for="radio-a">
+    <input type="radio" id="radio-a" name="radio" value="1"> Choice 1
+</label>
+
+<label class="label label--radio label--disabled" for="radio-b">
+    <input type="radio" id="radio-b" name="radio" value="2" disabled> Choice 2
+</label></code>
+                </div>
+
+                <h2 class="sg-heading-spacer">Inline</h2>
+
+                <label class="label label--radio label--inline" for="radio-4">
+                    <input type="radio" id="radio-4" name="radio2" value="1"> Choice 1
+                </label>
+
+                <label class="label label--radio label--inline label--disabled" for="radio-5">
+                    <input type="radio" id="radio-5" name="radio2" value="2" disabled> Choice 2
+                </label>
+
+                <label class="label label--radio label--inline" for="radio-6">
+                    <input type="radio" id="radio-6" name="radio2" value="3"> Choice 3
+                </label>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><label class="label label--radio label--inline" for="radio-c">
+    <input type="radio" id="radio-c" name="radio" value="1"> Choice 1
+</label>
+
+<label class="label label--radio label--inline label--disabled" for="radio-d">
+    <input type="radio" id="radio-d" name="radio" value="2" disabled> Choice 2
+</label></code>
+                </div>
+            </section>
+
+            <section class="sg-l-section" id="sg-form-control-select">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">Form Control – Select</h1>
+                </header>
+
+                <h2 class="sg-heading-spacer">Default</h2>
+
+                <label class="label" for="select-1">
+                    Select
+                    <select class="input input--select" id="select-1" name="select-1">
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                        <option value="4">Option 4</option>
+                    </select>
+                </label>
+
+                <label class="label label--disabled" for="select-2">
+                    Disabled
+                    <select class="input input--select" id="select-2" name="select-2" disabled>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                        <option value="4">Option 4</option>
+                    </select>
+                </label>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><label class="label" for="select-a">
+    Select
+    <select class="input input--select" id="select-a" name="select-a">
+        <option value="1">Option 1</option>
+    </select>
+</label>
+
+<label class="label label--disabled" for="select-b">
+    Disabled
+    <select class="input input--select" id="select-b" name="select-b" disabled>
+        <option value="1">Option 1</option>
+    </select>
+</label></code>
+                </div>
+
+                <h2 class="sg-heading-spacer">Inline</h2>
+
+                <label class="label label--inline" for="select-3">
+                    Select
+                    <select class="input input--select" id="select-3" name="select-3">
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                        <option value="4">Option 4</option>
+                    </select>
+                </label>
+
+                <label class="label label--inline label--disabled" for="select-4">
+                    Disabled
+                    <select class="input input--select" id="select-4" name="select-4" disabled>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                        <option value="4">Option 4</option>
+                    </select>
+                </label>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><label class="label label--inline" for="select-c">
+    Select
+    <select class="input input--select" id="select-c" name="select-c">
+        <option value="1">Option 1</option>
+    </select>
+</label>
+
+<label class="label label--inline label--disabled" for="select-d">
+    Disabled
+    <select class="input input--select" id="select-d" name="select-d" disabled>
+        <option value="1">Option 1</option>
+    </select>
+</label></code>
+                </div>
+            </section>
+
+            <section class="sg-l-section" id="sg-form-control-textarea">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">Form Control – Textarea</h1>
+                </header>
+
+                <div class="sg-example">
+                    <label class="label" for="textarea">
+                        Textarea
+                        <textarea class="input input--textarea" id="textarea" name="textarea" placeholder="Placeholder text…"></textarea>
+                    </label>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><label class="label" for="textarea-a">
+    Textarea
+    <textarea class="input input--textarea" id="textarea-a" name="textarea-a" placeholder="Placeholder text…"></textarea>
+</label></code>
+                </div>
+            </section>
+
+            <section class="sg-l-section" id="sg-form-control-validation">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">Form Control – Validation</h1>
+                </header>
+
+                <h2 class="sg-heading-spacer">Error</h2>
+
+                <div class="sg-example">
+                    <label class="label has-error" for="text-error">
+                        Label
+                        <input class="input" type="text" id="text-error" name="text-error" placeholder="Placeholder text…" value="" maxlength="100">
+                        <span class="help-text">Better check yourself, you’re not looking too good.</span>
+                    </label>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><label class="label has-error" for="text-error-a">
+    Label
+    <input class="input" type="text" id="text-error-a" name="text-error-a" placeholder="Placeholder text…" value="" maxlength="100">
+    <span class="help-text">Better check yourself, you’re not looking too good.</span>
+</label></code>
+                </div>
+
+                <h2 class="sg-heading-spacer">Warning</h2>
+
+                <div class="sg-example">
+                    <label class="label has-warning" for="text-warning">
+                        Label
+                        <input class="input" type="text" id="text-warning" name="text-warning" placeholder="Placeholder text…" value="" maxlength="100">
+                        <span class="help-text">Oh snap! Change a few things up and try submitting again.</span>
+                    </label>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><label class="label has-warning" for="text-warning-a">
+    Label
+    <input class="input" type="text" id="text-warning-a" name="text-warning-a" placeholder="Placeholder text…" value="" maxlength="100">
+    <span class="help-text">Oh snap! Change a few things up and try submitting again.</span>
+</label></code>
+                </div>
+
+                <h2 class="sg-heading-spacer">Success</h2>
+
+                <div class="sg-example">
+                    <label class="label has-success" for="text-success">
+                        Label
+                        <input class="input" type="text" id="text-success" name="text-success" placeholder="Placeholder text…" value="" maxlength="100">
+                        <span class="help-text">Well done! You successfully read this important alert message.</span>
+                    </label>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><label class="label has-success" for="text-success-a">
+    Label
+    <input class="input" type="text" id="text-success-a" name="text-success-a" placeholder="Placeholder text…" value="" maxlength="100">
+    <span class="help-text">Well done! You successfully read this important alert message.</span>
+</label></code>
+                </div>
+            </section>
+
+            <section class="sg-l-section" id="sg-fieldset-default">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">Fieldset – Default</h1>
+                </header>
+
+                <div style="background-color: #2d4276; padding: 1em">
+                    <fieldset class="fieldset">
+                        <legend class="legend"><span class="legend__label">01.</span> Your home loan is with which of these institutions?</legend>
+
+                        <label class="label label--checkbox" for="checkbox-7">
+                            <input type="checkbox" id="checkbox-7" name="checkbox" value="1"> Choice 1
+                        </label>
+
+                        <label class="label label--checkbox label--disabled" for="checkbox-8">
+                            <input type="checkbox" id="checkbox-8" name="checkbox" value="2" disabled> Choice 2
+                        </label>
+
+                        <label class="label label--checkbox" for="checkbox-9">
+                            <input type="checkbox" id="checkbox-9" name="checkbox" value="3"> Choice 3
+                        </label>
+                    </fieldset>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><fieldset class="fieldset">
+    <legend class="legend"><span class="legend__label">01.</span> Your home loan is with which of these institutions?</legend>
+
+    <label class="label label--checkbox" for="checkbox-e">
+        <input type="checkbox" id="checkbox-e" name="checkbox" value="1"> Choice 1
+    </label>
+</fieldset></code>
+                </div>
+            </section>
+
+            <section class="sg-l-section" id="sg-fieldset-mega">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">Fieldset – Mega</h1>
+                </header>
+
+                <div style="background-color: #2d4276; padding: 1em">
+                    <fieldset class="fieldset fieldset--mega">
+                        <label class="label label--light label--large" for="account-type-once-off">
+                            <input type="radio" id="account-type-once-off" name="account-type" value="0"> Once-off Credit Check
+                        </label>
+
+                        <p>Grab a credit report and go. Fido gives everyone one free credit report without an account, every year.</p>
+                    </fieldset>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><fieldset class="fieldset fieldset--mega">
+    <label class="label label--light label--large" for="account-type-once-off-a">
+        <input type="radio" id="account-type-once-off-a" name="account-type-a" value="0"> Once-off Credit Check
+    </label>
+
+    <p>Grab a credit report and go. Fido gives everyone one free credit report without an account, every year.</p>
+</fieldset></code>
+                </div>
+            </section>
+
+            <section class="sg-l-section" id="sg-form-default">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">Form – Default</h1>
+                </header>
+
+                <div style="background-color: #2d4276; padding: 1em">
+                    <form class="form" id="form-default" action="#sg-form-default" method="post">
+                        <label class="label" for="email-1">
+                            Email
+                            <input class="input" type="email" id="email-1" name="email" maxlength="100">
+                        </label>
+
+                        <div class="toggle-password js-toggle-password">
+                            <label class="label" for="password-1">
+                                Password
+                                <input class="input" type="password" id="password-1" name="password" maxlength="100">
+                                <a class="label__link" href="#sg-form-default">Forgot your password?</a>
+                            </label>
+
+                            <button class="u-hidden btn btn--transparent js-toggle" type="button">Show</button>
+                        </div>
+
+                        <label class="label label--checkbox" for="remember">
+                            <input class="input" type="checkbox" id="remember" name="remember" value="1"> Remember me
+                        </label>
+
+                        <div class="btn-group btn-group--center">
+                            <input class="btn" type="submit" value="Log In">
+                        </div>
+                    </form>
+                </div>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><form class="form" id="form-default-a" action="#" method="post">
+    <label class="label" for="email-a">
+        Email Address
+        <input class="input" type="email" id="email-a" name="email-a" maxlength="100">
+    </label>
+
+    <div class="toggle-password js-toggle-password">
+        <label class="label" for="password-a">
+            <a class="label__link" href="#">Forgot your password?</a>
+            Password
+            <input class="input" type="password" id="password-a" name="password-a" maxlength="100">
+        </label>
+
+        <button class="u-hidden btn btn--transparent js-toggle" type="button">Show</button>
+    </div>
+
+    <label class="label label--checkbox" for="remember-a">
+        <input class="input" type="checkbox" id="remember-a" name="remember-a" value="1"> Remember me
+    </label>
+
+    <input class="btn" type="submit" value="Log In">
+</form></code>
+                </div>
+            </section>
+
+            <section class="sg-l-section" id="sg-form-inline">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">Form – Inline</h1>
+                </header>
+
+                <form class="form form--inline" id="form-inline" action="#sg-form-inline" method="post">
+                    <label class="label u-visuallyhidden" for="email-2">Email Address</label>
+                    <input class="input" type="email" id="email-2" name="email-2" placeholder="Email Address" maxlength="100">
+
+                    <label class="label u-visuallyhidden" for="password-2">Password</label>
+                    <input class="input" type="password" id="password-2" name="password-2" placeholder="Password" maxlength="100">
+
+                    <label class="label label--checkbox" for="remember-2">
+                        <input class="input" type="checkbox" id="remember-2" name="remember-2" value="1"> Remember me
+                    </label>
+
+                    <input class="btn" type="submit" value="Log In">
+                </form>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><form class="form form--inline" id="form-inline-b" action="#" method="post">
+    <label class="label u-visuallyhidden" for="email-b">Email Address</label>
+    <input class="input" type="email" id="email-b" name="email-b" placeholder="Email Address" maxlength="100">
+
+    <label class="label u-visuallyhidden" for="password-b">Password</label>
+    <input class="input" type="password" id="password-b" name="password-b" placeholder="Password" maxlength="100">
+
+    <label class="label label--checkbox" for="remember-b">
+        <input class="input" type="checkbox" id="remember-b" name="remember-b" value="1"> Remember me
+    </label>
+
+    <input class="btn" type="submit" value="Log In">
+</form></code>
+                </div>
+            </section>
+
+            <section class="sg-l-section" id="sg-form-single">
+                <header class="sg-header sg-header--section">
+                    <h1 class="sg-hN">Form – Single</h1>
+                </header>
+
+                <form class="form form--single" id="form-single" action="#sg-form-single" method="post">
+                    <label class="label u-visuallyhidden" for="search">Search</label>
+                    <input class="input" type="text" id="search" name="search" placeholder="Search…" maxlength="20">
+
+                    <button class="btn btn--icon" type="submit"><span class="icon icon--only icon-search" aria-hidden="true"></span></button>
+                </form>
+
+                <div class="sg-code-wrapper js-sg-code">
+                    <button class="sg-btn sg-btn--white-dark js-sg-toggle-code">View Code</button>
+                    <code class="sg-code prettyprint"><form class="form form--single" id="form-single-c" action="#" method="post">
+    <label class="label u-visuallyhidden" for="search-c">Search</label>
+    <input class="input" type="text" id="search-c" name="search-c" placeholder="Search…" maxlength="20">
+
+    <button class="btn btn--icon" type="submit"><span class="icon icon--only icon-search" aria-hidden="true"></span></button>
+</form></code>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="sg-footer" role="contentinfo">
+        <div class="sg-l-wrapper">
+            <a class="sg-logo" href="http://www.wearenext.co.za">
+                <img src="http://www.wearenext.co.za/assets/images/logos/logo-next-light-57x22.png" srcset="http://www.wearenext.co.za/assets/images/logos/logo-next-light-114x44.png 2x" width="57" height="22" alt="Next">
+            </a>
+
+            <div class="sg-social">
+                <ol class="sg-list">
+                    <li>
+                        <a href="mailto:hello@wearenext.co.za" title="Email us">
+                            <span class="sg-icon next-envelope" aria-hidden="true"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/we-are-next" title="Follow us on GitHub">
+                            <span class="sg-icon next-github" aria-hidden="true"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/company/next-cape-town-" title="Follow us on LinkedIn">
+                            <span class="sg-icon next-linkedin" aria-hidden="true"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.twitter.com/nextct" title="Follow us on Twitter">
+                            <span class="sg-icon next-twitter" aria-hidden="true"></span>
+                        </a>
+                    </li>
+                </ol>
+            </div>
+
+            <small class="sg-copyright">© 2015 Next</small>
+        </div>
+    </footer>
+
+    <!-- Google Analytics -->
+    <script>
+        window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+        ga('create','UA-81706063-1','auto');ga('send','pageview')
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/styleguide/plugins.js"></script>
+    <script src="../assets/js/styleguide/styleguide.js"></script>
+</body>
+</html>

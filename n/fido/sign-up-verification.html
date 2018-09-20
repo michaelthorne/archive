@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Fido – Verification</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Open Graph -->
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="">
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <!-- Style Sheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Web Fonts -->
+    <script>
+        WebFontConfig = {
+            google: {
+                families: ['Varela+Round:400', 'Open+Sans:300,400']
+            }
+        };
+    </script>
+
+    <!-- Web Font Loader -->
+    <script src="assets/js/vendor/webfontloader.js" async="async"></script>
+
+    <!--[if lt IE 9]>
+    <script src="assets/js/vendor/polyfills.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!--[if lt IE 9]>
+    <p class="upgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/?locale=en">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <header class="l-header js-headroom" role="banner">
+        <div class="l-wrapper l-wrapper--large">
+            <a class="logo" href="index.html">
+                <img src="assets/images/logos/logo-fido-white-183x32.png" srcset="assets/images/logos/logo-fido-white-183x32@2x.png 2x" width="183" height="32" alt="Fido logo">
+            </a>
+
+            <a class="nav-toggle js-nav-toggle" href="index.html">
+                <span class="nav-toggle__bar"></span>
+            </a>
+
+            <nav class="nav js-nav" role="navigation">
+                <ol class="list">
+                    <li><a href="about.html">About Fido</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a class="js-modal" href="login.html" data-modal-id="modal-login"><span class="icon icon-user" aria-hidden="true"></span>Log In</a></li>
+                </ol>
+            </nav>
+        </div>
+    </header>
+
+    <main class="l-main" role="main">
+        <section class="l-section l-section--blue">
+            <div class="l-wrapper l-wrapper--small">
+                <header class="header header--section white">
+                    <span class="header__label">Step 2 of 2</span>
+                    <h2 class="hN">Level with us, are you really you?</h2>
+                    <p class="header__synopsis">We’re crunching the numbers Shaun Gardener as we need to make sure that you’re you.</p>
+                </header>
+
+                <hr class="hr hr--white">
+
+                <div class="alert alert--positive js-alert" role="alert">
+                    <div class="alert__message">
+                        <span class="icon icon-smile-o" aria-hidden="true"></span>
+                        <p><b>Well done!</b> The bank loves you.</p>
+                    </div>
+
+                    <button class="alert__dismiss js-dismiss" type="button"><span class="icon icon-close" aria-hidden="true"></span></button>
+                </div>
+
+                <form class="form" id="form-sign-up" action="dashboard-logged-in.html" method="post">
+                    <fieldset class="fieldset js-label-highlight" data-highlight-class="green">
+                        <legend class="legend"><span class="legend__label">01.</span> Which of these institutions provide you with <b>insurance</b>?</legend>
+
+                        <label class="label label--radio" for="answer_a">
+                            <input type="radio" id="answer_a" name="answer_1" value="1" required> Standard Bank
+                        </label>
+
+                        <label class="label label--radio" for="answer_b">
+                            <input type="radio" id="answer_b" name="answer_1" value="2" required> FRANK.NET
+                        </label>
+
+                        <label class="label label--radio" for="answer_c">
+                            <input type="radio" id="answer_c" name="answer_1" value="3" required> Not applicable
+                        </label>
+                    </fieldset>
+
+                    <hr class="hr hr--white">
+
+                    <fieldset class="fieldset js-label-highlight" data-highlight-class="green">
+                        <legend class="legend"><span class="legend__label">02.</span> Which of these <b>credit cards</b> do you currently have?</legend>
+
+                        <label class="label label--radio" for="answer_d">
+                            <input type="radio" id="answer_d" name="answer_2" value="1" required> Discovery Card
+                        </label>
+
+                        <label class="label label--radio" for="answer_e">
+                            <input type="radio" id="answer_e" name="answer_2" value="2" required> Virgin Money
+                        </label>
+
+                        <label class="label label--radio" for="answer_f">
+                            <input type="radio" id="answer_f" name="answer_2" value="3" required> Not applicable
+                        </label>
+                    </fieldset>
+
+                    <hr class="hr hr--white">
+
+                    <fieldset class="fieldset js-label-highlight" data-highlight-class="green">
+                        <legend class="legend"><span class="legend__label">03.</span> Your <b>student loan</b> account is with which of these institutions?</legend>
+
+                        <label class="label label--radio" for="answer_g">
+                            <input type="radio" id="answer_g" name="answer_3" value="1" required> Standard Bank
+                        </label>
+
+                        <label class="label label--radio" for="answer_h">
+                            <input type="radio" id="answer_h" name="answer_3" value="2" required> Capitec
+                        </label>
+
+                        <label class="label label--radio" for="answer_i">
+                            <input type="radio" id="answer_i" name="answer_3" value="3" required> Not applicable
+                        </label>
+                    </fieldset>
+
+                    <hr class="hr hr--white">
+
+                    <fieldset class="fieldset js-label-highlight" data-highlight-class="green">
+                        <legend class="legend"><span class="legend__label">04.</span> Which of these institutions provides you with a <b>garage card</b>?</legend>
+
+                        <label class="label label--radio" for="answer_j">
+                            <input type="radio" id="answer_j" name="answer_4" value="1" required> Discovery
+                        </label>
+
+                        <label class="label label--radio" for="answer_k">
+                            <input type="radio" id="answer_k" name="answer_4" value="2" required> FNB
+                        </label>
+
+                        <label class="label label--radio" for="answer_l">
+                            <input type="radio" id="answer_l" name="answer_4" value="3" required> Not applicable
+                        </label>
+                    </fieldset>
+
+                    <hr class="hr hr--white">
+
+                    <fieldset class="fieldset js-label-highlight" data-highlight-class="green">
+                        <legend class="legend"><span class="legend__label">05.</span> Your <b>home loan</b> is with which of these institutions?</legend>
+
+                        <label class="label label--radio" for="answer_m">
+                            <input type="radio" id="answer_m" name="answer_5" value="1" required> SA Home Loans
+                        </label>
+
+                        <label class="label label--radio" for="answer_n">
+                            <input type="radio" id="answer_n" name="answer_5" value="2" required> ooba
+                        </label>
+
+                        <label class="label label--radio" for="answer_o">
+                            <input type="radio" id="answer_o" name="answer_5" value="3" required> Not applicable
+                        </label>
+                    </fieldset>
+
+                    <hr class="hr hr--white">
+
+                    <fieldset class="fieldset js-label-highlight" data-highlight-class="green">
+                        <legend class="legend"><span class="legend__label">06.</span> Which of these <b>retail outlets</b> do you have an account with?</legend>
+
+                        <label class="label label--radio" for="answer_p">
+                            <input type="radio" id="answer_p" name="answer_6" value="1" required> Edgars
+                        </label>
+
+                        <label class="label label--radio" for="answer_q">
+                            <input type="radio" id="answer_q" name="answer_6" value="2" required> Foschini
+                        </label>
+
+                        <label class="label label--radio" for="answer_r">
+                            <input type="radio" id="answer_r" name="answer_6" value="3" required> Not applicable
+                        </label>
+                    </fieldset>
+
+                    <hr class="hr hr--white">
+
+                    <div class="btn-group btn-group--center">
+                        <a class="btn btn--blue" href="sign-up.html">Back</a>
+                        <input class="btn" type="submit" value="Finish">
+                    </div>
+
+                    <hr class="hr hr--white">
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="l-footer" role="contentinfo">
+        <div class="l-wrapper l-wrapper--large">
+            <div class="social">
+                <ol class="list">
+                    <li><a href="#" title="Follow us on Facebook"><span class="icon icon-facebook-circle" aria-hidden="true"></span></a></li>
+                    <li><a href="#" title="Follow us on Twitter"><span class="icon icon-twitter-circle" aria-hidden="true"></span></a></li>
+                </ol>
+            </div>
+
+            <nav class="nav nav--gray nav--separator" role="navigation">
+                <ol class="list">
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About Fido</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
+                </ol>
+            </nav>
+
+            <div class="legal">
+                <p class="legal__text">© 2015 Fido. Powered by <a href="https://www.frank.net"><img class="legal__logo" src="assets/images/logos/logo-frank-184x32.png" srcset="assets/images/logos/logo-frank-184x32@2x.png 2x" width="184" height="32" alt="FRANK.NET logo"></a></p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="modal-login" tabindex="-1" aria-labelledby="modal-login-label" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="modal-login-label">Log In</h3>
+                    <button class="modal-close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span class="icon icon-close" aria-hidden="true"></span>
+                    </button>
+                </div>
+
+                <form class="form" id="form-login" action="dashboard-logged-in.html" method="post">
+                    <div class="modal-body">
+                        <label class="label label--dark" for="login_email">
+                            Email
+                            <input class="input input--dark" type="email" id="login_email" name="email" maxlength="100" required>
+                        </label>
+
+                        <div class="toggle-password js-toggle-password">
+                            <label class="label label--dark" for="login_password">
+                                Password
+                                <input class="input input--dark" type="password" id="login_password" name="password" maxlength="100" required>
+                                <a class="label__link js-modal" href="password-forgot.html" data-dismiss="modal" data-modal-id="modal-password">Forgot your password?</a>
+                            </label>
+
+                            <button class="u-hidden btn btn--transparent js-toggle" type="button">Show</button>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="btn-group btn-group--center">
+                            <input class="btn" type="submit" value="Log In">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-password" tabindex="-1" aria-labelledby="modal-password-label" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="modal-password-label">Forgot Your Password</h3>
+                    <p>Enter your email address below and we’ll send you instructions on how to reset your password.</p>
+                    <button class="modal-close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span class="icon icon-close" aria-hidden="true"></span>
+                    </button>
+                </div>
+
+                <form class="form" id="form-password" action="index.html" method="post">
+                    <div class="modal-body">
+                        <label class="label label--dark" for="email_password">
+                            Email
+                            <input class="input input--dark" type="email" id="email_password" name="password" maxlength="100">
+                        </label>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="btn-group btn-group--center">
+                            <input class="btn" type="submit" value="Reset Password">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Google Analytics -->
+    <script>
+        window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+        ga('create','UA-81706063-1','auto');ga('send','pageview')
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+    <!-- JavaScript -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
